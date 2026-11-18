@@ -1,0 +1,14 @@
+{
+  "shape": [
+    269463,
+    2
+  ],
+  "finite": true,
+  "min": 0.0,
+  "max": 1.0,
+  "outside_bound_entries": 0,
+  "max_rowsum_error": 1.519918441772461e-05,
+  "max_bound_excess": 0.0,
+  "affected_rows": 0,
+  "purpose": "diagnostic repeated cheap GaussianNB fit after first full-fit run stopped before saving; completed CV and historical measurements untouched"
+}

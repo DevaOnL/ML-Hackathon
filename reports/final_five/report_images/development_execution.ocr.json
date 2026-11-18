@@ -1,0 +1,211 @@
+{
+  "crop_box": [
+    890,
+    1485,
+    1385,
+    1735
+  ],
+  "mean_word_confidence": 58.86,
+  "method": "tesseract --psm 11; actual saved crop, original pixels",
+  "text": "EXECUTION RECORD\nWoDEL\nhist_gradient_boosting\nALGORITHN\nlearned_classifier_hmm_viterbi\nODEL SHA-256\nCOCCBe9T36838T656294007206963297901 908\n1ca04a90af3b52rbce052ednad\n€5C74616aa574077ac9ach 245909678\nREQUEST T\nDATASET\nStudent development (development)\nGPS OBSERVATIONS\n1,049",
+  "words": [
+    {
+      "bbox": [
+        10,
+        16,
+        76,
+        23
+      ],
+      "text": "EXECUTION"
+    },
+    {
+      "bbox": [
+        86,
+        16,
+        129,
+        23
+      ],
+      "text": "RECORD"
+    },
+    {
+      "bbox": [
+        10,
+        50,
+        43,
+        57
+      ],
+      "text": "WoDEL"
+    },
+    {
+      "bbox": [
+        198,
+        48,
+        355,
+        60
+      ],
+      "text": "hist_gradient_boosting"
+    },
+    {
+      "bbox": [
+        10,
+        82,
+        71,
+        89
+      ],
+      "text": "ALGORITHN"
+    },
+    {
+      "bbox": [
+        199,
+        80,
+        413,
+        91
+      ],
+      "text": "learned_classifier_hmm_viterbi"
+    },
+    {
+      "bbox": [
+        10,
+        115,
+        43,
+        122
+      ],
+      "text": "ODEL"
+    },
+    {
+      "bbox": [
+        52,
+        115,
+        98,
+        122
+      ],
+      "text": "SHA-256"
+    },
+    {
+      "bbox": [
+        198,
+        113,
+        470,
+        122
+      ],
+      "text": "COCCBe9T36838T656294007206963297901"
+    },
+    {
+      "bbox": [
+        450,
+        103,
+        474,
+        131
+      ],
+      "text": "908"
+    },
+    {
+      "bbox": [
+        198,
+        131,
+        384,
+        140
+      ],
+      "text": "1ca04a90af3b52rbce052ednad"
+    },
+    {
+      "bbox": [
+        198,
+        164,
+        355,
+        173
+      ],
+      "text": "€5C74616aa574077ac9ach"
+    },
+    {
+      "bbox": [
+        362,
+        164,
+        427,
+        173
+      ],
+      "text": "245909678"
+    },
+    {
+      "bbox": [
+        10,
+        166,
+        57,
+        175
+      ],
+      "text": "REQUEST"
+    },
+    {
+      "bbox": [
+        66,
+        166,
+        78,
+        173
+      ],
+      "text": "T"
+    },
+    {
+      "bbox": [
+        10,
+        199,
+        57,
+        206
+      ],
+      "text": "DATASET"
+    },
+    {
+      "bbox": [
+        198,
+        197,
+        247,
+        206
+      ],
+      "text": "Student"
+    },
+    {
+      "bbox": [
+        256,
+        197,
+        333,
+        209
+      ],
+      "text": "development"
+    },
+    {
+      "bbox": [
+        343,
+        197,
+        433,
+        209
+      ],
+      "text": "(development)"
+    },
+    {
+      "bbox": [
+        10,
+        231,
+        29,
+        238
+      ],
+      "text": "GPS"
+    },
+    {
+      "bbox": [
+        38,
+        231,
+        119,
+        238
+      ],
+      "text": "OBSERVATIONS"
+    },
+    {
+      "bbox": [
+        198,
+        229,
+        233,
+        240
+      ],
+      "text": "1,049"
+    }
+  ]
+}

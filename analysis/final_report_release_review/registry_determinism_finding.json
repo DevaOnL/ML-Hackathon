@@ -1,0 +1,52 @@
+{
+  "id": "FRR-02",
+  "severity": "medium",
+  "status": "fixed_and_verified_on_canonical_final",
+  "summary": "Persisted report integrity depended on per-process Python hash-seed ordering of a terminal-status set.",
+  "impact": "The genuine 57-page first final build had all17 evidence guards true, but a new read-only --check process could reject the unchanged source/evidence as a changed fact/input/figure registry. This was fail-closed release availability/integrity, not data leakage, model mutation or an incorrect measured result.",
+  "source": "scripts/build_final_report.py:522",
+  "root_cause": "req_resolved registered in_=list(REQ_TERMINAL_STATUSES). json.dumps(sort_keys=True) sorts mapping keys, not the order of this list, and Python set iteration differs with PYTHONHASHSEED.",
+  "reproduced": {
+    "rejected_pdf_sha256": "1503a65c89833b9d0fc0e84715b35ffdabcf7c10d833e5891821ade03dc00650",
+    "persisted_registry_sha256": "116809f667b1fb2249684d7cf20dc6c12e7d32c279785fc3274e07e094cd6159",
+    "independent_process_registry_sha256": "74af3af4eaae85e0208ec3240de135391b8a63a5fdda10c90087ff020c36ed85",
+    "read_only_check_exit_code": 1,
+    "evidence": "analysis/final_report_release_review/final_check.log",
+    "lifecycle_trace": "probe_registry.py showed identical import/build_state/resolve/guard digests within one process; mismatch was cross-process set-list order, not mutation during a run."
+  },
+  "fix": {
+    "author": "Lead",
+    "change": "Replace list(REQ_TERMINAL_STATUSES) with sorted(REQ_TERMINAL_STATUSES).",
+    "semantics_unchanged": "Membership/count, all360 fact values, every evidence gate and model/decoder are unchanged; only deterministic serialized registry ordering changes.",
+    "source_regression": "tests/test_final_report.py:327-337",
+    "independent_three_process_seed_check": "analysis/final_report_release_review/registry_seed_review.json",
+    "seeds": [
+      "1",
+      "2",
+      "42"
+    ],
+    "stable_registry_sha256": "74af3af4eaae85e0208ec3240de135391b8a63a5fdda10c90087ff020c36ed85",
+    "focused_report_crop_layout_tests": {
+      "passed": 43,
+      "failed": 0,
+      "evidence": "analysis/final_report_release_review/deterministic_registry_tests.log"
+    }
+  },
+  "final_verification": {
+    "passed": true,
+    "normal_final_pdf_sha256": "f6bdd47595a4e06295ed23b10db94f22c7bf69484f8bf9476ae15785ce2e65e2",
+    "corrected_builder_sha256": "ae6b72a7455a8105054d36568df46a20db201e9b5db2cd1d6a412e2a5e051c1a",
+    "complete_release_tests_passed": 421,
+    "independent_persisted_check_seeds": ["1", "2", "42"],
+    "all_three_process_exit_codes": [0, 0, 0],
+    "independent_all_evidence_integrity": "analysis/final_report_release_review/final_integrity_review.json",
+    "final_layout_acceptance": "analysis/final_report_layout/final_pdf/deterministic_iteration2/comparative_acceptance.json",
+    "all_required_followup_completed": true
+  },
+  "required_release_followup": [
+    "Fresh complete release test record/logs for corrected source",
+    "Truthfully refresh current builder pins in requirement final_evidence without changing historical candidate checkpoints",
+    "Normal --final rebuild and a fresh separate-process read-only --check",
+    "Exact final PDF/layout/source/output pins before artifact freeze"
+  ]
+}

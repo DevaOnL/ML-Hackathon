@@ -35,6 +35,13 @@ PUBLIC_EVALUATOR_REPORTS = frozenset(
     )
 )
 PUBLIC_EVALUATOR_DOCUMENTS = frozenset({"docs/EVALUATOR_SECTION_PLAN.md"})
+# Four reviewed original-pixel screenshot derivatives; no raw evaluator exemption.
+PUBLIC_EVALUATOR_SCREENSHOT_DETAILS = frozenset({
+    "reports/final_five/report_images/evaluator_dataset_controls.png",
+    "reports/final_five/report_images/evaluator_dataset_controls.ocr.json",
+    "reports/final_five/report_images/evaluator_scores.png",
+    "reports/final_five/report_images/evaluator_scores.ocr.json",
+})
 
 
 def audit(paths):
@@ -50,7 +57,7 @@ def audit(paths):
                 or "cache" in relative.parts or "predictions" in relative.parts
                 or relative.suffix.lower() == ".npz"
                 or (any(part.lower().startswith(("evaluator", "private")) for part in relative.parts)
-                    and relative.as_posix() not in PUBLIC_EVALUATOR_REPORTS | PUBLIC_EVALUATOR_DOCUMENTS)
+                    and relative.as_posix() not in PUBLIC_EVALUATOR_REPORTS | PUBLIC_EVALUATOR_DOCUMENTS | PUBLIC_EVALUATOR_SCREENSHOT_DETAILS)
                 or (relative.suffix == ".route" and relative.parts[0] != "outputs")):
             findings.append({"path": name, "rule": "raw_private_or_row_level_input"})
         # Audit the exact index blob, not a concurrently edited working copy.

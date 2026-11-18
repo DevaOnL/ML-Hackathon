@@ -1,0 +1,8 @@
+=== PathSnap final report builder: CHECK (read-only) ===
+inputs: 50 registered, 50 present, 0 missing
+template problems: none
+facts: 360 total, 0 unresolved-blocking, 0 optional-pending
+guards: 18 total, 1 failed
+  FAIL persisted_manifest_current: persisted fact/input/figure registry changed
+readiness: NOT READY
+readiness: NOT READY

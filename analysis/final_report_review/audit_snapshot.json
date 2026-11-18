@@ -1,0 +1,358 @@
+{
+  "audit_at_utc": "2026-11-18T09:20:23.799527+00:00",
+  "scope": "read-only import/build_state/fact resolution/public JSON/hash checks; writes restricted to analysis/final_report_review",
+  "report_accepted": false,
+  "source_sha256": "1064b000aebce79cc6f70429297c4ddab350119931a7a7e6b8f458bdf537b797",
+  "source_sha256_at_end": "1064b000aebce79cc6f70429297c4ddab350119931a7a7e6b8f458bdf537b797",
+  "source_changed_during_run": false,
+  "declared_inputs": 37,
+  "missing_inputs": [],
+  "load_errors": [],
+  "facts_total": 201,
+  "facts_resolved": 201,
+  "unresolved_facts": [],
+  "guard_context": "synthetic all-facts/all-registry Markdown scaffold; not the authored report/template",
+  "scaffold_guard_results": [
+    {
+      "name": "five_families_exact_set",
+      "ok": true,
+      "detail": "families=['logistic_regression', 'knn_distance_weighted', 'bagging', 'gaussian_nb', 'hist_gradient_boosting'] family_count=5 seq keys=6"
+    },
+    {
+      "name": "six_comparison_configs",
+      "ok": true,
+      "detail": "comparison rows: ['logistic_regression', 'knn_distance_weighted', 'bagging', 'gaussian_nb', 'hist_gradient_boosting', 'hist_gradient_boosting_tuned']"
+    },
+    {
+      "name": "estimator_acceptance_pass",
+      "ok": true,
+      "detail": "passed=True"
+    },
+    {
+      "name": "clean_load_pass",
+      "ok": true,
+      "detail": "delta=0.0 atol=1e-12"
+    },
+    {
+      "name": "frozen_model_hash_pinned",
+      "ok": true,
+      "detail": "distinct hashes: ['c9cc8e9f36838f656a94d07ed69632979df9981ca94a9daf3b52fbce052e4b34']"
+    },
+    {
+      "name": "selected_model_matches_freeze",
+      "ok": true,
+      "detail": "selected='hist_gradient_boosting' final_run='hist_gradient_boosting_tuned'"
+    },
+    {
+      "name": "hpo_twelve_trials_train_objective",
+      "ok": true,
+      "detail": "trials=12 fresh=0 best==tuned_cv_params=True"
+    },
+    {
+      "name": "gnb_precision_correction_recorded",
+      "ok": true,
+      "detail": "affected=0 outside=0 rowsum_err=1.519918441772461e-05"
+    },
+    {
+      "name": "student_evaluator_never_used_for_selection",
+      "ok": true,
+      "detail": "all selection-contamination flags false"
+    },
+    {
+      "name": "frozen_decoder_matches_model",
+      "ok": true,
+      "detail": "objectives=['A_fitted', 'B_twice_beta', 'C_classifier_up'] selected='A_fitted' config match=True"
+    },
+    {
+      "name": "decoder_ablation_all_ten",
+      "ok": true,
+      "detail": "trips=10 failed=[] obs=19160/19160"
+    },
+    {
+      "name": "offline_delivery_verification_pass",
+      "ok": true,
+      "detail": "passed"
+    },
+    {
+      "name": "api_integration_acceptance_pass",
+      "ok": true,
+      "detail": "passed"
+    },
+    {
+      "name": "delivery_verification_pass",
+      "ok": true,
+      "detail": "passed"
+    },
+    {
+      "name": "api_parity_all_trips",
+      "ok": true,
+      "detail": "matches=20 statuses_200=True requested=True"
+    },
+    {
+      "name": "frontend_browser_clean",
+      "ok": true,
+      "detail": "errors=[] console=[] external=[] screenshots=6"
+    },
+    {
+      "name": "terminal_ocr_valid",
+      "ok": true,
+      "detail": "valid=True ocr=True events=3 pinned=2"
+    },
+    {
+      "name": "evaluator_acceptance_pass",
+      "ok": true,
+      "detail": "passed=True"
+    },
+    {
+      "name": "evaluator_input_audit_present",
+      "ok": true,
+      "detail": "trip_count=10 references_parsed=True"
+    },
+    {
+      "name": "independent_audit_pass",
+      "ok": true,
+      "detail": "passed=True critical_defects=[]"
+    },
+    {
+      "name": "tests_final_passed",
+      "ok": true,
+      "detail": "passed=376 total=376"
+    },
+    {
+      "name": "requirements_all_resolved",
+      "ok": false,
+      "detail": "rows=47 pending=['R-DL-03', 'R-DL-05', 'R-DL-06', 'R-DL-07', 'R-DL-08', 'R-DL-09', 'R-AP-01']"
+    },
+    {
+      "name": "figures_verified",
+      "ok": false,
+      "detail": "final manifest figure absent from report registry: visualizations/final_five/plots/final_five_route_ablation.png"
+    },
+    {
+      "name": "no_stale_path_references",
+      "ok": true,
+      "detail": "stale: []"
+    },
+    {
+      "name": "template_tokens_all_defined",
+      "ok": false,
+      "detail": "non-optional fact never used in template: phase_completed; non-optional fact never used in template: final_run_name; non-optional fact never used in template: sel_model_run; non-optional fact never used in template: families_json; non-optional fact never used in template: student_role; non-optional fact never used in template: evaluator_status; non-optional fact never used in template: cv_protocol; non-optional fact never used in template: cv_obj_lr; non-optional fact never used in template: cv_f1_lr; non-optional fact never used in template: cv_ll_lr; non-optional fact never used in template: params_lr; non-optional fact never used in template: st_top1_lr; non-optional fact never used in template: st_f1_lr; non-optional fact never used in template: st_ll_lr; non-optional fact never used in template: seq_edge_lr; non-optional fact never used in template: seq_nll_lr; non-optional fact never used in template: sha_lr; non-optional fact never used in template: cv_obj_knn; non-optional fact never used in template: cv_f1_knn; non-optional fact never used in template: cv_ll_knn; non-optional fact never used in template: params_knn; non-optional fact never used in template: st_top1_knn; non-optional fact never used in template: st_f1_knn; non-optional fact never used in template: st_ll_knn; non-optional fact never used in template: seq_edge_knn; non-optional fact never used in template: seq_nll_knn; non-optional fact never used in template: sha_knn; non-optional fact never used in template: cv_obj_bag; non-optional fact never used in template: cv_f1_bag; non-optional fact never used in template: cv_ll_bag; non-optional fact never used in template: params_bag; non-optional fact never used in template: st_top1_bag; non-optional fact never used in template: st_f1_bag; non-optional fact never used in template: st_ll_bag; non-optional fact never used in template: seq_edge_bag; non-optional fact never used in template: seq_nll_bag; non-optional fact never used in template: sha_bag; non-optional fact never used in template: cv_obj_gnb; non-optional fact never used in template: cv_f1_gnb; non-optional fact never used in template: cv_ll_gnb; non-optional fact never used in template: params_gnb; non-optional fact never used in template: st_top1_gnb; non-optional fact never used in template: st_f1_gnb; non-optional fact never used in template: st_ll_gnb; non-optional fact never used in template: seq_edge_gnb; non-optional fact never used in template: seq_nll_gnb; non-optional fact never used in template: sha_gnb; non-optional fact never used in template: cv_obj_hgb; non-optional fact never used in template: cv_f1_hgb; non-optional fact never used in template: cv_ll_hgb; non-optional fact never used in template: params_hgb; non-optional fact never used in template: st_top1_hgb; non-optional fact never used in template: st_f1_hgb; non-optional fact never used in template: st_ll_hgb; non-optional fact never used in template: seq_edge_hgb; non-optional fact never used in template: seq_nll_hgb; non-optional fact never used in template: sha_hgb; non-optional fact never used in template: cv_obj_tuned; non-optional fact never used in template: cv_f1_tuned; non-optional fact never used in template: cv_ll_tuned; non-optional fact never used in template: params_tuned; non-optional fact never used in template: st_top1_tuned; non-optional fact never used in template: st_f1_tuned; non-optional fact never used in template: st_ll_tuned; non-optional fact never used in template: seq_edge_tuned; non-optional fact never used in template: seq_nll_tuned; non-optional fact never used in template: sha_tuned; non-optional fact never used in template: cv_t1m_hgb; non-optional fact never used in template: cv_t1s_hgb; non-optional fact never used in template: cv_t1m_tuned; non-optional fact never used in template: cv_t1s_tuned; non-optional fact never used in template: cv_sec_tuned; non-optional fact never used in template: cv_sec_bag; non-optional fact never used in template: cv_sec_knn_inf; non-optional fact never used in template: st_prec_tuned; non-optional fact never used in template: st_rec_tuned; non-optional fact never used in template: st_inf_tuned; non-optional fact never used in template: cv_gain; non-optional fact never used in template: st_gain; non-optional fact never used in template: train_obs; non-optional fact never used in template: train_rows; non-optional fact never used in template: train_miss; non-optional fact never used in template: train_present; non-optional fact never used in template: train_miss_rate; non-optional fact never used in template: student_obs; non-optional fact never used in template: student_miss; non-optional fact never used in template: student_present; non-optional fact never used in template: student_miss_rate; non-optional fact never used in template: student_rows; non-optional fact never used in template: hpo_method; non-optional fact never used in template: hpo_space; non-optional fact never used in template: hpo_best_params; non-optional fact never used in template: hpo_trials; non-optional fact never used in template: hpo_seeded; non-optional fact never used in template: hpo_modelbased; non-optional fact never used in template: hpo_fresh_trials; non-optional fact never used in template: hpo_baseline; non-optional fact never used in template: hpo_best; non-optional fact never used in template: hpo_seconds; non-optional fact never used in template: hpo_reuse_note; non-optional fact never used in template: hpo_gain; non-optional fact never used in template: frozen_utc; non-optional fact never used in template: frozen_bytes; non-optional fact never used in template: fschema_sha; non-optional fact never used in template: mmeta_sha; non-optional fact never used in template: ver_python; non-optional fact never used in template: ver_sklearn; non-optional fact never used in template: ver_numpy; non-optional fact never used in template: ver_scipy; non-optional fact never used in template: ver_joblib; non-optional fact never used in template: accept_fresh; non-optional fact never used in template: clean_delta; non-optional fact never used in template: clean_atol; non-optional fact never used in template: mm_fit_data; non-optional fact never used in template: mm_fit_seconds; non-optional fact never used in template: mm_inf_seconds; non-optional fact never used in template: mm_train_trips; non-optional fact never used in template: mm_seed; non-optional fact never used in template: mm_feature_version; non-optional fact never used in template: feat_count; non-optional fact never used in template: feat_version; non-optional fact never used in template: aud_trips; non-optional fact never used in template: aud_files; non-optional fact never used in template: aud_arcs_pairs; non-optional fact never used in template: aud_broken_train; non-optional fact never used in template: aud_broken_student; non-optional fact never used in template: aud_steps_over; non-optional fact never used in template: aud_time_delta; non-optional fact never used in template: aud_dup_nodes; non-optional fact never used in template: aud_dup_rows; non-optional fact never used in template: aud_nonpos; non-optional fact never used in template: aud_repeated; non-optional fact never used in template: trip76_broken; non-optional fact never used in template: req_total; non-optional fact never used in template: req_done; non-optional fact never used in template: req_partial; non-optional fact never used in template: req_human; non-optional fact never used in template: req_notdone; non-optional fact never used in template: req_deferred; non-optional fact never used in template: req_exception; non-optional fact never used in template: req_inprogress; non-optional fact never used in template: req_resolved; non-optional fact never used in template: gnb_affected; non-optional fact never used in template: gnb_outside; non-optional fact never used in template: gnb_rowsum; non-optional fact never used in template: dec_sigma; non-optional fact never used in template: dec_beta; non-optional fact never used in template: dec_maxcand; non-optional fact never used in template: dec_retry; non-optional fact never used in template: dec_radius; non-optional fact never used in template: dec_slack; non-optional fact never used in template: dec_cls_w; non-optional fact never used in template: dec_geo_w; non-optional fact never used in template: dec_btol; non-optional fact never used in template: dec_spacing; non-optional fact never used in template: dec_search_trips; non-optional fact never used in template: dec_frozen_utc; non-optional fact never used in template: dec_selected; non-optional fact never used in template: dec_a_lenf1; non-optional fact never used in template: dec_b_lenf1; non-optional fact never used in template: dec_c_lenf1; non-optional fact never used in template: dec_a_edgef1; non-optional fact never used in template: dec_b_edgef1; non-optional fact never used in template: dec_c_edgef1; non-optional fact never used in template: dplan_trips; non-optional fact never used in template: abl_trips; non-optional fact never used in template: abl_failed; non-optional fact never used in template: abl_obs; non-optional fact never used in template: abl_raw_top1; non-optional fact never used in template: abl_raw_edge; non-optional fact never used in template: abl_raw_len; non-optional fact never used in template: abl_hmm_top1; non-optional fact never used in template: abl_hmm_edge; non-optional fact never used in template: abl_hmm_len; non-optional fact never used in template: abl_geo_edge; non-optional fact never used in template: abl_geo_len; non-optional fact never used in template: abl_hmm_seconds; non-optional fact never used in template: abl_hmm_edge_gain; non-optional fact never used in template: off_edge_f1; non-optional fact never used in template: off_len_f1; non-optional fact never used in template: off_edit; non-optional fact never used in template: off_cont; non-optional fact never used in template: eval_trips; non-optional fact never used in template: eval_edge_f1; non-optional fact never used in template: eval_len_f1; non-optional fact never used in template: eval_edit; non-optional fact never used in template: eval_cont; non-optional fact never used in template: eval_top1; non-optional fact never used in template: eval_mf1; non-optional fact never used in template: ind_findings"
+    },
+    {
+      "name": "no_pending_markers",
+      "ok": true,
+      "detail": "pending: []"
+    },
+    {
+      "name": "mmeta_consistent_fresh_tuned",
+      "ok": true,
+      "detail": "fresh_fit=True trips=80"
+    },
+    {
+      "name": "versions_match_clean",
+      "ok": true,
+      "detail": "clean parent_versions == results versions"
+    }
+  ],
+  "evidence_schemas": {
+    "delivery_check_leaf_count": 1534,
+    "delivery_check_leaf_false_paths": [],
+    "delivery_top_check_count": 11,
+    "delivery_top_check_types": [
+      "bool"
+    ],
+    "delivery_defects": [],
+    "live_keys": [
+      "collected_at_utc",
+      "base_url",
+      "mocked",
+      "source",
+      "all_twenty_requested",
+      "attempted_count",
+      "successful_count",
+      "model_sha256",
+      "config_file_sha256",
+      "match_config_hash",
+      "matches",
+      "datasets",
+      "passed",
+      "source_sha256_before",
+      "collector_sha256",
+      "health",
+      "catalogue",
+      "health_checks",
+      "static_assets",
+      "source_sha256_after",
+      "completed_at_utc"
+    ],
+    "live_matches": 20,
+    "live_attempted_count": 20,
+    "live_successful_count": 20,
+    "terminal_events": [
+      {
+        "event": "match_started",
+        "request_id": "e5c74616aa5f40f7ac9acbf2459d9678",
+        "trip_id": "00000009",
+        "has_model_hash": true
+      },
+      {
+        "event": "match_completed",
+        "request_id": "e5c74616aa5f40f7ac9acbf2459d9678",
+        "trip_id": "00000009",
+        "has_model_hash": true
+      },
+      {
+        "event": "http_request",
+        "request_id": "e5c74616aa5f40f7ac9acbf2459d9678",
+        "trip_id": null,
+        "has_model_hash": false
+      }
+    ],
+    "browser_shots": [
+      {
+        "path": "reports/final_five/live/screenshots/ui_desktop.png",
+        "exists": true,
+        "hash_matches": true
+      },
+      {
+        "path": "reports/final_five/live/screenshots/ui_route_map.png",
+        "exists": true,
+        "hash_matches": true
+      },
+      {
+        "path": "reports/final_five/live/screenshots/ui_light.png",
+        "exists": true,
+        "hash_matches": true
+      },
+      {
+        "path": "reports/final_five/live/screenshots/ui_mobile_320.png",
+        "exists": true,
+        "hash_matches": true
+      },
+      {
+        "path": "reports/final_five/live/screenshots/ui_mobile.png",
+        "exists": true,
+        "hash_matches": true
+      },
+      {
+        "path": "reports/final_five/live/screenshots/ui_evaluator.png",
+        "exists": true,
+        "hash_matches": true
+      }
+    ]
+  },
+  "registry": {
+    "final_figure_count": 23,
+    "missing_final_figures": [
+      "visualizations/final_five/plots/final_five_route_ablation.png"
+    ],
+    "errors": [
+      "final manifest figure absent from report registry: visualizations/final_five/plots/final_five_route_ablation.png"
+    ],
+    "notes": [],
+    "actual_map_registered": false,
+    "public_map_inputs_declared": [],
+    "canonical_map_files": [
+      {
+        "path": "visualizations/final_five/maps/final_development_trip_00000009.html",
+        "sha256": "d9e22c33087119f47bb06b7205ee71e2e62b26f82c6875ea9f4f43535503dd4c",
+        "bytes": 1883434
+      },
+      {
+        "path": "visualizations/final_five/maps/final_development_trip_00000009.png",
+        "sha256": "a7cd039beede2705bc30dec46aefe0b631edb8332d39be38c758dbc3774b10c0",
+        "bytes": 382393
+      },
+      {
+        "path": "visualizations/final_five/maps/final_development_trip_00000009.pdf",
+        "sha256": "37be0af0abd28d6653e3c40bf26253294dd1a2e9ed6b591d9e811d76c8ca6381",
+        "bytes": 372455
+      },
+      {
+        "path": "visualizations/final_five/maps/final_development_trip_00000009.metadata.json",
+        "sha256": "0a8d9441f87958c248160481680a806d564e2971dee773fe8ced16b649b26ceb",
+        "bytes": 6482
+      },
+      {
+        "path": "visualizations/final_five/maps/final_development_trip_00000009.browser.json",
+        "sha256": "57ce1846e869a0d0bf7969430c3bd727b71dde479e951063beeb4bdeb5339fe9",
+        "bytes": 4114
+      },
+      {
+        "path": "visualizations/final_five/maps/final_development_trip_00000009.ocr.txt",
+        "sha256": "ab36a71975300bc9b43ddadb9a85d63b20e295a77da80ac0bb7d48fa6b926b39",
+        "bytes": 1224
+      }
+    ]
+  },
+  "hardening_mutation_probes": [
+    {
+      "name": "apiv_empty_checks",
+      "guard_accepts_invalid": true,
+      "detail": "passed"
+    },
+    {
+      "name": "deliveryv_empty_checks",
+      "guard_accepts_invalid": true,
+      "detail": "passed"
+    },
+    {
+      "name": "nested_delivery_false",
+      "path": "datasets.development.trips.00000000.offline_checks.cli_status",
+      "guard_accepts_invalid": true,
+      "detail": "passed"
+    },
+    {
+      "name": "incomplete_release_suite",
+      "guard_accepts_invalid": true,
+      "detail": "passed=376 total=376"
+    },
+    {
+      "name": "missing_test_counts",
+      "guard_accepts_invalid": true,
+      "detail": "passed=None total=None"
+    },
+    {
+      "name": "missing_live_image_hash_binding",
+      "guard_accepts_invalid": true,
+      "errors": [
+        "final manifest figure absent from report registry: visualizations/final_five/plots/final_five_route_ablation.png"
+      ],
+      "notes": [
+        "live screenshot present but not yet hash-bound (live evidence JSON pending): reports/final_five/live/screenshots/ui_desktop.png",
+        "live screenshot present but not yet hash-bound (live evidence JSON pending): reports/final_five/live/screenshots/ui_mobile.png",
+        "live screenshot present but not yet hash-bound (live evidence JSON pending): reports/final_five/live/screenshots/ui_route_map.png"
+      ]
+    }
+  ],
+  "test_evidence": {
+    "total": 376,
+    "passed": 376,
+    "failures": [],
+    "complete_release_suite": false
+  },
+  "static_checks": {
+    "datetime_import": true,
+    "datetime_namespace_calls": [
+      1410,
+      1494,
+      1495
+    ],
+    "scan_template_on_resolved_md": true
+  },
+  "extra_public_input_sha256": {
+    "reports/final_five/deployment_activation.json": "d39f379fddac05b1b441c4e57661369f2a3b73d012d39d4aef206bee65de5a7a",
+    "visualizations/final_five/map_manifest.json": "faa761b5370c80332841b38e1a2d1dd6a693a56753dc07b12edd3d0dea837dc8",
+    "visualizations/final_five/maps/final_development_trip_00000009.metadata.json": "0a8d9441f87958c248160481680a806d564e2971dee773fe8ced16b649b26ceb",
+    "visualizations/final_five/maps/final_development_trip_00000009.browser.json": "57ce1846e869a0d0bf7969430c3bd727b71dde479e951063beeb4bdeb5339fe9"
+  },
+  "template_review": {
+    "exists": false,
+    "status": "not assessed: active child has not written template"
+  },
+  "limitations": [
+    "No fit, probability inference, raw evaluator data, HTTP, private config, preview/final render or PDF inspection.",
+    "Builder/template remain active in another child; findings apply only to the pinned snapshot.",
+    "Delivery check booleans are not the same as all booleans: exact_match=false is a measured result, not a failed acceptance check."
+  ]
+}

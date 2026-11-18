@@ -1,0 +1,103 @@
+{
+  "crop_box": [
+    715,
+    300,
+    1408,
+    415
+  ],
+  "mean_word_confidence": 85.72,
+  "method": "tesseract --psm 11; actual saved crop, original pixels",
+  "text": "separate trip catalogues\nBoth use the same frozen model.\nEvaluator",
+  "words": [
+    {
+      "bbox": [
+        300,
+        23,
+        352,
+        32
+      ],
+      "text": "separate"
+    },
+    {
+      "bbox": [
+        360,
+        23,
+        385,
+        32
+      ],
+      "text": "trip"
+    },
+    {
+      "bbox": [
+        393,
+        22,
+        457,
+        32
+      ],
+      "text": "catalogues"
+    },
+    {
+      "bbox": [
+        472,
+        22,
+        497,
+        30
+      ],
+      "text": "Both"
+    },
+    {
+      "bbox": [
+        505,
+        24,
+        523,
+        30
+      ],
+      "text": "use"
+    },
+    {
+      "bbox": [
+        532,
+        22,
+        550,
+        30
+      ],
+      "text": "the"
+    },
+    {
+      "bbox": [
+        558,
+        24,
+        583,
+        30
+      ],
+      "text": "same"
+    },
+    {
+      "bbox": [
+        591,
+        22,
+        629,
+        30
+      ],
+      "text": "frozen"
+    },
+    {
+      "bbox": [
+        637,
+        22,
+        674,
+        30
+      ],
+      "text": "model."
+    },
+    {
+      "bbox": [
+        24,
+        67,
+        92,
+        76
+      ],
+      "text": "Evaluator"
+    }
+  ]
+}

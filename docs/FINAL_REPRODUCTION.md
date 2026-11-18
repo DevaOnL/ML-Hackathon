@@ -100,6 +100,21 @@ The [current Bayesian provenance](<../experiments/final_five/current/bayesian_op
 
 Use the corrected final [current/results.json](<../experiments/final_five/current/results.json>). The first root-level attempt stopped on GaussianNB float32 probability normalization and remains failed-run provenance, explained in the [protocol](<../experiments/final_five/PROTOCOL.md>). The exact measured runner is archived as [run_final_five_measured.py](<../experiments/final_five/executed_source/run_final_five_measured.py>), SHA-256 `6e25f0492c8d48d62ff21ac05e5e5e5f6306ffdc27485458ee5d2f69e20adb65`. Use the maintained runner for reproduction; its later output-safety fixes are documented in [reproduction hardening](<FINAL_REPRODUCTION_HARDENING.md>). Historical source hashes remain unchanged.
 
+## Public report and test verification (no raw data)
+
+The [final report builder](<../scripts/build_final_report.py>) validates the published manuscript, model/configuration identity, saved experiments, all 55 image bindings and the persisted PDF/Markdown hashes without fitting or inference. From the repository root:
+
+```bash
+.venv/bin/python -B scripts/build_final_report.py --check
+.venv/bin/python -B scripts/prepare_report_images.py --check
+OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 .venv/bin/python -B -m unittest discover -s tests -v
+.venv/bin/python -B -m unittest discover -s infrastructure -p test_hosting.py -v
+node frontend/smoke.mjs
+node --test tests/frontend_adapter.test.mjs
+```
+
+The [complete release test record](<../reports/final_five/test_results.json>) records an actual isolated staged-checkout run with 421 passing synthetic tests and four hash-bound logs. It does not claim a new complete numerical training run. To rebuild the PDF from unchanged evidence, use `--final`; to inspect an unaccepted change, use `--preview`, which writes separate watermarked files.
+
 ## Verification for this preparation change
 
 The [synthetic tests](<../tests/test_prepare_final_five_inputs.py>) use genuine tiny sklearn fits/predictions in temporary directories. They cover missing-stage checks, existing-file no-fit behavior, exact fold/parameter checks, strict metric/identity failures, freeze declarations, traversal/symlink refusal, concurrent destination preservation and private save/reload. They do not read actual private trips or establish a completed real-data regeneration.

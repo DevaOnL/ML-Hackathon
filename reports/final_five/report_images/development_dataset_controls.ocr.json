@@ -1,0 +1,49 @@
+{
+  "crop_box": [
+    32,
+    300,
+    720,
+    415
+  ],
+  "mean_word_confidence": 67.8,
+  "method": "tesseract --psm 11; actual saved crop, original pixels",
+  "text": "01\nDATASETS\nStudent development",
+  "words": [
+    {
+      "bbox": [
+        17,
+        23,
+        30,
+        30
+      ],
+      "text": "01"
+    },
+    {
+      "bbox": [
+        49,
+        23,
+        109,
+        30
+      ],
+      "text": "DATASETS"
+    },
+    {
+      "bbox": [
+        19,
+        67,
+        71,
+        76
+      ],
+      "text": "Student"
+    },
+    {
+      "bbox": [
+        81,
+        67,
+        164,
+        79
+      ],
+      "text": "development"
+    }
+  ]
+}

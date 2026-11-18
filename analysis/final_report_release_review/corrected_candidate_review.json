@@ -1,0 +1,36 @@
+{
+  "candidate_pdf_sha256": "c5ea75013c51d835a6538c680d7439b7f18bc71173f9d35340900b1e675fed5f",
+  "pages": 57,
+  "checks": {
+    "builder_byte_hash": true,
+    "template_byte_hash": true,
+    "pdf_byte_hash": true,
+    "markdown_byte_hash": true,
+    "exact50_inputs": true,
+    "checkpoint_inputs_current": true,
+    "exact57_pages": true,
+    "not_a_draft_or_unresolved_document": true,
+    "honest_checkpoint_not_final_acceptance": true,
+    "complete_release_test_record_and_logs": true,
+    "freeze_prose_uses_deployed_artifact_hash": true,
+    "scientific_content_names_all_five_and_tuned": true,
+    "historical_rf_et_tuned_bagging_labelled": true,
+    "candidate_discloses_no_epoch_histories": true,
+    "candidate_discloses_historical_hpo_reuse": true
+  },
+  "input_mismatches": [],
+  "model_provenance_finding": {
+    "status": "fixed_in_this_candidate",
+    "id": "FRR-01",
+    "severity": "medium",
+    "claim": "The selected model froze at 2026-11-18T08:26:50.372940+00:00, size 147,906 bytes, deployment-export SHA-256 c9cc8e9f36838f656a94d07ed69632979df9981ca94a9daf3b52fbce052e4b34. The separately recorded comparison artifact has a different byte hash, listed below; it must not be confused with the frozen deployment export. The metadata and feature-schema hashes are c354885e22158e9da14e0f8bc8e01d3e7c6fbe810e196192c6b59c7cbdbbf4c5 and 55f203a1e30ab6369ff937840c2bfa4cb180dc36172a2ca47047714c05fb8d9a. Its fit declaration is \u201cTRAIN only; student and evaluator not read by this stage\u201d, with seed 20261118, feature version pathsnap-candidate-v1, all-80 fit time 4.40 s and sampled TRAIN candidate probability inference 0.770 s. That latter timing is TRAIN inference, not student or API latency; the selected student probability call was 0.499 s.",
+    "comparison_bundle_sha256": "47ea723d350567b6eeba827744e2c1a26c9baf915d322e29a590f45922ed8eeb",
+    "deployed_bundle_sha256": "c9cc8e9f36838f656a94d07ed69632979df9981ca94a9daf3b52fbce052e4b34",
+    "source": "reports/final_five/REPORT_TEMPLATE.md:391",
+    "token_binding": "scripts/build_final_report.py:422 (sha_tuned -> accept.all_models.hist_gradient_boosting_tuned.sha256)",
+    "suggested_fix": "Use a separate frozen artifact fact for deployment freeze prose; retain comparison hash in comparison-artifact table."
+  },
+  "final_accepted": false,
+  "no_model_fit_or_inference": true,
+  "no_raw_or_http": true
+}

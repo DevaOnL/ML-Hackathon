@@ -87,6 +87,10 @@ The API exposes `/health`, `/datasets`, `/datasets/development/trips`, `/dataset
 
 ## Evidence, requirements and provenance
 
+**Final deliverables:** [Consolidated technical report (PDF)](<reports/final_five/PathSnap_Final_Technical_Report.pdf>) · [readable report source](<reports/final_five/TECHNICAL_REPORT.md>) · [student-development prediction ZIP](<outputs/final_student_test/submission.zip>) · [evaluator prediction ZIP](<outputs/final_evaluator_test/submission.zip>) · [delivery guide](<docs/FINAL_DELIVERY_GUIDE.md>).
+
+The complete synthetic release suite passed **421 tests** (370 Python, 29 hosting, 22 Node), plus the static frontend smoke check, from an exact staged checkout without private datasets or probability arrays. The [release test record](<reports/final_five/test_results.json>) binds all four passing logs. Report generation checks 360 resolved facts, 50 public inputs and 55 image bindings, including twelve source-pixel-verified readable screenshot details.
+
 The [47-row original-document audit](<analysis/final_requirements/requirements_matrix.json>) was checked against all five source DOCX documents, including nested tables. The sixth synthesis is their exact ordered concatenation. [Requirement review](<docs/FINAL_REQUIREMENTS.md>) distinguishes mandatory requirements, suggestions and human/external work. Epoch-wise loss curves are N/A for this pipeline; measured CV, testing, log-loss, timing, confusion and HPO charts are provided instead.
 
 The original [three-family report](<reports/phase_three/PathSnap_Technical_Report.pdf>) and its published evidence remain immutable history, not the current five-family final result. Earlier RandomForest/ExtraTrees experiments are retained in the [historical experiment record](<experiments/results.json>) and documented separately rather than counted as final-scope families.

@@ -1,0 +1,48 @@
+{
+  "checked_at_utc": "2026-11-18T09:19:10.256112+00:00",
+  "source": "exact staged index checkout; no raw data, caches or model probability archives copied",
+  "scope": "core release suite before final report-specific tests exist; superseded by final release suite after report handoff",
+  "complete_release_suite": false,
+  "total": 376,
+  "passed": 376,
+  "failures": [],
+  "counts": {
+    "python": 325,
+    "hosting": 29,
+    "node": 22
+  },
+  "static_smoke_passed": true,
+  "synthetic_tests_only": true,
+  "production_fit_or_inference": false,
+  "suites": [
+    {
+      "suite": "python",
+      "exit_code": 0,
+      "seconds": 6.955054141999426,
+      "log": "reports/final_five/clean_checkout_python.log",
+      "log_sha256": "02830f1ca2040131d97d238dca8fa7444b7308e560cc5779ddff7d9c183f194f"
+    },
+    {
+      "suite": "hosting",
+      "exit_code": 0,
+      "seconds": 0.11131215199930011,
+      "log": "reports/final_five/clean_checkout_hosting.log",
+      "log_sha256": "af76efa46ad064ab4c5b27c21a6bf36f460b5157dc5698328af8c78d149cdedb"
+    },
+    {
+      "suite": "node",
+      "exit_code": 0,
+      "seconds": 0.10672519100262434,
+      "log": "reports/final_five/clean_checkout_node.log",
+      "log_sha256": "cd14bcd0bc48c25e30a7bd86492fe2eb5e98fa6346c109cd53648c3aabcb9368"
+    },
+    {
+      "suite": "static",
+      "exit_code": 0,
+      "seconds": 0.026092752999829827,
+      "log": "reports/final_five/clean_checkout_static.log",
+      "log_sha256": "d7764d8443303c5e71c33e3e7edf593067d146a91daa1d03f72e0f08e0b61871"
+    }
+  ],
+  "index_tree": "ef4067c3d326ff3d5201e6ca075f6cdd6a227ebf"
+}

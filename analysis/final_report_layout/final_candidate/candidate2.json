@@ -1,0 +1,66 @@
+{
+  "pdf": "analysis/final_release/candidate_corrected/PathSnap_Prepublication_Candidate.pdf",
+  "sha256": "c5ea75013c51d835a6538c680d7439b7f18bc71173f9d35340900b1e675fed5f",
+  "page_count": 57,
+  "image_count": 55,
+  "all55_image_digests_and_placements_equal_candidate1": true,
+  "glyph_fallback": [],
+  "outside_spans": [],
+  "blank_pages": [],
+  "links": 62,
+  "table_geometry": [
+    {
+      "page": 14,
+      "bbox": [
+        45.35432815551758,
+        480.35430908203125,
+        549.9212036132812,
+        780.5543212890625
+      ],
+      "rows": 7,
+      "columns": 9
+    }
+  ],
+  "changed_text_pages": [
+    1,
+    51,
+    52,
+    53,
+    54,
+    55,
+    56,
+    57
+  ],
+  "deployed_contexts": [
+    {
+      "page": 39,
+      "text": "rror count is 0 and console-error count 0; these are properties of the recorded sessions, not a promise that every browser/environment is error-free. 9.2 Desktop, themes, evaluator and mobile The captures below show the deployed page, not fixture screens. The evidence tests dark/light themes, both datasets and widths 320, 390, 768 and 1440 with no horizontal overflow. The development browser request ID is e5c74616aa5f40f7ac9acbf2459d9678 and evaluator request ID cdfbc4474f3840ec8f271e9e79e90635. The evaluator screenshot example uses trip 87 with proxy decoded accuracy 0.9907; it is one trip and is not the all-ten mean. K"
+    },
+    {
+      "page": 40,
+      "text": "Actual deployed dark desktop view Actual raw GPS and predicted route map panel PathSnap Final Technical Report Page 40 of 57"
+    },
+    {
+      "page": 41,
+      "text": "Actual deployed light theme PathSnap Final Technical Report Page 41 of 57"
+    }
+  ],
+  "correct_frozen_hash_in_pdf": true,
+  "candidate_layout_only_not_final_acceptance": true,
+  "method": "actual text/span/image/link geometry; no rerasterization or manual visual claim",
+  "corrected_export_contexts": [
+    {
+      "page": 51,
+      "text": "79df9981ca94a9daf3b52fbce052e4b34. The separately recorded comparison artifact has a different byte hash, listed below; it must not be confused with the frozen deployment export. The metadata and feature-schema hashes are c354885e22158e9da14e0f8bc8e01d3e7c6fbe810e196192c6b59c7cbdbbf4c5 and 55f203a1e30ab6369ff937840c2bfa4cb180dc36172a2ca47047714c05fb8d9a. Its fit declaration is \u201cTRAIN only; student and evaluator not read by this stage\u201d, with seed 20261118, feature version pathsnap-candidate-v1, all-80 fit time 4.40 s and sampled TRAIN candidate probability inference 0.770 s. That latter timing is TRAIN inference, not student or API latency; the selected student probability call was 0.499 s. Software at the final fit: Python 3.14.6, scikit-learn 1.8.0, NumPy 2.5.5, SciPy 1.18.0 and joblib 1.5.3. A fresh-process clean-load check on the fixed 2,000-row TRAIN fixture re"
+    },
+    {
+      "page": 51,
+      "text": "rements and remaining responsibilities 11.1 Frozen artifacts and clean replay The selected model froze at 2026-11-18T08:26:50.372940+00:00, size 147,906 bytes, deployment-export SHA-256 c9cc8e9f36838f656a94d07ed69632979df9981ca94a9daf3b52fbce052e4b34. The separately recorded comparison artifact has a different byte hash, listed below; it must not be confused with the frozen deployment export. The metadata and feature-schema hashes are c354885e22158e9da14e0f8bc8e01d3e7c6fbe810e196192c6b59c7cbdbbf4c5 and 55f203a1e30ab6369ff937840c2bfa4cb180dc36172a2ca47047714c05fb8d9a. Its fit declaration is \u201cTRAIN only; student and evaluator not read by this stage\u201d, with seed 20261118, feature version pathsnap-candidate-v1, all-80 fit time 4.40 s and sampled TRAIN candidate probability inference 0.770 s. That latter timing is TRAIN inference, not student or API latency; the selected"
+    },
+    {
+      "page": 52,
+      "text": "5e5 400b8579 hist_gradient_boosting 7974b1eacc2787ade3becd48b0d1079bd673be83f15183bdad0839a 4fc71ce85 hist_gradient_boosting_tuned comparison artifact (not the deployment export) 47ea723d350567b6eeba827744e2c1a26c9baf915d322e29a590f45 922ed8eeb An independent AI reviewer recorded 9 verified findings and no critical defects, including an actual 111/111 verification check run. This is evidence review, not an independent human viva or organizer approval. The final test record reports 420 total tests, 420 passed and 0 failures. Test provenance and actual counts are taken from final test record rather than inferred from a successful command alone. The report builder resolves this manuscript's registered fact tokens from cited measured evidence and should refuse a final release while required facts/assets/guards fail. Its manifest records the builder/template/input hashe"
+    }
+  ],
+  "export_paragraph_has_correct_hash": true
+}

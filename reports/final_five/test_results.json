@@ -1,0 +1,76 @@
+{
+  "checked_at_utc": "2026-11-18T09:56:40.308805+00:00",
+  "source": "exact staged index checkout; no raw data, private caches or probability archives copied",
+  "scope": "complete release synthetic suite including final report, screenshot crop equality and strict publication guards",
+  "complete_release_suite": true,
+  "total": 421,
+  "passed": 421,
+  "counts": {
+    "python": 370,
+    "hosting": 29,
+    "node": 22
+  },
+  "failures": [],
+  "static_smoke_passed": true,
+  "synthetic_tests_only": true,
+  "production_fit_or_inference": false,
+  "suites": [
+    {
+      "suite": "python",
+      "command": [
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-v"
+      ],
+      "exit_code": 0,
+      "seconds": 9.70740535799996,
+      "log": "reports/final_five/release_verified_python.log",
+      "log_sha256": "fa08dc302ee3a70709dca78e92aba044ab0ea3b8ba631b41f82442d6ba130b5f"
+    },
+    {
+      "suite": "hosting",
+      "command": [
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "infrastructure",
+        "-p",
+        "test_hosting.py",
+        "-v"
+      ],
+      "exit_code": 0,
+      "seconds": 0.13700187700305833,
+      "log": "reports/final_five/release_verified_hosting.log",
+      "log_sha256": "e9519fe6f3774912dabc6fa1bd7fc0bdb3a192c0b8fb44f225b869a81de4b021"
+    },
+    {
+      "suite": "node",
+      "command": [
+        "--test",
+        "tests/frontend_adapter.test.mjs"
+      ],
+      "exit_code": 0,
+      "seconds": 0.12590720300067915,
+      "log": "reports/final_five/release_verified_node.log",
+      "log_sha256": "b48dbfe68c44f288404409388a788ec8d114052882cdb5c57bc9bef2d9e60652"
+    },
+    {
+      "suite": "static",
+      "command": [
+        "frontend/smoke.mjs"
+      ],
+      "exit_code": 0,
+      "seconds": 0.03212067599815782,
+      "log": "reports/final_five/release_verified_static.log",
+      "log_sha256": "d7764d8443303c5e71c33e3e7edf593067d146a91daa1d03f72e0f08e0b61871"
+    }
+  ],
+  "index_tree": "355ea13fe687edf3b69bacdf6b35603b1af5e0a3",
+  "isolated_import": "isolated import verified"
+}

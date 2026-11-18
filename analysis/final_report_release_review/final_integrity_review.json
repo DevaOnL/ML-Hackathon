@@ -1,0 +1,690 @@
+{
+  "passed": true,
+  "checks": {
+    "manifest_final_schema2": true,
+    "all17_guards_pass_now": true,
+    "all17_persisted_guards_pass": true,
+    "facts360_inputs50_images55": true,
+    "persisted_integrity_check": true,
+    "registry_digest_matches_current": true,
+    "all_declared_input_asset_output_hashes_current": true,
+    "canonical_md_exactly_resolves_current_template": true,
+    "pdf_is_exact57_pages": true,
+    "pdf_has_no_draft_or_unresolved_placeholder": true,
+    "FRR01_closed_deployment_export_hash": true,
+    "comparison_bundle_hash_retained_separately": true,
+    "FRR02_closed_sorted_terminal_status_registry": true,
+    "all47_unique_terminal_requirement_rows": true,
+    "status_distribution_41done_5human_1exception": true,
+    "every_provided_requirement_evidence_hash_and_json_valid": true,
+    "RDL03_binds_accepted_corrected_candidate_not_final_self_hash": true,
+    "positive_complete_test_record_passes_bound_logs": true
+  },
+  "source_output_pins": [
+    {
+      "kind": "builder",
+      "path": "scripts/build_final_report.py",
+      "sha256": "ae6b72a7455a8105054d36568df46a20db201e9b5db2cd1d6a412e2a5e051c1a",
+      "bytes": 133603
+    },
+    {
+      "kind": "template",
+      "path": "reports/final_five/REPORT_TEMPLATE.md",
+      "sha256": "637096eb4bfc5ab73df5181dcd8a776fd1b9376c1cf545df8168177576a86f4f",
+      "bytes": 64666
+    },
+    {
+      "kind": "markdown",
+      "path": "reports/final_five/TECHNICAL_REPORT.md",
+      "sha256": "909b9bca8f51907000c0ef90bc9d3391dacc7155bef1ebf94c251da0f1b7eddb",
+      "bytes": 73676
+    },
+    {
+      "kind": "pdf",
+      "path": "reports/final_five/PathSnap_Final_Technical_Report.pdf",
+      "sha256": "f6bdd47595a4e06295ed23b10db94f22c7bf69484f8bf9476ae15785ce2e65e2",
+      "bytes": 14649363
+    }
+  ],
+  "manifest_sha256": "a4338451518a596c7e2abc5f61f6c02809974f38de23e108c191964a1d4946c5",
+  "registry_sha256": "74af3af4eaae85e0208ec3240de135391b8a63a5fdda10c90087ff020c36ed85",
+  "pdf_pages": 57,
+  "current_guards": [
+    {
+      "name": "mandatory_inputs_and_snapshot",
+      "ok": true,
+      "detail": "all mandatory paths regular, canonical, nonempty and hash-bound"
+    },
+    {
+      "name": "five_families_six_configs_train_hpo",
+      "ok": true,
+      "detail": "five families, six actual fits, disjoint TRAIN folds and genuine reused twelve-trial HPO"
+    },
+    {
+      "name": "offlinev_recursive_delivery_checks",
+      "ok": true,
+      "detail": "11 nonempty check containers passed"
+    },
+    {
+      "name": "apiv_recursive_delivery_checks",
+      "ok": true,
+      "detail": "85 nonempty check containers passed"
+    },
+    {
+      "name": "deliveryv_recursive_delivery_checks",
+      "ok": true,
+      "detail": "104 nonempty check containers passed"
+    },
+    {
+      "name": "evalacc_recursive_delivery_checks",
+      "ok": true,
+      "detail": "11 nonempty check containers passed"
+    },
+    {
+      "name": "all_twenty_identity_and_full_config",
+      "ok": true,
+      "detail": "pinned model/file/compact hashes across actual offline20/ASGI20/public20"
+    },
+    {
+      "name": "browser_two_and_terminal_binding",
+      "ok": true,
+      "detail": "two real browser requests and their hash-bound receiving terminal"
+    },
+    {
+      "name": "actual_final_folium_map",
+      "ok": true,
+      "detail": "actual final HTML/PNG/PDF plus metadata/browser/OCR files are hash-bound"
+    },
+    {
+      "name": "requirements_all47_resolved",
+      "ok": true,
+      "detail": "47 uniquely identified terminal requirement rows"
+    },
+    {
+      "name": "complete_release_suite_and_bound_logs",
+      "ok": true,
+      "detail": "positive exact counts and four hash-bound passing suite logs"
+    },
+    {
+      "name": "every_registered_fact_resolved",
+      "ok": true,
+      "detail": "360 actual measured facts resolved"
+    },
+    {
+      "name": "raw_template_and_resolved_output",
+      "ok": true,
+      "detail": "raw tokens covered; resolved text has no directives, missing links or unlabelled stale paths"
+    },
+    {
+      "name": "all_figures_png_dimensions_hashes",
+      "ok": true,
+      "detail": "23 final + 12 EDA + actual map + seven original live captures + twelve exact-pixel readable details bound"
+    },
+    {
+      "name": "clean_reload_and_versions",
+      "ok": true,
+      "detail": "passed"
+    },
+    {
+      "name": "decoder_all_ten_original_observations",
+      "ok": true,
+      "detail": "passed"
+    },
+    {
+      "name": "independent_model_audit",
+      "ok": true,
+      "detail": "passed"
+    }
+  ],
+  "persisted_manifest_issues": [],
+  "requirement_status_counts": {
+    "done_evidence_exists": 41,
+    "human_external_blocker": 5,
+    "user_exception": 1
+  },
+  "requirements_with_explicit_final_evidence": 25,
+  "requirement_evidence_bindings": 76,
+  "unique_requirement_evidence_paths": 35,
+  "strict_json_evidence_binding_count": 53,
+  "requirement_evidence": [
+    {
+      "row": "R-MT-01",
+      "path": "reports/final_five/all_five_model_acceptance.json",
+      "sha256": "0829918e6c5bb3335d6b6d02a1d8a0fc2abd8b43f6769b41c73cd26c65296d65",
+      "strict_json_validated": true
+    },
+    {
+      "row": "R-MT-01",
+      "path": "analysis/final_model_review/final_review_report.json",
+      "sha256": "d7ba83c015e2ba1a3c7bf420ac2c386cf4d0bbd462b7bfdaaacc8996fa9d5398",
+      "strict_json_validated": true
+    },
+    {
+      "row": "R-MT-02",
+      "path": "reports/final_five/all_five_model_acceptance.json",
+      "sha256": "0829918e6c5bb3335d6b6d02a1d8a0fc2abd8b43f6769b41c73cd26c65296d65",
+      "strict_json_validated": true
+    },
+    {
+      "row": "R-MT-03",
+      "path": "experiments/final_five/current/results.json",
+      "sha256": "8956d9360daae8723875e6a7f6fb8a98941ebf85d0eee9c8cab8cdf68979f6a8",
+      "strict_json_validated": true
+    },
+    {
+      "row": "R-MT-03",
+      "path": "reports/final_five/all_five_model_acceptance.json",
+      "sha256": "0829918e6c5bb3335d6b6d02a1d8a0fc2abd8b43f6769b41c73cd26c65296d65",
+      "strict_json_validated": true
+    },
+    {
+      "row": "R-MT-04",
+      "path": "experiments/final_five/current/results.json",
+      "sha256": "8956d9360daae8723875e6a7f6fb8a98941ebf85d0eee9c8cab8cdf68979f6a8",
+      "strict_json_validated": true
+    },
+    {
+      "row": "R-MT-04",
+      "path": "experiments/final_five/current/sequence_classification.json",
+      "sha256": "949461edf056d1fd538be23a9357f46c7a446192d301599a75fbedbff5a06585",
+      "strict_json_validated": true
+    },
+    {
+      "row": "R-MT-05",
+      "path": "experiments/final_five/current/model_comparison.csv",
+      "sha256": "fa446f8e7263ae6cdc722563d5c4cdfb41d3bf433e5837f14cd2ef8556f147bc",
+      "strict_json_validated": false
+    },
+    {
+      "row": "R-MT-05",
+      "path": "experiments/final_five/current/results.json",
+      "sha256": "8956d9360daae8723875e6a7f6fb8a98941ebf85d0eee9c8cab8cdf68979f6a8",
+      "strict_json_validated": true
+    },
+    {
+      "row": "R-MT-06",
+      "path": "experiments/final_five/current/selection.json",
+      "sha256": "d186221eea0eaeaa09d2fbee648499a9856402d3b12c4d9906c7ebab2dd31519",
+      "strict_json_validated": true
+    },
+    {
+      "row": "R-MT-06",
+      "path": "experiments/final_five/current/cv/hist_gradient_boosting.json",
+      "sha256": "7d2edaee69ebcfec47a217fb331751a6fb99da47cfcd3c8a5374761e8a46fe65",
+      "strict_json_validated": true
+    },
+    {
+      "row": "R-MT-07",
+      "path": "experiments/final_five/current/bayesian_optimization.json",
+      "sha256": "0e77818b2b70c372a60bca1ac2d02227c8f240ad148d4ac2e5f2af7ec46a3c18",
+      "strict_json_validated": true
+    },
+    {
+      "row": "R-MT-07",
+      "path": "experiments/bayesian_trials.jsonl",
+      "sha256": "cbe4e6c949be9c7904ee10e408bd5be48b4396d1dde31b98400179af55a8fb0c",
+      "strict_json_validated": false
+    },
+    {
+      "row": "R-MT-08",
+      "path": "reports/final_five/decoder/freeze.json",
+      "sha256": "d5a3f507efe29b4db72b12bb3e06db3a00d5c27f387db09eb1b33f7620a790b1",
+      "strict_json_validated": true
+    },
+    {
+      "row": "R-MT-08",
+      "path": "reports/final_five/evaluator/acceptance.json",
+      "sha256": "678689d7be6523d9edfe2efc5c1ef29abfcbc8bf2d91aa878a8554599d605858",
+      "strict_json_validated": true
+    },
+    {
+      "row": "R-HM-01",
+      "path": "reports/final_five/decoder/student_ablation.json",
+      "sha256": "045513ee402984d2fb4db200ca1fdb01a447ad563ab1a07632ee41bfcc5a353a",
+      "strict_json_validated": true
+    },
+    {
+      "row": "R-HM-01",
+      "path": "reports/final_five/offline_delivery_verification.json",
+      "sha256": "aba2c384123cef5b2b690b10f53873f174000fbe0942572010d0afc8e3afb8f6",
+      "strict_json_validated": true
+    },
+    {
+      "row": "R-HM-02",
+      "path": "mapmatch/matcher.py",
+      "sha256": "af58502cdfe8de12cb13ea5ab3e1e8c9ef7aee9cf6f3faec8dea5cbfbedc4bff",
+      "strict_json_validated": false
+    },
+    {
+      "row": "R-HM-02",
+      "path": "scripts/final_five_decoder.py",
+      "sha256": "53bb1892ac1d3c9252d9eeff871a0879f4ea3ffdb1801663b57324ba3cbcc239",
+      "strict_json_validated": false
+    },
+    {
+      "row": "R-HM-02",
+      "path": "reports/final_five/decoder/freeze.json",
+      "sha256": "d5a3f507efe29b4db72b12bb3e06db3a00d5c27f387db09eb1b33f7620a790b1",
+      "strict_json_validated": true
+    },
+    {
+      "row": "R-HM-03",
+      "path": "reports/final_five/decoder/student_ablation.json",
+      "sha256": "045513ee402984d2fb4db200ca1fdb01a447ad563ab1a07632ee41bfcc5a353a",
+      "strict_json_validated": true
+    },
+    {
+      "row": "R-SY-03",
+      "path": "reports/final_five/live/live_api.json",
+      "sha256": "ca26526800263e94839eab5ace8be96d50ea59e5242d818ab6c6856c24b2d896",
+      "strict_json_validated": true
+    },
+    {
+      "row": "R-SY-03",
+      "path": "reports/final_five/live/browser_evidence.json",
+      "sha256": "89ddfba49860dd892b675c5ea3af639803cc828afae621bcce114f2fe1278189",
+      "strict_json_validated": true
+    },
+    {
+      "row": "R-SY-04",
+      "path": "reports/final_five/delivery_verification.json",
+      "sha256": "56bcdb86245048c7cb96aaf3bbe1c64c2baa1fe04fd140f34f473a50cdcb049d",
+      "strict_json_validated": true
+    },
+    {
+      "row": "R-SY-04",
+      "path": "analysis/final_code_review/review.json",
+      "sha256": "f913e7412582e1f89f42b5a518dae74d35e7b1eb8c78c07b260840afdad4e881",
+      "strict_json_validated": true
+    },
+    {
+      "row": "R-SY-04",
+      "path": "tests/test_datasets.py",
+      "sha256": "337d78f36d4abd2b9596087cce66e07000f63bf09bc3b77fb9d9216e601856fc",
+      "strict_json_validated": false
+    },
+    {
+      "row": "R-SY-05",
+      "path": "reports/final_five/live/api_terminal_evidence.json",
+      "sha256": "e5438fd0e104eaa9d0d72b33ce3182f5cac3e87ed2065cccaca77960d769d60f",
+      "strict_json_validated": true
+    },
+    {
+      "row": "R-SY-05",
+      "path": "reports/final_five/delivery_verification.json",
+      "sha256": "56bcdb86245048c7cb96aaf3bbe1c64c2baa1fe04fd140f34f473a50cdcb049d",
+      "strict_json_validated": true
+    },
+    {
+      "row": "R-DL-03",
+      "path": "reports/final_five/report_prepublication_acceptance.json",
+      "sha256": "196a6d7b00817872db59e5dbb6774b7186b557c11dc5ed85e14ad844cbfe1aaa",
+      "strict_json_validated": true
+    },
+    {
+      "row": "R-DL-03",
+      "path": "reports/final_five/REPORT_TEMPLATE.md",
+      "sha256": "637096eb4bfc5ab73df5181dcd8a776fd1b9376c1cf545df8168177576a86f4f",
+      "strict_json_validated": false
+    },
+    {
+      "row": "R-DL-03",
+      "path": "scripts/build_final_report.py",
+      "sha256": "ae6b72a7455a8105054d36568df46a20db201e9b5db2cd1d6a412e2a5e051c1a",
+      "strict_json_validated": false
+    },
+    {
+      "row": "R-DL-03",
+      "path": "analysis/final_report_layout/final_candidate/candidate2.json",
+      "sha256": "589bfa98e4c43f940cbd43db989f9c36ec2b06359dac0d868d5df387e354b3df",
+      "strict_json_validated": true
+    },
+    {
+      "row": "R-DL-05",
+      "path": "reports/final_five/REPORT_TEMPLATE.md",
+      "sha256": "637096eb4bfc5ab73df5181dcd8a776fd1b9376c1cf545df8168177576a86f4f",
+      "strict_json_validated": false
+    },
+    {
+      "row": "R-DL-05",
+      "path": "scripts/build_final_report.py",
+      "sha256": "ae6b72a7455a8105054d36568df46a20db201e9b5db2cd1d6a412e2a5e051c1a",
+      "strict_json_validated": false
+    },
+    {
+      "row": "R-DL-05",
+      "path": "analysis/final_report_completion/content_review.json",
+      "sha256": "766c85adfa65b96512f80e5ef3e6bce160049c51bf4bfcd64c3550ab4ab770ea",
+      "strict_json_validated": true
+    },
+    {
+      "row": "R-DL-05",
+      "path": "analysis/final_report_completion/evidence_validation.json",
+      "sha256": "af03d1c81d57ffdb6087ca554e7528358d32f5212476ab12a5dc7a91cb878592",
+      "strict_json_validated": true
+    },
+    {
+      "row": "R-DL-05",
+      "path": "experiments/final_five/current/results.json",
+      "sha256": "8956d9360daae8723875e6a7f6fb8a98941ebf85d0eee9c8cab8cdf68979f6a8",
+      "strict_json_validated": true
+    },
+    {
+      "row": "R-DL-06",
+      "path": "reports/final_five/REPORT_TEMPLATE.md",
+      "sha256": "637096eb4bfc5ab73df5181dcd8a776fd1b9376c1cf545df8168177576a86f4f",
+      "strict_json_validated": false
+    },
+    {
+      "row": "R-DL-06",
+      "path": "scripts/build_final_report.py",
+      "sha256": "ae6b72a7455a8105054d36568df46a20db201e9b5db2cd1d6a412e2a5e051c1a",
+      "strict_json_validated": false
+    },
+    {
+      "row": "R-DL-06",
+      "path": "analysis/final_report_completion/content_review.json",
+      "sha256": "766c85adfa65b96512f80e5ef3e6bce160049c51bf4bfcd64c3550ab4ab770ea",
+      "strict_json_validated": true
+    },
+    {
+      "row": "R-DL-06",
+      "path": "analysis/final_report_completion/evidence_validation.json",
+      "sha256": "af03d1c81d57ffdb6087ca554e7528358d32f5212476ab12a5dc7a91cb878592",
+      "strict_json_validated": true
+    },
+    {
+      "row": "R-DL-06",
+      "path": "experiments/final_five/current/results.json",
+      "sha256": "8956d9360daae8723875e6a7f6fb8a98941ebf85d0eee9c8cab8cdf68979f6a8",
+      "strict_json_validated": true
+    },
+    {
+      "row": "R-DL-07",
+      "path": "reports/final_five/REPORT_TEMPLATE.md",
+      "sha256": "637096eb4bfc5ab73df5181dcd8a776fd1b9376c1cf545df8168177576a86f4f",
+      "strict_json_validated": false
+    },
+    {
+      "row": "R-DL-07",
+      "path": "scripts/build_final_report.py",
+      "sha256": "ae6b72a7455a8105054d36568df46a20db201e9b5db2cd1d6a412e2a5e051c1a",
+      "strict_json_validated": false
+    },
+    {
+      "row": "R-DL-07",
+      "path": "analysis/final_report_completion/content_review.json",
+      "sha256": "766c85adfa65b96512f80e5ef3e6bce160049c51bf4bfcd64c3550ab4ab770ea",
+      "strict_json_validated": true
+    },
+    {
+      "row": "R-DL-07",
+      "path": "analysis/final_report_completion/evidence_validation.json",
+      "sha256": "af03d1c81d57ffdb6087ca554e7528358d32f5212476ab12a5dc7a91cb878592",
+      "strict_json_validated": true
+    },
+    {
+      "row": "R-DL-07",
+      "path": "visualizations/final_five/figure_manifest.json",
+      "sha256": "8298e429413ca7ebf06d82e5a2e2498c7e59f57e2773d1eea309c893cd9f9cba",
+      "strict_json_validated": true
+    },
+    {
+      "row": "R-DL-07",
+      "path": "visualizations/final_five/asset_verification.json",
+      "sha256": "9677e2a913336874d4244b8609e71357e76e52727468dab56ca76bfe3e7f7427",
+      "strict_json_validated": true
+    },
+    {
+      "row": "R-DL-08",
+      "path": "reports/final_five/REPORT_TEMPLATE.md",
+      "sha256": "637096eb4bfc5ab73df5181dcd8a776fd1b9376c1cf545df8168177576a86f4f",
+      "strict_json_validated": false
+    },
+    {
+      "row": "R-DL-08",
+      "path": "scripts/build_final_report.py",
+      "sha256": "ae6b72a7455a8105054d36568df46a20db201e9b5db2cd1d6a412e2a5e051c1a",
+      "strict_json_validated": false
+    },
+    {
+      "row": "R-DL-08",
+      "path": "analysis/final_report_completion/content_review.json",
+      "sha256": "766c85adfa65b96512f80e5ef3e6bce160049c51bf4bfcd64c3550ab4ab770ea",
+      "strict_json_validated": true
+    },
+    {
+      "row": "R-DL-08",
+      "path": "analysis/final_report_completion/evidence_validation.json",
+      "sha256": "af03d1c81d57ffdb6087ca554e7528358d32f5212476ab12a5dc7a91cb878592",
+      "strict_json_validated": true
+    },
+    {
+      "row": "R-DL-08",
+      "path": "experiments/final_five/current/bayesian_optimization.json",
+      "sha256": "0e77818b2b70c372a60bca1ac2d02227c8f240ad148d4ac2e5f2af7ec46a3c18",
+      "strict_json_validated": true
+    },
+    {
+      "row": "R-DL-09",
+      "path": "reports/final_five/REPORT_TEMPLATE.md",
+      "sha256": "637096eb4bfc5ab73df5181dcd8a776fd1b9376c1cf545df8168177576a86f4f",
+      "strict_json_validated": false
+    },
+    {
+      "row": "R-DL-09",
+      "path": "scripts/build_final_report.py",
+      "sha256": "ae6b72a7455a8105054d36568df46a20db201e9b5db2cd1d6a412e2a5e051c1a",
+      "strict_json_validated": false
+    },
+    {
+      "row": "R-DL-09",
+      "path": "analysis/final_report_completion/content_review.json",
+      "sha256": "766c85adfa65b96512f80e5ef3e6bce160049c51bf4bfcd64c3550ab4ab770ea",
+      "strict_json_validated": true
+    },
+    {
+      "row": "R-DL-09",
+      "path": "analysis/final_report_completion/evidence_validation.json",
+      "sha256": "af03d1c81d57ffdb6087ca554e7528358d32f5212476ab12a5dc7a91cb878592",
+      "strict_json_validated": true
+    },
+    {
+      "row": "R-DL-09",
+      "path": "reports/final_five/decoder/student_ablation.json",
+      "sha256": "045513ee402984d2fb4db200ca1fdb01a447ad563ab1a07632ee41bfcc5a353a",
+      "strict_json_validated": true
+    },
+    {
+      "row": "R-DL-09",
+      "path": "reports/final_five/evaluator/route_metrics.json",
+      "sha256": "8b56e13f931d849b299d0659ee64e5824f3d1317dc9d8a033fe97bd2909165c1",
+      "strict_json_validated": true
+    },
+    {
+      "row": "R-DL-11",
+      "path": "reports/final_five/live/browser_evidence.json",
+      "sha256": "89ddfba49860dd892b675c5ea3af639803cc828afae621bcce114f2fe1278189",
+      "strict_json_validated": true
+    },
+    {
+      "row": "R-DL-11",
+      "path": "reports/final_five/live/api_terminal_evidence.json",
+      "sha256": "e5438fd0e104eaa9d0d72b33ce3182f5cac3e87ed2065cccaca77960d769d60f",
+      "strict_json_validated": true
+    },
+    {
+      "row": "R-DL-11",
+      "path": "reports/final_five/delivery_verification.json",
+      "sha256": "56bcdb86245048c7cb96aaf3bbe1c64c2baa1fe04fd140f34f473a50cdcb049d",
+      "strict_json_validated": true
+    },
+    {
+      "row": "R-AP-01",
+      "path": "reports/final_five/REPORT_TEMPLATE.md",
+      "sha256": "637096eb4bfc5ab73df5181dcd8a776fd1b9376c1cf545df8168177576a86f4f",
+      "strict_json_validated": false
+    },
+    {
+      "row": "R-AP-01",
+      "path": "scripts/build_final_report.py",
+      "sha256": "ae6b72a7455a8105054d36568df46a20db201e9b5db2cd1d6a412e2a5e051c1a",
+      "strict_json_validated": false
+    },
+    {
+      "row": "R-AP-01",
+      "path": "analysis/final_report_completion/content_review.json",
+      "sha256": "766c85adfa65b96512f80e5ef3e6bce160049c51bf4bfcd64c3550ab4ab770ea",
+      "strict_json_validated": true
+    },
+    {
+      "row": "R-AP-01",
+      "path": "analysis/final_report_completion/evidence_validation.json",
+      "sha256": "af03d1c81d57ffdb6087ca554e7528358d32f5212476ab12a5dc7a91cb878592",
+      "strict_json_validated": true
+    },
+    {
+      "row": "R-AP-01",
+      "path": "analysis/final_model_review/final_review_report.json",
+      "sha256": "d7ba83c015e2ba1a3c7bf420ac2c386cf4d0bbd462b7bfdaaacc8996fa9d5398",
+      "strict_json_validated": true
+    },
+    {
+      "row": "R-AP-01",
+      "path": "experiments/final_five/current/results.json",
+      "sha256": "8956d9360daae8723875e6a7f6fb8a98941ebf85d0eee9c8cab8cdf68979f6a8",
+      "strict_json_validated": true
+    },
+    {
+      "row": "R-US-01",
+      "path": "reports/final_five/all_five_model_acceptance.json",
+      "sha256": "0829918e6c5bb3335d6b6d02a1d8a0fc2abd8b43f6769b41c73cd26c65296d65",
+      "strict_json_validated": true
+    },
+    {
+      "row": "R-US-01",
+      "path": "analysis/final_model_review/final_review_report.json",
+      "sha256": "d7ba83c015e2ba1a3c7bf420ac2c386cf4d0bbd462b7bfdaaacc8996fa9d5398",
+      "strict_json_validated": true
+    },
+    {
+      "row": "R-US-02",
+      "path": "docs/OPENCODE_DESIGN_REFERENCE.md",
+      "sha256": "6048ae12efdc4434bbf587962c4fe99fd03a24f2c3b3fdc41011fa4807ba852f",
+      "strict_json_validated": false
+    },
+    {
+      "row": "R-US-02",
+      "path": "docs/WEBSITE_DESIGN.md",
+      "sha256": "63b9b4114ddc60b094c64b8e03d4a7d204eb95a5f8e0ff5ccae36f05fc2f5167",
+      "strict_json_validated": false
+    },
+    {
+      "row": "R-US-02",
+      "path": "frontend/styles.css",
+      "sha256": "cee634d9a813dcba2c4453c60b593bde0c906fed9261de13a853d93a29b8ddc4",
+      "strict_json_validated": false
+    },
+    {
+      "row": "R-US-04",
+      "path": "docs/FINAL_EVALUATOR_PROTOCOL.md",
+      "sha256": "5c762761b95cc67ea9a048c6ac51b3238aa295a79af2640f0905cb41c8fbda00",
+      "strict_json_validated": false
+    },
+    {
+      "row": "R-US-04",
+      "path": "reports/final_five/evaluator/acceptance.json",
+      "sha256": "678689d7be6523d9edfe2efc5c1ef29abfcbc8bf2d91aa878a8554599d605858",
+      "strict_json_validated": true
+    },
+    {
+      "row": "R-US-04",
+      "path": "reports/final_five/api_integration_acceptance.json",
+      "sha256": "108ad4ed275a3e9334b3e08b13987ea788cb57b5b94a5f86e98bc49ec50f5fb3",
+      "strict_json_validated": true
+    }
+  ],
+  "evidence_errors": [],
+  "test_record": {
+    "checked_at_utc": "2026-11-18T09:56:40.308805+00:00",
+    "source": "exact staged index checkout; no raw data, private caches or probability archives copied",
+    "scope": "complete release synthetic suite including final report, screenshot crop equality and strict publication guards",
+    "complete_release_suite": true,
+    "total": 421,
+    "passed": 421,
+    "counts": {
+      "python": 370,
+      "hosting": 29,
+      "node": 22
+    },
+    "failures": [],
+    "static_smoke_passed": true,
+    "synthetic_tests_only": true,
+    "production_fit_or_inference": false,
+    "suites": [
+      {
+        "suite": "python",
+        "command": [
+          "-B",
+          "-m",
+          "unittest",
+          "discover",
+          "-s",
+          "tests",
+          "-v"
+        ],
+        "exit_code": 0,
+        "seconds": 9.70740535799996,
+        "log": "reports/final_five/release_verified_python.log",
+        "log_sha256": "fa08dc302ee3a70709dca78e92aba044ab0ea3b8ba631b41f82442d6ba130b5f"
+      },
+      {
+        "suite": "hosting",
+        "command": [
+          "-B",
+          "-m",
+          "unittest",
+          "discover",
+          "-s",
+          "infrastructure",
+          "-p",
+          "test_hosting.py",
+          "-v"
+        ],
+        "exit_code": 0,
+        "seconds": 0.13700187700305833,
+        "log": "reports/final_five/release_verified_hosting.log",
+        "log_sha256": "e9519fe6f3774912dabc6fa1bd7fc0bdb3a192c0b8fb44f225b869a81de4b021"
+      },
+      {
+        "suite": "node",
+        "command": [
+          "--test",
+          "tests/frontend_adapter.test.mjs"
+        ],
+        "exit_code": 0,
+        "seconds": 0.12590720300067915,
+        "log": "reports/final_five/release_verified_node.log",
+        "log_sha256": "b48dbfe68c44f288404409388a788ec8d114052882cdb5c57bc9bef2d9e60652"
+      },
+      {
+        "suite": "static",
+        "command": [
+          "frontend/smoke.mjs"
+        ],
+        "exit_code": 0,
+        "seconds": 0.03212067599815782,
+        "log": "reports/final_five/release_verified_static.log",
+        "log_sha256": "d7764d8443303c5e71c33e3e7edf593067d146a91daa1d03f72e0f08e0b61871"
+      }
+    ],
+    "index_tree": "355ea13fe687edf3b69bacdf6b35603b1af5e0a3",
+    "isolated_import": "isolated import verified"
+  },
+  "release_scope": {
+    "no_fits_or_model_inference": true,
+    "no_raw_private_inputs": true,
+    "no_http": true,
+    "no_release_source_writes": true
+  }
+}

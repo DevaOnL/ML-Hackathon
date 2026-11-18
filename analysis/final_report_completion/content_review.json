@@ -1,0 +1,225 @@
+{
+  "schema_version": 1,
+  "checked_at_utc": "2026-11-18T09:34:34.523Z",
+  "task_id": "task-43",
+  "status": "ready_for_lead_manuscript_adoption_and_builder_integration",
+  "scope": "analysis/final_report_completion/ only",
+  "deliverable_kind": "manuscript proposal, not final report or PDF acceptance",
+  "proposal": {
+    "path": "analysis/final_report_completion/reviewed_template.md",
+    "sha256": "6e6406273b57e91e26c874d36a48cf090a2f4b20476175ac68cffaed30282d4b",
+    "lines": 438,
+    "word_count": 7229
+  },
+  "registry": {
+    "path": "analysis/final_report_completion/fact_registry_proposal.json",
+    "sha256": "3c9c43c899cdb18d13c542fb8a57973b721760e7b4a61557569ac47d132c3168",
+    "original_required_facts_retained": 201,
+    "new_facts": 159,
+    "total_resolved_and_used": 360,
+    "new_input_count": 5,
+    "optional_existing_facts": [],
+    "new_table_hooks": [],
+    "existing_hook": "{{table:requirements}}"
+  },
+  "validation": {
+    "path": "analysis/final_report_completion/evidence_validation.json",
+    "passed": true,
+    "checks": 13,
+    "all_360_resolved": true,
+    "unknown_tokens": 0,
+    "unused_tokens": 0,
+    "missing_images": 0,
+    "images": {
+      "eda": 12,
+      "models_and_decoder": 23,
+      "ui_and_genuine_terminal": 7,
+      "actual_final_folium": 1,
+      "total": 43
+    },
+    "local_source_links_all_exist": true,
+    "raw_input_access": false,
+    "reference_route_access": false,
+    "fit_or_inference": false,
+    "network_or_service_access": false,
+    "active_report_edits": false
+  },
+  "headline_crosschecks": {
+    "current_default_histgb_cv_top1": 0.8926785714285714,
+    "current_tuned_histgb_cv_top1": 0.893392857142857,
+    "current_default_cv_binary_macro_f1": 0.9428589610674079,
+    "current_tuned_cv_binary_macro_f1": 0.9416187410219833,
+    "current_default_student_binary_log_loss": 0.05522123883891804,
+    "current_tuned_student_binary_log_loss": 0.05549988431377391,
+    "historical_random_forest_cv_binary_f1": 0.9427,
+    "historical_extra_trees_cv_binary_f1": 0.9429,
+    "historical_tuned_bagging_cv_binary_f1": 0.9426,
+    "evaluator_observations": 19674,
+    "evaluator_trip_count": 10,
+    "evaluator_edge_f1": 0.9226442590786567,
+    "evaluator_length_f1": 0.96580634225047,
+    "evaluator_exact_routes": 0,
+    "evaluator_weak15_edge_f1": 0.5788336933045357,
+    "evaluator_pooled_decoded_accuracy": 0.9305174341770865,
+    "evaluator_pooled_classifier_accuracy": 0.9327538883806038,
+    "api_trip15_categorical_nll": 0.358403,
+    "api_trip17_candidate_miss_fraction": 0.007429,
+    "proxy_heading_penalty_m2": 32,
+    "proxy_ambiguous_margin_m2": 4
+  },
+  "corrections": [
+    {
+      "id": "student_role",
+      "correction": "Replaced never-used-for-configuration claim with historical development exposure and final-stage TRAIN-only selection boundary.",
+      "source": "experiments/final_five/current/results.json",
+      "locator": "student_role; bayesian.selection_data; model_freeze.student_used_for_selection"
+    },
+    {
+      "id": "target_miss",
+      "correction": "Distinguishes absent proxy target within a nonempty candidate set from radius expansion for an empty candidate set.",
+      "source": "mapmatch/matcher.py",
+      "locator": "_candidates; experiments/final_five/current/results.json cv.logistic_regression.oof_metrics.candidate_miss_count"
+    },
+    {
+      "id": "trip76",
+      "correction": "Corrects trip 00000076 to student-development, explains broken reference-arc join, no invented removal or repair from TRAIN.",
+      "source": "analysis/data_audit/per_trip.json",
+      "locator": "trip_id=00000076.route_validity.arc_index_offset_0.broken_joins"
+    },
+    {
+      "id": "proxy_policy",
+      "correction": "Binds exact32m² signed-heading penalty, reliability min(displacement/12m,1), +/-3row/>20s guard, margin<4m²; not25m² and not true GPS labels.",
+      "source": "mapmatch/features.py",
+      "locator": "PROXY_LABEL_POLICY; reference_observation_labels lines191-234"
+    },
+    {
+      "id": "confusion_population",
+      "correction": "Confusion matrices and mandatory CV/Student macroF1 are binary candidate-row metrics, not road-ID or per-observation matrices.",
+      "source": "mapmatch/learning.py",
+      "locator": "candidate_classification_metrics; experiments/final_five/current/results.json"
+    },
+    {
+      "id": "observation_populations",
+      "correction": "Separates pooled observation top1/road-class macroF1, equal-trip observation metrics and candidate binary macroF1 with actual tables.",
+      "source": "experiments/final_five/current/sequence_classification.json",
+      "locator": "all six configurations observation_edge_macro_f1/trip_macro_observation_edge_f1/top1_accuracy"
+    },
+    {
+      "id": "mandatory_table",
+      "correction": "Adds nine-column exact-config table; raw classifier route continuity is genuinely N/A, with actual adjacency diagnostic separate.",
+      "source": "experiments/final_five/current/results.json",
+      "locator": "cv/evaluations; sequence_classification.json raw_classifier_continuity"
+    },
+    {
+      "id": "individual_families",
+      "correction": "Five separate subsections cover why/suitability/strengths/limitations/defaults/loss or nonparametric alternative/testmetrics/observed fit diagnostic/epochN-A.",
+      "source": "mapmatch/final_models.py",
+      "locator": "FINAL_DEFAULTS; phase_models.py; experiments.py make_estimator; results.json"
+    },
+    {
+      "id": "reuse",
+      "correction": "Discloses LR/KNN/defaultBagging verified reusedfits,3fresh finalfits,12trial historicalHistGBstudy and0freshHPOtrials.",
+      "source": "experiments/final_five/current/results.json",
+      "locator": "evaluations.*.reused_fit; bayesian.reused_historical_completed_study; fresh_trials_executed"
+    },
+    {
+      "id": "tuning_tradeoffs",
+      "correction": "Retains best objective gain while noting tuned CVbinaryF1/loss and studentbinaryloss did not beat default; no causal hyperparameter-importance claim.",
+      "source": "experiments/final_five/current/results.json",
+      "locator": "comparison; bayesian; cv.hist_gradient_boosting*"
+    },
+    {
+      "id": "gnb_precision",
+      "correction": "Pre-correction1.5199e-5 is probability-sum error;affected_rows0 counts bounds,not sum failures. Float64 scoring correction distinct from diagnostic.",
+      "source": "reports/final_five/gnb_probability_diagnostic.json",
+      "locator": "max_rowsum_error; affected_rows; outside_bound_entries; mapmatch/learning.py _positive_probabilities"
+    },
+    {
+      "id": "hmm_science",
+      "correction": "States weighted gaussian-distance emission, normalized candidate log potential and absolute network-versus-chord transition/beta, directed reachability, actual shortestpath reconstruction, no teleport fallback.",
+      "source": "mapmatch/matcher.py",
+      "locator": "_transitions; _decode; _route; learning.py score_sequence"
+    },
+    {
+      "id": "offline_future_features",
+      "correction": "Centred/forward feature windows are explicitly offline whole-track, not causal real-time guarantees.",
+      "source": "mapmatch/features.py",
+      "locator": "_motion; candidate_features; window values1/3/8"
+    },
+    {
+      "id": "decoder_boundary",
+      "correction": "TRAIN-reference scale fitting and3config TRAIN8 search then freeze before finalstudentablation/evaluator; all80fit makes search in-sample not route-holdout generalization.",
+      "source": "reports/final_five/decoder/freeze.json",
+      "locator": "scale_evidence; objectives; frozen_utc; calibration_plan.json"
+    },
+    {
+      "id": "raw_route_baseline",
+      "correction": "F1 uses complete reference including noncandidate arcs, rawroute retains repeatedvisits but only collapses consecutive duplicates/no connectors; historicalgeometry row is reused notfresh.",
+      "source": "scripts/final_five_decoder.py",
+      "locator": "adjacent_collapse; ablation; mapmatch/metrics.py score_routes"
+    },
+    {
+      "id": "clean_reload",
+      "correction": "Restricts replay to matched-version freshprocess2kTRAINfixture,not arbitraryplatform universal reproducibility.",
+      "source": "artifacts/final_five/clean_load_report.json",
+      "locator": "fixture; versions; parent_versions; max_probability_delta;atol"
+    },
+    {
+      "id": "timing_labels",
+      "correction": "Distinguishes sampledTRAINprobability inference metadata from studentcandidate-matrix inference/end-to-endHMM/API/browser.",
+      "source": "artifacts/final_five/model_metadata.json",
+      "locator": "timing.train_inference_seconds; results evaluations.*.student_inference_seconds"
+    },
+    {
+      "id": "evaluator_integrity",
+      "correction": "Keeps all10/19674,zeroexactroutes,weaktrip15,nomatchingID/hashbutnoofficial-unseen/geographic-independence claim;proxylabelsretainuncertainty.",
+      "source": "reports/final_five/evaluator/route_metrics.json",
+      "locator": "summary; trips; input_audit.json overlap_report; acceptance chronology"
+    },
+    {
+      "id": "api_nll",
+      "correction": "Offline evaluator CLI NLL remains unavailable;actualAPI20 audit NLL/misses present pertrip with exact direct bindings,not recomputation/manufactured probabilities.",
+      "source": "reports/final_five/api_integration_acceptance.json",
+      "locator": "datasets.evaluator.trips.*.metrics.log_loss/candidate_miss_rate; backend/scoring.py99-118"
+    },
+    {
+      "id": "terminal_direction",
+      "correction": "Actual browser initiated request, genuine terminal receives journal events;sameIDthreeevents;transportevent legitimately lacksmodelhash.",
+      "source": "reports/final_five/live/api_terminal_evidence.json",
+      "locator": "events; request_id; browser_evidence responses.dataset_id=development"
+    },
+    {
+      "id": "ui_and_map",
+      "correction": "References actual43figureassets incldark/light/eval/mobile320/390+genuine terminal and final tuned-HistGBtrip9FoliumPNG/HTML;mapexplicitlycontainsdevelopmentrefandnotservedbyapp.",
+      "source": "visualizations/final_five/map_manifest.json",
+      "locator": "maps/final_development_trip_00000009.metadata.json; browser_evidence screenshots"
+    },
+    {
+      "id": "historical_appendix",
+      "correction": "Reports RF/ExtraTrees/tunedBagging exactsavedconfig/CV/student/timing from own originalpublicJSON,notfinalfamilies or newfits.",
+      "source": "experiments/results.json",
+      "locator": "random_forest/extra_trees; experiments/phase_three/results.json bagging_tuned"
+    },
+    {
+      "id": "human_obligations",
+      "correction": "No claim of humanviva/plagiarismclearance/AIorganizerapproval/independenthumanreview;websiteinstead2laptops is userexception,undatednotice staysundated.",
+      "source": "analysis/final_requirements/requirements_matrix.json",
+      "locator": "requirements.status/classification; docs/DEVELOPMENT_PROVENANCE.md"
+    }
+  ],
+  "handoff_requirements": [
+    "Lead adopts manuscript/registry only after current legacy writer releases active report scope. No active source was edited here.",
+    "Builder must load new_inputs/new_facts, keep mandatory201, and retain source hashes in manifest. Existing requirements table hook expands the full47rows.",
+    "Historical-source path exceptions apply only to explicitly labelled AppendixA evidence. They must not let historical records replace current final evidence.",
+    "Keep9-column metric table readable with proper wrapping/landscape or a separate full-configtable; do not use smallfont solely to hit a page target.",
+    "All43assets exist but no PDF was rendered/visually inspected in this scope; check final asset ordering, captions, math, links, table widths and allpages after integration.",
+    "Final requirements/test records can change under Lead; rebuild binds their latest actual counts and revalidates all snapshots rather than copying stale prose.",
+    "External documentation URLs are bibliography pointers only,not fetched/verified in this task and not evidence of result scores."
+  ],
+  "limitations": [
+    "Automated token/pointer/fileexistence checks do not establish every proseclaim or chartnumber cryptographically.",
+    "Allreview is AIreview,notindependenthumanapproval.",
+    "Source parser reads only existingpublicJSON/source/provenance/assets;noevaluator rawcontent/references reopened.",
+    "Review snapshot hashes bind particular versions of still-active builder/results;Lead must revalidate after adoption."
+  ]
+}

@@ -1,0 +1,7 @@
+=== PathSnap final report builder: CHECK (read-only) ===
+inputs: 50 registered, 50 present, 0 missing
+template problems: none
+facts: 360 total, 0 unresolved-blocking, 0 optional-pending
+guards: 17 total, 0 failed
+readiness: READY for --final
+readiness: READY for --final

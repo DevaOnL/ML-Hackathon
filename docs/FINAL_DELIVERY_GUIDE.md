@@ -2,7 +2,7 @@
 
 ## Deliverables
 
-The final submission consists of the consolidated five-family PDF, source and fitted weights/configuration in the repository, two separately labelled ten-route prediction ZIPs, actual experiment/trial logs, data/feature audit, model-comparison and route-ablation figures, a Folium implementation map, and deployed UI/API evidence. The old three-family PDF remains available as historical work. Do not submit it in place of the final five-family report.
+The final submission consists of the [consolidated five-family PDF](<../reports/final_five/PathSnap_Final_Technical_Report.pdf>), [report source](<../reports/final_five/TECHNICAL_REPORT.md>), source and fitted weights/configuration in the repository, separately labelled [student-development](<../outputs/final_student_test/submission.zip>) and [evaluator](<../outputs/final_evaluator_test/submission.zip>) ten-route prediction ZIPs, actual experiment/trial logs, data/feature audit, model-comparison and route-ablation figures, an [actual final-model Folium map](<../visualizations/final_five/maps/final_development_trip_00000009.html>), and deployed UI/API evidence. The old three-family PDF remains available as historical work. Do not submit it in place of the final five-family report.
 
 The final primary comparison is exactly Logistic Regression, distance-weighted KNN, Bagging, GaussianNB and HistGradientBoosting. Document the separately preserved RandomForest/ExtraTrees historical experiments in an appendix rather than omit them or count them as current families.
 

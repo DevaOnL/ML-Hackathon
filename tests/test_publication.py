@@ -58,6 +58,17 @@ class PublicationPrivacyTests(unittest.TestCase):
         name = "reports/final_five/evaluator/acceptance.json"
         self.assertFalse(self.scan(name, b"-----BEGIN " + b"PRIVATE " + b"KEY-----")["passed"])
 
+    def test_only_four_exact_original_pixel_evaluator_details_are_exempt(self):
+        self.assertEqual(len(publication.PUBLIC_EVALUATOR_SCREENSHOT_DETAILS), 4)
+        for path in publication.PUBLIC_EVALUATOR_SCREENSHOT_DETAILS:
+            self.assertTrue(self.scan(path, b"synthetic screenshot crop") ["passed"])
+        for path in ("reports/final_five/report_images/evaluator_raw.png",
+                     "reports/final_five/report_images/evaluator_scores.track",
+                     "reports/other/report_images/evaluator_scores.png"):
+            self.assertFalse(self.scan(path, b"synthetic") ["passed"])
+        self.assertFalse(self.scan("reports/final_five/report_images/evaluator_scores.ocr.json",
+                                   b"-----BEGIN " + b"PRIVATE " + b"KEY-----") ["passed"])
+
     def test_only_flat_ten_derived_route_submission_archive_is_allowed(self):
         self.assertTrue(self.scan("outputs/phase_three_student_test/submission.zip",submission())["passed"])
         cases=[("archive.zip",submission()),("evaluator_test.zip",submission()),

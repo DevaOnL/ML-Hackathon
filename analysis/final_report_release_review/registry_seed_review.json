@@ -1,0 +1,69 @@
+{
+  "passed": true,
+  "process_count": 3,
+  "results": [
+    {
+      "seed": "1",
+      "registry_sha256": "74af3af4eaae85e0208ec3240de135391b8a63a5fdda10c90087ff020c36ed85",
+      "req_resolved": {
+        "name": "req_resolved",
+        "file": "reqs",
+        "count": {
+          "part": "requirements.status",
+          "value": null,
+          "in": [
+            "done_evidence_exists",
+            "human_external_blocker",
+            "user_exception"
+          ],
+          "not_in": null
+        },
+        "fmt": "{:,d}",
+        "row": null,
+        "optional": false
+      }
+    },
+    {
+      "seed": "2",
+      "registry_sha256": "74af3af4eaae85e0208ec3240de135391b8a63a5fdda10c90087ff020c36ed85",
+      "req_resolved": {
+        "name": "req_resolved",
+        "file": "reqs",
+        "count": {
+          "part": "requirements.status",
+          "value": null,
+          "in": [
+            "done_evidence_exists",
+            "human_external_blocker",
+            "user_exception"
+          ],
+          "not_in": null
+        },
+        "fmt": "{:,d}",
+        "row": null,
+        "optional": false
+      }
+    },
+    {
+      "seed": "42",
+      "registry_sha256": "74af3af4eaae85e0208ec3240de135391b8a63a5fdda10c90087ff020c36ed85",
+      "req_resolved": {
+        "name": "req_resolved",
+        "file": "reqs",
+        "count": {
+          "part": "requirements.status",
+          "value": null,
+          "in": [
+            "done_evidence_exists",
+            "human_external_blocker",
+            "user_exception"
+          ],
+          "not_in": null
+        },
+        "fmt": "{:,d}",
+        "row": null,
+        "optional": false
+      }
+    }
+  ]
+}
