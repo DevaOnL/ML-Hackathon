@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "<frozen runpy>", line 203, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/home/d3va/Downloads/ML_Hackathon/scripts/build_concise_submission_report.py", line 296, in <module>
+    if __name__=='__main__':build()
+                            ~~~~~^^
+  File "/home/d3va/Downloads/ML_Hackathon/scripts/build_concise_submission_report.py", line 133, in build
+    story=[];md=[];W=174*mm
+                         ^^
+UnboundLocalError: cannot access local variable 'mm' where it is not associated with a value

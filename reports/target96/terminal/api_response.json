@@ -1,0 +1,43 @@
+{
+  "captured_at_utc": "2026-11-18T12:13:12.565885+00:00",
+  "url": "https://ml.d3va.dev/datasets/development/match",
+  "request": {
+    "trip_id": "00000009"
+  },
+  "http_status": 200,
+  "health_http_status": 200,
+  "model_hash": "139464145836679fd97d868e0e190f762d4c45f4eca029b856d2bffc358cc81d",
+  "response_sha256": "6580d01a53d6d4f87540f1181ef5e8880e9e9c598026e77f880fa25559b31377",
+  "response_projection": {
+    "trip_id": "00000009",
+    "dataset_id": "development",
+    "dataset_role": "development",
+    "metrics_status": "ok",
+    "metrics": {
+      "accuracy": 0.9332697807435653,
+      "precision": 0.9277486910994763,
+      "recall": 0.9243876760238017,
+      "macro_f1": 0.9230872132647684,
+      "top1_accuracy": 0.8951382268827455,
+      "candidate_miss_rate": 0.0,
+      "log_loss": 0.4008261212133313,
+      "route_continuity": 1.0,
+      "route_edge_f1": 0.9767981438515081,
+      "route_length_f1": 0.976627198155423,
+      "sequence_similarity": 0.9653579676674365,
+      "classifier_accuracy": 0.8951382268827455,
+      "classifier_precision": 0.8641087130295763,
+      "classifier_recall": 0.8260171616286723,
+      "classifier_macro_f1": 0.8371920112927306,
+      "scored_observation_fraction": 1.0
+    },
+    "timings": {
+      "inference_ms": 3995.967,
+      "scoring_ms": 152.615,
+      "total_ms": 4209.588
+    }
+  },
+  "projection_note": "Unmodified selected scalar fields from actual HTTPS JSON; geometry omitted from terminal only.",
+  "mocked": false,
+  "host_role": "same host receiving existing API; separate physical laptop not claimed"
+}

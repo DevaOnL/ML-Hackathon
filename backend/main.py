@@ -1,4 +1,4 @@
 """Uvicorn entry point: python -m uvicorn backend.main:app."""
-from .app import create_app
+from .entrypoint import create_configured_app
 
-app = create_app()
+app = create_configured_app()

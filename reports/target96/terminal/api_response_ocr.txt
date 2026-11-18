@@ -1,0 +1,28 @@
+PATHSNAP — ACTUAL API RESPONSE / receiving host terminal
+
+GET https://ml.d3va.dev/health  HTTP 200 ready
+
+Model: 139464145836679fd97d868e0e190f762d4c45f4ecad29b856d2bffc358cc81d
+POST https://ml.d3va.dev/datasets/development/match
+
+Request: {"trip_id":"00000009"}
+
+HTTP 200 OK
+
+trip_id: 00000009
+
+dataset_id: development
+
+dataset_role: development
+
+metrics_status: ok
+
+route_edge_f1: 0.9767981438515081
+
+route_length_f1: ©.976627198155423
+
+route_continuity: 1.0
+
+Timing: {"inference_ms": 3995.967, "scoring_ms": 152.615, "total_ms": 4209‘588}%
+Actual JSON fields shown; route coordinates omitted for readability.
+

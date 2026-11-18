@@ -1,0 +1,21 @@
+{
+  "training_authorized": true,
+  "created_at_utc": "2026-11-18T10:48:43.317765+00:00",
+  "training_protocol_sha256": "4a164a1191d9ee8e4ec918281adb6857e851e1d1d171c0090684069d7f891fa5",
+  "candidate_manifest_path": "experiments/accuracy_improvement/decoder/candidate_manifest.json",
+  "decoder_selection": {
+    "authorized": true,
+    "model_menu_frozen": true,
+    "candidate_manifest_sha256": "ab0a013f3891510f2785a874a828cc3222e7494b621427a6139655181792238e",
+    "decoder_menu_sha256": "5277a00132fecba461d1246f6dfd60b1cc89e28efab2eae16496cefb9e7fac51"
+  },
+  "allowed_routes": [
+    "00000027",
+    "00000066",
+    "00000037",
+    "00000098",
+    "00000047",
+    "00000078"
+  ],
+  "scope": "dense tuning64 OOF only; no confirmation16/student/evaluator"
+}

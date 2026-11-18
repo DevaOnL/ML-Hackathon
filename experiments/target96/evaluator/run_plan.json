@@ -1,0 +1,79 @@
+{
+  "created_at_utc": "2026-11-18T12:14:08.691291+00:00",
+  "trip_ids": [
+    "00000015",
+    "00000017",
+    "00000023",
+    "00000030",
+    "00000049",
+    "00000059",
+    "00000067",
+    "00000073",
+    "00000087",
+    "00000094"
+  ],
+  "expected_observations": 19674,
+  "release": {
+    "manifest_sha256": "a137a2a5141d3b4a4f2885ed267cd7c21f0816d8ffcf5a074c6d2c708d643cb1",
+    "acceptance_sha256": "16507c4faf483d43a1b715bacc757c6763d4b89ca7e713bb63d78bc1a961220e",
+    "model_sha256": "139464145836679fd97d868e0e190f762d4c45f4eca029b856d2bffc358cc81d",
+    "config_sha256": "aada67cc0bb7a39a403a4b931dc79ce53aa3a8094ffb4de63d2893d4d17ee4d6",
+    "arc_policy_sha256": "b162fd7d2cb0ba71b16daf525fb03a1c799f6081049595e249634155d027f6ac",
+    "source_sha256": {
+      "scripts/target96_evaluate.py": "3be70c535ddc7ac184c3c7f0f1400e0979d668802d27164cc0ad5d610f421ec1",
+      "backend/target96_runtime.py": "46d9c47d5587370fb8f65a5f30144a8dc6a2b3b1f9deb07d210a291df60e0d3f",
+      "backend/emissions.py": "819384fdb1c70ddbf52e11f1227b5291317719b5b5361ced1180c442957c86cc",
+      "backend/geometry.py": "84248a1bab5a8850e5c877b19175b6b7c72d5d4caa56de6bc094a8c9b241b993",
+      "mapmatch/data.py": "89982d7a21c359ad0bc8dba061498b47e05967750325eb83dc81828e8ecf9ce9",
+      "mapmatch/candidates.py": "4a9d2126074ca8bd78e3d513f2cf578fcc7415cfef68768b3c5a9983cd7504e1",
+      "mapmatch/routing.py": "fca3940cb7066b6e247bb0285690ed016dc66fa12d3e4d3c13aed5e5e032bf78",
+      "mapmatch/metrics.py": "94e1ba8fc0ec60c46b8ea06d08ee6f86c655a915ff511da41d446ff7c5f1c882"
+    },
+    "release_source_sha256": {
+      "scripts/target96_release.py": "12954b0d37ebc700d92d854518fe189ce9e2652128a1a4232ba2090dd849c71d",
+      "mapmatch/target96_arc.py": "cabb85c502aa28942b7cf034cc48517a2ab5a301d3c95ad7512ff5d67f98d4e2",
+      "mapmatch/target96.py": "65b43bcb8a36d8f9b5d8f743f3b7e1acb439b6236391fd2882f4628f2bda125f",
+      "mapmatch/matcher.py": "af58502cdfe8de12cb13ea5ab3e1e8c9ef7aee9cf6f3faec8dea5cbfbedc4bff",
+      "mapmatch/metrics.py": "94e1ba8fc0ec60c46b8ea06d08ee6f86c655a915ff511da41d446ff7c5f1c882",
+      "mapmatch/features.py": "d39e908b0b4f7d89d969542a835e0935f07086c97b6546dc8e686efee151adb0",
+      "mapmatch/accuracy_features.py": "3f15e5e82072b9e49bdebbe9a791e3333d59246cda36913ee0b4deeeff1891b9",
+      "mapmatch/accuracy_artifacts.py": "ce957e023b41cbb10d6b98888981ae01794e56fe60e897546e60be59ce1cc22d",
+      "mapmatch/accuracy_matcher.py": "df84fcfdf922f5c73866857eaa3aa4a7800b1fbda73424e6891ec195b32d5678",
+      "mapmatch/learning.py": "de626dd12085cc404ede8eab774d2f79e3269fb3d2b1858975ffdc7da167280c",
+      "backend/emissions.py": "819384fdb1c70ddbf52e11f1227b5291317719b5b5361ced1180c442957c86cc"
+    }
+  },
+  "configuration": {
+    "name": "context_k24_arc5.0",
+    "profile": "context",
+    "match_config": {
+      "sigma_m": 7.160645916267228,
+      "beta_m": 5,
+      "max_candidates": 24,
+      "candidate_radius_m": 80.0,
+      "max_radius_m": 1000.0,
+      "routing_slack_m": 300.0,
+      "backward_tolerance_m": 20.0,
+      "observation_distance_m": 0.0,
+      "observation_interval": 5.0,
+      "sample_spacing_m": 40.0,
+      "cache_size": 2048,
+      "classifier_weight": 1,
+      "geometry_weight": 0.25,
+      "candidate_retry_limit": 48
+    },
+    "arc_policy": {
+      "appended_arc_penalty": 5.0,
+      "reverse_penalty": 3,
+      "reverse_chord_limit_m": 20,
+      "edge_switch_penalty": 0.0
+    }
+  },
+  "all_predictions_before_any_reference": true,
+  "evaluation_only": true,
+  "selection_feedback_allowed": false,
+  "deployment_changed": false,
+  "official_score": false,
+  "independent_blind_test_claimed": false,
+  "timing_note": "Sequential uncached factory+match, two inference threads; graph/track parsing excluded."
+}

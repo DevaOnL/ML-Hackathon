@@ -1,0 +1,8 @@
+{
+  "path": "outputs/target96/candidate/submission.zip",
+  "trips": 10,
+  "flat": true,
+  "prediction_files_only": true,
+  "sha256": "bf45ae3a807a6796dae80ab8d01efba7c86b9a71fd931742cd6001cfef250c0c",
+  "zip_route_bytes_match_frozen_predictions": true
+}

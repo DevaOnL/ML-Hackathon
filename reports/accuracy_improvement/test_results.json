@@ -1,0 +1,14 @@
+{
+  "created_at_utc": "2026-11-18T11:02:38.131Z",
+  "status": "pass",
+  "python_tests": 499,
+  "hosting_tests": 29,
+  "node_tests": 22,
+  "total_tests": 550,
+  "static_smoke": "pass",
+  "log": "reports/accuracy_improvement_verified_tests.log",
+  "scope": "Original regression suites plus new feature/grouped-validation/strict artifact roles/decoder/confirmation/report safety tests. Subsequent source modifications require rerunning relevant tests before release.",
+  "independent_MAX_reviews_completed": 5,
+  "review_limit": "Automated code/science review, not human/organizer approval.",
+  "log_sha256": "85bd4d77ae2dbb400d3dfcb2ed61e07f7893565ec3bbc6b06e6b3b7a705561be"
+}

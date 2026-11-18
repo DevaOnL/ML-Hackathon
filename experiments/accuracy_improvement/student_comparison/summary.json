@@ -1,0 +1,100 @@
+{
+  "created_at_utc": "2026-11-18T11:13:06.498224+00:00",
+  "trips": 10,
+  "role": "historicalstudentdevelopmentnotblindfinalcomparison",
+  "frozen_selection_sha256": "f4da580f9654d90cc493bea8d4643a89b013ac09f985044a7be2a261af34d85f",
+  "no_tuning_feedback": true,
+  "evaluator_used": false,
+  "baseline": {
+    "length_f1": 0.9794127201125091,
+    "edge_f1": 0.9513611360981356,
+    "route_continuity": 1.0,
+    "edit_similarity": 0.917244621040485,
+    "proxy_edge_accuracy": 0.9388929872476017,
+    "proxy_edge_macro_f1": 0.9054157084490555,
+    "elapsed_seconds": 5.461463579300835,
+    "classifier_top1_accuracy": 0.9199583987080457,
+    "candidate_miss_rate": 0.0005050676790009773,
+    "candidate_normalized_nll": 0.24599103896562524,
+    "failures": 0
+  },
+  "candidate": {
+    "length_f1": 0.781179126041969,
+    "edge_f1": 0.7610640072032007,
+    "route_continuity": 0.8,
+    "edit_similarity": 0.7334937947592894,
+    "proxy_edge_accuracy": 0.7585069367052484,
+    "proxy_edge_macro_f1": 0.7470011160344375,
+    "elapsed_seconds": 3.804430362700441,
+    "classifier_top1_accuracy": 0.7397774217961544,
+    "candidate_miss_rate": 0.20020188425302826,
+    "candidate_normalized_nll": 3.3974316657489156,
+    "failures": 2
+  },
+  "deltas": {
+    "length_f1": -0.1982335940705401,
+    "edge_f1": -0.19029712889493489,
+    "route_continuity": -0.19999999999999996,
+    "edit_similarity": -0.18375082628119555,
+    "proxy_edge_accuracy": -0.18038605054235335,
+    "proxy_edge_macro_f1": -0.15841459241461797,
+    "elapsed_seconds": -1.6570332166003938,
+    "classifier_top1_accuracy": -0.1801809769118914,
+    "candidate_miss_rate": 0.1996968165740273,
+    "candidate_normalized_nll": 3.15144062678329,
+    "failures": 2
+  },
+  "trip_bindings": [
+    {
+      "trip_id": "00000000",
+      "path": "experiments/accuracy_improvement/student_comparison/00000000.json",
+      "sha256": "0de2679e19b767f81b3fc0b8b43261855d29539962307c313d03f1fda8b99c3f"
+    },
+    {
+      "trip_id": "00000007",
+      "path": "experiments/accuracy_improvement/student_comparison/00000007.json",
+      "sha256": "5413afd9fb2003dd5c71466200d4358ce60b3286d7f387cad7ed1875a85b955a"
+    },
+    {
+      "trip_id": "00000009",
+      "path": "experiments/accuracy_improvement/student_comparison/00000009.json",
+      "sha256": "dff3ec330590a0c6d1d904851f80403a892b03ebf05e15c2f45de35430ffa8e4"
+    },
+    {
+      "trip_id": "00000040",
+      "path": "experiments/accuracy_improvement/student_comparison/00000040.json",
+      "sha256": "3a24e2b666b9c552d8013130cbcd40e2fb1729f0f0498126ef38fcb270de22f6"
+    },
+    {
+      "trip_id": "00000052",
+      "path": "experiments/accuracy_improvement/student_comparison/00000052.json",
+      "sha256": "c09c9d3a2fa0db851af5e4061c1a3e16d1ad59c0996cd970cd1c63ec19f315e6"
+    },
+    {
+      "trip_id": "00000056",
+      "path": "experiments/accuracy_improvement/student_comparison/00000056.json",
+      "sha256": "9c81c2f92ace96e96fefd2245326db107af39356831c8e5d7cb3c5e8a32b06af"
+    },
+    {
+      "trip_id": "00000065",
+      "path": "experiments/accuracy_improvement/student_comparison/00000065.json",
+      "sha256": "8e61fbbc9b6106c4cacb77a49b65f72dd51aa11558aea8b119492b700fa26fba"
+    },
+    {
+      "trip_id": "00000076",
+      "path": "experiments/accuracy_improvement/student_comparison/00000076.json",
+      "sha256": "6b0ba517ce894c1f1ba52dd85121f5a84368525b7e65ca52fc2664249742f933"
+    },
+    {
+      "trip_id": "00000077",
+      "path": "experiments/accuracy_improvement/student_comparison/00000077.json",
+      "sha256": "ec08e4201c01cf32fbd7ddfd5de63bfab0db91ca09867bb57bbe03274aa13001"
+    },
+    {
+      "trip_id": "00000091",
+      "path": "experiments/accuracy_improvement/student_comparison/00000091.json",
+      "sha256": "580f407dd368d23cd01c149b6aa4c29d17140c65f918f81f99ea17fab2de6b8d"
+    }
+  ],
+  "export_manifest_sha256": "ff60a7724a72bb12980a6645852f154ad7bc088bd84d4705c753e5d3ad381c86"
+}

@@ -1,0 +1,121 @@
+{
+  "trip_id": "00000003",
+  "fold": 1,
+  "observations": 821,
+  "predictions": [
+    {
+      "name": "context_k24_arc2.0",
+      "success": true,
+      "observations": 821,
+      "elapsed_seconds": 2.608752985001047,
+      "effective_max_candidates": 24,
+      "candidate_retry_attempts": [],
+      "route_sha256": "55224fb8dd1fa8c94e9f8d4e1a459a13dde3230a7c8f9a87da6f3170e98cf282",
+      "metrics": {
+        "exact_match": false,
+        "edge_precision": 0.9875,
+        "edge_recall": 1.0,
+        "edge_f1": 0.9937106918238994,
+        "length_precision": 0.9852563096013353,
+        "length_recall": 1.0,
+        "length_f1": 0.9925734071075056,
+        "duplicate_canonical_length_f1": 0.9925734071075056,
+        "edit_distance": 1,
+        "edit_similarity": 0.9875,
+        "predicted_arc_count": 80,
+        "reference_arc_count": 79,
+        "common_arc_count": 79,
+        "predicted_length_m": 5079.210520163804,
+        "reference_length_m": 5004.324212784869,
+        "common_length_m": 5004.324212784868,
+        "length_metric_basis": "meters",
+        "route_continuity": 1.0,
+        "prediction_connected": true,
+        "reference_connected": true,
+        "reference_discontinuity_count": 0,
+        "metric_note": "Directed arc multiset overlap; sequence edit separately. Not an official organizer score."
+      }
+    },
+    {
+      "name": "context_k24_arc5.0",
+      "success": true,
+      "observations": 821,
+      "elapsed_seconds": 0.32319849399937084,
+      "effective_max_candidates": 24,
+      "candidate_retry_attempts": [],
+      "route_sha256": "55224fb8dd1fa8c94e9f8d4e1a459a13dde3230a7c8f9a87da6f3170e98cf282",
+      "metrics": {
+        "exact_match": false,
+        "edge_precision": 0.9875,
+        "edge_recall": 1.0,
+        "edge_f1": 0.9937106918238994,
+        "length_precision": 0.9852563096013353,
+        "length_recall": 1.0,
+        "length_f1": 0.9925734071075056,
+        "duplicate_canonical_length_f1": 0.9925734071075056,
+        "edit_distance": 1,
+        "edit_similarity": 0.9875,
+        "predicted_arc_count": 80,
+        "reference_arc_count": 79,
+        "common_arc_count": 79,
+        "predicted_length_m": 5079.210520163804,
+        "reference_length_m": 5004.324212784869,
+        "common_length_m": 5004.324212784868,
+        "length_metric_basis": "meters",
+        "route_continuity": 1.0,
+        "prediction_connected": true,
+        "reference_connected": true,
+        "reference_discontinuity_count": 0,
+        "metric_note": "Directed arc multiset overlap; sequence edit separately. Not an official organizer score."
+      }
+    },
+    {
+      "name": "v1_release_control",
+      "success": true,
+      "observations": 821,
+      "elapsed_seconds": 0.9566966589991353,
+      "effective_max_candidates": 24,
+      "candidate_retry_attempts": [
+        {
+          "max_candidates": 12,
+          "failure": "no connected directed transition between observations 488 and 489; no route was fabricated"
+        }
+      ],
+      "route_sha256": "6ae8fe439bba73450e12be6a08406ad72410dc094a9eafaaac0a6608a2a2c5ce",
+      "metrics": {
+        "exact_match": false,
+        "edge_precision": 0.8404255319148937,
+        "edge_recall": 1.0,
+        "edge_f1": 0.9132947976878613,
+        "length_precision": 0.9668328377115738,
+        "length_recall": 1.0,
+        "length_f1": 0.9831367660471764,
+        "duplicate_canonical_length_f1": 0.9831367660471764,
+        "edit_distance": 15,
+        "edit_similarity": 0.8404255319148937,
+        "predicted_arc_count": 94,
+        "reference_arc_count": 79,
+        "common_arc_count": 79,
+        "predicted_length_m": 5175.997357133375,
+        "reference_length_m": 5004.324212784869,
+        "common_length_m": 5004.324212784868,
+        "length_metric_basis": "meters",
+        "route_continuity": 1.0,
+        "prediction_connected": true,
+        "reference_connected": true,
+        "reference_discontinuity_count": 0,
+        "metric_note": "Directed arc multiset overlap; sequence edit separately. Not an official organizer score."
+      }
+    }
+  ],
+  "reference_loaded_after_all_predictions": true,
+  "protocol_sha256": "46eefaac2f4c3c05bf653158dfc6d4329bbc85e4f1c2aeae0f33d355825f1fd7",
+  "student_used": false,
+  "evaluator_used": false,
+  "input_sha256": {
+    ".nodes": "4f5c79f74b63b8a175c53ee08d26def1556a40d66d2e003d94133f9d1add296a",
+    ".arcs": "15077a8a63c898d79ffc02da2b353b0bff8870ccc923dd11fb1abc7be4775995",
+    ".track": "655a136db1c4b7b5dcafbf43a44ee4d5c0361b449a4c6cb68bc272388c63a04a",
+    ".route": "b254d993549edbadf689830bad5e0626259d3a6f8c7e1606166396b1e71f6dbd"
+  }
+}

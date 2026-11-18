@@ -1,0 +1,454 @@
+{
+  "created_at_utc": "2026-11-18T10:55:48.284216+00:00",
+  "selection_complete": true,
+  "selection_role": "TRAIN64 six-route dense OOF development selection, not confirmation",
+  "selection_rule": "equal-trip mean lengthF1 thenedgeF1 thenmenuorder; failureszero",
+  "emission_family": "hist_gradient_boosting",
+  "emission_trial": "histgb_context_large_full",
+  "selected_configuration": {
+    "name": "fixed_b2_c1_g1",
+    "order": 1,
+    "match_config": {
+      "sigma_m": 7.5,
+      "beta_m": 2,
+      "max_candidates": 12,
+      "candidate_radius_m": 80,
+      "max_radius_m": 1000,
+      "routing_slack_m": 300.0,
+      "backward_tolerance_m": 20.0,
+      "observation_distance_m": 0,
+      "observation_interval": 5,
+      "sample_spacing_m": 40.0,
+      "cache_size": 2048,
+      "classifier_weight": 1,
+      "geometry_weight": 1,
+      "candidate_retry_limit": 12
+    },
+    "transition_policy": {
+      "path_cost_slack_m": 0.0,
+      "stationary_chord_m": 3.0,
+      "stationary_backward_deadband_m": 1.0,
+      "stationary_backtrack_weight": 0.0,
+      "immediate_reverse_penalty": 0.0
+    },
+    "candidate": {
+      "length_f1": 0.9912841988272799,
+      "edge_f1": 0.9863250966764463,
+      "route_continuity": 1.0,
+      "proxy_edge_accuracy": 0.9562759644710962,
+      "proxy_edge_macro_f1": 0.9756636267972653,
+      "elapsed_seconds": 4.374461139999767,
+      "failures": 0
+    },
+    "v1_control": {
+      "length_f1": 0.9912471686337693,
+      "edge_f1": 0.9861615491644251,
+      "route_continuity": 1.0,
+      "proxy_edge_accuracy": 0.949088974157598,
+      "proxy_edge_macro_f1": 0.9608940131343124,
+      "elapsed_seconds": 4.1187944943333905,
+      "failures": 0
+    }
+  },
+  "all_configurations": [
+    {
+      "name": "fixed_b5_c1_g1",
+      "order": 0,
+      "match_config": {
+        "sigma_m": 7.5,
+        "beta_m": 5,
+        "max_candidates": 12,
+        "candidate_radius_m": 80,
+        "max_radius_m": 1000,
+        "routing_slack_m": 300.0,
+        "backward_tolerance_m": 20.0,
+        "observation_distance_m": 0,
+        "observation_interval": 5,
+        "sample_spacing_m": 40.0,
+        "cache_size": 2048,
+        "classifier_weight": 1,
+        "geometry_weight": 1,
+        "candidate_retry_limit": 12
+      },
+      "transition_policy": {
+        "path_cost_slack_m": 0.0,
+        "stationary_chord_m": 3.0,
+        "stationary_backward_deadband_m": 1.0,
+        "stationary_backtrack_weight": 0.0,
+        "immediate_reverse_penalty": 0.0
+      },
+      "candidate": {
+        "length_f1": 0.9879023102767683,
+        "edge_f1": 0.9830705820091138,
+        "route_continuity": 1.0,
+        "proxy_edge_accuracy": 0.9548183047445756,
+        "proxy_edge_macro_f1": 0.9726768454196163,
+        "elapsed_seconds": 5.702394896166879,
+        "failures": 0
+      },
+      "v1_control": {
+        "length_f1": 0.9884334919570105,
+        "edge_f1": 0.982670912366582,
+        "route_continuity": 1.0,
+        "proxy_edge_accuracy": 0.9488885335731867,
+        "proxy_edge_macro_f1": 0.9610076042917469,
+        "elapsed_seconds": 5.088464342333585,
+        "failures": 0
+      }
+    },
+    {
+      "name": "fixed_b2_c1_g1",
+      "order": 1,
+      "match_config": {
+        "sigma_m": 7.5,
+        "beta_m": 2,
+        "max_candidates": 12,
+        "candidate_radius_m": 80,
+        "max_radius_m": 1000,
+        "routing_slack_m": 300.0,
+        "backward_tolerance_m": 20.0,
+        "observation_distance_m": 0,
+        "observation_interval": 5,
+        "sample_spacing_m": 40.0,
+        "cache_size": 2048,
+        "classifier_weight": 1,
+        "geometry_weight": 1,
+        "candidate_retry_limit": 12
+      },
+      "transition_policy": {
+        "path_cost_slack_m": 0.0,
+        "stationary_chord_m": 3.0,
+        "stationary_backward_deadband_m": 1.0,
+        "stationary_backtrack_weight": 0.0,
+        "immediate_reverse_penalty": 0.0
+      },
+      "candidate": {
+        "length_f1": 0.9912841988272799,
+        "edge_f1": 0.9863250966764463,
+        "route_continuity": 1.0,
+        "proxy_edge_accuracy": 0.9562759644710962,
+        "proxy_edge_macro_f1": 0.9756636267972653,
+        "elapsed_seconds": 4.374461139999767,
+        "failures": 0
+      },
+      "v1_control": {
+        "length_f1": 0.9912471686337693,
+        "edge_f1": 0.9861615491644251,
+        "route_continuity": 1.0,
+        "proxy_edge_accuracy": 0.949088974157598,
+        "proxy_edge_macro_f1": 0.9608940131343124,
+        "elapsed_seconds": 4.1187944943333905,
+        "failures": 0
+      }
+    },
+    {
+      "name": "fixed_b10_c1_g1",
+      "order": 2,
+      "match_config": {
+        "sigma_m": 7.5,
+        "beta_m": 10,
+        "max_candidates": 12,
+        "candidate_radius_m": 80,
+        "max_radius_m": 1000,
+        "routing_slack_m": 300.0,
+        "backward_tolerance_m": 20.0,
+        "observation_distance_m": 0,
+        "observation_interval": 5,
+        "sample_spacing_m": 40.0,
+        "cache_size": 2048,
+        "classifier_weight": 1,
+        "geometry_weight": 1,
+        "candidate_retry_limit": 12
+      },
+      "transition_policy": {
+        "path_cost_slack_m": 0.0,
+        "stationary_chord_m": 3.0,
+        "stationary_backward_deadband_m": 1.0,
+        "stationary_backtrack_weight": 0.0,
+        "immediate_reverse_penalty": 0.0
+      },
+      "candidate": {
+        "length_f1": 0.9874382492314607,
+        "edge_f1": 0.9819536250154397,
+        "route_continuity": 1.0,
+        "proxy_edge_accuracy": 0.9544766643528882,
+        "proxy_edge_macro_f1": 0.9729810692237081,
+        "elapsed_seconds": 4.3623449261661635,
+        "failures": 0
+      },
+      "v1_control": {
+        "length_f1": 0.9873954375566738,
+        "edge_f1": 0.980646371695645,
+        "route_continuity": 1.0,
+        "proxy_edge_accuracy": 0.9477119860671902,
+        "proxy_edge_macro_f1": 0.9592596962380594,
+        "elapsed_seconds": 4.09822507699937,
+        "failures": 0
+      }
+    },
+    {
+      "name": "fixed_b5_c2_g1",
+      "order": 3,
+      "match_config": {
+        "sigma_m": 7.5,
+        "beta_m": 5,
+        "max_candidates": 12,
+        "candidate_radius_m": 80,
+        "max_radius_m": 1000,
+        "routing_slack_m": 300.0,
+        "backward_tolerance_m": 20.0,
+        "observation_distance_m": 0,
+        "observation_interval": 5,
+        "sample_spacing_m": 40.0,
+        "cache_size": 2048,
+        "classifier_weight": 2,
+        "geometry_weight": 1,
+        "candidate_retry_limit": 12
+      },
+      "transition_policy": {
+        "path_cost_slack_m": 0.0,
+        "stationary_chord_m": 3.0,
+        "stationary_backward_deadband_m": 1.0,
+        "stationary_backtrack_weight": 0.0,
+        "immediate_reverse_penalty": 0.0
+      },
+      "candidate": {
+        "length_f1": 0.9875286049457134,
+        "edge_f1": 0.9823576548875838,
+        "route_continuity": 1.0,
+        "proxy_edge_accuracy": 0.9542962050193732,
+        "proxy_edge_macro_f1": 0.9732004306250746,
+        "elapsed_seconds": 4.145714539832625,
+        "failures": 0
+      },
+      "v1_control": {
+        "length_f1": 0.9882941730979455,
+        "edge_f1": 0.9835381062867441,
+        "route_continuity": 1.0,
+        "proxy_edge_accuracy": 0.9482334276001616,
+        "proxy_edge_macro_f1": 0.9619486803942171,
+        "elapsed_seconds": 4.024478984999708,
+        "failures": 0
+      }
+    },
+    {
+      "name": "fixed_b5_c1_g025",
+      "order": 4,
+      "match_config": {
+        "sigma_m": 7.5,
+        "beta_m": 5,
+        "max_candidates": 12,
+        "candidate_radius_m": 80,
+        "max_radius_m": 1000,
+        "routing_slack_m": 300.0,
+        "backward_tolerance_m": 20.0,
+        "observation_distance_m": 0,
+        "observation_interval": 5,
+        "sample_spacing_m": 40.0,
+        "cache_size": 2048,
+        "classifier_weight": 1,
+        "geometry_weight": 0.25,
+        "candidate_retry_limit": 12
+      },
+      "transition_policy": {
+        "path_cost_slack_m": 0.0,
+        "stationary_chord_m": 3.0,
+        "stationary_backward_deadband_m": 1.0,
+        "stationary_backtrack_weight": 0.0,
+        "immediate_reverse_penalty": 0.0
+      },
+      "candidate": {
+        "length_f1": 0.9907701427759285,
+        "edge_f1": 0.9876508841500522,
+        "route_continuity": 1.0,
+        "proxy_edge_accuracy": 0.9567007566166783,
+        "proxy_edge_macro_f1": 0.9785984460933466,
+        "elapsed_seconds": 4.263321683165486,
+        "failures": 0
+      },
+      "v1_control": {
+        "length_f1": 0.9906507308781943,
+        "edge_f1": 0.9860905460295952,
+        "route_continuity": 1.0,
+        "proxy_edge_accuracy": 0.9502958314342385,
+        "proxy_edge_macro_f1": 0.9642465792492129,
+        "elapsed_seconds": 3.9524584135003047,
+        "failures": 0
+      }
+    },
+    {
+      "name": "fixed_b5_c2_g025",
+      "order": 5,
+      "match_config": {
+        "sigma_m": 7.5,
+        "beta_m": 5,
+        "max_candidates": 12,
+        "candidate_radius_m": 80,
+        "max_radius_m": 1000,
+        "routing_slack_m": 300.0,
+        "backward_tolerance_m": 20.0,
+        "observation_distance_m": 0,
+        "observation_interval": 5,
+        "sample_spacing_m": 40.0,
+        "cache_size": 2048,
+        "classifier_weight": 2,
+        "geometry_weight": 0.25,
+        "candidate_retry_limit": 12
+      },
+      "transition_policy": {
+        "path_cost_slack_m": 0.0,
+        "stationary_chord_m": 3.0,
+        "stationary_backward_deadband_m": 1.0,
+        "stationary_backtrack_weight": 0.0,
+        "immediate_reverse_penalty": 0.0
+      },
+      "candidate": {
+        "length_f1": 0.9881524887098342,
+        "edge_f1": 0.9831718916798492,
+        "route_continuity": 1.0,
+        "proxy_edge_accuracy": 0.9546182364707777,
+        "proxy_edge_macro_f1": 0.9743690223772793,
+        "elapsed_seconds": 4.20419194833327,
+        "failures": 0
+      },
+      "v1_control": {
+        "length_f1": 0.9882941730979455,
+        "edge_f1": 0.9835381062867441,
+        "route_continuity": 1.0,
+        "proxy_edge_accuracy": 0.9479359804447075,
+        "proxy_edge_macro_f1": 0.9617490287314009,
+        "elapsed_seconds": 4.097299855001135,
+        "failures": 0
+      }
+    },
+    {
+      "name": "fixed_b5_slack",
+      "order": 6,
+      "match_config": {
+        "sigma_m": 7.5,
+        "beta_m": 5,
+        "max_candidates": 12,
+        "candidate_radius_m": 80,
+        "max_radius_m": 1000,
+        "routing_slack_m": 300.0,
+        "backward_tolerance_m": 20.0,
+        "observation_distance_m": 0,
+        "observation_interval": 5,
+        "sample_spacing_m": 40.0,
+        "cache_size": 2048,
+        "classifier_weight": 1,
+        "geometry_weight": 1,
+        "candidate_retry_limit": 12
+      },
+      "transition_policy": {
+        "path_cost_slack_m": 10,
+        "stationary_chord_m": 3.0,
+        "stationary_backward_deadband_m": 1.0,
+        "stationary_backtrack_weight": 0.0,
+        "immediate_reverse_penalty": 0.0
+      },
+      "candidate": {
+        "length_f1": 0.987861040859395,
+        "edge_f1": 0.9827582591020928,
+        "route_continuity": 1.0,
+        "proxy_edge_accuracy": 0.9556381984166964,
+        "proxy_edge_macro_f1": 0.9730127581850162,
+        "elapsed_seconds": 4.018577762834563,
+        "failures": 0
+      },
+      "v1_control": {
+        "length_f1": 0.9877016151941915,
+        "edge_f1": 0.9813605277259233,
+        "route_continuity": 1.0,
+        "proxy_edge_accuracy": 0.948468292936202,
+        "proxy_edge_macro_f1": 0.9584779653341907,
+        "elapsed_seconds": 4.187959158000012,
+        "failures": 0
+      }
+    },
+    {
+      "name": "fixed_b5_stationary_slack",
+      "order": 7,
+      "match_config": {
+        "sigma_m": 7.5,
+        "beta_m": 5,
+        "max_candidates": 12,
+        "candidate_radius_m": 80,
+        "max_radius_m": 1000,
+        "routing_slack_m": 300.0,
+        "backward_tolerance_m": 20.0,
+        "observation_distance_m": 0,
+        "observation_interval": 5,
+        "sample_spacing_m": 40.0,
+        "cache_size": 2048,
+        "classifier_weight": 1,
+        "geometry_weight": 1,
+        "candidate_retry_limit": 12
+      },
+      "transition_policy": {
+        "path_cost_slack_m": 10,
+        "stationary_chord_m": 3,
+        "stationary_backward_deadband_m": 1,
+        "stationary_backtrack_weight": 1,
+        "immediate_reverse_penalty": 2
+      },
+      "candidate": {
+        "length_f1": 0.987861040859395,
+        "edge_f1": 0.9827582591020928,
+        "route_continuity": 1.0,
+        "proxy_edge_accuracy": 0.9551877382023884,
+        "proxy_edge_macro_f1": 0.9731034504955804,
+        "elapsed_seconds": 3.9851436553332555,
+        "failures": 0
+      },
+      "v1_control": {
+        "length_f1": 0.9877016151941915,
+        "edge_f1": 0.9813605277259233,
+        "route_continuity": 1.0,
+        "proxy_edge_accuracy": 0.9487382938169949,
+        "proxy_edge_macro_f1": 0.9587067966803594,
+        "elapsed_seconds": 4.177182977832975,
+        "failures": 0
+      }
+    }
+  ],
+  "selection_trips": [
+    "00000027",
+    "00000066",
+    "00000037",
+    "00000098",
+    "00000047",
+    "00000078"
+  ],
+  "result_bindings": [
+    {
+      "path": "experiments/accuracy_improvement/decoder/results/00000027.json",
+      "sha256": "b7d9f060946b93c345e6fc6a307ec6680acfc20ea3a8acb211208483ee6b73c1"
+    },
+    {
+      "path": "experiments/accuracy_improvement/decoder/results/00000066.json",
+      "sha256": "1cf7348ef3acf37b13467517b90bc444b9cc7a16e2704b89446f19e4b7a86204"
+    },
+    {
+      "path": "experiments/accuracy_improvement/decoder/results/00000037.json",
+      "sha256": "59d8d47329c89b57965e2f30d0c033fefc2bb8afb7c8719effb1fb232ffdc026"
+    },
+    {
+      "path": "experiments/accuracy_improvement/decoder/results/00000098.json",
+      "sha256": "cfe4bc2bb627ad20efc74ab439e6b55c504cf7bd8d35ac22b4adc1cd440b7a17"
+    },
+    {
+      "path": "experiments/accuracy_improvement/decoder/results/00000047.json",
+      "sha256": "b6d636ef23d391e36f6e9c03ae6627a5856197de463de571d6ee6b087ca7bb8e"
+    },
+    {
+      "path": "experiments/accuracy_improvement/decoder/results/00000078.json",
+      "sha256": "3610f7276f878e9e27e4269c41884686b90a221899f8c4fb345d42deb3d41b2b"
+    }
+  ],
+  "protocol_sha256": "4a164a1191d9ee8e4ec918281adb6857e851e1d1d171c0090684069d7f891fa5",
+  "decoder_menu_sha256": "5277a00132fecba461d1246f6dfd60b1cc89e28efab2eae16496cefb9e7fac51",
+  "confirmation_used": false,
+  "student_used": false,
+  "evaluator_used": false
+}

@@ -1,0 +1,711 @@
+{
+  "schema_version": 1,
+  "created_at_utc": "2026-11-18T10:33:39.866845+00:00",
+  "training_authorized": true,
+  "baseline_release_commit": "a519e0221267087d500ebf1e98177ecc7e8062f5",
+  "baseline_model_sha256": "c9cc8e9f36838f656a94d07ed69632979df9981ca94a9daf3b52fbce052e4b34",
+  "baseline_decoder_sha256": "10405aa6b6f370e41d4ddcb01207fd1e8f58900fd0395e541ee6bc78146168c5",
+  "source_TRAIN_cache_sha256": "db523c112a6119f16b6f473d6221e3c56b6730ccb2db64dee55433aedbf3ba9e",
+  "tuning_trip_ids": [
+    "00000001",
+    "00000002",
+    "00000003",
+    "00000004",
+    "00000005",
+    "00000010",
+    "00000011",
+    "00000013",
+    "00000014",
+    "00000016",
+    "00000018",
+    "00000019",
+    "00000020",
+    "00000022",
+    "00000025",
+    "00000027",
+    "00000028",
+    "00000031",
+    "00000033",
+    "00000034",
+    "00000037",
+    "00000038",
+    "00000039",
+    "00000042",
+    "00000043",
+    "00000044",
+    "00000045",
+    "00000046",
+    "00000047",
+    "00000050",
+    "00000051",
+    "00000053",
+    "00000054",
+    "00000055",
+    "00000057",
+    "00000058",
+    "00000060",
+    "00000061",
+    "00000062",
+    "00000066",
+    "00000068",
+    "00000070",
+    "00000071",
+    "00000072",
+    "00000074",
+    "00000075",
+    "00000078",
+    "00000080",
+    "00000081",
+    "00000082",
+    "00000083",
+    "00000084",
+    "00000085",
+    "00000086",
+    "00000088",
+    "00000089",
+    "00000090",
+    "00000092",
+    "00000093",
+    "00000095",
+    "00000096",
+    "00000097",
+    "00000098",
+    "00000099"
+  ],
+  "confirmation_trip_ids": [
+    "00000006",
+    "00000008",
+    "00000012",
+    "00000021",
+    "00000024",
+    "00000026",
+    "00000029",
+    "00000032",
+    "00000035",
+    "00000036",
+    "00000041",
+    "00000048",
+    "00000063",
+    "00000064",
+    "00000069",
+    "00000079"
+  ],
+  "confirmation_caveat": "Prospective exclusion from fitting, preprocessing, scoring and tuning in THIS iteration only. Released models historically trained on all80; not new unseen data. Loader reads pinned cache before subsetting but no confirmation rows feed tuning metrics/transforms.",
+  "selection_objective": [
+    "unconditional_equal_trip_observation_top1",
+    "binary_candidate_macro_f1",
+    "lower_binary_log_loss"
+  ],
+  "metric_definitions_unchanged": true,
+  "proxy_label_policy": {
+    "name": "nearest-reference-segment-with-motion-orientation-v1",
+    "is_ground_truth": false,
+    "description": "Project each GPS observation onto every distinct canonical directed reference-route segment; minimise distance squared plus 32m^2 times reliable signed heading mismatch. Motion uses at most +/-3 rows and never crosses a >20s local dropout. Route data is used ONLY to create labels or score completed predictions, never features.",
+    "orientation_penalty_m2": 32.0,
+    "ambiguous_score_margin_m2": 4.0,
+    "limitations": "No per-observation labels were supplied. Intersections, stops, nearby parallel roads, repeated traversals and route defects can make these proxy labels uncertain; these metrics are not independently verified GPS ground truth. The geometry-derived target favours geometric predictors."
+  },
+  "feature_profiles": [
+    "v1",
+    "context",
+    "compact",
+    "physics"
+  ],
+  "candidate_policy_unchanged": {
+    "max_candidates": 12,
+    "radius_m": 80,
+    "expand_only_if_empty": true
+  },
+  "family_menus": {
+    "logistic_regression": [
+      {
+        "family": "logistic_regression",
+        "run_name": "lr_baseline38_c1",
+        "profile": "baseline38",
+        "parameters": {
+          "max_iter": 500,
+          "solver": "lbfgs",
+          "C": 1.0,
+          "preprocessing": "baseline"
+        }
+      },
+      {
+        "family": "logistic_regression",
+        "run_name": "lr_context_c01",
+        "profile": "context",
+        "parameters": {
+          "max_iter": 500,
+          "solver": "lbfgs",
+          "C": 0.1,
+          "preprocessing": "scale"
+        }
+      },
+      {
+        "family": "logistic_regression",
+        "run_name": "lr_context_c1",
+        "profile": "context",
+        "parameters": {
+          "max_iter": 500,
+          "solver": "lbfgs",
+          "C": 1.0,
+          "preprocessing": "scale"
+        }
+      },
+      {
+        "family": "logistic_regression",
+        "run_name": "lr_context_c10",
+        "profile": "context",
+        "parameters": {
+          "max_iter": 500,
+          "solver": "lbfgs",
+          "C": 10.0,
+          "preprocessing": "scale"
+        }
+      },
+      {
+        "family": "logistic_regression",
+        "run_name": "lr_compact_c1",
+        "profile": "compact",
+        "parameters": {
+          "max_iter": 500,
+          "solver": "lbfgs",
+          "C": 1.0,
+          "preprocessing": "scale"
+        }
+      },
+      {
+        "family": "logistic_regression",
+        "run_name": "lr_physics_c1",
+        "profile": "physics",
+        "parameters": {
+          "max_iter": 500,
+          "solver": "lbfgs",
+          "C": 1.0,
+          "preprocessing": "scale"
+        }
+      }
+    ],
+    "knn_distance_weighted": [
+      {
+        "family": "knn_distance_weighted",
+        "run_name": "knn_v1_control",
+        "profile": "v1",
+        "parameters": {
+          "algorithm": "brute",
+          "p": 2,
+          "leaf_size": 40,
+          "n_neighbors": 25
+        }
+      },
+      {
+        "family": "knn_distance_weighted",
+        "run_name": "knn_compact5",
+        "profile": "compact",
+        "parameters": {
+          "algorithm": "kd_tree",
+          "p": 2,
+          "leaf_size": 40,
+          "n_neighbors": 5
+        }
+      },
+      {
+        "family": "knn_distance_weighted",
+        "run_name": "knn_compact15",
+        "profile": "compact",
+        "parameters": {
+          "algorithm": "kd_tree",
+          "p": 2,
+          "leaf_size": 40,
+          "n_neighbors": 15
+        }
+      },
+      {
+        "family": "knn_distance_weighted",
+        "run_name": "knn_compact35",
+        "profile": "compact",
+        "parameters": {
+          "algorithm": "kd_tree",
+          "p": 2,
+          "leaf_size": 40,
+          "n_neighbors": 35
+        }
+      },
+      {
+        "family": "knn_distance_weighted",
+        "run_name": "knn_physics15",
+        "profile": "physics",
+        "parameters": {
+          "algorithm": "kd_tree",
+          "p": 2,
+          "leaf_size": 40,
+          "n_neighbors": 15
+        }
+      },
+      {
+        "family": "knn_distance_weighted",
+        "run_name": "knn_compact_l1",
+        "profile": "compact",
+        "parameters": {
+          "algorithm": "kd_tree",
+          "p": 1,
+          "leaf_size": 40,
+          "n_neighbors": 15
+        }
+      }
+    ],
+    "bagging": [
+      {
+        "family": "bagging",
+        "run_name": "bagging_v1_control",
+        "profile": "v1",
+        "parameters": {
+          "n_estimators": 40,
+          "max_samples": 0.7,
+          "max_depth": 14,
+          "min_samples_leaf": 3
+        }
+      },
+      {
+        "family": "bagging",
+        "run_name": "bagging_context_control",
+        "profile": "context",
+        "parameters": {
+          "n_estimators": 40,
+          "max_samples": 0.7,
+          "max_depth": 14,
+          "min_samples_leaf": 3
+        }
+      },
+      {
+        "family": "bagging",
+        "run_name": "bagging_context_deeper",
+        "profile": "context",
+        "parameters": {
+          "n_estimators": 64,
+          "max_samples": 0.7,
+          "max_depth": 20,
+          "min_samples_leaf": 3
+        }
+      },
+      {
+        "family": "bagging",
+        "run_name": "bagging_context_smooth",
+        "profile": "context",
+        "parameters": {
+          "n_estimators": 64,
+          "max_samples": 0.7,
+          "max_depth": 18,
+          "min_samples_leaf": 6
+        }
+      },
+      {
+        "family": "bagging",
+        "run_name": "bagging_compact",
+        "profile": "compact",
+        "parameters": {
+          "n_estimators": 64,
+          "max_samples": 0.7,
+          "max_depth": 18,
+          "min_samples_leaf": 4
+        }
+      },
+      {
+        "family": "bagging",
+        "run_name": "bagging_physics",
+        "profile": "physics",
+        "parameters": {
+          "n_estimators": 64,
+          "max_samples": 0.7,
+          "max_depth": 12,
+          "min_samples_leaf": 8
+        }
+      }
+    ],
+    "gaussian_nb": [
+      {
+        "family": "gaussian_nb",
+        "run_name": "gnb_baseline38_s1e7",
+        "profile": "baseline38",
+        "parameters": {
+          "var_smoothing": 1e-07,
+          "preprocessing": "baseline"
+        }
+      },
+      {
+        "family": "gaussian_nb",
+        "run_name": "gnb_compact_s001",
+        "profile": "compact",
+        "parameters": {
+          "preprocessing": "skew_decorrelate",
+          "correlation_threshold": 0.9,
+          "skew_threshold": 0.75,
+          "var_smoothing": 0.001
+        }
+      },
+      {
+        "family": "gaussian_nb",
+        "run_name": "gnb_compact_s01",
+        "profile": "compact",
+        "parameters": {
+          "preprocessing": "skew_decorrelate",
+          "correlation_threshold": 0.9,
+          "skew_threshold": 0.75,
+          "var_smoothing": 0.01
+        }
+      },
+      {
+        "family": "gaussian_nb",
+        "run_name": "gnb_compact_s1",
+        "profile": "compact",
+        "parameters": {
+          "preprocessing": "skew_decorrelate",
+          "correlation_threshold": 0.9,
+          "skew_threshold": 0.75,
+          "var_smoothing": 0.1
+        }
+      },
+      {
+        "family": "gaussian_nb",
+        "run_name": "gnb_context_s01",
+        "profile": "context",
+        "parameters": {
+          "preprocessing": "skew_decorrelate",
+          "correlation_threshold": 0.9,
+          "skew_threshold": 0.75,
+          "var_smoothing": 0.01
+        }
+      },
+      {
+        "family": "gaussian_nb",
+        "run_name": "gnb_physics_s01",
+        "profile": "physics",
+        "parameters": {
+          "preprocessing": "skew_decorrelate",
+          "correlation_threshold": 0.9,
+          "skew_threshold": 0.75,
+          "var_smoothing": 0.01
+        }
+      }
+    ],
+    "hist_gradient_boosting": [
+      {
+        "family": "hist_gradient_boosting",
+        "run_name": "histgb_v1_control",
+        "profile": "v1",
+        "parameters": {
+          "max_iter": 104,
+          "learning_rate": 0.15902391896503631,
+          "max_leaf_nodes": 22,
+          "min_samples_leaf": 38,
+          "l2_regularization": 0.8604220152998319
+        }
+      },
+      {
+        "family": "hist_gradient_boosting",
+        "run_name": "histgb_context_control",
+        "profile": "context",
+        "parameters": {
+          "max_iter": 104,
+          "learning_rate": 0.15902391896503631,
+          "max_leaf_nodes": 22,
+          "min_samples_leaf": 38,
+          "l2_regularization": 0.8604220152998319
+        }
+      },
+      {
+        "family": "hist_gradient_boosting",
+        "run_name": "histgb_context_long",
+        "profile": "context",
+        "parameters": {
+          "max_iter": 240,
+          "learning_rate": 0.075,
+          "max_leaf_nodes": 23,
+          "min_samples_leaf": 40,
+          "l2_regularization": 1.0
+        }
+      },
+      {
+        "family": "hist_gradient_boosting",
+        "run_name": "histgb_context_smooth",
+        "profile": "context",
+        "parameters": {
+          "max_iter": 240,
+          "learning_rate": 0.055,
+          "max_leaf_nodes": 15,
+          "min_samples_leaf": 60,
+          "l2_regularization": 2.0
+        }
+      },
+      {
+        "family": "hist_gradient_boosting",
+        "run_name": "histgb_compact",
+        "profile": "compact",
+        "parameters": {
+          "max_iter": 240,
+          "learning_rate": 0.075,
+          "max_leaf_nodes": 23,
+          "min_samples_leaf": 38,
+          "l2_regularization": 0.8604220152998319
+        }
+      },
+      {
+        "family": "hist_gradient_boosting",
+        "run_name": "histgb_context_large",
+        "profile": "context",
+        "parameters": {
+          "max_iter": 180,
+          "learning_rate": 0.1,
+          "max_leaf_nodes": 31,
+          "min_samples_leaf": 30,
+          "l2_regularization": 2.0
+        }
+      }
+    ]
+  },
+  "screening": "six fixed configurations per family on fold0; top2 plus v1 control refit on all3 tuningfolds. These are exploratory tuning estimates. Trial names unique and no overwrites.",
+  "folds": [
+    {
+      "fold": 0,
+      "train_trip_ids": [
+        "00000002",
+        "00000003",
+        "00000005",
+        "00000010",
+        "00000013",
+        "00000014",
+        "00000018",
+        "00000019",
+        "00000022",
+        "00000025",
+        "00000028",
+        "00000031",
+        "00000034",
+        "00000037",
+        "00000039",
+        "00000042",
+        "00000044",
+        "00000045",
+        "00000047",
+        "00000050",
+        "00000053",
+        "00000054",
+        "00000057",
+        "00000058",
+        "00000061",
+        "00000062",
+        "00000068",
+        "00000070",
+        "00000072",
+        "00000074",
+        "00000078",
+        "00000080",
+        "00000082",
+        "00000083",
+        "00000085",
+        "00000086",
+        "00000089",
+        "00000090",
+        "00000093",
+        "00000095",
+        "00000097",
+        "00000098"
+      ],
+      "validation_trip_ids": [
+        "00000001",
+        "00000004",
+        "00000011",
+        "00000016",
+        "00000020",
+        "00000027",
+        "00000033",
+        "00000038",
+        "00000043",
+        "00000046",
+        "00000051",
+        "00000055",
+        "00000060",
+        "00000066",
+        "00000071",
+        "00000075",
+        "00000081",
+        "00000084",
+        "00000088",
+        "00000092",
+        "00000096",
+        "00000099"
+      ]
+    },
+    {
+      "fold": 1,
+      "train_trip_ids": [
+        "00000001",
+        "00000002",
+        "00000004",
+        "00000005",
+        "00000011",
+        "00000013",
+        "00000016",
+        "00000018",
+        "00000020",
+        "00000022",
+        "00000027",
+        "00000028",
+        "00000033",
+        "00000034",
+        "00000038",
+        "00000039",
+        "00000043",
+        "00000044",
+        "00000046",
+        "00000047",
+        "00000051",
+        "00000053",
+        "00000055",
+        "00000057",
+        "00000060",
+        "00000061",
+        "00000066",
+        "00000068",
+        "00000071",
+        "00000072",
+        "00000075",
+        "00000078",
+        "00000081",
+        "00000082",
+        "00000084",
+        "00000085",
+        "00000088",
+        "00000089",
+        "00000092",
+        "00000093",
+        "00000096",
+        "00000097",
+        "00000099"
+      ],
+      "validation_trip_ids": [
+        "00000003",
+        "00000010",
+        "00000014",
+        "00000019",
+        "00000025",
+        "00000031",
+        "00000037",
+        "00000042",
+        "00000045",
+        "00000050",
+        "00000054",
+        "00000058",
+        "00000062",
+        "00000070",
+        "00000074",
+        "00000080",
+        "00000083",
+        "00000086",
+        "00000090",
+        "00000095",
+        "00000098"
+      ]
+    },
+    {
+      "fold": 2,
+      "train_trip_ids": [
+        "00000001",
+        "00000003",
+        "00000004",
+        "00000010",
+        "00000011",
+        "00000014",
+        "00000016",
+        "00000019",
+        "00000020",
+        "00000025",
+        "00000027",
+        "00000031",
+        "00000033",
+        "00000037",
+        "00000038",
+        "00000042",
+        "00000043",
+        "00000045",
+        "00000046",
+        "00000050",
+        "00000051",
+        "00000054",
+        "00000055",
+        "00000058",
+        "00000060",
+        "00000062",
+        "00000066",
+        "00000070",
+        "00000071",
+        "00000074",
+        "00000075",
+        "00000080",
+        "00000081",
+        "00000083",
+        "00000084",
+        "00000086",
+        "00000088",
+        "00000090",
+        "00000092",
+        "00000095",
+        "00000096",
+        "00000098",
+        "00000099"
+      ],
+      "validation_trip_ids": [
+        "00000002",
+        "00000005",
+        "00000013",
+        "00000018",
+        "00000022",
+        "00000028",
+        "00000034",
+        "00000039",
+        "00000044",
+        "00000047",
+        "00000053",
+        "00000057",
+        "00000061",
+        "00000068",
+        "00000072",
+        "00000078",
+        "00000082",
+        "00000085",
+        "00000089",
+        "00000093",
+        "00000097"
+      ]
+    }
+  ],
+  "fit_policy": "all tuning-training rows, inverse observation/trip weights; KNN unchangedweightedstratified60kbank with foldseed20261118+7919*fold",
+  "probability_policy": "float64 two-class outputs must be finite [0,1] and sum1 abs1e-10; baseline clipping1e-7 retained, no numerical guard relaxation",
+  "decoder_policy": "OOF models only on atmost6 tuningroutevalidationtrips twohashsmallestperfold; fixedK12 and dense observations for first decoderablation; fixedphysicalsigma7.5m,beta menu2/5/10 notfitall80; route metrics referenceoccurrencesunchanged",
+  "decoder_decision": "lengthF1 primary thenedgeF1; reportproxyclassification/continuity/time and alltradeoffs; no crosscandidatepoolrelativeNLL comparisons",
+  "confirmation_gate": "freeze family configurations, feature definitions, ranking rule and decoder configuration before one paired comparison on reserved16. No tuning after confirmation; failed candidates remainfailed. Student historicaldevelopment only afterfreeze; scored evaluator never usedtuning or calledblind.",
+  "production_change_gate": "leave original existingwebsite/model/report frozen; no deployment unless pairedgains strictprobabilities/connectedroutes/sourceidentity/fulltests/independentreview accepted",
+  "resource_limits": {
+    "parallel_workers_max": 3,
+    "threads_per_worker_max": 2,
+    "unlimited_search": false
+  },
+  "raw_and_row_arrays_private": true,
+  "student_accessed_this_iteration": false,
+  "evaluator_accessed_this_iteration": false,
+  "training_authorized_at_utc": "2026-11-18T10:36:35.796492+00:00",
+  "source_freeze": {
+    "scripts/accuracy_common.py": "f6f6969418c6155cb05d0cfed1ef68e06e6e155f08b8a926a003eb3266f5b92c",
+    "scripts/accuracy_trees.py": "2e6838ecbed78973115df787e04f9793e398b2f8d68c6ea6edceff14bbed03e6",
+    "scripts/accuracy_linear_bayes.py": "7b2ef3c577b9238e64c9ce76df0cf22338daef05f9734c2fa8451ad92c58c107",
+    "scripts/accuracy_knn.py": "48504fb802830c97972b3dcbf6fc22481d9457d3e61d9862bd2de52ce8d39782",
+    "mapmatch/accuracy_features.py": "3f15e5e82072b9e49bdebbe9a791e3333d59246cda36913ee0b4deeeff1891b9"
+  },
+  "preflight_synthetic_tests_passed": 60,
+  "review_findings_fixed_before_fit": [
+    "exact_registered_fold_and_menu_checks",
+    "screen_record_source_protocol_parameter_checks",
+    "authorization_and_all_schema_preflight_before_outputs",
+    "verified_resume_completed_trials_no_overwrite"
+  ],
+  "training_authorization_note": "Lead launches only after registered sources and60synthetic tests; no private scores measured before this timestamp."
+}

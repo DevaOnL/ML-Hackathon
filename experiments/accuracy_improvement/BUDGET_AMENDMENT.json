@@ -1,0 +1,19 @@
+{
+  "created_at_utc": "2026-11-18T11:00:53.960Z",
+  "reason": "Direct user request: Speed up. Finish all work quickly.",
+  "applied_before_any_confirmation_score": true,
+  "original_protocol_unchanged": true,
+  "scope": "bagging only",
+  "change": "Retain six measured fold0 screens. Complete full3CV only for highest screened candidate bagging_context_smooth plus v1control. Stop optional second finalist bagging_context_deeper full3CV to reduce remaining compute; keep original screen and partial/failure evidence. Other four families already completed their full registered menu.",
+  "completed_required_runs": [
+    "bagging_context_smooth_full",
+    "bagging_v1_control_full"
+  ],
+  "budget_stopped_runs": [
+    "bagging_context_deeper_full"
+  ],
+  "scientific_caveat": "This is a disclosed runtime-budget deviation from top2pluscontrol promotion, made before prospective confirmation. No claim full originally planned Bagging search completed. Winner chosen only from complete required paired results; no reserved16/student/evaluator feedback.",
+  "confirmation_scored": false,
+  "student_scored": false,
+  "evaluator_scored": false
+}

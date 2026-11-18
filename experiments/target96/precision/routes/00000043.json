@@ -1,0 +1,62 @@
+{
+  "trip_id": "00000043",
+  "fold": 0,
+  "observations": 2322,
+  "predictions": [
+    {
+      "name": "context_k24_arc2.0",
+      "success": false,
+      "observations": 2322,
+      "elapsed_seconds": 4.33591984099985,
+      "failure": "no connected directed transition between observations 439 and 440; no route was fabricated",
+      "metrics": {
+        "edge_f1": 0.0,
+        "edge_precision": 0.0,
+        "edge_recall": 0.0,
+        "length_f1": 0.0,
+        "route_continuity": 0.0,
+        "edit_similarity": 0.0
+      }
+    },
+    {
+      "name": "context_k24_arc5.0",
+      "success": false,
+      "observations": 2322,
+      "elapsed_seconds": 0.399171684999601,
+      "failure": "no connected directed transition between observations 439 and 440; no route was fabricated",
+      "metrics": {
+        "edge_f1": 0.0,
+        "edge_precision": 0.0,
+        "edge_recall": 0.0,
+        "length_f1": 0.0,
+        "route_continuity": 0.0,
+        "edit_similarity": 0.0
+      }
+    },
+    {
+      "name": "v1_release_control",
+      "success": false,
+      "observations": 2322,
+      "elapsed_seconds": 3.5375438729970483,
+      "failure": "no connected directed transition between observations 439 and 440; no route was fabricated",
+      "metrics": {
+        "edge_f1": 0.0,
+        "edge_precision": 0.0,
+        "edge_recall": 0.0,
+        "length_f1": 0.0,
+        "route_continuity": 0.0,
+        "edit_similarity": 0.0
+      }
+    }
+  ],
+  "reference_loaded_after_all_predictions": true,
+  "protocol_sha256": "46eefaac2f4c3c05bf653158dfc6d4329bbc85e4f1c2aeae0f33d355825f1fd7",
+  "student_used": false,
+  "evaluator_used": false,
+  "input_sha256": {
+    ".nodes": "bd7c305f8845a622918d30a0f36d24ac28186c7c3ba35dc311cd298c193e9f5a",
+    ".arcs": "5f923ce7db3dfb51b7e3bb80b0ac1e5a5f8a5ee0e7f04900d1e22dc7ddcc0ed2",
+    ".track": "36620079a815074275d699e82c2a2bccd2aea14ff89d34f9df8136eb9af5d60d",
+    ".route": "94b470e30e44d95b253427b38fc1df18ec466a8807900a3c6ef14d240d626843"
+  }
+}

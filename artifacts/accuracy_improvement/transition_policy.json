@@ -1,0 +1,7 @@
+{
+  "path_cost_slack_m": 0.0,
+  "stationary_chord_m": 3.0,
+  "stationary_backward_deadband_m": 1.0,
+  "stationary_backtrack_weight": 0.0,
+  "immediate_reverse_penalty": 0.0
+}

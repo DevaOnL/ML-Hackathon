@@ -1,0 +1,176 @@
+{
+  "schema_version": 1,
+  "worker": "linear_bayes",
+  "protocol_status": "preregistered before training-cache fits; awaiting common API",
+  "allowed_train_cache": "experiments/cache/train_edee9a8f151dd25e.npz",
+  "dataset_contract": {
+    "trips": 80,
+    "observations": 28000,
+    "candidate_rows": 269463,
+    "label_policy": "unchanged existing proxy y",
+    "fold_policy": "unchanged 3 GroupKFold trip-separated folds"
+  },
+  "selection": {
+    "stage1": "fold0 only, identical primary and tie-break metrics for both families",
+    "primary": "baseline_clip_trip_macro_top1_accuracy",
+    "tie_breaks": [
+      "baseline_clip_top1_accuracy descending",
+      "macro_f1 descending",
+      "log_loss ascending",
+      "run_name lexicographic"
+    ],
+    "promotion": "top2 per family; retain fold0 predictions and fit only folds1,2",
+    "reporting": "all12 configurations; screened-only results never compared as full-OOF",
+    "tuning_limit": "6 preregistered configs/family including baseline control; no expansion"
+  },
+  "resources": {
+    "OMP_NUM_THREADS": 1,
+    "OPENBLAS_NUM_THREADS": 1,
+    "MKL_NUM_THREADS": 1,
+    "NUMEXPR_NUM_THREADS": 1,
+    "n_jobs": 1,
+    "parallel_training_jobs": 1
+  },
+  "candidate_transform": {
+    "gnb": "fold-local train-skew-selected signed log, greedy absolute-correlation pruning at0.90 after dropping train constants, then train StandardScaler",
+    "lr": "stateless supplied profile followed by fold-local StandardScaler; L2 logistic regression",
+    "no_calibration": "No monotone probability calibration; true within-observation rankings cannot improve under strict monotone maps except clipping ties.",
+    "probability_validation": "finite float64 [0,1], binary rows sum1 with rtol0/atol1e-10; common raw/clipped top1 and ties audit"
+  },
+  "menus": {
+    "logistic_regression": [
+      {
+        "run_name": "lr_baseline38_c1",
+        "profile": "baseline38",
+        "parameters": {
+          "C": 1,
+          "max_iter": 500,
+          "solver": "lbfgs",
+          "preprocessing": "baseline"
+        }
+      },
+      {
+        "run_name": "lr_context_c01",
+        "profile": "context",
+        "parameters": {
+          "C": 0.1,
+          "max_iter": 500,
+          "solver": "lbfgs",
+          "preprocessing": "scale"
+        }
+      },
+      {
+        "run_name": "lr_context_c1",
+        "profile": "context",
+        "parameters": {
+          "C": 1,
+          "max_iter": 500,
+          "solver": "lbfgs",
+          "preprocessing": "scale"
+        }
+      },
+      {
+        "run_name": "lr_context_c10",
+        "profile": "context",
+        "parameters": {
+          "C": 10,
+          "max_iter": 500,
+          "solver": "lbfgs",
+          "preprocessing": "scale"
+        }
+      },
+      {
+        "run_name": "lr_compact_c1",
+        "profile": "compact",
+        "parameters": {
+          "C": 1,
+          "max_iter": 500,
+          "solver": "lbfgs",
+          "preprocessing": "scale"
+        }
+      },
+      {
+        "run_name": "lr_physics_c1",
+        "profile": "physics",
+        "parameters": {
+          "C": 1,
+          "max_iter": 500,
+          "solver": "lbfgs",
+          "preprocessing": "scale"
+        }
+      }
+    ],
+    "gaussian_nb": [
+      {
+        "run_name": "gnb_baseline38_s1e7",
+        "profile": "baseline38",
+        "parameters": {
+          "var_smoothing": 1e-7,
+          "preprocessing": "baseline"
+        }
+      },
+      {
+        "run_name": "gnb_compact_s001",
+        "profile": "compact",
+        "parameters": {
+          "var_smoothing": 0.001,
+          "preprocessing": "skew_decorrelate",
+          "correlation_threshold": 0.9,
+          "skew_threshold": 0.75
+        }
+      },
+      {
+        "run_name": "gnb_compact_s01",
+        "profile": "compact",
+        "parameters": {
+          "var_smoothing": 0.01,
+          "preprocessing": "skew_decorrelate",
+          "correlation_threshold": 0.9,
+          "skew_threshold": 0.75
+        }
+      },
+      {
+        "run_name": "gnb_compact_s1",
+        "profile": "compact",
+        "parameters": {
+          "var_smoothing": 0.1,
+          "preprocessing": "skew_decorrelate",
+          "correlation_threshold": 0.9,
+          "skew_threshold": 0.75
+        }
+      },
+      {
+        "run_name": "gnb_context_s01",
+        "profile": "context",
+        "parameters": {
+          "var_smoothing": 0.01,
+          "preprocessing": "skew_decorrelate",
+          "correlation_threshold": 0.9,
+          "skew_threshold": 0.75
+        }
+      },
+      {
+        "run_name": "gnb_physics_s01",
+        "profile": "physics",
+        "parameters": {
+          "var_smoothing": 0.01,
+          "preprocessing": "skew_decorrelate",
+          "correlation_threshold": 0.9,
+          "skew_threshold": 0.75
+        }
+      }
+    ]
+  },
+  "cost_plan": {
+    "max_new_fits": 20,
+    "reuse": "Subtract lead-provided identical baselines if available; never repeat screen fold0 for promotion",
+    "estimated_cpu_minutes": "2–8 LR, <1 GNB, one thread; actual time recorded per fold"
+  },
+  "prohibited": [
+    "student_test/evaluator data/results/reference reads",
+    "canonical model/features/learning/experiments/matcher edits",
+    "main release/artifacts/live writes",
+    "unbounded search",
+    "private row-level predictions in public aggregates"
+  ]
+}

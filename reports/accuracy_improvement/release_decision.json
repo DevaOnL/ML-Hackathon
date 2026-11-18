@@ -1,0 +1,50 @@
+{
+  "internal_passed": true,
+  "frozen_selection_sha256": "f4da580f9654d90cc493bea8d4643a89b013ac09f985044a7be2a261af34d85f",
+  "family_results": [
+    {
+      "family": "logistic_regression",
+      "top1_delta": 0.001607142857142807,
+      "top1_improved": true,
+      "record_sha256": "768070f769c93ef6d8f593f00943c05d9edae82753553b091b4ccd01a269d7c3"
+    },
+    {
+      "family": "knn_distance_weighted",
+      "top1_delta": 0.011607142857142816,
+      "top1_improved": true,
+      "record_sha256": "263e15480d967a6a991d5f77a542aa6cb9cdaa39538c3c21aca1e4f565abdfac"
+    },
+    {
+      "family": "bagging",
+      "top1_delta": 0.005357142857142838,
+      "top1_improved": true,
+      "record_sha256": "90afa1c0e770fbcf34fd2601e2520f9b7a39421533595e90fe8128bb12f2c2c9"
+    },
+    {
+      "family": "gaussian_nb",
+      "top1_delta": 0.005357142857142838,
+      "top1_improved": true,
+      "record_sha256": "ef727fa6c6f3b16feb02460cd1c6adca8da1164114f397bd313346e6224313f7"
+    },
+    {
+      "family": "hist_gradient_boosting",
+      "top1_delta": 0.009642857142857175,
+      "top1_improved": true,
+      "record_sha256": "c8888b156360db9df3112c42600913a4671965dc0c7b81615be2b0c096385713"
+    }
+  ],
+  "route_summary_sha256": "564d3ec95dee147e6eb1c298d35d23f91082d304ef6515da8d1497f466518089",
+  "all_five_top1_improved": true,
+  "role": "internalhistoricallyexposedTRAINnotblind",
+  "source_sha256": "939d7cc817d710911ed4d0470059e194fafc605bb260aca0067f1b2265916cb9",
+  "created_at_utc": "2026-11-18T11:13:07.421622+00:00",
+  "accepted": false,
+  "release_manifest_sha256": "ff60a7724a72bb12980a6645852f154ad7bc088bd84d4705c753e5d3ad381c86",
+  "student_comparison_sha256": "b610e5d25d13ff947571f91b1e2e18a0c75d5e3ec54e639791457c3205d2186e",
+  "student_development_used_for_tuning": false,
+  "evaluator_used_for_tuning": false,
+  "deployed": false,
+  "reason": "Preserve original deployment: final frozen candidate did not pass every nonregression gate",
+  "inference_entrypoint_sha256": "ec169c097d13c8537eb76add3fe05d36a9dd42ac9feca7c81c1c2a9e2e10f57f",
+  "main_entrypoint_sha256": "2865c848c2b5a2841dcdaa272b4845d8f1fa45c941a45d68fd0e7ad5da2aea4b"
+}

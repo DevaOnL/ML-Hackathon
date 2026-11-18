@@ -76,3 +76,12 @@ node_modules/
 /evaluator*.zip
 /private*/
 /data/
+# Accuracy experiments keep row-level TRAIN/student features and probabilities private.
+/experiments/accuracy_improvement/private/
+/experiments/accuracy_improvement/predictions/
+/experiments/accuracy_improvement/cache/
+/artifacts/accuracy_improvement/scratch/
+/outputs/accuracy_improvement/observations/
+/outputs/accuracy_improvement/matches/
+/experiments/target96/private/
+/outputs/target96/observations/

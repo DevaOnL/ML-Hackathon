@@ -1,0 +1,74 @@
+{
+  "created_utc": "2026-11-18T10:37:07.932055+00:00",
+  "candidates": [
+    {
+      "family": "logistic_regression",
+      "run_name": "lr_baseline38_c1",
+      "profile": "baseline38",
+      "parameters": {
+        "max_iter": 500,
+        "solver": "lbfgs",
+        "C": 1.0,
+        "preprocessing": "baseline"
+      }
+    },
+    {
+      "family": "logistic_regression",
+      "run_name": "lr_context_c01",
+      "profile": "context",
+      "parameters": {
+        "max_iter": 500,
+        "solver": "lbfgs",
+        "C": 0.1,
+        "preprocessing": "scale"
+      }
+    },
+    {
+      "family": "logistic_regression",
+      "run_name": "lr_context_c1",
+      "profile": "context",
+      "parameters": {
+        "max_iter": 500,
+        "solver": "lbfgs",
+        "C": 1.0,
+        "preprocessing": "scale"
+      }
+    },
+    {
+      "family": "logistic_regression",
+      "run_name": "lr_context_c10",
+      "profile": "context",
+      "parameters": {
+        "max_iter": 500,
+        "solver": "lbfgs",
+        "C": 10.0,
+        "preprocessing": "scale"
+      }
+    },
+    {
+      "family": "logistic_regression",
+      "run_name": "lr_compact_c1",
+      "profile": "compact",
+      "parameters": {
+        "max_iter": 500,
+        "solver": "lbfgs",
+        "C": 1.0,
+        "preprocessing": "scale"
+      }
+    },
+    {
+      "family": "logistic_regression",
+      "run_name": "lr_physics_c1",
+      "profile": "physics",
+      "parameters": {
+        "max_iter": 500,
+        "solver": "lbfgs",
+        "C": 1.0,
+        "preprocessing": "scale"
+      }
+    }
+  ],
+  "prospective_confirmation_used": false,
+  "training_scope": "tuning64 only",
+  "stage": "fold0 screen, top2 plus v1 baseline promoted to full3 fresh fits"
+}

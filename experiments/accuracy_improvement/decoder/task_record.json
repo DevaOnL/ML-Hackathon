@@ -1,0 +1,41 @@
+{
+  "task_id": "TASK52",
+  "owner": "Sol6.1MAX decoder worker",
+  "parent_agent_id": "session-1741df65-9ff5-4d55-a652-64751ae7764d",
+  "scope": [
+    "mapmatch/accuracy_matcher.py",
+    "scripts/accuracy_decoder.py",
+    "tests/test_accuracy_matcher.py",
+    "experiments/accuracy_improvement/decoder/",
+    "analysis/accuracy_decoder/"
+  ],
+  "status": "complete_ready_for_Lead_integration_synthetic_only",
+  "training_authorized": false,
+  "raw_train_decoding_authorized": false,
+  "preregistered_menu_status": "frozen fixed-K12 dense menu in preregistered_menu.json; no runs",
+  "forbidden_writes": [
+    "v1 modules",
+    "artifacts/",
+    "live/",
+    "reports/",
+    "COORDINATION.md (Lead-owned)"
+  ],
+  "validation_contract": {
+    "outer_holdout": 16,
+    "tuning_trips": 64,
+    "seed": 20261118,
+    "folds": 3,
+    "selection_routes_per_fold": 2,
+    "primary_route_metric": "length_f1",
+    "tiebreaker": "edge_f1",
+    "calibration": "fixed physical sigma 7.5m; preregistered beta constants; no route-derived calibration"
+  },
+  "handoff": "Use files in this directory plus send_message to Lead; no dependency on child UUID replies.",
+  "notes": [
+    "No supplied data/models loaded; source inspection and tiny generated synthetic fixtures only.",
+    "Final synthetic suite: 37 passed, exit0, 0.215s; scoped27 plus unchanged v1 emission/Viterbi tests.",
+    "All eight decoder configurations remain frozen; actual route experiments are Lead-owned.",
+    "Lead requested inherited empty-candidate radius fallback1000 and fixedK12; implemented before decoder runs.",
+    "Subagent create_goal unavailable; local task list tracks progress."
+  ]
+}

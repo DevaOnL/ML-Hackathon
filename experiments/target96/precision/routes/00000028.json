@@ -1,0 +1,62 @@
+{
+  "trip_id": "00000028",
+  "fold": 2,
+  "observations": 3565,
+  "predictions": [
+    {
+      "name": "context_k24_arc2.0",
+      "success": false,
+      "observations": 3565,
+      "elapsed_seconds": 6.283010758001183,
+      "failure": "no connected directed transition between observations 1284 and 1285; no route was fabricated",
+      "metrics": {
+        "edge_f1": 0.0,
+        "edge_precision": 0.0,
+        "edge_recall": 0.0,
+        "length_f1": 0.0,
+        "route_continuity": 0.0,
+        "edit_similarity": 0.0
+      }
+    },
+    {
+      "name": "context_k24_arc5.0",
+      "success": false,
+      "observations": 3565,
+      "elapsed_seconds": 0.5568410940031754,
+      "failure": "no connected directed transition between observations 1284 and 1285; no route was fabricated",
+      "metrics": {
+        "edge_f1": 0.0,
+        "edge_precision": 0.0,
+        "edge_recall": 0.0,
+        "length_f1": 0.0,
+        "route_continuity": 0.0,
+        "edit_similarity": 0.0
+      }
+    },
+    {
+      "name": "v1_release_control",
+      "success": false,
+      "observations": 3565,
+      "elapsed_seconds": 5.429058611000073,
+      "failure": "no connected directed transition between observations 1284 and 1285; no route was fabricated",
+      "metrics": {
+        "edge_f1": 0.0,
+        "edge_precision": 0.0,
+        "edge_recall": 0.0,
+        "length_f1": 0.0,
+        "route_continuity": 0.0,
+        "edit_similarity": 0.0
+      }
+    }
+  ],
+  "reference_loaded_after_all_predictions": true,
+  "protocol_sha256": "46eefaac2f4c3c05bf653158dfc6d4329bbc85e4f1c2aeae0f33d355825f1fd7",
+  "student_used": false,
+  "evaluator_used": false,
+  "input_sha256": {
+    ".nodes": "b8f3b4ce24cbbe621f63c77ac4873629fce94c5e318c7cfeec79c24ff4b5faa6",
+    ".arcs": "d9dfb36a4cad3ae08b81461f4ff01e0ad8fd3a7b9117f374cc677aad2dd18eeb",
+    ".track": "0cc3ba7b993b595efa75664138191ea0db860ed0a68ac7b9b02f1e8275b366e3",
+    ".route": "9f6a3c6edd43f38b586a24631a573f47475464d2ac6c0cba974d5440c5c68e77"
+  }
+}

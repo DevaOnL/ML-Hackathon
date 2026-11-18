@@ -1,0 +1,24 @@
+{
+  "task_id": "TASK52",
+  "status": "ready",
+  "actual_training_or_raw_decoding_performed": false,
+  "tests": {
+    "command": "PYTHONDONTWRITEBYTECODE=1 OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 NUMEXPR_NUM_THREADS=1 .venv/bin/python -B -m unittest tests.test_accuracy_matcher tests.test_emissions tests.test_viterbi_oracle -v",
+    "passed": 37,
+    "task52_tests": 27,
+    "seconds": 0.215,
+    "exit_code": 0,
+    "evidence": "analysis/accuracy_decoder/synthetic_tests.log",
+    "warning": "Only upstream joblib NumPy2.5 DeprecationWarning during synthetic pickle load"
+  },
+  "source_sha256": {
+    "mapmatch/accuracy_matcher.py": "df84fcfdf922f5c73866857eaa3aa4a7800b1fbda73424e6891ec195b32d5678",
+    "scripts/accuracy_decoder.py": "8da02a9f3eb4701bedb7c38d79ec3f7fd4fa011b379fa2f565c022af2137d971",
+    "tests/test_accuracy_matcher.py": "6df3c18f40c7a47f30b1e62c5f8f26d25e9cafe3570600d387bdc2f63854c7e2",
+    "experiments/accuracy_improvement/decoder/preregistered_menu.json": "5277a00132fecba461d1246f6dfd60b1cc89e28efab2eae16496cefb9e7fac51"
+  },
+  "handoff": "experiments/accuracy_improvement/decoder/HANDOFF.md",
+  "v1_modules_diff_exit_code": 0,
+  "decoder_configurations_frozen": 8,
+  "next_action": "Lead model-manifest freeze + explicit decoder authorization, then central six-TRAIN-trip OOF selection; worker sources now stable"
+}

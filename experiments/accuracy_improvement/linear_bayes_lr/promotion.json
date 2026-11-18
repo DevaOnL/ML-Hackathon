@@ -1,0 +1,41 @@
+{
+  "created_utc": "2026-11-18T10:37:34.978882+00:00",
+  "rule": "fold0 equal-trip top1; binary macroF1; lower binary logloss; runname tie; top2 plus pairedbaseline full3 fresh fits",
+  "promoted": [
+    {
+      "family": "logistic_regression",
+      "run_name": "lr_compact_c1",
+      "profile": "compact",
+      "parameters": {
+        "max_iter": 500,
+        "solver": "lbfgs",
+        "C": 1.0,
+        "preprocessing": "scale"
+      }
+    },
+    {
+      "family": "logistic_regression",
+      "run_name": "lr_context_c1",
+      "profile": "context",
+      "parameters": {
+        "max_iter": 500,
+        "solver": "lbfgs",
+        "C": 1.0,
+        "preprocessing": "scale"
+      }
+    },
+    {
+      "family": "logistic_regression",
+      "run_name": "lr_baseline38_c1",
+      "profile": "baseline38",
+      "parameters": {
+        "max_iter": 500,
+        "solver": "lbfgs",
+        "C": 1.0,
+        "preprocessing": "baseline"
+      }
+    }
+  ],
+  "screen_selection_is_tuning": true,
+  "confirmation_not_used": true
+}

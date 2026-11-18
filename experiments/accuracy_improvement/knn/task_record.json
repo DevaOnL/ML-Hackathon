@@ -1,0 +1,39 @@
+{
+  "owner": "KNN tuner",
+  "parent_agent_id": "session-1741df65-9ff5-4d55-a652-64751ae7764d",
+  "claim_recorded_before_implementation": "experiments/accuracy_improvement/knn/TASK_SCOPE.md",
+  "write_scopes": [
+    "scripts/accuracy_knn.py",
+    "tests/test_accuracy_knn.py",
+    "experiments/accuracy_improvement/knn/**",
+    "experiments/accuracy_improvement/private/knn/**"
+  ],
+  "authorized_cache": "experiments/cache/train_edee9a8f151dd25e.npz",
+  "state": "source_handoff_complete_central_lead_owns_fits",
+  "worker_train_cache_loads": 0,
+  "worker_training_runs_started": 0,
+  "worker_model_artifacts_written": 0,
+  "synthetic_tests": {
+    "command": "PYTHONDONTWRITEBYTECODE=1 OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 .venv/bin/python -B -m unittest tests.test_accuracy_knn -v",
+    "passed": 14,
+    "failed": 0,
+    "seconds": 0.105
+  },
+  "constructors": [
+    "make_knn_pipeline(**parameters,n_jobs)",
+    "make_knn_estimator(parameters,seed,n_jobs)"
+  ],
+  "helper": "predict_k_grid with exact zero-distance/sklearn tie correction and query timing accounting",
+  "actual_trial_metrics": null,
+  "actual_winner": null,
+  "actual_train_timings": null,
+  "execution_handoff": "Lead coordination explicitly prohibits worker duplicate fits; central runner controls paired fold0screen and full3 top2+v1baseline",
+  "immutable": "Released files/artifacts/models/live state; held-out inputs/references/results forbidden",
+  "known_tradeoffs": [
+    "Compact/physics features may improve or worsen generalization; unmeasured by worker.",
+    "The existing60k stratified weighted bank approximates sample weighting because sklearn KNN.fit has no sample_weight.",
+    "Trees accelerate compact exact search, but high dimensions/data geometry may limit gains; no speed guarantee.",
+    "Max-k helper uses sklearn classifier private encoded labels for shared voting; final full3 remains standard fixedk pure sklearn.",
+    "Cutofftie correction can add query calls on ambiguous rows; counted explicitly."
+  ]
+}

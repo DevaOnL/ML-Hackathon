@@ -1,0 +1,39 @@
+{
+  "created_utc": "2026-11-18T10:36:57.472726+00:00",
+  "rule": "fold0 equal-trip top1; binary macroF1; lower binary logloss; runname tie; top2 plus pairedbaseline full3 fresh fits",
+  "promoted": [
+    {
+      "family": "gaussian_nb",
+      "run_name": "gnb_compact_s001",
+      "profile": "compact",
+      "parameters": {
+        "preprocessing": "skew_decorrelate",
+        "correlation_threshold": 0.9,
+        "skew_threshold": 0.75,
+        "var_smoothing": 0.001
+      }
+    },
+    {
+      "family": "gaussian_nb",
+      "run_name": "gnb_compact_s01",
+      "profile": "compact",
+      "parameters": {
+        "preprocessing": "skew_decorrelate",
+        "correlation_threshold": 0.9,
+        "skew_threshold": 0.75,
+        "var_smoothing": 0.01
+      }
+    },
+    {
+      "family": "gaussian_nb",
+      "run_name": "gnb_baseline38_s1e7",
+      "profile": "baseline38",
+      "parameters": {
+        "var_smoothing": 1e-07,
+        "preprocessing": "baseline"
+      }
+    }
+  ],
+  "screen_selection_is_tuning": true,
+  "confirmation_not_used": true
+}

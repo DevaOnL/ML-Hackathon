@@ -1,0 +1,8 @@
+{
+  "mocked": false,
+  "source": "actual Alacritty window running HTTPS request on API receiving host",
+  "image_sha256": "50ccd3111961aa8f95f55e48a6299f34d73e0cdace6a39e48fa548cbc8c5ec9d",
+  "response_record_sha256": "204ae31d0af140326a70a3dab2923386bf212d5b3c06a35e565ce90f1d339551",
+  "window_class": "pathsnap-submission-response",
+  "physical_two_laptop_demo_claimed": false
+}

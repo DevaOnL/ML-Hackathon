@@ -1,0 +1,11 @@
+{
+  "created_at_utc": "2026-11-18T11:14:09.305437+00:00",
+  "frozen_selection_sha256": "f4da580f9654d90cc493bea8d4643a89b013ac09f985044a7be2a261af34d85f",
+  "builder_sha256": "a86ecbdf8958fffd29c697dbd78a3164fb9ee8f0a9f3ca2544ff576d24f1f6c8",
+  "files": {
+    "PathSnap_Accuracy_Improvement_Addendum.pdf": "0c9297a07e35f08b7ac49afca11190251735b7ca3c15a517607bff153a301414",
+    "ACCURACY_REPORT.md": "849d8a394b03fb5d9ba97e36d7f6f90feb35439c2929f485e4123b983d10f0c3",
+    "accuracy_results.json": "20b1198564b8ecd661bbde322779a62b60997b837f2b66aff8944acb8325a04b",
+    "model_comparison.csv": "b49f1094ae05161cca0af4afb84786aac17dac5d58b680554c4737978b392775"
+  }
+}

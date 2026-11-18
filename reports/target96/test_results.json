@@ -1,0 +1,20 @@
+{
+  "python_regression_tests": 530,
+  "hosting_tests": 29,
+  "node_adapter_tests": 22,
+  "total_standard_regression_tests": 581,
+  "static_frontend_smoke": "passed",
+  "map_generator_new_synthetic_tests": 11,
+  "map_historical_regression_tests": 7,
+  "evaluator_synthetic_tests": 3,
+  "independent_student_route_metric_recomputation": "all ten exact;passed",
+  "map_actual_browser_evidence": "passed;no manual visual inspection claimed",
+  "evaluator_saved_output_checks": 47,
+  "report_pages": 9,
+  "student_route_edge_f1": 0.9821150783141797,
+  "evaluator_route_edge_f1": 0.9848656565861968,
+  "student_failed_trips": 0,
+  "evaluator_failed_trips": 0,
+  "continuity_both": 1,
+  "generated_html_whitespace_note": "Generated Folium HTML trailing blank-line whitespace and OCR blank EOF are retained unchanged with their evidence. All hand-written source passes the scoped whitespace check."
+}

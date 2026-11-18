@@ -1,0 +1,3 @@
+# Lead integration addendum
+
+After the worker handoff, the Lead added a shared one-observation fulltrack adapter to the two non-OOF wrappers. Backend startup requires callable score_candidates even though the actual matching path prefers score_candidates_batch. The adapter invokes the inherited batch method with one candidate group and the unchanged full track; it does not truncate motion windows or modify the strict OOF loader. A new synthetic test checks exact single-vs-batch agreement across both roles and all four feature profiles. The original worker hashes in its handoff describe the original handoff snapshot; final release hashes are independently recorded after this integration.

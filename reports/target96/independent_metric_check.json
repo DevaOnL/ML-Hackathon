@@ -1,0 +1,10 @@
+{
+  "independent_recomputation": true,
+  "trip_count": 10,
+  "observations": 19160,
+  "edge_f1": 0.9821150783141797,
+  "all_metrics_exact_match": true,
+  "model_retrained": false,
+  "routes_modified": false,
+  "source_sha256": "2ec6edaa64fc3ddce653375c37de1ceb407304c8db7a16e67b0963a25ca014d3"
+}

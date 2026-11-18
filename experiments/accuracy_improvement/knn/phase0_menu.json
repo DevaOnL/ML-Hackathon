@@ -1,0 +1,92 @@
+{
+  "status": "frozen_source_handoff_before_any_worker_train_fit",
+  "family": "knn_distance_weighted",
+  "execution_owner": "Lead central scripts/accuracy_trees.py; no worker duplicate fits",
+  "supersedes": "Previous proposed nine-score menu withdrawn unmeasured per lead coordination",
+  "validation_contract": "64 TRAIN tuning trips only; shared3GroupKFold. Prospective16confirmation excluded and not historically unseen.",
+  "seed": 20261118,
+  "bank_seed_stride": 7919,
+  "bank_rows": 60000,
+  "bank_policy": "existing common knn_bank using mapmatch.phase_models.knn_reference_bank; class-stratified weighted without replacement",
+  "bank_budget_comparison": "fixed primary; no120k planned",
+  "preprocessing": "fold-local StandardScaler fitted on selected bank only, pairedfloat64 controls per common",
+  "phase0": {
+    "validation_fold": 0,
+    "score_configurations": [
+      {
+        "id": "knn_v1_control",
+        "feature_profile": "v1",
+        "algorithm": "brute",
+        "p": 2,
+        "k": 25
+      },
+      {
+        "id": "knn_compact5",
+        "feature_profile": "compact",
+        "algorithm": "kd_tree",
+        "p": 2,
+        "k": 5
+      },
+      {
+        "id": "knn_compact15",
+        "feature_profile": "compact",
+        "algorithm": "kd_tree",
+        "p": 2,
+        "k": 15
+      },
+      {
+        "id": "knn_compact35",
+        "feature_profile": "compact",
+        "algorithm": "kd_tree",
+        "p": 2,
+        "k": 35
+      },
+      {
+        "id": "knn_physics15",
+        "feature_profile": "physics",
+        "algorithm": "kd_tree",
+        "p": 2,
+        "k": 15
+      },
+      {
+        "id": "knn_compact_l1",
+        "feature_profile": "compact",
+        "algorithm": "kd_tree",
+        "p": 1,
+        "k": 15
+      }
+    ],
+    "scored_trials": 6,
+    "full_validation": "Lead central runner freezes top2 plus pairedv1 baseline; fresh full3CV runs, no worker refits",
+    "all_failed_and_worse_trials_retained": true
+  },
+  "selection_order": [
+    "higher equal-trip observation top1",
+    "higher common binary candidate macroF1",
+    "lower common binary candidate logloss"
+  ],
+  "weighting_note": "Use exact common fitting weights/bank and exact common metrics; no alternative local weighting/metric implementation",
+  "max_k_helper": {
+    "available": true,
+    "k_values": [
+      5,
+      15,
+      35
+    ],
+    "base_query_rule": "one exact kmax kneighbors query per query batch",
+    "exact_cutoff_ties": "requery only affected query rows at smallerk; correction query calls explicitly counted",
+    "zero_distance_rule": "exact sklearn infinitymask; no epsilon and only zero-distance prefix rows vote",
+    "final_cv_prediction": "standalone fixedk sklearn via common per lead decision"
+  },
+  "resources": {
+    "default_n_jobs": 1,
+    "max_n_jobs": 2,
+    "query_batch_rows": 8192,
+    "worker_cache_fit_processes": 0
+  },
+  "trial_metrics": null,
+  "winner": null,
+  "train_timings": null,
+  "measurements_note": "No actual TRAIN fitting or scoring by worker; outcomes and timings must come from lead central measured runs",
+  "data_scope": "No student/evaluator inputs,references,results; release/live immutable"
+}
