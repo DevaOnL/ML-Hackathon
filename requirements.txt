@@ -1,0 +1,13 @@
+# Tested serving/training runtime for the submitted scikit-learn artifact.
+numpy==2.5.5
+scipy==1.18.0
+scikit-learn==1.8.0
+joblib==1.5.3
+fastapi==0.142.2
+uvicorn==0.54.0
+httpx==0.28.1
+pydantic==2.13.4
+matplotlib==3.11.1
+folium==1.0.0
+reportlab==5.1.0
+pillow==13.0.0

@@ -1,0 +1,3 @@
+-r requirements.txt
+# Only needed for in-process API checks, not the public Uvicorn server.
+httpx==0.28.1

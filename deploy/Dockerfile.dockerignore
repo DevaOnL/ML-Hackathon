@@ -1,0 +1,19 @@
+# Dockerfile-specific context whitelist: keep private datasets/models/logs out.
+**
+!deploy/
+!deploy/requirements.txt
+!mapmatch/
+!mapmatch/**/*.py
+!backend/
+!backend/**/*.py
+!frontend/
+!frontend/index.html
+!frontend/styles.css
+!frontend/app.mjs
+!frontend/api.mjs
+!frontend/favicon.svg
+!frontend/vendor/
+!frontend/vendor/leaflet/
+!frontend/vendor/leaflet/**
+**/__pycache__/**
+**/*.pyc
