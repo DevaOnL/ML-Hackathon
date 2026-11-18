@@ -157,6 +157,10 @@ class FinalInputPreparationTests(unittest.TestCase):
         self.stack = ExitStack()
         self.addCleanup(self.stack.close)
         for target, attr, value in ((prep, "ROOT", self.root), (prep, "CACHE_SPECS", self.specs),
+                                    # Tiny fixtures are generated in this interpreter. Keep the
+                                    # production 3.14.6 guard intact, but bind synthetic restoration
+                                    # to the runtime that actually fitted the fixture.
+                                    (prep, "PUBLISHED_RUNTIME", prep.final.versions()),
                                     (prep, "SOURCE_FILES", ("source.py",)), (prep.phase, "SHARED", self.root / "experiments"),
                                     (prep.phase, "EXPECTED", self.specs)):
             self.stack.enter_context(patch.object(target, attr, value))
@@ -386,6 +390,22 @@ class FinalInputPreparationTests(unittest.TestCase):
                 with patch.object(prep.phase, "load_train_and_folds") as load:
                     code, report = self.command("--stage", "student")
                 self.assertEqual(code, 1, report); load.assert_not_called()
+
+    def test_runtime_mismatch_refuses_before_data_fit_or_prediction(self):
+        mismatched = {**prep.final.versions(), "python": "synthetic-incompatible-version"}
+        for stage, split in (("train", "train"), ("student", "student_test")):
+            with self.subTest(stage=stage):
+                self.remove("bagging", split)
+                before = snapshot(self.root)
+                with patch.object(prep, "PUBLISHED_RUNTIME", mismatched), \
+                     patch.object(prep.phase, "load_train_and_folds") as load, \
+                     patch.object(prep.phase, "phase_fit") as fit, \
+                     patch.object(prep.phase, "phase_predict") as predict:
+                    code, report = self.command("--stage", stage, "--run-id", "wrong-runtime-" + stage)
+                self.assertEqual(code, 1, report)
+                self.assertIn("pinned published runtime", report["failures"][0])
+                load.assert_not_called(); fit.assert_not_called(); predict.assert_not_called()
+                self.assertEqual(snapshot(self.root), before)
 
     def test_actual_student_inference_from_published_tiny_models_no_fit(self):
         for name in prep.RESTORABLE:
