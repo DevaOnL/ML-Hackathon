@@ -1,0 +1,149 @@
+Phase-three observation-level metrics: edge macro-F1 and categorical NLL (distinct from binary candidate
+
+Two distinct macro-F1 definitions
+
+Edge macro-F1 by split
+
+Per-observation categorical NLL
+
+0.942
+
+0.942
+
+1.0 4
+
+0.811
+
+0.933
+
+0.927
+
+N CV OOF (TRAIN folds)
+
+0.8 1
+
+N CV OOF (TRAIN folds)
+
+0.845
+
+0.830
+
+0.855
+
+0.856
+
+g Student development
+
+0.830
+
+0.855
+
+0.856
+
+mmm Student development
+
+0.807
+
+0.795
+
+0.827
+
+0.825
+
+0.8 4
+
+0.8
+
+0.7 1
+
+0.666
+
+0.601
+
+0.603
+
+0.6 1
+
+0.522
+
+0.6 4
+
+0.6 q
+
+0.5 4
+
+0.4 4
+
+0.348
+
+0.4 4
+
+0.4
+
+0.3 4
+
+0.282
+
+0.282
+
+0.2
+
+0.2
+
+0.21
+
+candidat:
+
+o-FIL (CV|
+
+0.14
+
+d-edge of
+
+tion ma
+
+|
+
+|
+
+0.0 -
+
+0.0-
+
+Logistic
+
+KNN
+
+Bagging
+
+Bagging
+
+Logistic
+
+KNN
+
+Bagging
+
+Bagging
+
+Logistic
+
+KNN
+
+Bagging
+
+Bagging
+
+regress{distance-weiglted}ion trefe®cision trees)
+
+regress{distance-weighted}ion trefelcision trees)
+
+regress{distance-weiglted¥ion trefe®cision trees)
+
+(tuned)
+
+(tuned)
+
+(tuned)
+
+Left: binary candidate-row macro-F1 vs graph-namespaced directed-edge observation macro-F1 are DIFFERENT metrics with different denominators and are never mixed. Middle/right: edge macro-F1 and normalized categorical NLL o

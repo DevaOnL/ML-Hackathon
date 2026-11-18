@@ -1,0 +1,73 @@
+{
+  "blocked_network_requests": [],
+  "bounds": {
+    "_northEast": {
+      "lat": 42.6814258531182,
+      "lng": 13.729991912841799
+    },
+    "_southWest": {
+      "lat": 42.61829672418602,
+      "lng": 13.606395721435549
+    }
+  },
+  "browser_version": "145.0.7632.6",
+  "canvas_count": 1,
+  "capture_method": "actual installed Playwright Chromium, local file:// HTML, HTTP(S) blocked",
+  "checked_layers": 5,
+  "created_at_utc": "2026-11-18T07:43:24.302936+00:00",
+  "layer_count": 1061,
+  "layout_and_canvas": {
+    "canvas_shape": [
+      1728,
+      1200
+    ],
+    "control": {
+      "bottom": 148,
+      "height": 138,
+      "left": 990,
+      "right": 1430,
+      "top": 10,
+      "width": 440
+    },
+    "legend": {
+      "bottom": 972,
+      "height": 213.9375,
+      "left": 20,
+      "right": 644.484375,
+      "top": 758.0625,
+      "width": 624.484375
+    },
+    "title": {
+      "bottom": 133,
+      "height": 119,
+      "left": 60,
+      "right": 748,
+      "top": 14,
+      "width": 688
+    },
+    "title_control_overlap": false,
+    "visible_layer_color_pixels": {
+      "gps_blue": 230,
+      "prediction_orange": 2029,
+      "reference_green": 1858,
+      "road_gray": 11799
+    }
+  },
+  "leaflet_version": "1.9.4",
+  "legend": "Actual observations and traversed-arc geometry (phase-three final)\n\u25cf \u2504 Raw GPS observations (blue); dotted line shows observation order\n\u2501\u2501 Relevant road network (gray endpoint chords)\n\u2501\u2501 Supplied development reference traversal (green)\n\u2505\u2505 Phase-three learned prediction (bagging_tuned) \u2014 new learned prediction (orange dashed)\nOffline Folium / Leaflet \u00b7 no web tiles \u00b7 layer controls at upper right\nReference traversal is not independently verified pointwise ground truth.",
+  "map_variable": "map_5261d7d05527e7783fe4eb9f89e59ae4",
+  "ocr_text_path": "visualizations/phase_three/maps/phase_three_development_trip_00000009_final.ocr.txt",
+  "page_errors": [],
+  "requests": [
+    "file:///home/d3va/Downloads/ML_Hackathon/visualizations/phase_three/maps/phase_three_development_trip_00000009_final.html",
+    "file:///home/d3va/Downloads/ML_Hackathon/visualizations/vendor/leaflet/leaflet.js",
+    "file:///home/d3va/Downloads/ML_Hackathon/visualizations/vendor/leaflet/leaflet.css"
+  ],
+  "screenshot_path": "visualizations/phase_three/maps/phase_three_development_trip_00000009_final.png",
+  "source_html": "visualizations/phase_three/maps/phase_three_development_trip_00000009_final.html",
+  "title": "PathSnap phase three \u00b7 trip 00000009 \u00b7 student_test development only\n1,049 GPS points \u00b7 6,745 nodes \u00b7 13,106 directed arcs\nINTERNAL DEVELOPMENT REPORT MAP \u2014 includes reference geometry; never serve in evaluator UI/API",
+  "viewport": {
+    "height": 1000,
+    "width": 1440
+  }
+}

@@ -1,0 +1,428 @@
+{
+  "eda_reused_read_only": [
+    {
+      "bytes": 146997,
+      "caption": "Source: completed byte/row audit, 360 original files. Student-development is not the reserved evaluator partition.",
+      "partition": "all 80 train + 10 student_test development trips; no evaluator data",
+      "path": "visualizations/plots/dataset_inventory.png",
+      "phase_role": "eda_context_historical_complete",
+      "reused_read_only": true,
+      "sha256": "8895f33a38a095828c3274be7e554916d5c054872649989e4c4793a6f769d2db",
+      "source": "analysis/data_audit/{summary,per_trip,manifest}.json plus all original .track files; visualizations/eda_summary.json hashes",
+      "status": "stable_actual",
+      "title": "Dataset inventory: all 80 training + 10 student-development trips"
+    },
+    {
+      "bytes": 188152,
+      "caption": "Source: complete file and cross-file audit. Blank/malformed rows are counted; missing values are not inferred from absent timestamps.\nRepeated coordinates can represent stops. Apparent speed uses GPS displacement / supplied seconds, not independently measured vehicle speed.",
+      "partition": "all 80 train + 10 student_test development trips; no evaluator data",
+      "path": "visualizations/plots/missing_invalid_and_anomalies.png",
+      "phase_role": "eda_context_historical_complete",
+      "reused_read_only": true,
+      "sha256": "717b90dd9b0dfe17303466edc0bea5dc31768147a3b1a1bf13b4f44f72cb356e",
+      "source": "analysis/data_audit/{summary,per_trip,manifest}.json plus all original .track files; visualizations/eda_summary.json hashes",
+      "status": "stable_actual",
+      "title": "Data quality across every permitted trip"
+    },
+    {
+      "bytes": 208320,
+      "caption": "All 80 training and 10 student-development trips; no subsampling. Chord sums do not claim exact physical road length.\nReference routes are chronological arc traversals, not an independently supplied label for every GPS observation.",
+      "partition": "all 80 train + 10 student_test development trips; no evaluator data",
+      "path": "visualizations/plots/trajectory_distributions.png",
+      "phase_role": "eda_context_historical_complete",
+      "reused_read_only": true,
+      "sha256": "c1069eba52ff221b5fbda659bff9f72b61a5ff2369f935eea4295c09d61f6c2e",
+      "source": "analysis/data_audit/{summary,per_trip,manifest}.json plus all original .track files; visualizations/eda_summary.json hashes",
+      "status": "stable_actual",
+      "title": "Trajectory size, duration and reference-route structure"
+    },
+    {
+      "bytes": 150849,
+      "caption": "Training (80 trips): 96.50% \u22481 s, max 153,064 s; Student-development (10 trips): 98.62% \u22481 s, max 210 s.\n\u22481 s uses absolute tolerance 1e\u22126 s; exact audit counts are retained in eda_summary.json. No gaps filled or timestamps invented.",
+      "partition": "all 80 train + 10 student_test development trips; no evaluator data",
+      "path": "visualizations/plots/timestamp_gaps.png",
+      "phase_role": "eda_context_historical_complete",
+      "reused_read_only": true,
+      "sha256": "bc022e3929d18bed17ba8e5edbcec822559b81bb2894e4de9f39f16961001db9",
+      "source": "analysis/data_audit/{summary,per_trip,manifest}.json plus all original .track files; visualizations/eda_summary.json hashes",
+      "status": "stable_actual",
+      "title": "Timestamp ordering and sampling gaps: every consecutive pair"
+    },
+    {
+      "bytes": 244604,
+      "caption": "Complete directed-graph audit, computed per trip. Networks can overlap geographically; totals are not a unique global road network.\nWeak connectivity ignores direction; strong connectivity requires directed paths both ways. Zero isolated nodes does not mean connected.",
+      "partition": "all 80 train + 10 student_test development trips; no evaluator data",
+      "path": "visualizations/plots/road_network_sizes_connectivity.png",
+      "phase_role": "eda_context_historical_complete",
+      "reused_read_only": true,
+      "sha256": "0a081b29f0c35e797f46abe28970d009569bda29ffb65b25c7dba8e97faa5447",
+      "source": "analysis/data_audit/{summary,per_trip,manifest}.json plus all original .track files; visualizations/eda_summary.json hashes",
+      "status": "stable_actual",
+      "title": "Road-network sizes and connectivity: all 90 trip graphs"
+    },
+    {
+      "bytes": 95492,
+      "caption": "All raw positions from 80 training and 10 student-development tracks; shared longitude/latitude axes; no web tiles.\nAt this multi-region scale a trip can appear as a compact point; the local-scale galleries below show every trajectory separately.",
+      "partition": "all 80 train + 10 student_test development trips; no evaluator data",
+      "path": "visualizations/plots/gps_geographic_coverage.png",
+      "phase_role": "eda_context_historical_complete",
+      "reused_read_only": true,
+      "sha256": "c83283403296dcaaed21936361885a3210a8a6609e7eb8584f1e2853bf9aa2b3",
+      "source": "analysis/data_audit/{summary,per_trip,manifest}.json plus all original .track files; visualizations/eda_summary.json hashes",
+      "status": "stable_actual",
+      "title": "Geographic GPS coverage: every observed trajectory"
+    },
+    {
+      "bytes": 289007,
+      "caption": "Every observation included. Green dot = first GPS row; red \u00d7 = last. Independent local-km panel axes, centered at median coordinate.\nEquirectangular projection uses cos(median latitude). Panels have different scales; timestamps/gaps are not interpolated.",
+      "partition": "train: all 80 trips, pages 1\u20134 together",
+      "path": "visualizations/plots/gps_trip_gallery_train_01.png",
+      "phase_role": "eda_context_historical_complete",
+      "reused_read_only": true,
+      "sha256": "78fc6288f7c936d5a3c89b6a80f2a8d1d0720189154333d597ec46992b101485",
+      "source": "Every original TRAIN .track observation, SHA256-checked against analysis/data_audit/manifest.json",
+      "status": "stable_actual",
+      "title": "Every raw GPS trajectory \u00b7 Training (80 trips) \u00b7 page 1"
+    },
+    {
+      "bytes": 314994,
+      "caption": "Every observation included. Green dot = first GPS row; red \u00d7 = last. Independent local-km panel axes, centered at median coordinate.\nEquirectangular projection uses cos(median latitude). Panels have different scales; timestamps/gaps are not interpolated.",
+      "partition": "train: all 80 trips, pages 1\u20134 together",
+      "path": "visualizations/plots/gps_trip_gallery_train_02.png",
+      "phase_role": "eda_context_historical_complete",
+      "reused_read_only": true,
+      "sha256": "bbe634b3170227debfe96b3c6ce6a127653012cec6903a7f416eb3174293ee77",
+      "source": "Every original TRAIN .track observation, SHA256-checked against analysis/data_audit/manifest.json",
+      "status": "stable_actual",
+      "title": "Every raw GPS trajectory \u00b7 Training (80 trips) \u00b7 page 2"
+    },
+    {
+      "bytes": 346505,
+      "caption": "Every observation included. Green dot = first GPS row; red \u00d7 = last. Independent local-km panel axes, centered at median coordinate.\nEquirectangular projection uses cos(median latitude). Panels have different scales; timestamps/gaps are not interpolated.",
+      "partition": "train: all 80 trips, pages 1\u20134 together",
+      "path": "visualizations/plots/gps_trip_gallery_train_03.png",
+      "phase_role": "eda_context_historical_complete",
+      "reused_read_only": true,
+      "sha256": "28c07d4584ddff3662f4ac05d4f8eda0cda15cbc7f59182c91d5491f9b72d96e",
+      "source": "Every original TRAIN .track observation, SHA256-checked against analysis/data_audit/manifest.json",
+      "status": "stable_actual",
+      "title": "Every raw GPS trajectory \u00b7 Training (80 trips) \u00b7 page 3"
+    },
+    {
+      "bytes": 346613,
+      "caption": "Every observation included. Green dot = first GPS row; red \u00d7 = last. Independent local-km panel axes, centered at median coordinate.\nEquirectangular projection uses cos(median latitude). Panels have different scales; timestamps/gaps are not interpolated.",
+      "partition": "train: all 80 trips, pages 1\u20134 together",
+      "path": "visualizations/plots/gps_trip_gallery_train_04.png",
+      "phase_role": "eda_context_historical_complete",
+      "reused_read_only": true,
+      "sha256": "7fdb59352d7290d44304990a6c6c03a679b17407e82b8a7e7f1987026333e717",
+      "source": "Every original TRAIN .track observation, SHA256-checked against analysis/data_audit/manifest.json",
+      "status": "stable_actual",
+      "title": "Every raw GPS trajectory \u00b7 Training (80 trips) \u00b7 page 4"
+    },
+    {
+      "bytes": 204737,
+      "caption": "Every observation included. Green dot = first GPS row; red \u00d7 = last. Independent local-km panel axes, centered at median coordinate.\nEquirectangular projection uses cos(median latitude). Panels have different scales; timestamps/gaps are not interpolated.",
+      "partition": "student_test development: all 10 trips",
+      "path": "visualizations/plots/gps_trip_gallery_student_test_01.png",
+      "phase_role": "eda_context_historical_complete",
+      "reused_read_only": true,
+      "sha256": "49607365d97cc1f99532224f7f853f2e1899b98dcf73eb34ff06f7d2a7a4541a",
+      "source": "Every original student_test .track observation, SHA256-checked against analysis/data_audit/manifest.json",
+      "status": "stable_actual",
+      "title": "Every raw GPS trajectory \u00b7 Student-development (10 trips) \u00b7 page 1"
+    },
+    {
+      "bytes": 299212,
+      "caption": "Learned prediction, final model: tuned classifier + HMM/Viterbi (config A_fitted). Development reference geometry is internal to this report, never evaluator-facing.\nArcs use supplied node-endpoint chords; repeated traversal arcs retained; broken joins are not filled with invented connectors.",
+      "partition": "student_test development trip 00000009 only",
+      "path": "visualizations/plots/representative_road_route.png",
+      "phase_role": "eda_context_historical_complete",
+      "reused_read_only": true,
+      "sha256": "d3ae4194a3df54b81bd0c4f15201a91973331ccef4924b9f122529f4dbaea772",
+      "source": "Original student_test trip 00000009 .nodes/.arcs/.track/.route plus explicitly labelled prediction (see map metadata)",
+      "status": "stable_actual",
+      "title": "Illustrative development road graph / route \u00b7 trip 00000009"
+    }
+  ],
+  "excluded_families_note": "GNB/HistGB/RF/ET are historical prior work, not this phase",
+  "families": [
+    "logistic_regression",
+    "knn_distance_weighted",
+    "bagging"
+  ],
+  "figures": [
+    {
+      "bytes": 90839,
+      "caption": "Three user-selected families + tuned variant; TRAIN trip-grouped 3-fold CV, 28,000 sampled observations / 269,463 OOF candidate rows. Error bars: fold std; orange dots: individual folds. Binary candidate-row metric: one row per (observation, candidate) directed arc at threshold 0.5 \u2014 not an observation or route metric. Proxy labels: nearest reference-route segment + weak GPS-motion orientation; NOT supplied pointwise ground truth.",
+      "partition": "TRAIN grouped CV + student_test development; phase three (LR/KNN/Bagging + tuned)",
+      "path": "visualizations/phase_three/plots/phase_three_cv_macro_f1_comparison.png",
+      "sha256": "d05fe42389c29c8968cce139b69a53fb5c3d78a1eeb613c2f786d105771b1539",
+      "source": "experiments/phase_three/results.json, reports/phase_three/decoder/, outputs/phase_three_student_test/ (stable measured phase outputs)",
+      "stage": "charts",
+      "status": "stable_actual",
+      "title": "Phase-three model comparison: grouped-CV binary candidate macro-F1"
+    },
+    {
+      "bytes": 76189,
+      "caption": "Same OOF candidate rows as the macro-F1 chart (threshold 0.5 probabilities). Binary candidate-row metric: one row per (observation, candidate) directed arc at threshold 0.5 \u2014 not an observation or route metric. Lower is better; axis starts at zero \u2014 no scale manipulation. Proxy labels: nearest reference-route segment + weak GPS-motion orientation; NOT supplied pointwise ground truth.",
+      "partition": "TRAIN grouped CV + student_test development; phase three (LR/KNN/Bagging + tuned)",
+      "path": "visualizations/phase_three/plots/phase_three_binary_log_loss.png",
+      "sha256": "40dc2e97afb282d21da072120dd1fa01b1980f90f83d25503d19fd2c2f1abf48",
+      "source": "experiments/phase_three/results.json, reports/phase_three/decoder/, outputs/phase_three_student_test/ (stable measured phase outputs)",
+      "stage": "charts",
+      "status": "stable_actual",
+      "title": "Phase-three out-of-fold binary candidate log loss"
+    },
+    {
+      "bytes": 208061,
+      "caption": "Single-machine wall-clock timings from the phase-three run logs; BLAS/OpenMP threads capped at 1, model n_jobs follow the saved config; KNN uses its predeclared 60,000-row TRAIN-only reference bank, so its student timing is bank search, not generalization. Bottom-right: per-observation student inference over 19,160 observations; the log axis is used only because the values span four orders of magnitude (logistic regression ~1 \u00b5s vs KNN ~10 ms per observation); total seconds are annotated per bar. Each panel shows one quantity in one unit; no axis is stretched to exaggerate differences.",
+      "partition": "TRAIN grouped CV + student_test development; phase three (LR/KNN/Bagging + tuned)",
+      "path": "visualizations/phase_three/plots/phase_three_training_inference_times.png",
+      "sha256": "fa6461a87063bbb77f9fc38842301e3d6691c0196e171c5ca3ce2f87e92b8544",
+      "source": "experiments/phase_three/results.json, reports/phase_three/decoder/, outputs/phase_three_student_test/ (stable measured phase outputs)",
+      "stage": "charts",
+      "status": "stable_actual",
+      "title": "Phase-three measured fit and inference timing"
+    },
+    {
+      "bytes": 112254,
+      "caption": "Same binary candidate metric across splits; TRAIN fit scored on its own training rows (resubstitution, optimistic), CV is out-of-fold, student is the 10-trip development set (19,160 observations, all rows, no selection). CV\u2192student deltas annotated as measured, including any negative gap. Binary candidate-row metric: one row per (observation, candidate) directed arc at threshold 0.5 \u2014 not an observation or route metric. Proxy labels: nearest reference-route segment + weak GPS-motion orientation; NOT supplied pointwise ground truth.",
+      "partition": "TRAIN grouped CV + student_test development; phase three (LR/KNN/Bagging + tuned)",
+      "path": "visualizations/phase_three/plots/phase_three_generalization_macro_f1.png",
+      "sha256": "536339341f829da7e6a2bf5e76a3999177ab4048c179c6ccf48738866159027c",
+      "source": "experiments/phase_three/results.json, reports/phase_three/decoder/, outputs/phase_three_student_test/ (stable measured phase outputs)",
+      "stage": "charts",
+      "status": "stable_actual",
+      "title": "Phase-three training vs CV vs student-development gap"
+    },
+    {
+      "bytes": 122078,
+      "caption": "Genuine 8-trial Gaussian-process EI search on the selected family (bagging) using TRAIN grouped CV only; every point is a measured CV run, never an interpolated or invented curve. The measured gain over the prior is +0.001036 objective (0.891464 \u2192 0.892500) \u2014 reported exactly, however small; accompanying macro-F1/log-loss changes are charted separately without scale manipulation. Objective definition: equal-trip mean OOF top-1 proxy accuracy, misses included. Proxy labels: nearest reference-route segment + weak GPS-motion orientation; NOT supplied pointwise ground truth.",
+      "partition": "TRAIN grouped CV + student_test development; phase three (LR/KNN/Bagging + tuned)",
+      "path": "visualizations/phase_three/plots/phase_three_bayesian_trial_trace.png",
+      "sha256": "c2e610ef0c27172c7ef21862e9451a672e67887b8fad7b2191aeca7f80bb5abd",
+      "source": "experiments/phase_three/results.json, reports/phase_three/decoder/, outputs/phase_three_student_test/ (stable measured phase outputs)",
+      "stage": "charts",
+      "status": "stable_actual",
+      "title": "Phase-three Bayesian HPO: actual trial objectives and running best"
+    },
+    {
+      "bytes": 125066,
+      "caption": "Same family before/after Bayesian tuning, identical folds and candidate rows. Measured deltas \u2014 Objective +0.0010; Binary macro-F1 +0.0000; Binary log loss +0.0002; Student macro-F1 -0.0002. A tiny objective gain alongside worse values on other metrics is reported as measured; panel y-ranges are widened around the two values so honest small differences stay visibly small. Binary candidate-row metric: one row per (observation, candidate) directed arc at threshold 0.5 \u2014 not an observation or route metric. Proxy labels: nearest reference-route segment + weak GPS-motion orientation; NOT supplied pointwise ground truth.",
+      "partition": "TRAIN grouped CV + student_test development; phase three (LR/KNN/Bagging + tuned)",
+      "path": "visualizations/phase_three/plots/phase_three_tuned_vs_untuned.png",
+      "sha256": "835822f7e41d364dc98dd87a54293aed170fa7fc7ee0ba3adc07ca2758bf9d60",
+      "source": "experiments/phase_three/results.json, reports/phase_three/decoder/, outputs/phase_three_student_test/ (stable measured phase outputs)",
+      "stage": "charts",
+      "status": "stable_actual",
+      "title": "Phase-three tuned vs default: bagging"
+    },
+    {
+      "bytes": 52817,
+      "caption": "Binary candidate rows at threshold 0.5 on the 10 development trips: 175,778 rows, 19,160 observations (19 observations with no true candidate retained in other denominators). Binary candidate-row metric: one row per (observation, candidate) directed arc at threshold 0.5 \u2014 not an observation or route metric. Proxy labels: nearest reference-route segment + weak GPS-motion orientation; NOT supplied pointwise ground truth.",
+      "partition": "TRAIN grouped CV + student_test development; phase three (LR/KNN/Bagging + tuned)",
+      "path": "visualizations/phase_three/plots/phase_three_confusion_logistic_regression.png",
+      "sha256": "fb8b32a42be52b0750cb896ca0173faa750d483f674a8337fc6bcb3a26b41af0",
+      "source": "experiments/phase_three/results.json, reports/phase_three/decoder/, outputs/phase_three_student_test/ (stable measured phase outputs)",
+      "stage": "charts",
+      "status": "stable_actual",
+      "title": "Phase-three student-development confusion \u00b7 logistic_regression"
+    },
+    {
+      "bytes": 53626,
+      "caption": "Binary candidate rows at threshold 0.5 on the 10 development trips: 175,778 rows, 19,160 observations (19 observations with no true candidate retained in other denominators). Binary candidate-row metric: one row per (observation, candidate) directed arc at threshold 0.5 \u2014 not an observation or route metric. Proxy labels: nearest reference-route segment + weak GPS-motion orientation; NOT supplied pointwise ground truth.",
+      "partition": "TRAIN grouped CV + student_test development; phase three (LR/KNN/Bagging + tuned)",
+      "path": "visualizations/phase_three/plots/phase_three_confusion_knn_distance_weighted.png",
+      "sha256": "8bb427e3632868bb002d71ea02c954e21ec289236ca09a84bde274eb4a7bcf48",
+      "source": "experiments/phase_three/results.json, reports/phase_three/decoder/, outputs/phase_three_student_test/ (stable measured phase outputs)",
+      "stage": "charts",
+      "status": "stable_actual",
+      "title": "Phase-three student-development confusion \u00b7 knn_distance_weighted"
+    },
+    {
+      "bytes": 53088,
+      "caption": "Binary candidate rows at threshold 0.5 on the 10 development trips: 175,778 rows, 19,160 observations (19 observations with no true candidate retained in other denominators). Binary candidate-row metric: one row per (observation, candidate) directed arc at threshold 0.5 \u2014 not an observation or route metric. Proxy labels: nearest reference-route segment + weak GPS-motion orientation; NOT supplied pointwise ground truth.",
+      "partition": "TRAIN grouped CV + student_test development; phase three (LR/KNN/Bagging + tuned)",
+      "path": "visualizations/phase_three/plots/phase_three_confusion_bagging.png",
+      "sha256": "6004c206f4343fbc649a4ea2c5dc0997cf4347a1c1689b2b3bc5dd9e42673a87",
+      "source": "experiments/phase_three/results.json, reports/phase_three/decoder/, outputs/phase_three_student_test/ (stable measured phase outputs)",
+      "stage": "charts",
+      "status": "stable_actual",
+      "title": "Phase-three student-development confusion \u00b7 bagging"
+    },
+    {
+      "bytes": 54826,
+      "caption": "Binary candidate rows at threshold 0.5 on the 10 development trips: 175,778 rows, 19,160 observations (19 observations with no true candidate retained in other denominators). Binary candidate-row metric: one row per (observation, candidate) directed arc at threshold 0.5 \u2014 not an observation or route metric. Proxy labels: nearest reference-route segment + weak GPS-motion orientation; NOT supplied pointwise ground truth.",
+      "partition": "TRAIN grouped CV + student_test development; phase three (LR/KNN/Bagging + tuned)",
+      "path": "visualizations/phase_three/plots/phase_three_confusion_bagging_tuned.png",
+      "sha256": "c3ff0d30359bf4f8b172d1178c049044f70ae9d1c796e67aaafd994b213ea11e",
+      "source": "experiments/phase_three/results.json, reports/phase_three/decoder/, outputs/phase_three_student_test/ (stable measured phase outputs)",
+      "stage": "charts",
+      "status": "stable_actual",
+      "title": "Phase-three student-development confusion \u00b7 bagging_tuned"
+    },
+    {
+      "bytes": 141246,
+      "caption": "Threshold-0.5 binary candidate confusion for the three selected families plus the tuned variant on the same 10 development trips. Binary candidate-row metric: one row per (observation, candidate) directed arc at threshold 0.5 \u2014 not an observation or route metric. Proxy labels: nearest reference-route segment + weak GPS-motion orientation; NOT supplied pointwise ground truth.",
+      "partition": "TRAIN grouped CV + student_test development; phase three (LR/KNN/Bagging + tuned)",
+      "path": "visualizations/phase_three/plots/phase_three_confusion_matrices_all.png",
+      "sha256": "a8312c499a913906432d13f622a193e73c760737173df2d8dcb28989348b0552",
+      "source": "experiments/phase_three/results.json, reports/phase_three/decoder/, outputs/phase_three_student_test/ (stable measured phase outputs)",
+      "stage": "charts",
+      "status": "stable_actual",
+      "title": "Phase-three confusion matrices: all requested runs (student development)"
+    },
+    {
+      "bytes": 195780,
+      "caption": "Left: binary candidate-row macro-F1 vs graph-namespaced directed-edge observation macro-F1 are DIFFERENT metrics with different denominators and are never mixed. Middle/right: edge macro-F1 and normalized categorical NLL on CV folds and the 19,160 student observations; classes are trip_id:canonical_directed_original_arc_id; class union includes reference-only and prediction-only roads. Per-observation normalized categorical NLL of the matching-candidate mass (floor 1e-7 on absent target mass; misses retained; vector not re-clipped). Normalize binary positive probabilities within each observation; absent target receives zero mass and finite log score uses floor1e-7. This is an emission log score, not a calibration claim. Misses are included in the unconditional score. Proxy labels: nearest reference-route segment + weak GPS-motion orientation; NOT supplied pointwise ground truth.",
+      "partition": "TRAIN grouped CV + student_test development; phase three (LR/KNN/Bagging + tuned)",
+      "path": "visualizations/phase_three/plots/phase_three_observation_level_metrics.png",
+      "sha256": "20e9a124ace6a4d20327b62b7b1e3c09dadcd3a925fdb45ad5523960931e90c7",
+      "source": "experiments/phase_three/results.json, reports/phase_three/decoder/, outputs/phase_three_student_test/ (stable measured phase outputs)",
+      "stage": "charts",
+      "status": "stable_actual",
+      "title": "Phase-three observation-level metrics: edge macro-F1 and categorical NLL (distinct from binary candidate rows)"
+    },
+    {
+      "bytes": 129263,
+      "caption": "Continuity of the raw per-observation argmax edge assignment on the student development split, before any Viterbi decoding: Adjacent available observation assignments are continuous iff same canonical edge OR head(previous)==tail(current); no routed connectors. Empty assignments count discontinuous. Includes observed time gaps; on downsampled CV this would not imply every intervening road was predicted. Counts use all adjacent pairs (19,150 for the widest run). This is a diagnostic, not a route metric. Proxy labels: nearest reference-route segment + weak GPS-motion orientation; NOT supplied pointwise ground truth.",
+      "partition": "TRAIN grouped CV + student_test development; phase three (LR/KNN/Bagging + tuned)",
+      "path": "visualizations/phase_three/plots/phase_three_raw_classifier_continuity.png",
+      "sha256": "68fc9f720eff5ce52db7c5c1d39023e3a26b6b51ef7264897e7aa98ec1c2ca05",
+      "source": "experiments/phase_three/results.json, reports/phase_three/decoder/, outputs/phase_three_student_test/ (stable measured phase outputs)",
+      "stage": "charts",
+      "status": "stable_actual",
+      "title": "Phase-three raw-classifier continuity (no HMM, no routed connectors)"
+    },
+    {
+      "bytes": 130848,
+      "caption": "Student development observations split per the recorded definition: ambiguous = proxy within the disclosed ambiguity margin; candidate_miss = no candidate matches the proxy edge; strata overlap and each keeps misses in its denominator. Observation counts per stratum (ambiguous proxy: 1,330 / non ambiguous proxy: 17,830) differ across strata, so accuracy differences partly reflect difficulty, not just model quality; axes start at zero and are never rescaled to inflate gaps. The separate candidate_miss stratum (19 observations, top-1 = 0 by construction, NLL 16.12) is not charted; both charted strata keep those misses in their denominators. Strata come from the learning agent's recorded diagnostics \u2014 no metric is invented, and they are proxy-derived, not supplied ground truth. Proxy labels: nearest reference-route segment + weak GPS-motion orientation; NOT supplied pointwise ground truth.",
+      "partition": "TRAIN grouped CV + student_test development; phase three (LR/KNN/Bagging + tuned)",
+      "path": "visualizations/phase_three/plots/phase_three_ambiguity_strata.png",
+      "sha256": "adcbbcfba9cdece0b8fa5f87bc4e470dfbbb875c985745e3593e55eb4bb758a7",
+      "source": "experiments/phase_three/results.json, reports/phase_three/decoder/, outputs/phase_three_student_test/ (stable measured phase outputs)",
+      "stage": "charts",
+      "status": "stable_actual",
+      "title": "Phase-three ambiguity strata: proxy-ambiguous vs non-ambiguous observations"
+    },
+    {
+      "bytes": 122609,
+      "caption": "Mean impurity-based (Gini) importances of the frozen artifact pinned in results.json (sha256 c7f2572d5d03\u2026, verified before load): 48 fitted decision-tree estimators, 38 candidate features, importances sum to 1.0000 over all features; top 15 shown. Error bars: std across estimators. Impurity importance is biased toward continuous / high-cardinality features, is measured on TRAIN-fitted trees, and is a diagnostic of the frozen model \u2014 not a causal claim and no refit was performed. Proxy labels: nearest reference-route segment + weak GPS-motion orientation; NOT supplied pointwise ground truth.",
+      "partition": "TRAIN grouped CV + student_test development; phase three (LR/KNN/Bagging + tuned)",
+      "path": "visualizations/phase_three/plots/phase_three_feature_importance.png",
+      "sha256": "88cb665d3a3bd7f673fc0b28b961c5fa92465495debb94e48310ae8abfb40ace",
+      "source": "experiments/phase_three/results.json, reports/phase_three/decoder/, outputs/phase_three_student_test/ (stable measured phase outputs)",
+      "stage": "charts",
+      "status": "stable_actual",
+      "title": "Phase-three feature importance: frozen bagging_tuned ensemble (measured, read-only)"
+    },
+    {
+      "bytes": 151299,
+      "caption": "New phase decoder evidence (reports/phase_three/decoder) on all 10 student development trips; trip-macro denominator 10 trips, failed trips counted as zero (none failed). Pooled route count F1 shown in report tables. Route discontinuities per trip (mean): classifier_only_raw=130.5 / classifier_plus_HMM=0.0 / geometry_HMM_default_reused=0.0; reference itself averages 0.1 broken join(s)/trip (present) and is never 'fixed' with invented connectors. Geometry-only method reuses the historical TRAIN-fitted scales read-only and is context, not a phase model. Routes are chronological arc-ID traversals; repeats/loops preserved; metric = multiset/edit over arc IDs.",
+      "partition": "TRAIN grouped CV + student_test development; phase three (LR/KNN/Bagging + tuned)",
+      "path": "visualizations/phase_three/plots/phase_three_route_ablation.png",
+      "sha256": "5740ce5bb02d239f30b643ab94eb02db4fdc2a9de33a36e00979441bd5ed2975",
+      "source": "experiments/phase_three/results.json, reports/phase_three/decoder/, outputs/phase_three_student_test/ (stable measured phase outputs)",
+      "stage": "charts",
+      "status": "stable_actual",
+      "title": "Phase-three final route ablation: classifier-only vs classifier+HMM vs geometry-only"
+    },
+    {
+      "bytes": 851507,
+      "caption": "Phase-three learned prediction (bagging_tuned); raw GPS blue, road graph gray, development reference green, learned prediction orange dashed. Original arc IDs preserved with repeats/loops; reference broken joins (0) shown as-is, no invented connectors. Internal report map, never evaluator-facing.",
+      "partition": "TRAIN grouped CV + student_test development; phase three (LR/KNN/Bagging + tuned)",
+      "path": "visualizations/phase_three/maps/phase_three_development_trip_00000009_final.html",
+      "sha256": "2bc60d1de88df737a9360faa7b0a12af7ebae047b42378941bf7787951af384b",
+      "source": "experiments/phase_three/results.json, reports/phase_three/decoder/, outputs/phase_three_student_test/ (stable measured phase outputs)",
+      "stage": "map",
+      "status": "stable_actual",
+      "title": "Phase-three final development map \u00b7 trip 00000009"
+    },
+    {
+      "bytes": 254510,
+      "caption": "actual headless-Chromium screenshot of the map HTML",
+      "companion_of": "visualizations/phase_three/maps/phase_three_development_trip_00000009_final.html",
+      "path": "visualizations/phase_three/maps/phase_three_development_trip_00000009_final.png",
+      "sha256": "f42a137ae4e46c8727cfb8cdf806570dea32a8cd4eb203a3c4072ca635f8c62d",
+      "stage": "map_companion",
+      "status": "stable_actual",
+      "title": "Phase-three final development map \u00b7 trip 00000009 \u00b7 png"
+    },
+    {
+      "bytes": 2824,
+      "caption": "programmatic render proof (DOM layout, canvas pixel counts, blocked network, Leaflet layer count)",
+      "companion_of": "visualizations/phase_three/maps/phase_three_development_trip_00000009_final.html",
+      "path": "visualizations/phase_three/maps/phase_three_development_trip_00000009_final.browser.json",
+      "sha256": "f617c16f2cf716b259e15843e625eb968cfccc74d8753c7b22697a5d754de563",
+      "stage": "map_companion",
+      "status": "stable_actual",
+      "title": "Phase-three final development map \u00b7 trip 00000009 \u00b7 browser.json"
+    },
+    {
+      "bytes": 2295,
+      "caption": "map provenance (input sha256s, route integrity, artifact hash)",
+      "companion_of": "visualizations/phase_three/maps/phase_three_development_trip_00000009_final.html",
+      "path": "visualizations/phase_three/maps/phase_three_development_trip_00000009_final.metadata.json",
+      "sha256": "58b3b077d5fb4ca191ff301bb757045e34a1af938bf06ea49d6a8a954a8291c8",
+      "stage": "map_companion",
+      "status": "stable_actual",
+      "title": "Phase-three final development map \u00b7 trip 00000009 \u00b7 metadata.json"
+    },
+    {
+      "bytes": 989,
+      "caption": "tesseract OCR text of the rendered screenshot",
+      "companion_of": "visualizations/phase_three/maps/phase_three_development_trip_00000009_final.html",
+      "path": "visualizations/phase_three/maps/phase_three_development_trip_00000009_final.ocr.txt",
+      "sha256": "0de47520ca629b8edfded0c8a725aa1c51994e75b68a0379e24a52415d4b08f4",
+      "stage": "map_companion",
+      "status": "stable_actual",
+      "title": "Phase-three final development map \u00b7 trip 00000009 \u00b7 ocr.txt"
+    }
+  ],
+  "generated_utc": "2026-11-18T07:43:24.748715+00:00",
+  "inputs": {
+    "decoder_ablation": {
+      "ablation_run": "reports/phase_three/decoder/ablation_run.json",
+      "methods": [
+        "classifier_only_raw",
+        "classifier_plus_HMM",
+        "geometry_HMM_default_reused"
+      ],
+      "path": "reports/phase_three/decoder/student_ablation.json",
+      "sha256": "bff7030213e3c2eeaa82ec8ddcfd349e11fd743fb4290ec8226454771c08de7b"
+    },
+    "frozen_artifact": {
+      "bytes": 2028652,
+      "freeze_record": "artifacts/phase_three/model_freeze.json",
+      "model": "artifacts/phase_three/model.joblib",
+      "sha256": "c7f2572d5d037d07a5c07710fbb1ffefd4ff13fbe866c8940022e4902669c733",
+      "sha256_verified": true
+    },
+    "observation_metrics_supplement": {
+      "path": "experiments/phase_three/sequence_classification.json",
+      "sha256": "adc78d38d4bf52e65b1fbcd2601e132745257a338a8b7d9ef4f74108e1296408",
+      "target": "route-projection proxy, not independently supplied per-GPS ground truth"
+    },
+    "results_json": {
+      "bayesian_trials": 8,
+      "final_run_name": "bagging_tuned",
+      "path": "experiments/phase_three/results.json",
+      "runs": [
+        "logistic_regression",
+        "knn_distance_weighted",
+        "bagging",
+        "bagging_tuned"
+      ],
+      "selection_model": "bagging",
+      "sha256": "0cd5e9f554870747df04a02ae5ac9971b8814166184fba127267d0f118bac1e1"
+    }
+  },
+  "maps_retained_historical": [
+    "visualizations/maps/development_trip_00000009_baseline.png",
+    "visualizations/maps/development_trip_00000009_final.png"
+  ],
+  "phase": "three-model-first",
+  "proxy_label_caveat": "Proxy labels: nearest reference-route segment + weak GPS-motion orientation; NOT supplied pointwise ground truth.",
+  "scope": "visualizations/phase_three/ only; historical visualizations/ root assets untouched"
+}

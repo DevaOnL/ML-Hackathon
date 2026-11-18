@@ -1,0 +1,292 @@
+[
+  {
+    "bytes": 146997,
+    "caption": "Source: completed byte/row audit, 360 original files. Student-development is not the reserved evaluator partition.",
+    "partition": "all 80 train + 10 student_test development trips; no evaluator data",
+    "path": "visualizations/plots/dataset_inventory.png",
+    "sha256": "8895f33a38a095828c3274be7e554916d5c054872649989e4c4793a6f769d2db",
+    "source": "analysis/data_audit/{summary,per_trip,manifest}.json plus all original .track files; visualizations/eda_summary.json hashes",
+    "status": "stable_actual",
+    "title": "Dataset inventory: all 80 training + 10 student-development trips"
+  },
+  {
+    "bytes": 188152,
+    "caption": "Source: complete file and cross-file audit. Blank/malformed rows are counted; missing values are not inferred from absent timestamps.\nRepeated coordinates can represent stops. Apparent speed uses GPS displacement / supplied seconds, not independently measured vehicle speed.",
+    "partition": "all 80 train + 10 student_test development trips; no evaluator data",
+    "path": "visualizations/plots/missing_invalid_and_anomalies.png",
+    "sha256": "717b90dd9b0dfe17303466edc0bea5dc31768147a3b1a1bf13b4f44f72cb356e",
+    "source": "analysis/data_audit/{summary,per_trip,manifest}.json plus all original .track files; visualizations/eda_summary.json hashes",
+    "status": "stable_actual",
+    "title": "Data quality across every permitted trip"
+  },
+  {
+    "bytes": 208320,
+    "caption": "All 80 training and 10 student-development trips; no subsampling. Chord sums do not claim exact physical road length.\nReference routes are chronological arc traversals, not an independently supplied label for every GPS observation.",
+    "partition": "all 80 train + 10 student_test development trips; no evaluator data",
+    "path": "visualizations/plots/trajectory_distributions.png",
+    "sha256": "c1069eba52ff221b5fbda659bff9f72b61a5ff2369f935eea4295c09d61f6c2e",
+    "source": "analysis/data_audit/{summary,per_trip,manifest}.json plus all original .track files; visualizations/eda_summary.json hashes",
+    "status": "stable_actual",
+    "title": "Trajectory size, duration and reference-route structure"
+  },
+  {
+    "bytes": 150849,
+    "caption": "Training (80 trips): 96.50% \u22481 s, max 153,064 s; Student-development (10 trips): 98.62% \u22481 s, max 210 s.\n\u22481 s uses absolute tolerance 1e\u22126 s; exact audit counts are retained in eda_summary.json. No gaps filled or timestamps invented.",
+    "partition": "all 80 train + 10 student_test development trips; no evaluator data",
+    "path": "visualizations/plots/timestamp_gaps.png",
+    "sha256": "bc022e3929d18bed17ba8e5edbcec822559b81bb2894e4de9f39f16961001db9",
+    "source": "analysis/data_audit/{summary,per_trip,manifest}.json plus all original .track files; visualizations/eda_summary.json hashes",
+    "status": "stable_actual",
+    "title": "Timestamp ordering and sampling gaps: every consecutive pair"
+  },
+  {
+    "bytes": 244604,
+    "caption": "Complete directed-graph audit, computed per trip. Networks can overlap geographically; totals are not a unique global road network.\nWeak connectivity ignores direction; strong connectivity requires directed paths both ways. Zero isolated nodes does not mean connected.",
+    "partition": "all 80 train + 10 student_test development trips; no evaluator data",
+    "path": "visualizations/plots/road_network_sizes_connectivity.png",
+    "sha256": "0a081b29f0c35e797f46abe28970d009569bda29ffb65b25c7dba8e97faa5447",
+    "source": "analysis/data_audit/{summary,per_trip,manifest}.json plus all original .track files; visualizations/eda_summary.json hashes",
+    "status": "stable_actual",
+    "title": "Road-network sizes and connectivity: all 90 trip graphs"
+  },
+  {
+    "bytes": 95492,
+    "caption": "All raw positions from 80 training and 10 student-development tracks; shared longitude/latitude axes; no web tiles.\nAt this multi-region scale a trip can appear as a compact point; the local-scale galleries below show every trajectory separately.",
+    "partition": "all 80 train + 10 student_test development trips; no evaluator data",
+    "path": "visualizations/plots/gps_geographic_coverage.png",
+    "sha256": "c83283403296dcaaed21936361885a3210a8a6609e7eb8584f1e2853bf9aa2b3",
+    "source": "analysis/data_audit/{summary,per_trip,manifest}.json plus all original .track files; visualizations/eda_summary.json hashes",
+    "status": "stable_actual",
+    "title": "Geographic GPS coverage: every observed trajectory"
+  },
+  {
+    "bytes": 289007,
+    "caption": "Every observation included. Green dot = first GPS row; red \u00d7 = last. Independent local-km panel axes, centered at median coordinate.\nEquirectangular projection uses cos(median latitude). Panels have different scales; timestamps/gaps are not interpolated.",
+    "partition": "train: all 80 trips, pages 1\u20134 together",
+    "path": "visualizations/plots/gps_trip_gallery_train_01.png",
+    "sha256": "78fc6288f7c936d5a3c89b6a80f2a8d1d0720189154333d597ec46992b101485",
+    "source": "Every original TRAIN .track observation, SHA256-checked against analysis/data_audit/manifest.json",
+    "status": "stable_actual",
+    "title": "Every raw GPS trajectory \u00b7 Training (80 trips) \u00b7 page 1"
+  },
+  {
+    "bytes": 314994,
+    "caption": "Every observation included. Green dot = first GPS row; red \u00d7 = last. Independent local-km panel axes, centered at median coordinate.\nEquirectangular projection uses cos(median latitude). Panels have different scales; timestamps/gaps are not interpolated.",
+    "partition": "train: all 80 trips, pages 1\u20134 together",
+    "path": "visualizations/plots/gps_trip_gallery_train_02.png",
+    "sha256": "bbe634b3170227debfe96b3c6ce6a127653012cec6903a7f416eb3174293ee77",
+    "source": "Every original TRAIN .track observation, SHA256-checked against analysis/data_audit/manifest.json",
+    "status": "stable_actual",
+    "title": "Every raw GPS trajectory \u00b7 Training (80 trips) \u00b7 page 2"
+  },
+  {
+    "bytes": 346505,
+    "caption": "Every observation included. Green dot = first GPS row; red \u00d7 = last. Independent local-km panel axes, centered at median coordinate.\nEquirectangular projection uses cos(median latitude). Panels have different scales; timestamps/gaps are not interpolated.",
+    "partition": "train: all 80 trips, pages 1\u20134 together",
+    "path": "visualizations/plots/gps_trip_gallery_train_03.png",
+    "sha256": "28c07d4584ddff3662f4ac05d4f8eda0cda15cbc7f59182c91d5491f9b72d96e",
+    "source": "Every original TRAIN .track observation, SHA256-checked against analysis/data_audit/manifest.json",
+    "status": "stable_actual",
+    "title": "Every raw GPS trajectory \u00b7 Training (80 trips) \u00b7 page 3"
+  },
+  {
+    "bytes": 346613,
+    "caption": "Every observation included. Green dot = first GPS row; red \u00d7 = last. Independent local-km panel axes, centered at median coordinate.\nEquirectangular projection uses cos(median latitude). Panels have different scales; timestamps/gaps are not interpolated.",
+    "partition": "train: all 80 trips, pages 1\u20134 together",
+    "path": "visualizations/plots/gps_trip_gallery_train_04.png",
+    "sha256": "7fdb59352d7290d44304990a6c6c03a679b17407e82b8a7e7f1987026333e717",
+    "source": "Every original TRAIN .track observation, SHA256-checked against analysis/data_audit/manifest.json",
+    "status": "stable_actual",
+    "title": "Every raw GPS trajectory \u00b7 Training (80 trips) \u00b7 page 4"
+  },
+  {
+    "bytes": 204737,
+    "caption": "Every observation included. Green dot = first GPS row; red \u00d7 = last. Independent local-km panel axes, centered at median coordinate.\nEquirectangular projection uses cos(median latitude). Panels have different scales; timestamps/gaps are not interpolated.",
+    "partition": "student_test development: all 10 trips",
+    "path": "visualizations/plots/gps_trip_gallery_student_test_01.png",
+    "sha256": "49607365d97cc1f99532224f7f853f2e1899b98dcf73eb34ff06f7d2a7a4541a",
+    "source": "Every original student_test .track observation, SHA256-checked against analysis/data_audit/manifest.json",
+    "status": "stable_actual",
+    "title": "Every raw GPS trajectory \u00b7 Student-development (10 trips) \u00b7 page 1"
+  },
+  {
+    "bytes": 299212,
+    "caption": "Learned prediction, final model: tuned classifier + HMM/Viterbi (config A_fitted). Development reference geometry is internal to this report, never evaluator-facing.\nArcs use supplied node-endpoint chords; repeated traversal arcs retained; broken joins are not filled with invented connectors.",
+    "partition": "student_test development trip 00000009 only",
+    "path": "visualizations/plots/representative_road_route.png",
+    "sha256": "d3ae4194a3df54b81bd0c4f15201a91973331ccef4924b9f122529f4dbaea772",
+    "source": "Original student_test trip 00000009 .nodes/.arcs/.track/.route plus explicitly labelled prediction (see map metadata)",
+    "status": "stable_actual",
+    "title": "Illustrative development road graph / route \u00b7 trip 00000009"
+  },
+  {
+    "bytes": 105143,
+    "caption": "TRAIN CV: 28,000/208,417 observations across 80 trips. Student-development: 19,160/19,160 observations across 10 trips.\nProxy labels: nearest reference-route segment + weak GPS-motion orientation; NOT supplied pointwise ground truth.",
+    "partition": "TRAIN trip-grouped CV + student_test development; model chart captions specify sampling",
+    "path": "visualizations/plots/cv_macro_f1_comparison.png",
+    "sha256": "14829d75ea213063b11bf1471153522ffc33c053b88e5b0885b6ffea17ebd7d8",
+    "source": "Complete stable experiments/results.json; visualizations/experiment_chart_provenance.json records SHA256 and exact sampling",
+    "status": "stable_actual",
+    "title": "Cross-validation Macro F1: five baselines and selected tuned model"
+  },
+  {
+    "bytes": 116994,
+    "caption": "TRAIN CV: 28,000/208,417 observations across 80 trips. Student-development: 19,160/19,160 observations across 10 trips.\nProxy labels: nearest reference-route segment + weak GPS-motion orientation; NOT supplied pointwise ground truth.",
+    "partition": "TRAIN trip-grouped CV + student_test development; model chart captions specify sampling",
+    "path": "visualizations/plots/student_development_top1_macro_f1.png",
+    "sha256": "37d04d22ff0147abd8ae2360a35a1cae582599629003a6dc20313cd202fd1a9f",
+    "source": "Complete stable experiments/results.json; visualizations/experiment_chart_provenance.json records SHA256 and exact sampling",
+    "status": "stable_actual",
+    "title": "Student-development comparison (not final evaluator accuracy)"
+  },
+  {
+    "bytes": 109067,
+    "caption": "TRAIN CV: 28,000/208,417 observations across 80 trips. Student-development: 19,160/19,160 observations across 10 trips.\nProxy labels: nearest reference-route segment + weak GPS-motion orientation; NOT supplied pointwise ground truth.",
+    "partition": "TRAIN trip-grouped CV + student_test development; model chart captions specify sampling",
+    "path": "visualizations/plots/log_loss_comparison.png",
+    "sha256": "20fecc528d78bffb81102722bccdb5ba83aac537e21d43bf9bb3c9ab2ce9b02a",
+    "source": "Complete stable experiments/results.json; visualizations/experiment_chart_provenance.json records SHA256 and exact sampling",
+    "status": "stable_actual",
+    "title": "Probability quality: measured binary-candidate log loss"
+  },
+  {
+    "bytes": 143729,
+    "caption": "TRAIN CV: 28,000/208,417 observations across 80 trips. Student-development: 19,160/19,160 observations across 10 trips.\nActual wall-clock timing; classifier-only inference excludes graph loading, candidate generation and HMM routing. Other concurrent work can affect timing.",
+    "partition": "TRAIN trip-grouped CV + student_test development; model chart captions specify sampling",
+    "path": "visualizations/plots/training_inference_times.png",
+    "sha256": "b086f656b2fbaa857effe08681ef67afe3f2170199b83b4ecd9587de574c8e30",
+    "source": "Complete stable experiments/results.json; visualizations/experiment_chart_provenance.json records SHA256 and exact sampling",
+    "status": "stable_actual",
+    "title": "Measured model cost: training and probability inference"
+  },
+  {
+    "bytes": 68745,
+    "caption": "Student-development only. Rows = true proxy class; columns = predicted class.\nProxy labels: nearest reference-route segment + weak GPS-motion orientation; NOT supplied pointwise ground truth.",
+    "partition": "TRAIN trip-grouped CV + student_test development; model chart captions specify sampling",
+    "path": "visualizations/plots/confusion_logistic_regression.png",
+    "sha256": "b0622e2b13f1859b79e2460f55583de36f2bc322e1bf55ee9c8e6ca4ef49f450",
+    "source": "Complete stable experiments/results.json; visualizations/experiment_chart_provenance.json records SHA256 and exact sampling",
+    "status": "stable_actual",
+    "title": "Logistic regression \u00b7 development confusion"
+  },
+  {
+    "bytes": 73415,
+    "caption": "Student-development only. Rows = true proxy class; columns = predicted class.\nProxy labels: nearest reference-route segment + weak GPS-motion orientation; NOT supplied pointwise ground truth.",
+    "partition": "TRAIN trip-grouped CV + student_test development; model chart captions specify sampling",
+    "path": "visualizations/plots/confusion_gaussian_nb.png",
+    "sha256": "805759c893e7111507e4cea9e11daf2b4e9c37c4db1df36bc2bd42e40dfb731f",
+    "source": "Complete stable experiments/results.json; visualizations/experiment_chart_provenance.json records SHA256 and exact sampling",
+    "status": "stable_actual",
+    "title": "Gaussian Naive Bayes \u00b7 development confusion"
+  },
+  {
+    "bytes": 69165,
+    "caption": "Student-development only. Rows = true proxy class; columns = predicted class.\nProxy labels: nearest reference-route segment + weak GPS-motion orientation; NOT supplied pointwise ground truth.",
+    "partition": "TRAIN trip-grouped CV + student_test development; model chart captions specify sampling",
+    "path": "visualizations/plots/confusion_random_forest.png",
+    "sha256": "e75b00bdbeec1ed62a120d6342af9686dc7ddd1879e0d50b1a452f232db451a9",
+    "source": "Complete stable experiments/results.json; visualizations/experiment_chart_provenance.json records SHA256 and exact sampling",
+    "status": "stable_actual",
+    "title": "Random forest \u00b7 development confusion"
+  },
+  {
+    "bytes": 68422,
+    "caption": "Student-development only. Rows = true proxy class; columns = predicted class.\nProxy labels: nearest reference-route segment + weak GPS-motion orientation; NOT supplied pointwise ground truth.",
+    "partition": "TRAIN trip-grouped CV + student_test development; model chart captions specify sampling",
+    "path": "visualizations/plots/confusion_extra_trees.png",
+    "sha256": "3dd55194a6866beb01a1f05650cfb143306e2563a238abd369a3f0ba72d44459",
+    "source": "Complete stable experiments/results.json; visualizations/experiment_chart_provenance.json records SHA256 and exact sampling",
+    "status": "stable_actual",
+    "title": "extra trees \u00b7 development confusion"
+  },
+  {
+    "bytes": 69276,
+    "caption": "Student-development only. Rows = true proxy class; columns = predicted class.\nProxy labels: nearest reference-route segment + weak GPS-motion orientation; NOT supplied pointwise ground truth.",
+    "partition": "TRAIN trip-grouped CV + student_test development; model chart captions specify sampling",
+    "path": "visualizations/plots/confusion_hist_gradient_boosting.png",
+    "sha256": "c051ed6d2cbb9526a54ef159ef3783eb473fafb3777b7f931cb885ce0d5302b5",
+    "source": "Complete stable experiments/results.json; visualizations/experiment_chart_provenance.json records SHA256 and exact sampling",
+    "status": "stable_actual",
+    "title": "Histogram gradient boost \u00b7 development confusion"
+  },
+  {
+    "bytes": 69864,
+    "caption": "Student-development only. Rows = true proxy class; columns = predicted class.\nProxy labels: nearest reference-route segment + weak GPS-motion orientation; NOT supplied pointwise ground truth.",
+    "partition": "TRAIN trip-grouped CV + student_test development; model chart captions specify sampling",
+    "path": "visualizations/plots/confusion_hist_gradient_boosting_tuned.png",
+    "sha256": "9d6f58cbb2481701f36603d6d18ac0ff64cae42e13afd5a657a6dd4d4373e21b",
+    "source": "Complete stable experiments/results.json; visualizations/experiment_chart_provenance.json records SHA256 and exact sampling",
+    "status": "stable_actual",
+    "title": "Histogram gradient boost (tuned) \u00b7 development confusion"
+  },
+  {
+    "bytes": 246518,
+    "caption": "TRAIN CV: 28,000/208,417 observations across 80 trips. Student-development: 19,160/19,160 observations across 10 trips.\nProxy labels: nearest reference-route segment + weak GPS-motion orientation; NOT supplied pointwise ground truth.\nRows = true proxy; columns = prediction; raw counts, per-panel colour ranges. Negative candidates outnumber positive candidates.",
+    "partition": "TRAIN trip-grouped CV + student_test development; model chart captions specify sampling",
+    "path": "visualizations/plots/confusion_matrices_all_models.png",
+    "sha256": "67cdf6bed230f5ac0781c5e7c0f3114f45cedd9e5daf5ebde9eede5b5bb9a8e2",
+    "source": "Complete stable experiments/results.json; visualizations/experiment_chart_provenance.json records SHA256 and exact sampling",
+    "status": "stable_actual",
+    "title": "Binary-candidate confusion matrices: student-development"
+  },
+  {
+    "bytes": 245708,
+    "caption": "TRAIN CV: 28,000/208,417 observations across 80 trips. Student-development: 19,160/19,160 observations across 10 trips.\nProxy labels: nearest reference-route segment + weak GPS-motion orientation; NOT supplied pointwise ground truth.\nSame trip-grouped TRAIN folds throughout. Trial 0 is measured/reused, not a new fit. Genuine GP surrogate + expected improvement.",
+    "partition": "TRAIN trip-grouped CV + student_test development; model chart captions specify sampling",
+    "path": "visualizations/plots/bayesian_trial_trace.png",
+    "sha256": "14e827e9d8d819877670fee08c864a548d2abed9899933d35fa3e1f31344f87e",
+    "source": "Complete stable experiments/results.json; visualizations/experiment_chart_provenance.json records SHA256 and exact sampling",
+    "status": "stable_actual",
+    "title": "Bayesian search: 12 recorded trials \u00b7 hist gradient boosting"
+  },
+  {
+    "bytes": 167953,
+    "caption": "TRAIN CV: 28,000/208,417 observations across 80 trips. Student-development: 19,160/19,160 observations across 10 trips.\nProxy labels: nearest reference-route segment + weak GPS-motion orientation; NOT supplied pointwise ground truth.\nMeasured objective gain from tuning: +0.000714 Top-1 accuracy (+0.07 pp), a small change. Across these six panels 4 improved and 2 got worse for the tuned model; bars are unadjusted measurements and the y-axes start at zero. Untuned is the same algorithm before Bayesian search; log loss and seconds are lower-is-better.",
+    "partition": "TRAIN trip-grouped CV + student_test development; model chart captions specify sampling",
+    "path": "visualizations/plots/tuned_vs_untuned.png",
+    "sha256": "7c9676687cf4a87f01bdbd92e9a5c3c011e8baa88cd3a98d16e93594609ae6e1",
+    "source": "Complete stable experiments/results.json; visualizations/experiment_chart_provenance.json records SHA256 and exact sampling",
+    "status": "stable_actual",
+    "title": "Untuned vs Bayesian-tuned: identical data and definitions"
+  },
+  {
+    "bytes": 230108,
+    "caption": "TRAIN CV: 28,000/208,417 observations across 80 trips. Student-development: 19,160/19,160 observations across 10 trips.\nProxy labels: nearest reference-route segment + weak GPS-motion orientation; NOT supplied pointwise ground truth.\nThese scores are not comparable to the binary candidate-row charts. Edge Macro F1 classes are trip-qualified canonical directed arcs (namespace trip_id:canonical_directed_original_arc_id; class union includes reference-only and prediction-only roads) over the union of reference and predicted arcs. The categorical log score normalizes positive candidate probabilities within each observation; absent targets get zero mass and the floored variant includes candidate misses (19 of 19,160 student observations for the final model, floor 1e-7). Emission log score, not a calibration claim.",
+    "partition": "TRAIN trip-grouped CV + student_test development; model chart captions specify sampling",
+    "path": "visualizations/plots/observation_level_metrics.png",
+    "sha256": "9ade910340503525eb6983317d45a0bdbdfa8822d6e5677c9dd7f7f587e66995",
+    "source": "Complete stable experiments/results.json; visualizations/experiment_chart_provenance.json records SHA256 and exact sampling",
+    "status": "stable_actual",
+    "title": "Observation-level metrics: separate label space and denominators"
+  },
+  {
+    "bytes": 194694,
+    "caption": "TRAIN CV: 28,000/208,417 observations across 80 trips. Student-development: 19,160/19,160 observations across 10 trips.\nProxy labels: nearest reference-route segment + weak GPS-motion orientation; NOT supplied pointwise ground truth.\nAn adjacent observation pair is continuous when the canonical directed arc is identical or the previous head equals the next tail; no routed connectors are drawn, so discontinuities stay visible. Denominator for the final model: 19,150 adjacent pairs and 4,620 edge changes across the 10 student-development trips. Route continuity after HMM/Viterbi routing is measured separately by the route matcher and is not shown here.",
+    "partition": "TRAIN trip-grouped CV + student_test development; model chart captions specify sampling",
+    "path": "visualizations/plots/raw_classifier_continuity.png",
+    "sha256": "931c974c59043312365253ef2748d5afd5b5250ca67471aef13dd8085dbfa253",
+    "source": "Complete stable experiments/results.json; visualizations/experiment_chart_provenance.json records SHA256 and exact sampling",
+    "status": "stable_actual",
+    "title": "Raw classifier continuity before any routing"
+  },
+  {
+    "bytes": 207611,
+    "caption": "TRAIN CV: 28,000/208,417 observations across 80 trips. Student-development: 19,160/19,160 observations across 10 trips.\nProxy labels: nearest reference-route segment + weak GPS-motion orientation; NOT supplied pointwise ground truth.\nTRAIN panel scores hist_gradient_boosting_tuned out-of-fold on all 80 trips; student panel scores the final all-80 fit on the 10 development trips. Stratum observation counts left to right: TRAIN 28,000/25,912/2,088/27,095/905; student 19,160/17,830/1,330/19,018/142. Dashed lines are the distance-only nearest-geometry ranking baseline, shown for context. Route geometry and noisy GPS induce heuristic labels, not independently measured per-GPS road IDs. Ambiguous points are retained in every headline metric. This is a sensitivity analysis only.",
+    "partition": "TRAIN trip-grouped CV + student_test development; model chart captions specify sampling",
+    "path": "visualizations/plots/ambiguity_strata_sensitivity.png",
+    "sha256": "5649d92b0eae0b5a899f9bd6666192dae0aef20216104e87bd4d50c93d423eb3",
+    "source": "Complete stable experiments/results.json; visualizations/experiment_chart_provenance.json records SHA256 and exact sampling",
+    "status": "stable_actual",
+    "title": "Ambiguity and proxy-distance strata: same measured predictions, sliced"
+  },
+  {
+    "bytes": 102313,
+    "caption": "TRAIN CV: 28,000/208,417 observations across 80 trips. Student-development: 19,160/19,160 observations across 10 trips.\nProxy labels: nearest reference-route segment + weak GPS-motion orientation; NOT supplied pointwise ground truth.\nTraining resubstitution is not an unbiased estimate; model/search selection used trip-grouped TRAIN CV only.",
+    "partition": "TRAIN trip-grouped CV + student_test development; model chart captions specify sampling",
+    "path": "visualizations/plots/generalization_macro_f1.png",
+    "sha256": "f462fe3abad99084097160090fffc315a25529f32d08027d4ed0ae45ec045a96",
+    "source": "Complete stable experiments/results.json; visualizations/experiment_chart_provenance.json records SHA256 and exact sampling",
+    "status": "stable_actual",
+    "title": "Generalisation: in-sample vs held-out proxy agreement"
+  }
+]

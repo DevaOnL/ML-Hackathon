@@ -1,0 +1,111 @@
+Phase-three raw-classifier continuity (no HMM, no routed connectors)
+
+Pair counts
+
+1.0
+
+0.929
+
+0.923
+
+S Raw classifier cBritHuity
+
+I
+
+ge pairs
+
+14000 A
+
+. E
+
+ontinuity acr
+
+changes
+
+nge pairs
+
+c 0.81
+
+0.720
+
+0.708
+
+0.720
+
+0.718
+
+H 12000 A
+
+©
+
+a
+
+.5 10000 A
+
+0.6 4
+
+=)
+
+©
+
+<
+
+>
+
+7}
+
+8000 -
+
+Q
+
+0
+
+0.4 4
+
+o
+
+6000 -
+
+4000 A
+
+0.2
+
+2000 A
+
+0.0-
+
+o
+
+Logistic
+
+KNN
+
+Bagging
+
+Bagging
+
+Logistic
+
+KNN
+
+Ba
+
+ing
+
+Bagging
+
+(decision trees)
+
+regression
+
+(distance-weighted)(decision trees) (decision trees)
+
+regression
+
+(distance-weighted)(decision trees)
+
+(tuned)
+
+(tuned)
+
+Continuity of the raw per-observation argmax edge assignment on the student development split, before any Viterbi decoding: Adjacent available observation assignments are continuous iff same canonical ed

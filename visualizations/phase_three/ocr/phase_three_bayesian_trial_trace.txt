@@ -1,0 +1,63 @@
+Phase-three Bayesian HPO: actual trial objectives and running best
+
+0.8930 1
+
+gain vs prior: +0.001036
+
+0.8925
+
+[
+
+v
+
+(R
+
+oo
+
+v
+
+oo
+
+oo
+
+(R
+
+oo
+
+--a
+
+0.8920 1
+
+0.8915 1
+
+0.8910 1
+
+—@~— Trial objective (equal-trip mean OOF top-1 proxy accuracy)
+
+0.8905 A
+
+—#- Running best
+
+Measured prior (selected family grouped-CV baseline)
+
+Best trial (1)
+
+T
+
+T
+
+T
+
+T
+
+2
+
+3
+
+4
+
+5
+
+Bayesian trial (1 measured prior + 7 search trials; 8 total as configured)
+
+Genuine 8-trial Gaussian-process El search on the selected family (bagging) using TRAIN grouped CV only; every point is a measured CV run, never an interpolated or inven!

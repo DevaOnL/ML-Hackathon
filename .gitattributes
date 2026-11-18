@@ -1,3 +1,5 @@
 # Preserve measured CSV bytes, including csv.writer CRLF, without normalization.
 # A CR before LF is a line ending, not trailing content whitespace.
 *.csv -text whitespace=trailing-space,space-before-tab,cr-at-eol
+# Folium emits whitespace-only template lines; preserve hash-pinned generated HTML.
+visualizations/phase_three/maps/*.html -text whitespace=-blank-at-eol,-blank-at-eof

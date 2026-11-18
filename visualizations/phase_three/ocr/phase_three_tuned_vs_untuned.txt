@@ -1,0 +1,109 @@
+Phase-three tuned vs default: bagging
+
+Objective (OOF top-1)
+
+Binary macro-F1 (OOF)
+
+Binary log loss (OOF) (lower better)
+
+Student macro-F1
+
+0.910
+
+0.960 -
+
+0.0585 -
+
+0.960 ~
+
+0.905 A
+
+0.955 A
+
+0.955 4
+
+0.0580 4
+
+0.900 -
+
+0.950 -
+
+0.950 4
+
++0.0002
+
+0.895 A
+
++0.0010
+
++0.0000
+
+0.0575
+
+-0.0002
+
+0.8925
+
+0.945 -
+
+0.9424
+
+0.9425
+
+0.0575 4
+
+0.945
+
+0.9437
+
+0.9436
+
+0.8915
+
+0.890 -
+
+0.0572
+
+0.940 -
+
+0.940 A
+
+0.0570 1
+
+0.885 -
+
+0.935 A
+
+0.935 4
+
+0.880 -
+
+0.930 -
+
+0.0565 A
+
+0.930 1
+
+0.875 A
+
+0.925 A
+
+0.925 -
+
+Default
+
+Tuned
+
+Default
+
+Tuned
+
+Default
+
+Tuned
+
+Default
+
+Tuned
+
+Same family before/after Bayesian tuning, identical folds and candidate rows. Measured deltas — Objective +0.0010; Binary macro-F1 +0.0000; Binary log loss +0.0002; Student macro-F1 -0.0002. A tiny objective gain alongside \

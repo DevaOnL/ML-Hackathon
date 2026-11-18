@@ -1,0 +1,565 @@
+{
+  "gps_rows": {
+    "student_test": 19160,
+    "train": 208417
+  },
+  "quality": {
+    "student_test": {
+      "missing_invalid_counts": {
+        "Blank rows / missing fields": 0,
+        "Duplicate GPS timestamps": 0,
+        "Invalid GPS coordinates": 0,
+        "Invalid arc endpoints": 0,
+        "Invalid reference arc IDs": 0,
+        "Invalid road-node coordinates": 0,
+        "Missing required files": 0,
+        "Nonpositive timestamp steps": 0,
+        "Numeric / structural parse errors": 0
+      },
+      "other_anomalies": {
+        "Broken reference-route joins": 1,
+        "GPS steps >50 m/s (if seconds)": 8,
+        "Repeated GPS coordinates": 6,
+        "Repeated directed road pairs": 128,
+        "Road self-loops": 2,
+        "Zero-length road arc chords": 6
+      }
+    },
+    "train": {
+      "missing_invalid_counts": {
+        "Blank rows / missing fields": 0,
+        "Duplicate GPS timestamps": 0,
+        "Invalid GPS coordinates": 0,
+        "Invalid arc endpoints": 0,
+        "Invalid reference arc IDs": 0,
+        "Invalid road-node coordinates": 0,
+        "Missing required files": 0,
+        "Nonpositive timestamp steps": 0,
+        "Numeric / structural parse errors": 0
+      },
+      "other_anomalies": {
+        "Broken reference-route joins": 13,
+        "GPS steps >50 m/s (if seconds)": 1524,
+        "Repeated GPS coordinates": 572,
+        "Repeated directed road pairs": 1775,
+        "Road self-loops": 22,
+        "Zero-length road arc chords": 100
+      }
+    }
+  },
+  "reference_warning": "Chronological arc traversals, not pointwise labels; validity checks do not imply independently verified physical ground truth.",
+  "road_network_totals": {
+    "student_test": {
+      "count": 185041,
+      "isolated_nodes": 0,
+      "strong_components": 974,
+      "weak_components": 227
+    },
+    "train": {
+      "count": 3876904,
+      "isolated_nodes": 0,
+      "strong_components": 20038,
+      "weak_components": 3121
+    }
+  },
+  "scope": "All 80 training + 10 student-development trips; no evaluator files",
+  "source_audit": {
+    "analysis/data_audit/manifest.json": "f4c5b32c8284ca3bfa5a694a4568aca03f9d3f0327334e1a1066c7e4d75dfb59",
+    "analysis/data_audit/per_trip.json": "72deb5f23b9ca84244c100125bd3f5b57459348e77497768e0445be9ceeb8a68",
+    "analysis/data_audit/summary.json": "3e24f2d3bea1de223e81fb5f7ba38b29904ed1fc8d9c8bbf8c055e9dc4ef0e0f"
+  },
+  "timestamps": {
+    "student_test": {
+      "approximately_one_second_steps": 18886,
+      "approximately_one_second_tolerance_seconds": 1e-06,
+      "category_counts": {
+        ">10\u201360 s": 26,
+        ">2\u201310 s": 111,
+        ">60 s": 1,
+        "Other \u22642 s": 126,
+        "\u22481 s": 18886,
+        "\u22640 s": 0
+      },
+      "exact_not_one_audit_count": 264,
+      "maximum_gap_seconds": 210.0,
+      "minimum_gap_seconds": 1.0,
+      "nonpositive_steps": 0,
+      "regular_fraction": 0.9862140992167102,
+      "steps": 19150
+    },
+    "train": {
+      "approximately_one_second_steps": 201053,
+      "approximately_one_second_tolerance_seconds": 1e-06,
+      "category_counts": {
+        ">10\u201360 s": 521,
+        ">2\u201310 s": 2347,
+        ">60 s": 69,
+        "Other \u22642 s": 4347,
+        "\u22481 s": 201053,
+        "\u22640 s": 0
+      },
+      "exact_not_one_audit_count": 7289,
+      "maximum_gap_seconds": 153064.0,
+      "minimum_gap_seconds": 0.9999999999998863,
+      "nonpositive_steps": 0,
+      "regular_fraction": 0.96503741534149,
+      "steps": 208337
+    }
+  },
+  "track_input_hashes": [
+    {
+      "path": "Student folder/student_test/00000000/00000000.track",
+      "rows": 2503,
+      "sha256": "10a2eb387890cfa01d80c8aec5d010b6775e09e50be03c0271b9e7f83288055b"
+    },
+    {
+      "path": "Student folder/student_test/00000007/00000007.track",
+      "rows": 1354,
+      "sha256": "4089bc8f8d8347b92061b5bb2d36af26baa384d3fbed9184bb219e3f6f543e8d"
+    },
+    {
+      "path": "Student folder/student_test/00000009/00000009.track",
+      "rows": 1049,
+      "sha256": "74853acd9fdbb2b80b8cd164cc63932e25fd0fca6fce86fd9c9fc6aa171a8451"
+    },
+    {
+      "path": "Student folder/student_test/00000040/00000040.track",
+      "rows": 2995,
+      "sha256": "c1e15b30e0fea83573156cb8650177822f852417cbe899c3cacd67201ea4dcd5"
+    },
+    {
+      "path": "Student folder/student_test/00000052/00000052.track",
+      "rows": 262,
+      "sha256": "a3a0deefec3bb92edd2c0b89cb7f18d2382f14a807802cb3090b4b3998789e49"
+    },
+    {
+      "path": "Student folder/student_test/00000056/00000056.track",
+      "rows": 3958,
+      "sha256": "fe2e441173a411fb0f936f595ff4cef9fc8e6c31a9aa0f4f3d4c942a8fa37a22"
+    },
+    {
+      "path": "Student folder/student_test/00000065/00000065.track",
+      "rows": 768,
+      "sha256": "d9c4a821d1f58a41c380736bde94e834cfb46950b0cd29049bb34adfccdc40fc"
+    },
+    {
+      "path": "Student folder/student_test/00000076/00000076.track",
+      "rows": 1486,
+      "sha256": "f8dba4bdd1755ad8b5a88999729c9951b2e1b78c055f93c156eccf3b871f0875"
+    },
+    {
+      "path": "Student folder/student_test/00000077/00000077.track",
+      "rows": 3911,
+      "sha256": "249f32516e1b68ab1c8a83ccc5f8e23fa8b44b8543489ff62b1fe58ebfa1b8cf"
+    },
+    {
+      "path": "Student folder/student_test/00000091/00000091.track",
+      "rows": 874,
+      "sha256": "72952c263046bc41bd7899a7d266c0225b5dc35d1f14e5654a04978ea78f237e"
+    },
+    {
+      "path": "Student folder/train/00000001/00000001.track",
+      "rows": 1315,
+      "sha256": "72b37792edb378ee758b78d28f006d476acb203e0600827300f2e5fab757abb0"
+    },
+    {
+      "path": "Student folder/train/00000002/00000002.track",
+      "rows": 7243,
+      "sha256": "37581dcf8e8c3692b2ee21c551df785f55acbbe7509d275cfa95ee5a62406e32"
+    },
+    {
+      "path": "Student folder/train/00000003/00000003.track",
+      "rows": 821,
+      "sha256": "655a136db1c4b7b5dcafbf43a44ee4d5c0361b449a4c6cb68bc272388c63a04a"
+    },
+    {
+      "path": "Student folder/train/00000004/00000004.track",
+      "rows": 1064,
+      "sha256": "44b279c654148b2e8b32619dfb9ecfaec4ff0ece219605ba4b8a7adf763e603f"
+    },
+    {
+      "path": "Student folder/train/00000005/00000005.track",
+      "rows": 1045,
+      "sha256": "4542e4af6b82466e72731ff504b137522e29a66e528bca4fa871f456cfa4e657"
+    },
+    {
+      "path": "Student folder/train/00000006/00000006.track",
+      "rows": 1450,
+      "sha256": "60c4c4a971b568ba7571b6a60ab97c6e9b7dbfa672698665fd16a57a829bfffa"
+    },
+    {
+      "path": "Student folder/train/00000008/00000008.track",
+      "rows": 3093,
+      "sha256": "29819fd3de499576eeb8ddc1b9de784335c865534188e4795d2bd2f45a333f5f"
+    },
+    {
+      "path": "Student folder/train/00000010/00000010.track",
+      "rows": 2711,
+      "sha256": "a584810e1e1f2dec56d1567bc596c6fd0a8221196b4ed17fdc111bd2e68a73a3"
+    },
+    {
+      "path": "Student folder/train/00000011/00000011.track",
+      "rows": 2828,
+      "sha256": "6f479a93b989146aacfb0b82c47bf17256bfb5472841f71389a321b7063a6ef2"
+    },
+    {
+      "path": "Student folder/train/00000012/00000012.track",
+      "rows": 1608,
+      "sha256": "2058678a4869eb211a69509a2491e6bd9c7698a853f8da656b84051ee539cc16"
+    },
+    {
+      "path": "Student folder/train/00000013/00000013.track",
+      "rows": 2580,
+      "sha256": "bb235b7acfe1fd480cb173e041b015579243ef9a850ea54b72a7e75fcdd55108"
+    },
+    {
+      "path": "Student folder/train/00000014/00000014.track",
+      "rows": 448,
+      "sha256": "df3d60e824e9d6c2b8b6d9e95ec4595202ef4392f68e55c7e9b98d794e8e15b9"
+    },
+    {
+      "path": "Student folder/train/00000016/00000016.track",
+      "rows": 1305,
+      "sha256": "7e59834697febafb25439533b2fbb2d81336f6cec123a0fbe15bc3f66ec1ca03"
+    },
+    {
+      "path": "Student folder/train/00000018/00000018.track",
+      "rows": 379,
+      "sha256": "c0be1923097fa1495cdbebfaf82175a5480256b0140035dd3a83c8d692965a20"
+    },
+    {
+      "path": "Student folder/train/00000019/00000019.track",
+      "rows": 2354,
+      "sha256": "a6aa7d4459763e633abc5789e08fdca5f751aa406265a83e9e8b1618cf8825f7"
+    },
+    {
+      "path": "Student folder/train/00000020/00000020.track",
+      "rows": 2353,
+      "sha256": "0cca440851fd97dfc9d555605e3cfbafea4a8bf25ab8b78a68e7c18ce5f2fc7d"
+    },
+    {
+      "path": "Student folder/train/00000021/00000021.track",
+      "rows": 15783,
+      "sha256": "76100a83a65a418c1e3b9a4705ad70d6af82a4ccf2fcb5cbf363280f99d6c50b"
+    },
+    {
+      "path": "Student folder/train/00000022/00000022.track",
+      "rows": 474,
+      "sha256": "e73d68afddccf1688194a809eb0141ce23eaa5f579f9a6fb4452d2c814a3dc7b"
+    },
+    {
+      "path": "Student folder/train/00000024/00000024.track",
+      "rows": 801,
+      "sha256": "09a8d6647c02d94cd608d89fd4eb9aa2cdda9f7ec79f60a8df302091e1dd28e2"
+    },
+    {
+      "path": "Student folder/train/00000025/00000025.track",
+      "rows": 1179,
+      "sha256": "0b73fe4a8ce690219b21d0eb570cd01ec6519b14d29cfae522204a0103809038"
+    },
+    {
+      "path": "Student folder/train/00000026/00000026.track",
+      "rows": 361,
+      "sha256": "3a183719e7252d0b1e9c567ae4cfab19e029241dddda69bbd7088820fcfbfdd4"
+    },
+    {
+      "path": "Student folder/train/00000027/00000027.track",
+      "rows": 694,
+      "sha256": "2f8dca994595f3d1b2c53e4de7ad201e5dc8b5a7ab2355f661b00dc348116db9"
+    },
+    {
+      "path": "Student folder/train/00000028/00000028.track",
+      "rows": 3565,
+      "sha256": "0cc3ba7b993b595efa75664138191ea0db860ed0a68ac7b9b02f1e8275b366e3"
+    },
+    {
+      "path": "Student folder/train/00000029/00000029.track",
+      "rows": 733,
+      "sha256": "2d258348932b2dd6abc32d17eec4088f6bf6385de28a633f5dd126f3ea640c39"
+    },
+    {
+      "path": "Student folder/train/00000031/00000031.track",
+      "rows": 4245,
+      "sha256": "98ee0fb4ddd7416c7a62a4fbdbe3a7b14474075af266c268e5b9e676b521d12a"
+    },
+    {
+      "path": "Student folder/train/00000032/00000032.track",
+      "rows": 2464,
+      "sha256": "d2a5490ae46daba64a96f576d11ac9bb96ae23c67c29459847f2bb0243241fb0"
+    },
+    {
+      "path": "Student folder/train/00000033/00000033.track",
+      "rows": 5844,
+      "sha256": "b5119b9a1dc0a2f2cf83d91d495645c3ac9462c26977c33b348eed66dd1c2c89"
+    },
+    {
+      "path": "Student folder/train/00000034/00000034.track",
+      "rows": 3614,
+      "sha256": "05296a2874e25e8fa4aa3f6a7a8764c573f0d6735e0db86d36cd00f05cf2650c"
+    },
+    {
+      "path": "Student folder/train/00000035/00000035.track",
+      "rows": 1643,
+      "sha256": "06acf917ba5e1713774b3986072e15e93af971401e4034dd96c0fc5b8fe89489"
+    },
+    {
+      "path": "Student folder/train/00000036/00000036.track",
+      "rows": 1368,
+      "sha256": "93fab071a6970121a4381324ec6ca03bd1a45d62293f75d64384f72d48cd2f3a"
+    },
+    {
+      "path": "Student folder/train/00000037/00000037.track",
+      "rows": 677,
+      "sha256": "e1ecc072483f36d0fc6fb92698f36e9debaeb647691db7b3f49662a062ceedbc"
+    },
+    {
+      "path": "Student folder/train/00000038/00000038.track",
+      "rows": 1287,
+      "sha256": "df4fbce3326af8cd357ad3810c4b0563d20047eb2e32e7e63f8a0f1d0c10ac9c"
+    },
+    {
+      "path": "Student folder/train/00000039/00000039.track",
+      "rows": 363,
+      "sha256": "7f06878c75e21bef6cb18d74e30c2794a5cd24a8d8236990be275f9954513ffc"
+    },
+    {
+      "path": "Student folder/train/00000041/00000041.track",
+      "rows": 1019,
+      "sha256": "80b0a7145c9db7608449f3311b6bd05fdaae845db9ec7489a882fed3b57a4f43"
+    },
+    {
+      "path": "Student folder/train/00000042/00000042.track",
+      "rows": 7739,
+      "sha256": "54ac9042e147bb627e2ce97e2584ea119708ea3138a3e9e144b6de471e3e7e75"
+    },
+    {
+      "path": "Student folder/train/00000043/00000043.track",
+      "rows": 2322,
+      "sha256": "36620079a815074275d699e82c2a2bccd2aea14ff89d34f9df8136eb9af5d60d"
+    },
+    {
+      "path": "Student folder/train/00000044/00000044.track",
+      "rows": 546,
+      "sha256": "90fea6089da1b158a3efdfe079ed88d74d4e931f5c4c1a7ab22c910ef9e1ed5a"
+    },
+    {
+      "path": "Student folder/train/00000045/00000045.track",
+      "rows": 640,
+      "sha256": "d4941c8d7d4a2f69b508aeb27ce52c018e913c0e6139d1832aa993b291cd2c20"
+    },
+    {
+      "path": "Student folder/train/00000046/00000046.track",
+      "rows": 1401,
+      "sha256": "f84a97f45dd770bf9f8a6f3255c0a7ad16a05183fc7aa985fdd3a906fc4e31ea"
+    },
+    {
+      "path": "Student folder/train/00000047/00000047.track",
+      "rows": 1272,
+      "sha256": "d67ad892a71543fc5cd6d652430e6b4df6e8e6d06287fd9139bdfc32568d0272"
+    },
+    {
+      "path": "Student folder/train/00000048/00000048.track",
+      "rows": 1240,
+      "sha256": "ffea1d47ced75e2f0ff15ad7496772261680be77c66e67a3a3a8342983960056"
+    },
+    {
+      "path": "Student folder/train/00000050/00000050.track",
+      "rows": 518,
+      "sha256": "8ecf8af9cdb565f9911289fc16a4b53fc8e67e4b259f38249c42c2d6aa143f16"
+    },
+    {
+      "path": "Student folder/train/00000051/00000051.track",
+      "rows": 984,
+      "sha256": "d474452fb0c6c1b6b21cb541ee08c7b793cdb2bbb546102bfac8cc036cb35b9b"
+    },
+    {
+      "path": "Student folder/train/00000053/00000053.track",
+      "rows": 1304,
+      "sha256": "2d3b9794f971ab2443b451b97bf19273bebc61c1bcbff3d90ebd2e07b772256c"
+    },
+    {
+      "path": "Student folder/train/00000054/00000054.track",
+      "rows": 19313,
+      "sha256": "3440408b6f14d34bed8df89672317bbe9f40ebb564ee1a3c465c351ded8a2b3b"
+    },
+    {
+      "path": "Student folder/train/00000055/00000055.track",
+      "rows": 2472,
+      "sha256": "51fae80bb8eca26e544c7721c03d314d6e711b3c6488e92e192731fba3539f6b"
+    },
+    {
+      "path": "Student folder/train/00000057/00000057.track",
+      "rows": 1645,
+      "sha256": "5a3859332b78dae3982ca2f5419812cc0b3a6f45736680d69f0380f2bdfa636c"
+    },
+    {
+      "path": "Student folder/train/00000058/00000058.track",
+      "rows": 599,
+      "sha256": "e7ac27154e96b14fc8e2110d3cbe9724294e6380d4a49a6abd0ed0d549abfb01"
+    },
+    {
+      "path": "Student folder/train/00000060/00000060.track",
+      "rows": 854,
+      "sha256": "f4e54b0cd5f58be9f04ea05a5fa7b98802cd38a19bcd7110df9121ac3fed8e1d"
+    },
+    {
+      "path": "Student folder/train/00000061/00000061.track",
+      "rows": 1430,
+      "sha256": "6bec6ff4ff51e727f75cd2d4af624aa802ad0b7db9ef018fa66cad93279f4d79"
+    },
+    {
+      "path": "Student folder/train/00000062/00000062.track",
+      "rows": 3378,
+      "sha256": "5762937b27f2df797ca608ce65adf42a0bbfebf82aa15053102c2c94074bc98e"
+    },
+    {
+      "path": "Student folder/train/00000063/00000063.track",
+      "rows": 2781,
+      "sha256": "93bf6b53d34e79bbf208cf9069a205b9215f90d9759037798edf7296b16a8ad1"
+    },
+    {
+      "path": "Student folder/train/00000064/00000064.track",
+      "rows": 2093,
+      "sha256": "30b68853bac5015a43af712f4995ecb0170f3aa3f0f9e0215b66765ba4afdea6"
+    },
+    {
+      "path": "Student folder/train/00000066/00000066.track",
+      "rows": 4325,
+      "sha256": "827864560b6f9ef256c08687b3cdeac2b9e0dd69bb422a4df6a26af02d3dc90d"
+    },
+    {
+      "path": "Student folder/train/00000068/00000068.track",
+      "rows": 747,
+      "sha256": "ae80ee78c75daac1b1bae09f30f95caa677ba95fcabaa0a73ba308149b906c84"
+    },
+    {
+      "path": "Student folder/train/00000069/00000069.track",
+      "rows": 2067,
+      "sha256": "486a85284d080e2dc2ad1725310c27504b4fbc0cbfce9a486fc7f2a46761963e"
+    },
+    {
+      "path": "Student folder/train/00000070/00000070.track",
+      "rows": 2076,
+      "sha256": "e3ae00c7f9a0baa637551935be7a1a940cbbd0d7b60b35f3da79c1e64d568eb7"
+    },
+    {
+      "path": "Student folder/train/00000071/00000071.track",
+      "rows": 850,
+      "sha256": "0093652aa4aa786996810c092da88d7e464dc28ccbdd0301aa21fdf13be53506"
+    },
+    {
+      "path": "Student folder/train/00000072/00000072.track",
+      "rows": 969,
+      "sha256": "d81b12f3a74c8998474a99056390b24aaeb42528133da759a20a92a6c0d97a81"
+    },
+    {
+      "path": "Student folder/train/00000074/00000074.track",
+      "rows": 1929,
+      "sha256": "8460e48e959b017d00638d11faa163d68d29cbf8da12ee0ae78793943d643655"
+    },
+    {
+      "path": "Student folder/train/00000075/00000075.track",
+      "rows": 1628,
+      "sha256": "e84350f0dd10867cfcf3afea329113847a827e881dc4535db6401f5ccb8aa607"
+    },
+    {
+      "path": "Student folder/train/00000078/00000078.track",
+      "rows": 2909,
+      "sha256": "85515c4e46f83465d89a51f6dce5913a9ec69f185573e3ac208967451466739c"
+    },
+    {
+      "path": "Student folder/train/00000079/00000079.track",
+      "rows": 689,
+      "sha256": "25545b71c2f681ee11ed6890bc931edf3113c8720c23180f798d5cb952be6fee"
+    },
+    {
+      "path": "Student folder/train/00000080/00000080.track",
+      "rows": 2510,
+      "sha256": "49049dc5ed6bfc364d271dc72579f1ae019aa8efe859dbe8c165f6f6b26dbc74"
+    },
+    {
+      "path": "Student folder/train/00000081/00000081.track",
+      "rows": 3224,
+      "sha256": "6b80278fd75e07bca6504f39ea54fe054b13a0bb41049e77ea34128ef704f554"
+    },
+    {
+      "path": "Student folder/train/00000082/00000082.track",
+      "rows": 4268,
+      "sha256": "5070cff4528aff650fe4f16fa004358386ccf3e5a3ee99f3561dca923f4290a5"
+    },
+    {
+      "path": "Student folder/train/00000083/00000083.track",
+      "rows": 1507,
+      "sha256": "4f373f30cfca928915d76885187fe9a95999f862e2a40283938f823b2f991dbc"
+    },
+    {
+      "path": "Student folder/train/00000084/00000084.track",
+      "rows": 16031,
+      "sha256": "1507fbcd9c6aef228e365dfb639c300f97fe5f969c6fe8d998a5b17aae471833"
+    },
+    {
+      "path": "Student folder/train/00000085/00000085.track",
+      "rows": 1092,
+      "sha256": "ee80599104807f998ac7eddf0c9e1a6ed40b83a994352f0e693c70880eeda5b1"
+    },
+    {
+      "path": "Student folder/train/00000086/00000086.track",
+      "rows": 4143,
+      "sha256": "4ced816558887214846e887d043eca58cd20404c32f9a9416898bf4660d0c50e"
+    },
+    {
+      "path": "Student folder/train/00000088/00000088.track",
+      "rows": 876,
+      "sha256": "665bf729fa8e1bbd60bdc0efbd1132255191a85b9b36a0ac09768973985045e8"
+    },
+    {
+      "path": "Student folder/train/00000089/00000089.track",
+      "rows": 1228,
+      "sha256": "31a5365ad8b06fd70f4d706e88e51e1c9cb2ba6595d60bcb44e714da335411f4"
+    },
+    {
+      "path": "Student folder/train/00000090/00000090.track",
+      "rows": 536,
+      "sha256": "1385de861d99229a24b91f119e41f86444c0f185589145874fcc18e120b8e1da"
+    },
+    {
+      "path": "Student folder/train/00000092/00000092.track",
+      "rows": 7892,
+      "sha256": "f22be12ced50a112f14b9d7b17a3a4f67dc5a72c04a2c8a79fa7876f521588b2"
+    },
+    {
+      "path": "Student folder/train/00000093/00000093.track",
+      "rows": 1211,
+      "sha256": "3b0c57efd5f70cbfc054b40a9e0402f4cfc9dfea38deba48ae53539378548396"
+    },
+    {
+      "path": "Student folder/train/00000095/00000095.track",
+      "rows": 1551,
+      "sha256": "54a7869420bd0fccc4bba483664746e909331c5fe7ef2e29a25782e42eff2af9"
+    },
+    {
+      "path": "Student folder/train/00000096/00000096.track",
+      "rows": 3271,
+      "sha256": "ae97f238b97e7987e185b01764059d77be55e4ddd683c095b2ae325f981acca5"
+    },
+    {
+      "path": "Student folder/train/00000097/00000097.track",
+      "rows": 1740,
+      "sha256": "f1e4453e857ed46e59df91897e0e7e7e8c60a80354243b59a876b1a8fbf8bf97"
+    },
+    {
+      "path": "Student folder/train/00000098/00000098.track",
+      "rows": 5584,
+      "sha256": "be823c12d87d0a194b35d0d3885e7f169e675fb5fe5a843e107b6c400e10a272"
+    },
+    {
+      "path": "Student folder/train/00000099/00000099.track",
+      "rows": 2322,
+      "sha256": "f78fdfba0f2da81e74cb3690402ef8cee69a5221757c99b9d9704ece23c32edf"
+    }
+  ],
+  "trip_counts": {
+    "student_test": 10,
+    "train": 80
+  }
+}

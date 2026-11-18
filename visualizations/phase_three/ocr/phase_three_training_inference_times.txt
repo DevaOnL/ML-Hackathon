@@ -1,0 +1,171 @@
+Phase-three measured fit and inference timing
+
+Grouped-CV fit time (3 folds, summed)
+
+Grouped-CV inference time (OOF rows)
+
+257.8
+
+299.1
+
+3001
+
+250 A
+
+2023
+
+200 A
+
+< 2501
+
+2001
+
+1501
+
+~ 1504
+
+1004
+
+1004
+
+501
+
+501
+
+23
+
+0.1
+
+0.0
+
+12
+
+1.4
+
+T
+
+T
+
+T
+
+T
+
+KI:IN
+
+KNN
+
+Logistic
+
+Bagging
+
+Bagging
+
+Logistic
+
+Bagging
+
+Bagging
+
+regression
+
+(distance-weighted) (decision trees)
+
+(decision trees)
+
+regression
+
+(distance-weighted) (decision trees)
+
+(decision trees)
+
+(tuned)
+
+(tuned)
+
+Final all-80-trip fit time
+
+Studentosplib jaference per observation
+
+133.1
+
+187.08 s total
+
+104 4
+
+1204
+
+103.8
+
+100+
+
+o 1034
+
+801
+
+45.5 ps
+
+49.0 ps
+
+1024
+
+0.87 s total
+
+0.94 s total
+
+60 4
+
+404
+
+10! 4
+
+2014
+
+1.4 ps
+
+0.03 s total
+
+1.0
+
+0.0
+
+T
+
+100 4
+
+——
+
+HE
+
+Logistic
+
+Kl:lN
+
+Bagging
+
+Bagging
+
+Logistic
+
+KNN
+
+Bagging
+
+Bagging
+
+regression
+
+(distance-weighted) (decision trees)
+
+(decision trees)
+
+regression
+
+(distance-weighted) (decision trees)
+
+(decision trees)
+
+(tuned)
+
+(tuned)
+
+single-machine wall-clock timings from the phase-three run logs; BLAS/OpenMP threads capped at 1, model n_jobs follow the saved config; KNN uses its predeclared 60,000-row TRAIN-only reference bank, so its stud

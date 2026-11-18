@@ -1,0 +1,29 @@
+Phase-three student-development confusion - ba
+
+Bagging (decision trees)
+
+true negative
+
+154,917
+
+1,720
+
+98.9%
+
+1%
+
+2,087
+
+17,054
+
+true positive
+
+10.9%
+
+89.1%
+
+predictedI negative
+
+predicte(;I positive
+
+Binary candidate rows at threshold 0.5 on the 10 development trips: 175,778 rows, 19,160 observations (1¢

@@ -1,0 +1,29 @@
+Phase-three student-development confusion - log
+
+Logistic regression
+
+true negative
+
+154,120
+
+2,517
+
+98.4%
+
+6%
+
+2,102
+
+17,039
+
+true positive
+
+11.0%
+
+89.0%
+
+predictedI negative
+
+predicte(;I positive
+
+Binary candidate rows at threshold 0.5 on the 10 development trips: 175,778 rows, 19,160 observations (1¢
