@@ -270,6 +270,44 @@ class RequestedTrioTests(unittest.TestCase):
         np.testing.assert_array_equal(knn_reference_bank(y, weights, 200, 31), np.arange(100))
         self.assertEqual(len({bank_seed(20261118, i) for i in range(4)}), 4)
 
+    def test_isolated_synthetic_freeze_exports_only_its_own_paths(self):
+        from tests.test_experiments import synthetic_dataset
+        phase = importlib.import_module("experiments.phase_three.run_phase_three")
+        dataset = synthetic_dataset()
+        parameters = dict(PHASE_DEFAULT_PARAMETERS["logistic_regression"])
+        with tempfile.TemporaryDirectory() as temporary:
+            root=Path(temporary)
+            phase_dir=root/"experiments/phase_three_runs/synthetic-export"
+            artifacts=root/"artifacts/phase_three_runs/synthetic-export"
+            phase_dir.joinpath("cv").mkdir(parents=True)
+            for name,value in {
+                "selection.json":{"selected_model":"logistic_regression"},
+                "bayesian_optimization.json":{"best_parameters":parameters},
+                "cv/logistic_regression.json":{"parameters":parameters,"objective":0.5,"oof_metrics":{}}
+            }.items():
+                phase.save_json(phase_dir/name,value)
+            def synthetic_smoke():
+                # Tests export plumbing only; no clean-runtime evidence claim.
+                value={"passed":True,"python":"synthetic-test-no-subprocess"}
+                phase.save_json(artifacts/"clean_load_report.json",value)
+                return value
+            with mock.patch.object(phase,"ROOT",root), mock.patch.object(phase,"PHASE_DIR",phase_dir), mock.patch.object(phase,"ARTIFACTS",artifacts), mock.patch.object(phase,"load_train_and_folds",return_value=(dataset,[])), mock.patch.object(phase,"clean_environment_smoke_load",side_effect=synthetic_smoke):
+                signal=phase.stage_freeze(phase.phase_config())
+            freeze=json.loads((artifacts/"model_freeze.json").read_text())
+            metadata=json.loads((artifacts/"model_metadata.json").read_text())
+            self.assertEqual(signal["model"],"artifacts/phase_three_runs/synthetic-export/model.joblib")
+            self.assertEqual(freeze["model"],signal["model"])
+            for key in ("feature_schema","metadata"):
+                self.assertTrue(freeze[key].startswith("artifacts/phase_three_runs/synthetic-export/"))
+                self.assertTrue((root/freeze[key]).is_file())
+            self.assertEqual(metadata["selection"]["selection_file"],"experiments/phase_three_runs/synthetic-export/selection.json")
+            self.assertEqual(metadata["selection"]["hpo_summary_file"],"experiments/phase_three_runs/synthetic-export/bayesian_optimization.json")
+            self.assertEqual(metadata["experiment_results_file"],"experiments/phase_three_runs/synthetic-export/results.json")
+            self.assertEqual(freeze["sha256"],hashlib.sha256((root/freeze["model"]).read_bytes()).hexdigest())
+            self.assertIsInstance(load_emission_model(root/freeze["model"]).estimator[-1],LogisticRegression)
+            self.assertFalse((root/"artifacts/phase_three").exists())
+            self.assertFalse((root/"experiments/phase_three").exists())
+
     def test_new_numerical_run_paths_are_explicit_isolated_and_restored(self):
         phase = importlib.import_module("experiments.phase_three.run_phase_three")
         original = phase.PHASE_DIR, phase.ARTIFACTS

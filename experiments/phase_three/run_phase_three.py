@@ -614,19 +614,20 @@ def stage_freeze(config):
         "selection": {"phase": PHASE_NAME, "selected_model": name,
                       "selection_objective": winner_cv["objective"],
                       "hpo_trials_including_measured_prior": HPO_TRIALS,
-                      "selection_file": "experiments/phase_three/selection.json",
-                      "hpo_summary_file": "experiments/phase_three/bayesian_optimization.json",
+                      "selection_file": str((PHASE_DIR / "selection.json").relative_to(ROOT)),
+                      "hpo_summary_file": str((PHASE_DIR / "bayesian_optimization.json").relative_to(ROOT)),
                       "student_test_consulted_before_freeze": False},
         "timing": {"fit_all80_seconds": fit_seconds, "train_inference_seconds": train_inference_seconds},
         "versions": versions(), "hardware": hardware(),
         "final_oof_export": replay,
         "coverage_file": f"experiments/cache/{TRAIN_CACHE}.json",
-        "experiment_results_file": "experiments/phase_three/results.json",
+        "experiment_results_file": str((PHASE_DIR / "results.json").relative_to(ROOT)),
         "knn_reference_bank": bank_info,
         "fit_warnings": fit_warnings,
     }
     bundle = {"estimator": estimator, "feature_names": list(FEATURE_NAMES),
               "feature_version": FEATURE_VERSION, "metadata": metadata}
+    model_path = ARTIFACTS / "model.joblib"
     tmp = ARTIFACTS / "model.joblib.tmp"
     joblib.dump(bundle, tmp, compress=3)
     os.replace(tmp, ARTIFACTS / "model.joblib")  # atomic; never rewritten after freeze
@@ -886,7 +887,7 @@ def stage_student(config):
         "phase": {"name": PHASE_NAME, "model_count": PHASE_MODEL_COUNT,
                   "families": FAMILIES, "user_selected_families": True,
                   "protocol": "experiments/phase_three/PROTOCOL.md",
-                  "write_scope": ["experiments/phase_three/", "artifacts/phase_three/", "mapmatch/phase_models.py"],
+                  "write_scope": [str(PHASE_DIR.relative_to(ROOT)) + "/", str(ARTIFACTS.relative_to(ROOT)) + "/"],
                   "organizer_five_model_note": "deferred by explicit user instruction; the historical five-model CV/HPO evidence and HistGB freeze remain untouched in the experiments/ root and artifacts/"},
         "config": {**dataclasses.asdict(config), "thread_environment": THREAD_ENV,
                    "hpo_trials_including_measured_prior": HPO_TRIALS,
@@ -915,8 +916,8 @@ def stage_student(config):
                              "ambiguous_proxy_observations": int(np.asarray(student.ambiguous).sum()),
                              "cache": f"experiments/cache/{STUDENT_CACHE}.npz", "cache_sha256": STUDENT_CACHE_SHA256}},
         "ambiguity_strata": strata,
-        "frozen_artifact": {"model": "artifacts/phase_three/model.joblib", "sha256": freeze["sha256"],
-                            "bytes": freeze["bytes"], "freeze_record": "artifacts/phase_three/model_freeze.json"},
+        "frozen_artifact": {"model": freeze["model"], "sha256": freeze["sha256"],
+                            "bytes": freeze["bytes"], "freeze_record": str((ARTIFACTS / "model_freeze.json").relative_to(ROOT))},
         "elapsed_seconds": stage_seconds,
         "elapsed_seconds_note": "per-stage measured seconds from stage_log.jsonl; invocation mode and process ID are recorded with each new stage entry",
         "observation_metrics_supplement": "sequence_classification.json",
@@ -926,8 +927,8 @@ def stage_student(config):
         final_run_name=tuned_name)
     print(json.dumps({"signal": "PHASE_RESULTS_READY", "selected_model": selected,
                       "final_run_name": tuned_name,
-                      "results_file": "experiments/phase_three/results.json",
-                      "comparison_file": "experiments/phase_three/model_comparison.csv"}, allow_nan=False))
+                      "results_file": str((PHASE_DIR / "results.json").relative_to(ROOT)),
+                      "comparison_file": str((PHASE_DIR / "model_comparison.csv").relative_to(ROOT))}, allow_nan=False))
     return results
 
 
