@@ -1,0 +1,220 @@
+{
+  "review": {
+    "title": "Phase three model implementation & integration review (independent, read-only)",
+    "reviewed_at_utc": "2026-11-18T07:29:04.882Z",
+    "reviewer_scope": ["scripts/verify_phase_three_models.py", "scripts/test_phase_three_api.py", "scripts/activate_phase_three.py", "scripts/verify_phase_three_delivery.py", "tests/test_phase_three.py"],
+    "supporting_contracts_read": ["mapmatch/phase_models.py", "mapmatch/learning.py", "mapmatch/experiments.py", "experiments/phase_three/run_phase_three.py", "scripts/live_evidence.py", "infrastructure/install_user_services.py", "infrastructure/launch_service.py", "backend config/service/boundary via tests"],
+    "verdict": "PASS - no high-severity defects found",
+    "files_modified_by_this_review": ["analysis/review/phase_three/model_integration_review.json (this file, the only write)"]
+  },
+  "executed_evidence": {
+    "note": "All executions read-only: verify() called directly (never main()), PYTHONDONTWRITEBYTECODE=1 / python -B used throughout; no server started, no HTTP call made, no reference or model bytes touched.",
+    "frozen_model_integrity": {
+      "model": "artifacts/phase_three/model.joblib",
+      "sha256_observed": "c7f2572d5d037d07a5c07710fbb1ffefd4ff13fbe866c8940022e4902669c733",
+      "matches_model_freeze_json": true
+    },
+    "knn_strict_saved_replay": {
+      "runtime": ".venv/bin/python (original training build)",
+      "artifact": "artifacts/phase_three/baselines/knn_distance_weighted.joblib",
+      "saved_predictions": "experiments/phase_three/predictions/knn_distance_weighted_student.npz",
+      "fixture": "257 linspace rows of student_test cache",
+      "max_abs_delta": 0.0,
+      "tolerance": 1e-12,
+      "result": "PASS",
+      "bank_recomputation": {
+        "n_samples_fit_": 60000,
+        "bank_size": 60000,
+        "fit_X_matches_recomputed_bank_transform": true,
+        "scaler_mean_matches_bank_mean": true,
+        "training_trip_ids_equal_all_80_train_trips": true
+      },
+      "student_identity_keys_equal": true,
+      "probability_domain_ok": true
+    },
+    "selected_bagging_cross_environment": {
+      "probe": "cross_environment_probe(artifacts/phase_three/model.joblib) from scripts/verify_phase_three_models.py",
+      "result": "PASS",
+      "max_abs_probability_delta": 0.0,
+      "fixture_rows": 257,
+      "fixture_source": "TRAIN candidate rows only, no student data",
+      "fixture_sha256": "6ded69966e818d656c4e43f18614131ef5ef1ed1f62f1b0a5de94c424b9c2af3",
+      "versions_equal_across_venv_and_venv_clean": true
+    },
+    "full_model_verifier": {
+      "invoked": "scripts.verify_phase_three_models.verify() under .venv/bin/python (main() NOT invoked; reports/phase_three/model_acceptance.json was not written by this review)",
+      "result": "PASS",
+      "selected_family": "bagging",
+      "models": [
+        {"model": "logistic_regression", "classifier": "LogisticRegression", "artifact": "artifacts/baselines/logistic_regression.joblib", "fixture_delta": 1.6653345369377348e-15, "tested_trips": 10, "top1_accuracy": 0.895198, "macro_f1": 0.932936, "observation_edge_macro_f1": 0.80708},
+        {"model": "knn_distance_weighted", "classifier": "KNeighborsClassifier", "artifact": "artifacts/phase_three/baselines/knn_distance_weighted.joblib", "fixture_delta": 0.0, "tested_trips": 10, "top1_accuracy": 0.890501, "macro_f1": 0.927488, "observation_edge_macro_f1": 0.795478},
+        {"model": "bagging", "classifier": "BaggingClassifier", "artifact": "artifacts/phase_three/baselines/bagging.joblib", "fixture_delta": 0.0, "tested_trips": 10, "top1_accuracy": 0.904802, "macro_f1": 0.943727, "observation_edge_macro_f1": 0.827146},
+        {"model": "bagging_tuned", "classifier": "BaggingClassifier", "artifact": "artifacts/phase_three/model.joblib", "fixture_delta": 0.0, "tested_trips": 10, "top1_accuracy": 0.903392, "macro_f1": 0.943575, "observation_edge_macro_f1": 0.824829}
+      ],
+      "recorded_acceptance_consistency": "reports/phase_three/model_acceptance.json (written upstream after results.json landed) reproduces this independent run exactly: same per-model deltas and artifact sha256 values, runtime .venv/bin/python, clean-env delta 0.0"
+    },
+    "shared_lr_baseline_schema": {
+      "artifact": "artifacts/baselines/logistic_regression.joblib",
+      "metadata_has_training_trip_ids": true,
+      "training_trip_count": 80,
+      "scaler_n_samples_seen": 269463,
+      "equals_all_train_rows": true,
+      "evaluation_has_student_metrics_and_parameters": true
+    },
+    "synthetic_test_suite": {
+      "command": ".venv/bin/python -B -m unittest tests.test_phase_three -v",
+      "result": "14/14 OK",
+      "synthetic_only": true,
+      "in_process_TestClient_no_http": true
+    },
+    "activation_state_observed": {
+      "reports_phase_three_deployment_activation_json": {"applied": true, "validation_passed": true, "model_sha256_prefix": "c7f2572d5d03", "origins_verified": ["http://127.0.0.1:8000", "https://ml.d3va.dev"]}
+    }
+  },
+  "findings": [
+    {
+      "id": "F1",
+      "severity": "low",
+      "file": "scripts/verify_phase_three_models.py",
+      "lines": "145-147, 165-166",
+      "title": "KNN strict replay runtime is recorded, not enforced",
+      "detail": "verify() replays saved probabilities in-process under whichever interpreter runs the verifier and records probability_replay_runtime instead of asserting it is .venv. KNN float32 cross-build drift (6.38e-7, reports/phase_three/knn_runtime_diagnostic.json) exceeds the 1e-12 tolerance, so running the verifier under .venv-clean would produce a FAILURE, never a false pass. Direction of error is fail-closed; the diagnostic and the acceptance record's executable field give adequate auditability.",
+      "recommendation": "Optional hardening: when any evaluation family is knn_distance_weighted, require Path(sys.executable).resolve() to be ROOT/.venv/bin/python (or assert against the training run's versions record) so the required runtime is enforced rather than documented.",
+      "risk": "false-failure only; no false-pass path"
+    },
+    {
+      "id": "F2",
+      "severity": "low",
+      "file": "scripts/verify_phase_three_models.py",
+      "lines": "88-91",
+      "title": "Cross-environment version equality cannot distinguish BLAS distributions",
+      "detail": "cross_environment_probe requires identical python/numpy/scipy/sklearn/joblib version strings between .venv and .venv-clean, but the KNN diagnostic shows identical versions with different scipy distributions (system vs isolated-wheel) and a 6.38e-7 float32 difference. The 1e-12 probability-delta check still catches any actual divergence, so this remains fail-closed; only the version-equality gate alone would not have been sufficient evidence of numeric identity.",
+      "recommendation": "Optional: also record/compare BLAS thread configuration and scipy distribution origin in the probe output (informational; the delta check is the real gate).",
+      "risk": "none to correctness; auditability nuance only"
+    },
+    {
+      "id": "F3",
+      "severity": "low",
+      "file": "scripts/activate_phase_three.py",
+      "lines": "155-158",
+      "title": "Rollback restarts the original environment without re-verifying its health",
+      "detail": "On any post-write failure the exact original runtime.env is restored atomically and the dedicated API restarted, then RuntimeError is raised. The original environment was already validated healthy earlier in the same run (check_api preflight), and the failure is loud, but the rollback path itself does not confirm the restored service came back healthy before raising.",
+      "recommendation": "Optional: after rollback, best-effort re-check read_health on 127.0.0.1:8000 against the pre-apply expected values and include the outcome in the raised error text.",
+      "risk": "low; failure direction is loud, not silent"
+    },
+    {
+      "id": "F4",
+      "severity": "info",
+      "file": "scripts/activate_phase_three.py",
+      "lines": "140-161",
+      "title": "Activation report file is written only on successful --apply",
+      "detail": "Dry-run prints the report without writing; a failed --apply rolls back and raises without persisting a report artifact, leaving the failed attempt evidenced only in console output.",
+      "recommendation": "Optional: write the report (with applied:false and failure detail) to a non-default path on failure, keeping the refuse-to-overwrite default path for success.",
+      "risk": "evidentiary only"
+    },
+    {
+      "id": "F5",
+      "severity": "info",
+      "file": "scripts/verify_phase_three_models.py",
+      "lines": "145-147",
+      "title": "LR fixture replay delta is nonzero but far within tolerance",
+      "detail": "LogisticRegression replay delta 1.6653345369377348e-15 versus saved probabilities (float64 arithmetic-order variance across processes); tolerance is 1e-12. Both Bagging artifacts and KNN under .venv replay at exactly 0.0.",
+      "recommendation": "none",
+      "risk": "none"
+    },
+    {
+      "id": "F6",
+      "severity": "info",
+      "file": "experiments/phase_three/run_phase_three.py",
+      "lines": "119-156",
+      "title": "Post-completion hardening edit reviewed",
+      "detail": "run_phase_three.py was modified at 12:52, after results.json was written at 12:50, adding refuse_existing_stage (fails before loading data or fitting if any stage output already exists, enumerating per-stage outputs including downstream results.json and model_freeze.json) and assert_prediction_identity (validates saved prediction caches against dataset identity keys). Both are fail-closed hardening that prevent stage refits/overwrites; they cannot alter completed artifacts. The independent verifier run performed after this edit passed against the unchanged artifacts (model.joblib sha256 still matches model_freeze.json).",
+      "recommendation": "none (keep; consider noting the edit time in PROTOCOL.md for provenance clarity)",
+      "risk": "none"
+    },
+    {
+      "id": "F7",
+      "severity": "info",
+      "title": "results.json absence during early review was in-flight upstream work",
+      "detail": "experiments/phase_three/results.json was absent at review start (student stage still running); per instruction this was not treated as a defect. It appeared at 12:50, complete with all four evaluations (three families + bagging_tuned), and the full verifier passes against it.",
+      "recommendation": "none",
+      "risk": "none"
+    }
+  ],
+  "per_file_assessment": {
+    "scripts/verify_phase_three_models.py": {
+      "verdict": "correct and fail-closed",
+      "checks_confirmed": [
+        "requires results.json, model_freeze.json, selection.json, bayesian_optimization.json; all gates raise (fail-closed) rather than skip",
+        "frozen model bytes sha256 must match model_freeze.json",
+        "TRAIN/student trip boundary: 80 vs 10, disjoint",
+        "selection must be one of the three families with student_test_consulted false",
+        "exactly three families plus selected_tuned in evaluations",
+        "LR: actual Pipeline(StandardScaler, LogisticRegression), scaler n_samples_seen_ == all 269463 TRAIN rows",
+        "KNN: actual Pipeline with distance-weighted brute KNN, n_samples_fit_ == 60000 bank, _fit_X and scaler mean recomputed from the predeclared deterministic all-80-trip TRAIN bank (bank_seed(20261118, 3)), verified equal",
+        "Bagging: actual bootstrap BaggingClassifier over DecisionTreeClassifier, fitted tree count == parameters n_estimators, _n_samples == all TRAIN rows",
+        "saved prediction npz identity keys must equal the student dataset arrays exactly",
+        "probability domain and 1e-12 fixture replay against the saved artifact",
+        "metrics recomputed from saved probabilities must match recorded student metrics within 1e-12",
+        "selected model additionally probed in .venv AND .venv-clean with thread env pinned to 1 and 1e-12 equality",
+        "main() writes only its --output (default reports/phase_three/model_acceptance.json) and refuses to overwrite"
+      ],
+      "false_passing_assessment": "No false-pass path found: every check is an assertion; report is only written when verify() returns, and verify() returns only after all requires pass. Replay is against the saved artifact bytes, not in-memory objects."
+    },
+    "scripts/test_phase_three_api.py": {
+      "verdict": "correct and fail-closed",
+      "checks_confirmed": [
+        "requires offline delivery verification passed before running",
+        "Settings.from_env() must resolve the frozen phase-three model + match_config_required",
+        "only backend.service.log_event and backend.boundary.log_event are patched; model and inference are real (mocked_model_or_inference recorded false)",
+        "in-process ASGI TestClient (not public-live evidence, clearly labeled)",
+        "all ten student trips matched; catalogue equals offline trips set",
+        "per-trip public_row_checks plus private_reference_not_in_response and metric parity <= 1e-12 against offline decoder metrics",
+        "fresh unique request_ids across posts"
+      ],
+      "false_passing_assessment": "None found; assertions are exact equality or <=1e-12 parity against independently recorded offline values."
+    },
+    "scripts/activate_phase_three.py": {
+      "verdict": "correct and fail-closed",
+      "checks_confirmed": [
+        "acceptance() requires all evidence reports passed with matching hash chains, the three families each tested on 10 trips, api trip_count 10 with mocked false, and clean-environment pass",
+        "exactly three allowlisted PATHSNAP_* artifact-path replacements; other keys (data dir, dataset role, comments) preserved byte-for-byte; missing or duplicate keys rejected",
+        "dedicated unit identity validated via systemctl --user show (read-only); repo-root binding checked",
+        "check_api is a read-only preflight (no restarts)",
+        "TOCTOU guard: env re-read and compared under operation_lock before write; write_private atomic replace",
+        "post-write check_api verifies the three settings installed exactly, then service restart, then health on both 127.0.0.1:8000 and https://ml.d3va.dev must match the tested artifact/config hashes with trip_count 10 and prediction_cache false",
+        "any failure restores the exact original env bytes atomically and restarts",
+        "tunnel untouched (no tunnel/DNS/credential operations in script)"
+      ]
+    },
+    "scripts/verify_phase_three_delivery.py": {
+      "verdict": "correct and fail-closed",
+      "checks_confirmed": [
+        "hash chains: decoder freeze.json config sha, states, run_config.json, learned_not_baseline",
+        "exact ten distinct trips reconciled across index.csv, discovered trip prefixes, and decoder states",
+        "submission.zip flat with exactly ten route members, no corrupt member, archive bytes == on-disk route bytes",
+        "route sha256 triple-checked (file, index.csv, decoder reference), arc counts, valid connected directed arcs",
+        "decoder matched-state hash and original GPS observation order/timestamps preserved",
+        "optional live branch reconciles public API/browser/terminal evidence including screenshot hashes and frozen-model event",
+        "defects list drives passed; output path must be outside input trees; refuses overwrite"
+      ]
+    },
+    "tests/test_phase_three.py": {
+      "verdict": "correct, synthetic-only, no false-passing found",
+      "checks_confirmed": [
+        "activation acceptance mutation matrix (families subset, clean-env fail, mocked true, trip counts != 10, hash/config/model-name mutations) all must raise ValueError",
+        "cross-environment probe drift/version/fixture mutations must raise AssertionError",
+        "render_environment preserves unrelated keys, rejects incomplete/duplicate; health_matches strict on all seven fields",
+        "scope contains exactly the three requested real estimators; unknown family rejected",
+        "all three families fit/export/reload and drive the actual directed decoder end-to-end on synthetic graphs",
+        "each real estimator serves fresh API predictions without reference files via in-process TestClient; no .route file written",
+        "KNN bank determinism, uniqueness, boundedness, class-proportion preservation, explicit-slice-only, invalid-weight rejection",
+        "cache loader counts candidate misses and validates fingerprint/spec",
+        "delivery parity rejects recorded model/geometry/state drift",
+        "Settings.from_env defaults bind phase-three frozen model and match config (missing frozen trio fails closed)"
+      ],
+      "result": "14/14 passed under .venv"
+    }
+  },
+  "integrity_statement": "This review executed only read-only operations against the repository. No model was fitted outside the sanctioned synthetic unit tests; no server was started or contacted over HTTP; no reference, model, prediction, report, or configuration file was modified. The only file created is analysis/review/phase_three/model_integration_review.json."
+}

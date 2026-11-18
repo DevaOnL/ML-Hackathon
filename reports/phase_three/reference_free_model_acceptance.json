@@ -1,0 +1,17 @@
+{
+  "passed": true,
+  "checked_at_utc": "2026-11-18T07:15:37.276831+00:00",
+  "actual_estimator": "BaggingClassifier",
+  "trip_id": "00000009",
+  "model_sha256": "c7f2572d5d037d07a5c07710fbb1ffefd4ff13fbe866c8940022e4902669c733",
+  "dataset_role": "evaluator",
+  "reserved_evaluator_data_accessed": false,
+  "source": "copy of one student-development graph+GPS trip into temporary root without any reference files",
+  "reference_files_present": false,
+  "uses_reference_route": false,
+  "learned_emission_observations": 1049,
+  "geometry_and_states_identical_to_final_CLI": true,
+  "metrics_status": "unavailable",
+  "accuracy": null,
+  "transport": "real in-process ASGI; model and inference not mocked"
+}

@@ -1,0 +1,121 @@
+{
+  "checked_at_utc": "2026-11-18T07:20:27.980875+00:00",
+  "passed": true,
+  "scope": "actual implementations, trained artifacts and all-ten classifier results only; no screenshot/report dependency",
+  "metric_target": "route-derived observation proxy labels, not supplied point-aligned ground truth or reserved evaluator results",
+  "selected_family": "bagging",
+  "frozen_model_sha256": "c7f2572d5d037d07a5c07710fbb1ffefd4ff13fbe866c8940022e4902669c733",
+  "models": [
+    {
+      "model": "logistic_regression",
+      "family": "logistic_regression",
+      "artifact": "artifacts/baselines/logistic_regression.joblib",
+      "artifact_sha256": "29157349d52a993d33cae78ed244805a9f087e79b6dc914aaa3b4461c02a58c9",
+      "actual_classifier": "LogisticRegression",
+      "training_trip_count": 80,
+      "tested_trip_count": 10,
+      "observations": 19160,
+      "candidate_rows": 175778,
+      "fixture_probability_max_abs_delta": 1.6653345369377348e-15,
+      "top1_accuracy": 0.8951983298538622,
+      "trip_macro_top1_accuracy": 0.9045802519778755,
+      "binary_candidate_macro_f1": 0.9329364512824421,
+      "binary_log_loss": 0.06899899065600447,
+      "observation_edge_macro_f1": 0.8070802670313553,
+      "categorical_emission_nll": 0.3475738499430923,
+      "candidate_miss_count": 19
+    },
+    {
+      "model": "knn_distance_weighted",
+      "family": "knn_distance_weighted",
+      "artifact": "artifacts/phase_three/baselines/knn_distance_weighted.joblib",
+      "artifact_sha256": "564e6f85f9190d0ff19e75967613e4d56dbe573aaf80ef8780ed8374f8537246",
+      "actual_classifier": "KNeighborsClassifier",
+      "training_trip_count": 80,
+      "tested_trip_count": 10,
+      "observations": 19160,
+      "candidate_rows": 175778,
+      "fixture_probability_max_abs_delta": 0.0,
+      "top1_accuracy": 0.8905010438413361,
+      "trip_macro_top1_accuracy": 0.9026615002129368,
+      "binary_candidate_macro_f1": 0.9274881703784643,
+      "binary_log_loss": 0.09604297407876781,
+      "observation_edge_macro_f1": 0.7954781955518841,
+      "categorical_emission_nll": 0.5216588680957772,
+      "candidate_miss_count": 19
+    },
+    {
+      "model": "bagging",
+      "family": "bagging",
+      "artifact": "artifacts/phase_three/baselines/bagging.joblib",
+      "artifact_sha256": "619bc3d267fec686d3ee0d212b3d13a4c8d9bd46e35893f3f570253d232822b6",
+      "actual_classifier": "BaggingClassifier",
+      "training_trip_count": 80,
+      "tested_trip_count": 10,
+      "observations": 19160,
+      "candidate_rows": 175778,
+      "fixture_probability_max_abs_delta": 0.0,
+      "top1_accuracy": 0.9048016701461378,
+      "trip_macro_top1_accuracy": 0.9179150157813927,
+      "binary_candidate_macro_f1": 0.9437265546922589,
+      "binary_log_loss": 0.05622414970449344,
+      "observation_edge_macro_f1": 0.8271458710847017,
+      "categorical_emission_nll": 0.28244242484112947,
+      "candidate_miss_count": 19
+    },
+    {
+      "model": "bagging_tuned",
+      "family": "bagging",
+      "artifact": "artifacts/phase_three/model.joblib",
+      "artifact_sha256": "c7f2572d5d037d07a5c07710fbb1ffefd4ff13fbe866c8940022e4902669c733",
+      "actual_classifier": "BaggingClassifier",
+      "training_trip_count": 80,
+      "tested_trip_count": 10,
+      "observations": 19160,
+      "candidate_rows": 175778,
+      "fixture_probability_max_abs_delta": 0.0,
+      "top1_accuracy": 0.90339248434238,
+      "trip_macro_top1_accuracy": 0.9159453488227101,
+      "binary_candidate_macro_f1": 0.9435745531009136,
+      "binary_log_loss": 0.055971427527006866,
+      "observation_edge_macro_f1": 0.8248287541046038,
+      "categorical_emission_nll": 0.2816623415849135,
+      "candidate_miss_count": 19
+    }
+  ],
+  "probability_replay_runtime": {
+    "executable": ".venv/bin/python",
+    "numpy": "2.5.5",
+    "tolerance_absolute": 1e-12
+  },
+  "knn_cross_build_diagnostic": "reports/phase_three/knn_runtime_diagnostic.json",
+  "selected_model_clean_environment": {
+    "passed": true,
+    "fixture_rows": 257,
+    "fixture": "deterministic linspace TRAIN candidate rows; no student data",
+    "fixture_sha256": "6ded69966e818d656c4e43f18614131ef5ef1ed1f62f1b0a5de94c424b9c2af3",
+    "max_abs_probability_delta": 0.0,
+    "interpreters": {
+      ".venv": {
+        "versions": {
+          "python": "3.14.6",
+          "numpy": "2.5.5",
+          "scipy": "1.18.0",
+          "sklearn": "1.8.0",
+          "joblib": "1.5.3"
+        },
+        "feature_count": 38
+      },
+      ".venv-clean": {
+        "versions": {
+          "python": "3.14.6",
+          "numpy": "2.5.5",
+          "scipy": "1.18.0",
+          "sklearn": "1.8.0",
+          "joblib": "1.5.3"
+        },
+        "feature_count": 38
+      }
+    }
+  }
+}

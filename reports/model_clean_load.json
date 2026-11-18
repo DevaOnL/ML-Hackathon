@@ -1,0 +1,8 @@
+{
+  "model_sha256": "0a308567e6eb982caf2012729fadac05c02497f81758c51df99f92cb521d1e1e",
+  "fixture_rows": 300,
+  "maximum_absolute_probability_difference": 0.0,
+  "clean_environment_load_pass": true,
+  "training_trips": 80,
+  "features": 38
+}

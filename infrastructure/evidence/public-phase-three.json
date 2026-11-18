@@ -1,0 +1,128 @@
+{
+  "checked_at": "2026-11-18T07:29:13.065747+00:00",
+  "target": "https://ml.d3va.dev",
+  "stage": "ready",
+  "checks": [
+    {
+      "path": "/",
+      "status": 200,
+      "latency_ms": 1695.717
+    },
+    {
+      "path": "/styles.css",
+      "status": 200,
+      "latency_ms": 1947.695
+    },
+    {
+      "path": "/app.mjs",
+      "status": 200,
+      "latency_ms": 501.831
+    },
+    {
+      "path": "/api.mjs",
+      "status": 200,
+      "latency_ms": 1779.263
+    },
+    {
+      "path": "/vendor/leaflet/leaflet.js",
+      "status": 200,
+      "latency_ms": 2543.362
+    },
+    {
+      "path": "/.env",
+      "status": 404,
+      "latency_ms": 1831.563
+    },
+    {
+      "path": "/artifacts/model.joblib",
+      "status": 404,
+      "latency_ms": 569.149
+    },
+    {
+      "path": "/Student%20folder/student_test/",
+      "status": 404,
+      "latency_ms": 1756.393
+    },
+    {
+      "path": "/docs",
+      "status": 404,
+      "latency_ms": 237.765
+    },
+    {
+      "path": "/match",
+      "origin": "untrusted",
+      "status": 403
+    }
+  ],
+  "matches": [
+    {
+      "trip_id": "00000009",
+      "status": 200,
+      "request_id": "2b21e1276ba04b7fa70dcdb871ea0fa1",
+      "latency_ms": 4205.247,
+      "response_sha256": "70ef3f7abe61d21c2f594f92da61fa31632d1be8a9ea7b1322d1bcd5006450b2",
+      "timings": {
+        "inference_ms": 3315.033,
+        "scoring_ms": 160.813,
+        "total_ms": 3502.637
+      },
+      "metrics_status": "ok",
+      "metrics": {
+        "accuracy": 0.9132507149666349,
+        "precision": 0.8793289129997991,
+        "recall": 0.8672480473113384,
+        "macro_f1": 0.8672504872475089,
+        "top1_accuracy": 0.8741658722592945,
+        "candidate_miss_rate": 0.0,
+        "log_loss": 0.45152632253364805,
+        "route_continuity": 1.0,
+        "route_edge_f1": 0.9646522234891676,
+        "route_length_f1": 0.9708657606175657,
+        "sequence_similarity": 0.9419642857142857,
+        "classifier_accuracy": 0.8741658722592945,
+        "classifier_precision": 0.8254722316480037,
+        "classifier_recall": 0.7901603081531822,
+        "classifier_macro_f1": 0.7976331137851328,
+        "scored_observation_fraction": 1.0
+      },
+      "diagnostics": {
+        "observation_count": 1049,
+        "matched_observation_count": 1049,
+        "route_arc_count": 448,
+        "route_length_m": 11836.4842735812,
+        "break_count": 0,
+        "learned_emission_observations": 1049,
+        "lateral_distance_median_m": 4.545695768165574,
+        "lateral_distance_p95_m": 16.25879746716423,
+        "uses_reference_route": false,
+        "effective_max_candidates": 12,
+        "candidate_retry_attempt_count": 0,
+        "requested_max_candidates": 12
+      }
+    }
+  ],
+  "health": {
+    "status": "ready",
+    "model_loaded": true,
+    "model_metadata_loaded": true,
+    "model_name": "bagging",
+    "model_hash": "c7f2572d5d037d07a5c07710fbb1ffefd4ff13fbe866c8940022e4902669c733",
+    "match_config_hash": "e326b1afda125897cd784ab335fbcd7c869fcd70714c5203ef5c2c71977b3288",
+    "trip_count": 10,
+    "dataset_role": "development",
+    "inference_concurrency": 1,
+    "error_codes": []
+  },
+  "trip_ids": [
+    "00000000",
+    "00000007",
+    "00000009",
+    "00000040",
+    "00000052",
+    "00000056",
+    "00000065",
+    "00000076",
+    "00000077",
+    "00000091"
+  ]
+}

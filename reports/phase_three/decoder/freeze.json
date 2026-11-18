@@ -1,0 +1,144 @@
+{
+  "frozen_utc": "2026-11-18T07:11:40.099678+00:00",
+  "phase": "three-model-first",
+  "selected_configuration": "A_fitted",
+  "config": {
+    "sigma_m": 7.160645916267228,
+    "beta_m": 2.0,
+    "max_candidates": 12,
+    "candidate_radius_m": 80.0,
+    "max_radius_m": 1000.0,
+    "routing_slack_m": 300.0,
+    "backward_tolerance_m": 20.0,
+    "observation_distance_m": 0.0,
+    "observation_interval": 5.0,
+    "sample_spacing_m": 40.0,
+    "cache_size": 2048,
+    "classifier_weight": 1.0,
+    "geometry_weight": 1.0,
+    "candidate_retry_limit": 48
+  },
+  "config_file_sha256": "10405aa6b6f370e41d4ddcb01207fd1e8f58900fd0395e541ee6bc78146168c5",
+  "effective_config_sha256": "8b5bee1d217eddcd4e05156a87fe572394676c0798ec93eece5d5d1651f9c0d8",
+  "model_sha256": "c7f2572d5d037d07a5c07710fbb1ffefd4ff13fbe866c8940022e4902669c733",
+  "model_path": "artifacts/phase_three/model.joblib",
+  "loader_module": "mapmatch.learning",
+  "family_check": {
+    "requested_families": [
+      "logistic_regression",
+      "knn_distance_weighted",
+      "bagging"
+    ],
+    "metadata_fields": {
+      "model_name": "bagging",
+      "run_name": "bagging_tuned",
+      "family": "genuine bootstrap aggregation of decision-tree base learners"
+    },
+    "matched_requested_families": [
+      "bagging"
+    ],
+    "consistent_with_requested_trio": true,
+    "enforcement": "informational only; phase model selection among the requested trio is verified by the Lead at PHASE_MODEL_FROZEN"
+  },
+  "model_metadata": {
+    "model_name": "bagging",
+    "run_name": "bagging_tuned",
+    "family": "genuine bootstrap aggregation of decision-tree base learners",
+    "parameters": {
+      "n_estimators": 48,
+      "max_samples": 0.7160628448832399,
+      "max_depth": 13,
+      "min_samples_leaf": 2
+    },
+    "feature_version": "pathsnap-candidate-v1",
+    "training_trip_count": 80,
+    "training_observations": 28000,
+    "training_candidate_rows": 269463,
+    "fit_data": null
+  },
+  "plan_sha256": "560a08892750d0b8b3a4709eff825d448229074661c7dc9c641acc0d04d6c441",
+  "scale_evidence": {
+    "path": "reports/decoder/scale_fit.json",
+    "sha256": "0efa5a44f610edda9cd33c5995fa67a591c161a9d3a33a129afaae05252148f9",
+    "fitted": {
+      "sigma_m": 7.160645916267228,
+      "beta_m": 2.0
+    },
+    "sigma_unclamped_m": 7.160645916267228,
+    "beta_unclamped_m": 1.424672666285088,
+    "sigma_clamped": false,
+    "beta_clamped": true,
+    "sigma_sample_count": 20480,
+    "sigma_observations_excluded": 0,
+    "beta_pair_status_counts": {
+      "identified": 10070,
+      "no_forward_reference_occurrence": 163,
+      "backward_proxy_without_reference_loop": 3,
+      "reference_span_crosses_discontinuity": 4
+    },
+    "training_trip_count": 80,
+    "training_reference_discontinuity_count": 13,
+    "residual_samples_path": "reports/decoder/training_residual_samples.csv",
+    "residual_samples_sha256": "984b05c53e401788f09689b139bd9e97c5f45998877dadcd991fc1b62367ddc1",
+    "transition_samples_path": "reports/decoder/training_transition_samples.csv",
+    "transition_samples_sha256": "e7421825360706f80b7f6b005393aba539387ad66b885c1cd3da3eac46bd0068",
+    "original_plan_sha256": "23f0b2b053c16ecf73c115c07c540d1964475273a6f821506f7b5b6f96a209c8",
+    "reuse_rationale": "Geometry-only sigma/beta come from TRAIN reference residuals and transition spans and do not depend on the emission classifier family, so the historical immutable fit is reused read-only instead of recomputed."
+  },
+  "calibration_trip_ids": [
+    "00000001",
+    "00000011",
+    "00000021",
+    "00000031",
+    "00000041",
+    "00000051",
+    "00000061",
+    "00000071"
+  ],
+  "student_results_seen_for_selection": false,
+  "student_results_used_for_selection": false,
+  "prior_student_context_available": true,
+  "selection_boundary_note": "Earlier geometry-only and HistGB student results were available as context; this predeclared search reads only TRAIN predictions/references and never reads student scores. Phase student ablation starts only after this freeze.",
+  "historical_note": "Historical HistGB decoder freeze at artifacts/match_config.json (reports/decoder/freeze.json) is preserved read-only; it is not this phase's requested final result.",
+  "objective": "mean exact-original-ID length-weighted repeated-arc route F1 across the eight TRAIN calibration trips; a failed trip contributes zero",
+  "objectives": [
+    {
+      "configuration": "A_fitted",
+      "mean_length_f1": 0.9530675244860136,
+      "mean_edge_f1": 0.9375917499764524,
+      "successful_trips": 8,
+      "total_trips": 8,
+      "total_seconds": 40.08873456699803
+    },
+    {
+      "configuration": "B_twice_beta",
+      "mean_length_f1": 0.9516421505524291,
+      "mean_edge_f1": 0.9401780526217824,
+      "successful_trips": 8,
+      "total_trips": 8,
+      "total_seconds": 39.51424116099952
+    },
+    {
+      "configuration": "C_classifier_up",
+      "mean_length_f1": 0.9522881746408183,
+      "mean_edge_f1": 0.9414269755748774,
+      "successful_trips": 8,
+      "total_trips": 8,
+      "total_seconds": 39.16054669400182
+    }
+  ],
+  "elapsed_seconds": 119.07632918899981,
+  "source_sha256": {
+    "scripts/phase_three_decoder.py": "f52f27fe2cb6899a54e41720351009a94b9b6b3f83826bb684eec51ee7edd384",
+    "mapmatch/data.py": "89982d7a21c359ad0bc8dba061498b47e05967750325eb83dc81828e8ecf9ce9",
+    "mapmatch/candidates.py": "4a9d2126074ca8bd78e3d513f2cf578fcc7415cfef68768b3c5a9983cd7504e1",
+    "mapmatch/matcher.py": "af58502cdfe8de12cb13ea5ab3e1e8c9ef7aee9cf6f3faec8dea5cbfbedc4bff",
+    "mapmatch/routing.py": "fca3940cb7066b6e247bb0285690ed016dc66fa12d3e4d3c13aed5e5e032bf78",
+    "mapmatch/features.py": "d39e908b0b4f7d89d969542a835e0935f07086c97b6546dc8e686efee151adb0",
+    "mapmatch/learning.py": "45e0ffb7bd1d0e4e44d0d2e31ca31644921d72ee746a3398147dcb29f0224fa8",
+    "mapmatch/metrics.py": "94e1ba8fc0ec60c46b8ea06d08ee6f86c655a915ff511da41d446ff7c5f1c882",
+    "backend/emissions.py": "819384fdb1c70ddbf52e11f1227b5291317719b5b5361ced1180c442957c86cc",
+    "backend/scoring.py": "49b20b3ddd4ec6eeebd8795fe16f72ce7ba242bb09cb925edc890b23078bfaea",
+    "mapmatch/phase_models.py": "f9500e31b0a7a57ea50536001572637d1527c3e93d0d39520aa4b707979e063d"
+  }
+}

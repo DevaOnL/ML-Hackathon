@@ -1,0 +1,159 @@
+{
+  "generated_at_files": "/home/d3va/Downloads/ML_Hackathon/analysis/review/phase_three/audit_phase_three.py",
+  "counts": {
+    "WARN": 2,
+    "PASS": 28
+  },
+  "checks": [
+    {
+      "name": "source_hash:experiments/phase_three/run_phase_three.py",
+      "status": "WARN",
+      "detail": "CHANGED 7f813c24d0e7052d... (was dac7f23afb61c042...); re-review required"
+    },
+    {
+      "name": "source_hash:mapmatch/phase_models.py",
+      "status": "WARN",
+      "detail": "CHANGED 05bc7b0b1bcbe70f... (was f9500e31b0a7a57e...); re-review required"
+    },
+    {
+      "name": "source_hash:scripts/phase_three_decoder.py",
+      "status": "PASS",
+      "detail": "unchanged"
+    },
+    {
+      "name": "cache:train",
+      "status": "PASS",
+      "detail": "obs=28000 rows=269463 trips=80 misses=578 empty=0 dtype=float32"
+    },
+    {
+      "name": "cache:student_test",
+      "status": "PASS",
+      "detail": "obs=19160 rows=175778 trips=10 misses=19 empty=0 dtype=float32"
+    },
+    {
+      "name": "cv:logistic_regression:parameters_in_bounds",
+      "status": "PASS",
+      "detail": "parameters={'C': 1.0, 'max_iter': 500, 'solver': 'lbfgs'} space_dim=1"
+    },
+    {
+      "name": "cv:logistic_regression:oof_recompute",
+      "status": "PASS",
+      "detail": "source=logistic_regression_oof.npz max_delta=0.00e+00 macro_f1=0.933044 trip_top1=0.884000 misses_in_denominator=True"
+    },
+    {
+      "name": "cv:knn_distance_weighted:parameters_in_bounds",
+      "status": "PASS",
+      "detail": "parameters={'n_neighbors': 25} space_dim=1"
+    },
+    {
+      "name": "cv:knn_distance_weighted:oof_recompute",
+      "status": "PASS",
+      "detail": "source=knn_distance_weighted_oof.npz max_delta=0.00e+00 macro_f1=0.927479 trip_top1=0.876786 misses_in_denominator=True"
+    },
+    {
+      "name": "cv:bagging:parameters_in_bounds",
+      "status": "PASS",
+      "detail": "parameters={'n_estimators': 40, 'max_samples': 0.7, 'max_depth': 14, 'min_samples_leaf': 3} space_dim=4"
+    },
+    {
+      "name": "cv:bagging:oof_recompute",
+      "status": "PASS",
+      "detail": "source=bagging_oof.npz max_delta=0.00e+00 macro_f1=0.942614 trip_top1=0.891464 misses_in_denominator=True"
+    },
+    {
+      "name": "selection",
+      "status": "PASS",
+      "detail": "selected=bagging (recomputed argmax=bagging) over=['bagging', 'knn_distance_weighted', 'logistic_regression'] student_consulted=False"
+    },
+    {
+      "name": "hpo:budget",
+      "status": "PASS",
+      "detail": "records=8 histogram={'measured_baseline_prior': 1, 'seeded_initial_design': 2, 'gaussian_process_expected_improvement': 5} expected={'measured_baseline_prior': 1, 'seeded_initial_design': 2, 'gaussian_process_expected_improvement': 5}"
+    },
+    {
+      "name": "hpo:winner_consistent",
+      "status": "PASS",
+      "detail": "best={'n_estimators': 48, 'max_samples': 0.7160628448832399, 'max_depth': 13, 'min_samples_leaf': 2} objective=0.892500 improvement=+0.001036"
+    },
+    {
+      "name": "freeze:model_sha256",
+      "status": "PASS",
+      "detail": "sha=c7f2572d5d037d07... bytes=2028652"
+    },
+    {
+      "name": "freeze:parameters_match_hpo",
+      "status": "PASS",
+      "detail": "freeze={'n_estimators': 48, 'max_samples': 0.7160628448832399, 'max_depth': 13, 'min_samples_leaf': 2} metadata=equal hpo_best=equal"
+    },
+    {
+      "name": "freeze:clean_load",
+      "status": "PASS",
+      "detail": "passed=True python=.venv-clean/bin/python versions_numpy=2.5.5 (PH3-D002: verify these versions are the CHILD's, not the parent's)"
+    },
+    {
+      "name": "freeze:bundle",
+      "status": "PASS",
+      "detail": "estimator=BaggingClassifier features=38"
+    },
+    {
+      "name": "freeze:oof_replay",
+      "status": "PASS",
+      "detail": "replayed agreement max_delta=0.0 replayed=confirmatory"
+    },
+    {
+      "name": "student:domain:bagging_student.npz",
+      "status": "PASS",
+      "detail": "min=1.000e-07 max=1.000e+00 n=175778"
+    },
+    {
+      "name": "student:domain:bagging_tuned_student.npz",
+      "status": "PASS",
+      "detail": "min=1.000e-07 max=9.997e-01 n=175778"
+    },
+    {
+      "name": "student:domain:knn_distance_weighted_student.npz",
+      "status": "PASS",
+      "detail": "min=1.000e-07 max=1.000e+00 n=175778"
+    },
+    {
+      "name": "student:domain:logistic_regression_student.npz",
+      "status": "PASS",
+      "detail": "min=1.000e-07 max=9.992e-01 n=175778"
+    },
+    {
+      "name": "student:results_rows",
+      "status": "PASS",
+      "detail": "rows=4 student_metric_rows=4 unmatched=0 recomputed_files=4"
+    },
+    {
+      "name": "student:comparison_schema",
+      "status": "PASS",
+      "detail": "comparison_rows=4 evaluation_rows=4"
+    },
+    {
+      "name": "decoder:hashes",
+      "status": "PASS",
+      "detail": "model_sha=c7f2572d5d037d07... config_sha=10405aa6b6f370e4..."
+    },
+    {
+      "name": "decoder:ablation",
+      "status": "PASS",
+      "detail": "student_ablation.json present"
+    },
+    {
+      "name": "live:api_matches",
+      "status": "PASS",
+      "detail": "trips=10 statuses=[200]"
+    },
+    {
+      "name": "live:browser",
+      "status": "PASS",
+      "detail": "browser evidence file present"
+    },
+    {
+      "name": "historical_model_untouched",
+      "status": "PASS",
+      "detail": "sha=0a308567e6eb982c... bytes=150791"
+    }
+  ]
+}

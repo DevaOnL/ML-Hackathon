@@ -1,0 +1,128 @@
+{
+  "collected_at_utc": "2026-11-18T07:30:01.585249+00:00",
+  "base_url": "https://ml.d3va.dev",
+  "mocked": false,
+  "source": "actual Chromium and network; no interception or route mocks",
+  "browser_errors": [],
+  "console_errors": [],
+  "external_requests": [],
+  "checks": [
+    {
+      "trip_options": 10,
+      "api_host": "ml.d3va.dev",
+      "connection": "API ready"
+    },
+    {
+      "real_post_status": 200,
+      "hmm_accuracy_display": "91.3%",
+      "continuity_display": "100.0%",
+      "request_id": "4e79f75fcda441ed8bdb44243b6adf8a",
+      "leaflet_canvas": [
+        {
+          "width": 1312,
+          "height": 558,
+          "drawn_pixels": 14830,
+          "route_color_pixels": 6334,
+          "gps_color_pixels": 1145
+        }
+      ],
+      "map_accessible_label": "Route for 00000009: 1 predicted route parts and 1049 original GPS observations. Use layer checkboxes to compare. Arrow keys pan; plus and minus zoom."
+    },
+    {
+      "viewport_width": 320,
+      "horizontal_overflow": false
+    },
+    {
+      "viewport_width": 390,
+      "horizontal_overflow": false
+    },
+    {
+      "viewport_width": 768,
+      "horizontal_overflow": false
+    },
+    {
+      "viewport_width": 1440,
+      "horizontal_overflow": false
+    },
+    {
+      "settings_escape_closes": true,
+      "focus_restored_to_settings": true
+    }
+  ],
+  "browser_version": "145.0.7632.6",
+  "response": {
+    "trip_id": "00000009",
+    "http_status": 200,
+    "client_elapsed_ms": 4223.614680000537,
+    "request_id": "4e79f75fcda441ed8bdb44243b6adf8a",
+    "timings": {
+      "inference_ms": 3317.863,
+      "scoring_ms": 153.176,
+      "total_ms": 3496.412
+    },
+    "metrics": {
+      "accuracy": 0.9132507149666349,
+      "precision": 0.8793289129997991,
+      "recall": 0.8672480473113384,
+      "macro_f1": 0.8672504872475089,
+      "top1_accuracy": 0.8741658722592945,
+      "candidate_miss_rate": 0.0,
+      "log_loss": 0.45152632253364805,
+      "route_continuity": 1.0,
+      "route_edge_f1": 0.9646522234891676,
+      "route_length_f1": 0.9708657606175657,
+      "sequence_similarity": 0.9419642857142857,
+      "classifier_accuracy": 0.8741658722592945,
+      "classifier_precision": 0.8254722316480037,
+      "classifier_recall": 0.7901603081531822,
+      "classifier_macro_f1": 0.7976331137851328,
+      "scored_observation_fraction": 1.0
+    },
+    "metrics_status": "ok",
+    "diagnostics": {
+      "observation_count": 1049,
+      "matched_observation_count": 1049,
+      "route_arc_count": 448,
+      "route_length_m": 11836.4842735812,
+      "break_count": 0,
+      "learned_emission_observations": 1049,
+      "lateral_distance_median_m": 4.545695768165574,
+      "lateral_distance_p95_m": 16.25879746716423,
+      "uses_reference_route": false,
+      "effective_max_candidates": 12,
+      "candidate_retry_attempt_count": 0,
+      "requested_max_candidates": 12
+    },
+    "model": {
+      "name": "bagging",
+      "sha256": "c7f2572d5d037d07a5c07710fbb1ffefd4ff13fbe866c8940022e4902669c733",
+      "algorithm": "learned_classifier_hmm_viterbi",
+      "feature_count": 38,
+      "seed": 20261118
+    },
+    "match_config_hash": "e326b1afda125897cd784ab335fbcd7c869fcd70714c5203ef5c2c71977b3288",
+    "prediction_feature_count": 1,
+    "raw_feature_count": 1,
+    "observation_assignment_count": 1049,
+    "predicted_geometry_sha256": "1c7de416b1ad354e1b8f12df53c6649d46a58629cea1dfc6e2d324fd6940e47a",
+    "matched_edge_array_sha256": "f1624ff2df93d619f64935530977101a1081d1ad276934910417199904c6a410"
+  },
+  "screenshots": [
+    {
+      "path": "reports/phase_three/live/screenshots/ui_desktop.png",
+      "sha256": "d4d0c4fb69ee5a9ba54b37aea81cfe2249ef73f6454a4c7914809d9d82477165",
+      "bytes": 276786
+    },
+    {
+      "path": "reports/phase_three/live/screenshots/ui_mobile.png",
+      "sha256": "59fb58e2a30bb868e837c737a252f5fc7b695187d04319b70cb52e91ba4def94",
+      "bytes": 198211
+    },
+    {
+      "path": "reports/phase_three/live/screenshots/ui_route_map.png",
+      "sha256": "497caa60433a8f001ae702db5167221baf834d2fcf876505fca89acffdc6db39",
+      "bytes": 66426
+    }
+  ],
+  "completed_at_utc": "2026-11-18T07:30:09.966144+00:00"
+}

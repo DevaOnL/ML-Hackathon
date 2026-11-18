@@ -1,0 +1,115 @@
+{
+  "created_utc": "2026-11-18T07:09:41.020742+00:00",
+  "phase": "three-model-first",
+  "model_sha256": "c7f2572d5d037d07a5c07710fbb1ffefd4ff13fbe866c8940022e4902669c733",
+  "loader_module": "mapmatch.learning",
+  "family_check": {
+    "requested_families": [
+      "logistic_regression",
+      "knn_distance_weighted",
+      "bagging"
+    ],
+    "metadata_fields": {
+      "model_name": "bagging",
+      "run_name": "bagging_tuned",
+      "family": "genuine bootstrap aggregation of decision-tree base learners"
+    },
+    "matched_requested_families": [
+      "bagging"
+    ],
+    "consistent_with_requested_trio": true,
+    "enforcement": "informational only; phase model selection among the requested trio is verified by the Lead at PHASE_MODEL_FROZEN"
+  },
+  "plan_sha256": "560a08892750d0b8b3a4709eff825d448229074661c7dc9c641acc0d04d6c441",
+  "scale_evidence": {
+    "path": "reports/decoder/scale_fit.json",
+    "sha256": "0efa5a44f610edda9cd33c5995fa67a591c161a9d3a33a129afaae05252148f9",
+    "fitted": {
+      "sigma_m": 7.160645916267228,
+      "beta_m": 2.0
+    },
+    "sigma_unclamped_m": 7.160645916267228,
+    "beta_unclamped_m": 1.424672666285088,
+    "sigma_clamped": false,
+    "beta_clamped": true,
+    "sigma_sample_count": 20480,
+    "sigma_observations_excluded": 0,
+    "beta_pair_status_counts": {
+      "identified": 10070,
+      "no_forward_reference_occurrence": 163,
+      "backward_proxy_without_reference_loop": 3,
+      "reference_span_crosses_discontinuity": 4
+    },
+    "training_trip_count": 80,
+    "training_reference_discontinuity_count": 13,
+    "residual_samples_path": "reports/decoder/training_residual_samples.csv",
+    "residual_samples_sha256": "984b05c53e401788f09689b139bd9e97c5f45998877dadcd991fc1b62367ddc1",
+    "transition_samples_path": "reports/decoder/training_transition_samples.csv",
+    "transition_samples_sha256": "e7421825360706f80b7f6b005393aba539387ad66b885c1cd3da3eac46bd0068",
+    "original_plan_sha256": "23f0b2b053c16ecf73c115c07c540d1964475273a6f821506f7b5b6f96a209c8",
+    "reuse_rationale": "Geometry-only sigma/beta come from TRAIN reference residuals and transition spans and do not depend on the emission classifier family, so the historical immutable fit is reused read-only instead of recomputed."
+  },
+  "configs": {
+    "A_fitted": {
+      "sigma_m": 7.160645916267228,
+      "beta_m": 2.0,
+      "max_candidates": 12,
+      "candidate_radius_m": 80.0,
+      "max_radius_m": 1000.0,
+      "routing_slack_m": 300.0,
+      "backward_tolerance_m": 20.0,
+      "observation_distance_m": 0.0,
+      "observation_interval": 5.0,
+      "sample_spacing_m": 40.0,
+      "cache_size": 2048,
+      "classifier_weight": 1.0,
+      "geometry_weight": 1.0,
+      "candidate_retry_limit": 48
+    },
+    "B_twice_beta": {
+      "sigma_m": 7.160645916267228,
+      "beta_m": 4.0,
+      "max_candidates": 12,
+      "candidate_radius_m": 80.0,
+      "max_radius_m": 1000.0,
+      "routing_slack_m": 300.0,
+      "backward_tolerance_m": 20.0,
+      "observation_distance_m": 0.0,
+      "observation_interval": 5.0,
+      "sample_spacing_m": 40.0,
+      "cache_size": 2048,
+      "classifier_weight": 1.0,
+      "geometry_weight": 1.0,
+      "candidate_retry_limit": 48
+    },
+    "C_classifier_up": {
+      "sigma_m": 7.160645916267228,
+      "beta_m": 2.0,
+      "max_candidates": 12,
+      "candidate_radius_m": 80.0,
+      "max_radius_m": 1000.0,
+      "routing_slack_m": 300.0,
+      "backward_tolerance_m": 20.0,
+      "observation_distance_m": 0.0,
+      "observation_interval": 5.0,
+      "sample_spacing_m": 40.0,
+      "cache_size": 2048,
+      "classifier_weight": 2.0,
+      "geometry_weight": 0.5,
+      "candidate_retry_limit": 48
+    }
+  },
+  "source_sha256": {
+    "scripts/phase_three_decoder.py": "f52f27fe2cb6899a54e41720351009a94b9b6b3f83826bb684eec51ee7edd384",
+    "mapmatch/data.py": "89982d7a21c359ad0bc8dba061498b47e05967750325eb83dc81828e8ecf9ce9",
+    "mapmatch/candidates.py": "4a9d2126074ca8bd78e3d513f2cf578fcc7415cfef68768b3c5a9983cd7504e1",
+    "mapmatch/matcher.py": "af58502cdfe8de12cb13ea5ab3e1e8c9ef7aee9cf6f3faec8dea5cbfbedc4bff",
+    "mapmatch/routing.py": "fca3940cb7066b6e247bb0285690ed016dc66fa12d3e4d3c13aed5e5e032bf78",
+    "mapmatch/features.py": "d39e908b0b4f7d89d969542a835e0935f07086c97b6546dc8e686efee151adb0",
+    "mapmatch/learning.py": "45e0ffb7bd1d0e4e44d0d2e31ca31644921d72ee746a3398147dcb29f0224fa8",
+    "mapmatch/metrics.py": "94e1ba8fc0ec60c46b8ea06d08ee6f86c655a915ff511da41d446ff7c5f1c882",
+    "backend/emissions.py": "819384fdb1c70ddbf52e11f1227b5291317719b5b5361ced1180c442957c86cc",
+    "backend/scoring.py": "49b20b3ddd4ec6eeebd8795fe16f72ce7ba242bb09cb925edc890b23078bfaea",
+    "mapmatch/phase_models.py": "f9500e31b0a7a57ea50536001572637d1527c3e93d0d39520aa4b707979e063d"
+  }
+}

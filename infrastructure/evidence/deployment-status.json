@@ -1,0 +1,115 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-11-18T07:31:09.047291+00:00",
+  "hostname": "ml.d3va.dev",
+  "public_url": "https://ml.d3va.dev",
+  "local_origin": "http://127.0.0.1:8000",
+  "local": {
+    "ui": {
+      "url": "http://127.0.0.1:8000/",
+      "http_status": 200,
+      "content_type": "text/html; charset=utf-8",
+      "tls_verified": false,
+      "bytes": 16678,
+      "response_sha256": "f887fe2c2c9a1cfd9ad1c929cf669d955b65a8270d80fe6f61b82fd647e37c5a",
+      "pathsnap_title_present": true
+    },
+    "health": {
+      "url": "http://127.0.0.1:8000/health",
+      "http_status": 200,
+      "content_type": "application/json",
+      "tls_verified": false,
+      "bytes": 435,
+      "response_sha256": "5c5264bb6cc092c13f758e0b9dfec3a75b74dc852baade0f38ec35b7b63ed421",
+      "health": {
+        "status": "ready",
+        "model_loaded": true,
+        "model_metadata_loaded": true,
+        "model_hash": "c7f2572d5d037d07a5c07710fbb1ffefd4ff13fbe866c8940022e4902669c733",
+        "match_config_hash": "e326b1afda125897cd784ab335fbcd7c869fcd70714c5203ef5c2c71977b3288",
+        "trip_count": 10,
+        "dataset_role": "development",
+        "error_codes": []
+      }
+    }
+  },
+  "public": {
+    "ui": {
+      "url": "https://ml.d3va.dev/",
+      "http_status": 200,
+      "content_type": "text/html; charset=utf-8",
+      "tls_verified": true,
+      "bytes": 16678,
+      "response_sha256": "f887fe2c2c9a1cfd9ad1c929cf669d955b65a8270d80fe6f61b82fd647e37c5a",
+      "pathsnap_title_present": true
+    },
+    "health": {
+      "url": "https://ml.d3va.dev/health",
+      "http_status": 200,
+      "content_type": "application/json",
+      "tls_verified": true,
+      "bytes": 435,
+      "response_sha256": "5c5264bb6cc092c13f758e0b9dfec3a75b74dc852baade0f38ec35b7b63ed421",
+      "health": {
+        "status": "ready",
+        "model_loaded": true,
+        "model_metadata_loaded": true,
+        "model_hash": "c7f2572d5d037d07a5c07710fbb1ffefd4ff13fbe866c8940022e4902669c733",
+        "match_config_hash": "e326b1afda125897cd784ab335fbcd7c869fcd70714c5203ef5c2c71977b3288",
+        "trip_count": 10,
+        "dataset_role": "development",
+        "error_codes": []
+      }
+    },
+    "dns_records": {
+      "A": [
+        "104.21.9.13",
+        "172.67.188.223"
+      ],
+      "AAAA": [
+        "2606:4700:3036::ac43:bcdf",
+        "2606:4700:3035::6815:90d"
+      ],
+      "CNAME": []
+    },
+    "https_site_verified": true,
+    "live_match_verified": false,
+    "match_evidence": null
+  },
+  "cloudflare": {
+    "origin_authorization_file_available": true,
+    "dedicated_tunnel_credentials_available": true,
+    "blocker": null,
+    "unrelated_dns_or_services_modified": false
+  },
+  "user_services": [
+    {
+      "Id": "path-snap-api.service",
+      "LoadState": "loaded",
+      "ActiveState": "active",
+      "SubState": "running",
+      "UnitFileState": "enabled",
+      "Restart": "always",
+      "MainPID": "181558",
+      "NRestarts": "0"
+    },
+    {
+      "Id": "path-snap-tunnel.service",
+      "LoadState": "loaded",
+      "ActiveState": "active",
+      "SubState": "running",
+      "UnitFileState": "enabled",
+      "Restart": "always",
+      "MainPID": "127782",
+      "NRestarts": "0"
+    }
+  ],
+  "persistence": {
+    "linger": true,
+    "reboot_actually_tested": false
+  },
+  "limitations": [
+    "Public live-match success requires separate verify_site.py evidence; status capture does not infer it.",
+    "The provided student-test dataset is development data; hidden evaluator trips are not present."
+  ]
+}

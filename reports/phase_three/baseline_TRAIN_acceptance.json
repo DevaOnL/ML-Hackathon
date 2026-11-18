@@ -1,0 +1,79 @@
+{
+  "passed": true,
+  "checked_at_utc": "2026-11-18T07:11:27.125633+00:00",
+  "student_accessed": false,
+  "scope": "all80 TRAIN artifact integrity and exact reference-bank membership; not an all10 student score",
+  "models": [
+    {
+      "model": "knn_distance_weighted",
+      "artifact_sha256": "b796950b9b036c2564ab8eb6432f5aa7bc835ac69eda40cf7fa83c2d7b1db376",
+      "actual_all80_TRAIN_fit_verified": true,
+      "selected_bank_rows": 60000,
+      "cross_environment": {
+        "checked_at_utc": "2026-11-18T07:08:56.540820+00:00",
+        "model": "knn_distance_weighted",
+        "fixture": "257 deterministic TRAIN rows, no student read",
+        "exact_probability_equality_passed": false,
+        "max_abs_delta": 6.380593264979098e-07,
+        "rows_delta_over_1e12": 1,
+        "binary_threshold_decisions_equal": true,
+        "environments": {
+          ".venv": {
+            "versions": {
+              "numpy": "2.5.5",
+              "scipy": "1.18.0",
+              "sklearn": "1.8.0"
+            },
+            "sklearn_distribution": "user-local",
+            "scipy_distribution": "system"
+          },
+          ".venv-clean": {
+            "versions": {
+              "numpy": "2.5.5",
+              "scipy": "1.18.0",
+              "sklearn": "1.8.0"
+            },
+            "sklearn_distribution": "isolated-wheel",
+            "scipy_distribution": "isolated-wheel"
+          }
+        },
+        "decision": "Report the 6.38e-7 self-neighbor numerical difference honestly. Do not change model/bank/HPO mechanics after measurement; keep original training runtime for exact KNN metric reproduction. Selected Bagging still requires strict independent clean-environment equality."
+      }
+    },
+    {
+      "model": "bagging",
+      "artifact_sha256": "9dbf31ea853bb1bbdc36c2b93bdb30a1fadf779a34f1838ffd38446c822eca05",
+      "actual_all80_TRAIN_fit_verified": true,
+      "selected_bank_rows": null,
+      "cross_environment": {
+        "passed": true,
+        "fixture_rows": 257,
+        "fixture": "deterministic linspace TRAIN candidate rows; no student data",
+        "fixture_sha256": "6ded69966e818d656c4e43f18614131ef5ef1ed1f62f1b0a5de94c424b9c2af3",
+        "max_abs_probability_delta": 0.0,
+        "interpreters": {
+          ".venv": {
+            "versions": {
+              "python": "3.14.6",
+              "numpy": "2.5.5",
+              "scipy": "1.18.0",
+              "sklearn": "1.8.0",
+              "joblib": "1.5.3"
+            },
+            "feature_count": 38
+          },
+          ".venv-clean": {
+            "versions": {
+              "python": "3.14.6",
+              "numpy": "2.5.5",
+              "scipy": "1.18.0",
+              "sklearn": "1.8.0",
+              "joblib": "1.5.3"
+            },
+            "feature_count": 38
+          }
+        }
+      }
+    }
+  ]
+}
