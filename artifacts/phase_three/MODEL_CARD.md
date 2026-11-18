@@ -57,7 +57,7 @@ selection is retained; no winner or hyperparameter was changed after seeing
 these scores. Candidate misses remain in the denominator (578 TRAIN and
 19 student observations). No candidate sets are empty in these caches.
 
-The frozen classifier plus HMM has mean per-trip route edge-set F1
+The frozen classifier plus HMM has mean per-trip directed-arc multiset F1
 0.949238, length-weighted F1 0.978880, edit similarity 0.913668 and continuity
 1.0. All ten routes are connected; zero are exact sequence matches. The
 geometry-HMM baseline has length-weighted F1 0.973448. The prior historical

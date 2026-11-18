@@ -28,14 +28,18 @@ observation top-1 against route-derived proxy labels, before HMM decoding.
 The tuned Bagging model remains frozen because selection used TRAIN-only CV,
 even though default Bagging scores slightly higher on student top-1. Its HMM
 produces connected routes for all ten trips: mean route length-weighted F1 is
-97.89%, edge-set F1 is 94.92%, and continuity is 100%. No reserved-evaluator
+97.89%, directed-arc multiset F1 is 94.92%, and continuity is 100%. No reserved-evaluator
 result is claimed. The other two model families remain deferred.
 
 See the [model comparison](<experiments/phase_three/model_comparison.csv>),
 [independent actual-model acceptance](<reports/phase_three/model_acceptance.json>)
 and [CLI/HTTPS delivery verification](<reports/phase_three/delivery_verification.json>).
 The [technical report](<reports/phase_three/PathSnap_Technical_Report.pdf>)
-consolidates the methods, measured results, diagrams and deployment evidence.
+is the final 23-page consolidated document, with 209 checked evidence facts,
+20 embedded figures and 18 passing final-render guards. Its
+[layout and OCR verification](<analysis/review/phase_three/pdf_release_layout_final/layout_report.json>)
+passed without defects. The release suite passed 179 Python tests, 28 hosting
+tests, eight frontend adapter tests and the static frontend smoke check.
 
 ## Setup
 
