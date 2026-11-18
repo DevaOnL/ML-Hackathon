@@ -1,0 +1,49 @@
+{
+  "contains_reference_geometry": true,
+  "created_at_utc": "2026-11-18T07:43:23.282460+00:00",
+  "development_only": true,
+  "development_reference_path": "Student folder/student_test/00000009/00000009.route",
+  "directed_arcs": 13106,
+  "displayed_road_chords": 4981,
+  "do_not_serve_to_evaluator": true,
+  "folium_version": "1.0.0",
+  "gps_points": 1049,
+  "graph_prefix": "Student folder/student_test/00000009/00000009",
+  "historical_baseline_map_preserved": "visualizations/maps/development_trip_00000009_baseline.png",
+  "historical_prior_final_map_preserved": "visualizations/maps/development_trip_00000009_final.png",
+  "input_sha256": {
+    "Student folder/student_test/00000009/00000009.arcs": "563870614e8fabaedb4077308db7598ef6c4314b2d9680a49e28dccb451b9e90",
+    "Student folder/student_test/00000009/00000009.nodes": "f8ff92932d7a12874f412453c9cbe4f09cf1c2796f62843c8da95e1e104a4a99",
+    "Student folder/student_test/00000009/00000009.route": "9424170099cc2edfbfe9f8fae750a6f90f68cc19ba9a426d58254360566f2823",
+    "Student folder/student_test/00000009/00000009.track": "74853acd9fdbb2b80b8cd164cc63932e25fd0fca6fce86fd9c9fc6aa171a8451",
+    "outputs/phase_three_student_test/routes/00000009.route": "437139ad9bb0d6650221dce75b3bbe9120676e4b7c6d74ba37d08774c57cb1bc"
+  },
+  "leaflet_assets": "visualizations/vendor/leaflet",
+  "map_path": "visualizations/phase_three/maps/phase_three_development_trip_00000009_final.html",
+  "model_artifact_sha256": "c7f2572d5d037d07a5c07710fbb1ffefd4ff13fbe866c8940022e4902669c733",
+  "nodes": 6745,
+  "partition": "student_test",
+  "phase": "three-model-first",
+  "phase_status": "phase_three_final_learned",
+  "prediction_label": "Phase-three learned prediction (bagging_tuned)",
+  "prediction_path": "outputs/phase_three_student_test/routes/00000009.route",
+  "prediction_route_integrity": {
+    "arc_rows": 448,
+    "broken_joins": 0,
+    "connectors_inserted": 0,
+    "distinct_arcs": 444,
+    "repeated_traversal_arcs": 4,
+    "repeated_traversal_rows": 8
+  },
+  "reference_route_integrity": {
+    "arc_rows": 429,
+    "broken_joins": 0,
+    "connectors_inserted": 0,
+    "distinct_arcs": 429,
+    "repeated_traversal_arcs": 0,
+    "repeated_traversal_rows": 0
+  },
+  "routes_index_row": null,
+  "tiles": null,
+  "trip_id": "00000009"
+}

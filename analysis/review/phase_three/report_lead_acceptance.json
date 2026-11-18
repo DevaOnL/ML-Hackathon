@@ -1,0 +1,40 @@
+{
+  "checked_at_utc": "2026-11-18T08:07:29.696Z",
+  "passed": true,
+  "final_pdf": {
+    "path": "reports/phase_three/PathSnap_Technical_Report.pdf",
+    "sha256": "a7bf13c4060adcd174c32835325d42bab311e8329ceb2776547ad78d80346603",
+    "pages": 23
+  },
+  "report_manifest": "reports/phase_three/report_manifest.json",
+  "evidence_facts": 209,
+  "embedded_figures": 20,
+  "final_render_guards": 18,
+  "python_tests": 179,
+  "hosting_tests": 28,
+  "frontend_adapter_tests": 8,
+  "frontend_smoke_passed": true,
+  "clean_checkout_without_raw_data_passed": true,
+  "privacy_full_branch_scan_passed": true,
+  "independent_review": "analysis/review/phase_three/report_evidence_review.json",
+  "review_nits_resolved": [
+    {
+      "id": "D1",
+      "resolution": "Map prose now explicitly states trip 00000009 reference has no broken joins."
+    },
+    {
+      "id": "D2",
+      "resolution": "Transition scale prose explicitly records raw residual beta 1.424672666285088 m and its 2 m clamp."
+    }
+  ],
+  "review_scope_note": "Required report and figure subagents finished. Lead corrected scientific prose after their handoff, preserved immutable model/measurement bytes, strengthened full delivery guards, retained reusable report template, and verified actual final PDF and clean publication checkout. No human visual inspection claimed.",
+  "model_sha256": "c7f2572d5d037d07a5c07710fbb1ffefd4ff13fbe866c8940022e4902669c733",
+  "evaluator_request": {
+    "human_reported_new_trip_count": 10,
+    "inputs_accessed": false,
+    "predicted": false,
+    "scored": false,
+    "training_or_selection_use": false,
+    "website_section": "deferred at human request until after current report and publication"
+  }
+}

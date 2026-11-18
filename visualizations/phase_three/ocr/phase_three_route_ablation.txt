@@ -1,0 +1,85 @@
+Phase-three final route ablation: classifier-only vs classifier+HMM vs geometry-only
+
+Route count F1 (arc multiset)
+
+Route length F1 (metres)
+
+Ordered edit similarity
+
+-
+
+Route contingdty (1/jumps)
+
+0.949
+
+0.926
+
+0.914
+
+0.875
+
+0.817
+
+0.81
+
+0.81
+
+0.8
+
+0.8
+
+0.764
+
+0.742
+
+0.627
+
+0.6
+
+0.6
+
+0.6
+
+0.6
+
+0.4
+
+0.4
+
+0.4
+
+0.4
+
+0.2 A
+
+0.2 A
+
+0.2
+
+0.2 1
+
+0.0 -
+
+0.0 -
+
+0.0 -
+
+0.0 -
+
+Classifier onGyassifier + @dthhetry-only HMM
+
+Classifier on@Yfassifier + @dthhetry-only HMM
+
+Classifier on@Ylassifier + @dthhetry-only HMM
+
+Classifier on@Yassifier + @dthhetry-only HMM
+
+(raw argmax seq¥itisstodieabT@AIN fit, reused read-only)
+
+(raw argmax seq¥itisstbdieabd@AIN fit, reused read-only)
+
+(raw argmax seqWitisstodieabd@AIN fit, reused read-only)
+
+(raw argmax sequvitissitiodieadT@AIN fit, reused read-only)
+
+New phase decoder evidence (reports/phase_three/decoder) on all 10 student development trips; trip-macro denominator 10 trips, failed trips counted as zero (none failed). Pooled route count F1 shown in report tables. Route discontinuities per tri

@@ -14,7 +14,7 @@ https://ml.d3va.dev
 
 No router port forwarding or changes to existing web-server configurations are required. Ports 80, 8080, 4000 and 3001 belong to unrelated services and must not be stopped, rebound or reconfigured. The deployment scripts are fixed to this one hostname, tunnel name and local origin. They do not manage any other website.
 
-The latest measured state is [deployment-status.json](<evidence/deployment-status.json>). Successful static-stage checks are recorded in [local-static.json](<evidence/local-static.json>). A configured service is not evidence of public reachability: check the timestamps and individual results. A public-live claim requires successful HTTPS, ready model health and a real POST match.
+The latest measured state is [deployment-status.json](<infrastructure/evidence/deployment-status.json>). The dedicated Cloudflare tunnel and proxied exact-hostname CNAME are now provisioned. Standard public HTTPS, ready health, private-file/foreign-Origin denial and a real trip `00000009` POST passed in [initial public evidence](<infrastructure/evidence/public-initial-verified.json>); no DNS override or insecure TLS mode was used. That initial check used the earlier HistGradientBoosting model while the newly requested Logistic/KNN/Bagging phase was training. Do not treat it as final evidence for that newer phase. Earlier static-stage checks remain historical in [local-static.json](<infrastructure/evidence/local-static.json>).
 
 ## Files and ownership
 

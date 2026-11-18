@@ -1,0 +1,303 @@
+{
+  "eda_reused_read_only": [
+    {
+      "exists": true,
+      "path": "visualizations/plots/dataset_inventory.png",
+      "read_only_link": true,
+      "sha256_matches": true
+    },
+    {
+      "exists": true,
+      "path": "visualizations/plots/missing_invalid_and_anomalies.png",
+      "read_only_link": true,
+      "sha256_matches": true
+    },
+    {
+      "exists": true,
+      "path": "visualizations/plots/trajectory_distributions.png",
+      "read_only_link": true,
+      "sha256_matches": true
+    },
+    {
+      "exists": true,
+      "path": "visualizations/plots/timestamp_gaps.png",
+      "read_only_link": true,
+      "sha256_matches": true
+    },
+    {
+      "exists": true,
+      "path": "visualizations/plots/road_network_sizes_connectivity.png",
+      "read_only_link": true,
+      "sha256_matches": true
+    },
+    {
+      "exists": true,
+      "path": "visualizations/plots/gps_geographic_coverage.png",
+      "read_only_link": true,
+      "sha256_matches": true
+    },
+    {
+      "exists": true,
+      "path": "visualizations/plots/gps_trip_gallery_train_01.png",
+      "read_only_link": true,
+      "sha256_matches": true
+    },
+    {
+      "exists": true,
+      "path": "visualizations/plots/gps_trip_gallery_train_02.png",
+      "read_only_link": true,
+      "sha256_matches": true
+    },
+    {
+      "exists": true,
+      "path": "visualizations/plots/gps_trip_gallery_train_03.png",
+      "read_only_link": true,
+      "sha256_matches": true
+    },
+    {
+      "exists": true,
+      "path": "visualizations/plots/gps_trip_gallery_train_04.png",
+      "read_only_link": true,
+      "sha256_matches": true
+    },
+    {
+      "exists": true,
+      "path": "visualizations/plots/gps_trip_gallery_student_test_01.png",
+      "read_only_link": true,
+      "sha256_matches": true
+    },
+    {
+      "exists": true,
+      "path": "visualizations/plots/representative_road_route.png",
+      "read_only_link": true,
+      "sha256_matches": true
+    }
+  ],
+  "evaluator_leakage_scan": {
+    "hits": []
+  },
+  "figures": [
+    {
+      "bytes": 90839,
+      "exists": true,
+      "inside_phase_scope": true,
+      "path": "visualizations/phase_three/plots/phase_three_cv_macro_f1_comparison.png",
+      "sha256_matches": true
+    },
+    {
+      "bytes": 76189,
+      "exists": true,
+      "inside_phase_scope": true,
+      "path": "visualizations/phase_three/plots/phase_three_binary_log_loss.png",
+      "sha256_matches": true
+    },
+    {
+      "bytes": 208061,
+      "exists": true,
+      "inside_phase_scope": true,
+      "path": "visualizations/phase_three/plots/phase_three_training_inference_times.png",
+      "sha256_matches": true
+    },
+    {
+      "bytes": 112254,
+      "exists": true,
+      "inside_phase_scope": true,
+      "path": "visualizations/phase_three/plots/phase_three_generalization_macro_f1.png",
+      "sha256_matches": true
+    },
+    {
+      "bytes": 122078,
+      "exists": true,
+      "inside_phase_scope": true,
+      "path": "visualizations/phase_three/plots/phase_three_bayesian_trial_trace.png",
+      "sha256_matches": true
+    },
+    {
+      "bytes": 125066,
+      "exists": true,
+      "inside_phase_scope": true,
+      "path": "visualizations/phase_three/plots/phase_three_tuned_vs_untuned.png",
+      "sha256_matches": true
+    },
+    {
+      "bytes": 52817,
+      "exists": true,
+      "inside_phase_scope": true,
+      "path": "visualizations/phase_three/plots/phase_three_confusion_logistic_regression.png",
+      "sha256_matches": true
+    },
+    {
+      "bytes": 53626,
+      "exists": true,
+      "inside_phase_scope": true,
+      "path": "visualizations/phase_three/plots/phase_three_confusion_knn_distance_weighted.png",
+      "sha256_matches": true
+    },
+    {
+      "bytes": 53088,
+      "exists": true,
+      "inside_phase_scope": true,
+      "path": "visualizations/phase_three/plots/phase_three_confusion_bagging.png",
+      "sha256_matches": true
+    },
+    {
+      "bytes": 54826,
+      "exists": true,
+      "inside_phase_scope": true,
+      "path": "visualizations/phase_three/plots/phase_three_confusion_bagging_tuned.png",
+      "sha256_matches": true
+    },
+    {
+      "bytes": 141246,
+      "exists": true,
+      "inside_phase_scope": true,
+      "path": "visualizations/phase_three/plots/phase_three_confusion_matrices_all.png",
+      "sha256_matches": true
+    },
+    {
+      "bytes": 195780,
+      "exists": true,
+      "inside_phase_scope": true,
+      "path": "visualizations/phase_three/plots/phase_three_observation_level_metrics.png",
+      "sha256_matches": true
+    },
+    {
+      "bytes": 129263,
+      "exists": true,
+      "inside_phase_scope": true,
+      "path": "visualizations/phase_three/plots/phase_three_raw_classifier_continuity.png",
+      "sha256_matches": true
+    },
+    {
+      "bytes": 130848,
+      "exists": true,
+      "inside_phase_scope": true,
+      "path": "visualizations/phase_three/plots/phase_three_ambiguity_strata.png",
+      "sha256_matches": true
+    },
+    {
+      "bytes": 122609,
+      "exists": true,
+      "inside_phase_scope": true,
+      "path": "visualizations/phase_three/plots/phase_three_feature_importance.png",
+      "sha256_matches": true
+    },
+    {
+      "bytes": 151299,
+      "exists": true,
+      "inside_phase_scope": true,
+      "path": "visualizations/phase_three/plots/phase_three_route_ablation.png",
+      "sha256_matches": true
+    },
+    {
+      "bytes": 851507,
+      "exists": true,
+      "inside_phase_scope": true,
+      "path": "visualizations/phase_three/maps/phase_three_development_trip_00000009_final.html",
+      "sha256_matches": true
+    },
+    {
+      "bytes": 254510,
+      "exists": true,
+      "inside_phase_scope": true,
+      "path": "visualizations/phase_three/maps/phase_three_development_trip_00000009_final.png",
+      "sha256_matches": true
+    },
+    {
+      "bytes": 2824,
+      "exists": true,
+      "inside_phase_scope": true,
+      "path": "visualizations/phase_three/maps/phase_three_development_trip_00000009_final.browser.json",
+      "sha256_matches": true
+    },
+    {
+      "bytes": 2295,
+      "exists": true,
+      "inside_phase_scope": true,
+      "path": "visualizations/phase_three/maps/phase_three_development_trip_00000009_final.metadata.json",
+      "sha256_matches": true
+    },
+    {
+      "bytes": 989,
+      "exists": true,
+      "inside_phase_scope": true,
+      "path": "visualizations/phase_three/maps/phase_three_development_trip_00000009_final.ocr.txt",
+      "sha256_matches": true
+    }
+  ],
+  "generated_utc": "2026-11-18T07:44:23.539307+00:00",
+  "no_evaluator_data_accessed": true,
+  "ocr": [
+    {
+      "characters": 410,
+      "path": "visualizations/phase_three/ocr/phase_three_cv_macro_f1_comparison.txt"
+    },
+    {
+      "characters": 398,
+      "path": "visualizations/phase_three/ocr/phase_three_binary_log_loss.txt"
+    },
+    {
+      "characters": 1161,
+      "path": "visualizations/phase_three/ocr/phase_three_training_inference_times.txt"
+    },
+    {
+      "characters": 623,
+      "path": "visualizations/phase_three/ocr/phase_three_generalization_macro_f1.txt"
+    },
+    {
+      "characters": 614,
+      "path": "visualizations/phase_three/ocr/phase_three_bayesian_trial_trace.txt"
+    },
+    {
+      "characters": 792,
+      "path": "visualizations/phase_three/ocr/phase_three_tuned_vs_untuned.txt"
+    },
+    {
+      "characters": 305,
+      "path": "visualizations/phase_three/ocr/phase_three_confusion_logistic_regression.txt"
+    },
+    {
+      "characters": 308,
+      "path": "visualizations/phase_three/ocr/phase_three_confusion_knn_distance_weighted.txt"
+    },
+    {
+      "characters": 309,
+      "path": "visualizations/phase_three/ocr/phase_three_confusion_bagging.txt"
+    },
+    {
+      "characters": 317,
+      "path": "visualizations/phase_three/ocr/phase_three_confusion_bagging_tuned.txt"
+    },
+    {
+      "characters": 856,
+      "path": "visualizations/phase_three/ocr/phase_three_confusion_matrices_all.txt"
+    },
+    {
+      "characters": 1128,
+      "path": "visualizations/phase_three/ocr/phase_three_observation_level_metrics.txt"
+    },
+    {
+      "characters": 765,
+      "path": "visualizations/phase_three/ocr/phase_three_raw_classifier_continuity.txt"
+    },
+    {
+      "characters": 777,
+      "path": "visualizations/phase_three/ocr/phase_three_ambiguity_strata.txt"
+    },
+    {
+      "characters": 819,
+      "path": "visualizations/phase_three/ocr/phase_three_feature_importance.txt"
+    },
+    {
+      "characters": 1039,
+      "path": "visualizations/phase_three/ocr/phase_three_route_ablation.txt"
+    },
+    {
+      "characters": 977,
+      "path": "visualizations/phase_three/ocr/phase_three_development_trip_00000009_final.txt"
+    }
+  ],
+  "problems": [],
+  "status": "passed",
+  "visual_inspection_claim": "OCR/DOM/pixel evidence only; no image-tool visual inspection claimed"
+}

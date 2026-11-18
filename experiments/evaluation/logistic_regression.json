@@ -1,0 +1,620 @@
+{
+  "run_name": "logistic_regression",
+  "model_name": "logistic_regression",
+  "parameters": {
+    "C": 1.0,
+    "max_iter": 500,
+    "solver": "lbfgs"
+  },
+  "training_seconds": 1.021270029000334,
+  "train_inference_seconds": 0.03664783299973351,
+  "student_inference_seconds": 0.026222116999633727,
+  "student_inference_microseconds_per_observation": 1.3685864822355807,
+  "warnings": [],
+  "train_resubstitution_metrics": {
+    "accuracy": 0.9761043260113633,
+    "precision": 0.8805266403104711,
+    "recall": 0.8853110641091094,
+    "f1": 0.8829123706653574,
+    "macro_precision": 0.9337624850718099,
+    "macro_recall": 0.93585089978151,
+    "macro_f1": 0.9348034048857987,
+    "confusion_matrix": [
+      [
+        238747,
+        3294
+      ],
+      [
+        3145,
+        24277
+      ]
+    ],
+    "log_loss": 0.0675323784397404,
+    "candidate_rows": 269463,
+    "positive_rows": 27422,
+    "observations": 28000,
+    "candidate_present_observations": 27422,
+    "candidate_miss_count": 578,
+    "candidate_miss_rate": 0.020642857142857143,
+    "top1_accuracy": 0.8843214285714286,
+    "top1_accuracy_given_candidate": 0.9029611261031288,
+    "top1_correct_observations": 24761,
+    "metric_target": "route_projection_proxy_not_independent_per_GPS_ground_truth",
+    "per_trip": [
+      {
+        "trip_id": "00000001",
+        "observations": 350,
+        "top1_accuracy": 0.9571428571428572,
+        "candidate_miss_rate": 0.002857142857142857
+      },
+      {
+        "trip_id": "00000002",
+        "observations": 350,
+        "top1_accuracy": 0.8085714285714286,
+        "candidate_miss_rate": 0.08857142857142856
+      },
+      {
+        "trip_id": "00000003",
+        "observations": 350,
+        "top1_accuracy": 0.8171428571428572,
+        "candidate_miss_rate": 0.0
+      },
+      {
+        "trip_id": "00000004",
+        "observations": 350,
+        "top1_accuracy": 0.9142857142857143,
+        "candidate_miss_rate": 0.002857142857142857
+      },
+      {
+        "trip_id": "00000005",
+        "observations": 350,
+        "top1_accuracy": 0.98,
+        "candidate_miss_rate": 0.0
+      },
+      {
+        "trip_id": "00000006",
+        "observations": 350,
+        "top1_accuracy": 0.9457142857142857,
+        "candidate_miss_rate": 0.0
+      },
+      {
+        "trip_id": "00000008",
+        "observations": 350,
+        "top1_accuracy": 0.8028571428571428,
+        "candidate_miss_rate": 0.005714285714285714
+      },
+      {
+        "trip_id": "00000010",
+        "observations": 350,
+        "top1_accuracy": 0.68,
+        "candidate_miss_rate": 0.002857142857142857
+      },
+      {
+        "trip_id": "00000011",
+        "observations": 350,
+        "top1_accuracy": 0.9857142857142858,
+        "candidate_miss_rate": 0.0
+      },
+      {
+        "trip_id": "00000012",
+        "observations": 350,
+        "top1_accuracy": 0.9914285714285714,
+        "candidate_miss_rate": 0.0
+      },
+      {
+        "trip_id": "00000013",
+        "observations": 350,
+        "top1_accuracy": 0.9457142857142857,
+        "candidate_miss_rate": 0.0
+      },
+      {
+        "trip_id": "00000014",
+        "observations": 350,
+        "top1_accuracy": 0.8942857142857142,
+        "candidate_miss_rate": 0.002857142857142857
+      },
+      {
+        "trip_id": "00000016",
+        "observations": 350,
+        "top1_accuracy": 0.5828571428571429,
+        "candidate_miss_rate": 0.0
+      },
+      {
+        "trip_id": "00000018",
+        "observations": 350,
+        "top1_accuracy": 0.9171428571428571,
+        "candidate_miss_rate": 0.0
+      },
+      {
+        "trip_id": "00000019",
+        "observations": 350,
+        "top1_accuracy": 0.8485714285714285,
+        "candidate_miss_rate": 0.014285714285714285
+      },
+      {
+        "trip_id": "00000020",
+        "observations": 350,
+        "top1_accuracy": 0.9685714285714285,
+        "candidate_miss_rate": 0.008571428571428572
+      },
+      {
+        "trip_id": "00000021",
+        "observations": 350,
+        "top1_accuracy": 0.9285714285714286,
+        "candidate_miss_rate": 0.0
+      },
+      {
+        "trip_id": "00000022",
+        "observations": 350,
+        "top1_accuracy": 0.8942857142857142,
+        "candidate_miss_rate": 0.0
+      },
+      {
+        "trip_id": "00000024",
+        "observations": 350,
+        "top1_accuracy": 0.96,
+        "candidate_miss_rate": 0.0
+      },
+      {
+        "trip_id": "00000025",
+        "observations": 350,
+        "top1_accuracy": 0.9428571428571428,
+        "candidate_miss_rate": 0.0
+      },
+      {
+        "trip_id": "00000026",
+        "observations": 350,
+        "top1_accuracy": 0.9114285714285715,
+        "candidate_miss_rate": 0.0
+      },
+      {
+        "trip_id": "00000027",
+        "observations": 350,
+        "top1_accuracy": 0.9285714285714286,
+        "candidate_miss_rate": 0.0
+      },
+      {
+        "trip_id": "00000028",
+        "observations": 350,
+        "top1_accuracy": 0.9485714285714286,
+        "candidate_miss_rate": 0.005714285714285714
+      },
+      {
+        "trip_id": "00000029",
+        "observations": 350,
+        "top1_accuracy": 0.8885714285714286,
+        "candidate_miss_rate": 0.0
+      },
+      {
+        "trip_id": "00000031",
+        "observations": 350,
+        "top1_accuracy": 0.9314285714285714,
+        "candidate_miss_rate": 0.0
+      },
+      {
+        "trip_id": "00000032",
+        "observations": 350,
+        "top1_accuracy": 0.9257142857142857,
+        "candidate_miss_rate": 0.0
+      },
+      {
+        "trip_id": "00000033",
+        "observations": 350,
+        "top1_accuracy": 0.20285714285714285,
+        "candidate_miss_rate": 0.6571428571428571
+      },
+      {
+        "trip_id": "00000034",
+        "observations": 350,
+        "top1_accuracy": 0.9057142857142857,
+        "candidate_miss_rate": 0.0
+      },
+      {
+        "trip_id": "00000035",
+        "observations": 350,
+        "top1_accuracy": 0.8571428571428571,
+        "candidate_miss_rate": 0.0
+      },
+      {
+        "trip_id": "00000036",
+        "observations": 350,
+        "top1_accuracy": 0.8571428571428571,
+        "candidate_miss_rate": 0.0
+      },
+      {
+        "trip_id": "00000037",
+        "observations": 350,
+        "top1_accuracy": 0.9885714285714285,
+        "candidate_miss_rate": 0.0
+      },
+      {
+        "trip_id": "00000038",
+        "observations": 350,
+        "top1_accuracy": 0.9457142857142857,
+        "candidate_miss_rate": 0.0
+      },
+      {
+        "trip_id": "00000039",
+        "observations": 350,
+        "top1_accuracy": 0.9628571428571429,
+        "candidate_miss_rate": 0.0
+      },
+      {
+        "trip_id": "00000041",
+        "observations": 350,
+        "top1_accuracy": 0.9514285714285714,
+        "candidate_miss_rate": 0.0
+      },
+      {
+        "trip_id": "00000042",
+        "observations": 350,
+        "top1_accuracy": 0.9857142857142858,
+        "candidate_miss_rate": 0.0
+      },
+      {
+        "trip_id": "00000043",
+        "observations": 350,
+        "top1_accuracy": 0.7657142857142857,
+        "candidate_miss_rate": 0.04
+      },
+      {
+        "trip_id": "00000044",
+        "observations": 350,
+        "top1_accuracy": 0.9571428571428572,
+        "candidate_miss_rate": 0.0
+      },
+      {
+        "trip_id": "00000045",
+        "observations": 350,
+        "top1_accuracy": 0.9028571428571428,
+        "candidate_miss_rate": 0.0
+      },
+      {
+        "trip_id": "00000046",
+        "observations": 350,
+        "top1_accuracy": 0.9542857142857143,
+        "candidate_miss_rate": 0.0
+      },
+      {
+        "trip_id": "00000047",
+        "observations": 350,
+        "top1_accuracy": 0.88,
+        "candidate_miss_rate": 0.0
+      },
+      {
+        "trip_id": "00000048",
+        "observations": 350,
+        "top1_accuracy": 0.9828571428571429,
+        "candidate_miss_rate": 0.0
+      },
+      {
+        "trip_id": "00000050",
+        "observations": 350,
+        "top1_accuracy": 0.9714285714285714,
+        "candidate_miss_rate": 0.0
+      },
+      {
+        "trip_id": "00000051",
+        "observations": 350,
+        "top1_accuracy": 0.8171428571428572,
+        "candidate_miss_rate": 0.0
+      },
+      {
+        "trip_id": "00000053",
+        "observations": 350,
+        "top1_accuracy": 0.9057142857142857,
+        "candidate_miss_rate": 0.002857142857142857
+      },
+      {
+        "trip_id": "00000054",
+        "observations": 350,
+        "top1_accuracy": 0.09142857142857143,
+        "candidate_miss_rate": 0.5828571428571429
+      },
+      {
+        "trip_id": "00000055",
+        "observations": 350,
+        "top1_accuracy": 0.9628571428571429,
+        "candidate_miss_rate": 0.0
+      },
+      {
+        "trip_id": "00000057",
+        "observations": 350,
+        "top1_accuracy": 0.9171428571428571,
+        "candidate_miss_rate": 0.0
+      },
+      {
+        "trip_id": "00000058",
+        "observations": 350,
+        "top1_accuracy": 0.8914285714285715,
+        "candidate_miss_rate": 0.011428571428571429
+      },
+      {
+        "trip_id": "00000060",
+        "observations": 350,
+        "top1_accuracy": 0.9171428571428571,
+        "candidate_miss_rate": 0.0
+      },
+      {
+        "trip_id": "00000061",
+        "observations": 350,
+        "top1_accuracy": 0.7228571428571429,
+        "candidate_miss_rate": 0.05142857142857143
+      },
+      {
+        "trip_id": "00000062",
+        "observations": 350,
+        "top1_accuracy": 0.96,
+        "candidate_miss_rate": 0.0
+      },
+      {
+        "trip_id": "00000063",
+        "observations": 350,
+        "top1_accuracy": 0.8857142857142857,
+        "candidate_miss_rate": 0.0
+      },
+      {
+        "trip_id": "00000064",
+        "observations": 350,
+        "top1_accuracy": 0.9828571428571429,
+        "candidate_miss_rate": 0.002857142857142857
+      },
+      {
+        "trip_id": "00000066",
+        "observations": 350,
+        "top1_accuracy": 0.9257142857142857,
+        "candidate_miss_rate": 0.0
+      },
+      {
+        "trip_id": "00000068",
+        "observations": 350,
+        "top1_accuracy": 0.9285714285714286,
+        "candidate_miss_rate": 0.0
+      },
+      {
+        "trip_id": "00000069",
+        "observations": 350,
+        "top1_accuracy": 0.8771428571428571,
+        "candidate_miss_rate": 0.0
+      },
+      {
+        "trip_id": "00000070",
+        "observations": 350,
+        "top1_accuracy": 0.94,
+        "candidate_miss_rate": 0.0
+      },
+      {
+        "trip_id": "00000071",
+        "observations": 350,
+        "top1_accuracy": 0.9514285714285714,
+        "candidate_miss_rate": 0.0
+      },
+      {
+        "trip_id": "00000072",
+        "observations": 350,
+        "top1_accuracy": 0.6971428571428572,
+        "candidate_miss_rate": 0.12
+      },
+      {
+        "trip_id": "00000074",
+        "observations": 350,
+        "top1_accuracy": 0.8657142857142858,
+        "candidate_miss_rate": 0.002857142857142857
+      },
+      {
+        "trip_id": "00000075",
+        "observations": 350,
+        "top1_accuracy": 0.9371428571428572,
+        "candidate_miss_rate": 0.0
+      },
+      {
+        "trip_id": "00000078",
+        "observations": 350,
+        "top1_accuracy": 0.98,
+        "candidate_miss_rate": 0.0
+      },
+      {
+        "trip_id": "00000079",
+        "observations": 350,
+        "top1_accuracy": 0.9114285714285715,
+        "candidate_miss_rate": 0.0
+      },
+      {
+        "trip_id": "00000080",
+        "observations": 350,
+        "top1_accuracy": 0.9342857142857143,
+        "candidate_miss_rate": 0.0
+      },
+      {
+        "trip_id": "00000081",
+        "observations": 350,
+        "top1_accuracy": 0.9457142857142857,
+        "candidate_miss_rate": 0.0
+      },
+      {
+        "trip_id": "00000082",
+        "observations": 350,
+        "top1_accuracy": 0.8428571428571429,
+        "candidate_miss_rate": 0.0
+      },
+      {
+        "trip_id": "00000083",
+        "observations": 350,
+        "top1_accuracy": 0.88,
+        "candidate_miss_rate": 0.0
+      },
+      {
+        "trip_id": "00000084",
+        "observations": 350,
+        "top1_accuracy": 0.8428571428571429,
+        "candidate_miss_rate": 0.002857142857142857
+      },
+      {
+        "trip_id": "00000085",
+        "observations": 350,
+        "top1_accuracy": 0.92,
+        "candidate_miss_rate": 0.0
+      },
+      {
+        "trip_id": "00000086",
+        "observations": 350,
+        "top1_accuracy": 0.98,
+        "candidate_miss_rate": 0.0
+      },
+      {
+        "trip_id": "00000088",
+        "observations": 350,
+        "top1_accuracy": 0.92,
+        "candidate_miss_rate": 0.0
+      },
+      {
+        "trip_id": "00000089",
+        "observations": 350,
+        "top1_accuracy": 0.8657142857142858,
+        "candidate_miss_rate": 0.005714285714285714
+      },
+      {
+        "trip_id": "00000090",
+        "observations": 350,
+        "top1_accuracy": 0.8971428571428571,
+        "candidate_miss_rate": 0.005714285714285714
+      },
+      {
+        "trip_id": "00000092",
+        "observations": 350,
+        "top1_accuracy": 0.94,
+        "candidate_miss_rate": 0.0
+      },
+      {
+        "trip_id": "00000093",
+        "observations": 350,
+        "top1_accuracy": 0.8057142857142857,
+        "candidate_miss_rate": 0.03142857142857143
+      },
+      {
+        "trip_id": "00000095",
+        "observations": 350,
+        "top1_accuracy": 0.8371428571428572,
+        "candidate_miss_rate": 0.0
+      },
+      {
+        "trip_id": "00000096",
+        "observations": 350,
+        "top1_accuracy": 0.8628571428571429,
+        "candidate_miss_rate": 0.0
+      },
+      {
+        "trip_id": "00000097",
+        "observations": 350,
+        "top1_accuracy": 0.9771428571428571,
+        "candidate_miss_rate": 0.0
+      },
+      {
+        "trip_id": "00000098",
+        "observations": 350,
+        "top1_accuracy": 0.9485714285714286,
+        "candidate_miss_rate": 0.0
+      },
+      {
+        "trip_id": "00000099",
+        "observations": 350,
+        "top1_accuracy": 0.9057142857142857,
+        "candidate_miss_rate": 0.0
+      }
+    ],
+    "trip_macro_top1_accuracy": 0.8843214285714286
+  },
+  "student_metrics": {
+    "accuracy": 0.973722536381117,
+    "precision": 0.8712926978932297,
+    "recall": 0.8901833759991641,
+    "f1": 0.8806367418662946,
+    "macro_precision": 0.9289187433596937,
+    "macro_recall": 0.9370571878495536,
+    "macro_f1": 0.9329364512824421,
+    "confusion_matrix": [
+      [
+        154120,
+        2517
+      ],
+      [
+        2102,
+        17039
+      ]
+    ],
+    "log_loss": 0.06899899065600447,
+    "candidate_rows": 175778,
+    "positive_rows": 19141,
+    "observations": 19160,
+    "candidate_present_observations": 19141,
+    "candidate_miss_count": 19,
+    "candidate_miss_rate": 0.0009916492693110648,
+    "top1_accuracy": 0.8951983298538622,
+    "top1_accuracy_given_candidate": 0.8960869338070111,
+    "top1_correct_observations": 17152,
+    "metric_target": "route_projection_proxy_not_independent_per_GPS_ground_truth",
+    "per_trip": [
+      {
+        "trip_id": "00000000",
+        "observations": 2503,
+        "top1_accuracy": 0.9524570515381542,
+        "candidate_miss_rate": 0.0011985617259288853
+      },
+      {
+        "trip_id": "00000007",
+        "observations": 1354,
+        "top1_accuracy": 0.9202363367799113,
+        "candidate_miss_rate": 0.0
+      },
+      {
+        "trip_id": "00000009",
+        "observations": 1049,
+        "top1_accuracy": 0.8579599618684461,
+        "candidate_miss_rate": 0.0
+      },
+      {
+        "trip_id": "00000040",
+        "observations": 2995,
+        "top1_accuracy": 0.9402337228714525,
+        "candidate_miss_rate": 0.0
+      },
+      {
+        "trip_id": "00000052",
+        "observations": 262,
+        "top1_accuracy": 0.950381679389313,
+        "candidate_miss_rate": 0.0
+      },
+      {
+        "trip_id": "00000056",
+        "observations": 3958,
+        "top1_accuracy": 0.9103082364830722,
+        "candidate_miss_rate": 0.003284487114704396
+      },
+      {
+        "trip_id": "00000065",
+        "observations": 768,
+        "top1_accuracy": 0.9166666666666666,
+        "candidate_miss_rate": 0.0
+      },
+      {
+        "trip_id": "00000076",
+        "observations": 1486,
+        "top1_accuracy": 0.9253028263795424,
+        "candidate_miss_rate": 0.002018842530282638
+      },
+      {
+        "trip_id": "00000077",
+        "observations": 3911,
+        "top1_accuracy": 0.7946816670928152,
+        "candidate_miss_rate": 0.0
+      },
+      {
+        "trip_id": "00000091",
+        "observations": 874,
+        "top1_accuracy": 0.8775743707093822,
+        "candidate_miss_rate": 0.0
+      }
+    ],
+    "trip_macro_top1_accuracy": 0.9045802519778755
+  }
+}

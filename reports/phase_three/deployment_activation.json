@@ -1,0 +1,28 @@
+{
+  "checked_at_utc": "2026-11-18T07:21:16.755674+00:00",
+  "validation_passed": true,
+  "applied": true,
+  "scope": "only dedicated API artifact paths and API restart; tunnel, DNS, credentials and unit bytes unchanged",
+  "model_sha256": "c7f2572d5d037d07a5c07710fbb1ffefd4ff13fbe866c8940022e4902669c733",
+  "model_name": "bagging",
+  "match_config_hash": "e326b1afda125897cd784ab335fbcd7c869fcd70714c5203ef5c2c71977b3288",
+  "config_file_sha256": "10405aa6b6f370e41d4ddcb01207fd1e8f58900fd0395e541ee6bc78146168c5",
+  "origins": {
+    "http://127.0.0.1:8000": {
+      "status": "ready",
+      "model_name": "bagging",
+      "model_hash": "c7f2572d5d037d07a5c07710fbb1ffefd4ff13fbe866c8940022e4902669c733",
+      "match_config_hash": "e326b1afda125897cd784ab335fbcd7c869fcd70714c5203ef5c2c71977b3288",
+      "trip_count": 10,
+      "prediction_cache": false
+    },
+    "https://ml.d3va.dev": {
+      "status": "ready",
+      "model_name": "bagging",
+      "model_hash": "c7f2572d5d037d07a5c07710fbb1ffefd4ff13fbe866c8940022e4902669c733",
+      "match_config_hash": "e326b1afda125897cd784ab335fbcd7c869fcd70714c5203ef5c2c71977b3288",
+      "trip_count": 10,
+      "prediction_cache": false
+    }
+  }
+}

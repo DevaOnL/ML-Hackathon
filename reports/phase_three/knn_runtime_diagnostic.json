@@ -1,0 +1,30 @@
+{
+  "checked_at_utc": "2026-11-18T07:08:56.540820+00:00",
+  "model": "knn_distance_weighted",
+  "fixture": "257 deterministic TRAIN rows, no student read",
+  "exact_probability_equality_passed": false,
+  "max_abs_delta": 6.380593264979098e-07,
+  "rows_delta_over_1e12": 1,
+  "binary_threshold_decisions_equal": true,
+  "environments": {
+    ".venv": {
+      "versions": {
+        "numpy": "2.5.5",
+        "scipy": "1.18.0",
+        "sklearn": "1.8.0"
+      },
+      "sklearn_distribution": "user-local",
+      "scipy_distribution": "system"
+    },
+    ".venv-clean": {
+      "versions": {
+        "numpy": "2.5.5",
+        "scipy": "1.18.0",
+        "sklearn": "1.8.0"
+      },
+      "sklearn_distribution": "isolated-wheel",
+      "scipy_distribution": "isolated-wheel"
+    }
+  },
+  "decision": "Report the 6.38e-7 self-neighbor numerical difference honestly. Do not change model/bank/HPO mechanics after measurement; keep original training runtime for exact KNN metric reproduction. Selected Bagging still requires strict independent clean-environment equality."
+}

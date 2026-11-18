@@ -1,0 +1,764 @@
+{
+  "collected_at_utc": "2026-11-18T07:21:29.821623+00:00",
+  "base_url": "https://ml.d3va.dev",
+  "source": "actual HTTP requests to the running service",
+  "mocked": false,
+  "checks": [
+    {
+      "path": "/",
+      "status": 200,
+      "expected": 200,
+      "cache_control": "no-store, no-transform",
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "path": "/app.mjs",
+      "status": 200,
+      "expected": 200,
+      "cache_control": "no-store, no-transform",
+      "content_type": "text/javascript; charset=utf-8"
+    },
+    {
+      "path": "/styles.css",
+      "status": 200,
+      "expected": 200,
+      "cache_control": "no-store, no-transform",
+      "content_type": "text/css; charset=utf-8"
+    },
+    {
+      "path": "/vendor/leaflet/leaflet.js",
+      "status": 200,
+      "expected": 200,
+      "cache_control": "no-store, no-transform",
+      "content_type": "text/javascript; charset=utf-8"
+    },
+    {
+      "path": "/.env",
+      "status": 404,
+      "expected": 404,
+      "cache_control": "no-store, no-transform",
+      "content_type": "application/json"
+    },
+    {
+      "path": "/.git/config",
+      "status": 404,
+      "expected": 404,
+      "cache_control": "no-store, no-transform",
+      "content_type": "application/json"
+    },
+    {
+      "path": "/artifacts/model.joblib",
+      "status": 404,
+      "expected": 404,
+      "cache_control": "no-store, no-transform",
+      "content_type": "application/json"
+    },
+    {
+      "path": "/visualizations/",
+      "status": 404,
+      "expected": 404,
+      "cache_control": "no-store, no-transform",
+      "content_type": "application/json"
+    },
+    {
+      "path": "/docs",
+      "status": 404,
+      "expected": 404,
+      "cache_control": "no-store, no-transform",
+      "content_type": "application/json"
+    },
+    {
+      "path": "/openapi.json",
+      "status": 404,
+      "expected": 404,
+      "cache_control": "no-store, no-transform",
+      "content_type": "application/json"
+    },
+    {
+      "path": "/Student%20folder/student_test/00000000/00000000.route",
+      "status": 404,
+      "expected": 404,
+      "cache_control": "no-store, no-transform",
+      "content_type": "application/json"
+    },
+    {
+      "invalid_request": {
+        "trip_id": "../../etc/passwd"
+      },
+      "status": 422
+    },
+    {
+      "invalid_request": {
+        "trip_id": 0
+      },
+      "status": 422
+    },
+    {
+      "invalid_request": {
+        "trip_id": "00000000",
+        "reference_route": [
+          0
+        ]
+      },
+      "status": 422
+    },
+    {
+      "foreign_origin_status": 403
+    }
+  ],
+  "matches": [
+    {
+      "trip_id": "00000000",
+      "http_status": 200,
+      "client_elapsed_ms": 6037.074482999742,
+      "request_id": "a1f12b7c33cb4c77aab07e918b8126a7",
+      "timings": {
+        "inference_ms": 3705.811,
+        "scoring_ms": 153.876,
+        "total_ms": 3866.748
+      },
+      "metrics": {
+        "accuracy": 0.9664402716739912,
+        "precision": 0.9127105973591413,
+        "recall": 0.9041778673835125,
+        "macro_f1": 0.9042697011787563,
+        "top1_accuracy": 0.9540551338393928,
+        "candidate_miss_rate": 0.0,
+        "log_loss": 0.12116505877645145,
+        "route_continuity": 1.0,
+        "route_edge_f1": 0.9147286821705426,
+        "route_length_f1": 0.9943701900041059,
+        "sequence_similarity": 0.8509615384615384,
+        "classifier_accuracy": 0.9540551338393928,
+        "classifier_precision": 0.8570776588255286,
+        "classifier_recall": 0.8283088702601591,
+        "classifier_macro_f1": 0.8357767317086032,
+        "scored_observation_fraction": 1.0
+      },
+      "metrics_status": "ok",
+      "diagnostics": {
+        "observation_count": 2503,
+        "matched_observation_count": 2503,
+        "route_arc_count": 208,
+        "route_length_m": 51686.850946856444,
+        "break_count": 0,
+        "learned_emission_observations": 2503,
+        "lateral_distance_median_m": 5.932683695829022,
+        "lateral_distance_p95_m": 16.51287676192344,
+        "uses_reference_route": false,
+        "effective_max_candidates": 24,
+        "candidate_retry_attempt_count": 1,
+        "requested_max_candidates": 12
+      },
+      "model": {
+        "name": "bagging",
+        "sha256": "c7f2572d5d037d07a5c07710fbb1ffefd4ff13fbe866c8940022e4902669c733",
+        "algorithm": "learned_classifier_hmm_viterbi",
+        "feature_count": 38,
+        "seed": 20261118
+      },
+      "match_config_hash": "e326b1afda125897cd784ab335fbcd7c869fcd70714c5203ef5c2c71977b3288",
+      "prediction_feature_count": 1,
+      "raw_feature_count": 1,
+      "observation_assignment_count": 2503,
+      "predicted_geometry_sha256": "029f631ca124f73b52b3541a3e4770edfbb642b44680fc6baf033c919d859356",
+      "matched_edge_array_sha256": "210a4e05efb96b105f473240f03c22a10d78d5cb9ca82e1b7d4c3da5fec36411"
+    },
+    {
+      "trip_id": "00000007",
+      "http_status": 200,
+      "client_elapsed_ms": 2134.1264190014044,
+      "request_id": "ef65a9f70ee64aa4997ea0bfcf160429",
+      "timings": {
+        "inference_ms": 859.57,
+        "scoring_ms": 74.097,
+        "total_ms": 936.948
+      },
+      "metrics": {
+        "accuracy": 0.9630723781388478,
+        "precision": 0.974910394265233,
+        "recall": 0.9698212278218525,
+        "macro_f1": 0.9719281577923006,
+        "top1_accuracy": 0.9682422451994092,
+        "candidate_miss_rate": 0.0,
+        "log_loss": 0.0996477500324056,
+        "route_continuity": 1.0,
+        "route_edge_f1": 0.979757085020243,
+        "route_length_f1": 0.9872060755780206,
+        "sequence_similarity": 0.967741935483871,
+        "classifier_accuracy": 0.9682422451994092,
+        "classifier_precision": 0.974910394265233,
+        "classifier_recall": 0.969951850266196,
+        "classifier_macro_f1": 0.9721238843311026,
+        "scored_observation_fraction": 1.0
+      },
+      "metrics_status": "ok",
+      "diagnostics": {
+        "observation_count": 1354,
+        "matched_observation_count": 1354,
+        "route_arc_count": 124,
+        "route_length_m": 22405.227046491404,
+        "break_count": 0,
+        "learned_emission_observations": 1354,
+        "lateral_distance_median_m": 4.471726180007524,
+        "lateral_distance_p95_m": 25.72383284320069,
+        "uses_reference_route": false,
+        "effective_max_candidates": 12,
+        "candidate_retry_attempt_count": 0,
+        "requested_max_candidates": 12
+      },
+      "model": {
+        "name": "bagging",
+        "sha256": "c7f2572d5d037d07a5c07710fbb1ffefd4ff13fbe866c8940022e4902669c733",
+        "algorithm": "learned_classifier_hmm_viterbi",
+        "feature_count": 38,
+        "seed": 20261118
+      },
+      "match_config_hash": "e326b1afda125897cd784ab335fbcd7c869fcd70714c5203ef5c2c71977b3288",
+      "prediction_feature_count": 1,
+      "raw_feature_count": 1,
+      "observation_assignment_count": 1354,
+      "predicted_geometry_sha256": "fd5fd612c04d7e35897de939b51fcf9b3bbb3e37dae10c6020bef67368bd4bec",
+      "matched_edge_array_sha256": "f1b3063dab53091f27dd52194ef2e4b5e0d90b155592f06535329add25f4c239"
+    },
+    {
+      "trip_id": "00000009",
+      "http_status": 200,
+      "client_elapsed_ms": 4646.3927360000525,
+      "request_id": "3cf786eab86447df86d1cb3948e42d2c",
+      "timings": {
+        "inference_ms": 3456.639,
+        "scoring_ms": 163.978,
+        "total_ms": 3644.662
+      },
+      "metrics": {
+        "accuracy": 0.9132507149666349,
+        "precision": 0.8793289129997991,
+        "recall": 0.8672480473113384,
+        "macro_f1": 0.8672504872475089,
+        "top1_accuracy": 0.8741658722592945,
+        "candidate_miss_rate": 0.0,
+        "log_loss": 0.45152632253364805,
+        "route_continuity": 1.0,
+        "route_edge_f1": 0.9646522234891676,
+        "route_length_f1": 0.9708657606175657,
+        "sequence_similarity": 0.9419642857142857,
+        "classifier_accuracy": 0.8741658722592945,
+        "classifier_precision": 0.8254722316480037,
+        "classifier_recall": 0.7901603081531822,
+        "classifier_macro_f1": 0.7976331137851328,
+        "scored_observation_fraction": 1.0
+      },
+      "metrics_status": "ok",
+      "diagnostics": {
+        "observation_count": 1049,
+        "matched_observation_count": 1049,
+        "route_arc_count": 448,
+        "route_length_m": 11836.4842735812,
+        "break_count": 0,
+        "learned_emission_observations": 1049,
+        "lateral_distance_median_m": 4.545695768165574,
+        "lateral_distance_p95_m": 16.25879746716423,
+        "uses_reference_route": false,
+        "effective_max_candidates": 12,
+        "candidate_retry_attempt_count": 0,
+        "requested_max_candidates": 12
+      },
+      "model": {
+        "name": "bagging",
+        "sha256": "c7f2572d5d037d07a5c07710fbb1ffefd4ff13fbe866c8940022e4902669c733",
+        "algorithm": "learned_classifier_hmm_viterbi",
+        "feature_count": 38,
+        "seed": 20261118
+      },
+      "match_config_hash": "e326b1afda125897cd784ab335fbcd7c869fcd70714c5203ef5c2c71977b3288",
+      "prediction_feature_count": 1,
+      "raw_feature_count": 1,
+      "observation_assignment_count": 1049,
+      "predicted_geometry_sha256": "1c7de416b1ad354e1b8f12df53c6649d46a58629cea1dfc6e2d324fd6940e47a",
+      "matched_edge_array_sha256": "f1624ff2df93d619f64935530977101a1081d1ad276934910417199904c6a410"
+    },
+    {
+      "trip_id": "00000040",
+      "http_status": 200,
+      "client_elapsed_ms": 4011.318310000206,
+      "request_id": "a1976ec3b0464be495938f3865488109",
+      "timings": {
+        "inference_ms": 2226.147,
+        "scoring_ms": 229.19,
+        "total_ms": 2465.841
+      },
+      "metrics": {
+        "accuracy": 0.9739565943238732,
+        "precision": 0.9713083030490013,
+        "recall": 0.9678599727417395,
+        "macro_f1": 0.9668841020094033,
+        "top1_accuracy": 0.9512520868113522,
+        "candidate_miss_rate": 0.0,
+        "log_loss": 0.12514422863336302,
+        "route_continuity": 1.0,
+        "route_edge_f1": 0.9507692307692307,
+        "route_length_f1": 0.9770569846198006,
+        "sequence_similarity": 0.906158357771261,
+        "classifier_accuracy": 0.9512520868113522,
+        "classifier_precision": 0.8812963454459627,
+        "classifier_recall": 0.8610531711836434,
+        "classifier_macro_f1": 0.8669789743200748,
+        "scored_observation_fraction": 1.0
+      },
+      "metrics_status": "ok",
+      "diagnostics": {
+        "observation_count": 2995,
+        "matched_observation_count": 2995,
+        "route_arc_count": 341,
+        "route_length_m": 48381.555486211684,
+        "break_count": 0,
+        "learned_emission_observations": 2995,
+        "lateral_distance_median_m": 4.907739491348918,
+        "lateral_distance_p95_m": 14.922943734196412,
+        "uses_reference_route": false,
+        "effective_max_candidates": 12,
+        "candidate_retry_attempt_count": 0,
+        "requested_max_candidates": 12
+      },
+      "model": {
+        "name": "bagging",
+        "sha256": "c7f2572d5d037d07a5c07710fbb1ffefd4ff13fbe866c8940022e4902669c733",
+        "algorithm": "learned_classifier_hmm_viterbi",
+        "feature_count": 38,
+        "seed": 20261118
+      },
+      "match_config_hash": "e326b1afda125897cd784ab335fbcd7c869fcd70714c5203ef5c2c71977b3288",
+      "prediction_feature_count": 1,
+      "raw_feature_count": 1,
+      "observation_assignment_count": 2995,
+      "predicted_geometry_sha256": "2f3f9839bb6e96bfeb761163fa3787ff1cba63ecefc600d901d1ab89ac3f2124",
+      "matched_edge_array_sha256": "2e32b261b6bfbe24b8c4991d4657e602d165a8fd0dc24e835912c741874f8c92"
+    },
+    {
+      "trip_id": "00000052",
+      "http_status": 200,
+      "client_elapsed_ms": 1097.3891379999259,
+      "request_id": "e5678a890bcb45b69a69f60f888ba797",
+      "timings": {
+        "inference_ms": 374.743,
+        "scoring_ms": 27.71,
+        "total_ms": 403.003
+      },
+      "metrics": {
+        "accuracy": 0.9885496183206107,
+        "precision": 0.9847560975609756,
+        "recall": 0.9869918699186992,
+        "macro_f1": 0.9815771556730346,
+        "top1_accuracy": 0.9580152671755725,
+        "candidate_miss_rate": 0.0,
+        "log_loss": 0.11355496334532364,
+        "route_continuity": 1.0,
+        "route_edge_f1": 0.9893617021276596,
+        "route_length_f1": 0.9984313996369834,
+        "sequence_similarity": 0.9789473684210527,
+        "classifier_accuracy": 0.9580152671755725,
+        "classifier_precision": 0.8694444444444445,
+        "classifier_recall": 0.8553439153439153,
+        "classifier_macro_f1": 0.8572888159095057,
+        "scored_observation_fraction": 1.0
+      },
+      "metrics_status": "ok",
+      "diagnostics": {
+        "observation_count": 262,
+        "matched_observation_count": 262,
+        "route_arc_count": 93,
+        "route_length_m": 5263.529511838453,
+        "break_count": 0,
+        "learned_emission_observations": 262,
+        "lateral_distance_median_m": 4.167115320100098,
+        "lateral_distance_p95_m": 12.641885863488504,
+        "uses_reference_route": false,
+        "effective_max_candidates": 12,
+        "candidate_retry_attempt_count": 0,
+        "requested_max_candidates": 12
+      },
+      "model": {
+        "name": "bagging",
+        "sha256": "c7f2572d5d037d07a5c07710fbb1ffefd4ff13fbe866c8940022e4902669c733",
+        "algorithm": "learned_classifier_hmm_viterbi",
+        "feature_count": 38,
+        "seed": 20261118
+      },
+      "match_config_hash": "e326b1afda125897cd784ab335fbcd7c869fcd70714c5203ef5c2c71977b3288",
+      "prediction_feature_count": 1,
+      "raw_feature_count": 1,
+      "observation_assignment_count": 262,
+      "predicted_geometry_sha256": "1aa631caf92c09f38e4364c21fb8ba0a638d6736ece0f45c221994de7f244927",
+      "matched_edge_array_sha256": "70c95f7c07cced2338f12b2c040f507bf17b1d617e1aef6c616ce1d40fd17ecd"
+    },
+    {
+      "trip_id": "00000056",
+      "http_status": 200,
+      "client_elapsed_ms": 21102.877816001637,
+      "request_id": "f82d1e9e5e2c47fe89c7fa681bee88f9",
+      "timings": {
+        "inference_ms": 17535.275,
+        "scoring_ms": 1233.861,
+        "total_ms": 18894.841
+      },
+      "metrics": {
+        "accuracy": 0.922688226376958,
+        "precision": 0.8837800682706137,
+        "recall": 0.873620831953087,
+        "macro_f1": 0.869048943275969,
+        "top1_accuracy": 0.9163719050025265,
+        "candidate_miss_rate": 0.003031834259727135,
+        "log_loss": 0.3756584743076872,
+        "route_continuity": 1.0,
+        "route_edge_f1": 0.9875893192929672,
+        "route_length_f1": 0.9891440694610094,
+        "sequence_similarity": 0.9790419161676647,
+        "classifier_accuracy": 0.9163719050025265,
+        "classifier_precision": 0.8665290238215883,
+        "classifier_recall": 0.8441158525142701,
+        "classifier_macro_f1": 0.8473773623637246,
+        "scored_observation_fraction": 1.0
+      },
+      "metrics_status": "ok",
+      "diagnostics": {
+        "observation_count": 3958,
+        "matched_observation_count": 3958,
+        "route_arc_count": 1336,
+        "route_length_m": 65928.36876171197,
+        "break_count": 0,
+        "learned_emission_observations": 3958,
+        "lateral_distance_median_m": 4.782209643930918,
+        "lateral_distance_p95_m": 14.152087882567425,
+        "uses_reference_route": false,
+        "effective_max_candidates": 24,
+        "candidate_retry_attempt_count": 1,
+        "requested_max_candidates": 12
+      },
+      "model": {
+        "name": "bagging",
+        "sha256": "c7f2572d5d037d07a5c07710fbb1ffefd4ff13fbe866c8940022e4902669c733",
+        "algorithm": "learned_classifier_hmm_viterbi",
+        "feature_count": 38,
+        "seed": 20261118
+      },
+      "match_config_hash": "e326b1afda125897cd784ab335fbcd7c869fcd70714c5203ef5c2c71977b3288",
+      "prediction_feature_count": 1,
+      "raw_feature_count": 1,
+      "observation_assignment_count": 3958,
+      "predicted_geometry_sha256": "389fa0905bab817983cdd6c46b871af1a2b0b9295480149b556ad5b5eb6ddedc",
+      "matched_edge_array_sha256": "6c99fc070f113f6ca758e36ac48767130981953f2549e35aac02e13e41360df0"
+    },
+    {
+      "trip_id": "00000065",
+      "http_status": 200,
+      "client_elapsed_ms": 2727.474085000722,
+      "request_id": "75202c681867437795eea90320fbc960",
+      "timings": {
+        "inference_ms": 1906.083,
+        "scoring_ms": 58.447,
+        "total_ms": 1980.796
+      },
+      "metrics": {
+        "accuracy": 0.9466145833333334,
+        "precision": 0.9328356558283565,
+        "recall": 0.9142499908166514,
+        "macro_f1": 0.917397353858211,
+        "top1_accuracy": 0.9270833333333334,
+        "candidate_miss_rate": 0.0,
+        "log_loss": 0.23645029788487126,
+        "route_continuity": 1.0,
+        "route_edge_f1": 0.9797297297297297,
+        "route_length_f1": 0.9905188679472914,
+        "sequence_similarity": 0.9602649006622517,
+        "classifier_accuracy": 0.9270833333333334,
+        "classifier_precision": 0.8375830203644773,
+        "classifier_recall": 0.8020390950426346,
+        "classifier_macro_f1": 0.8140680948613999,
+        "scored_observation_fraction": 1.0
+      },
+      "metrics_status": "ok",
+      "diagnostics": {
+        "observation_count": 768,
+        "matched_observation_count": 768,
+        "route_arc_count": 151,
+        "route_length_m": 7981.339214739457,
+        "break_count": 0,
+        "learned_emission_observations": 768,
+        "lateral_distance_median_m": 4.375524578018963,
+        "lateral_distance_p95_m": 11.751681204864852,
+        "uses_reference_route": false,
+        "effective_max_candidates": 12,
+        "candidate_retry_attempt_count": 0,
+        "requested_max_candidates": 12
+      },
+      "model": {
+        "name": "bagging",
+        "sha256": "c7f2572d5d037d07a5c07710fbb1ffefd4ff13fbe866c8940022e4902669c733",
+        "algorithm": "learned_classifier_hmm_viterbi",
+        "feature_count": 38,
+        "seed": 20261118
+      },
+      "match_config_hash": "e326b1afda125897cd784ab335fbcd7c869fcd70714c5203ef5c2c71977b3288",
+      "prediction_feature_count": 1,
+      "raw_feature_count": 1,
+      "observation_assignment_count": 768,
+      "predicted_geometry_sha256": "2f8472d7b7896b3d3001fd09160eac98e9579e683329d87dffc7a8576fcb0c4e",
+      "matched_edge_array_sha256": "d5e8641d114dacc5d939d58123e09b532d3732cef5d349baa2be111cee34f7d3"
+    },
+    {
+      "trip_id": "00000076",
+      "http_status": 200,
+      "client_elapsed_ms": 12892.21952400112,
+      "request_id": "0b8f84171ca34978b250c3463576a1da",
+      "timings": {
+        "inference_ms": 11493.129,
+        "scoring_ms": 161.705,
+        "total_ms": 11757.031
+      },
+      "metrics": {
+        "accuracy": 0.9562584118438762,
+        "precision": 0.8825654460055574,
+        "recall": 0.8738525324876301,
+        "macro_f1": 0.8719057338371626,
+        "top1_accuracy": 0.9300134589502019,
+        "candidate_miss_rate": 0.002018842530282638,
+        "log_loss": 0.2156267412323749,
+        "route_continuity": 1.0,
+        "route_edge_f1": 0.9487179487179488,
+        "route_length_f1": 0.9792611208441182,
+        "sequence_similarity": 0.9113300492610837,
+        "classifier_accuracy": 0.9300134589502019,
+        "classifier_precision": 0.8187367763703641,
+        "classifier_recall": 0.7843557276763384,
+        "classifier_macro_f1": 0.793237491211618,
+        "scored_observation_fraction": 1.0
+      },
+      "metrics_status": "ok",
+      "diagnostics": {
+        "observation_count": 1486,
+        "matched_observation_count": 1486,
+        "route_arc_count": 406,
+        "route_length_m": 14013.396546844346,
+        "break_count": 0,
+        "learned_emission_observations": 1486,
+        "lateral_distance_median_m": 6.750135931883452,
+        "lateral_distance_p95_m": 18.375922509204585,
+        "uses_reference_route": false,
+        "effective_max_candidates": 12,
+        "candidate_retry_attempt_count": 0,
+        "requested_max_candidates": 12
+      },
+      "model": {
+        "name": "bagging",
+        "sha256": "c7f2572d5d037d07a5c07710fbb1ffefd4ff13fbe866c8940022e4902669c733",
+        "algorithm": "learned_classifier_hmm_viterbi",
+        "feature_count": 38,
+        "seed": 20261118
+      },
+      "match_config_hash": "e326b1afda125897cd784ab335fbcd7c869fcd70714c5203ef5c2c71977b3288",
+      "prediction_feature_count": 1,
+      "raw_feature_count": 1,
+      "observation_assignment_count": 1486,
+      "predicted_geometry_sha256": "7133d1fe82d4cf08c69ed8e73aebae5237e4200e31d9cda3f38f2669ab2ab009",
+      "matched_edge_array_sha256": "b2acd13593e7c960a444417c7a1821a87160284c4ea4a4c0ca7d17026b96d92d"
+    },
+    {
+      "trip_id": "00000077",
+      "http_status": 200,
+      "client_elapsed_ms": 5286.314405999292,
+      "request_id": "a4462c04c320469cb39624804c212908",
+      "timings": {
+        "inference_ms": 3942.974,
+        "scoring_ms": 267.338,
+        "total_ms": 4260.862
+      },
+      "metrics": {
+        "accuracy": 0.8253643569419585,
+        "precision": 0.8519364325872443,
+        "recall": 0.8319555746640569,
+        "macro_f1": 0.8328850942859528,
+        "top1_accuracy": 0.7936589107645103,
+        "candidate_miss_rate": 0.0,
+        "log_loss": 0.4660308694388143,
+        "route_continuity": 1.0,
+        "route_edge_f1": 0.7964338781575038,
+        "route_length_f1": 0.9154701824750813,
+        "sequence_similarity": 0.6617283950617283,
+        "classifier_accuracy": 0.7936589107645103,
+        "classifier_precision": 0.7754640476893672,
+        "classifier_recall": 0.7432787434831181,
+        "classifier_macro_f1": 0.7516005467676438,
+        "scored_observation_fraction": 1.0
+      },
+      "metrics_status": "ok",
+      "diagnostics": {
+        "observation_count": 3911,
+        "matched_observation_count": 3911,
+        "route_arc_count": 405,
+        "route_length_m": 18930.341653921947,
+        "break_count": 0,
+        "learned_emission_observations": 3911,
+        "lateral_distance_median_m": 6.086687174809847,
+        "lateral_distance_p95_m": 18.395741849060254,
+        "uses_reference_route": false,
+        "effective_max_candidates": 12,
+        "candidate_retry_attempt_count": 0,
+        "requested_max_candidates": 12
+      },
+      "model": {
+        "name": "bagging",
+        "sha256": "c7f2572d5d037d07a5c07710fbb1ffefd4ff13fbe866c8940022e4902669c733",
+        "algorithm": "learned_classifier_hmm_viterbi",
+        "feature_count": 38,
+        "seed": 20261118
+      },
+      "match_config_hash": "e326b1afda125897cd784ab335fbcd7c869fcd70714c5203ef5c2c71977b3288",
+      "prediction_feature_count": 1,
+      "raw_feature_count": 1,
+      "observation_assignment_count": 3911,
+      "predicted_geometry_sha256": "a372215910dd4e4c3f7131df28a7dd1d6677d70ca30201a51b5fdf1ee9228a8d",
+      "matched_edge_array_sha256": "7ed661189625dce4762f179fe2dcf3cb5e418c757cc9ffa2a8eecb1224711b5b"
+    },
+    {
+      "trip_id": "00000091",
+      "http_status": 200,
+      "client_elapsed_ms": 3172.414693999599,
+      "request_id": "bccdb0d786894b24b255c6d92934b157",
+      "timings": {
+        "inference_ms": 2112.422,
+        "scoring_ms": 82.186,
+        "total_ms": 2217.911
+      },
+      "metrics": {
+        "accuracy": 0.919908466819222,
+        "precision": 0.8630319588680626,
+        "recall": 0.8444816468253968,
+        "macro_f1": 0.8478497993860167,
+        "top1_accuracy": 0.8890160183066361,
+        "candidate_miss_rate": 0.0,
+        "log_loss": 0.3149995431726507,
+        "route_continuity": 1.0,
+        "route_edge_f1": 0.9806451612903226,
+        "route_length_f1": 0.986475156801284,
+        "sequence_similarity": 0.9785407725321889,
+        "classifier_accuracy": 0.8890160183066361,
+        "classifier_precision": 0.833488612836439,
+        "classifier_recall": 0.7926043697748248,
+        "classifier_macro_f1": 0.8033985984634344,
+        "scored_observation_fraction": 1.0
+      },
+      "metrics_status": "ok",
+      "diagnostics": {
+        "observation_count": 874,
+        "matched_observation_count": 874,
+        "route_arc_count": 233,
+        "route_length_m": 9395.87626356349,
+        "break_count": 0,
+        "learned_emission_observations": 874,
+        "lateral_distance_median_m": 4.2972098453481555,
+        "lateral_distance_p95_m": 12.009135692643644,
+        "uses_reference_route": false,
+        "effective_max_candidates": 12,
+        "candidate_retry_attempt_count": 0,
+        "requested_max_candidates": 12
+      },
+      "model": {
+        "name": "bagging",
+        "sha256": "c7f2572d5d037d07a5c07710fbb1ffefd4ff13fbe866c8940022e4902669c733",
+        "algorithm": "learned_classifier_hmm_viterbi",
+        "feature_count": 38,
+        "seed": 20261118
+      },
+      "match_config_hash": "e326b1afda125897cd784ab335fbcd7c869fcd70714c5203ef5c2c71977b3288",
+      "prediction_feature_count": 1,
+      "raw_feature_count": 1,
+      "observation_assignment_count": 874,
+      "predicted_geometry_sha256": "470f2839a87ee26fd6fdbae7e7aa928ed3a87af8db8a76fc72a4543435a74b70",
+      "matched_edge_array_sha256": "bf376259d9e1437151c392967fb3ce7ba83aa08ecd4d2aa0f17fbfd71621e010"
+    }
+  ],
+  "all_ten_requested": true,
+  "health": {
+    "status": "ready",
+    "model_loaded": true,
+    "model_name": "bagging",
+    "algorithm": "learned_classifier_hmm_viterbi",
+    "model_hash": "c7f2572d5d037d07a5c07710fbb1ffefd4ff13fbe866c8940022e4902669c733",
+    "model_metadata_loaded": true,
+    "match_config_hash": "e326b1afda125897cd784ab335fbcd7c869fcd70714c5203ef5c2c71977b3288",
+    "dataset_role": "development",
+    "trip_count": 10,
+    "expected_trip_count": 10,
+    "inference_concurrency": 1,
+    "prediction_cache": false,
+    "errors": []
+  },
+  "health_http_status": 200,
+  "catalog": {
+    "trips": [
+      {
+        "trip_id": "00000000",
+        "observation_count": 2503,
+        "duration_s": 2503.0
+      },
+      {
+        "trip_id": "00000007",
+        "observation_count": 1354,
+        "duration_s": 1353.0
+      },
+      {
+        "trip_id": "00000009",
+        "observation_count": 1049,
+        "duration_s": 1049.0
+      },
+      {
+        "trip_id": "00000040",
+        "observation_count": 2995,
+        "duration_s": 2994.0
+      },
+      {
+        "trip_id": "00000052",
+        "observation_count": 262,
+        "duration_s": 265.0
+      },
+      {
+        "trip_id": "00000056",
+        "observation_count": 3958,
+        "duration_s": 4000.0
+      },
+      {
+        "trip_id": "00000065",
+        "observation_count": 768,
+        "duration_s": 1037.0
+      },
+      {
+        "trip_id": "00000076",
+        "observation_count": 1486,
+        "duration_s": 2266.0
+      },
+      {
+        "trip_id": "00000077",
+        "observation_count": 3911,
+        "duration_s": 3910.0
+      },
+      {
+        "trip_id": "00000091",
+        "observation_count": 874,
+        "duration_s": 873.0
+      }
+    ],
+    "count": 10,
+    "expected_count": 10,
+    "dataset_role": "development"
+  },
+  "freeze": {
+    "model_sha256": "c7f2572d5d037d07a5c07710fbb1ffefd4ff13fbe866c8940022e4902669c733",
+    "config_file_sha256": "10405aa6b6f370e41d4ddcb01207fd1e8f58900fd0395e541ee6bc78146168c5",
+    "decoder_spaced_config_sha256": "8b5bee1d217eddcd4e05156a87fe572394676c0798ec93eece5d5d1651f9c0d8",
+    "api_compact_config_sha256": "e326b1afda125897cd784ab335fbcd7c869fcd70714c5203ef5c2c71977b3288"
+  },
+  "completed_at_utc": "2026-11-18T07:22:49.748936+00:00",
+  "attempted_count": 10,
+  "successful_count": 10
+}

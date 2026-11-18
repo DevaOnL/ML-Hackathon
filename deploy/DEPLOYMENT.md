@@ -47,10 +47,10 @@ or stop it. Manual host/port changes require explicit configuration.
 
 ## Required trusted assets
 
-- The model at `artifacts/model.joblib`, produced by the submitted training code,
-  with matching `artifacts/model_metadata.json`. The UI receives only safe model
+- The model at `artifacts/phase_three/model.joblib`, produced by the submitted training code,
+  with matching `artifacts/phase_three/model_metadata.json`. The UI receives only safe model
   name/hash/feature-count/seed metadata, never training IDs or estimator internals.
-- Decoder JSON at `artifacts/match_config.json`. The default path is loaded if
+- Decoder JSON at `artifacts/phase_three/match_config.json`. The default path is loaded if
   present; an explicitly configured missing file is an error. Effective settings
   including defaults are hashed in health, requests and logs. Final model/config
   assets must be frozen before a persistent deployment starts.
@@ -78,9 +78,9 @@ does not implicitly read this example.
 | `PATHSNAP_DATA_DIR` | `Student folder/student_test` relative to repository root |
 | `PATHSNAP_DATASET_ROLE` | `development` for the default root, otherwise `evaluator`; may explicitly select one |
 | `PATHSNAP_REFERENCE_DIR` | Omitted: private .route beside each input; set to a separate private root if available |
-| `PATHSNAP_MODEL` | `artifacts/model.joblib` |
+| `PATHSNAP_MODEL` | `artifacts/phase_three/model.joblib` |
 | `PATHSNAP_MODEL_METADATA` | `model_metadata.json` next to the chosen model |
-| `PATHSNAP_MATCH_CONFIG` | `artifacts/match_config.json` if present; an explicit nonempty value must exist and validate |
+| `PATHSNAP_MATCH_CONFIG` | `artifacts/phase_three/match_config.json` if present; an explicit nonempty value must exist and validate |
 | `PATHSNAP_CORS_ORIGINS` | Empty: same-origin hosting only; otherwise comma-separated exact http(s) origins, no wildcards/paths |
 | `PATHSNAP_GRAPH_CACHE_SIZE` | 2 input graphs; no model outputs or labels are cached |
 | `PATHSNAP_INFERENCE_CONCURRENCY` | 1 active match, additional matches HTTP 429 |
@@ -103,8 +103,8 @@ through the authorized process. Keep references on this computer only, then set:
 export PATHSNAP_DATA_DIR=/private/pathsnap/evaluator_inputs
 export PATHSNAP_REFERENCE_DIR=/private/pathsnap/evaluator_references
 export PATHSNAP_DATASET_ROLE=evaluator
-export PATHSNAP_MODEL=artifacts/model.joblib
-export PATHSNAP_MATCH_CONFIG=artifacts/match_config.json
+export PATHSNAP_MODEL=artifacts/phase_three/model.joblib
+export PATHSNAP_MATCH_CONFIG=artifacts/phase_three/match_config.json
 ```
 
 Restart using the documented managed process. Verify health says evaluator role,
@@ -172,7 +172,7 @@ as a nonroot user with dropped capabilities and a read-only root filesystem.
 ```bash
 export PATHSNAP_HOST_DATA_DIR="/absolute/path/to/Student folder/student_test"
 export PATHSNAP_HOST_REFERENCE_DIR="/absolute/path/to/private/references"
-export PATHSNAP_HOST_ARTIFACTS="/absolute/path/to/artifacts"
+export PATHSNAP_HOST_ARTIFACTS="/absolute/path/to/artifacts/phase_three"
 export PATHSNAP_DATASET_ROLE=development
 # Choose readable mount permissions for container UID 10001; never make secrets public.
 docker compose -f deploy/compose.yaml up --build -d

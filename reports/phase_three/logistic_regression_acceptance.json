@@ -1,0 +1,21 @@
+{
+  "checked_at_utc": "2026-11-18T06:57:18.278318+00:00",
+  "passed": true,
+  "phase": "requested-trio",
+  "model": "logistic_regression",
+  "actual_classifier": "LogisticRegression",
+  "artifact_sha256": "29157349d52a993d33cae78ed244805a9f087e79b6dc914aaa3b4461c02a58c9",
+  "training_trip_count": 80,
+  "tested_trip_count": 10,
+  "tested_observations": 19160,
+  "tested_candidate_rows": 175778,
+  "saved_probability_max_abs_delta": 2.220446049250313e-15,
+  "metrics": {
+    "top1_accuracy": 0.8951983298538622,
+    "trip_macro_top1_accuracy": 0.9045802519778755,
+    "macro_f1": 0.9329364512824421,
+    "log_loss": 0.06899899065600447,
+    "candidate_miss_count": 19
+  },
+  "note": "Real saved all80 TRAIN fit independently rerun on all10 student-development classifier rows; no fitting, decoder, HTTP, screenshots or reference prediction leakage."
+}

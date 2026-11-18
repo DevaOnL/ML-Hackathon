@@ -1,0 +1,232 @@
+{
+  "method": "GaussianProcessRegressor Matern-5/2 surrogate + analytic expected improvement",
+  "phase": "three-model-first",
+  "model_name": "bagging",
+  "search_space": {
+    "n_estimators": [
+      "int",
+      30,
+      80
+    ],
+    "max_samples": [
+      "float",
+      0.5,
+      0.9
+    ],
+    "max_depth": [
+      "int",
+      8,
+      20
+    ],
+    "min_samples_leaf": [
+      "logint",
+      2,
+      10
+    ]
+  },
+  "objective": "maximize out-of-fold equal-trip mean observation top1 proxy accuracy; fixed 3-fold GroupKFold on all 80 TRAIN trips",
+  "selection_data": "TRAIN only; student_test metrics not loaded during HPO",
+  "trials_including_measured_prior": 8,
+  "seeded_initial_design_trials": 2,
+  "model_based_trials": 5,
+  "best_cv_run_name": "bayes_bagging_01",
+  "best_parameters": {
+    "n_estimators": 48,
+    "max_samples": 0.7160628448832399,
+    "max_depth": 13,
+    "min_samples_leaf": 2
+  },
+  "best_objective": 0.8925000000000001,
+  "baseline_objective": 0.8914642857142857,
+  "improvement": 0.001035714285714362,
+  "seconds": 1489.5785494979991,
+  "trials": [
+    {
+      "trial": 0,
+      "proposal": "measured_baseline_prior",
+      "parameters": {
+        "n_estimators": 40,
+        "max_samples": 0.7,
+        "max_depth": 14,
+        "min_samples_leaf": 3
+      },
+      "objective": 0.8914642857142857,
+      "cv_macro_f1": 0.9426144376936816,
+      "cv_log_loss": 0.057221017455649795,
+      "cv_file": "cv/bagging.json",
+      "cv_seconds": 204.12170614599927,
+      "reused_actual_baseline": true
+    },
+    {
+      "trial": 1,
+      "proposal": "seeded_initial_design",
+      "parameters": {
+        "n_estimators": 48,
+        "max_samples": 0.7160628448832399,
+        "max_depth": 13,
+        "min_samples_leaf": 2
+      },
+      "objective": 0.8925000000000001,
+      "cv_macro_f1": 0.942631215656458,
+      "cv_log_loss": 0.05747021716523756,
+      "cv_file": "cv/bayes_bagging_01.json",
+      "cv_seconds": 231.58515013600118,
+      "proposal_seconds": 4.829899989999831e-05
+    },
+    {
+      "trial": 2,
+      "proposal": "seeded_initial_design",
+      "parameters": {
+        "n_estimators": 43,
+        "max_samples": 0.7553559545779576,
+        "max_depth": 10,
+        "min_samples_leaf": 2
+      },
+      "objective": 0.8906785714285714,
+      "cv_macro_f1": 0.9416651404431782,
+      "cv_log_loss": 0.05812698937046679,
+      "cv_file": "cv/bayes_bagging_02.json",
+      "cv_seconds": 173.92096786399998,
+      "proposal_seconds": 0.0001096500000130618
+    },
+    {
+      "trial": 3,
+      "proposal": "gaussian_process_expected_improvement",
+      "parameters": {
+        "n_estimators": 55,
+        "max_samples": 0.7361789065938883,
+        "max_depth": 13,
+        "min_samples_leaf": 2
+      },
+      "objective": 0.8909642857142857,
+      "cv_macro_f1": 0.9422264421943689,
+      "cv_log_loss": 0.057613941008475375,
+      "cv_file": "cv/bayes_bagging_03.json",
+      "cv_seconds": 265.23284771399994,
+      "proposal_seconds": 0.041471677001027274,
+      "predicted_objective_mean": 0.892133287488084,
+      "predicted_objective_std": 0.0005882105847989892,
+      "expected_improvement": 3.7763545508689e-05,
+      "exploration_xi": 0.0003,
+      "surrogate_kernel": "0.999**2 * Matern(length_scale=[0.168, 0.342, 0.03, 0.03], nu=2.5) + WhiteKernel(noise_level=0.001)",
+      "surrogate_training_points": 3,
+      "surrogate_warnings": [
+        "The optimal value found for dimension 2 of parameter k1__k2__length_scale is close to the specified lower bound 0.03. Decreasing the bound and calling fit again may find a better value.",
+        "The optimal value found for dimension 3 of parameter k1__k2__length_scale is close to the specified lower bound 0.03. Decreasing the bound and calling fit again may find a better value."
+      ],
+      "proposal_pool_size": 3072
+    },
+    {
+      "trial": 4,
+      "proposal": "gaussian_process_expected_improvement",
+      "parameters": {
+        "n_estimators": 48,
+        "max_samples": 0.7208769173833806,
+        "max_depth": 13,
+        "min_samples_leaf": 2
+      },
+      "objective": 0.8916071428571428,
+      "cv_macro_f1": 0.9419927452371262,
+      "cv_log_loss": 0.0578271317595626,
+      "cv_file": "cv/bayes_bagging_04.json",
+      "cv_seconds": 234.5277725729993,
+      "proposal_seconds": 0.024460147000354482,
+      "predicted_objective_mean": 0.8921518189940256,
+      "predicted_objective_std": 0.0005065465748887326,
+      "expected_improvement": 2.408014639987154e-05,
+      "exploration_xi": 0.0003,
+      "surrogate_kernel": "1**2 * Matern(length_scale=[0.03, 0.03, 0.03, 0.044], nu=2.5) + WhiteKernel(noise_level=0.00111)",
+      "surrogate_training_points": 4,
+      "surrogate_warnings": [
+        "The optimal value found for dimension 0 of parameter k1__k2__length_scale is close to the specified lower bound 0.03. Decreasing the bound and calling fit again may find a better value.",
+        "The optimal value found for dimension 1 of parameter k1__k2__length_scale is close to the specified lower bound 0.03. Decreasing the bound and calling fit again may find a better value.",
+        "The optimal value found for dimension 2 of parameter k1__k2__length_scale is close to the specified lower bound 0.03. Decreasing the bound and calling fit again may find a better value."
+      ],
+      "proposal_pool_size": 3072
+    },
+    {
+      "trial": 5,
+      "proposal": "gaussian_process_expected_improvement",
+      "parameters": {
+        "n_estimators": 48,
+        "max_samples": 0.7081378995245776,
+        "max_depth": 11,
+        "min_samples_leaf": 2
+      },
+      "objective": 0.8915357142857143,
+      "cv_macro_f1": 0.9419275252925973,
+      "cv_log_loss": 0.05755770427622581,
+      "cv_file": "cv/bayes_bagging_05.json",
+      "cv_seconds": 191.1526182840007,
+      "proposal_seconds": 0.041260070000134874,
+      "predicted_objective_mean": 0.892378003128798,
+      "predicted_objective_std": 0.0005248528625737938,
+      "expected_improvement": 6.264435805962972e-05,
+      "exploration_xi": 0.0003,
+      "surrogate_kernel": "1.13**2 * Matern(length_scale=[3, 0.03, 3, 0.0931], nu=2.5) + WhiteKernel(noise_level=0.1)",
+      "surrogate_training_points": 5,
+      "surrogate_warnings": [
+        "The optimal value found for dimension 0 of parameter k1__k2__length_scale is close to the specified upper bound 3.0. Increasing the bound and calling fit again may find a better value.",
+        "The optimal value found for dimension 1 of parameter k1__k2__length_scale is close to the specified lower bound 0.03. Decreasing the bound and calling fit again may find a better value.",
+        "The optimal value found for dimension 2 of parameter k1__k2__length_scale is close to the specified upper bound 3.0. Increasing the bound and calling fit again may find a better value.",
+        "The optimal value found for dimension 0 of parameter k2__noise_level is close to the specified upper bound 0.1. Increasing the bound and calling fit again may find a better value."
+      ],
+      "proposal_pool_size": 3072
+    },
+    {
+      "trial": 6,
+      "proposal": "gaussian_process_expected_improvement",
+      "parameters": {
+        "n_estimators": 34,
+        "max_samples": 0.7086954271161656,
+        "max_depth": 13,
+        "min_samples_leaf": 2
+      },
+      "objective": 0.8911071428571429,
+      "cv_macro_f1": 0.9420412429883421,
+      "cv_log_loss": 0.05793761218669807,
+      "cv_file": "cv/bayes_bagging_06.json",
+      "cv_seconds": 156.6059502349999,
+      "proposal_seconds": 0.04389875299966661,
+      "predicted_objective_mean": 0.892401417462988,
+      "predicted_objective_std": 0.0004745356743132493,
+      "expected_improvement": 5.313559863410356e-05,
+      "exploration_xi": 0.0003,
+      "surrogate_kernel": "1.16**2 * Matern(length_scale=[3, 0.03, 0.102, 0.0756], nu=2.5) + WhiteKernel(noise_level=0.1)",
+      "surrogate_training_points": 6,
+      "surrogate_warnings": [
+        "The optimal value found for dimension 0 of parameter k1__k2__length_scale is close to the specified upper bound 3.0. Increasing the bound and calling fit again may find a better value.",
+        "The optimal value found for dimension 1 of parameter k1__k2__length_scale is close to the specified lower bound 0.03. Decreasing the bound and calling fit again may find a better value.",
+        "The optimal value found for dimension 0 of parameter k2__noise_level is close to the specified upper bound 0.1. Increasing the bound and calling fit again may find a better value."
+      ],
+      "proposal_pool_size": 3072
+    },
+    {
+      "trial": 7,
+      "proposal": "gaussian_process_expected_improvement",
+      "parameters": {
+        "n_estimators": 48,
+        "max_samples": 0.7070018118954848,
+        "max_depth": 13,
+        "min_samples_leaf": 2
+      },
+      "objective": 0.8915,
+      "cv_macro_f1": 0.9424049303405732,
+      "cv_log_loss": 0.0572767124848086,
+      "cv_file": "cv/bayes_bagging_07.json",
+      "cv_seconds": 236.35884585799977,
+      "proposal_seconds": 0.03411103100006585,
+      "predicted_objective_mean": 0.892273357780195,
+      "predicted_objective_std": 0.0004845986746826464,
+      "expected_improvement": 3.413269957237321e-05,
+      "exploration_xi": 0.0003,
+      "surrogate_kernel": "1.14**2 * Matern(length_scale=[0.102, 0.03, 0.1, 0.0343], nu=2.5) + WhiteKernel(noise_level=0.1)",
+      "surrogate_training_points": 7,
+      "surrogate_warnings": [
+        "The optimal value found for dimension 1 of parameter k1__k2__length_scale is close to the specified lower bound 0.03. Decreasing the bound and calling fit again may find a better value.",
+        "The optimal value found for dimension 0 of parameter k2__noise_level is close to the specified upper bound 0.1. Increasing the bound and calling fit again may find a better value."
+      ],
+      "proposal_pool_size": 3072
+    }
+  ]
+}

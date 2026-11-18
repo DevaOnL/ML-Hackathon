@@ -7,9 +7,20 @@ import unittest
 from unittest import mock
 
 from scripts import live_evidence as live
+from scripts.capture_api_terminal import terminal_frame_flags
 
 
 class LiveEvidenceContractTests(unittest.TestCase):
+    def test_terminal_persistence_guard_requires_marker_both_events_and_exact_request(self):
+        request_id = "abcdef0123456789"
+        text = "ACTUAL API RECEIVING TERMINAL\nmatch_started\nmatch_completed\nRequest " + request_id
+        self.assertTrue(all(terminal_frame_flags(text, request_id).values()))
+        self.assertTrue(all(terminal_frame_flags(text.replace("0", "@"), request_id).values()))
+        for token in ("ACTUAL API RECEIVING TERMINAL", "match_started", "match_completed", request_id):
+            with self.subTest(token=token):
+                self.assertFalse(all(terminal_frame_flags(text.replace(token, ""), request_id).values()))
+        self.assertFalse(all(terminal_frame_flags(text, "different-request").values()))
+
     def test_api_geometry_parts_are_not_misread_as_arc_features(self):
         payload = {"request_id": "synthetic-request", "trip_id": "00000009",
                    "model": {"sha256": "f" * 64}, "match_config_hash": "c" * 64,

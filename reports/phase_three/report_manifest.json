@@ -1,0 +1,2780 @@
+{
+  "schema": "pathsnap-phase-three-report-manifest",
+  "version": 1,
+  "template": {
+    "path": "reports/phase_three/REPORT_TEMPLATE.md",
+    "sha256": "546e5554d2588bf88777a2e7ddf5d732a552ccc244ed5daee188d1e909c31c83"
+  },
+  "builder_sha256": "8919de75e35974924a4f26fc06244398a61af4130fe517b9f441da2cdcaf9849",
+  "mode": "final",
+  "generated_at_utc": "2026-11-18T08:04:53Z",
+  "ready": true,
+  "blocked": null,
+  "markdown": {
+    "path": "reports/phase_three/TECHNICAL_REPORT.md",
+    "sha256": "d6cffacb0307720487c314ebaf1f291a22f8bd29c55bbd2c38a8ac8dab9ffe92",
+    "tokens_total": 228,
+    "tokens_resolved": 228,
+    "pending_tokens": []
+  },
+  "pdf": {
+    "path": "reports/phase_three/PathSnap_Technical_Report.pdf",
+    "sha256": "a7bf13c4060adcd174c32835325d42bab311e8329ceb2776547ad78d80346603",
+    "pages": 23
+  },
+  "extraction_problems": [],
+  "inputs": [
+    {
+      "key": "results3",
+      "path": "experiments/phase_three/results.json",
+      "role": "phase-three learning results (consolidated)",
+      "final": true,
+      "exists": true,
+      "sha256": "0cd5e9f554870747df04a02ae5ac9971b8814166184fba127267d0f118bac1e1",
+      "bytes": 280821,
+      "files": null,
+      "parse_error": null
+    },
+    {
+      "key": "mfreeze",
+      "path": "artifacts/phase_three/model_freeze.json",
+      "role": "phase-three model freeze record",
+      "final": true,
+      "exists": true,
+      "sha256": "fc3daadf71e8b8dcd2fa182e86d9d69e98dda6ce4b08ee58006a928d8211b71e",
+      "bytes": 1103,
+      "files": null,
+      "parse_error": null
+    },
+    {
+      "key": "model",
+      "path": "artifacts/phase_three/model.joblib",
+      "role": "phase-three frozen model artifact",
+      "final": true,
+      "exists": true,
+      "sha256": "c7f2572d5d037d07a5c07710fbb1ffefd4ff13fbe866c8940022e4902669c733",
+      "bytes": 2028652,
+      "files": null,
+      "parse_error": null
+    },
+    {
+      "key": "mmeta",
+      "path": "artifacts/phase_three/model_metadata.json",
+      "role": "phase-three model metadata",
+      "final": true,
+      "exists": true,
+      "sha256": "1586893c164ecb8aa071f4ffc09937d17dde90e891c1b54990308cd03b00c7e4",
+      "bytes": 35726,
+      "files": null,
+      "parse_error": null
+    },
+    {
+      "key": "mconfig",
+      "path": "artifacts/phase_three/match_config.json",
+      "role": "phase-three frozen match configuration",
+      "final": true,
+      "exists": true,
+      "sha256": "10405aa6b6f370e41d4ddcb01207fd1e8f58900fd0395e541ee6bc78146168c5",
+      "bytes": 391,
+      "files": null,
+      "parse_error": null
+    },
+    {
+      "key": "selection",
+      "path": "experiments/phase_three/selection.json",
+      "role": "phase-three family selection record",
+      "final": true,
+      "exists": true,
+      "sha256": "4936b78b69da779530b72fb58c0a5a36e33f86614eb5fc67fc887cd721f49fee",
+      "bytes": 1483,
+      "files": null,
+      "parse_error": null
+    },
+    {
+      "key": "dfreeze",
+      "path": "reports/phase_three/decoder/freeze.json",
+      "role": "phase-three decoder freeze",
+      "final": true,
+      "exists": true,
+      "sha256": "fdecd2ec3dbcdf120a69a6f8522f4c644884684e390f3a792b55a88a1ba4ad07",
+      "bytes": 6223,
+      "files": null,
+      "parse_error": null
+    },
+    {
+      "key": "ablation",
+      "path": "reports/phase_three/decoder/student_ablation.json",
+      "role": "phase-three decoder ablation (all 10 student trips)",
+      "final": true,
+      "exists": true,
+      "sha256": "bff7030213e3c2eeaa82ec8ddcfd349e11fd743fb4290ec8226454771c08de7b",
+      "bytes": 83267,
+      "files": null,
+      "parse_error": null
+    },
+    {
+      "key": "finalcli",
+      "path": "reports/phase_three/final_cli",
+      "role": "phase-three final CLI evidence",
+      "final": true,
+      "exists": true,
+      "sha256": null,
+      "bytes": null,
+      "files": [
+        {
+          "path": "reports/phase_three/final_cli/route_evaluation.json",
+          "sha256": "5b50aaa63305d7463776336940e58d68e0e38e4453ba1f7319ba6528c1636452",
+          "bytes": 10337
+        }
+      ],
+      "parse_error": null
+    },
+    {
+      "key": "routes",
+      "path": "outputs/phase_three_student_test",
+      "role": "phase-three student-test route outputs",
+      "final": true,
+      "exists": true,
+      "sha256": null,
+      "bytes": null,
+      "files": [
+        {
+          "path": "outputs/phase_three_student_test/routes/00000000.route",
+          "sha256": "84e858b9efed8abd2156996be8ebfbc3a1b66b2fa69d1fc5e176ab9ff765a632",
+          "bytes": 1044
+        },
+        {
+          "path": "outputs/phase_three_student_test/routes/00000007.route",
+          "sha256": "642fc2c567a3796c807b52eaadb4c257aaf1cdcaa4b1fd8565f7e1571fb736e7",
+          "bytes": 490
+        },
+        {
+          "path": "outputs/phase_three_student_test/routes/00000009.route",
+          "sha256": "437139ad9bb0d6650221dce75b3bbe9120676e4b7c6d74ba37d08774c57cb1bc",
+          "bytes": 2313
+        },
+        {
+          "path": "outputs/phase_three_student_test/routes/00000040.route",
+          "sha256": "1ab93c9af84e426812b8772de4d215f9577de518511e64c94430831348a3c581",
+          "bytes": 1664
+        },
+        {
+          "path": "outputs/phase_three_student_test/routes/00000052.route",
+          "sha256": "f2c45a35949271a1f45741a3583ccc6dc16cd318ab8d915c3d7d69151fff0792",
+          "bytes": 464
+        },
+        {
+          "path": "outputs/phase_three_student_test/routes/00000056.route",
+          "sha256": "2b24c9261d39e4f01db61150198662889cd17dc7cb92cdcdb9f088fb91c1374b",
+          "bytes": 7698
+        },
+        {
+          "path": "outputs/phase_three_student_test/routes/00000065.route",
+          "sha256": "9435167174dd5fbbb4371d5f312fc88e0728ffced1ef17ad7f5bd9eec7222637",
+          "bytes": 730
+        },
+        {
+          "path": "outputs/phase_three_student_test/routes/00000076.route",
+          "sha256": "bb26197f51c4c43b6562a41de7701eb571538d6bf7e23819349caa5f4e769d71",
+          "bytes": 2275
+        },
+        {
+          "path": "outputs/phase_three_student_test/routes/00000077.route",
+          "sha256": "7f34f072b56850499de7940fe469f59ff9fc48e006c1c3d609189c85d7c1d6e4",
+          "bytes": 1912
+        },
+        {
+          "path": "outputs/phase_three_student_test/routes/00000091.route",
+          "sha256": "6115efa0648fd96119de1f2b9a973ced436c9ca45bb13989e23c7da8dc2efcbb",
+          "bytes": 1101
+        }
+      ],
+      "parse_error": null
+    },
+    {
+      "key": "liveapi",
+      "path": "reports/phase_three/live/live_api.json",
+      "role": "phase-three live API evidence (10 successful matches)",
+      "final": true,
+      "exists": true,
+      "sha256": "1aec2a05d63d4bb57bae61e17bb167ad394a5e75ad2233ff0a5fe2894bf507f6",
+      "bytes": 27418,
+      "files": null,
+      "parse_error": null
+    },
+    {
+      "key": "browser",
+      "path": "reports/phase_three/live/browser_evidence.json",
+      "role": "phase-three live browser evidence",
+      "final": true,
+      "exists": true,
+      "sha256": "c34456b4e016dfd472a439c9576372811c3ec524dd6504eeec5784b09055a5cc",
+      "bytes": 4182,
+      "files": null,
+      "parse_error": null
+    },
+    {
+      "key": "terminal",
+      "path": "reports/phase_three/live/api_terminal_evidence.json",
+      "role": "phase-three API terminal evidence",
+      "final": true,
+      "exists": true,
+      "sha256": "ba3e03ed735a531fb57607cf3f822b83345c06b655578dd00561e802fd03c8b7",
+      "bytes": 1918,
+      "files": null,
+      "parse_error": null
+    },
+    {
+      "key": "public3",
+      "path": "infrastructure/evidence/public-phase-three.json",
+      "role": "phase-three public deployment verification",
+      "final": true,
+      "exists": true,
+      "sha256": "55e2ce55700620c0877d9fa6ea0c0ee5cfb48150fcf5ce0e2fca11c72bc07734",
+      "bytes": 3333,
+      "files": null,
+      "parse_error": null
+    },
+    {
+      "key": "figman3",
+      "path": "visualizations/phase_three/figure_manifest.json",
+      "role": "phase-three figure manifest",
+      "final": true,
+      "exists": true,
+      "sha256": "6b0d4ec46c11954cb44b3d1c6848244a90afbb4fcb112a9479dce456e8a3c11f",
+      "bytes": 34709,
+      "files": null,
+      "parse_error": null
+    },
+    {
+      "key": "figman",
+      "path": "visualizations/figure_manifest.json",
+      "role": "shared figure manifest",
+      "final": true,
+      "exists": true,
+      "sha256": "448323fecad2a707f67c22652dd9cf717a47da1ef813dcfc371042f98b412e9d",
+      "bytes": 24450,
+      "files": null,
+      "parse_error": null
+    },
+    {
+      "key": "eda",
+      "path": "visualizations/eda_summary.json",
+      "role": "shared EDA summary",
+      "final": true,
+      "exists": true,
+      "sha256": "b294f7c4f51a84e142da9e95ea2d9e79f3e339bf5d850f4b79e19a3530c231e2",
+      "bytes": 19694,
+      "files": null,
+      "parse_error": null
+    },
+    {
+      "key": "audit",
+      "path": "analysis/data_audit/summary.json",
+      "role": "shared data audit summary",
+      "final": true,
+      "exists": true,
+      "sha256": "3e24f2d3bea1de223e81fb5f7ba38b29904ed1fc8d9c8bbf8c055e9dc4ef0e0f",
+      "bytes": 22213,
+      "files": null,
+      "parse_error": null
+    },
+    {
+      "key": "pertrip",
+      "path": "analysis/data_audit/per_trip.json",
+      "role": "shared per-trip data audit",
+      "final": true,
+      "exists": true,
+      "sha256": "72deb5f23b9ca84244c100125bd3f5b57459348e77497768e0445be9ceeb8a68",
+      "bytes": 848646,
+      "files": null,
+      "parse_error": null
+    },
+    {
+      "key": "repro",
+      "path": "reports/reproducibility.json",
+      "role": "shared clean-install reproducibility record",
+      "final": true,
+      "exists": true,
+      "sha256": "bd241eaf2e56112ab67e3fb9868b822ae1b1ed6ee4a5bcd291d697afdfca978b",
+      "bytes": 6264,
+      "files": null,
+      "parse_error": null
+    },
+    {
+      "key": "hist",
+      "path": "experiments/results.json",
+      "role": "historical five-family results (provenance only)",
+      "final": true,
+      "exists": true,
+      "sha256": "4f308d422263e313b13253e2bca2267dba6a445303fbc7a404d9c44d9d1c1198",
+      "bytes": 615561,
+      "files": null,
+      "parse_error": null
+    },
+    {
+      "key": "baseline",
+      "path": "reports/baseline_student_metrics.json",
+      "role": "historical geometry-only baseline (provenance only)",
+      "final": true,
+      "exists": true,
+      "sha256": "aa34d2e9a51ee12d4a0788903846c06dbd0c6b2d4696ca1c041fc68f4ce69470",
+      "bytes": 10362,
+      "files": null,
+      "parse_error": null
+    },
+    {
+      "key": "offverify",
+      "path": "reports/phase_three/offline_delivery_verification.json",
+      "role": "phase-three offline delivery verification (route hashes)",
+      "final": true,
+      "exists": true,
+      "sha256": "8f8e5ad9eb40f785f037afc15ca989bfe3cfbbfa2ea3617d1122f54ad92c1714",
+      "bytes": 17837,
+      "files": null,
+      "parse_error": null
+    },
+    {
+      "key": "routeeval",
+      "path": "reports/phase_three/final_cli/route_evaluation.json",
+      "role": "phase-three final CLI route evaluation summary",
+      "final": true,
+      "exists": true,
+      "sha256": "5b50aaa63305d7463776336940e58d68e0e38e4453ba1f7319ba6528c1636452",
+      "bytes": 10337,
+      "files": null,
+      "parse_error": null
+    },
+    {
+      "key": "knnacc",
+      "path": "reports/phase_three/knn_acceptance.json",
+      "role": "KNN artifact acceptance replay",
+      "final": true,
+      "exists": true,
+      "sha256": "41dbed85dd8a56d0378aca63d405b952652bdbbdc12c50e5a97e83a452889909",
+      "bytes": 830,
+      "files": null,
+      "parse_error": null
+    },
+    {
+      "key": "knnx",
+      "path": "reports/phase_three/knn_runtime_diagnostic.json",
+      "role": "KNN cross-build runtime diagnostic",
+      "final": true,
+      "exists": true,
+      "sha256": "3adcc7c766b1ea60b68719cc65ef4abf5be300698ceb3459424d4866002ac5d5",
+      "bytes": 1068,
+      "files": null,
+      "parse_error": null
+    },
+    {
+      "key": "bagclean",
+      "path": "reports/phase_three/hardened_clean_environment_acceptance.json",
+      "role": "selected-model clean-environment acceptance",
+      "final": true,
+      "exists": true,
+      "sha256": "6595faf9c9ba336c3e7dd977ef678228f92f4dbb74614512d048c31e523530de",
+      "bytes": 963,
+      "files": null,
+      "parse_error": null
+    },
+    {
+      "key": "maccept",
+      "path": "reports/phase_three/model_acceptance.json",
+      "role": "phase-three model acceptance record",
+      "final": true,
+      "exists": true,
+      "sha256": "d208c9db605ae7d5cee3fc84f9522b7e108261c8d8295a43ecf0c1c037d7bde5",
+      "bytes": 4720,
+      "files": null,
+      "parse_error": null
+    },
+    {
+      "key": "pmparity",
+      "path": "reports/phase_three/public_model_parity_acceptance.json",
+      "role": "public-model parity acceptance (all ten trips)",
+      "final": true,
+      "exists": true,
+      "sha256": "1c0ca2717e14ece891d022c38d7dcdd5f484e99d61d81a9418419aed47e844ac",
+      "bytes": 4267,
+      "files": null,
+      "parse_error": null
+    },
+    {
+      "key": "histcli",
+      "path": "reports/final_cli/route_metrics.json",
+      "role": "historical pre-phase-three CLI route metrics (provenance only)",
+      "final": true,
+      "exists": true,
+      "sha256": "85faa39f131bef93007014401e2c488954e5b2ecbcb014acdfdf826221c06e1a",
+      "bytes": 10337,
+      "files": null,
+      "parse_error": null
+    },
+    {
+      "key": "scalefit",
+      "path": "reports/decoder/scale_fit.json",
+      "role": "historical TRAIN residual scale fit (provenance)",
+      "final": true,
+      "exists": true,
+      "sha256": "0efa5a44f610edda9cd33c5995fa67a591c161a9d3a33a129afaae05252148f9",
+      "bytes": 146859,
+      "files": null,
+      "parse_error": null
+    },
+    {
+      "key": "scope",
+      "path": "docs/PHASE_SCOPE.json",
+      "role": "phase scope contract (user instruction record)",
+      "final": true,
+      "exists": true,
+      "sha256": "0a679542227f0ccb6f979bbaa94e0e6eb9424e72665210eeb3b2a5384afb533f",
+      "bytes": 1730,
+      "files": null,
+      "parse_error": null
+    },
+    {
+      "key": "delivery",
+      "path": "reports/phase_three/delivery_verification.json",
+      "role": "independent actual all-ten route/state/HTTPS/terminal reconciliation",
+      "final": true,
+      "exists": true,
+      "sha256": "aaadf4e2c77cb1222150b0e23ea87c2fb78ffc797846fb7f6a7028f86405b155",
+      "bytes": 22743,
+      "files": null,
+      "parse_error": null
+    }
+  ],
+  "facts": [
+    {
+      "name": "lr_params",
+      "value": "{\"C\": 1.0, \"max_iter\": 500, \"solver\": \"lbfgs\"}",
+      "pick": "comparison[model=logistic_regression].parameters",
+      "error": null,
+      "optional": false,
+      "file": "results3",
+      "raw": "{\"C\": 1.0, \"max_iter\": 500, \"solver\": \"lbfgs\"}",
+      "ok": true
+    },
+    {
+      "name": "lr_family",
+      "value": "scaled linear discriminative logistic regression",
+      "pick": "comparison[model=logistic_regression].family",
+      "error": null,
+      "optional": false,
+      "file": "results3",
+      "raw": "scaled linear discriminative logistic regression",
+      "ok": true
+    },
+    {
+      "name": "lr_cv_f1",
+      "value": "0.9328",
+      "pick": "comparison[model=logistic_regression].cv_macro_f1_fold_mean",
+      "error": null,
+      "optional": false,
+      "file": "results3",
+      "raw": 0.9328221717050057,
+      "ok": true
+    },
+    {
+      "name": "lr_cv_f1_std",
+      "value": "0.0086",
+      "pick": "comparison[model=logistic_regression].cv_macro_f1_fold_std",
+      "error": null,
+      "optional": false,
+      "file": "results3",
+      "raw": 0.008561647129300586,
+      "ok": true
+    },
+    {
+      "name": "lr_cv_top1",
+      "value": "0.8840",
+      "pick": "comparison[model=logistic_regression].cv_top1_accuracy",
+      "error": null,
+      "optional": false,
+      "file": "results3",
+      "raw": 0.884,
+      "ok": true
+    },
+    {
+      "name": "lr_cv_logloss",
+      "value": "0.0744",
+      "pick": "comparison[model=logistic_regression].cv_log_loss",
+      "error": null,
+      "optional": false,
+      "file": "results3",
+      "raw": 0.07443299221247036,
+      "ok": true
+    },
+    {
+      "name": "lr_student_f1",
+      "value": "0.9329",
+      "pick": "comparison[model=logistic_regression].student_macro_f1",
+      "error": null,
+      "optional": false,
+      "file": "results3",
+      "raw": 0.9329364512824421,
+      "ok": true
+    },
+    {
+      "name": "lr_student_top1",
+      "value": "0.8952",
+      "pick": "comparison[model=logistic_regression].student_top1_accuracy",
+      "error": null,
+      "optional": false,
+      "file": "results3",
+      "raw": 0.8951983298538622,
+      "ok": true
+    },
+    {
+      "name": "lr_student_logloss",
+      "value": "0.0690",
+      "pick": "comparison[model=logistic_regression].student_log_loss",
+      "error": null,
+      "optional": false,
+      "file": "results3",
+      "raw": 0.06899899065600447,
+      "ok": true
+    },
+    {
+      "name": "lr_continuity",
+      "value": "0.9287",
+      "pick": "comparison[model=logistic_regression].student_raw_classifier_continuity",
+      "error": null,
+      "optional": false,
+      "file": "results3",
+      "raw": 0.928668407310705,
+      "ok": true
+    },
+    {
+      "name": "lr_route_continuity",
+      "value": "0.9287",
+      "pick": "comparison[model=logistic_regression].route_continuity",
+      "error": null,
+      "optional": false,
+      "file": "results3",
+      "raw": 0.928668407310705,
+      "ok": true
+    },
+    {
+      "name": "lr_cv_seconds",
+      "value": "0.045",
+      "pick": "comparison[model=logistic_regression].cv_inference_seconds",
+      "error": null,
+      "optional": false,
+      "file": "results3",
+      "raw": 0.044674142000076245,
+      "ok": true
+    },
+    {
+      "name": "lr_fit_seconds",
+      "value": "1.0",
+      "pick": "comparison[model=logistic_regression].fit_all80_seconds",
+      "error": null,
+      "optional": false,
+      "file": "results3",
+      "raw": 1.021270029000334,
+      "ok": true
+    },
+    {
+      "name": "lr_obs_edge_f1",
+      "value": "0.8071",
+      "pick": "comparison[model=logistic_regression].student_observation_edge_macro_f1",
+      "error": null,
+      "optional": false,
+      "file": "results3",
+      "raw": 0.8070802670313553,
+      "ok": true
+    },
+    {
+      "name": "lr_obs_nll",
+      "value": "0.3476",
+      "pick": "comparison[model=logistic_regression].student_observation_categorical_log_loss_clipped",
+      "error": null,
+      "optional": false,
+      "file": "results3",
+      "raw": 0.3475738499430923,
+      "ok": true
+    },
+    {
+      "name": "lr_miss_rate",
+      "value": "0.0010",
+      "pick": "comparison[model=logistic_regression].student_candidate_miss_rate",
+      "error": null,
+      "optional": false,
+      "file": "results3",
+      "raw": 0.0009916492693110648,
+      "ok": true
+    },
+    {
+      "name": "knn_params",
+      "value": "{\"n_neighbors\": 25}",
+      "pick": "comparison[model=knn_distance_weighted].parameters",
+      "error": null,
+      "optional": false,
+      "file": "results3",
+      "raw": "{\"n_neighbors\": 25}",
+      "ok": true
+    },
+    {
+      "name": "knn_family",
+      "value": "distance-weighted k-nearest-neighbour candidate classifier over a class-stratified TRAIN reference bank",
+      "pick": "comparison[model=knn_distance_weighted].family",
+      "error": null,
+      "optional": false,
+      "file": "results3",
+      "raw": "distance-weighted k-nearest-neighbour candidate classifier over a class-stratified TRAIN reference bank",
+      "ok": true
+    },
+    {
+      "name": "knn_cv_f1",
+      "value": "0.9272",
+      "pick": "comparison[model=knn_distance_weighted].cv_macro_f1_fold_mean",
+      "error": null,
+      "optional": false,
+      "file": "results3",
+      "raw": 0.9272184201559371,
+      "ok": true
+    },
+    {
+      "name": "knn_cv_f1_std",
+      "value": "0.0087",
+      "pick": "comparison[model=knn_distance_weighted].cv_macro_f1_fold_std",
+      "error": null,
+      "optional": false,
+      "file": "results3",
+      "raw": 0.008732203060480106,
+      "ok": true
+    },
+    {
+      "name": "knn_cv_top1",
+      "value": "0.8768",
+      "pick": "comparison[model=knn_distance_weighted].cv_top1_accuracy",
+      "error": null,
+      "optional": false,
+      "file": "results3",
+      "raw": 0.8767857142857143,
+      "ok": true
+    },
+    {
+      "name": "knn_cv_logloss",
+      "value": "0.0941",
+      "pick": "comparison[model=knn_distance_weighted].cv_log_loss",
+      "error": null,
+      "optional": false,
+      "file": "results3",
+      "raw": 0.09411409567726087,
+      "ok": true
+    },
+    {
+      "name": "knn_student_f1",
+      "value": "0.9275",
+      "pick": "comparison[model=knn_distance_weighted].student_macro_f1",
+      "error": null,
+      "optional": false,
+      "file": "results3",
+      "raw": 0.9274881703784643,
+      "ok": true
+    },
+    {
+      "name": "knn_student_top1",
+      "value": "0.8905",
+      "pick": "comparison[model=knn_distance_weighted].student_top1_accuracy",
+      "error": null,
+      "optional": false,
+      "file": "results3",
+      "raw": 0.8905010438413361,
+      "ok": true
+    },
+    {
+      "name": "knn_student_logloss",
+      "value": "0.0960",
+      "pick": "comparison[model=knn_distance_weighted].student_log_loss",
+      "error": null,
+      "optional": false,
+      "file": "results3",
+      "raw": 0.09604297407876781,
+      "ok": true
+    },
+    {
+      "name": "knn_continuity",
+      "value": "0.9230",
+      "pick": "comparison[model=knn_distance_weighted].student_raw_classifier_continuity",
+      "error": null,
+      "optional": false,
+      "file": "results3",
+      "raw": 0.922976501305483,
+      "ok": true
+    },
+    {
+      "name": "knn_route_continuity",
+      "value": "0.9230",
+      "pick": "comparison[model=knn_distance_weighted].route_continuity",
+      "error": null,
+      "optional": false,
+      "file": "results3",
+      "raw": 0.922976501305483,
+      "ok": true
+    },
+    {
+      "name": "knn_cv_seconds",
+      "value": "299.056",
+      "pick": "comparison[model=knn_distance_weighted].cv_inference_seconds",
+      "error": null,
+      "optional": false,
+      "file": "results3",
+      "raw": 299.05603106299895,
+      "ok": true
+    },
+    {
+      "name": "knn_fit_seconds",
+      "value": "0.0",
+      "pick": "comparison[model=knn_distance_weighted].fit_all80_seconds",
+      "error": null,
+      "optional": false,
+      "file": "results3",
+      "raw": 0.024137397998856613,
+      "ok": true
+    },
+    {
+      "name": "knn_obs_edge_f1",
+      "value": "0.7955",
+      "pick": "comparison[model=knn_distance_weighted].student_observation_edge_macro_f1",
+      "error": null,
+      "optional": false,
+      "file": "results3",
+      "raw": 0.7954781955518841,
+      "ok": true
+    },
+    {
+      "name": "knn_obs_nll",
+      "value": "0.5217",
+      "pick": "comparison[model=knn_distance_weighted].student_observation_categorical_log_loss_clipped",
+      "error": null,
+      "optional": false,
+      "file": "results3",
+      "raw": 0.5216588680957772,
+      "ok": true
+    },
+    {
+      "name": "knn_miss_rate",
+      "value": "0.0010",
+      "pick": "comparison[model=knn_distance_weighted].student_candidate_miss_rate",
+      "error": null,
+      "optional": false,
+      "file": "results3",
+      "raw": 0.0009916492693110648,
+      "ok": true
+    },
+    {
+      "name": "bag_params",
+      "value": "{\"max_depth\": 14, \"max_samples\": 0.7, \"min_samples_leaf\": 3, \"n_estimators\": 40}",
+      "pick": "comparison[model=bagging].parameters",
+      "error": null,
+      "optional": false,
+      "file": "results3",
+      "raw": "{\"max_depth\": 14, \"max_samples\": 0.7, \"min_samples_leaf\": 3, \"n_estimators\": 40}",
+      "ok": true
+    },
+    {
+      "name": "bag_family",
+      "value": "genuine bootstrap aggregation of decision-tree base learners",
+      "pick": "comparison[model=bagging].family",
+      "error": null,
+      "optional": false,
+      "file": "results3",
+      "raw": "genuine bootstrap aggregation of decision-tree base learners",
+      "ok": true
+    },
+    {
+      "name": "bag_cv_f1",
+      "value": "0.9424",
+      "pick": "comparison[model=bagging].cv_macro_f1_fold_mean",
+      "error": null,
+      "optional": false,
+      "file": "results3",
+      "raw": 0.9424260227464499,
+      "ok": true
+    },
+    {
+      "name": "bag_cv_f1_std",
+      "value": "0.0068",
+      "pick": "comparison[model=bagging].cv_macro_f1_fold_std",
+      "error": null,
+      "optional": false,
+      "file": "results3",
+      "raw": 0.0068148243759403185,
+      "ok": true
+    },
+    {
+      "name": "bag_cv_top1",
+      "value": "0.8915",
+      "pick": "comparison[model=bagging].cv_top1_accuracy",
+      "error": null,
+      "optional": false,
+      "file": "results3",
+      "raw": 0.8914642857142857,
+      "ok": true
+    },
+    {
+      "name": "bag_cv_logloss",
+      "value": "0.0572",
+      "pick": "comparison[model=bagging].cv_log_loss",
+      "error": null,
+      "optional": false,
+      "file": "results3",
+      "raw": 0.057221017455649795,
+      "ok": true
+    },
+    {
+      "name": "bag_student_f1",
+      "value": "0.9437",
+      "pick": "comparison[model=bagging].student_macro_f1",
+      "error": null,
+      "optional": false,
+      "file": "results3",
+      "raw": 0.9437265546922589,
+      "ok": true
+    },
+    {
+      "name": "bag_student_top1",
+      "value": "0.9048",
+      "pick": "comparison[model=bagging].student_top1_accuracy",
+      "error": null,
+      "optional": false,
+      "file": "results3",
+      "raw": 0.9048016701461378,
+      "ok": true
+    },
+    {
+      "name": "bag_student_logloss",
+      "value": "0.0562",
+      "pick": "comparison[model=bagging].student_log_loss",
+      "error": null,
+      "optional": false,
+      "file": "results3",
+      "raw": 0.05622414970449344,
+      "ok": true
+    },
+    {
+      "name": "bag_continuity",
+      "value": "0.9322",
+      "pick": "comparison[model=bagging].student_raw_classifier_continuity",
+      "error": null,
+      "optional": false,
+      "file": "results3",
+      "raw": 0.9321671018276763,
+      "ok": true
+    },
+    {
+      "name": "bag_route_continuity",
+      "value": "0.9322",
+      "pick": "comparison[model=bagging].route_continuity",
+      "error": null,
+      "optional": false,
+      "file": "results3",
+      "raw": 0.9321671018276763,
+      "ok": true
+    },
+    {
+      "name": "bag_cv_seconds",
+      "value": "1.174",
+      "pick": "comparison[model=bagging].cv_inference_seconds",
+      "error": null,
+      "optional": false,
+      "file": "results3",
+      "raw": 1.1736205719989812,
+      "ok": true
+    },
+    {
+      "name": "bag_fit_seconds",
+      "value": "103.8",
+      "pick": "comparison[model=bagging].fit_all80_seconds",
+      "error": null,
+      "optional": false,
+      "file": "results3",
+      "raw": 103.75557740400109,
+      "ok": true
+    },
+    {
+      "name": "bag_obs_edge_f1",
+      "value": "0.8271",
+      "pick": "comparison[model=bagging].student_observation_edge_macro_f1",
+      "error": null,
+      "optional": false,
+      "file": "results3",
+      "raw": 0.8271458710847017,
+      "ok": true
+    },
+    {
+      "name": "bag_obs_nll",
+      "value": "0.2824",
+      "pick": "comparison[model=bagging].student_observation_categorical_log_loss_clipped",
+      "error": null,
+      "optional": false,
+      "file": "results3",
+      "raw": 0.28244242484112947,
+      "ok": true
+    },
+    {
+      "name": "bag_miss_rate",
+      "value": "0.0010",
+      "pick": "comparison[model=bagging].student_candidate_miss_rate",
+      "error": null,
+      "optional": false,
+      "file": "results3",
+      "raw": 0.0009916492693110648,
+      "ok": true
+    },
+    {
+      "name": "tuned_params",
+      "value": "{\"max_depth\": 13, \"max_samples\": 0.7160628448832399, \"min_samples_leaf\": 2, \"n_estimators\": 48}",
+      "pick": "comparison[model=~tuned].parameters",
+      "error": null,
+      "optional": false,
+      "file": "results3",
+      "raw": "{\"max_depth\": 13, \"max_samples\": 0.7160628448832399, \"min_samples_leaf\": 2, \"n_estimators\": 48}",
+      "ok": true
+    },
+    {
+      "name": "tuned_family",
+      "value": "genuine bootstrap aggregation of decision-tree base learners",
+      "pick": "comparison[model=~tuned].family",
+      "error": null,
+      "optional": false,
+      "file": "results3",
+      "raw": "genuine bootstrap aggregation of decision-tree base learners",
+      "ok": true
+    },
+    {
+      "name": "tuned_cv_f1",
+      "value": "0.9425",
+      "pick": "comparison[model=~tuned].cv_macro_f1_fold_mean",
+      "error": null,
+      "optional": false,
+      "file": "results3",
+      "raw": 0.9424640922183002,
+      "ok": true
+    },
+    {
+      "name": "tuned_cv_f1_std",
+      "value": "0.0062",
+      "pick": "comparison[model=~tuned].cv_macro_f1_fold_std",
+      "error": null,
+      "optional": false,
+      "file": "results3",
+      "raw": 0.006205776113056719,
+      "ok": true
+    },
+    {
+      "name": "tuned_cv_top1",
+      "value": "0.8925",
+      "pick": "comparison[model=~tuned].cv_top1_accuracy",
+      "error": null,
+      "optional": false,
+      "file": "results3",
+      "raw": 0.8925,
+      "ok": true
+    },
+    {
+      "name": "tuned_cv_logloss",
+      "value": "0.0575",
+      "pick": "comparison[model=~tuned].cv_log_loss",
+      "error": null,
+      "optional": false,
+      "file": "results3",
+      "raw": 0.05747021716523756,
+      "ok": true
+    },
+    {
+      "name": "tuned_student_f1",
+      "value": "0.9436",
+      "pick": "comparison[model=~tuned].student_macro_f1",
+      "error": null,
+      "optional": false,
+      "file": "results3",
+      "raw": 0.9435745531009136,
+      "ok": true
+    },
+    {
+      "name": "tuned_student_top1",
+      "value": "0.9034",
+      "pick": "comparison[model=~tuned].student_top1_accuracy",
+      "error": null,
+      "optional": false,
+      "file": "results3",
+      "raw": 0.90339248434238,
+      "ok": true
+    },
+    {
+      "name": "tuned_student_logloss",
+      "value": "0.0560",
+      "pick": "comparison[model=~tuned].student_log_loss",
+      "error": null,
+      "optional": false,
+      "file": "results3",
+      "raw": 0.055971427527006866,
+      "ok": true
+    },
+    {
+      "name": "tuned_continuity",
+      "value": "0.9313",
+      "pick": "comparison[model=~tuned].student_raw_classifier_continuity",
+      "error": null,
+      "optional": false,
+      "file": "results3",
+      "raw": 0.931331592689295,
+      "ok": true
+    },
+    {
+      "name": "tuned_route_continuity",
+      "value": "0.9313",
+      "pick": "comparison[model=~tuned].route_continuity",
+      "error": null,
+      "optional": false,
+      "file": "results3",
+      "raw": 0.931331592689295,
+      "ok": true
+    },
+    {
+      "name": "tuned_cv_seconds",
+      "value": "1.377",
+      "pick": "comparison[model=~tuned].cv_inference_seconds",
+      "error": null,
+      "optional": false,
+      "file": "results3",
+      "raw": 1.377128995000021,
+      "ok": true
+    },
+    {
+      "name": "tuned_fit_seconds",
+      "value": "133.1",
+      "pick": "comparison[model=~tuned].fit_all80_seconds",
+      "error": null,
+      "optional": false,
+      "file": "results3",
+      "raw": 133.06433969300087,
+      "ok": true
+    },
+    {
+      "name": "tuned_obs_edge_f1",
+      "value": "0.8248",
+      "pick": "comparison[model=~tuned].student_observation_edge_macro_f1",
+      "error": null,
+      "optional": false,
+      "file": "results3",
+      "raw": 0.8248287541046038,
+      "ok": true
+    },
+    {
+      "name": "tuned_obs_nll",
+      "value": "0.2817",
+      "pick": "comparison[model=~tuned].student_observation_categorical_log_loss_clipped",
+      "error": null,
+      "optional": false,
+      "file": "results3",
+      "raw": 0.2816623415849135,
+      "ok": true
+    },
+    {
+      "name": "tuned_miss_rate",
+      "value": "0.0010",
+      "pick": "comparison[model=~tuned].student_candidate_miss_rate",
+      "error": null,
+      "optional": false,
+      "file": "results3",
+      "raw": 0.0009916492693110648,
+      "ok": true
+    },
+    {
+      "name": "bayes_method",
+      "value": "GaussianProcessRegressor Matern-5/2 surrogate + analytic expected improvement",
+      "pick": "bayesian.method",
+      "error": null,
+      "optional": false,
+      "file": "results3",
+      "raw": "GaussianProcessRegressor Matern-5/2 surrogate + analytic expected improvement",
+      "ok": true
+    },
+    {
+      "name": "bayes_model",
+      "value": "bagging",
+      "pick": "bayesian.model_name",
+      "error": null,
+      "optional": false,
+      "file": "results3",
+      "raw": "bagging",
+      "ok": true
+    },
+    {
+      "name": "bayes_space",
+      "value": "{\"max_depth\": [\"int\", 8, 20], \"max_samples\": [\"float\", 0.5, 0.9], \"min_samples_leaf\": [\"logint\", 2, 10], \"n_estimators\": [\"int\", 30, 80]}",
+      "pick": "bayesian.search_space",
+      "error": null,
+      "optional": false,
+      "file": "results3",
+      "raw": {
+        "n_estimators": [
+          "int",
+          30,
+          80
+        ],
+        "max_samples": [
+          "float",
+          0.5,
+          0.9
+        ],
+        "max_depth": [
+          "int",
+          8,
+          20
+        ],
+        "min_samples_leaf": [
+          "logint",
+          2,
+          10
+        ]
+      },
+      "ok": true
+    },
+    {
+      "name": "bayes_objective",
+      "value": "maximize out-of-fold equal-trip mean observation top1 proxy accuracy; fixed 3-fold GroupKFold on all 80 TRAIN trips",
+      "pick": "bayesian.objective",
+      "error": null,
+      "optional": false,
+      "file": "results3",
+      "raw": "maximize out-of-fold equal-trip mean observation top1 proxy accuracy; fixed 3-fold GroupKFold on all 80 TRAIN trips",
+      "ok": true
+    },
+    {
+      "name": "bayes_trials",
+      "value": "8",
+      "pick": "bayesian.trials_including_measured_prior",
+      "error": null,
+      "optional": false,
+      "file": "results3",
+      "raw": 8,
+      "ok": true
+    },
+    {
+      "name": "bayes_model_trials",
+      "value": "5",
+      "pick": "bayesian.model_based_trials",
+      "error": null,
+      "optional": false,
+      "file": "results3",
+      "raw": 5,
+      "ok": true
+    },
+    {
+      "name": "bayes_seeded_trials",
+      "value": "2",
+      "pick": "bayesian.seeded_initial_design_trials",
+      "error": null,
+      "optional": false,
+      "file": "results3",
+      "raw": 2,
+      "ok": true
+    },
+    {
+      "name": "bayes_best_params",
+      "value": "{\"max_depth\": 13, \"max_samples\": 0.7160628448832399, \"min_samples_leaf\": 2, \"n_estimators\": 48}",
+      "pick": "bayesian.best_parameters",
+      "error": null,
+      "optional": false,
+      "file": "results3",
+      "raw": {
+        "n_estimators": 48,
+        "max_samples": 0.7160628448832399,
+        "max_depth": 13,
+        "min_samples_leaf": 2
+      },
+      "ok": true
+    },
+    {
+      "name": "bayes_best_obj",
+      "value": "0.8925",
+      "pick": "bayesian.best_objective",
+      "error": null,
+      "optional": false,
+      "file": "results3",
+      "raw": 0.8925000000000001,
+      "ok": true
+    },
+    {
+      "name": "bayes_baseline_obj",
+      "value": "0.8915",
+      "pick": "bayesian.baseline_objective",
+      "error": null,
+      "optional": false,
+      "file": "results3",
+      "raw": 0.8914642857142857,
+      "ok": true
+    },
+    {
+      "name": "bayes_seconds",
+      "value": "1489.6",
+      "pick": "bayesian.seconds",
+      "error": null,
+      "optional": false,
+      "file": "results3",
+      "raw": 1489.5785494979991,
+      "ok": true
+    },
+    {
+      "name": "selection_model",
+      "value": "bagging",
+      "pick": "selection_model",
+      "error": null,
+      "optional": false,
+      "file": "results3",
+      "raw": "bagging",
+      "ok": true
+    },
+    {
+      "name": "sel_model",
+      "value": "bagging",
+      "pick": "selected_model",
+      "error": null,
+      "optional": false,
+      "file": "selection",
+      "raw": "bagging",
+      "ok": true
+    },
+    {
+      "name": "sel_objective",
+      "value": "out_of_fold_trip_macro_top1_accuracy",
+      "pick": "objective_name",
+      "error": null,
+      "optional": false,
+      "file": "selection",
+      "raw": "out_of_fold_trip_macro_top1_accuracy",
+      "ok": true
+    },
+    {
+      "name": "cfg_folds",
+      "value": "3",
+      "pick": "config.folds",
+      "error": null,
+      "optional": false,
+      "file": "results3",
+      "raw": 3,
+      "ok": true
+    },
+    {
+      "name": "cfg_seed",
+      "value": "20261118",
+      "pick": "config.seed",
+      "error": null,
+      "optional": false,
+      "file": "results3",
+      "raw": 20261118,
+      "ok": true
+    },
+    {
+      "name": "cfg_trials",
+      "value": "8",
+      "pick": "config.bayesian_trials",
+      "error": null,
+      "optional": false,
+      "file": "results3",
+      "raw": 8,
+      "ok": true
+    },
+    {
+      "name": "cfg_obs_per_trip",
+      "value": "350",
+      "pick": "config.train_observations_per_trip",
+      "error": null,
+      "optional": false,
+      "file": "results3",
+      "raw": 350,
+      "ok": true
+    },
+    {
+      "name": "cfg_radius",
+      "value": "80",
+      "pick": "config.candidate_radius_m",
+      "error": null,
+      "optional": false,
+      "file": "results3",
+      "raw": 80.0,
+      "ok": true
+    },
+    {
+      "name": "cfg_maxcand",
+      "value": "12",
+      "pick": "config.max_candidates",
+      "error": null,
+      "optional": false,
+      "file": "results3",
+      "raw": 12,
+      "ok": true
+    },
+    {
+      "name": "cfg_spacing",
+      "value": "40",
+      "pick": "config.sample_spacing_m",
+      "error": null,
+      "optional": false,
+      "file": "results3",
+      "raw": 40.0,
+      "ok": true
+    },
+    {
+      "name": "cov_train_trips",
+      "value": "80",
+      "pick": "coverage_summary.train.trips",
+      "error": null,
+      "optional": false,
+      "file": "results3",
+      "raw": 80,
+      "ok": true
+    },
+    {
+      "name": "cov_student_trips",
+      "value": "10",
+      "pick": "coverage_summary.student_test.trips",
+      "error": null,
+      "optional": false,
+      "file": "results3",
+      "raw": 10,
+      "ok": true
+    },
+    {
+      "name": "cov_train_obs",
+      "value": "28,000",
+      "pick": "coverage_summary.train.observations",
+      "error": null,
+      "optional": false,
+      "file": "results3",
+      "raw": 28000,
+      "ok": true
+    },
+    {
+      "name": "cov_train_total_obs",
+      "value": "269,463",
+      "pick": "coverage_summary.train.candidate_rows",
+      "error": null,
+      "optional": false,
+      "file": "results3",
+      "raw": 269463,
+      "ok": true
+    },
+    {
+      "name": "cov_student_obs",
+      "value": "19,160",
+      "pick": "coverage_summary.student_test.observations",
+      "error": null,
+      "optional": false,
+      "file": "results3",
+      "raw": 19160,
+      "ok": true
+    },
+    {
+      "name": "cov_student_rows",
+      "value": "175,778",
+      "pick": "coverage_summary.student_test.candidate_rows",
+      "error": null,
+      "optional": false,
+      "file": "results3",
+      "raw": 175778,
+      "ok": true
+    },
+    {
+      "name": "cov_train_miss",
+      "value": "578",
+      "pick": "coverage_summary.train.candidate_miss_count",
+      "error": null,
+      "optional": false,
+      "file": "results3",
+      "raw": 578,
+      "ok": true
+    },
+    {
+      "name": "cov_student_miss",
+      "value": "19",
+      "pick": "coverage_summary.student_test.candidate_miss_count",
+      "error": null,
+      "optional": false,
+      "file": "results3",
+      "raw": 19,
+      "ok": true
+    },
+    {
+      "name": "ver_python",
+      "value": "3.14.6",
+      "pick": "versions.python",
+      "error": null,
+      "optional": false,
+      "file": "results3",
+      "raw": "3.14.6",
+      "ok": true
+    },
+    {
+      "name": "ver_numpy",
+      "value": "2.5.5",
+      "pick": "versions.numpy",
+      "error": null,
+      "optional": false,
+      "file": "results3",
+      "raw": "2.5.5",
+      "ok": true
+    },
+    {
+      "name": "ver_sklearn",
+      "value": "1.8.0",
+      "pick": "versions.sklearn",
+      "error": null,
+      "optional": false,
+      "file": "results3",
+      "raw": "1.8.0",
+      "ok": true
+    },
+    {
+      "name": "ver_scipy",
+      "value": "1.18.0",
+      "pick": "versions.scipy",
+      "error": null,
+      "optional": false,
+      "file": "results3",
+      "raw": "1.18.0",
+      "ok": true
+    },
+    {
+      "name": "repro_numpy_clean",
+      "value": "2.5.5",
+      "pick": "versions.numpy",
+      "error": null,
+      "optional": false,
+      "file": "repro",
+      "raw": "2.5.5",
+      "ok": true
+    },
+    {
+      "name": "repro_sklearn_clean",
+      "value": "1.8.0",
+      "pick": "versions.scikit-learn",
+      "error": null,
+      "optional": false,
+      "file": "repro",
+      "raw": "1.8.0",
+      "ok": true
+    },
+    {
+      "name": "repro_unittests",
+      "value": "108",
+      "pick": "clean_install.unittest_count",
+      "error": null,
+      "optional": false,
+      "file": "repro",
+      "raw": 108,
+      "ok": true
+    },
+    {
+      "name": "model_sha",
+      "value": "c7f2572d5d037d07a5c07710fbb1ffefd4ff13fbe866c8940022e4902669c733",
+      "pick": "sha256",
+      "error": null,
+      "optional": false,
+      "file": "mfreeze",
+      "raw": "c7f2572d5d037d07a5c07710fbb1ffefd4ff13fbe866c8940022e4902669c733",
+      "ok": true
+    },
+    {
+      "name": "dec_selected",
+      "value": "A_fitted",
+      "pick": "selected_configuration",
+      "error": null,
+      "optional": false,
+      "file": "dfreeze",
+      "raw": "A_fitted",
+      "ok": true
+    },
+    {
+      "name": "dec_sigma",
+      "value": "7.161",
+      "pick": "config.sigma_m",
+      "error": null,
+      "optional": false,
+      "file": "dfreeze",
+      "raw": 7.160645916267228,
+      "ok": true
+    },
+    {
+      "name": "dec_beta",
+      "value": "2.000",
+      "pick": "config.beta_m",
+      "error": null,
+      "optional": false,
+      "file": "dfreeze",
+      "raw": 2.0,
+      "ok": true
+    },
+    {
+      "name": "dec_maxcand",
+      "value": "12",
+      "pick": "config.max_candidates",
+      "error": null,
+      "optional": false,
+      "file": "dfreeze",
+      "raw": 12,
+      "ok": true
+    },
+    {
+      "name": "dec_retry",
+      "value": "48",
+      "pick": "config.candidate_retry_limit",
+      "error": null,
+      "optional": false,
+      "file": "dfreeze",
+      "raw": 48,
+      "ok": true
+    },
+    {
+      "name": "dec_slack",
+      "value": "300",
+      "pick": "config.routing_slack_m",
+      "error": null,
+      "optional": false,
+      "file": "dfreeze",
+      "raw": 300.0,
+      "ok": true
+    },
+    {
+      "name": "dec_cls_weight",
+      "value": "1.000",
+      "pick": "config.classifier_weight",
+      "error": null,
+      "optional": false,
+      "file": "dfreeze",
+      "raw": 1.0,
+      "ok": true
+    },
+    {
+      "name": "dec_geo_weight",
+      "value": "1.000",
+      "pick": "config.geometry_weight",
+      "error": null,
+      "optional": false,
+      "file": "dfreeze",
+      "raw": 1.0,
+      "ok": true
+    },
+    {
+      "name": "dec_frozen_utc",
+      "value": "2026-11-18T07:11:40.099678+00:00",
+      "pick": "frozen_utc",
+      "error": null,
+      "optional": false,
+      "file": "dfreeze",
+      "raw": "2026-11-18T07:11:40.099678+00:00",
+      "ok": true
+    },
+    {
+      "name": "abl_trips",
+      "value": "10",
+      "pick": "trip_count",
+      "error": null,
+      "optional": false,
+      "file": "ablation",
+      "raw": 10,
+      "ok": true
+    },
+    {
+      "name": "abl_elapsed",
+      "value": "81.9",
+      "pick": "elapsed_seconds",
+      "error": null,
+      "optional": false,
+      "file": "ablation",
+      "raw": 81.9337618540012,
+      "ok": true
+    },
+    {
+      "name": "abl_raw_proxy_acc",
+      "value": "0.9162",
+      "pick": "aggregate.classifier_only_raw.trip_macro.proxy_accuracy",
+      "error": null,
+      "optional": false,
+      "file": "ablation",
+      "raw": 0.9161874231642229,
+      "ok": true
+    },
+    {
+      "name": "abl_raw_edge_f1",
+      "value": "0.7636",
+      "pick": "aggregate.classifier_only_raw.trip_macro.route_edge_f1",
+      "error": null,
+      "optional": false,
+      "file": "ablation",
+      "raw": 0.7635736605224652,
+      "ok": true
+    },
+    {
+      "name": "abl_raw_len_f1",
+      "value": "0.8174",
+      "pick": "aggregate.classifier_only_raw.trip_macro.route_length_f1",
+      "error": null,
+      "optional": false,
+      "file": "ablation",
+      "raw": 0.817425273603995,
+      "ok": true
+    },
+    {
+      "name": "abl_raw_edit",
+      "value": "0.6265",
+      "pick": "aggregate.classifier_only_raw.trip_macro.route_edit_similarity",
+      "error": null,
+      "optional": false,
+      "file": "ablation",
+      "raw": 0.6265406098724924,
+      "ok": true
+    },
+    {
+      "name": "abl_raw_cont",
+      "value": "0.7422",
+      "pick": "aggregate.classifier_only_raw.trip_macro.route_continuity",
+      "error": null,
+      "optional": false,
+      "file": "ablation",
+      "raw": 0.7421506552557496,
+      "ok": true
+    },
+    {
+      "name": "abl_raw_nll",
+      "value": "0.2520",
+      "pick": "aggregate.classifier_only_raw.trip_macro.categorical_emission_log_loss",
+      "error": null,
+      "optional": false,
+      "file": "ablation",
+      "raw": 0.251980424935759,
+      "ok": true
+    },
+    {
+      "name": "abl_raw_miss",
+      "value": "0.0005",
+      "pick": "aggregate.classifier_only_raw.trip_macro.candidate_miss_rate",
+      "error": null,
+      "optional": false,
+      "file": "ablation",
+      "raw": 0.0005050676790009773,
+      "ok": true
+    },
+    {
+      "name": "abl_raw_seconds",
+      "value": "0.9",
+      "pick": "aggregate.classifier_only_raw.trip_macro.inference_seconds",
+      "error": null,
+      "optional": false,
+      "file": "ablation",
+      "raw": 0.9382322371002374,
+      "ok": true
+    },
+    {
+      "name": "abl_raw_pooled_len_f1",
+      "value": "0.8020",
+      "pick": "aggregate.classifier_only_raw.pooled.route_length_f1",
+      "error": null,
+      "optional": true,
+      "file": "ablation",
+      "raw": 0.8019535296065913,
+      "ok": true
+    },
+    {
+      "name": "abl_raw_pooled_edge_f1",
+      "value": "0.7534",
+      "pick": "aggregate.classifier_only_raw.pooled.route_edge_f1",
+      "error": null,
+      "optional": true,
+      "file": "ablation",
+      "raw": 0.7533808704204573,
+      "ok": true
+    },
+    {
+      "name": "abl_hmm_proxy_acc",
+      "value": "0.9376",
+      "pick": "aggregate.classifier_plus_HMM.trip_macro.proxy_accuracy",
+      "error": null,
+      "optional": false,
+      "file": "ablation",
+      "raw": 0.9376103622739306,
+      "ok": true
+    },
+    {
+      "name": "abl_hmm_edge_f1",
+      "value": "0.9492",
+      "pick": "aggregate.classifier_plus_HMM.trip_macro.route_edge_f1",
+      "error": null,
+      "optional": false,
+      "file": "ablation",
+      "raw": 0.9492384960765315,
+      "ok": true
+    },
+    {
+      "name": "abl_hmm_len_f1",
+      "value": "0.9789",
+      "pick": "aggregate.classifier_plus_HMM.trip_macro.route_length_f1",
+      "error": null,
+      "optional": false,
+      "file": "ablation",
+      "raw": 0.978879980798526,
+      "ok": true
+    },
+    {
+      "name": "abl_hmm_edit",
+      "value": "0.9137",
+      "pick": "aggregate.classifier_plus_HMM.trip_macro.route_edit_similarity",
+      "error": null,
+      "optional": false,
+      "file": "ablation",
+      "raw": 0.9136679519536927,
+      "ok": true
+    },
+    {
+      "name": "abl_hmm_cont",
+      "value": "1.0000",
+      "pick": "aggregate.classifier_plus_HMM.trip_macro.route_continuity",
+      "error": null,
+      "optional": false,
+      "file": "ablation",
+      "raw": 1.0,
+      "ok": true
+    },
+    {
+      "name": "abl_hmm_nll",
+      "value": "0.2520",
+      "pick": "aggregate.classifier_plus_HMM.trip_macro.categorical_emission_log_loss",
+      "error": null,
+      "optional": false,
+      "file": "ablation",
+      "raw": 0.251980424935759,
+      "ok": true
+    },
+    {
+      "name": "abl_hmm_miss",
+      "value": "0.0005",
+      "pick": "aggregate.classifier_plus_HMM.trip_macro.candidate_miss_rate",
+      "error": null,
+      "optional": false,
+      "file": "ablation",
+      "raw": 0.0005050676790009773,
+      "ok": true
+    },
+    {
+      "name": "abl_hmm_seconds",
+      "value": "6.1",
+      "pick": "aggregate.classifier_plus_HMM.trip_macro.inference_seconds",
+      "error": null,
+      "optional": false,
+      "file": "ablation",
+      "raw": 6.122088119399814,
+      "ok": true
+    },
+    {
+      "name": "abl_hmm_pooled_len_f1",
+      "value": "0.9814",
+      "pick": "aggregate.classifier_plus_HMM.pooled.route_length_f1",
+      "error": null,
+      "optional": true,
+      "file": "ablation",
+      "raw": 0.9814199963865986,
+      "ok": true
+    },
+    {
+      "name": "abl_hmm_pooled_edge_f1",
+      "value": "0.9546",
+      "pick": "aggregate.classifier_plus_HMM.pooled.route_edge_f1",
+      "error": null,
+      "optional": true,
+      "file": "ablation",
+      "raw": 0.9545832179451675,
+      "ok": true
+    },
+    {
+      "name": "abl_geo_proxy_acc",
+      "value": "0.9173",
+      "pick": "aggregate.geometry_HMM_default_reused.trip_macro.proxy_accuracy",
+      "error": null,
+      "optional": true,
+      "file": "ablation",
+      "raw": 0.9173110890643427,
+      "ok": true
+    },
+    {
+      "name": "abl_geo_edge_f1",
+      "value": "0.9262",
+      "pick": "aggregate.geometry_HMM_default_reused.trip_macro.route_edge_f1",
+      "error": null,
+      "optional": true,
+      "file": "ablation",
+      "raw": 0.9261891312626117,
+      "ok": true
+    },
+    {
+      "name": "abl_geo_len_f1",
+      "value": "0.9734",
+      "pick": "aggregate.geometry_HMM_default_reused.trip_macro.route_length_f1",
+      "error": null,
+      "optional": true,
+      "file": "ablation",
+      "raw": 0.9734481048408883,
+      "ok": true
+    },
+    {
+      "name": "abl_geo_edit",
+      "value": "0.8747",
+      "pick": "aggregate.geometry_HMM_default_reused.trip_macro.route_edit_similarity",
+      "error": null,
+      "optional": true,
+      "file": "ablation",
+      "raw": 0.8746929155852966,
+      "ok": true
+    },
+    {
+      "name": "abl_geo_cont",
+      "value": "1.0000",
+      "pick": "aggregate.geometry_HMM_default_reused.trip_macro.route_continuity",
+      "error": null,
+      "optional": true,
+      "file": "ablation",
+      "raw": 1.0,
+      "ok": true
+    },
+    {
+      "name": "abl_geo_nll",
+      "value": "1.1082",
+      "pick": "aggregate.geometry_HMM_default_reused.trip_macro.categorical_emission_log_loss",
+      "error": null,
+      "optional": true,
+      "file": "ablation",
+      "raw": 1.1082100449079562,
+      "ok": true
+    },
+    {
+      "name": "abl_geo_miss",
+      "value": "0.0005",
+      "pick": "aggregate.geometry_HMM_default_reused.trip_macro.candidate_miss_rate",
+      "error": null,
+      "optional": true,
+      "file": "ablation",
+      "raw": 0.0005050676790009773,
+      "ok": true
+    },
+    {
+      "name": "abl_geo_seconds",
+      "value": "5.0",
+      "pick": "aggregate.geometry_HMM_default_reused.trip_macro.inference_seconds",
+      "error": null,
+      "optional": true,
+      "file": "ablation",
+      "raw": 4.962463110099998,
+      "ok": true
+    },
+    {
+      "name": "abl_geo_pooled_len_f1",
+      "value": "0.9784",
+      "pick": "aggregate.geometry_HMM_default_reused.pooled.route_length_f1",
+      "error": null,
+      "optional": true,
+      "file": "ablation",
+      "raw": 0.9784137294405718,
+      "ok": true
+    },
+    {
+      "name": "abl_geo_pooled_edge_f1",
+      "value": "0.9303",
+      "pick": "aggregate.geometry_HMM_default_reused.pooled.route_edge_f1",
+      "error": null,
+      "optional": true,
+      "file": "ablation",
+      "raw": 0.9302952676284212,
+      "ok": true
+    },
+    {
+      "name": "ds_trips",
+      "value": "90",
+      "pick": "trip_count",
+      "error": null,
+      "optional": false,
+      "file": "audit",
+      "raw": 90,
+      "ok": true
+    },
+    {
+      "name": "ds_files",
+      "value": "360",
+      "pick": "file_count",
+      "error": null,
+      "optional": false,
+      "file": "audit",
+      "raw": 360,
+      "ok": true
+    },
+    {
+      "name": "ds_nodes",
+      "value": "2,024,174",
+      "pick": "row_totals_by_extension.nodes",
+      "error": null,
+      "optional": false,
+      "file": "audit",
+      "raw": 2024174,
+      "ok": true
+    },
+    {
+      "name": "ds_arcs",
+      "value": "4,061,945",
+      "pick": "row_totals_by_extension.arcs",
+      "error": null,
+      "optional": false,
+      "file": "audit",
+      "raw": 4061945,
+      "ok": true
+    },
+    {
+      "name": "ds_route_rows",
+      "value": "34,813",
+      "pick": "row_totals_by_extension.route",
+      "error": null,
+      "optional": false,
+      "file": "audit",
+      "raw": 34813,
+      "ok": true
+    },
+    {
+      "name": "ds_track_rows",
+      "value": "227,577",
+      "pick": "row_totals_by_extension.track",
+      "error": null,
+      "optional": false,
+      "file": "audit",
+      "raw": 227577,
+      "ok": true
+    },
+    {
+      "name": "ds_train_trips",
+      "value": "80",
+      "pick": "splits.train.trip_count",
+      "error": null,
+      "optional": false,
+      "file": "audit",
+      "raw": 80,
+      "ok": true
+    },
+    {
+      "name": "ds_student_trips",
+      "value": "10",
+      "pick": "splits.student_test.trip_count",
+      "error": null,
+      "optional": false,
+      "file": "audit",
+      "raw": 10,
+      "ok": true
+    },
+    {
+      "name": "ds_train_broken_joins",
+      "value": "13",
+      "pick": "splits.train.route_arc_offset_0.broken_joins",
+      "error": null,
+      "optional": false,
+      "file": "audit",
+      "raw": 13,
+      "ok": true
+    },
+    {
+      "name": "ds_student_broken_joins",
+      "value": "1",
+      "pick": "splits.student_test.route_arc_offset_0.broken_joins",
+      "error": null,
+      "optional": false,
+      "file": "audit",
+      "raw": 1,
+      "ok": true
+    },
+    {
+      "name": "ds_student_repeated_arcs",
+      "value": "255",
+      "pick": "splits.student_test.route_validity.repeated_arc_extra_occurrences",
+      "error": null,
+      "optional": false,
+      "file": "audit",
+      "raw": 255,
+      "ok": true
+    },
+    {
+      "name": "ds_student_multicomponent_trips",
+      "value": "1",
+      "pick": "len:splits.student_test.trips_with_route_more_than_one_strong_component",
+      "error": null,
+      "optional": false,
+      "file": "audit",
+      "raw": 1,
+      "ok": true
+    },
+    {
+      "name": "ds_student_repeated_trips",
+      "value": "1",
+      "pick": "len:splits.student_test.trips_with_route_repeated_arcs",
+      "error": null,
+      "optional": false,
+      "file": "audit",
+      "raw": 1,
+      "ok": true
+    },
+    {
+      "name": "ds_trip76_broken",
+      "value": "1",
+      "pick": "trip=00000076.route_validity.arc_index_offset_0.broken_joins",
+      "error": null,
+      "optional": false,
+      "file": "pertrip",
+      "raw": 1,
+      "ok": true
+    },
+    {
+      "name": "ds_gps_train",
+      "value": "208,417",
+      "pick": "gps_rows.train",
+      "error": null,
+      "optional": false,
+      "file": "eda",
+      "raw": 208417,
+      "ok": true
+    },
+    {
+      "name": "ds_gps_student",
+      "value": "19,160",
+      "pick": "gps_rows.student_test",
+      "error": null,
+      "optional": false,
+      "file": "eda",
+      "raw": 19160,
+      "ok": true
+    },
+    {
+      "name": "ds_one_second_steps",
+      "value": "201,053",
+      "pick": "timestamps.train.approximately_one_second_steps",
+      "error": null,
+      "optional": false,
+      "file": "eda",
+      "raw": 201053,
+      "ok": true
+    },
+    {
+      "name": "ds_max_gap",
+      "value": "153,064.0",
+      "pick": "timestamps.train.maximum_gap_seconds",
+      "error": null,
+      "optional": false,
+      "file": "eda",
+      "raw": 153064.0,
+      "ok": true
+    },
+    {
+      "name": "ds_train_strong",
+      "value": "20,038",
+      "pick": "road_network_totals.train.strong_components",
+      "error": null,
+      "optional": false,
+      "file": "eda",
+      "raw": 20038,
+      "ok": true
+    },
+    {
+      "name": "ds_train_weak",
+      "value": "3,121",
+      "pick": "road_network_totals.train.weak_components",
+      "error": null,
+      "optional": false,
+      "file": "eda",
+      "raw": 3121,
+      "ok": true
+    },
+    {
+      "name": "ds_student_weak",
+      "value": "227",
+      "pick": "road_network_totals.student_test.weak_components",
+      "error": null,
+      "optional": false,
+      "file": "eda",
+      "raw": 227,
+      "ok": true
+    },
+    {
+      "name": "ds_baseline_edit",
+      "value": "0.8747",
+      "pick": "summary.macro.edit_similarity",
+      "error": null,
+      "optional": false,
+      "file": "baseline",
+      "raw": 0.8746929155852966,
+      "ok": true
+    },
+    {
+      "name": "live_matches",
+      "value": "10",
+      "pick": "len:matches",
+      "error": null,
+      "optional": false,
+      "file": "liveapi",
+      "raw": 10,
+      "ok": true
+    },
+    {
+      "name": "live_url",
+      "value": "https://ml.d3va.dev",
+      "pick": "base_url",
+      "error": null,
+      "optional": true,
+      "file": "liveapi",
+      "raw": "https://ml.d3va.dev",
+      "ok": true
+    },
+    {
+      "name": "live_checked_at",
+      "value": "2026-11-18T07:22:49.748936+00:00",
+      "pick": "completed_at_utc",
+      "error": null,
+      "optional": true,
+      "file": "liveapi",
+      "raw": "2026-11-18T07:22:49.748936+00:00",
+      "ok": true
+    },
+    {
+      "name": "public_checked_at",
+      "value": "2026-11-18T07:29:13.065747+00:00",
+      "pick": "checked_at",
+      "error": null,
+      "optional": true,
+      "file": "public3",
+      "raw": "2026-11-18T07:29:13.065747+00:00",
+      "ok": true
+    },
+    {
+      "name": "public_target",
+      "value": "https://ml.d3va.dev",
+      "pick": "target",
+      "error": null,
+      "optional": true,
+      "file": "public3",
+      "raw": "https://ml.d3va.dev",
+      "ok": true
+    },
+    {
+      "name": "public_model_name",
+      "value": "bagging",
+      "pick": "health.model_name",
+      "error": null,
+      "optional": true,
+      "file": "public3",
+      "raw": "bagging",
+      "ok": true
+    },
+    {
+      "name": "knn_bank_rows",
+      "value": "60,000",
+      "pick": "knn_bank_policy.budget",
+      "error": null,
+      "optional": false,
+      "file": "results3",
+      "raw": 60000,
+      "ok": true
+    },
+    {
+      "name": "knnacc_replay_delta",
+      "value": "0.0",
+      "pick": "fixture_max_abs_probability_delta",
+      "error": null,
+      "optional": false,
+      "file": "knnacc",
+      "raw": 0.0,
+      "ok": true
+    },
+    {
+      "name": "knnacc_bank_rows",
+      "value": "60,000",
+      "pick": "reference_bank_rows",
+      "error": null,
+      "optional": false,
+      "file": "knnacc",
+      "raw": 60000,
+      "ok": true
+    },
+    {
+      "name": "knnx_max_delta",
+      "value": "6.38e-07",
+      "pick": "max_abs_delta",
+      "error": null,
+      "optional": false,
+      "file": "knnx",
+      "raw": 6.380593264979098e-07,
+      "ok": true
+    },
+    {
+      "name": "knnx_fixture",
+      "value": "257 deterministic TRAIN rows, no student read",
+      "pick": "fixture",
+      "error": null,
+      "optional": false,
+      "file": "knnx",
+      "raw": "257 deterministic TRAIN rows, no student read",
+      "ok": true
+    },
+    {
+      "name": "knnx_rows_over",
+      "value": "1",
+      "pick": "rows_delta_over_1e12",
+      "error": null,
+      "optional": false,
+      "file": "knnx",
+      "raw": 1,
+      "ok": true
+    },
+    {
+      "name": "bagclean_rows",
+      "value": "2,000",
+      "pick": "predictions",
+      "error": null,
+      "optional": false,
+      "file": "bagclean",
+      "raw": 2000,
+      "ok": true
+    },
+    {
+      "name": "bagclean_delta",
+      "value": "0.0",
+      "pick": "max_abs_probability_delta",
+      "error": null,
+      "optional": false,
+      "file": "bagclean",
+      "raw": 0.0,
+      "ok": true
+    },
+    {
+      "name": "re_len_f1",
+      "value": "0.9789",
+      "pick": "summary.macro.length_f1",
+      "error": null,
+      "optional": false,
+      "file": "routeeval",
+      "raw": 0.978879980798526,
+      "ok": true
+    },
+    {
+      "name": "re_edge_f1",
+      "value": "0.9492",
+      "pick": "summary.macro.edge_f1",
+      "error": null,
+      "optional": false,
+      "file": "routeeval",
+      "raw": 0.9492384960765315,
+      "ok": true
+    },
+    {
+      "name": "re_edit_sim",
+      "value": "0.9137",
+      "pick": "summary.macro.edit_similarity",
+      "error": null,
+      "optional": false,
+      "file": "routeeval",
+      "raw": 0.9136679519536927,
+      "ok": true
+    },
+    {
+      "name": "re_connected",
+      "value": "10",
+      "pick": "summary.connected_prediction_count",
+      "error": null,
+      "optional": false,
+      "file": "routeeval",
+      "raw": 10,
+      "ok": true
+    },
+    {
+      "name": "re_exact",
+      "value": "0",
+      "pick": "summary.exact_route_count",
+      "error": null,
+      "optional": false,
+      "file": "routeeval",
+      "raw": 0,
+      "ok": true
+    },
+    {
+      "name": "re_ref_discont",
+      "value": "1",
+      "pick": "summary.reference_discontinuities",
+      "error": null,
+      "optional": false,
+      "file": "routeeval",
+      "raw": 1,
+      "ok": true
+    },
+    {
+      "name": "dec_search_trips",
+      "value": "8",
+      "pick": "len:calibration_trip_ids",
+      "error": null,
+      "optional": false,
+      "file": "dfreeze",
+      "raw": 8,
+      "ok": true
+    },
+    {
+      "name": "dec_search_selected",
+      "value": "A_fitted",
+      "pick": "selected_configuration",
+      "error": null,
+      "optional": false,
+      "file": "dfreeze",
+      "raw": "A_fitted",
+      "ok": true
+    },
+    {
+      "name": "dec_search_a_f1",
+      "value": "0.9531",
+      "pick": "objectives[configuration=A_fitted].mean_length_f1",
+      "error": null,
+      "optional": false,
+      "file": "dfreeze",
+      "raw": 0.9530675244860136,
+      "ok": true
+    },
+    {
+      "name": "dec_search_b_f1",
+      "value": "0.9516",
+      "pick": "objectives[configuration=B_twice_beta].mean_length_f1",
+      "error": null,
+      "optional": false,
+      "file": "dfreeze",
+      "raw": 0.9516421505524291,
+      "ok": true
+    },
+    {
+      "name": "dec_search_c_f1",
+      "value": "0.9523",
+      "pick": "objectives[configuration=C_classifier_up].mean_length_f1",
+      "error": null,
+      "optional": false,
+      "file": "dfreeze",
+      "raw": 0.9522881746408183,
+      "ok": true
+    },
+    {
+      "name": "hist_cli_len_f1",
+      "value": "0.9794",
+      "pick": "summary.macro.length_f1",
+      "error": null,
+      "optional": false,
+      "file": "histcli",
+      "raw": 0.9794127201125091,
+      "ok": true
+    },
+    {
+      "name": "hist_cli_edge_f1",
+      "value": "0.9514",
+      "pick": "summary.macro.edge_f1",
+      "error": null,
+      "optional": false,
+      "file": "histcli",
+      "raw": 0.9513611360981356,
+      "ok": true
+    },
+    {
+      "name": "hist_lr_cv_f1",
+      "value": "0.9328",
+      "pick": "comparison[model=logistic_regression].cv_macro_f1_fold_mean",
+      "error": null,
+      "optional": false,
+      "file": "hist",
+      "raw": 0.9328221717050057,
+      "ok": true
+    },
+    {
+      "name": "hist_gnb_cv_f1",
+      "value": "0.9208",
+      "pick": "comparison[model=gaussian_nb].cv_macro_f1_fold_mean",
+      "error": null,
+      "optional": false,
+      "file": "hist",
+      "raw": 0.9207623137095942,
+      "ok": true
+    },
+    {
+      "name": "hist_rf_cv_f1",
+      "value": "0.9425",
+      "pick": "comparison[model=random_forest].cv_macro_f1_fold_mean",
+      "error": null,
+      "optional": false,
+      "file": "hist",
+      "raw": 0.9424753202361901,
+      "ok": true
+    },
+    {
+      "name": "hist_et_cv_f1",
+      "value": "0.9427",
+      "pick": "comparison[model=extra_trees].cv_macro_f1_fold_mean",
+      "error": null,
+      "optional": false,
+      "file": "hist",
+      "raw": 0.9426934385793017,
+      "ok": true
+    },
+    {
+      "name": "hist_hgb_cv_f1",
+      "value": "0.9427",
+      "pick": "comparison[model=hist_gradient_boosting].cv_macro_f1_fold_mean",
+      "error": null,
+      "optional": false,
+      "file": "hist",
+      "raw": 0.9426727362512212,
+      "ok": true
+    },
+    {
+      "name": "hist_baseline_len_f1",
+      "value": "0.9734",
+      "pick": "summary.macro.length_f1",
+      "error": null,
+      "optional": false,
+      "file": "baseline",
+      "raw": 0.9734481048408883,
+      "ok": true
+    },
+    {
+      "name": "hist_baseline_edge_f1",
+      "value": "0.9262",
+      "pick": "summary.macro.edge_f1",
+      "error": null,
+      "optional": false,
+      "file": "baseline",
+      "raw": 0.9261891312626117,
+      "ok": true
+    },
+    {
+      "name": "hist_numpy",
+      "value": "2.5.2",
+      "pick": "versions.numpy",
+      "error": null,
+      "optional": false,
+      "file": "hist",
+      "raw": "2.5.2",
+      "ok": true
+    },
+    {
+      "name": "lr_gap_f1",
+      "value": "+0.0001",
+      "pick": "computed",
+      "error": null,
+      "optional": false,
+      "file": "computed",
+      "raw": 0.0001142795774363714,
+      "ok": true
+    },
+    {
+      "name": "lr_gap_top1",
+      "value": "+0.0112",
+      "pick": "computed",
+      "error": null,
+      "optional": false,
+      "file": "computed",
+      "raw": 0.011198329853862155,
+      "ok": true
+    },
+    {
+      "name": "knn_gap_f1",
+      "value": "+0.0003",
+      "pick": "computed",
+      "error": null,
+      "optional": false,
+      "file": "computed",
+      "raw": 0.0002697502225271764,
+      "ok": true
+    },
+    {
+      "name": "knn_gap_top1",
+      "value": "+0.0137",
+      "pick": "computed",
+      "error": null,
+      "optional": false,
+      "file": "computed",
+      "raw": 0.013715329555621825,
+      "ok": true
+    },
+    {
+      "name": "bag_gap_f1",
+      "value": "+0.0013",
+      "pick": "computed",
+      "error": null,
+      "optional": false,
+      "file": "computed",
+      "raw": 0.0013005319458089248,
+      "ok": true
+    },
+    {
+      "name": "bag_gap_top1",
+      "value": "+0.0133",
+      "pick": "computed",
+      "error": null,
+      "optional": false,
+      "file": "computed",
+      "raw": 0.013337384431852062,
+      "ok": true
+    },
+    {
+      "name": "tuned_gap_f1",
+      "value": "+0.0011",
+      "pick": "computed",
+      "error": null,
+      "optional": false,
+      "file": "computed",
+      "raw": 0.001110460882613462,
+      "ok": true
+    },
+    {
+      "name": "tuned_gap_top1",
+      "value": "+0.0109",
+      "pick": "computed",
+      "error": null,
+      "optional": false,
+      "file": "computed",
+      "raw": 0.010892484342379993,
+      "ok": true
+    },
+    {
+      "name": "tuned_gain_cv_f1",
+      "value": "+0.0000",
+      "pick": "computed",
+      "error": null,
+      "optional": false,
+      "file": "computed",
+      "raw": 3.8069471850255e-05,
+      "ok": true
+    },
+    {
+      "name": "hist_cli_len_delta",
+      "value": "+0.0005",
+      "pick": "computed",
+      "error": null,
+      "optional": false,
+      "file": "computed",
+      "raw": 0.0005327393139831216,
+      "ok": true
+    }
+  ],
+  "figures": [
+    {
+      "path": "visualizations/plots/dataset_inventory.png",
+      "exists": true,
+      "error": null,
+      "manifest": true
+    },
+    {
+      "path": "visualizations/plots/missing_invalid_and_anomalies.png",
+      "exists": true,
+      "error": null,
+      "manifest": true
+    },
+    {
+      "path": "visualizations/plots/timestamp_gaps.png",
+      "exists": true,
+      "error": null,
+      "manifest": true
+    },
+    {
+      "path": "visualizations/plots/trajectory_distributions.png",
+      "exists": true,
+      "error": null,
+      "manifest": true
+    },
+    {
+      "path": "visualizations/plots/road_network_sizes_connectivity.png",
+      "exists": true,
+      "error": null,
+      "manifest": true
+    },
+    {
+      "path": "visualizations/plots/gps_geographic_coverage.png",
+      "exists": true,
+      "error": null,
+      "manifest": true
+    },
+    {
+      "path": "visualizations/phase_three/plots/phase_three_training_inference_times.png",
+      "exists": true,
+      "error": null,
+      "manifest": true
+    },
+    {
+      "path": "visualizations/phase_three/plots/phase_three_confusion_matrices_all.png",
+      "exists": true,
+      "error": null,
+      "manifest": true
+    },
+    {
+      "path": "visualizations/phase_three/plots/phase_three_observation_level_metrics.png",
+      "exists": true,
+      "error": null,
+      "manifest": true
+    },
+    {
+      "path": "visualizations/phase_three/plots/phase_three_ambiguity_strata.png",
+      "exists": true,
+      "error": null,
+      "manifest": true
+    },
+    {
+      "path": "visualizations/phase_three/plots/phase_three_generalization_macro_f1.png",
+      "exists": true,
+      "error": null,
+      "manifest": true
+    },
+    {
+      "path": "visualizations/phase_three/plots/phase_three_bayesian_trial_trace.png",
+      "exists": true,
+      "error": null,
+      "manifest": true
+    },
+    {
+      "path": "visualizations/phase_three/plots/phase_three_tuned_vs_untuned.png",
+      "exists": true,
+      "error": null,
+      "manifest": true
+    },
+    {
+      "path": "visualizations/phase_three/plots/phase_three_feature_importance.png",
+      "exists": true,
+      "error": null,
+      "manifest": true
+    },
+    {
+      "path": "visualizations/phase_three/plots/phase_three_route_ablation.png",
+      "exists": true,
+      "error": null,
+      "manifest": true
+    },
+    {
+      "path": "visualizations/phase_three/maps/phase_three_development_trip_00000009_final.png",
+      "exists": true,
+      "error": null,
+      "manifest": true
+    },
+    {
+      "path": "reports/phase_three/live/screenshots/ui_desktop.png",
+      "exists": true,
+      "error": null,
+      "manifest": "live-evidence-guard"
+    },
+    {
+      "path": "reports/phase_three/live/screenshots/ui_route_map.png",
+      "exists": true,
+      "error": null,
+      "manifest": "live-evidence-guard"
+    },
+    {
+      "path": "reports/phase_three/live/screenshots/ui_mobile.png",
+      "exists": true,
+      "error": null,
+      "manifest": "live-evidence-guard"
+    },
+    {
+      "path": "reports/phase_three/live/screenshots/api_terminal.png",
+      "exists": true,
+      "error": null,
+      "manifest": "live-evidence-guard"
+    }
+  ],
+  "guards": [
+    {
+      "name": "three_families",
+      "ok": true,
+      "detail": "base rows: ['bagging', 'knn_distance_weighted', 'logistic_regression']; other rows: ['bagging_tuned']"
+    },
+    {
+      "name": "model_freeze_hash",
+      "ok": true,
+      "detail": "model_freeze.json declares c7f2572d5d037d07a5c07710fbb1ffefd4ff13fbe866c8940022e4902669c733; actual sha256 of artifacts/phase_three/model.joblib is c7f2572d5d037d07a5c07710fbb1ffefd4ff13fbe866c8940022e4902669c733"
+    },
+    {
+      "name": "decoder_freeze_chain",
+      "ok": true,
+      "detail": "decoder freeze model_sha256=c7f2572d5d037d07a5c07710fbb1ffefd4ff13fbe866c8940022e4902669c733; model_freeze=c7f2572d5d037d07a5c07710fbb1ffefd4ff13fbe866c8940022e4902669c733; ablation config_file_sha256=10405aa6b6f370e41d4ddcb01207fd1e8f58900fd0395e541ee6bc78146168c5; actual match_config sha256=10405aa6b6f370e41d4ddcb01207fd1e8f58900fd0395e541ee6bc78146168c5"
+    },
+    {
+      "name": "ablation_all_ten",
+      "ok": true,
+      "detail": "trip_count=10 failed=[] eligible=True methods=['classifier_only_raw', 'classifier_plus_HMM', 'geometry_HMM_default_reused']"
+    },
+    {
+      "name": "bayesian_trials_declared",
+      "ok": true,
+      "detail": "config.bayesian_trials=8; bayesian.trials_including_measured_prior=8 (phase pins 8)"
+    },
+    {
+      "name": "live_api_ten_successes",
+      "ok": true,
+      "detail": "matches=10 http_statuses=[200] successful_count=10 mocked=False freeze_model_sha=matches frozen model"
+    },
+    {
+      "name": "screenshots_hash_bound",
+      "ok": true,
+      "detail": "missing=[] unbound=[] terminal_binds_api_terminal=True"
+    },
+    {
+      "name": "public_site_verified",
+      "ok": true,
+      "detail": "stage='ready' health.status='ready' model_hash_matches=True config_hash_matches=True trip_ids=10 target='https://ml.d3va.dev'"
+    },
+    {
+      "name": "ten_cli_routes",
+      "ok": true,
+      "detail": "route files under outputs/phase_three_student_test: 10 (00000000.route, 00000007.route, 00000009.route, 00000040.route, 00000052.route, 00000056.route, 00000065.route, 00000076.route, 00000077.route, 00000091.route)"
+    },
+    {
+      "name": "final_cli_evidence",
+      "ok": true,
+      "detail": "route files=10 bound=10 checks_all_true=True model_sha_matches=True final_cli json=1 mismatches=[]"
+    },
+    {
+      "name": "live_offline_parity",
+      "ok": true,
+      "detail": "trips compared=10 live matches=10 differences=[]"
+    },
+    {
+      "name": "acceptance_records",
+      "ok": true,
+      "detail": "model_acceptance=True knn_acceptance=True public_parity=True all_ten=True parity_model_sha_matches=True"
+    },
+    {
+      "name": "runtime_determinism",
+      "ok": true,
+      "detail": "knn_cross_build_binary_equal=True clean_env_passed=True clean_env_model_sha_matches=True clean_env_delta=0.0 original_runtime_replay_delta=0.0"
+    },
+    {
+      "name": "decoder_student_blindness",
+      "ok": true,
+      "detail": "student_results_seen_for_selection=False used_for_selection=False (prior_student_context_available=True is declared context, not search input)"
+    },
+    {
+      "name": "complete_delivery_reconciliation",
+      "ok": true,
+      "detail": "Independent all-ten routes, original GPS state order, public HTTP, browser and receiving-journal reconciliation"
+    },
+    {
+      "name": "new_evaluator_request_deferred",
+      "ok": true,
+      "detail": "Ten new trips are user-reported, not inventoried or assessed; separate website work is deferred"
+    },
+    {
+      "name": "no_stale_path_references",
+      "ok": true,
+      "detail": "references: []"
+    },
+    {
+      "name": "no_pending_markers",
+      "ok": true,
+      "detail": "pending tokens: []"
+    }
+  ]
+}

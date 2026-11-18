@@ -1,0 +1,43 @@
+Phase-three out-of-fold binary candidate log loss
+
+0.10 1
+
+0.0941
+
+0.08 A
+
+0.0744
+
+best
+
+0.0575
+
+0.06
+
+0.0572
+
+0.04
+
+0.02 A
+
+0.00 -
+
+Logistic
+
+KNN
+
+Bagging
+
+Bagging
+
+regression
+
+(distance-weighted)
+
+(decision trees)
+
+(decision trees)
+
+(tuned)
+
+Same OOF candidate rows as the macro-F1 chart (threshold 0.5 probabilities). Binary candidate-row metric: one row per (observation, candidate) directed z

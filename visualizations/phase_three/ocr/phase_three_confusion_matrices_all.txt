@@ -1,0 +1,111 @@
+Phase-three confusion matrices: all requested runs (student development)
+
+logistic_regression
+
+knn_distance_weighted
+
+154,120
+
+23510%7)
+
+154,610
+
+2,027
+
+true negative
+
+98.4%
+
+1.6%
+
+true negative
+
+98.7%
+
+1.3%
+
+2,102
+
+17,039
+
+2,829
+
+16,312
+
+true positive
+
+true positive
+
+11.0%
+
+89.0%
+
+14.8%
+
+85.2%
+
+predictedl negative
+
+predictedl positive
+
+predictedl negative
+
+predicteé positive
+
+bagging
+
+bagging_tuned
+
+154,917
+
+1,720
+
+154,889
+
+1,748
+
+true negative
+
+98.9%
+
+1.1%
+
+true negative
+
+98.9%
+
+1.1%
+
+2,087
+
+17,054
+
+2,073
+
+17,068
+
+true positive
+
+10.9%
+
+89.1%
+
+true positive
+
+10.8%
+
+89.2%
+
+T
+
+T
+
+predictedI negative
+
+predicted positive
+
+predictedI negative
+
+predicted positive
+
+Threshold-0.5 binary candidate confusion for the three selected families plus the tuned variant on the same 10 development trips. Binary candidate-row metric: one row per (observation, ca

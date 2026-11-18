@@ -1,0 +1,35 @@
+€ Relevant oad network - gray - 4981 chords
+
+PathSnap phase three - trip 00000009 - student_test
+
+Development reference iraversal - green (not evaluator data)
+
+development only
+
+Raw GPS - blue - 1,049 observations.
+
+1,049 GPS points - 6,745 nodes - 13,106 directed arcs
+
+First/ last raw GPS position
+
+INTERNAL DEVELOPMENT REPORT MAP — includes reference geometry; never serve in evaluator UIAPI
+
+£ Phase-hree leamed prediction - orange dashed - Phase-three
+
+learned prediction (bagging_tuned)
+
+Actual observations and traversed-arc geometry (phase-three final)
+
+« ~ Raw GPS observations (blue); dotted line shows observation order
+
+— Relevant road network (gray endpoint chords)
+
+— Supplied development reference traversal (green)
+
+- Phase-three leamed prediction (bagging_tuned) — new learned prediction (orange dashed)
+
+Offine Folium / Leaflet - no web tles - ayer controls at upper right
+
+Reference traversal is not independently verified pointwise ground truth,
+
+= Leaflet

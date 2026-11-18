@@ -1,0 +1,42 @@
+{
+  "passed": true,
+  "checked_at_utc": "2026-11-18T07:20:44.612151+00:00",
+  "trip_id": "00000009",
+  "raw_reference_files_present": false,
+  "reserved_evaluator_accessed": false,
+  "source": "one student-development graph+GPS trip copied to fresh temporary root without labels",
+  "inference_or_models_mocked": false,
+  "transport": "in-processASGI,noactualnetwork,nopublicliveclaim",
+  "models": [
+    {
+      "family": "logistic_regression",
+      "model_sha256": "29157349d52a993d33cae78ed244805a9f087e79b6dc914aaa3b4461c02a58c9",
+      "learned_emission_observations": 1049,
+      "route_connected": true,
+      "metrics_status": "unavailable",
+      "predicted_geometry_sha256": "8acfc9403ea575ede49387394353c9a98d54d3733e78e7cb2f1459e077b391f2",
+      "matched_edge_array_sha256": "2329eae4059a34c3a06f0e0d7d17aaf54bdea65a663175d49f9bf88354ad0186",
+      "elapsed_seconds": 4.482558413999868
+    },
+    {
+      "family": "knn_distance_weighted",
+      "model_sha256": "564e6f85f9190d0ff19e75967613e4d56dbe573aaf80ef8780ed8374f8537246",
+      "learned_emission_observations": 1049,
+      "route_connected": true,
+      "metrics_status": "unavailable",
+      "predicted_geometry_sha256": "05a81b675a1cafd2fcfa2c9c3483fef1eb4b60f3a24674053baef2cdecaa2ce7",
+      "matched_edge_array_sha256": "4f563ad18310bb52bf4040444343ba68fb82d1d2148f50252aefd9cc6a622865",
+      "elapsed_seconds": 19.09146129200053
+    },
+    {
+      "family": "bagging",
+      "model_sha256": "c7f2572d5d037d07a5c07710fbb1ffefd4ff13fbe866c8940022e4902669c733",
+      "learned_emission_observations": 1049,
+      "route_connected": true,
+      "metrics_status": "unavailable",
+      "predicted_geometry_sha256": "1c7de416b1ad354e1b8f12df53c6649d46a58629cea1dfc6e2d324fd6940e47a",
+      "matched_edge_array_sha256": "f1624ff2df93d619f64935530977101a1081d1ad276934910417199904c6a410",
+      "elapsed_seconds": 4.910249599999588
+    }
+  ]
+}

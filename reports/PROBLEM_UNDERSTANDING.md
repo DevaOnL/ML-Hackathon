@@ -2,6 +2,12 @@
 
 The 51.47-second video asks us to recover a route from noisy GPS observations on a road network. The six PathSnap documents added later define the full submission: train and compare at least five models, use trip-grouped cross-validation and Bayesian optimisation, integrate learned classifier outputs into HMM/Viterbi route reconstruction, build a FastAPI service and evaluator UI, and submit a public repository with one consolidated PDF. The complete document repeats the five supporting documents; recursive XML inspection recovered nested table rows missed by the initial extraction.
 
+## Current user-scoped phase
+
+On18November2026 the user explicitly limited the completed phase to **Logistic Regression, KNN (or a distance-based classifier), and Bagging**, with the other two model deliverables deferred until later instruction. The current phase selects only among those three using TRAIN-only grouped validation and a new Bayesian search; prior HistGradientBoosting/five-model artifacts remain historical work, not this phase's final model. The organizer's five-model minimum is therefore deferred, not claimed satisfied by this phase. Current phase inputs/results/paths are recorded in `docs/PHASE_SCOPE.json`.
+
+Both verified local Whisper base.en and tiny.en transcribed the complete51.456-second narration independently; they agree after normalizing case, punctuation and project-name spacing. It introduces urban GPS drift and road-sequence reconstruction, with no additional model/metric/deployment constraints. Machine-ASR confidence, timestamps and exact weight/audio hashes are recorded locally in `analysis/video_audio/narration_audit.json`; this is not a claim of manual listening.
+
 ## Input data
 
 The original dataset archive contains 360 files: 80 training trips and ten student-testing trips, each with four headerless whitespace-separated files. Every file was read completely, numerically parsed and checked against its archived bytes. The original inputs remain unchanged.

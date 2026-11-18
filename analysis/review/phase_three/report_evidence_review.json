@@ -1,0 +1,115 @@
+{
+  "schema": "pathsnap-phase-three-report-evidence-review",
+  "version": 1,
+  "reviewer_role": "independent science reviewer (read-only; sole output this file)",
+  "reviewed_at_local": "2026-11-18T13:35+05:30",
+  "target": "reports/phase_three/TECHNICAL_REPORT.md",
+  "target_state_note": "Owner subagent c11150f8 was still editing during review. All findings below are against the current revision read at 13:20-13:30 local (builder --check at 13:30 reported READY). Two defects flagged earlier in this review session were fixed by the owner mid-review and are recorded under resolved_during_review.",
+  "verdict": "PASS with 2 low-severity prose nits. All headline numeric claims, denominators, partitions, decoder ablation values, time/version claims, acceptance-replay claims, and plot OCR content were independently verified against the recorded artifacts. The report is scientifically honest in its current revision: proxy-target construction, tuned-vs-default sign, in-sample decoder search, historical-reuse provenance, and evaluator-trip handling are all disclosed accurately. Builder --check: 209 facts ok, 20 figures ok, 18/18 guards, READY FOR --final.",
+  "verified_correct": [
+    {
+      "item": "Evaluator-trip prose (MD lines 17, 32, 249)",
+      "evidence": "Line 17: 'After the current model was frozen, tested and deployed, the user reported adding ten evaluator trips... Those inputs were not listed, inspected or processed for this report.' Line 32: 'makes no inventory claim about the newly reported evaluator inputs.' Line 249: 'They remain uninspected and unevaluated here.' Consistent with docs/PHASE_SCOPE.json (deferred_evaluator_website_request; used_for_training_selection_or_decoder=false). No claim of absence, no claim of testing. Reviewer never accessed evaluator_test/ or archives."
+    },
+    {
+      "item": "Raw-continuity definitions (MD lines 86, 126, 201)",
+      "evidence": "Line 126: 'the fraction of adjacent observation assignments on the same canonical arc or a directly connected directed arc... does not measure reference agreement.' Line 201: 'Route continuity is the valid-join fraction of the emitted route and is distinct from raw observation-assignment continuity.' Matches mapmatch/metrics.py:85 (route_continuity = 1 - discontinuities/joins) and the raw-classifier continuity plot OCR (title: 'raw-classifier continuity (no HMM, no routed connectors)'; LR 0.929, KNN 0.923, edge-change baseline 0.720). Raw value .7421506552557496 is clearly distinct from proxy accuracy .9161874231642229 in student_ablation.json, and the MD no longer conflates them."
+    },
+    {
+      "item": "Section 2.5 reference-route defects (MD line 64)",
+      "evidence": "Independent parse of Student folder/student_test .route/.arcs: exactly 1 broken join, in trip 00000076 at position 12 (arc 39548 -> 1122); repeated-arc extra occurrences total 255, all in trip 00000056 (route spans 3 strong components, the only such student trip; graph has 415 strong components). student_ablation.json student_reference_discontinuities = {'00000076': [12]}, all others empty. Decoded trip 00000009 output (outputs/phase_three_student_test/routes/00000009.route): 448 arc rows, 444 distinct, 4 repeated arcs, 0 broken joins - matches map metadata prediction_route_integrity exactly."
+    },
+    {
+      "item": "Tuned vs default student comparison (MD line 154)",
+      "evidence": "'Default Bagging has slightly higher student top-1 than the tuned model. The TRAIN-only winner is retained.' Verified in experiments/phase_three/results.json: default .9048016701461378 vs tuned .90339248434238; tuned CV objective .8925000000000001 vs baseline .8914642857142857. Sign stated, not narrated as an improvement; no post-hoc model switch."
+    },
+    {
+      "item": "Decoder search disclosure (MD lines 170-172)",
+      "evidence": "reports/phase_three/decoder/search_results.jsonl: A_fitted mean length F1 .953068, B_twice_beta .951642, C_classifier_up .952288 over the same 8 TRAIN trips; A_fitted selected in freeze.json (frozen 2026-11-18T07:11:40Z, model sha c7f2572d..., config hashes recorded). MD explicitly labels the search 'in-sample after the all-trips fit... a development choice, not a held-out measurement' and discloses prior-phase student context. beta_m=2.0 and sigma_m=7.160645916267228 match the freeze record."
+    },
+    {
+      "item": "Ablation table values (MD lines 182-191)",
+      "evidence": "student_ablation.json trip_macro: classifier_only_raw proxy_acc .9161874231642229, edge F1 .7635736605224652, length F1 .817425273603995, edit .6265406098724924, continuity .7421506552557496, discontinuities 130.5; classifier_plus_HMM proxy_acc .9376103622739306, edge .9492384960765315, length .978879980798526, edit .9136679519536927, continuity 1.0, discontinuities 0, inference 6.122 s; geometry_HMM_default_reused proxy_acc .9173110890643427, edge .9261891312626117, length .9734481048408883, edit .8746929155852966, continuity 1.0. Third row is disclosed as reused historical default (MD line 180). Delivered-routes claim verified: delivery_verification.json trip_macro is identical to the classifier+HMM row (edge .9492384960765315, length .978879980798526, edit .9136679519536927), 10/10 predictions connected, 0 exact matches, 1 reference discontinuity total."
+    },
+    {
+      "item": "Geographic coverage prose (MD line 58)",
+      "evidence": "'The geographic overlap plot is descriptive; no geographically blocked validation was performed. These scores do not establish generalization to unseen regions or road networks.' Appropriate: independent per-trip median-coordinate analysis shows the corpus is globally distributed (Europe, Russia/Urals/Volga, Kazakhstan, US, Japan, Vietnam, Philippines, Ecuador, Brazil, Argentina, South Africa); the coverage figure OCR itself notes trips 'appear as a compact point' at multi-region scale. The earlier 'concentrated in the same region' phrasing was removed by the owner."
+    },
+    {
+      "item": "Reproducibility and determinism claims (MD lines 225-227)",
+      "evidence": "experiments/results.json historical versions: numpy 2.5.2 (vs current 2.5.5, python 3.14.6 both) - version divergence disclosed. knn_acceptance.json: saved-probability replay max delta 0.0, 257-row TRAIN fixture, reference bank 60000 rows, artifact sha recorded, 19,160 student observations / 175,778 candidate rows match the MD confusion-matrix captions. knn_runtime_diagnostic.json: cross-build max delta 6.380593264979098e-07, 1 of 257 rows over 1e-12, binary threshold decisions equal, environments differ in wheel distribution while numpy/scipy/sklearn versions match. hardened_clean_environment_acceptance.json: selected bagging (model sha c7f2572d..., equal to freeze) 2000-row TRAIN fixture, max delta 0.0, tolerance 1e-12, fixture sha bound. All three claims in the MD map to these records."
+    },
+    {
+      "item": "Route map provenance (MD lines 203-207)",
+      "evidence": "visualizations/phase_three/maps/phase_three_development_trip_00000009_final.metadata.json: prediction_path outputs/phase_three_student_test/routes/00000009.route with input and model-artifact sha256s; prediction integrity 448 rows / 444 distinct / 4 repeated arcs / 0 broken joins (matches this reviewer's independent parse); development_only true, do_not_serve_to_evaluator true; historical baseline/prior maps preserved by path. Render is from the existing route output, not a refit. OCR of the rendered figure carries the correct caveats ('not evaluator data', 'Reference traversal is not independently verified pointwise ground truth', 'INTERNAL DEVELOPMENT REPORT MAP')."
+    },
+    {
+      "item": "Selection and HPO scope (MD lines 26, 142-154)",
+      "evidence": "selection.json: bagging selected under out_of_fold_trip_macro_top1_accuracy (LR .884, KNN .8767857142857143, bagging .8914642857142857), student_test_consulted=false. bayesian_optimization.json: 8 trials (1 prior + 2 seeded + 5 GP-EI), best seeded config n_estimators 48 / max_samples 0.7160628448832399 / max_depth 13 / min_samples_leaf 2, objective .8925000000000001 vs baseline .8914642857142857, 1489.58 s. Bayesian-trace figure OCR shows 'gain vs prior: +0.001036', consistent."
+    },
+    {
+      "item": "Metric taxonomy (MD lines 195-201) and proxy-label disclosure (MD line 36)",
+      "evidence": "Taxonomy matches metrics.py behavior: candidate-binary macro F1; observation edge macro F1 over trip:arc multiclass union; top-1 proxy equality to single projection target; categorical emission NLL with 1e-7 floor explicitly 'not an HMM posterior'; route multiset edge F1, metre-weighted length F1, ordered edit similarity; target misses retained in denominators (19 student misses disclosed in the ambiguity-strata figure caption). Line 36 now fully discloses the projection-based label construction, the 4 m^2 ambiguity margin, and 'geometry-based labels also favor geometry-based predictors' - the label-construction disclosure concern from early review is resolved."
+    },
+    {
+      "item": "Appendix A historical framing (MD lines 255-270)",
+      "evidence": "Provenance-only framing maintained; the earlier HistGB-era delivery (length F1 .9794127201125091, slightly above current delivered .978879980798526) is explicitly included 'so the report does not imply a numerical improvement over every historical model'. Historical numpy 2.5.2-era label present. No current-phase 'best-overall' claim found anywhere in the MD."
+    },
+    {
+      "item": "Builder readiness (read-only check, run after inspection)",
+      "evidence": "scripts/build_phase_three_report.py --check (this reviewer, read-only): exit 0, 'facts: 209 ok, 0 unresolved/error', 'figures: 20 referenced, 0 with problems', 'guards: 18/18 pass', 'overall: READY FOR --final'. report_manifest.json (preview mode) records markdown and PDF sha256, 226 tokens resolved, 0 pending, 20-page PDF, no extraction problems."
+    }
+  ],
+  "defects": [
+    {
+      "id": "D1",
+      "severity": "low",
+      "location": "reports/phase_three/TECHNICAL_REPORT.md line 205 (section 6)",
+      "finding": "'Reference discontinuities from section 2.5 are drawn as they exist in the data' is vacuous for the specific map shown: trip 00000009's reference route has zero broken joins, zero repeated arcs and spans a single strong component (verified by this reviewer and by the map metadata reference_route_integrity). A reader may infer the displayed reference contains drawn discontinuities.",
+      "suggested_fix": "Drop the sentence, or state that trip 00000009's reference is fully connected and that reference defects are drawn unmodified only where they exist (they exist in other trips, e.g. 00000076). Owner's discretion; purely prose-level."
+    },
+    {
+      "id": "D2",
+      "severity": "low",
+      "location": "reports/phase_three/TECHNICAL_REPORT.md line 170 (section 5.1)",
+      "finding": "'The geometry and transition scales reuse historical TRAIN-residual statistics ... giving sigma_m = 7.160645916267228 and beta_m = 2.0' presents beta_m = 2.0 as if it were the fitted statistic. reports/decoder/scale_fit.json records beta_unclamped_m = 1.424672666285088 with beta_clamped = true (floor 2.0); sigma is unclamped. The clamp is disclosed only in the pinned record, not in the prose.",
+      "suggested_fix": "Add a short clause, e.g. 'beta_m is clamped to a 2.0 floor from a fitted 1.4247 (scale_fit.json)'. The current sentence is not false - the value does come from the scale-fit record - but it can mislead a reader about what the residual statistic was."
+    }
+  ],
+  "informational_notes": [
+    "Global geographic spread (verified, no defect): student trips include Minneapolis (00000056) and the Almaty area (00000007); the training corpus has no Central-Asia coverage in that latitude band. The current MD makes no concentration claim and the section 2.4 caveat ('no geographically blocked validation') already covers this, so no change is required; noting it so the Lead is aware the partitions are globally scattered rather than regional.",
+    "Missing {{fact:*}} tokens in the MD source are by design (builder fills them; manifest shows 226/226 resolved) and the DRAFT/preview status of the PDF is in-progress owner work - not counted as defects, per review constraints.",
+    "The tuned-model student top-1 (.90339248434238) being below default bagging (.9048016701461378) by ~0.0014 is correctly stated and correctly not narrated as an improvement.",
+    "Route-level metrics for the historical geometry default (length F1 .9734481048408883) sit below the current pipeline (.978879980798526), while the historical learned HistGB CLI delivery (.9794127201125091) sits slightly above; the MD discloses both directions honestly (Appendix A, line 270)."
+  ],
+  "resolved_during_review": [
+    {
+      "originally_flagged": "HIGH: present-tense claims that evaluator data is absent / never supplied / not present anywhere (earlier revision lines 17, 32, ~218)",
+      "resolution": "Owner revision now states the ten evaluator trips were added after freeze/test/deployment and were not listed, inspected or processed; no inventory or result claim is made. Verified accurate against docs/PHASE_SCOPE.json."
+    },
+    {
+      "originally_flagged": "HIGH/medium: 3.4 table note misdefined 'Raw continuity' as fraction of observations whose top-1 candidate lies on the reference route",
+      "resolution": "Owner revision (lines 86, 126, 201) now defines it as the adjacent-assignment adjacency/connectivity fraction and explicitly separates it from reference agreement and from route continuity. Matches mapmatch/metrics.py:85."
+    },
+    {
+      "originally_flagged": "medium candidate: 'Coverage is concentrated in the same region for both partitions' prose (earlier section 2.4)",
+      "resolution": "Owner revision removed the concentration claim and replaced it with a descriptive-only caveat. Verified the corpus is in fact globally distributed, so the new wording is the accurate one."
+    },
+    {
+      "originally_flagged": "medium/low candidate: label-construction disclosure (supervision labels share the route-projection proxy policy)",
+      "resolution": "Owner revision (line 36) now discloses the projection policy, the heading-penalty scale, the 4 m^2 ambiguity margin, the sources of label uncertainty, and the geometry-labels-favor-geometry-predictors caveat."
+    }
+  ],
+  "methodology": [
+    "Read-only inspection of report MD, results/selection/HPO/freeze/ablation/delivery/acceptance JSON records, decoder search jsonl, scale-fit record, map metadata + OCR, figure OCR texts, and historical results file.",
+    "Independent recomputation (no model fits, no inference, no cache writes): per-trip reference-route broken joins, repeated-arc extras and strong-component span for all 10 student trips from raw .arcs/.route files; decoded trip 00000009 route integrity from the delivered .route file; per-trip median coordinates for all 90 development tracks; historical numpy version.",
+    "scripts/build_phase_three_report.py --check run once, read-only, after inspection (per authorization). No --preview/--final runs. evaluator_test/ and archives never accessed. No HTTP. Only this JSON file was written."
+  ],
+  "constraints_compliance": {
+    "read_only_except_review_json": true,
+    "no_fits_or_inference": true,
+    "no_http": true,
+    "evaluator_test_or_archives_accessed": false,
+    "builder_check_only_no_final": true
+  }
+}

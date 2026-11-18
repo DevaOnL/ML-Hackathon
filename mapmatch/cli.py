@@ -27,9 +27,11 @@ def _json(path: Path, value) -> None:
     temporary.replace(path)
 
 
-def _config(path: str | None) -> MatchConfig:
+def _config(path: str | None, *, require_frozen: bool = False) -> MatchConfig:
     if path is None:
-        default = PROJECT / "artifacts" / "match_config.json"
+        default = PROJECT / "artifacts" / "phase_three" / "match_config.json"
+        if require_frozen and not default.is_file():
+            raise FileNotFoundError("frozen requested-trio decoder configuration is missing; pass an explicit --config or complete decoder calibration")
         path = str(default) if default.is_file() else None
     return MatchConfig(**json.loads(Path(path).read_text(encoding="utf-8"))) if path else MatchConfig()
 
@@ -63,7 +65,7 @@ def predict(args) -> int:
         raise ValueError("output directory must be outside the raw input directory")
     if output.exists() and any(output.iterdir()):
         raise ValueError("output directory must be empty; use a new directory to prevent stale results")
-    config = _config(args.config)
+    config = _config(args.config, require_frozen=not args.baseline)
     emission_model = None
     model_hash = None
     if not args.baseline:
@@ -173,7 +175,7 @@ def main(argv=None) -> int:
     p.add_argument("--input", required=True)
     p.add_argument("--output", required=True)
     p.add_argument("--trip", action="append")
-    p.add_argument("--model", default=str(PROJECT / "artifacts" / "model.joblib"))
+    p.add_argument("--model", default=str(PROJECT / "artifacts" / "phase_three" / "model.joblib"))
     p.add_argument("--config")
     p.add_argument("--baseline", action="store_true", help="explicit geometry-only diagnostic baseline (not final learned system)")
     p.set_defaults(function=predict)

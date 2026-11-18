@@ -1,0 +1,29 @@
+Phase-three student-development confusion - kn
+
+KNN (distance-weighted)
+
+true negative
+
+154,610
+
+2,027
+
+98.7%
+
+3%
+
+2,829
+
+16,312
+
+true positive
+
+14.8%
+
+85.2%
+
+predictedI negative
+
+predicte(;I positive
+
+Binary candidate rows at threshold 0.5 on the 10 development trips: 175,778 rows, 19,160 observations (1¢

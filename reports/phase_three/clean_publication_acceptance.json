@@ -1,0 +1,65 @@
+{
+  "checked_at_utc": "2026-11-18T08:06:53.681701+00:00",
+  "source": "exact reviewed Git index checkout, no raw data or candidate caches copied",
+  "checkout": "/tmp/pathsnap-release-999t4f_1",
+  "passed": true,
+  "checks": [
+    {
+      "command": [
+        "/home/d3va/Downloads/ML_Hackathon/.venv-clean/bin/python",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-q"
+      ],
+      "returncode": 0,
+      "log": "reports/phase_three/clean_checkout_test_1.log"
+    },
+    {
+      "command": [
+        "/home/d3va/Downloads/ML_Hackathon/.venv-clean/bin/python",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "infrastructure",
+        "-p",
+        "test_hosting.py",
+        "-q"
+      ],
+      "returncode": 0,
+      "log": "reports/phase_three/clean_checkout_test_2.log"
+    },
+    {
+      "command": [
+        "node",
+        "frontend/smoke.mjs"
+      ],
+      "returncode": 0,
+      "log": "reports/phase_three/clean_checkout_test_3.log"
+    },
+    {
+      "command": [
+        "node",
+        "--test",
+        "tests/frontend_adapter.test.mjs"
+      ],
+      "returncode": 0,
+      "log": "reports/phase_three/clean_checkout_test_4.log"
+    },
+    {
+      "command": [
+        "/home/d3va/Downloads/ML_Hackathon/.venv-clean/bin/python",
+        "-B",
+        "scripts/build_phase_three_report.py",
+        "--check"
+      ],
+      "returncode": 0,
+      "log": "reports/phase_three/clean_checkout_test_5.log"
+    }
+  ]
+}

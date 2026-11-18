@@ -1,0 +1,87 @@
+{
+  "declared_utc": "2026-11-18T06:17:49.186643+00:00",
+  "version": 1,
+  "phase": "three-model-first",
+  "requested_model_families": [
+    "logistic_regression",
+    "knn_distance_weighted",
+    "bagging"
+  ],
+  "training_root": "Student folder/train",
+  "train_trip_count": 80,
+  "scale_evidence": {
+    "path": "reports/decoder/scale_fit.json",
+    "sha256": "0efa5a44f610edda9cd33c5995fa67a591c161a9d3a33a129afaae05252148f9",
+    "fitted": {
+      "sigma_m": 7.160645916267228,
+      "beta_m": 2.0
+    },
+    "sigma_unclamped_m": 7.160645916267228,
+    "beta_unclamped_m": 1.424672666285088,
+    "sigma_clamped": false,
+    "beta_clamped": true,
+    "sigma_sample_count": 20480,
+    "sigma_observations_excluded": 0,
+    "beta_pair_status_counts": {
+      "identified": 10070,
+      "no_forward_reference_occurrence": 163,
+      "backward_proxy_without_reference_loop": 3,
+      "reference_span_crosses_discontinuity": 4
+    },
+    "training_trip_count": 80,
+    "training_reference_discontinuity_count": 13,
+    "residual_samples_path": "reports/decoder/training_residual_samples.csv",
+    "residual_samples_sha256": "984b05c53e401788f09689b139bd9e97c5f45998877dadcd991fc1b62367ddc1",
+    "transition_samples_path": "reports/decoder/training_transition_samples.csv",
+    "transition_samples_sha256": "e7421825360706f80b7f6b005393aba539387ad66b885c1cd3da3eac46bd0068",
+    "original_plan_sha256": "23f0b2b053c16ecf73c115c07c540d1964475273a6f821506f7b5b6f96a209c8",
+    "reuse_rationale": "Geometry-only sigma/beta come from TRAIN reference residuals and transition spans and do not depend on the emission classifier family, so the historical immutable fit is reused read-only instead of recomputed."
+  },
+  "scale_reuse": "read-only reuse of the historical TRAIN-only geometry fit; no refitting and no copy",
+  "calibration_trip_ids": [
+    "00000001",
+    "00000011",
+    "00000021",
+    "00000031",
+    "00000041",
+    "00000051",
+    "00000061",
+    "00000071"
+  ],
+  "calibration_rule": "first eight sorted TRAIN IDs whose numeric ID modulo 10 is 1; unchanged preregistered TRAIN8 set",
+  "objective": "mean exact-original-ID length-weighted repeated-arc route F1 across the eight TRAIN calibration trips; a failed trip contributes zero",
+  "selection_tie_break": "predeclared order A, B, C for exactly equal objectives",
+  "configurations": [
+    {
+      "name": "A_fitted",
+      "beta_multiplier": 1.0,
+      "classifier_weight": 1.0,
+      "geometry_weight": 1.0
+    },
+    {
+      "name": "B_twice_beta",
+      "beta_multiplier": 2.0,
+      "classifier_weight": 1.0,
+      "geometry_weight": 1.0
+    },
+    {
+      "name": "C_classifier_up",
+      "beta_multiplier": 1.0,
+      "classifier_weight": 2.0,
+      "geometry_weight": 0.5
+    }
+  ],
+  "freeze": "Write the phase MatchConfig artifact before student-development ablation; never revise it from those results",
+  "search_input_boundary": "The search opens TRAIN tracks and TRAIN reference routes only; no student file is read during search and the plan cannot change from student outcomes",
+  "historical_comparator": {
+    "baseline_output": "outputs/baseline_student_test_v2",
+    "note": "Geometry-only all-ten baseline (macro lengthF1 0.9734481048408883, countF1 0.9261891312626117) reused as a historical comparator, not as a new learned model"
+  },
+  "limitations": [
+    "Scale evidence is a historical TRAIN-only fit reused read-only; the phase never refits geometry scales.",
+    "The phase emission model was fitted on all TRAIN80, so decoder TRAIN8 search is in-sample calibration after classifier fitting, not unseen generalization.",
+    "Earlier geometry-only and HistGB student results existed as context, so this is not a fully blind phase; the predeclared search still reads only TRAIN predictions and references.",
+    "Student-development10 is not the absent reserved evaluator10.",
+    "Pointwise labels are route-derived proxies with a weak GPS-motion direction tie-break, not supplied observation-aligned ground truth."
+  ]
+}

@@ -38,6 +38,9 @@ node_modules/
 /experiments/phase_three/cache/
 /experiments/phase_three/predictions/
 /experiments/phase_three/*.npz
+/experiments/phase_three_runs/*/predictions/
+/experiments/phase_three_runs/*/cache/
+/experiments/phase_three_runs/*/*.npz
 /study_materials/
 /reports/**/.terminal_display_ready.json
 /analysis/video/*.safetensors
@@ -57,5 +60,6 @@ node_modules/
 /outputs/*/matches/
 # Never publish evaluator inputs or private reference labels
 /evaluator*/
+/evaluator*.zip
 /private*/
 /data/

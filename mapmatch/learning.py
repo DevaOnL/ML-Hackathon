@@ -20,7 +20,7 @@ from .features import (FEATURE_NAMES, FEATURE_VERSION, CandidateFeatureExtractor
                        features_for_candidates, reference_observation_edges,
                        reference_observation_labels)
 
-DEFAULT_MODEL_PATH = Path(__file__).resolve().parents[1] / "artifacts" / "model.joblib"
+DEFAULT_MODEL_PATH = Path(__file__).resolve().parents[1] / "artifacts" / "phase_three" / "model.joblib"
 
 
 def predict_positive_proba(model, X: np.ndarray) -> np.ndarray:

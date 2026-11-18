@@ -1,0 +1,250 @@
+{
+  "purpose": "Per-trip route/state checksums for Lead CLI parity; no final route directory is written by the phase decoder experiment",
+  "phase": "three-model-first",
+  "model_sha256": "c7f2572d5d037d07a5c07710fbb1ffefd4ff13fbe866c8940022e4902669c733",
+  "config_file_sha256": "10405aa6b6f370e41d4ddcb01207fd1e8f58900fd0395e541ee6bc78146168c5",
+  "route_file_sha256_definition": "sha256 of the predicted .route text (one original directed arc ID per line, newline-terminated)",
+  "matched_edge_array_sha256_definition": "sha256 of the int64 little-endian matched-edge array",
+  "trips": {
+    "00000000": {
+      "observations": 2503,
+      "classifier_only_raw": {
+        "status": "ok",
+        "connected": false,
+        "predicted_arc_count": 273,
+        "route_file_sha256": "53f97179adf80c1832b00a5314a6860fc83681e8aad29252946f6012e97529b8",
+        "matched_edge_array_sha256": "0d1516c7a90807def075e064f42c91c9e6bd8c97ba90c9f15799d6f37c7275de"
+      },
+      "classifier_plus_HMM": {
+        "status": "ok",
+        "connected": true,
+        "predicted_arc_count": 208,
+        "route_file_sha256": "84e858b9efed8abd2156996be8ebfbc3a1b66b2fa69d1fc5e176ab9ff765a632",
+        "matched_edge_array_sha256": "210a4e05efb96b105f473240f03c22a10d78d5cb9ca82e1b7d4c3da5fec36411"
+      },
+      "geometry_HMM_default_reused": {
+        "status": "ok",
+        "connected": true,
+        "predicted_arc_count": 212,
+        "route_file_sha256": "293ed5a5dd74f2a33e8b16725fddca492becda7347de161c68509ed544c4f6b7",
+        "matched_edge_array_sha256": "d3e5f49a7988ec7ea52b4a3f2d9ca59832cadf4da566020511fcdeb7450794d2"
+      }
+    },
+    "00000007": {
+      "observations": 1354,
+      "classifier_only_raw": {
+        "status": "ok",
+        "connected": false,
+        "predicted_arc_count": 184,
+        "route_file_sha256": "8e39becb7d86339fee1c35d3b1b677c46c0489431c945af41903c021c8ed4331",
+        "matched_edge_array_sha256": "765f7a6670abb1566b0ff094b652a5df7fabd2d432300f10ee20ad6f727cb82e"
+      },
+      "classifier_plus_HMM": {
+        "status": "ok",
+        "connected": true,
+        "predicted_arc_count": 124,
+        "route_file_sha256": "642fc2c567a3796c807b52eaadb4c257aaf1cdcaa4b1fd8565f7e1571fb736e7",
+        "matched_edge_array_sha256": "f1b3063dab53091f27dd52194ef2e4b5e0d90b155592f06535329add25f4c239"
+      },
+      "geometry_HMM_default_reused": {
+        "status": "ok",
+        "connected": true,
+        "predicted_arc_count": 124,
+        "route_file_sha256": "642fc2c567a3796c807b52eaadb4c257aaf1cdcaa4b1fd8565f7e1571fb736e7",
+        "matched_edge_array_sha256": "6fe83cb6843a1ba38eec8285378b6c97ccc79def33a3bb13a519bdfb6ae624dc"
+      }
+    },
+    "00000009": {
+      "observations": 1049,
+      "classifier_only_raw": {
+        "status": "ok",
+        "connected": false,
+        "predicted_arc_count": 429,
+        "route_file_sha256": "32aef1c839e3fa08712bd7e31bd79ba9d3c912e17bed75ebcf46fb09b200dc57",
+        "matched_edge_array_sha256": "3da2daf492c257db074c405bbc63243e9973f1cdb547f10d6ede30855ce97960"
+      },
+      "classifier_plus_HMM": {
+        "status": "ok",
+        "connected": true,
+        "predicted_arc_count": 448,
+        "route_file_sha256": "437139ad9bb0d6650221dce75b3bbe9120676e4b7c6d74ba37d08774c57cb1bc",
+        "matched_edge_array_sha256": "f1624ff2df93d619f64935530977101a1081d1ad276934910417199904c6a410"
+      },
+      "geometry_HMM_default_reused": {
+        "status": "ok",
+        "connected": true,
+        "predicted_arc_count": 498,
+        "route_file_sha256": "51f20b69d16aeedc2520d9522a5a99ace90a3dfba08a1b0bb0a9c3c4281833ce",
+        "matched_edge_array_sha256": "11bf4a6a9bd63d042d79089d315a0b0d306350563c28ce7f3e3cd603022dfa06"
+      }
+    },
+    "00000040": {
+      "observations": 2995,
+      "classifier_only_raw": {
+        "status": "ok",
+        "connected": false,
+        "predicted_arc_count": 452,
+        "route_file_sha256": "8f28291e76e803b3121c427b9f2efc84d4b85c61831eee1bd64d1416064b45f6",
+        "matched_edge_array_sha256": "c1a27ec7657ff37fd2a23ea9d65c40dcf623e50bff93df43270e5f0fd9a06f06"
+      },
+      "classifier_plus_HMM": {
+        "status": "ok",
+        "connected": true,
+        "predicted_arc_count": 341,
+        "route_file_sha256": "1ab93c9af84e426812b8772de4d215f9577de518511e64c94430831348a3c581",
+        "matched_edge_array_sha256": "2e32b261b6bfbe24b8c4991d4657e602d165a8fd0dc24e835912c741874f8c92"
+      },
+      "geometry_HMM_default_reused": {
+        "status": "ok",
+        "connected": true,
+        "predicted_arc_count": 351,
+        "route_file_sha256": "ed996589d444cfdbd9ca7cf16ae8c834f16586f0156d905d596dbf4eb9728721",
+        "matched_edge_array_sha256": "24748eb89bcdde00bcfb5caca7e65456e3b477719406b56a006149b607bc1944"
+      }
+    },
+    "00000052": {
+      "observations": 262,
+      "classifier_only_raw": {
+        "status": "ok",
+        "connected": false,
+        "predicted_arc_count": 87,
+        "route_file_sha256": "2c20d0db5947ca81707e2e4fded891cf1f4f4c10d716fbbc2be0b8dade4138ca",
+        "matched_edge_array_sha256": "53bd3c4d8d27008c832b4bffb3b8f17539486c16315e38693d0cbcbef2dbdb57"
+      },
+      "classifier_plus_HMM": {
+        "status": "ok",
+        "connected": true,
+        "predicted_arc_count": 93,
+        "route_file_sha256": "f2c45a35949271a1f45741a3583ccc6dc16cd318ab8d915c3d7d69151fff0792",
+        "matched_edge_array_sha256": "70c95f7c07cced2338f12b2c040f507bf17b1d617e1aef6c616ce1d40fd17ecd"
+      },
+      "geometry_HMM_default_reused": {
+        "status": "ok",
+        "connected": true,
+        "predicted_arc_count": 93,
+        "route_file_sha256": "f2c45a35949271a1f45741a3583ccc6dc16cd318ab8d915c3d7d69151fff0792",
+        "matched_edge_array_sha256": "229968f04afca4ac581c453b129bb548801e0db5e7a992bb527604d8cf3a3b2a"
+      }
+    },
+    "00000056": {
+      "observations": 3958,
+      "classifier_only_raw": {
+        "status": "ok",
+        "connected": false,
+        "predicted_arc_count": 1399,
+        "route_file_sha256": "e19a73aada6ab2e3f1ad0fef590b3ca84b48fb0760dec7f9b0e719b5695046ec",
+        "matched_edge_array_sha256": "5ba176df68c01b1d6a9735b7de9f6757e9a2105891c8ceb3e33db691b867a7d1"
+      },
+      "classifier_plus_HMM": {
+        "status": "ok",
+        "connected": true,
+        "predicted_arc_count": 1336,
+        "route_file_sha256": "2b24c9261d39e4f01db61150198662889cd17dc7cb92cdcdb9f088fb91c1374b",
+        "matched_edge_array_sha256": "6c99fc070f113f6ca758e36ac48767130981953f2549e35aac02e13e41360df0"
+      },
+      "geometry_HMM_default_reused": {
+        "status": "ok",
+        "connected": true,
+        "predicted_arc_count": 1352,
+        "route_file_sha256": "c40582a8ce76a3bf93fef16cbed9cd744e72ba10585f9b67cffccc917da7bda4",
+        "matched_edge_array_sha256": "c0d875af9cd019d395294a9525421dfa552917fb94db961e2be786ac184b2c70"
+      }
+    },
+    "00000065": {
+      "observations": 768,
+      "classifier_only_raw": {
+        "status": "ok",
+        "connected": false,
+        "predicted_arc_count": 174,
+        "route_file_sha256": "00a54b6dfb823235cfc54d95aed66b191f925f56f7fb1a59cd9a89457c22d6f0",
+        "matched_edge_array_sha256": "9e42f964a843350e3773b0561267c4e7425138f7c44a1ff88d5512a6c857c5ba"
+      },
+      "classifier_plus_HMM": {
+        "status": "ok",
+        "connected": true,
+        "predicted_arc_count": 151,
+        "route_file_sha256": "9435167174dd5fbbb4371d5f312fc88e0728ffced1ef17ad7f5bd9eec7222637",
+        "matched_edge_array_sha256": "d5e8641d114dacc5d939d58123e09b532d3732cef5d349baa2be111cee34f7d3"
+      },
+      "geometry_HMM_default_reused": {
+        "status": "ok",
+        "connected": true,
+        "predicted_arc_count": 157,
+        "route_file_sha256": "d42cb6e08291bafb8d18edda82b687695e8b44c19a0a91d9a2350278bf33349f",
+        "matched_edge_array_sha256": "ca165a8c77e297a1b75d089557a6c8fe28d6a9a6325525e035b7e4e61ab9ef28"
+      }
+    },
+    "00000076": {
+      "observations": 1486,
+      "classifier_only_raw": {
+        "status": "ok",
+        "connected": false,
+        "predicted_arc_count": 428,
+        "route_file_sha256": "861b048796178ecaf5d99a7f413714a1efb2f31e7773e202616c4dd6204ce687",
+        "matched_edge_array_sha256": "b5ca6b5ad6128d53a8d4b66b343f44e3f732496ed7591b080fc46dac93566478"
+      },
+      "classifier_plus_HMM": {
+        "status": "ok",
+        "connected": true,
+        "predicted_arc_count": 406,
+        "route_file_sha256": "bb26197f51c4c43b6562a41de7701eb571538d6bf7e23819349caa5f4e769d71",
+        "matched_edge_array_sha256": "b2acd13593e7c960a444417c7a1821a87160284c4ea4a4c0ca7d17026b96d92d"
+      },
+      "geometry_HMM_default_reused": {
+        "status": "ok",
+        "connected": true,
+        "predicted_arc_count": 467,
+        "route_file_sha256": "8164257a740ef9ba0c4b9715226e1670b7b32a0a31a8a8fe725ba085aa1a73d6",
+        "matched_edge_array_sha256": "5877a227d60896c937b68cac806ad9ae59c80ec5aa285c446411882fb57466cb"
+      }
+    },
+    "00000077": {
+      "observations": 3911,
+      "classifier_only_raw": {
+        "status": "ok",
+        "connected": false,
+        "predicted_arc_count": 961,
+        "route_file_sha256": "cee692d971d77158834571b5ca81095676eaa5843c9a3bec00b0e4c5729e63a2",
+        "matched_edge_array_sha256": "004d3a4188f0612ee8e42fd545157ecc5f2e81d9a6596528e9255c6987405a2d"
+      },
+      "classifier_plus_HMM": {
+        "status": "ok",
+        "connected": true,
+        "predicted_arc_count": 405,
+        "route_file_sha256": "7f34f072b56850499de7940fe469f59ff9fc48e006c1c3d609189c85d7c1d6e4",
+        "matched_edge_array_sha256": "7ed661189625dce4762f179fe2dcf3cb5e418c757cc9ffa2a8eecb1224711b5b"
+      },
+      "geometry_HMM_default_reused": {
+        "status": "ok",
+        "connected": true,
+        "predicted_arc_count": 447,
+        "route_file_sha256": "13a7f9672df072a676bbfa571841d4dbd3fd243fc4a731eff2dd8db8dd77c700",
+        "matched_edge_array_sha256": "e144ae6b89b7010758d6d6aac48a18e5852daa108431810677cfb0a1450cb03d"
+      }
+    },
+    "00000091": {
+      "observations": 874,
+      "classifier_only_raw": {
+        "status": "ok",
+        "connected": false,
+        "predicted_arc_count": 270,
+        "route_file_sha256": "87b7e676f7918bf714eb7497a0c91ec8e070c315e5b32be36393ed99a39c657c",
+        "matched_edge_array_sha256": "4cca9f302e2dc81a564da2ac53327fab1276e1ff02f0e1b9d9d2ceaafaaf6f22"
+      },
+      "classifier_plus_HMM": {
+        "status": "ok",
+        "connected": true,
+        "predicted_arc_count": 233,
+        "route_file_sha256": "6115efa0648fd96119de1f2b9a973ced436c9ca45bb13989e23c7da8dc2efcbb",
+        "matched_edge_array_sha256": "bf376259d9e1437151c392967fb3ce7ba83aa08ecd4d2aa0f17fbfd71621e010"
+      },
+      "geometry_HMM_default_reused": {
+        "status": "ok",
+        "connected": true,
+        "predicted_arc_count": 239,
+        "route_file_sha256": "76ae4073437244605824d5d18c04c2ecdac89c0af4fe3e397b0b3a3f3e88443c",
+        "matched_edge_array_sha256": "f42cbab4be3c5b1d743423a7d2d41d71199d0842437a493a5143ef37760f388c"
+      }
+    }
+  }
+}

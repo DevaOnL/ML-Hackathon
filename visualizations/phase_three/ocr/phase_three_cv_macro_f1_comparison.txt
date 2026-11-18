@@ -1,0 +1,43 @@
+Phase-three model comparison: grouped-CV binary candidate macro-F
+
+1.0
+
+0.9425
+
+0.94
+
+0.8
+
+0.7 4
+
+0.6
+
+Per-fold gr
+
+-F1
+
+Final tune
+
+ned)
+
+0.5-
+
+Logistic
+
+KNN
+
+Bagging
+
+Bagging
+
+regression
+
+(distance-weighted)
+
+(decision trees)
+
+(decision trees)
+
+(tuned)
+
+Three user-selected families + tuned variant; TRAIN trip-grouped 3-fold CV, 28,000 sampled observations / 269,463 OOF candidate rows. Error bars: fold st

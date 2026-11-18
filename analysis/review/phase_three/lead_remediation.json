@@ -1,0 +1,30 @@
+{
+  "checked_at_utc": "2026-11-18T07:34:06.138245+00:00",
+  "no_real_model_refits_or_prediction_reruns": true,
+  "frozen_manifest_bytes_all_unchanged": true,
+  "frozen_model_sha256": "c7f2572d5d037d07a5c07710fbb1ffefd4ff13fbe866c8940022e4902669c733",
+  "current_source_sha256": {
+    "experiments/phase_three/run_phase_three.py": "e89c30a3fc7f1b154d0ca4ee6eacffb60c9ad28ea450ae9c5eb495643dbb43c6",
+    "mapmatch/phase_models.py": "05bc7b0b1bcbe70f75b769ddb3ace412a6ab5aaeb74f7ab547aab05b4fb9f0e0",
+    "tests/test_phase_three.py": "da22dac8bfdeb3f6122ec80b2ddcd2b23ef81897aff0d8cdabdabbf47287daaf"
+  },
+  "resolved": {
+    "PH3-D002": "actual clean-child versions and strict2000TRAINrowprobability equality;separatenewreport preservesoriginalfreeze",
+    "PH3-D003": "completed/partialallstagesrefusebeforedata/fitting/metadata;exclusiveHPOlogcreation;directCVguard",
+    "PH3-D004": "completedfreezeandpartialartifactexportsrefuse;frozenmodelunchanged",
+    "PH3-D005": "randomcollisionfallbackislabeledaccurately;existing8actualHPOtrialrecordsunchanged",
+    "PH3-D006": "8TOTALpredeclaredtrials=1prior+2seeded+5GP-EI;not8GP-EI",
+    "PH3-D007": "same-parameterfutureLRfresh/savedstudentprobabilitiesassert1e-12;nottriggeredbyactualBaggingwinner",
+    "PH3-D008": "allpredictionidentityarrayscomparedequal,notjustmetrics;permanentmutationtest",
+    "PH3-D009": "commentcorrectedclass0rounding;mathematicalbankunchanged",
+    "PH3-D010": "futurestageentriesrecordinvocationmode/PID;currentmeasuredresultsremainimmutable"
+  },
+  "tests": "167 Python tests +28 hosting +8 adapter +frontend smoke passed;16targetedmodelguards also passed",
+  "audit_note": "original audit omitted declared reused LR student NPZ; now resolves evaluation provenance pointers without copying/refitting;fourrowmetricreplaypasses",
+  "reports": [
+    "reports/phase_three/model_acceptance.json",
+    "reports/phase_three/hardened_clean_environment_acceptance.json",
+    "analysis/review/phase_three/model_integration_review.json",
+    "analysis/review/phase_three/audit_report.json"
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "phase": "three-model-first",
+  "config": {
+    "seed": 20261118,
+    "train_observations_per_trip": 350,
+    "student_observations_per_trip": 0,
+    "folds": 3,
+    "bayesian_trials": 8,
+    "n_jobs": 2,
+    "candidate_radius_m": 80.0,
+    "max_radius_m": 1000.0,
+    "max_candidates": 12,
+    "sample_spacing_m": 40.0
+  },
+  "versions": {
+    "python": "3.14.6",
+    "numpy": "2.5.5",
+    "scipy": "1.18.0",
+    "sklearn": "1.8.0",
+    "joblib": "1.5.3",
+    "platform": "Linux-7.1.8-1-cachyos-x86_64-with-glibc2.44",
+    "machine": "x86_64"
+  },
+  "thread_environment": {
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "1",
+    "NUMEXPR_NUM_THREADS": "1",
+    "PYTHONDONTWRITEBYTECODE": "1"
+  },
+  "caches": {
+    "train": {
+      "file": "experiments/cache/train_edee9a8f151dd25e.npz",
+      "sha256": "db523c112a6119f16b6f473d6221e3c56b6730ccb2db64dee55433aedbf3ba9e"
+    },
+    "student_test": {
+      "file": "experiments/cache/student_test_240a8fbfc79205b3.npz",
+      "sha256": "ae96abb4784501b2b086c9b4aa2f5668e1c9d7f29abda907b7f402118af81b73"
+    }
+  },
+  "hpo_budget": {
+    "trials_including_measured_prior": 8,
+    "seeded_initial_design": 2,
+    "gp_ei_trials": 5
+  },
+  "stages": [
+    "cv",
+    "select",
+    "hpo",
+    "freeze",
+    "student"
+  ],
+  "protocol": "experiments/phase_three/PROTOCOL.md",
+  "written_at_utc": "2026-11-18T07:09:30.144879+00:00"
+}

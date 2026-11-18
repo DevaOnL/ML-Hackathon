@@ -1,0 +1,33 @@
+{
+  "phase": "three-model-first",
+  "selection_status": "explicitly selected by user",
+  "human_instruction": "Fully finish all deliverables for ONLY Logistic Regression, KNN (or distance based), and Bagging. Defer the other two models until later user instruction.",
+  "model_families": [
+    "logistic_regression",
+    "knn_distance_weighted",
+    "bagging"
+  ],
+  "tuned_comparison_same_family": true,
+  "prior_histgb_status": "Preserved prior-work artifact/evidence; NOT the current requested final. Do not relabel as LR/KNN/Bagging.",
+  "retain_prior_five_model_cv": true,
+  "publish_five_model_claim": false,
+  "organizer_five_model_requirement": "deferred by explicit latest user instruction",
+  "continue_shared_pipeline": true,
+  "selection_policy": "Select only among requested three families using TRAIN grouped CV. Bayesian optimization on selected family only. Student evaluation after freeze; no student-based choice.",
+  "new_phase_scopes": {
+    "learning": "experiments/phase_three/, artifacts/phase_three/, mapmatch/phase_models.py",
+    "decoder": "reports/phase_three/decoder/, scripts/phase_three_decoder.py",
+    "routes": "outputs/phase_three_student_test/",
+    "live": "reports/phase_three/live/"
+  },
+  "learning_agent": "03569c56-9b6c-4696-815a-704ac9cce8d1",
+  "learning_task": "task-16",
+  "deferred_evaluator_website_request": {
+    "human_reported_trip_count": 10,
+    "path": "evaluator_test/",
+    "order": "After current three-model report and reviewed publication; do not interrupt current work",
+    "section": "Separate from the ten student-development trips",
+    "status": "remembered and queued; inputs not inspected or evaluated",
+    "used_for_training_selection_or_decoder": false
+  }
+}

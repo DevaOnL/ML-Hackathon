@@ -1,0 +1,21 @@
+{
+  "passed": true,
+  "checked_at_utc": "2026-11-18T07:18:54.219459+00:00",
+  "model": "knn_distance_weighted",
+  "actual_classifier": "KNeighborsClassifier",
+  "trained_trip_count": 80,
+  "tested_trip_count": 10,
+  "tested_observations": 19160,
+  "tested_candidate_rows": 175778,
+  "reference_bank_rows": 60000,
+  "artifact_sha256": "564e6f85f9190d0ff19e75967613e4d56dbe573aaf80ef8780ed8374f8537246",
+  "fixture_max_abs_probability_delta": 0.0,
+  "metrics": {
+    "top1_accuracy": 0.8905010438413361,
+    "trip_macro_top1_accuracy": 0.9026615002129368,
+    "macro_f1": 0.9274881703784643,
+    "log_loss": 0.09604297407876781,
+    "candidate_miss_count": 19
+  },
+  "note": "Independent all10 saved-probability metric replay and 257-row actual saved-model inference in original training runtime. Not reserved evaluator results."
+}

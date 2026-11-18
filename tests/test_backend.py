@@ -88,7 +88,8 @@ def api_fixture(*, scorer=None, factory=None, model_present=True, with_reference
 
 class ApiBoundaryTests(unittest.TestCase):
     def assert_safe_headers(self, response):
-        self.assertEqual(response.headers["cache-control"], "no-store")
+        self.assertIn("no-store", response.headers["cache-control"])
+        self.assertIn("no-transform", response.headers["cache-control"])
         self.assertEqual(response.headers["x-content-type-options"], "nosniff")
         self.assertEqual(response.headers["x-frame-options"], "DENY")
         self.assertRegex(response.headers["x-request-id"], r"^[0-9a-f]{32}$")
