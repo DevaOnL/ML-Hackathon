@@ -1,0 +1,41 @@
+# Supplied data and organiser documents are local inputs, not redistributed.
+/Student folder/
+/Student folder.zip
+/Problem Statement.mp4
+/PathSnap_student_materials/
+/PathSnap_student_materials.zip
+/analysis/instructions/
+/analysis/instructions_review/media/
+/analysis/video/audio.wav
+/analysis/video/models/
+/analysis/video/frames/
+/analysis/video/dense_frames/
+/analysis/video/half_second_frames/
+/analysis/video/boundaries/
+/analysis/video/*.log
+/analysis/video/*.pt
+/analysis/video/*.bin
+# Environments, caches, credentials and temporary data
+.venv*/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+*.egg-info/
+/build/
+/dist/
+.env
+.env.*
+!.env.example
+.DS_Store
+node_modules/
+*.tmp
+/experiments/cache/
+/experiments/candidate_data*/
+/experiments/*.npz
+/analysis/video/*.safetensors
+/outputs/*/observations/
+/outputs/*/matches/
+# Never publish evaluator inputs or private reference labels
+/evaluator*/
+/private*/
+/data/
