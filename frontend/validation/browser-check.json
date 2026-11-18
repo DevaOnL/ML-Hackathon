@@ -1,6 +1,6 @@
 {
   "url": "http://127.0.0.1:8000",
-  "captured_utc": "2026-11-18T05:35:46.113147+00:00",
+  "captured_utc": "2026-11-18T05:37:55.419761+00:00",
   "checks": [
     "All 10 trip choices match actual GET /trips IDs in API order",
     "Local Leaflet initializes with no external default map-tile requests",
