@@ -16,5 +16,5 @@
   "student_failed_trips": 0,
   "evaluator_failed_trips": 0,
   "continuity_both": 1,
-  "generated_html_whitespace_note": "Folium-generated trailing blank-line whitespace retained to preserve verified HTML/screenshot metadata SHA binding; all other staged source passes git diff --check."
+  "generated_html_whitespace_note": "Generated Folium HTML trailing blank-line whitespace and OCR blank EOF are retained unchanged with their evidence. All hand-written source passes the scoped whitespace check."
 }
