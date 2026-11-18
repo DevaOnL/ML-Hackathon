@@ -1,0 +1,13 @@
+{
+  "schema": "pathsnap-decoder-emission-selection-rule-v1",
+  "created_before_decoder_route_scoring": true,
+  "rule": "Use family with highest completed three-fold equal-trip tuning64 observation top1, ties binarymacroF1 thenlowerLL; requireall5familybaselineandfinalistscomplete beforefinalfreeze. InitialHistGB highestcompleted0.8940178571428572; ifstillhighestwhenBaggingcompletesuse itsfixedcontextlargeconfiguration. Classifierselectionisnotinformedbyroutecalibrationresults.",
+  "decoder_menu": "preregistered_menu.json fixed8",
+  "dense": true,
+  "per_fold_routes": 2,
+  "train_scope": "64onlywholetripOOF",
+  "confirmation_used": false,
+  "student_used": false,
+  "evaluator_used": false,
+  "do_not_claim_outer_unseen": true
+}

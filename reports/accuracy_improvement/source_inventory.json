@@ -1,0 +1,158 @@
+{
+  "created_at_utc": "2026-11-18T11:05:10.368106+00:00",
+  "frozen_selection_sha256": "f4da580f9654d90cc493bea8d4643a89b013ac09f985044a7be2a261af34d85f",
+  "files": [
+    {
+      "path": "backend/accuracy_runtime.py",
+      "sha256": "19d07d80cf07e7a82dc07b5972c4c4905941dc8acbce43c32b989604b347e5c1",
+      "bytes": 3706
+    },
+    {
+      "path": "mapmatch/accuracy_artifacts.py",
+      "sha256": "ce957e023b41cbb10d6b98888981ae01794e56fe60e897546e60be59ce1cc22d",
+      "bytes": 11652
+    },
+    {
+      "path": "mapmatch/accuracy_features.py",
+      "sha256": "3f15e5e82072b9e49bdebbe9a791e3333d59246cda36913ee0b4deeeff1891b9",
+      "bytes": 11963
+    },
+    {
+      "path": "mapmatch/accuracy_matcher.py",
+      "sha256": "df84fcfdf922f5c73866857eaa3aa4a7800b1fbda73424e6891ec195b32d5678",
+      "bytes": 18805
+    },
+    {
+      "path": "scripts/accuracy_common.py",
+      "sha256": "f6f6969418c6155cb05d0cfed1ef68e06e6e155f08b8a926a003eb3266f5b92c",
+      "bytes": 18430
+    },
+    {
+      "path": "scripts/accuracy_confirmation.py",
+      "sha256": "ac3ea732399dff441a8d4bb82efdf9a4ec245706348b71547bd2c1a50897f09b",
+      "bytes": 17282
+    },
+    {
+      "path": "scripts/accuracy_decoder.py",
+      "sha256": "8da02a9f3eb4701bedb7c38d79ec3f7fd4fa011b379fa2f565c022af2137d971",
+      "bytes": 13462
+    },
+    {
+      "path": "scripts/accuracy_decoder_attestation.py",
+      "sha256": "7bf335ca97a76645e5171b5d5b07158978356a2b3be24b0b495c5fc67660c222",
+      "bytes": 4577
+    },
+    {
+      "path": "scripts/accuracy_export.py",
+      "sha256": "3545730a1c6ed06382a378b58a3124c4dd3c7706d3b0a2277927a8ed299adc1d",
+      "bytes": 6353
+    },
+    {
+      "path": "scripts/accuracy_finish.py",
+      "sha256": "361dc84c64c4b222405b26213ab9c2d157f5eae16810aa2961dc135e5d0f8028",
+      "bytes": 1576
+    },
+    {
+      "path": "scripts/accuracy_knn.py",
+      "sha256": "48504fb802830c97972b3dcbf6fc22481d9457d3e61d9862bd2de52ce8d39782",
+      "bytes": 11166
+    },
+    {
+      "path": "scripts/accuracy_linear_bayes.py",
+      "sha256": "7b2ef3c577b9238e64c9ce76df0cf22338daef05f9734c2fa8451ad92c58c107",
+      "bytes": 11900
+    },
+    {
+      "path": "scripts/accuracy_route_confirmation.py",
+      "sha256": "4c4ad3beeea97e858e8ace9caca7da359559ac19778fbe9f31729c641f80863f",
+      "bytes": 7888
+    },
+    {
+      "path": "scripts/accuracy_route_validation.py",
+      "sha256": "c2ad5a26c65772298fc76a4f4cf2ac9fcfe4b0c69f2c1c3ee689ba301232698c",
+      "bytes": 14398
+    },
+    {
+      "path": "scripts/accuracy_student_comparison.py",
+      "sha256": "64f65f599ee08e1280e7164fb170a14d1e10b1d1192335142979722d26f95f6d",
+      "bytes": 7707
+    },
+    {
+      "path": "scripts/accuracy_trees.py",
+      "sha256": "2e6838ecbed78973115df787e04f9793e398b2f8d68c6ea6edceff14bbed03e6",
+      "bytes": 9259
+    },
+    {
+      "path": "scripts/build_accuracy_report.py",
+      "sha256": "7d0392cdf5136770188dacfbee04b00e38d7581008ac55bedca5d031cdc66a01",
+      "bytes": 15938
+    },
+    {
+      "path": "tests/test_accuracy_artifacts.py",
+      "sha256": "d2a46e2005264f7bfe10f5b97f69c01aa1bd0250156e6cd7fc73b63ae630f85c",
+      "bytes": 25931
+    },
+    {
+      "path": "tests/test_accuracy_common.py",
+      "sha256": "2c87c6c5351d2be45b479db2d8185c177b09b6824a5877bc88c0e16ba8bcdc56",
+      "bytes": 7788
+    },
+    {
+      "path": "tests/test_accuracy_confirmation.py",
+      "sha256": "c2998e55c6c1251277da5c6172f108cb36faa2a1109b2638f76f136bed4eaf9f",
+      "bytes": 3281
+    },
+    {
+      "path": "tests/test_accuracy_features.py",
+      "sha256": "ee5a1b9b1b001af3d3e41cd0b625e7cdeed1ae9b3aa4c568eab64354e38f4f6e",
+      "bytes": 15716
+    },
+    {
+      "path": "tests/test_accuracy_finish_guards.py",
+      "sha256": "50940302bf05ed5396f1b0e6e42c4e3c58eefb951806530bc63d0bffe1029abe",
+      "bytes": 1726
+    },
+    {
+      "path": "tests/test_accuracy_knn.py",
+      "sha256": "c72cf16c5ef13d79802acb42ca5c3adc92d692815fbf8574b2c835423759f747",
+      "bytes": 10009
+    },
+    {
+      "path": "tests/test_accuracy_linear_bayes.py",
+      "sha256": "6ac607684f7907937e5fb1b5e70095ab4228832667c564c53e744ab4701c7d75",
+      "bytes": 10435
+    },
+    {
+      "path": "tests/test_accuracy_matcher.py",
+      "sha256": "6df3c18f40c7a47f30b1e62c5f8f26d25e9cafe3570600d387bdc2f63854c7e2",
+      "bytes": 27093
+    },
+    {
+      "path": "tests/test_accuracy_report.py",
+      "sha256": "08061f457970b668c6bd87011448b331c1f9a98b5c24a9db865d5632e247c26c",
+      "bytes": 2040
+    },
+    {
+      "path": "tests/test_accuracy_route_confirmation.py",
+      "sha256": "b35438fd61064503afff0fcfa36134e1e7739f025e50edf957cd4b8394ce9219",
+      "bytes": 1714
+    },
+    {
+      "path": "tests/test_accuracy_route_validation.py",
+      "sha256": "eef5abb16b6359c097080f056c319c6a7d507b88116bed3806463466f1a9ed7d",
+      "bytes": 1983
+    },
+    {
+      "path": "tests/test_accuracy_runtime.py",
+      "sha256": "012ebc71b60385fa4b14e2dba06752106eb1cc0d02f0c374d609d439ce7d86ce",
+      "bytes": 1686
+    },
+    {
+      "path": "tests/test_accuracy_trees.py",
+      "sha256": "b2ce6cccd84f2fd425f8242c35aac421e7940346cb9562ec7e2e456ebf9d66c3",
+      "bytes": 1734
+    }
+  ],
+  "original_v1_sources_modified": false,
+  "private_row_outputs_published": false
+}

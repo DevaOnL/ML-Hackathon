@@ -1,0 +1,8 @@
+{
+  "url": "https://ml.d3va.dev/health",
+  "status": "verified_ready",
+  "candidate_deployed": false,
+  "model_hash": "c9cc8e9f36838f656a94d07ed69632979df9981ca94a9daf3b52fbce052e4b34",
+  "config_hash": "e326b1afda125897cd784ab335fbcd7c869fcd70714c5203ef5c2c71977b3288",
+  "no_service_or_DNS_changes": true
+}

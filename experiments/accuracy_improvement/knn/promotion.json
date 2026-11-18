@@ -1,0 +1,41 @@
+{
+  "created_utc": "2026-11-18T10:38:18.115570+00:00",
+  "rule": "fold0 equal-trip top1; binary macroF1; lower binary logloss; runname tie; top2 plus pairedbaseline full3 fresh fits",
+  "promoted": [
+    {
+      "family": "knn_distance_weighted",
+      "run_name": "knn_compact_l1",
+      "profile": "compact",
+      "parameters": {
+        "algorithm": "kd_tree",
+        "p": 1,
+        "leaf_size": 40,
+        "n_neighbors": 15
+      }
+    },
+    {
+      "family": "knn_distance_weighted",
+      "run_name": "knn_compact35",
+      "profile": "compact",
+      "parameters": {
+        "algorithm": "kd_tree",
+        "p": 2,
+        "leaf_size": 40,
+        "n_neighbors": 35
+      }
+    },
+    {
+      "family": "knn_distance_weighted",
+      "run_name": "knn_v1_control",
+      "profile": "v1",
+      "parameters": {
+        "algorithm": "brute",
+        "p": 2,
+        "leaf_size": 40,
+        "n_neighbors": 25
+      }
+    }
+  ],
+  "screen_selection_is_tuning": true,
+  "confirmation_not_used": true
+}

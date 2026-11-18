@@ -1,0 +1,10 @@
+# Frozen comparison populations and objectives
+
+- **Classifier tuning:** the same 64 TRAIN trips, 350 deterministic observations per trip and candidate rows for original-feature controls and new profiles; three whole-trip OOF folds. Every candidate miss counts as wrong. These are model-selection estimates.
+- **Internal classifier confirmation:** exactly 16 prospectively excluded TRAIN trips, same 350 observations per trip; candidate and original-feature control are both fitted on the other64 with the same weights and KNN reference bank. These trips were seen by historical released models. They are not a new blind official test.
+- **Decoder tuning:** six preselected full TRAIN routes, two per tuning fold; their matching estimators were fitted without those routes. Every original GPS row is decoded. Eight fixed configurations, no likelihood comparison across candidate pools, no route repair and all failures remain zero contributions.
+- **Internal dense-route confirmation:** all16 reserved routes and all original GPS rows. The candidate uses its frozen best decoder, while the baseline gets its **own** best decoder from the same eight-configuration/six-route tuning study. Both classifiers were fitted on the same64. Compare equal-trip length-F1/edge-F1, proxy edge accuracy/macro F1, continuity, time and all failures. Never choose a new decoder using these16 results.
+- **Final student-development comparison:** the released all80 baseline against the frozen all80 candidate, with both full predictions completed before opening a reference for scoring. This is the historically used student development set, not a blind test, and cannot feed further tuning.
+- **Evaluator:** not opened by tuning/confirmation/selection. It was already scored in the original release and is not newly blind. No evaluator score may select the new model or decoder.
+
+No claim that every metric increases follows from an increase in observation top-1. Binary macro F1, raw binary log loss, observation edge F1, route length/edge F1 and candidate-normalized emission NLL measure different things. Their regressions must remain in the report.

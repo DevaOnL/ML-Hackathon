@@ -1,0 +1,28 @@
+{
+  "worker": "linear_bayes",
+  "parent_agent_id": "session-1741df65-9ff5-4d55-a652-64751ae7764d",
+  "branch": "feat/train-only-accuracy-improvement",
+  "state": "implementation_ready_awaiting_common",
+  "synthetic_tests_passed": 13,
+  "synthetic_test_log": "experiments/accuracy_improvement/linear_bayes/unit_tests.log",
+  "training_cache_loaded": false,
+  "write_scopes": [
+    "scripts/accuracy_linear_bayes.py",
+    "tests/test_accuracy_linear_bayes.py",
+    "experiments/accuracy_improvement/linear_bayes/",
+    "experiments/accuracy_improvement/private/linear_bayes/"
+  ],
+  "scope_exceptions": [],
+  "data_scope": "train cache only; unchanged proxy labels, fixed grouped folds; no student_test/evaluator data or reference/result reads",
+  "fits_started": false,
+  "common_protocol": "awaiting lead handoff",
+  "resource_policy": {
+    "max_threads": 2,
+    "n_jobs": 1
+  },
+  "preregistered_menu_path": "experiments/accuracy_improvement/linear_bayes/preregistered_menu.json",
+  "notes": [
+    "Claim recorded before implementation or fits.",
+    "No main release/artifact/live or canonical mapmatch module edits."
+  ]
+}

@@ -1,0 +1,110 @@
+{
+  "created_at_utc": "2026-11-18T11:11:35.640674+00:00",
+  "trip_id": "00000000",
+  "records": {
+    "baseline": {
+      "success": true,
+      "elapsed_seconds": 3.0499796789990796,
+      "observations": 2503,
+      "configuration": "released_v1",
+      "match_config": {
+        "sigma_m": 7.160645916267228,
+        "beta_m": 2.0,
+        "max_candidates": 12,
+        "candidate_radius_m": 80.0,
+        "max_radius_m": 1000.0,
+        "routing_slack_m": 300.0,
+        "backward_tolerance_m": 20.0,
+        "observation_distance_m": 0.0,
+        "observation_interval": 5.0,
+        "sample_spacing_m": 40.0,
+        "cache_size": 2048,
+        "classifier_weight": 1.0,
+        "geometry_weight": 1.0,
+        "candidate_retry_limit": 48
+      },
+      "transition_policy": {
+        "path_cost_slack_m": 0.0,
+        "stationary_chord_m": 3.0,
+        "stationary_backward_deadband_m": 1.0,
+        "stationary_backtrack_weight": 0.0,
+        "immediate_reverse_penalty": 0.0
+      },
+      "diagnostics": {
+        "candidate_retry_attempts": [
+          {
+            "max_candidates": 12,
+            "failure": "no connected directed transition between observations 1884 and 1885; no route was fabricated"
+          }
+        ],
+        "accuracy_motion": {
+          "stationary_matched_pairs": 24,
+          "same_edge_backward_pairs": 60,
+          "same_edge_backward_distance_m": 209.9242866086367,
+          "stationary_backward_distance_m": 7.228496626636256,
+          "matched_immediate_reverse_pairs": 16,
+          "route_immediate_reverse_pairs": 17,
+          "route_repeated_traversal_count": 16
+        }
+      },
+      "metrics": {
+        "exact_match": false,
+        "edge_precision": 0.8592233009708737,
+        "edge_recall": 0.9888268156424581,
+        "edge_f1": 0.9194805194805196,
+        "length_precision": 0.9911970645472413,
+        "length_recall": 0.9981534426155693,
+        "length_f1": 0.9946630910198921,
+        "duplicate_canonical_length_f1": 0.9946630910198921,
+        "edit_distance": 29,
+        "edit_similarity": 0.8592233009708738,
+        "predicted_arc_count": 206,
+        "reference_arc_count": 179,
+        "common_arc_count": 177,
+        "predicted_length_m": 51656.52516753686,
+        "reference_length_m": 51296.51807502024,
+        "common_length_m": 51201.79611077323,
+        "length_metric_basis": "meters",
+        "route_continuity": 1.0,
+        "prediction_connected": true,
+        "reference_connected": true,
+        "reference_discontinuity_count": 0,
+        "metric_note": "Directed arc multiset overlap; sequence edit separately. Not an official organizer score."
+      },
+      "proxy_edge_accuracy": 0.9672393128246105,
+      "proxy_edge_macro_f1": 0.9092018518282187,
+      "extra_arc_count": 29,
+      "route_sha256": "0134b64a8118d5970673d3ee89249cc6cda390eb263337330e35796c8a284d5e",
+      "classifier_top1_accuracy": 0.9568517778665602,
+      "candidate_miss_rate": 0.0,
+      "candidate_normalized_nll": 0.12614326840251627
+    },
+    "candidate": {
+      "success": false,
+      "elapsed_seconds": 1.73807667499932,
+      "observations": 2503,
+      "configuration": "fixed_b2_c1_g1",
+      "failure": "no connected directed transition between observations 1884 and 1885; no route was fabricated",
+      "metrics": {
+        "length_f1": 0.0,
+        "edge_f1": 0.0,
+        "route_continuity": 0.0,
+        "prediction_connected": false,
+        "exact_match": false,
+        "edit_similarity": 0.0
+      },
+      "proxy_edge_accuracy": 0.0,
+      "proxy_edge_macro_f1": 0.0,
+      "classifier_top1_accuracy": 0.0,
+      "candidate_miss_rate": 1.0,
+      "candidate_normalized_nll": 16.11809565095832
+    }
+  },
+  "frozen_selection_sha256": "f4da580f9654d90cc493bea8d4643a89b013ac09f985044a7be2a261af34d85f",
+  "export_manifest_sha256": "ff60a7724a72bb12980a6645852f154ad7bc088bd84d4705c753e5d3ad381c86",
+  "comparison_role": "historicallyusedstudentdevelopmentfinalcomparisonnotblind",
+  "reference_loaded_after_both_predictions": true,
+  "no_tuning_feedback": true,
+  "evaluator_used": false,
+  "source_sha256": "64f65f599ee08e1280e7164fb170a14d1e10b1d1192335142979722d26f95f6d"
+}

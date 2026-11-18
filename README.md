@@ -7,6 +7,12 @@ A learned GPS-to-road map matcher with directed HMM/Viterbi reconstruction, a Fa
 - Final measured experiments: [five-family results](<experiments/final_five/current/results.json>) and [comparison table](<experiments/final_five/current/model_comparison.csv>)
 - Selected weights and configuration: [HistGradientBoosting bundle](<artifacts/final_five/model.joblib>), [metadata](<artifacts/final_five/model_metadata.json>), [decoder](<artifacts/final_five/match_config.json>) and [model card](<artifacts/final_five/MODEL_CARD.md>)
 
+## Accuracy-improvement study
+
+A new TRAIN-only study improved all five families’ observation top-1 accuracy in paired internal confirmation: Logistic Regression **91.607% → 91.768%**, KNN **90.589% → 91.750%**, Bagging **92.161% → 92.696%**, GaussianNB **90.554% → 91.089%**, and HistGradientBoosting **92.054% → 93.018%**. Both controls and candidates fit on the same64 TRAIN trips; these16 reserved trips were historically exposed to earlier releases, so this is not blind-test evidence. Secondary metrics do not all improve.
+
+The new HGB/context candidate also improved both route F1 metrics internally. Its final frozen student-development comparison had **2/10 route failures**, so it was **not accepted or deployed**. The existing live model and original deliverables below remain unchanged. [Measured accuracy addendum](<reports/accuracy_improvement/ACCURACY_REPORT.md>), [comparison CSV](<reports/accuracy_improvement/model_comparison.csv>), [frozen protocol](<experiments/accuracy_improvement/PROTOCOL.json>) and [release decision](<reports/accuracy_improvement/release_decision.json>) retain every tradeoff and the expedited Bagging budget deviation.
+
 ## Five trained and tested families
 
 All five families have genuine fitted estimators, three-fold whole-trip TRAIN validation and testing on all ten student-development trips. The final stage preserves the completed Logistic Regression/KNN/Bagging fits and measurements, and adds fresh GaussianNB/default HistGB/tuned HistGB CV, all-80-trip fits and all-ten-trip tests. Tuned HistGB is a configuration of the fifth family, not a sixth family.
