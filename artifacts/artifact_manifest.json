@@ -1,0 +1,7 @@
+{
+  "model": "artifacts/model.joblib",
+  "sha256": "0a308567e6eb982caf2012729fadac05c02497f81758c51df99f92cb521d1e1e",
+  "bytes": 150791,
+  "feature_schema": "feature_schema.json",
+  "metadata": "model_metadata.json"
+}

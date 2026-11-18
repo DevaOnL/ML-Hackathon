@@ -1,0 +1,47 @@
+{
+  "captured_at_utc": "2026-11-18T09:06:49.237815+00:00",
+  "source": "real Alacritty Wayland window displaying actual dedicated API journal events",
+  "mocked": false,
+  "valid": true,
+  "ocr_privacy_guard_passed": true,
+  "image": "reports/final_five/live/screenshots/api_terminal.png",
+  "image_sha256": "dc56dbd9ce9aa5071044c875cae5a5d0403fd59923ab60a0256642728f5738a2",
+  "request_id": "e5c74616aa5f40f7ac9acbf2459d9678",
+  "journal_since": "2026-11-18 09:06:20 UTC",
+  "journal_unit": "path-snap-api.service",
+  "events": [
+    {
+      "timestamp": "2026-11-18T09:06:25.487067+00:00",
+      "event": "match_started",
+      "request_id": "e5c74616aa5f40f7ac9acbf2459d9678",
+      "trip_id": "00000009",
+      "dataset_role": "development",
+      "model_hash": "c9cc8e9f36838f656a94d07ed69632979df9981ca94a9daf3b52fbce052e4b34",
+      "match_config_hash": "e326b1afda125897cd784ab335fbcd7c869fcd70714c5203ef5c2c71977b3288"
+    },
+    {
+      "timestamp": "2026-11-18T09:06:28.707597+00:00",
+      "event": "match_completed",
+      "request_id": "e5c74616aa5f40f7ac9acbf2459d9678",
+      "trip_id": "00000009",
+      "dataset_role": "development",
+      "model_hash": "c9cc8e9f36838f656a94d07ed69632979df9981ca94a9daf3b52fbce052e4b34",
+      "match_config_hash": "e326b1afda125897cd784ab335fbcd7c869fcd70714c5203ef5c2c71977b3288",
+      "metrics_status": "ok",
+      "inference_ms": 3044.586,
+      "scoring_ms": 149.628,
+      "total_ms": 3220.53
+    },
+    {
+      "timestamp": "2026-11-18T09:06:28.791097+00:00",
+      "event": "http_request",
+      "request_id": "e5c74616aa5f40f7ac9acbf2459d9678"
+    }
+  ],
+  "window_class": "pathsnap-evidence",
+  "window_title": "PathSnap | actual API receiving terminal",
+  "screenshot_tool": "grim",
+  "geometry_logical": "60,50 1480x900",
+  "terminal_pid": 254624,
+  "privacy": "only dedicated terminal rectangle; exact request events allowlisted to public scalars"
+}

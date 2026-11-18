@@ -1,0 +1,19 @@
+{
+  "purpose": "Documentary acceptance checkpoint of actual complete unwatermarked report before normal --final build; no gate bypass",
+  "candidate_checkpoint_sha256": "c308132209b3297bf3f5b04c61c0b23df04f049bd76530a76c1bdbe461d4ceee",
+  "candidate_pdf_sha256": "c5ea75013c51d835a6538c680d7439b7f18bc71173f9d35340900b1e675fed5f",
+  "candidate_pages": 57,
+  "registered_facts": 360,
+  "image_bindings": 55,
+  "non_documentary_guards_passed": 16,
+  "total_guards": 17,
+  "only_prepublication_open_row": "R-DL-03",
+  "model_export_hash_correction": "FRR-01 fixed: deployment export c9cc... distinct from compared bundle47ea...; unchanged model/decoder",
+  "layout_record": {
+    "path": "analysis/final_report_layout/final_candidate/candidate2.json",
+    "sha256": "589bfa98e4c43f940cbd43db989f9c36ec2b06359dac0d868d5df387e354b3df"
+  },
+  "all_checks_true": true,
+  "canonical_final_build_required": true,
+  "final_pdf_hash_belongs_to_final_manifest_not_input_matrix": true
+}

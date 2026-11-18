@@ -1,0 +1,46 @@
+{
+  "created_at_utc": "2026-11-18T08:52:25.538850+00:00",
+  "objective": "fixed postfreeze all-ten final evaluation",
+  "state": "planned; no prediction complete",
+  "trip_ids": [
+    "00000015",
+    "00000017",
+    "00000023",
+    "00000030",
+    "00000049",
+    "00000059",
+    "00000067",
+    "00000073",
+    "00000087",
+    "00000094"
+  ],
+  "command": [
+    ".venv/bin/python",
+    "-u",
+    "-B",
+    "-m",
+    "mapmatch",
+    "predict",
+    "--input",
+    "evaluator_test",
+    "--output",
+    "outputs/final_evaluator_test",
+    "--model",
+    "artifacts/final_five/model.joblib",
+    "--config",
+    "artifacts/final_five/match_config.json"
+  ],
+  "stages": [
+    "audit all ten graph/track files and TRAIN80/student10 overlap",
+    "one actual original-venv learned CLI",
+    "verify every prediction and original observation",
+    "only then open references and score"
+  ],
+  "no_adjustment": true,
+  "references_read": false,
+  "candidate_width_policy": [
+    12,
+    24,
+    48
+  ]
+}

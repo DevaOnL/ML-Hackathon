@@ -1,0 +1,355 @@
+{
+  "crop_box": [
+    0,
+    120,
+    1120,
+    380
+  ],
+  "mean_word_confidence": 85.43,
+  "method": "tesseract --psm 11; actual saved crop, original pixels",
+  "text": "Fiitered by the measurea HTTP Iéquést ID:\ne5c74616aa5f40f7ac9acbf2459d9678\nRequest ID groups: e5c7 4616 aa5f 40f7 ac9a cbf2 459d 9678\nOnly original public scalar fields are displayed; no routes or secrets.\ntrip_id: 00000009\ndataset_role: development\nmodel_hash:\nc9cc8e91368381656a94d07ed69632979df9981ca94a9daf3b52fbced52e4b34\nmatch_config_hash: e326blafdal25897cd784ab335fbcd7c869fcd70714c5203ef5c2c71977b3288",
+  "words": [
+    {
+      "bbox": [
+        2,
+        0,
+        103,
+        28
+      ],
+      "text": "Fiitered"
+    },
+    {
+      "bbox": [
+        119,
+        11,
+        142,
+        33
+      ],
+      "text": "by"
+    },
+    {
+      "bbox": [
+        157,
+        11,
+        194,
+        28
+      ],
+      "text": "the"
+    },
+    {
+      "bbox": [
+        209,
+        0,
+        311,
+        28
+      ],
+      "text": "measurea"
+    },
+    {
+      "bbox": [
+        326,
+        12,
+        376,
+        28
+      ],
+      "text": "HTTP"
+    },
+    {
+      "bbox": [
+        391,
+        0,
+        480,
+        33
+      ],
+      "text": "Iéquést"
+    },
+    {
+      "bbox": [
+        496,
+        12,
+        528,
+        28
+      ],
+      "text": "ID:"
+    },
+    {
+      "bbox": [
+        1,
+        42,
+        415,
+        59
+      ],
+      "text": "e5c74616aa5f40f7ac9acbf2459d9678"
+    },
+    {
+      "bbox": [
+        2,
+        74,
+        90,
+        95
+      ],
+      "text": "Request"
+    },
+    {
+      "bbox": [
+        106,
+        74,
+        129,
+        90
+      ],
+      "text": "ID"
+    },
+    {
+      "bbox": [
+        144,
+        78,
+        229,
+        95
+      ],
+      "text": "groups:"
+    },
+    {
+      "bbox": [
+        248,
+        74,
+        298,
+        90
+      ],
+      "text": "e5c7"
+    },
+    {
+      "bbox": [
+        313,
+        74,
+        363,
+        90
+      ],
+      "text": "4616"
+    },
+    {
+      "bbox": [
+        379,
+        73,
+        429,
+        90
+      ],
+      "text": "aa5f"
+    },
+    {
+      "bbox": [
+        443,
+        73,
+        493,
+        90
+      ],
+      "text": "40f7"
+    },
+    {
+      "bbox": [
+        509,
+        74,
+        558,
+        90
+      ],
+      "text": "ac9a"
+    },
+    {
+      "bbox": [
+        574,
+        73,
+        623,
+        90
+      ],
+      "text": "cbf2"
+    },
+    {
+      "bbox": [
+        638,
+        73,
+        688,
+        90
+      ],
+      "text": "459d"
+    },
+    {
+      "bbox": [
+        703,
+        74,
+        753,
+        90
+      ],
+      "text": "9678"
+    },
+    {
+      "bbox": [
+        1,
+        104,
+        51,
+        126
+      ],
+      "text": "Only"
+    },
+    {
+      "bbox": [
+        66,
+        104,
+        168,
+        126
+      ],
+      "text": "original"
+    },
+    {
+      "bbox": [
+        184,
+        104,
+        258,
+        126
+      ],
+      "text": "public"
+    },
+    {
+      "bbox": [
+        275,
+        104,
+        351,
+        121
+      ],
+      "text": "scalar"
+    },
+    {
+      "bbox": [
+        366,
+        104,
+        440,
+        121
+      ],
+      "text": "fields"
+    },
+    {
+      "bbox": [
+        457,
+        109,
+        493,
+        121
+      ],
+      "text": "are"
+    },
+    {
+      "bbox": [
+        508,
+        104,
+        633,
+        126
+      ],
+      "text": "displayed;"
+    },
+    {
+      "bbox": [
+        652,
+        109,
+        675,
+        121
+      ],
+      "text": "no"
+    },
+    {
+      "bbox": [
+        690,
+        106,
+        765,
+        121
+      ],
+      "text": "routes"
+    },
+    {
+      "bbox": [
+        781,
+        109,
+        806,
+        121
+      ],
+      "text": "or"
+    },
+    {
+      "bbox": [
+        821,
+        106,
+        918,
+        121
+      ],
+      "text": "secrets."
+    },
+    {
+      "bbox": [
+        1,
+        166,
+        99,
+        188
+      ],
+      "text": "trip_id:"
+    },
+    {
+      "bbox": [
+        118,
+        167,
+        220,
+        183
+      ],
+      "text": "00000009"
+    },
+    {
+      "bbox": [
+        261,
+        166,
+        424,
+        186
+      ],
+      "text": "dataset_role:"
+    },
+    {
+      "bbox": [
+        443,
+        166,
+        584,
+        188
+      ],
+      "text": "development"
+    },
+    {
+      "bbox": [
+        1,
+        197,
+        138,
+        217
+      ],
+      "text": "model_hash:"
+    },
+    {
+      "bbox": [
+        249,
+        197,
+        1078,
+        214
+      ],
+      "text": "c9cc8e91368381656a94d07ed69632979df9981ca94a9daf3b52fbced52e4b34"
+    },
+    {
+      "bbox": [
+        1,
+        228,
+        229,
+        250
+      ],
+      "text": "match_config_hash:"
+    },
+    {
+      "bbox": [
+        248,
+        228,
+        1078,
+        245
+      ],
+      "text": "e326blafdal25897cd784ab335fbcd7c869fcd70714c5203ef5c2c71977b3288"
+    }
+  ]
+}

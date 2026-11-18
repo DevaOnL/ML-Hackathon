@@ -2,15 +2,15 @@
 /** Frontend-only validation. Never starts a server or injects sample results.
  * Static checks: node frontend/smoke.mjs
  * Live API checks: node frontend/smoke.mjs --api https://ml.d3va.dev
- * One real inference: append --match-first (can be computationally expensive).
+ * One real inference per available dataset: append --match-first (can be expensive).
  */
 import assert from "node:assert/strict";
 import { readFile, stat } from "node:fs/promises";
 import { fileURLToPath } from "node:url";
-import { resolve, dirname, extname, sep } from "node:path";
+import { resolve, dirname, sep } from "node:path";
 import {
-  normalizeApiBase, requestJson, normalizeHealth, normalizeTrips,
-  normalizeMatch, geometryPositions, MATCH_TIMEOUT_MS,
+  normalizeApiBase, requestJson, normalizeHealth, normalizeDatasets, normalizeDatasetTrips,
+  datasetTripsPath, datasetMatchPath, normalizeMatch, geometryPositions, MATCH_TIMEOUT_MS, DATASET_IDS,
 } from "./api.mjs";
 
 const root = dirname(fileURLToPath(import.meta.url));
@@ -32,8 +32,9 @@ const api = await readFile(resolve(root, "api.mjs"), "utf8");
 const ids = [...html.matchAll(/\bid="([^"]+)"/g)].map((match) => match[1]);
 assert.equal(new Set(ids).size, ids.length, "HTML IDs must be unique");
 const requiredIds = [...app.matchAll(/\$\("([^"]+)"\)/g)].map((match) => match[1]);
+for (const id of DATASET_IDS) requiredIds.push("tab-" + id, "count-" + id);
 for (const id of requiredIds) assert(ids.includes(id), "Missing application target: " + id);
-for (const match of html.matchAll(/\b(?:aria-labelledby|aria-describedby)="([^"]+)"/g)) {
+for (const match of html.matchAll(/\b(?:aria-labelledby|aria-describedby|aria-controls)="([^"]+)"/g)) {
   for (const id of match[1].split(/\s+/)) assert(ids.includes(id), "Broken accessible reference: " + id);
 }
 for (const match of html.matchAll(/\b(?:src|href)="(\.\/[^"#]+)"/g)) {
@@ -52,41 +53,65 @@ for (const name of ["layers.png", "layers-2x.png", "marker-icon.png", "marker-ic
 }
 assert(!app.includes("innerHTML"), "Use text nodes for API-derived content");
 assert(!html.includes("fonts.googleapis.com"), "System fonts should keep the UI offline-ready");
+assert(!/@import\s|@font-face/i.test(css), "Theme must use local system fonts without imports");
+assert(!/<link[^>]+href="https?:/i.test(html), "Styles and fonts must be local");
 assert(!/<script[^>]+src="https?:/i.test(html), "Runtime scripts must be local");
 assert(!/<input[^>]+name="trip-choice"/.test(html), "Trips must be populated by the API, not static HTML");
 assert(!/localStorage\.setItem\([^,]*(?:result|route|trip)/i.test(app), "Trip outputs must not be persisted");
 assert(css.includes("prefers-reduced-motion"), "Missing reduced-motion support");
 assert(html.includes('role="radiogroup"') && html.includes('aria-live="polite"'), "Missing accessible trip/status controls");
 assert(api.includes('"/health"') === false, "Endpoints should remain caller-controlled within the adapter");
-console.log("PASS: static assets, complete offline Leaflet, DOM targets, ARIA references, and source integrity");
+assert(html.includes('data-theme="dark"') && css.includes('[data-theme="light"]'), "Both explicit themes must be available with dark default");
+assert(css.includes("color-scheme: dark") && css.includes("color-scheme: light") && css.includes(":focus-visible"), "Theme controls and focus must inherit the active palette");
+assert(app.includes("localStorage.getItem(THEME_STORAGE_KEY)") && app.includes("localStorage.setItem(THEME_STORAGE_KEY, next)"), "Theme preference must be restored and saved");
+assert(html.includes('role="tablist"') && (html.match(/role="tab"/g) || []).length === 2 && html.includes('role="tabpanel"'), "Development and evaluator must have accessible section tabs");
+assert(["ArrowLeft", "ArrowRight", "Home", "End"].every(key => app.includes('"' + key + '"')), "Dataset tabs must support standard keyboard navigation");
+assert(app.includes("datasetTripsPath(requestedDatasetId)") && app.includes("datasetMatchPath(request.datasetId)"), "Lists and matches must use the selected dataset endpoint");
+assert(app.includes("normalizeMatch(payload, trip.id, request.datasetId)") && app.includes("isCurrentMatch(request, state)"), "Results must validate section identity and active request generation");
+assert(!/\/models\b|models-section|normalizeModels/.test(html + app + api), "Unsupported model comparison endpoint or placeholder remains");
+assert(!/\b(?:caches\.open|indexedDB|serviceWorker)\b/.test(app + api), "Frontend must not persist inference results");
+assert(app.includes("body: { trip_id: trip.requestId }") && api.includes('cache: "no-store"'), "A run must send only a trip ID without caching");
+assert(app.includes("L.geoJSON(result.predictedRoute") && app.includes("L.geoJSON(result.rawGps"), "Keep real returned route and GPS rendering");
+console.log("PASS: static assets, complete offline Leaflet, DOM/ARIA, dataset identity/stale guards, dark/light controls, and source integrity");
 
 if (apiBase) {
-  const [healthPayload, tripPayload] = await Promise.all([
-    requestJson(apiBase, "/health"), requestJson(apiBase, "/trips"),
+  const [healthPayload, datasetsPayload] = await Promise.all([
+    requestJson(apiBase, "/health"), requestJson(apiBase, "/datasets"),
   ]);
   const health = normalizeHealth(healthPayload);
-  const catalogue = normalizeTrips(tripPayload);
+  const { datasets } = normalizeDatasets(datasetsPayload);
   assert(health.ready, "API health must report ready with its model loaded");
-  assert.equal(catalogue.trips.length, 10, "The API must return all 10 trips");
-  assert.equal(catalogue.expectedCount, 10, "The API must expect 10 trips");
-  console.log("PASS: live API health and complete 10-trip catalogue");
-  if (matchFirst) {
-    const trip = catalogue.trips[0];
-    const payload = await requestJson(apiBase, "/match", { method: "POST", body: { trip_id: trip.requestId }, timeoutMs: MATCH_TIMEOUT_MS });
-    const result = normalizeMatch(payload, trip.id);
-    assert(geometryPositions(result.predictedRoute).length, "Live predicted route must be drawable");
-    assert(geometryPositions(result.rawGps).length, "Live GPS observations must be drawable");
-    assert(result.requestId, "Live response must identify its request");
-    assert(result.model.sha256, "Live response must identify its model");
-    const inspectKeys = (value) => {
-      if (!value || typeof value !== "object") return;
-      for (const [key, child] of Object.entries(value)) {
-        assert(!/(ground_truth|reference_route|reference_edges|true_labels|y_true|route_labels)/i.test(key), "Forbidden reference data key in live response: " + key);
-        inspectKeys(child);
-      }
-    };
-    inspectKeys(payload);
-    console.log("PASS: one real POST /match response, route and observations, model identity, and no reference-data keys");
-    console.log("Request: " + result.requestId + "; scoring status: " + result.metricsStatus + "; proxy-aligned: " + result.proxyReference);
+  const inspectKeys = (value) => {
+    if (!value || typeof value !== "object") return;
+    for (const [key, child] of Object.entries(value)) {
+      assert(!/(ground_truth|reference_route|reference_edges|true_labels|y_true|route_labels)/i.test(key), "Forbidden reference data key in live response: " + key);
+      inspectKeys(child);
+    }
+  };
+  for (const dataset of datasets) {
+    if (!dataset.available) {
+      console.log("INFO: " + dataset.id + " unavailable (" + dataset.status + "); " + dataset.tripCount + " registered trips. No match requested.");
+      continue;
+    }
+    const payload = await requestJson(apiBase, datasetTripsPath(dataset.id));
+    const catalogue = normalizeDatasetTrips(payload, dataset.id);
+    assert.equal(dataset.status, "ready", dataset.id + " must report ready");
+    assert.equal(catalogue.trips.length, 10, dataset.id + " must return all 10 trips");
+    assert.equal(catalogue.expectedCount, 10, dataset.id + " must expect 10 trips");
+    assert.equal(dataset.tripCount, catalogue.trips.length, "Catalogue summary and trip count disagree");
+    console.log("PASS: live " + dataset.id + " API identity and complete 10-trip catalogue");
+    if (matchFirst) {
+      const trip = catalogue.trips[0];
+      const resultPayload = await requestJson(apiBase, datasetMatchPath(dataset.id), { method: "POST", body: { trip_id: trip.requestId }, timeoutMs: MATCH_TIMEOUT_MS });
+      const result = normalizeMatch(resultPayload, trip.id, dataset.id);
+      assert(geometryPositions(result.predictedRoute).length, "Live predicted route must be drawable");
+      assert(geometryPositions(result.rawGps).length, "Live GPS observations must be drawable");
+      assert(result.requestId, "Live response must identify its request");
+      assert(result.model.sha256, "Live response must identify its model");
+      assert.equal(result.model.sha256, health.modelHash, "Live result must use the frozen model reported by health");
+      inspectKeys(resultPayload);
+      console.log("PASS: real POST for " + dataset.id + ", route/GPS geometry, dataset/model identity, and no reference-data keys");
+      console.log("Request: " + result.requestId + "; scoring status: " + result.metricsStatus + "; proxy-aligned: " + result.proxyReference);
+    }
   }
 }

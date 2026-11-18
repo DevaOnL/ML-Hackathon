@@ -1,0 +1,108 @@
+{
+  "declared_utc": "2026-11-18T08:35:38.265531+00:00",
+  "version": 1,
+  "phase": "five-model-completion",
+  "requested_model_families": [
+    "logistic_regression",
+    "knn_distance_weighted",
+    "bagging",
+    "gaussian_nb",
+    "hist_gradient_boosting"
+  ],
+  "training_root": "Student folder/train",
+  "train_trip_count": 80,
+  "final_model": {
+    "family": "hist_gradient_boosting",
+    "run_name": "hist_gradient_boosting_tuned",
+    "fixed_parameters": {
+      "max_iter": 104,
+      "learning_rate": 0.15902391896503631,
+      "max_leaf_nodes": 22,
+      "min_samples_leaf": 38,
+      "l2_regularization": 0.8604220152998319
+    },
+    "selection": "TRAIN-only out-of-fold trip-macro observation top-1 among exactly the five declared families; tuned configuration is the completed TRAIN-only GP-EI study winner reproduced by fresh tuned 3-fold CV",
+    "no_decoder_stage_hpo": "The decoder performs no hyperparameter search and no classifier fit; the final model and its parameters are frozen upstream",
+    "artifact": "artifacts/final_five/model.joblib"
+  },
+  "acceptance_gate": "Search and ablation refuse to run until reports/final_five/all_five_model_acceptance.json passed=true and artifacts/final_five/clean_load_report.json passed=true pin the same frozen model hash",
+  "evaluator_boundary": "No evaluator input is opened, read or listed at any stage; evaluator_accessed stays false in every output",
+  "scale_evidence": {
+    "path": "reports/decoder/scale_fit.json",
+    "sha256": "0efa5a44f610edda9cd33c5995fa67a591c161a9d3a33a129afaae05252148f9",
+    "fitted": {
+      "sigma_m": 7.160645916267228,
+      "beta_m": 2.0
+    },
+    "sigma_unclamped_m": 7.160645916267228,
+    "beta_unclamped_m": 1.424672666285088,
+    "sigma_clamped": false,
+    "beta_clamped": true,
+    "sigma_sample_count": 20480,
+    "sigma_observations_excluded": 0,
+    "beta_pair_status_counts": {
+      "identified": 10070,
+      "no_forward_reference_occurrence": 163,
+      "backward_proxy_without_reference_loop": 3,
+      "reference_span_crosses_discontinuity": 4
+    },
+    "training_trip_count": 80,
+    "training_reference_discontinuity_count": 13,
+    "residual_samples_path": "reports/decoder/training_residual_samples.csv",
+    "residual_samples_sha256": "984b05c53e401788f09689b139bd9e97c5f45998877dadcd991fc1b62367ddc1",
+    "transition_samples_path": "reports/decoder/training_transition_samples.csv",
+    "transition_samples_sha256": "e7421825360706f80b7f6b005393aba539387ad66b885c1cd3da3eac46bd0068",
+    "original_plan_sha256": "23f0b2b053c16ecf73c115c07c540d1964475273a6f821506f7b5b6f96a209c8",
+    "reuse_rationale": "Geometry-only sigma/beta come from TRAIN reference residuals and transition spans and do not depend on the emission classifier family, so the historical immutable fit is reused read-only instead of recomputed."
+  },
+  "scale_reuse": "read-only reuse of the historical TRAIN-only geometry fit; no refitting and no copy",
+  "calibration_trip_ids": [
+    "00000001",
+    "00000011",
+    "00000021",
+    "00000031",
+    "00000041",
+    "00000051",
+    "00000061",
+    "00000071"
+  ],
+  "calibration_rule": "first eight sorted TRAIN IDs whose numeric ID modulo 10 is 1; unchanged preregistered TRAIN8 set",
+  "objective": "mean exact-original-ID length-weighted repeated-arc route F1 across the eight TRAIN calibration trips; a failed trip contributes zero",
+  "selection_tie_break": "predeclared order A, B, C for exactly equal objectives",
+  "configurations": [
+    {
+      "name": "A_fitted",
+      "beta_multiplier": 1.0,
+      "classifier_weight": 1.0,
+      "geometry_weight": 1.0
+    },
+    {
+      "name": "B_twice_beta",
+      "beta_multiplier": 2.0,
+      "classifier_weight": 1.0,
+      "geometry_weight": 1.0
+    },
+    {
+      "name": "C_classifier_up",
+      "beta_multiplier": 1.0,
+      "classifier_weight": 2.0,
+      "geometry_weight": 0.5
+    }
+  ],
+  "candidate_width_policy": "Candidate width starts at max_candidates=12 and doubles per connected-transition retry (12->24->48), capped by candidate_retry_limit=48; the limit caps the widened width, not the initial width and not the attempt count.",
+  "freeze": "Write the final MatchConfig artifact before student-development ablation; never revise it from those results",
+  "search_input_boundary": "The search opens TRAIN tracks and TRAIN reference routes only; no student file is read during search and the plan cannot change from student outcomes",
+  "decoder_script_sha256": "53bb1892ac1d3c9252d9eeff871a0879f4ea3ffdb1801663b57324ba3cbcc239",
+  "historical_comparator": {
+    "baseline_output": "outputs/baseline_student_test_v2",
+    "note": "Geometry-only all-ten baseline (macro lengthF1 0.9734481048408883, countF1 0.9261891312626117) reused as a historical comparator, not as a new learned model"
+  },
+  "limitations": [
+    "Scale evidence is a historical TRAIN-only fit reused read-only; this phase never refits geometry scales.",
+    "The final emission model was fitted on all TRAIN80, so decoder TRAIN8 search is in-sample calibration after classifier fitting, not unseen generalization.",
+    "Historical student-development results (geometry-only baseline, phase-three trio and earlier HistGB runs) existed as context, so this is not a fully blind phase; the predeclared search still reads only TRAIN predictions and references and student scores cannot revise it.",
+    "The ten student-development trips were classified in earlier experiments before this calibration; that prior classification is disclosed and was not used for decoder configuration choice, and this calibration reads no student file until after the config freeze.",
+    "The ten student-development trips are real and used for ablation; they are not the reserved evaluator set, which remains unread.",
+    "Pointwise labels are route-derived proxies with a weak GPS-motion direction tie-break, not supplied observation-aligned ground truth."
+  ]
+}

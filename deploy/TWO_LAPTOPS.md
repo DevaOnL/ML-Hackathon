@@ -47,13 +47,11 @@ assets. Do not replace it with a repository-root generic HTTP file server.
 ## Demonstration checklist
 
 1. Laptop 1 `GET /health` says ready and model loaded, with accurate dataset role.
-2. The UI obtains all ten IDs from Laptop 1 `GET /trips`; no fixed ID list.
-3. Selecting a trip sends only its ID to `POST /match`.
+2. The UI obtains dataset sections from Laptop 1 `GET /datasets`, then its ten IDs from `GET /datasets/{id}/trips`; no fixed ID list.
+3. Selecting a trip sends only `trip_id` to `POST /datasets/{id}/match`.
 4. Laptop 1 runs fresh classifier+HMM inference, then private scoring.
 5. Laptop 2 displays raw GPS, predicted route and aggregate proxy-labelled scores.
 6. Repeat requests produce distinct request IDs and fresh model work.
 7. Capture the UI and Laptop 1 completion log for matching request IDs.
 
-The ten hidden evaluator trips are absent from the supplied package; use the
-[documented evaluator handoff](<DEPLOYMENT.md>) when the authorized files become
-available. Never claim the development menu is the unavailable reserved test set.
+The ten subsequently supplied evaluator trips are a separate section, configured only after the final model and decoder freezes through the [documented evaluator handoff](<DEPLOYMENT.md>). Raw inputs are not included in the public checkout. Do not relabel student-development results as evaluator results. A physical two-laptop venue run remains a human task; the delivered public website is the user-authorized substitute.

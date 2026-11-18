@@ -1,0 +1,3 @@
+# Private row-level predictions and classifier arrays stay local.
+/observations/
+/diagnostics/

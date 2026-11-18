@@ -1,0 +1,64 @@
+{
+  "task_id": "task-48",
+  "review_stage": "Corrected prepublication candidate scientific/content acceptance",
+  "verdict": "GO_FOR_TRUTHFUL_R_DL_03_CHECKPOINT_CLOSURE_THEN_NORMAL_FINAL",
+  "final_publication_accepted": false,
+  "candidate": {
+    "path": "analysis/final_release/candidate_corrected/PathSnap_Prepublication_Candidate.pdf",
+    "sha256": "c5ea75013c51d835a6538c680d7439b7f18bc71173f9d35340900b1e675fed5f",
+    "pages": 57,
+    "checkpoint": "analysis/final_release/candidate_corrected/checkpoint.json",
+    "builder_sha256": "eb6e3313b81e57b60628ea0f55abc0c0365b2a6f7da5b1ca8cd062142962bf47",
+    "template_sha256": "637096eb4bfc5ab73df5181dcd8a776fd1b9376c1cf545df8168177576a86f4f",
+    "all_50_checkpoint_inputs_match": true,
+    "complete_positive_release_test_count": 420
+  },
+  "scientific_content_review": {
+    "five_families_six_configurations": true,
+    "grouped_train_cv_selection": true,
+    "student_not_used_for_selection": true,
+    "historical_12_trial_hpo_reuse_not_new_study": true,
+    "no_invented_epoch_curves": true,
+    "candidate_row_vs_observation_vs_route_populations_distinguished": true,
+    "weak_reference_and_evaluator_overlap_limits_disclosed": true,
+    "post_freeze_evaluator_access_and_scoring_order_disclosed": true,
+    "live_api_latency_not_confused_with_probability_call": true,
+    "deployment_model_hash_and_comparison_bundle_hash_distinguished": true
+  },
+  "findings": [
+    {
+      "id": "FRR-01",
+      "severity": "medium",
+      "status": "fixed_and_verified",
+      "summary": "Original candidate freeze prose combined deployment export size/date with comparison bundle hash.",
+      "original_candidate_sha256": "53787afb04e56b5765214623c1da9f98dfa336f5520d7b65514f6ef0c9e74f37",
+      "source": "reports/final_five/REPORT_TEMPLATE.md:391",
+      "wrong_claimed_deployment_sha256": "47ea723d350567b6eeba827744e2c1a26c9baf915d322e29a590f45922ed8eeb",
+      "correct_deployment_sha256": "c9cc8e9f36838f656a94d07ed69632979df9981ca94a9daf3b52fbce052e4b34",
+      "fix": "Freeze prose now binds existing live_health_sha token, which strict identity guards equate with mfreeze/selected export. The comparison-artifact table retains its correct separate 47ea... hash. No fit, data, metrics or gate changed.",
+      "fix_evidence": "analysis/final_report_release_review/corrected_candidate_review.json"
+    }
+  ],
+  "evidence": [
+    "analysis/final_report_release_review/corrected_candidate_review.json",
+    "analysis/final_report_release_review/candidate_review_final.json",
+    "analysis/final_report_release_review/crop_integrated_tests.log",
+    "analysis/final_report_release_review/crops_check.log"
+  ],
+  "reviewer_probe_notes": {
+    "initial_missing_optional_fitz_dependency": "Replaced reviewer fitz dependency with canonical installed pdftotext/pdfinfo helper; no release-source defect.",
+    "initial_corrected_claim_anchor": "Fixed reviewer selection that had accidentally matched chronology paragraph before deployment-freeze paragraph; final exact freeze claim and hashes are checked in corrected_candidate_review.json."
+  },
+  "remaining": [
+    "Lead to close R-DL-03 truthfully against accepted corrected candidate checkpoint and independent task49 layout record.",
+    "Normal unchanged --final must pass all17 guards with complete47 matrix.",
+    "Canonical final PDF must receive final layout check and persisted read-only --check before final publication acceptance."
+  ],
+  "scope": {
+    "production_fit_or_inference": false,
+    "raw_private_input": false,
+    "http": false,
+    "release_source_edits": false,
+    "human_acceptance_claimed": false
+  }
+}

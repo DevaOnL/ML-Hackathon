@@ -1,0 +1,1706 @@
+{
+  "checked_at_utc": "2026-11-18T09:55:23.672608+00:00",
+  "pdf": "/home/d3va/Downloads/ML_Hackathon/reports/final_five/PathSnap_Final_Technical_Report.pdf",
+  "pdf_sha256": "1503a65c89833b9d0fc0e84715b35ffdabcf7c10d833e5891821ade03dc00650",
+  "method": "actual PDF text/span geometry and page rasterization; no human/model visual inspection claimed",
+  "require_final": true,
+  "profile": "final-five",
+  "pages": [
+    {
+      "page": 1,
+      "size_points": [
+        595.2755737304688,
+        841.8897705078125
+      ],
+      "text_characters": 3040,
+      "text_spans": 46,
+      "images": [],
+      "outside_text": [],
+      "overlap_candidates": [],
+      "render": "/home/d3va/Downloads/ML_Hackathon/analysis/final_report_layout/final_pdf/verifier/page-01.png",
+      "render_sha256": "3e75d7cf417217ad3544c2b8d9f42a46555dd19625a3b0d3b6de986e22eb06fb",
+      "body_text_characters": 2979,
+      "ocr_characters": 836,
+      "ocr_source": "/home/d3va/Downloads/ML_Hackathon/analysis/final_report_layout/final_pdf/verifier/page-01-ocr.txt"
+    },
+    {
+      "page": 2,
+      "size_points": [
+        595.2755737304688,
+        841.8897705078125
+      ],
+      "text_characters": 2644,
+      "text_spans": 48,
+      "images": [],
+      "outside_text": [],
+      "overlap_candidates": [],
+      "render": "/home/d3va/Downloads/ML_Hackathon/analysis/final_report_layout/final_pdf/verifier/page-02.png",
+      "render_sha256": "9a65388989e9e5c71169a36ef072264ee30ebdbe65f817541c1bfa30d1524758",
+      "body_text_characters": 2586
+    },
+    {
+      "page": 3,
+      "size_points": [
+        595.2755737304688,
+        841.8897705078125
+      ],
+      "text_characters": 4483,
+      "text_spans": 51,
+      "images": [],
+      "outside_text": [],
+      "overlap_candidates": [],
+      "render": "/home/d3va/Downloads/ML_Hackathon/analysis/final_report_layout/final_pdf/verifier/page-03.png",
+      "render_sha256": "51e6819a7197c6f3bb9fe34b041077afe1a56a823342c5217fa97ef803a7c0d0",
+      "body_text_characters": 4437
+    },
+    {
+      "page": 4,
+      "size_points": [
+        595.2755737304688,
+        841.8897705078125
+      ],
+      "text_characters": 968,
+      "text_spans": 16,
+      "images": [
+        {
+          "bbox": [
+            45.35432815551758,
+            197.35421752929688,
+            549.9212036132812,
+            516.913330078125
+          ],
+          "pixel_size": [
+            1800,
+            1140
+          ],
+          "aspect_ratio_distortion": 2.860991104025601e-07,
+          "effective_horizontal_dpi": 256.8539599085287
+        }
+      ],
+      "outside_text": [],
+      "overlap_candidates": [],
+      "render": "/home/d3va/Downloads/ML_Hackathon/analysis/final_report_layout/final_pdf/verifier/page-04.png",
+      "render_sha256": "1d6a8455af929f2ba158a481d4c825b0fe4f181f3c8d3da1742eb99810933163",
+      "body_text_characters": 922
+    },
+    {
+      "page": 5,
+      "size_points": [
+        595.2755737304688,
+        841.8897705078125
+      ],
+      "text_characters": 142,
+      "text_spans": 4,
+      "images": [
+        {
+          "bbox": [
+            45.35432815551758,
+            51.354248046875,
+            549.9212036132812,
+            311.057861328125
+          ],
+          "pixel_size": [
+            2040,
+            1050
+          ],
+          "aspect_ratio_distortion": 2.866448188809656e-07,
+          "effective_horizontal_dpi": 291.10115456299917
+        },
+        {
+          "bbox": [
+            45.35432815551758,
+            341.5579833984375,
+            549.9212036132812,
+            656.9122924804688
+          ],
+          "pixel_size": [
+            1920,
+            1200
+          ],
+          "aspect_ratio_distortion": 3.780169999245686e-08,
+          "effective_horizontal_dpi": 273.9775572357639
+        }
+      ],
+      "outside_text": [],
+      "overlap_candidates": [],
+      "render": "/home/d3va/Downloads/ML_Hackathon/analysis/final_report_layout/final_pdf/verifier/page-05.png",
+      "render_sha256": "65c09520784bc164a3eb87f0075a1f4188e86917b96d7a2866b1efe355787c1d",
+      "body_text_characters": 96
+    },
+    {
+      "page": 6,
+      "size_points": [
+        595.2755737304688,
+        841.8897705078125
+      ],
+      "text_characters": 154,
+      "text_spans": 4,
+      "images": [
+        {
+          "bbox": [
+            45.35432815551758,
+            51.354339599609375,
+            549.9212036132812,
+            295.875244140625
+          ],
+          "pixel_size": [
+            1950,
+            945
+          ],
+          "aspect_ratio_distortion": 1.3956626210287482e-07,
+          "effective_horizontal_dpi": 278.2584565675727
+        },
+        {
+          "bbox": [
+            45.35432815551758,
+            326.37530517578125,
+            549.9212036132812,
+            649.298095703125
+          ],
+          "pixel_size": [
+            1875,
+            1200
+          ],
+          "aspect_ratio_distortion": 3.024136185914017e-08,
+          "effective_horizontal_dpi": 267.55620823805066
+        }
+      ],
+      "outside_text": [],
+      "overlap_candidates": [],
+      "render": "/home/d3va/Downloads/ML_Hackathon/analysis/final_report_layout/final_pdf/verifier/page-06.png",
+      "render_sha256": "8d850be2201a1584cfa0e224519e3e40efcb8dc18aa1951747f310120847f94b",
+      "body_text_characters": 108
+    },
+    {
+      "page": 7,
+      "size_points": [
+        595.2755737304688,
+        841.8897705078125
+      ],
+      "text_characters": 98,
+      "text_spans": 3,
+      "images": [
+        {
+          "bbox": [
+            45.35432815551758,
+            51.3543701171875,
+            549.9212036132812,
+            386.38677978515625
+          ],
+          "pixel_size": [
+            1875,
+            1245
+          ],
+          "aspect_ratio_distortion": 1.3025646339315244e-08,
+          "effective_horizontal_dpi": 267.55620823805066
+        }
+      ],
+      "outside_text": [],
+      "overlap_candidates": [],
+      "render": "/home/d3va/Downloads/ML_Hackathon/analysis/final_report_layout/final_pdf/verifier/page-07.png",
+      "render_sha256": "299ada3428a8f760e39bdd39016b875be17db5bbc7b5c3d21235db0da0d5f833",
+      "body_text_characters": 52
+    },
+    {
+      "page": 8,
+      "size_points": [
+        595.2755737304688,
+        841.8897705078125
+      ],
+      "text_characters": 72,
+      "text_spans": 3,
+      "images": [
+        {
+          "bbox": [
+            74.25517272949219,
+            51.354248046875,
+            521.0204467773438,
+            489.136962890625
+          ],
+          "pixel_size": [
+            1890,
+            1852
+          ],
+          "aspect_ratio_distortion": 5.2595571231606186e-08,
+          "effective_horizontal_dpi": 304.58947439461224
+        }
+      ],
+      "outside_text": [],
+      "overlap_candidates": [],
+      "render": "/home/d3va/Downloads/ML_Hackathon/analysis/final_report_layout/final_pdf/verifier/page-08.png",
+      "render_sha256": "615bfc79281050e45f34d0a83f41d272309479532fcd5d7fef213f9c7850a1b5",
+      "body_text_characters": 26
+    },
+    {
+      "page": 9,
+      "size_points": [
+        595.2755737304688,
+        841.8897705078125
+      ],
+      "text_characters": 72,
+      "text_spans": 3,
+      "images": [
+        {
+          "bbox": [
+            74.25517272949219,
+            51.354248046875,
+            521.0204467773438,
+            489.136962890625
+          ],
+          "pixel_size": [
+            1890,
+            1852
+          ],
+          "aspect_ratio_distortion": 5.2595571231606186e-08,
+          "effective_horizontal_dpi": 304.58947439461224
+        }
+      ],
+      "outside_text": [],
+      "overlap_candidates": [],
+      "render": "/home/d3va/Downloads/ML_Hackathon/analysis/final_report_layout/final_pdf/verifier/page-09.png",
+      "render_sha256": "9ee6d8de13f8b51572cdfca95e81524b05cabd75e0d966aa537734dd5378537e",
+      "body_text_characters": 26
+    },
+    {
+      "page": 10,
+      "size_points": [
+        595.2755737304688,
+        841.8897705078125
+      ],
+      "text_characters": 73,
+      "text_spans": 3,
+      "images": [
+        {
+          "bbox": [
+            74.25517272949219,
+            51.354248046875,
+            521.0204467773438,
+            489.136962890625
+          ],
+          "pixel_size": [
+            1890,
+            1852
+          ],
+          "aspect_ratio_distortion": 5.2595571231606186e-08,
+          "effective_horizontal_dpi": 304.58947439461224
+        }
+      ],
+      "outside_text": [],
+      "overlap_candidates": [],
+      "render": "/home/d3va/Downloads/ML_Hackathon/analysis/final_report_layout/final_pdf/verifier/page-10.png",
+      "render_sha256": "e0bb67b5852ddd067ae63d13e389a6536e68920c4af5fc4ca339d94e27e95c93",
+      "body_text_characters": 26
+    },
+    {
+      "page": 11,
+      "size_points": [
+        595.2755737304688,
+        841.8897705078125
+      ],
+      "text_characters": 73,
+      "text_spans": 3,
+      "images": [
+        {
+          "bbox": [
+            74.25517272949219,
+            51.354248046875,
+            521.0204467773438,
+            489.136962890625
+          ],
+          "pixel_size": [
+            1890,
+            1852
+          ],
+          "aspect_ratio_distortion": 5.2595571231606186e-08,
+          "effective_horizontal_dpi": 304.58947439461224
+        }
+      ],
+      "outside_text": [],
+      "overlap_candidates": [],
+      "render": "/home/d3va/Downloads/ML_Hackathon/analysis/final_report_layout/final_pdf/verifier/page-11.png",
+      "render_sha256": "040d7bc8281c3b0f8d8671b5fb94f62e94ccb0d16cc2484fee4f12a6ec7ab7c7",
+      "body_text_characters": 26
+    },
+    {
+      "page": 12,
+      "size_points": [
+        595.2755737304688,
+        841.8897705078125
+      ],
+      "text_characters": 145,
+      "text_spans": 4,
+      "images": [
+        {
+          "bbox": [
+            74.25517272949219,
+            51.354248046875,
+            521.0204467773438,
+            489.136962890625
+          ],
+          "pixel_size": [
+            1890,
+            1852
+          ],
+          "aspect_ratio_distortion": 5.2595571231606186e-08,
+          "effective_horizontal_dpi": 304.58947439461224
+        },
+        {
+          "bbox": [
+            45.35432815551758,
+            519.6370849609375,
+            549.9212036132812,
+            764.3896484375
+          ],
+          "pixel_size": [
+            2010,
+            975
+          ],
+          "aspect_ratio_distortion": 1.0363482894071296e-07,
+          "effective_horizontal_dpi": 286.82025523119034
+        }
+      ],
+      "outside_text": [],
+      "overlap_candidates": [],
+      "render": "/home/d3va/Downloads/ML_Hackathon/analysis/final_report_layout/final_pdf/verifier/page-12.png",
+      "render_sha256": "6500e12b9d4a2a4760b97659eab82e5bad386a085677483fd82837e32500fea0",
+      "body_text_characters": 98
+    },
+    {
+      "page": 13,
+      "size_points": [
+        595.2755737304688,
+        841.8897705078125
+      ],
+      "text_characters": 4413,
+      "text_spans": 55,
+      "images": [],
+      "outside_text": [],
+      "overlap_candidates": [],
+      "render": "/home/d3va/Downloads/ML_Hackathon/analysis/final_report_layout/final_pdf/verifier/page-13.png",
+      "render_sha256": "f4a911ec362bde379ad8e6260c8a82b035cdf674fb26daf63ede38df99aace55",
+      "body_text_characters": 4366
+    },
+    {
+      "page": 14,
+      "size_points": [
+        595.2755737304688,
+        841.8897705078125
+      ],
+      "text_characters": 3975,
+      "text_spans": 136,
+      "images": [],
+      "outside_text": [],
+      "overlap_candidates": [],
+      "render": "/home/d3va/Downloads/ML_Hackathon/analysis/final_report_layout/final_pdf/verifier/page-14.png",
+      "render_sha256": "f9bfdc47d4602580f83d3acbf81fba7f931140c64acda9f997bccb4e719d7964",
+      "body_text_characters": 3928
+    },
+    {
+      "page": 15,
+      "size_points": [
+        595.2755737304688,
+        841.8897705078125
+      ],
+      "text_characters": 2931,
+      "text_spans": 181,
+      "images": [],
+      "outside_text": [],
+      "overlap_candidates": [],
+      "render": "/home/d3va/Downloads/ML_Hackathon/analysis/final_report_layout/final_pdf/verifier/page-15.png",
+      "render_sha256": "fa1737fab87fd120ee54b1ae62144642c80ec37aa65cab169310c23774ce595f",
+      "body_text_characters": 2884
+    },
+    {
+      "page": 16,
+      "size_points": [
+        595.2755737304688,
+        841.8897705078125
+      ],
+      "text_characters": 4366,
+      "text_spans": 57,
+      "images": [],
+      "outside_text": [],
+      "overlap_candidates": [],
+      "render": "/home/d3va/Downloads/ML_Hackathon/analysis/final_report_layout/final_pdf/verifier/page-16.png",
+      "render_sha256": "e830262fa5d8478d394ce15e49134f325d213052e82cdcd2e7393ebfeb7bcddf",
+      "body_text_characters": 4319
+    },
+    {
+      "page": 17,
+      "size_points": [
+        595.2755737304688,
+        841.8897705078125
+      ],
+      "text_characters": 4554,
+      "text_spans": 58,
+      "images": [],
+      "outside_text": [],
+      "overlap_candidates": [],
+      "render": "/home/d3va/Downloads/ML_Hackathon/analysis/final_report_layout/final_pdf/verifier/page-17.png",
+      "render_sha256": "df43eaf59b9637b6070dce89a1d857de370103d94ffea9a84bc52b21a22493b9",
+      "body_text_characters": 4507
+    },
+    {
+      "page": 18,
+      "size_points": [
+        595.2755737304688,
+        841.8897705078125
+      ],
+      "text_characters": 1538,
+      "text_spans": 20,
+      "images": [
+        {
+          "bbox": [
+            45.35432815551758,
+            284.3542785644531,
+            549.9212036132812,
+            641.2728881835938
+          ],
+          "pixel_size": [
+            2481,
+            1755
+          ],
+          "aspect_ratio_distortion": 2.3041585561767164e-07,
+          "effective_horizontal_dpi": 354.0303747405886
+        }
+      ],
+      "outside_text": [],
+      "overlap_candidates": [],
+      "render": "/home/d3va/Downloads/ML_Hackathon/analysis/final_report_layout/final_pdf/verifier/page-18.png",
+      "render_sha256": "1ce20e3a76f8fecadf0e8b0fc38270579ddfd0e9dc84c4778b8b724b9d89b24f",
+      "body_text_characters": 1491
+    },
+    {
+      "page": 19,
+      "size_points": [
+        595.2755737304688,
+        841.8897705078125
+      ],
+      "text_characters": 92,
+      "text_spans": 3,
+      "images": [
+        {
+          "bbox": [
+            45.35432815551758,
+            51.354248046875,
+            549.9212036132812,
+            408.2728576660156
+          ],
+          "pixel_size": [
+            2481,
+            1755
+          ],
+          "aspect_ratio_distortion": 2.3041585561767164e-07,
+          "effective_horizontal_dpi": 354.0303747405886
+        }
+      ],
+      "outside_text": [],
+      "overlap_candidates": [],
+      "render": "/home/d3va/Downloads/ML_Hackathon/analysis/final_report_layout/final_pdf/verifier/page-19.png",
+      "render_sha256": "13cc28a651550f0409970241053c5597d3cca15a3daba3048df9ff2b8afd31a6",
+      "body_text_characters": 45
+    },
+    {
+      "page": 20,
+      "size_points": [
+        595.2755737304688,
+        841.8897705078125
+      ],
+      "text_characters": 89,
+      "text_spans": 3,
+      "images": [
+        {
+          "bbox": [
+            45.35432815551758,
+            51.354248046875,
+            549.9212036132812,
+            408.2728576660156
+          ],
+          "pixel_size": [
+            2481,
+            1755
+          ],
+          "aspect_ratio_distortion": 2.3041585561767164e-07,
+          "effective_horizontal_dpi": 354.0303747405886
+        }
+      ],
+      "outside_text": [],
+      "overlap_candidates": [],
+      "render": "/home/d3va/Downloads/ML_Hackathon/analysis/final_report_layout/final_pdf/verifier/page-20.png",
+      "render_sha256": "38a0791f03a64b533b1448187520cd10090041fccac24ed5b532209d8c458eb6",
+      "body_text_characters": 42
+    },
+    {
+      "page": 21,
+      "size_points": [
+        595.2755737304688,
+        841.8897705078125
+      ],
+      "text_characters": 101,
+      "text_spans": 3,
+      "images": [
+        {
+          "bbox": [
+            45.35432815551758,
+            51.354248046875,
+            549.9212036132812,
+            408.2728576660156
+          ],
+          "pixel_size": [
+            2481,
+            1755
+          ],
+          "aspect_ratio_distortion": 2.3041585561767164e-07,
+          "effective_horizontal_dpi": 354.0303747405886
+        }
+      ],
+      "outside_text": [],
+      "overlap_candidates": [],
+      "render": "/home/d3va/Downloads/ML_Hackathon/analysis/final_report_layout/final_pdf/verifier/page-21.png",
+      "render_sha256": "c016d2da36327fd910cb077bf5a35511962f31f998c932ab5ea666a314ad9815",
+      "body_text_characters": 54
+    },
+    {
+      "page": 22,
+      "size_points": [
+        595.2755737304688,
+        841.8897705078125
+      ],
+      "text_characters": 120,
+      "text_spans": 3,
+      "images": [
+        {
+          "bbox": [
+            45.35432815551758,
+            51.354248046875,
+            549.9212036132812,
+            408.2728576660156
+          ],
+          "pixel_size": [
+            2481,
+            1755
+          ],
+          "aspect_ratio_distortion": 2.3041585561767164e-07,
+          "effective_horizontal_dpi": 354.0303747405886
+        }
+      ],
+      "outside_text": [],
+      "overlap_candidates": [],
+      "render": "/home/d3va/Downloads/ML_Hackathon/analysis/final_report_layout/final_pdf/verifier/page-22.png",
+      "render_sha256": "0df11023df53fef034594df30b434587380338eb3725e3b8a45ba68794100e5a",
+      "body_text_characters": 73
+    },
+    {
+      "page": 23,
+      "size_points": [
+        595.2755737304688,
+        841.8897705078125
+      ],
+      "text_characters": 96,
+      "text_spans": 3,
+      "images": [
+        {
+          "bbox": [
+            45.35432815551758,
+            51.354248046875,
+            549.9212036132812,
+            408.2728576660156
+          ],
+          "pixel_size": [
+            2481,
+            1755
+          ],
+          "aspect_ratio_distortion": 2.3041585561767164e-07,
+          "effective_horizontal_dpi": 354.0303747405886
+        }
+      ],
+      "outside_text": [],
+      "overlap_candidates": [],
+      "render": "/home/d3va/Downloads/ML_Hackathon/analysis/final_report_layout/final_pdf/verifier/page-23.png",
+      "render_sha256": "775485066cca01a26e5e887195a4879fc640540ab6f63ad4afb53d4f8bd8ffcc",
+      "body_text_characters": 49
+    },
+    {
+      "page": 24,
+      "size_points": [
+        595.2755737304688,
+        841.8897705078125
+      ],
+      "text_characters": 100,
+      "text_spans": 3,
+      "images": [
+        {
+          "bbox": [
+            45.35432815551758,
+            51.354248046875,
+            549.9212036132812,
+            408.2728576660156
+          ],
+          "pixel_size": [
+            2481,
+            1755
+          ],
+          "aspect_ratio_distortion": 2.3041585561767164e-07,
+          "effective_horizontal_dpi": 354.0303747405886
+        }
+      ],
+      "outside_text": [],
+      "overlap_candidates": [],
+      "render": "/home/d3va/Downloads/ML_Hackathon/analysis/final_report_layout/final_pdf/verifier/page-24.png",
+      "render_sha256": "3493fcae41542afeb25546e34af942d976fd01436bbadd820891315a5b6e0ad2",
+      "body_text_characters": 53
+    },
+    {
+      "page": 25,
+      "size_points": [
+        595.2755737304688,
+        841.8897705078125
+      ],
+      "text_characters": 84,
+      "text_spans": 3,
+      "images": [
+        {
+          "bbox": [
+            45.35432815551758,
+            51.354248046875,
+            549.9212036132812,
+            408.2728576660156
+          ],
+          "pixel_size": [
+            2481,
+            1755
+          ],
+          "aspect_ratio_distortion": 2.3041585561767164e-07,
+          "effective_horizontal_dpi": 354.0303747405886
+        }
+      ],
+      "outside_text": [],
+      "overlap_candidates": [],
+      "render": "/home/d3va/Downloads/ML_Hackathon/analysis/final_report_layout/final_pdf/verifier/page-25.png",
+      "render_sha256": "8bf270e3c5dd8694192f08dee24220b7f2c7d7f9248d7470600ec7841f0abeb2",
+      "body_text_characters": 37
+    },
+    {
+      "page": 26,
+      "size_points": [
+        595.2755737304688,
+        841.8897705078125
+      ],
+      "text_characters": 88,
+      "text_spans": 3,
+      "images": [
+        {
+          "bbox": [
+            45.35432815551758,
+            51.354248046875,
+            549.9212036132812,
+            408.2728576660156
+          ],
+          "pixel_size": [
+            2481,
+            1755
+          ],
+          "aspect_ratio_distortion": 2.3041585561767164e-07,
+          "effective_horizontal_dpi": 354.0303747405886
+        }
+      ],
+      "outside_text": [],
+      "overlap_candidates": [],
+      "render": "/home/d3va/Downloads/ML_Hackathon/analysis/final_report_layout/final_pdf/verifier/page-26.png",
+      "render_sha256": "93ec0c93eac3941a6b48c1aa8e200bf00925a047a2c96e94f4bd0d4a40057adc",
+      "body_text_characters": 41
+    },
+    {
+      "page": 27,
+      "size_points": [
+        595.2755737304688,
+        841.8897705078125
+      ],
+      "text_characters": 91,
+      "text_spans": 3,
+      "images": [
+        {
+          "bbox": [
+            45.35432815551758,
+            51.354248046875,
+            549.9212036132812,
+            408.2728576660156
+          ],
+          "pixel_size": [
+            2481,
+            1755
+          ],
+          "aspect_ratio_distortion": 2.3041585561767164e-07,
+          "effective_horizontal_dpi": 354.0303747405886
+        }
+      ],
+      "outside_text": [],
+      "overlap_candidates": [],
+      "render": "/home/d3va/Downloads/ML_Hackathon/analysis/final_report_layout/final_pdf/verifier/page-27.png",
+      "render_sha256": "474db271f64f2bcf31461b49bdfa411f55c22eda7ded4e1d818d324790a4172b",
+      "body_text_characters": 44
+    },
+    {
+      "page": 28,
+      "size_points": [
+        595.2755737304688,
+        841.8897705078125
+      ],
+      "text_characters": 95,
+      "text_spans": 3,
+      "images": [
+        {
+          "bbox": [
+            45.35432815551758,
+            51.354248046875,
+            549.9212036132812,
+            408.2728576660156
+          ],
+          "pixel_size": [
+            2481,
+            1755
+          ],
+          "aspect_ratio_distortion": 2.3041585561767164e-07,
+          "effective_horizontal_dpi": 354.0303747405886
+        }
+      ],
+      "outside_text": [],
+      "overlap_candidates": [],
+      "render": "/home/d3va/Downloads/ML_Hackathon/analysis/final_report_layout/final_pdf/verifier/page-28.png",
+      "render_sha256": "2eb21e20a86b337bf9d1d1a0d757e24f2bffd35a25d53d534292c2c2b9d3bc2b",
+      "body_text_characters": 48,
+      "ocr_characters": 815,
+      "ocr_source": "/home/d3va/Downloads/ML_Hackathon/analysis/final_report_layout/final_pdf/verifier/page-28-ocr.txt"
+    },
+    {
+      "page": 29,
+      "size_points": [
+        595.2755737304688,
+        841.8897705078125
+      ],
+      "text_characters": 93,
+      "text_spans": 3,
+      "images": [
+        {
+          "bbox": [
+            45.35432815551758,
+            51.354248046875,
+            549.9212036132812,
+            408.2728576660156
+          ],
+          "pixel_size": [
+            2481,
+            1755
+          ],
+          "aspect_ratio_distortion": 2.3041585561767164e-07,
+          "effective_horizontal_dpi": 354.0303747405886
+        }
+      ],
+      "outside_text": [],
+      "overlap_candidates": [],
+      "render": "/home/d3va/Downloads/ML_Hackathon/analysis/final_report_layout/final_pdf/verifier/page-29.png",
+      "render_sha256": "891965bd97a21f7d969469050de381a0bb18e6f21066b8c5a88c138646ac9fd5",
+      "body_text_characters": 46
+    },
+    {
+      "page": 30,
+      "size_points": [
+        595.2755737304688,
+        841.8897705078125
+      ],
+      "text_characters": 90,
+      "text_spans": 3,
+      "images": [
+        {
+          "bbox": [
+            142.78480529785156,
+            51.354248046875,
+            452.49078369140625,
+            489.136962890625
+          ],
+          "pixel_size": [
+            2481,
+            3507
+          ],
+          "aspect_ratio_distortion": 4.5391198799649146e-08,
+          "effective_horizontal_dpi": 576.7793083186976
+        }
+      ],
+      "outside_text": [],
+      "overlap_candidates": [],
+      "render": "/home/d3va/Downloads/ML_Hackathon/analysis/final_report_layout/final_pdf/verifier/page-30.png",
+      "render_sha256": "67f8477036415545fa2349f24542e72601c02a34b6bc8fb0a4727f20d2e35d7c",
+      "body_text_characters": 43
+    },
+    {
+      "page": 31,
+      "size_points": [
+        595.2755737304688,
+        841.8897705078125
+      ],
+      "text_characters": 121,
+      "text_spans": 3,
+      "images": [
+        {
+          "bbox": [
+            45.35432815551758,
+            51.354248046875,
+            549.9212036132812,
+            408.2728576660156
+          ],
+          "pixel_size": [
+            2481,
+            1755
+          ],
+          "aspect_ratio_distortion": 2.3041585561767164e-07,
+          "effective_horizontal_dpi": 354.0303747405886
+        }
+      ],
+      "outside_text": [],
+      "overlap_candidates": [],
+      "render": "/home/d3va/Downloads/ML_Hackathon/analysis/final_report_layout/final_pdf/verifier/page-31.png",
+      "render_sha256": "30323c6f93468ca70b43fa9822ff7fbec5e32cb51abba7ea893ce487604ad42b",
+      "body_text_characters": 74
+    },
+    {
+      "page": 32,
+      "size_points": [
+        595.2755737304688,
+        841.8897705078125
+      ],
+      "text_characters": 118,
+      "text_spans": 3,
+      "images": [
+        {
+          "bbox": [
+            45.35432815551758,
+            51.354248046875,
+            549.9212036132812,
+            408.2728576660156
+          ],
+          "pixel_size": [
+            2481,
+            1755
+          ],
+          "aspect_ratio_distortion": 2.3041585561767164e-07,
+          "effective_horizontal_dpi": 354.0303747405886
+        }
+      ],
+      "outside_text": [],
+      "overlap_candidates": [],
+      "render": "/home/d3va/Downloads/ML_Hackathon/analysis/final_report_layout/final_pdf/verifier/page-32.png",
+      "render_sha256": "470c61422e4b8fcd726da428888e14ef04b68ed0005601729031ff92b4af8234",
+      "body_text_characters": 71
+    },
+    {
+      "page": 33,
+      "size_points": [
+        595.2755737304688,
+        841.8897705078125
+      ],
+      "text_characters": 101,
+      "text_spans": 3,
+      "images": [
+        {
+          "bbox": [
+            45.35432815551758,
+            51.354248046875,
+            549.9212036132812,
+            408.2728576660156
+          ],
+          "pixel_size": [
+            2481,
+            1755
+          ],
+          "aspect_ratio_distortion": 2.3041585561767164e-07,
+          "effective_horizontal_dpi": 354.0303747405886
+        }
+      ],
+      "outside_text": [],
+      "overlap_candidates": [],
+      "render": "/home/d3va/Downloads/ML_Hackathon/analysis/final_report_layout/final_pdf/verifier/page-33.png",
+      "render_sha256": "f712353ddf94fa92a951d721c1b272b338f72a27d2f2fbe0b68629a8a448cf06",
+      "body_text_characters": 54
+    },
+    {
+      "page": 34,
+      "size_points": [
+        595.2755737304688,
+        841.8897705078125
+      ],
+      "text_characters": 165,
+      "text_spans": 4,
+      "images": [
+        {
+          "bbox": [
+            45.35432815551758,
+            51.354248046875,
+            549.9212036132812,
+            408.2728576660156
+          ],
+          "pixel_size": [
+            2481,
+            1755
+          ],
+          "aspect_ratio_distortion": 2.3041585561767164e-07,
+          "effective_horizontal_dpi": 354.0303747405886
+        },
+        {
+          "bbox": [
+            45.35432815551758,
+            438.77288818359375,
+            549.9212036132812,
+            611.5653686523438
+          ],
+          "pixel_size": [
+            4713,
+            1614
+          ],
+          "aspect_ratio_distortion": 2.880798721793809e-08,
+          "effective_horizontal_dpi": 672.5292850271642
+        }
+      ],
+      "outside_text": [],
+      "overlap_candidates": [],
+      "render": "/home/d3va/Downloads/ML_Hackathon/analysis/final_report_layout/final_pdf/verifier/page-34.png",
+      "render_sha256": "6481ea4ca0310d35dfae6965dc5128c9f0d388ed0fbfbf60c132b10b06cc8206",
+      "body_text_characters": 118
+    },
+    {
+      "page": 35,
+      "size_points": [
+        595.2755737304688,
+        841.8897705078125
+      ],
+      "text_characters": 144,
+      "text_spans": 4,
+      "images": [
+        {
+          "bbox": [
+            45.35432815551758,
+            51.354248046875,
+            549.9212036132812,
+            408.2728576660156
+          ],
+          "pixel_size": [
+            2481,
+            1755
+          ],
+          "aspect_ratio_distortion": 2.3041585561767164e-07,
+          "effective_horizontal_dpi": 354.0303747405886
+        },
+        {
+          "bbox": [
+            45.35432815551758,
+            438.77288818359375,
+            549.9212036132812,
+            767.0159912109375
+          ],
+          "pixel_size": [
+            2481,
+            1614
+          ],
+          "aspect_ratio_distortion": 2.4758000327640417e-07,
+          "effective_horizontal_dpi": 354.0303747405886
+        }
+      ],
+      "outside_text": [],
+      "overlap_candidates": [],
+      "render": "/home/d3va/Downloads/ML_Hackathon/analysis/final_report_layout/final_pdf/verifier/page-35.png",
+      "render_sha256": "4066db001401a46268167a1df48a054eb97ecfe67d4d6ae6a4df4eac1d52823d",
+      "body_text_characters": 97
+    },
+    {
+      "page": 36,
+      "size_points": [
+        595.2755737304688,
+        841.8897705078125
+      ],
+      "text_characters": 164,
+      "text_spans": 4,
+      "images": [
+        {
+          "bbox": [
+            45.35432815551758,
+            55.354278564453125,
+            549.9212036132812,
+            383.5973815917969
+          ],
+          "pixel_size": [
+            2481,
+            1614
+          ],
+          "aspect_ratio_distortion": 2.4758000327640417e-07,
+          "effective_horizontal_dpi": 354.0303747405886
+        },
+        {
+          "bbox": [
+            45.35432815551758,
+            414.09735107421875,
+            549.9212036132812,
+            742.3404541015625
+          ],
+          "pixel_size": [
+            2481,
+            1614
+          ],
+          "aspect_ratio_distortion": 2.4758000327640417e-07,
+          "effective_horizontal_dpi": 354.0303747405886
+        }
+      ],
+      "outside_text": [],
+      "overlap_candidates": [],
+      "render": "/home/d3va/Downloads/ML_Hackathon/analysis/final_report_layout/final_pdf/verifier/page-36.png",
+      "render_sha256": "09163024dc0852f4ac330f538e05cf42eb9eddd20c2506788e1e20847c596bae",
+      "body_text_characters": 117
+    },
+    {
+      "page": 37,
+      "size_points": [
+        595.2755737304688,
+        841.8897705078125
+      ],
+      "text_characters": 4066,
+      "text_spans": 67,
+      "images": [],
+      "outside_text": [],
+      "overlap_candidates": [],
+      "render": "/home/d3va/Downloads/ML_Hackathon/analysis/final_report_layout/final_pdf/verifier/page-37.png",
+      "render_sha256": "72d29f8a2e191dacb1c3e86f2a48025c1a3d8d19934c5f209510e7dfed0f435f",
+      "body_text_characters": 4019
+    },
+    {
+      "page": 38,
+      "size_points": [
+        595.2755737304688,
+        841.8897705078125
+      ],
+      "text_characters": 3383,
+      "text_spans": 44,
+      "images": [
+        {
+          "bbox": [
+            45.35432815551758,
+            97.85440063476562,
+            549.9212036132812,
+            257.47869873046875
+          ],
+          "pixel_size": [
+            4713,
+            1491
+          ],
+          "aspect_ratio_distortion": 1.4039108764407615e-07,
+          "effective_horizontal_dpi": 672.5292850271642
+        }
+      ],
+      "outside_text": [],
+      "overlap_candidates": [],
+      "render": "/home/d3va/Downloads/ML_Hackathon/analysis/final_report_layout/final_pdf/verifier/page-38.png",
+      "render_sha256": "9335dfb116aed54ec0bbfd472788cd70a698871ae915c39c094d6a385d114409",
+      "body_text_characters": 3336
+    },
+    {
+      "page": 39,
+      "size_points": [
+        595.2755737304688,
+        841.8897705078125
+      ],
+      "text_characters": 3737,
+      "text_spans": 86,
+      "images": [],
+      "outside_text": [],
+      "overlap_candidates": [],
+      "render": "/home/d3va/Downloads/ML_Hackathon/analysis/final_report_layout/final_pdf/verifier/page-39.png",
+      "render_sha256": "143e9c822f004b7d665683375a6e66e53f2625f8becb5c9fbffb7d914b9e79c1",
+      "body_text_characters": 3690
+    },
+    {
+      "page": 40,
+      "size_points": [
+        595.2755737304688,
+        841.8897705078125
+      ],
+      "text_characters": 125,
+      "text_spans": 4,
+      "images": [
+        {
+          "bbox": [
+            163.45150756835938,
+            51.354248046875,
+            431.8240051269531,
+            489.136962890625
+          ],
+          "pixel_size": [
+            1440,
+            2349
+          ],
+          "aspect_ratio_distortion": 1.7863038270782283e-07,
+          "effective_horizontal_dpi": 386.32870708878636
+        },
+        {
+          "bbox": [
+            45.35432815551758,
+            519.6370849609375,
+            549.9212036132812,
+            773.193359375
+          ],
+          "pixel_size": [
+            991,
+            498
+          ],
+          "aspect_ratio_distortion": 1.434035830083502e-07,
+          "effective_horizontal_dpi": 141.41237459408438
+        }
+      ],
+      "outside_text": [],
+      "overlap_candidates": [],
+      "render": "/home/d3va/Downloads/ML_Hackathon/analysis/final_report_layout/final_pdf/verifier/page-40.png",
+      "render_sha256": "598174ee54def330b38f883dae4dcc1678f31d7f1799bf83c096c5133eb19ad8",
+      "body_text_characters": 78
+    },
+    {
+      "page": 41,
+      "size_points": [
+        595.2755737304688,
+        841.8897705078125
+      ],
+      "text_characters": 74,
+      "text_spans": 3,
+      "images": [
+        {
+          "bbox": [
+            163.45150756835938,
+            55.354248046875,
+            431.8240051269531,
+            493.136962890625
+          ],
+          "pixel_size": [
+            1440,
+            2349
+          ],
+          "aspect_ratio_distortion": 1.7863038270782283e-07,
+          "effective_horizontal_dpi": 386.32870708878636
+        }
+      ],
+      "outside_text": [],
+      "overlap_candidates": [],
+      "render": "/home/d3va/Downloads/ML_Hackathon/analysis/final_report_layout/final_pdf/verifier/page-41.png",
+      "render_sha256": "a08b5969baefe6115136c361956db4496469bbfd549aed714a5f4d88eb972ab5",
+      "body_text_characters": 27
+    },
+    {
+      "page": 42,
+      "size_points": [
+        595.2755737304688,
+        841.8897705078125
+      ],
+      "text_characters": 80,
+      "text_spans": 3,
+      "images": [
+        {
+          "bbox": [
+            163.45150756835938,
+            51.354248046875,
+            431.8240051269531,
+            489.136962890625
+          ],
+          "pixel_size": [
+            1440,
+            2349
+          ],
+          "aspect_ratio_distortion": 1.7863038270782283e-07,
+          "effective_horizontal_dpi": 386.32870708878636
+        }
+      ],
+      "outside_text": [],
+      "overlap_candidates": [],
+      "render": "/home/d3va/Downloads/ML_Hackathon/analysis/final_report_layout/final_pdf/verifier/page-42.png",
+      "render_sha256": "883346f573285cb8e54e33bc80b2e4119348d53378195eb368037207c19c9e2e",
+      "body_text_characters": 33
+    },
+    {
+      "page": 43,
+      "size_points": [
+        595.2755737304688,
+        841.8897705078125
+      ],
+      "text_characters": 82,
+      "text_spans": 3,
+      "images": [
+        {
+          "bbox": [
+            283.6510925292969,
+            51.354248046875,
+            311.6244201660156,
+            489.136962890625
+          ],
+          "pixel_size": [
+            320,
+            5008
+          ],
+          "aspect_ratio_distortion": 3.136923795166169e-07,
+          "effective_horizontal_dpi": 823.6417311237905
+        }
+      ],
+      "outside_text": [],
+      "overlap_candidates": [],
+      "render": "/home/d3va/Downloads/ML_Hackathon/analysis/final_report_layout/final_pdf/verifier/page-43.png",
+      "render_sha256": "9438eca1d4a158d5c4d9e57be9971e25dec2521360f34c5d41f4d452a4d3acd1",
+      "body_text_characters": 35
+    },
+    {
+      "page": 44,
+      "size_points": [
+        595.2755737304688,
+        841.8897705078125
+      ],
+      "text_characters": 529,
+      "text_spans": 10,
+      "images": [
+        {
+          "bbox": [
+            278.302001953125,
+            51.354248046875,
+            316.9736328125,
+            489.136962890625
+          ],
+          "pixel_size": [
+            390,
+            4415
+          ],
+          "aspect_ratio_distortion": 5.004778702577539e-08,
+          "effective_horizontal_dpi": 726.1136749600691
+        },
+        {
+          "bbox": [
+            45.35432815551758,
+            585.6370239257812,
+            549.9212036132812,
+            669.9759521484375
+          ],
+          "pixel_size": [
+            688,
+            115
+          ],
+          "aspect_ratio_distortion": 1.3891305394864162e-07,
+          "effective_horizontal_dpi": 98.1752913428154
+        }
+      ],
+      "outside_text": [],
+      "overlap_candidates": [],
+      "render": "/home/d3va/Downloads/ML_Hackathon/analysis/final_report_layout/final_pdf/verifier/page-44.png",
+      "render_sha256": "a23b8cec46ae8269605b876334d9989e020e5a1be25209f6f3753910d2204c8e",
+      "body_text_characters": 482
+    },
+    {
+      "page": 45,
+      "size_points": [
+        595.2755737304688,
+        841.8897705078125
+      ],
+      "text_characters": 168,
+      "text_spans": 4,
+      "images": [
+        {
+          "bbox": [
+            45.35432815551758,
+            51.3543701171875,
+            549.9212036132812,
+            339.91387939453125
+          ],
+          "pixel_size": [
+            306,
+            175
+          ],
+          "aspect_ratio_distortion": 7.512817568056107e-08,
+          "effective_horizontal_dpi": 43.66517318444987
+        },
+        {
+          "bbox": [
+            45.35432815551758,
+            370.41387939453125,
+            549.9212036132812,
+            625.1951904296875
+          ],
+          "pixel_size": [
+            505,
+            255
+          ],
+          "aspect_ratio_distortion": 6.863602552975578e-08,
+          "effective_horizontal_dpi": 72.06180541878166
+        }
+      ],
+      "outside_text": [],
+      "overlap_candidates": [],
+      "render": "/home/d3va/Downloads/ML_Hackathon/analysis/final_report_layout/final_pdf/verifier/page-45.png",
+      "render_sha256": "d606d740a251d6ddc45ae3ebfb810078ceb7db7158170186b93775933b4323e6",
+      "body_text_characters": 121
+    },
+    {
+      "page": 46,
+      "size_points": [
+        595.2755737304688,
+        841.8897705078125
+      ],
+      "text_characters": 213,
+      "text_spans": 5,
+      "images": [
+        {
+          "bbox": [
+            45.35432815551758,
+            51.35429382324219,
+            549.9212036132812,
+            306.18609619140625
+          ],
+          "pixel_size": [
+            495,
+            250
+          ],
+          "aspect_ratio_distortion": 1.8477468199940006e-07,
+          "effective_horizontal_dpi": 70.63483897484538
+        },
+        {
+          "bbox": [
+            45.35432815551758,
+            336.6861267089844,
+            549.9212036132812,
+            420.41656494140625
+          ],
+          "pixel_size": [
+            693,
+            115
+          ],
+          "aspect_ratio_distortion": 5.2001989936378834e-08,
+          "effective_horizontal_dpi": 98.88877456478353
+        },
+        {
+          "bbox": [
+            45.35432815551758,
+            450.91656494140625,
+            549.9212036132812,
+            705.6978759765625
+          ],
+          "pixel_size": [
+            505,
+            255
+          ],
+          "aspect_ratio_distortion": 6.863602552975578e-08,
+          "effective_horizontal_dpi": 72.06180541878166
+        }
+      ],
+      "outside_text": [],
+      "overlap_candidates": [],
+      "render": "/home/d3va/Downloads/ML_Hackathon/analysis/final_report_layout/final_pdf/verifier/page-46.png",
+      "render_sha256": "2354a006ce340b4ddf497e030895a11ec5b198f464d85e8e3b4b5a52320482b2",
+      "body_text_characters": 166
+    },
+    {
+      "page": 47,
+      "size_points": [
+        595.2755737304688,
+        841.8897705078125
+      ],
+      "text_characters": 165,
+      "text_spans": 4,
+      "images": [
+        {
+          "bbox": [
+            45.35432815551758,
+            51.35438537597656,
+            549.9212036132812,
+            306.13568115234375
+          ],
+          "pixel_size": [
+            505,
+            255
+          ],
+          "aspect_ratio_distortion": 8.746276036752931e-09,
+          "effective_horizontal_dpi": 72.06180541878166
+        },
+        {
+          "bbox": [
+            45.35432815551758,
+            336.6357116699219,
+            549.9212036132812,
+            604.422607421875
+          ],
+          "pixel_size": [
+            358,
+            190
+          ],
+          "aspect_ratio_distortion": 2.443183588773934e-08,
+          "effective_horizontal_dpi": 51.08539869291848
+        }
+      ],
+      "outside_text": [],
+      "overlap_candidates": [],
+      "render": "/home/d3va/Downloads/ML_Hackathon/analysis/final_report_layout/final_pdf/verifier/page-47.png",
+      "render_sha256": "122f7434a806f2c787cb959f2d2ffc93d7804d32ec7716cc2cdbf5fde143eb5e",
+      "body_text_characters": 118
+    },
+    {
+      "page": 48,
+      "size_points": [
+        595.2755737304688,
+        841.8897705078125
+      ],
+      "text_characters": 99,
+      "text_spans": 3,
+      "images": [
+        {
+          "bbox": [
+            143.9846954345703,
+            51.354248046875,
+            451.291015625,
+            489.136962890625
+          ],
+          "pixel_size": [
+            358,
+            510
+          ],
+          "aspect_ratio_distortion": 7.263020340708692e-08,
+          "effective_horizontal_dpi": 83.87722056620015
+        }
+      ],
+      "outside_text": [],
+      "overlap_candidates": [],
+      "render": "/home/d3va/Downloads/ML_Hackathon/analysis/final_report_layout/final_pdf/verifier/page-48.png",
+      "render_sha256": "8dd7d97d7b1e430ec854c106e6cf0e5aac5bbfe1e576d474975ca330a0c60719",
+      "body_text_characters": 52
+    },
+    {
+      "page": 49,
+      "size_points": [
+        595.2755737304688,
+        841.8897705078125
+      ],
+      "text_characters": 1029,
+      "text_spans": 15,
+      "images": [
+        {
+          "bbox": [
+            175.22869873046875,
+            51.354248046875,
+            420.0469970703125,
+            489.136962890625
+          ],
+          "pixel_size": [
+            288,
+            515
+          ],
+          "aspect_ratio_distortion": 1.4038702200735997e-08,
+          "effective_horizontal_dpi": 84.69955122069915
+        }
+      ],
+      "outside_text": [],
+      "overlap_candidates": [],
+      "render": "/home/d3va/Downloads/ML_Hackathon/analysis/final_report_layout/final_pdf/verifier/page-49.png",
+      "render_sha256": "91249f48bc0593160631a372daa65db8220ee8fdd19423875d6bbedb49f15ed1",
+      "body_text_characters": 982
+    },
+    {
+      "page": 50,
+      "size_points": [
+        595.2755737304688,
+        841.8897705078125
+      ],
+      "text_characters": 739,
+      "text_spans": 10,
+      "images": [
+        {
+          "bbox": [
+            45.35432815551758,
+            51.3543701171875,
+            549.9212036132812,
+            358.1855773925781
+          ],
+          "pixel_size": [
+            2368,
+            1440
+          ],
+          "aspect_ratio_distortion": 2.5201134512542467e-09,
+          "effective_horizontal_dpi": 337.9056539241088
+        },
+        {
+          "bbox": [
+            45.35432815551758,
+            388.6855773925781,
+            549.9212036132812,
+            505.8171691894531
+          ],
+          "pixel_size": [
+            1120,
+            260
+          ],
+          "aspect_ratio_distortion": 3.6638573508440686e-08,
+          "effective_horizontal_dpi": 159.82024172086227
+        },
+        {
+          "bbox": [
+            45.35432815551758,
+            536.3172607421875,
+            549.9212036132812,
+            658.5576782226562
+          ],
+          "pixel_size": [
+            970,
+            235
+          ],
+          "aspect_ratio_distortion": 9.088494978826134e-08,
+          "effective_horizontal_dpi": 138.41574506181823
+        }
+      ],
+      "outside_text": [],
+      "overlap_candidates": [],
+      "render": "/home/d3va/Downloads/ML_Hackathon/analysis/final_report_layout/final_pdf/verifier/page-50.png",
+      "render_sha256": "e3ca5062a80fe8b6bc0e56605fd4e1f1f7ae3a62c34fa9a6ed4636b8e681e629",
+      "body_text_characters": 692
+    },
+    {
+      "page": 51,
+      "size_points": [
+        595.2755737304688,
+        841.8897705078125
+      ],
+      "text_characters": 2404,
+      "text_spans": 37,
+      "images": [
+        {
+          "bbox": [
+            45.35432815551758,
+            157.8543701171875,
+            549.9212036132812,
+            441.67327880859375
+          ],
+          "pixel_size": [
+            1920,
+            1080
+          ],
+          "aspect_ratio_distortion": 1.4532651948506725e-07,
+          "effective_horizontal_dpi": 273.9775572357639
+        }
+      ],
+      "outside_text": [],
+      "overlap_candidates": [],
+      "render": "/home/d3va/Downloads/ML_Hackathon/analysis/final_report_layout/final_pdf/verifier/page-51.png",
+      "render_sha256": "82e373c121981a71020430ecaf476b89c016115fd218e3a2b39da5392464f09a",
+      "body_text_characters": 2357
+    },
+    {
+      "page": 52,
+      "size_points": [
+        595.2755737304688,
+        841.8897705078125
+      ],
+      "text_characters": 4035,
+      "text_spans": 66,
+      "images": [],
+      "outside_text": [],
+      "overlap_candidates": [],
+      "render": "/home/d3va/Downloads/ML_Hackathon/analysis/final_report_layout/final_pdf/verifier/page-52.png",
+      "render_sha256": "92c3aa2e2345dca9ded668d4ca6cd46cfaf8ffcf1230c49b63d17eda26f0d02a",
+      "body_text_characters": 3988
+    },
+    {
+      "page": 53,
+      "size_points": [
+        595.2755737304688,
+        841.8897705078125
+      ],
+      "text_characters": 3128,
+      "text_spans": 131,
+      "images": [],
+      "outside_text": [],
+      "overlap_candidates": [],
+      "render": "/home/d3va/Downloads/ML_Hackathon/analysis/final_report_layout/final_pdf/verifier/page-53.png",
+      "render_sha256": "9e358a4267fa7b6119572a6203756c8971fe13e0a7eb7e7ea0195cd6b3d7fe05",
+      "body_text_characters": 3081
+    },
+    {
+      "page": 54,
+      "size_points": [
+        595.2755737304688,
+        841.8897705078125
+      ],
+      "text_characters": 5037,
+      "text_spans": 124,
+      "images": [],
+      "outside_text": [],
+      "overlap_candidates": [],
+      "render": "/home/d3va/Downloads/ML_Hackathon/analysis/final_report_layout/final_pdf/verifier/page-54.png",
+      "render_sha256": "fe8fcb0645e8e543de21801ff00a06fefb6effab4b5666fb1f498a29b9dd5044",
+      "body_text_characters": 4990
+    },
+    {
+      "page": 55,
+      "size_points": [
+        595.2755737304688,
+        841.8897705078125
+      ],
+      "text_characters": 4865,
+      "text_spans": 113,
+      "images": [],
+      "outside_text": [],
+      "overlap_candidates": [],
+      "render": "/home/d3va/Downloads/ML_Hackathon/analysis/final_report_layout/final_pdf/verifier/page-55.png",
+      "render_sha256": "30b8dceb0e1f2c18e0efbb0c94d0a4c9caa46598c8e71418330f2e6093816e57",
+      "body_text_characters": 4818
+    },
+    {
+      "page": 56,
+      "size_points": [
+        595.2755737304688,
+        841.8897705078125
+      ],
+      "text_characters": 3431,
+      "text_spans": 96,
+      "images": [],
+      "outside_text": [],
+      "overlap_candidates": [],
+      "render": "/home/d3va/Downloads/ML_Hackathon/analysis/final_report_layout/final_pdf/verifier/page-56.png",
+      "render_sha256": "8f0fde83c6440344765faea7fc3c5395dcab43f83bfc64c0f329ba2c48a03d00",
+      "body_text_characters": 3384
+    },
+    {
+      "page": 57,
+      "size_points": [
+        595.2755737304688,
+        841.8897705078125
+      ],
+      "text_characters": 604,
+      "text_spans": 22,
+      "images": [],
+      "outside_text": [],
+      "overlap_candidates": [],
+      "render": "/home/d3va/Downloads/ML_Hackathon/analysis/final_report_layout/final_pdf/verifier/page-57.png",
+      "render_sha256": "5eb5d66137079744684889b92581a94fc3190c0278df8a78e0b468016c60fab4",
+      "body_text_characters": 557,
+      "ocr_characters": 581,
+      "ocr_source": "/home/d3va/Downloads/ML_Hackathon/analysis/final_report_layout/final_pdf/verifier/page-57-ocr.txt"
+    }
+  ],
+  "defects": [],
+  "warnings": [],
+  "page_count": 57,
+  "forbidden_tokens": [],
+  "preview_watermark": false,
+  "required_sections": {
+    "Logistic Regression": true,
+    "KNN/distance": true,
+    "Bagging": true,
+    "directed Viterbi": true,
+    "Bayesian search": true,
+    "proxy-label limitation": true,
+    "live deployment": true,
+    "Gaussian Naive Bayes": true,
+    "Histogram Gradient Boosting": true,
+    "separate evaluator section": true,
+    "geographical implementation map": true,
+    "classifier-only comparison": true,
+    "historical RandomForest": true,
+    "historical ExtraTrees": true,
+    "human academic defence": true,
+    "AI assistance disclosure": true
+  },
+  "passed": true
+}

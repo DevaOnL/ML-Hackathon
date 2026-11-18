@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "failed_run": "https://github.com/DevaOnL/ML-Hackathon/actions/runs/44275062600",
+  "failed_commit": "de97bfb3b424c95ac8db3622385b3d0ce8fcd2c7",
+  "failure": "Six temporary synthetic restoration tests compared the CI interpreter Python 3.14.10 to the production runtime pin 3.14.6, stopping before their intended assertions.",
+  "cause_scope": "Test fixture setup only; production fitting, inference, freezes, serving and recorded metrics unchanged.",
+  "fix": "Bind only generated tiny fixtures to their actual fitting interpreter using a test-local PUBLISHED_RUNTIME patch. Add explicit incompatible-runtime rejection before data loading, fitting or prediction.",
+  "local_verification": {
+    "command": "OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 .venv/bin/python -B -m unittest tests.test_prepare_final_five_inputs -q",
+    "tests": 25,
+    "failures": 0,
+    "exit_code": 0
+  },
+  "remote_retest_status": "success",
+  "successful_retest_run": "https://github.com/DevaOnL/ML-Hackathon/actions/runs/44275464624",
+  "successful_commit": "4b970e0e9a1a92ea564e758ef3b3138b35c33e60"
+}

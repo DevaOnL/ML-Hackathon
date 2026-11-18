@@ -121,7 +121,7 @@ class RequestedTrioTests(unittest.TestCase):
         from backend.config import Settings
         with tempfile.TemporaryDirectory() as temporary:
             with mock.patch.object(cli, "PROJECT", Path(temporary)):
-                with self.assertRaisesRegex(FileNotFoundError, "frozen requested-trio"):
+                with self.assertRaisesRegex(FileNotFoundError, "frozen final-five"):
                     cli._config(None, require_frozen=True)
                 # The explicitly requested geometry baseline can use its defaults.
                 self.assertIsInstance(cli._config(None, require_frozen=False), MatchConfig)
@@ -131,8 +131,8 @@ class RequestedTrioTests(unittest.TestCase):
         with mock.patch.dict("os.environ", {}, clear=True):
             settings = Settings.from_env()
             self.assertTrue(settings.match_config_required)
-            self.assertEqual(settings.model_path.parts[-3:], ("artifacts", "phase_three", "model.joblib"))
-            self.assertEqual(settings.match_config_path.parts[-3:], ("artifacts", "phase_three", "match_config.json"))
+            self.assertEqual(settings.model_path.parts[-3:], ("artifacts", "final_five", "model.joblib"))
+            self.assertEqual(settings.match_config_path.parts[-3:], ("artifacts", "final_five", "match_config.json"))
 
     def test_scope_contains_exactly_requested_three_actual_estimators(self):
         self.assertEqual(PHASE_MODEL_COUNT, 3)

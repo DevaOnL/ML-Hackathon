@@ -1,0 +1,21 @@
+{
+  "source": "exact staged index checkout with no raw/private dataset, arrays or local proposal state",
+  "tree": "db9c994bd2641981adca8cc43300d255e12ea1db",
+  "passed": true,
+  "checks": [
+    {
+      "check": "report",
+      "exit_code": 0,
+      "log": "reports/final_five/release_public_checkout_report.log",
+      "sha256": "c3aa273449b8b00e57c361a555c75071eb0141def4a598c4d365f3f4b5fae37a"
+    },
+    {
+      "check": "crops",
+      "exit_code": 0,
+      "log": "reports/final_five/release_public_checkout_crops.log",
+      "sha256": "98c01cb459d5a1baa369a6c9003244a0143bca42b67933683e67aec0fb73138f"
+    }
+  ],
+  "seconds": 1.389028595000127,
+  "final_pdf_sha256": "f6bdd47595a4e06295ed23b10db94f22c7bf69484f8bf9476ae15785ce2e65e2"
+}

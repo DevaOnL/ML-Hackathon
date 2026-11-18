@@ -1,0 +1,156 @@
+{
+  "task_id": "task-48",
+  "reviewed_at_utc": "2026-11-18T10:00:54.642Z",
+  "verdict": "GO_FOR_CANONICAL_REPORT_ARTIFACT_FREEZE",
+  "remaining_report_artifact_blockers": [],
+  "reviewer": {
+    "type": "independent automated coding-agent review",
+    "human_or_organizer_approval_claimed": false
+  },
+  "canonical_final": {
+    "pdf": {
+      "path": "reports/final_five/PathSnap_Final_Technical_Report.pdf",
+      "sha256": "f6bdd47595a4e06295ed23b10db94f22c7bf69484f8bf9476ae15785ce2e65e2",
+      "pages": 57
+    },
+    "markdown": {
+      "path": "reports/final_five/TECHNICAL_REPORT.md",
+      "sha256": "909b9bca8f51907000c0ef90bc9d3391dacc7155bef1ebf94c251da0f1b7eddb"
+    },
+    "manifest": {
+      "path": "reports/final_five/report_manifest.json",
+      "sha256": "a4338451518a596c7e2abc5f61f6c02809974f38de23e108c191964a1d4946c5",
+      "mode": "final",
+      "schema_version": 2
+    },
+    "builder_sha256": "ae6b72a7455a8105054d36568df46a20db201e9b5db2cd1d6a412e2a5e051c1a",
+    "template_sha256": "637096eb4bfc5ab73df5181dcd8a776fd1b9376c1cf545df8168177576a86f4f",
+    "registry_sha256": "74af3af4eaae85e0208ec3240de135391b8a63a5fdda10c90087ff020c36ed85",
+    "pinned_model_sha256": "c9cc8e9f36838f656a94d07ed69632979df9981ca94a9daf3b52fbce052e4b34",
+    "pinned_decoder_file_sha256": "10405aa6b6f370e41d4ddcb01207fd1e8f58900fd0395e541ee6bc78146168c5"
+  },
+  "verified_results": {
+    "independent_integrity_checks": {
+      "passed": 18,
+      "total": 18,
+      "evidence": "analysis/final_report_release_review/final_integrity_review.json",
+      "sha256": "7ccc4efe62bb5d9b11c819108333524b2a6e4a81b42d222002250fc15202c029"
+    },
+    "current_and_persisted_evidence_guards": {
+      "passed": 17,
+      "total": 17,
+      "registered_facts": 360,
+      "declared_inputs": 50,
+      "image_assets": 55,
+      "unresolved_facts": 0,
+      "persisted_manifest_issues": 0
+    },
+    "separate_process_persisted_checks": [
+      {
+        "seed": 1,
+        "exit_code": 0,
+        "log": "analysis/final_report_release_review/final_check_fixed_seed_1.log"
+      },
+      {
+        "seed": 2,
+        "exit_code": 0,
+        "log": "analysis/final_report_release_review/final_check_fixed_seed_2.log"
+      },
+      {
+        "seed": 42,
+        "exit_code": 0,
+        "log": "analysis/final_report_release_review/final_check_fixed_seed_42.log"
+      }
+    ],
+    "focused_tests_run_by_reviewer": {
+      "passed": 43,
+      "failed": 0,
+      "evidence": "analysis/final_report_release_review/deterministic_registry_tests.log"
+    },
+    "complete_release_suite_independently_bound_to_actual_logs": {
+      "total": 421,
+      "passed": 421,
+      "python": 370,
+      "hosting": 29,
+      "node": 22,
+      "static_smoke": true,
+      "bound_suite_logs": 4,
+      "record": "reports/final_five/test_results.json",
+      "reviewer_repeated_entire_suite": false
+    },
+    "requirements": {
+      "rows": 47,
+      "unique_terminal_ids": 47,
+      "status_counts": {
+        "done_evidence_exists": 41,
+        "human_external_blocker": 5,
+        "user_exception": 1
+      },
+      "rows_with_explicit_final_evidence": 25,
+      "all_provided_evidence_bindings_verified": 76,
+      "unique_evidence_paths": 35,
+      "strict_json_evidence_binding_validations": 53,
+      "failures": 0,
+      "no_claim_of_reopening_raw_organizer_documents": true
+    },
+    "manuscript": {
+      "exact_resolution_of_current_template": true,
+      "accepted_corrected_candidate_science_preserved": true,
+      "only_candidate_to_final_differences": "Actual release test count420->421 and truthful R-DL03/administrative status updates; no model metrics/selection/chronology/limitations changed.",
+      "diff": "analysis/final_report_release_review/accepted_candidate_to_final.diff"
+    },
+    "independent_layout": {
+      "task_id": "task-49",
+      "status": "completed",
+      "passed": true,
+      "checks_passed": 14,
+      "checks_total": 14,
+      "pdf_sha256": "f6bdd47595a4e06295ed23b10db94f22c7bf69484f8bf9476ae15785ce2e65e2",
+      "acceptance": "analysis/final_report_layout/final_pdf/deterministic_iteration2/comparative_acceptance.json",
+      "acceptance_sha256": "dca4321e9ef1da96c304653094473726b4029a5cd0bddf78f48c7f0d363ded65",
+      "supplemental": "analysis/final_report_layout/final_pdf/deterministic_iteration2/supplemental_layout.json",
+      "supplemental_sha256": "9fde3f52a8c9dcb8bc80c55b1544434dd27b5aeb69812d07c454ee09737029ec",
+      "method": "Actual current PDF text/spans/links/all55 exact asset pixels and geometry, current300dpi table OCR29/29 numeric values, and comparison against pinned preceding full57page strict raster/OCR run. No repeat whole57page raster run, and no human visual-inspection claim."
+    },
+    "final16_source_output_pins_rechecked_unchanged": true,
+    "source_output_pins": "analysis/final_report_release_review/final_source_output_pins.json"
+  },
+  "findings": [
+    {
+      "id": "FRR-01",
+      "severity": "medium",
+      "status": "fixed_and_verified_on_canonical_final",
+      "summary": "Deployment freeze prose cited the separate comparison artifact SHA.",
+      "fix": "Deployment-export prose now resolves the frozen/live model hash c9cc...; the comparison bundle table retains its correct47ea... record.",
+      "evidence": "analysis/final_report_release_review/candidate_scientific_acceptance.json"
+    },
+    {
+      "id": "FRR-02",
+      "severity": "medium",
+      "status": "fixed_and_verified_on_canonical_final",
+      "summary": "Unordered terminal-status set conversion made persisted registry SHA process-seed dependent.",
+      "fix": "Register the count membership list with sorted(REQ_TERMINAL_STATUSES); new cross-process seed regression and actual rebuilt persistedchecks1/2/42 all pass.",
+      "evidence": "analysis/final_report_release_review/registry_determinism_finding.json"
+    }
+  ],
+  "documentary_pdf_cycle_resolution": {
+    "accepted": true,
+    "evidence": "reports/final_five/report_prepublication_acceptance.json",
+    "corrected_candidate_sha256": "c5ea75013c51d835a6538c680d7439b7f18bc71173f9d35340900b1e675fed5f",
+    "details": "The genuinely built unwatermarked corrected candidate received scientific/layout acceptance before R-DL03 closure. The subsequent canonical build passed the unchanged normal --final gates. Historical checkpoint hashes were preserved; final output hash is bound by the final manifest, not by its own input matrix."
+  },
+  "limits": [
+    "Acceptance concerns the exact local canonical report artifact and its provided public evidence, not Git publication/merge completion.",
+    "The five human/external blockers and one accepted user exception remain disclosed; administrative terminal status does not mean those human obligations were performed.",
+    "Automated content, source, byte and layout verification does not establish organizer policy approval, authorship, viva competence or human visual review."
+  ],
+  "scope": {
+    "writes": "analysis/final_report_release_review/",
+    "production_fit_or_inference": false,
+    "model_deserialization": false,
+    "raw_private_data_opened": false,
+    "http_or_service_actions": false,
+    "git": false,
+    "canonical_source_or_pdf_edits": false
+  }
+}

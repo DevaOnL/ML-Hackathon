@@ -1,0 +1,434 @@
+{
+  "checked_at_utc": "2026-11-18T09:58:40.609925+00:00",
+  "pdf": "reports/final_five/PathSnap_Final_Technical_Report.pdf",
+  "pdf_sha256": "f6bdd47595a4e06295ed23b10db94f22c7bf69484f8bf9476ae15785ce2e65e2",
+  "checks": {
+    "current_pdf_matches_normal_final_manifest": true,
+    "current_pages57_and_prior_strict_pages57": true,
+    "prior_1503_full_strict_pass": true,
+    "all_current_page_and_image_geometry_equal_prior": true,
+    "all_current_55_asset_hashes_match": true,
+    "all_current_source_hashes_match_manifest": true,
+    "all17_normal_final_guards_pass": true,
+    "no_blank_bounds_overlaps_or_glyphs": true,
+    "no_preview_or_unresolved_markers": true,
+    "all_current_final_five_required_topics": true,
+    "complete421_release_record": true,
+    "421_test_count_in_actual_pdf": true,
+    "actual_pdf_export_paragraph_correct": true,
+    "pdf_unchanged_during_check": true
+  },
+  "passed": true,
+  "method": "Actual rebuilt PDF text/span/link/image geometry and source/file hashes; compare unchanged geometry with pinned prior full57page strict raster/OCR run. Separate current300dpi table OCR and exact55asset rawpixel checks accompany this record. No manual visual claim.",
+  "previous_full_strict_record": {
+    "path": "analysis/final_report_layout/final_pdf/verifier/layout_report.json",
+    "sha256": "3c9cd229527f4ceba4d83c287da5063b713b085c6f18c88ebbf7f27421610a25",
+    "pdf_sha256": "1503a65c89833b9d0fc0e84715b35ffdabcf7c10d833e5891821ade03dc00650"
+  },
+  "current_manifest": {
+    "path": "reports/final_five/report_manifest.json",
+    "sha256": "a4338451518a596c7e2abc5f61f6c02809974f38de23e108c191964a1d4946c5"
+  },
+  "current_test_record": {
+    "path": "reports/final_five/test_results.json",
+    "sha256": "469a01a28ac055866ae07bf0faf5272a9cb24c0d7a799960ac5c2664c4e685b1",
+    "counts": {
+      "python": 370,
+      "hosting": 29,
+      "node": 22
+    }
+  },
+  "page_geometry_comparison": [
+    {
+      "page": 1,
+      "size_same": true,
+      "image_geometry_same": true,
+      "image_count": 0
+    },
+    {
+      "page": 2,
+      "size_same": true,
+      "image_geometry_same": true,
+      "image_count": 0
+    },
+    {
+      "page": 3,
+      "size_same": true,
+      "image_geometry_same": true,
+      "image_count": 0
+    },
+    {
+      "page": 4,
+      "size_same": true,
+      "image_geometry_same": true,
+      "image_count": 1
+    },
+    {
+      "page": 5,
+      "size_same": true,
+      "image_geometry_same": true,
+      "image_count": 2
+    },
+    {
+      "page": 6,
+      "size_same": true,
+      "image_geometry_same": true,
+      "image_count": 2
+    },
+    {
+      "page": 7,
+      "size_same": true,
+      "image_geometry_same": true,
+      "image_count": 1
+    },
+    {
+      "page": 8,
+      "size_same": true,
+      "image_geometry_same": true,
+      "image_count": 1
+    },
+    {
+      "page": 9,
+      "size_same": true,
+      "image_geometry_same": true,
+      "image_count": 1
+    },
+    {
+      "page": 10,
+      "size_same": true,
+      "image_geometry_same": true,
+      "image_count": 1
+    },
+    {
+      "page": 11,
+      "size_same": true,
+      "image_geometry_same": true,
+      "image_count": 1
+    },
+    {
+      "page": 12,
+      "size_same": true,
+      "image_geometry_same": true,
+      "image_count": 2
+    },
+    {
+      "page": 13,
+      "size_same": true,
+      "image_geometry_same": true,
+      "image_count": 0
+    },
+    {
+      "page": 14,
+      "size_same": true,
+      "image_geometry_same": true,
+      "image_count": 0
+    },
+    {
+      "page": 15,
+      "size_same": true,
+      "image_geometry_same": true,
+      "image_count": 0
+    },
+    {
+      "page": 16,
+      "size_same": true,
+      "image_geometry_same": true,
+      "image_count": 0
+    },
+    {
+      "page": 17,
+      "size_same": true,
+      "image_geometry_same": true,
+      "image_count": 0
+    },
+    {
+      "page": 18,
+      "size_same": true,
+      "image_geometry_same": true,
+      "image_count": 1
+    },
+    {
+      "page": 19,
+      "size_same": true,
+      "image_geometry_same": true,
+      "image_count": 1
+    },
+    {
+      "page": 20,
+      "size_same": true,
+      "image_geometry_same": true,
+      "image_count": 1
+    },
+    {
+      "page": 21,
+      "size_same": true,
+      "image_geometry_same": true,
+      "image_count": 1
+    },
+    {
+      "page": 22,
+      "size_same": true,
+      "image_geometry_same": true,
+      "image_count": 1
+    },
+    {
+      "page": 23,
+      "size_same": true,
+      "image_geometry_same": true,
+      "image_count": 1
+    },
+    {
+      "page": 24,
+      "size_same": true,
+      "image_geometry_same": true,
+      "image_count": 1
+    },
+    {
+      "page": 25,
+      "size_same": true,
+      "image_geometry_same": true,
+      "image_count": 1
+    },
+    {
+      "page": 26,
+      "size_same": true,
+      "image_geometry_same": true,
+      "image_count": 1
+    },
+    {
+      "page": 27,
+      "size_same": true,
+      "image_geometry_same": true,
+      "image_count": 1
+    },
+    {
+      "page": 28,
+      "size_same": true,
+      "image_geometry_same": true,
+      "image_count": 1
+    },
+    {
+      "page": 29,
+      "size_same": true,
+      "image_geometry_same": true,
+      "image_count": 1
+    },
+    {
+      "page": 30,
+      "size_same": true,
+      "image_geometry_same": true,
+      "image_count": 1
+    },
+    {
+      "page": 31,
+      "size_same": true,
+      "image_geometry_same": true,
+      "image_count": 1
+    },
+    {
+      "page": 32,
+      "size_same": true,
+      "image_geometry_same": true,
+      "image_count": 1
+    },
+    {
+      "page": 33,
+      "size_same": true,
+      "image_geometry_same": true,
+      "image_count": 1
+    },
+    {
+      "page": 34,
+      "size_same": true,
+      "image_geometry_same": true,
+      "image_count": 2
+    },
+    {
+      "page": 35,
+      "size_same": true,
+      "image_geometry_same": true,
+      "image_count": 2
+    },
+    {
+      "page": 36,
+      "size_same": true,
+      "image_geometry_same": true,
+      "image_count": 2
+    },
+    {
+      "page": 37,
+      "size_same": true,
+      "image_geometry_same": true,
+      "image_count": 0
+    },
+    {
+      "page": 38,
+      "size_same": true,
+      "image_geometry_same": true,
+      "image_count": 1
+    },
+    {
+      "page": 39,
+      "size_same": true,
+      "image_geometry_same": true,
+      "image_count": 0
+    },
+    {
+      "page": 40,
+      "size_same": true,
+      "image_geometry_same": true,
+      "image_count": 2
+    },
+    {
+      "page": 41,
+      "size_same": true,
+      "image_geometry_same": true,
+      "image_count": 1
+    },
+    {
+      "page": 42,
+      "size_same": true,
+      "image_geometry_same": true,
+      "image_count": 1
+    },
+    {
+      "page": 43,
+      "size_same": true,
+      "image_geometry_same": true,
+      "image_count": 1
+    },
+    {
+      "page": 44,
+      "size_same": true,
+      "image_geometry_same": true,
+      "image_count": 2
+    },
+    {
+      "page": 45,
+      "size_same": true,
+      "image_geometry_same": true,
+      "image_count": 2
+    },
+    {
+      "page": 46,
+      "size_same": true,
+      "image_geometry_same": true,
+      "image_count": 3
+    },
+    {
+      "page": 47,
+      "size_same": true,
+      "image_geometry_same": true,
+      "image_count": 2
+    },
+    {
+      "page": 48,
+      "size_same": true,
+      "image_geometry_same": true,
+      "image_count": 1
+    },
+    {
+      "page": 49,
+      "size_same": true,
+      "image_geometry_same": true,
+      "image_count": 1
+    },
+    {
+      "page": 50,
+      "size_same": true,
+      "image_geometry_same": true,
+      "image_count": 3
+    },
+    {
+      "page": 51,
+      "size_same": true,
+      "image_geometry_same": true,
+      "image_count": 1
+    },
+    {
+      "page": 52,
+      "size_same": true,
+      "image_geometry_same": true,
+      "image_count": 0
+    },
+    {
+      "page": 53,
+      "size_same": true,
+      "image_geometry_same": true,
+      "image_count": 0
+    },
+    {
+      "page": 54,
+      "size_same": true,
+      "image_geometry_same": true,
+      "image_count": 0
+    },
+    {
+      "page": 55,
+      "size_same": true,
+      "image_geometry_same": true,
+      "image_count": 0
+    },
+    {
+      "page": 56,
+      "size_same": true,
+      "image_geometry_same": true,
+      "image_count": 0
+    },
+    {
+      "page": 57,
+      "size_same": true,
+      "image_geometry_same": true,
+      "image_count": 0
+    }
+  ],
+  "blank_pages": [],
+  "outside_spans": [],
+  "overlaps": [],
+  "glyphs": [],
+  "forbidden_tokens": [],
+  "preview_watermark": false,
+  "required_topics": {
+    "Logistic Regression": true,
+    "KNN/distance": true,
+    "Bagging": true,
+    "directed Viterbi": true,
+    "Bayesian search": true,
+    "proxy-label limitation": true,
+    "live deployment": true,
+    "Gaussian Naive Bayes": true,
+    "Histogram Gradient Boosting": true,
+    "separate evaluator section": true,
+    "geographical implementation map": true,
+    "classifier-only comparison": true,
+    "historical RandomForest": true,
+    "historical ExtraTrees": true,
+    "human academic defence": true,
+    "AI assistance disclosure": true
+  },
+  "source_bindings": {
+    "builder": {
+      "path": "scripts/build_final_report.py",
+      "sha256": "ae6b72a7455a8105054d36568df46a20db201e9b5db2cd1d6a412e2a5e051c1a"
+    },
+    "template": {
+      "path": "reports/final_five/REPORT_TEMPLATE.md",
+      "sha256": "637096eb4bfc5ab73df5181dcd8a776fd1b9376c1cf545df8168177576a86f4f"
+    },
+    "markdown": {
+      "path": "reports/final_five/TECHNICAL_REPORT.md",
+      "sha256": "909b9bca8f51907000c0ef90bc9d3391dacc7155bef1ebf94c251da0f1b7eddb"
+    }
+  },
+  "context_samples": [
+    {
+      "page": 51,
+      "text": " and clean replay The selected model froze at 2026-11-18T08:26:50.372940+00:00, size 147,906 bytes, deployment-export SHA-256 c9cc8e9f36838f656a94d07ed69632979df9981ca94a9daf3b52fbce052e4b34. The separately recorded comparison artifact has a different byte hash, listed below; it must not be confused with the frozen deployment export. The metadata and feature"
+    },
+    {
+      "page": 52,
+      "text": " an independent human viva or organizer approval. The final test record reports 421 total tests, 421 passed and 0 failures. Test provenance and actual counts are taken from final test record rather than inferred from a successful command alone. The r"
+    }
+  ],
+  "limits": "Automated layout release GO only; organizer/human obligations remain external. No PDF, source, model or screenshot was modified."
+}

@@ -1,0 +1,3869 @@
+{
+  "checked_at_utc": "2026-11-18T09:33:32.376821+00:00",
+  "passed": true,
+  "checks": {
+    "original_201_tokens_retained": true,
+    "all_159_new_tokens_used": true,
+    "all_360_tokens_resolved": true,
+    "no_unknown_tokens": true,
+    "no_missing_or_unparsed_input": true,
+    "all_43_images_exist": true,
+    "all_local_links_exist": true,
+    "mandatory_nine_column_table_present": true,
+    "five_individual_subsections": true,
+    "historical_appendix_present": true,
+    "requirement_matrix_hook_present": true,
+    "human_exceptions_present": true,
+    "api_probability_metrics_table_present": true
+  },
+  "missing_local_links": [],
+  "counts": {
+    "original_facts": 201,
+    "new_facts": 159,
+    "unique_tokens": 360,
+    "figure_paths": 43,
+    "word_count": 7229,
+    "lines": 438
+  },
+  "proposal_sha256": "6e6406273b57e91e26c874d36a48cf090a2f4b20476175ac68cffaed30282d4b",
+  "registry_sha256": "3c9c43c899cdb18d13c542fb8a57973b721760e7b4a61557569ac47d132c3168",
+  "binding_loader": {
+    "path": "scripts/build_final_report.py",
+    "sha256_at_validation": "8497002856f8e998f69599320fa4f2b59a227b44dc9a23661c439747d7bb4fec"
+  },
+  "input_snapshot": [
+    {
+      "key": "accept",
+      "path": "reports/final_five/all_five_model_acceptance.json",
+      "sha256": "0829918e6c5bb3335d6b6d02a1d8a0fc2abd8b43f6769b41c73cd26c65296d65"
+    },
+    {
+      "key": "api20",
+      "path": "reports/final_five/api_integration_acceptance.json",
+      "sha256": "108ad4ed275a3e9334b3e08b13987ea788cb57b5b94a5f86e98bc49ec50f5fb3"
+    },
+    {
+      "key": "apiv",
+      "path": "reports/final_five/api_integration_acceptance.json",
+      "sha256": "108ad4ed275a3e9334b3e08b13987ea788cb57b5b94a5f86e98bc49ec50f5fb3"
+    },
+    {
+      "key": "audit",
+      "path": "analysis/data_audit/summary.json",
+      "sha256": "3e24f2d3bea1de223e81fb5f7ba38b29904ed1fc8d9c8bbf8c055e9dc4ef0e0f"
+    },
+    {
+      "key": "browser",
+      "path": "reports/final_five/live/browser_evidence.json",
+      "sha256": "89ddfba49860dd892b675c5ea3af639803cc828afae621bcce114f2fe1278189"
+    },
+    {
+      "key": "clean",
+      "path": "artifacts/final_five/clean_load_report.json",
+      "sha256": "7585e2693958fe3717e3056e76edb958065fe20b9a2c413ff240adca67c54e7e"
+    },
+    {
+      "key": "dablt",
+      "path": "reports/final_five/decoder/student_ablation.json",
+      "sha256": "045513ee402984d2fb4db200ca1fdb01a447ad563ab1a07632ee41bfcc5a353a"
+    },
+    {
+      "key": "deliveryv",
+      "path": "reports/final_five/delivery_verification.json",
+      "sha256": "56bcdb86245048c7cb96aaf3bbe1c64c2baa1fe04fd140f34f473a50cdcb049d"
+    },
+    {
+      "key": "dfreeze",
+      "path": "reports/final_five/decoder/freeze.json",
+      "sha256": "d5a3f507efe29b4db72b12bb3e06db3a00d5c27f387db09eb1b33f7620a790b1"
+    },
+    {
+      "key": "dplan",
+      "path": "reports/final_five/decoder/calibration_plan.json",
+      "sha256": "07344c4bdf28677a0edbcbb58e0040d93f301675586770140e44a0c025f223a9"
+    },
+    {
+      "key": "dsearch",
+      "path": "reports/final_five/decoder/search_results.jsonl",
+      "sha256": "a2c988450ffa7478aabba6d1ee04728544bed27a3a346433513ffd76be8a516b"
+    },
+    {
+      "key": "dsums",
+      "path": "reports/final_five/decoder/student_route_checksums.json",
+      "sha256": "87ce27dce174bf79adc2e712a313a768bab9a0301b0a26edfc1fa9f7dd0b5054"
+    },
+    {
+      "key": "evalacc",
+      "path": "reports/final_five/evaluator/acceptance.json",
+      "sha256": "678689d7be6523d9edfe2efc5c1ef29abfcbc8bf2d91aa878a8554599d605858"
+    },
+    {
+      "key": "evalaudit",
+      "path": "reports/final_five/evaluator/input_audit.json",
+      "sha256": "8f336e25ca4765be67ae7d1e226ebf92810c0444a9de500c7050c4e326746e18"
+    },
+    {
+      "key": "evalmetrics",
+      "path": "reports/final_five/evaluator/route_metrics.json",
+      "sha256": "8b56e13f931d849b299d0659ee64e5824f3d1317dc9d8a033fe97bd2909165c1"
+    },
+    {
+      "key": "evaltestqa",
+      "path": "reports/final_five/evaluator/test_and_privacy_verification.json",
+      "sha256": "f9bc6dccad61ca13daa9c1c2537689f2234bcf6187b7986c357be9856b717eaa"
+    },
+    {
+      "key": "figman5",
+      "path": "visualizations/final_five/figure_manifest.json",
+      "sha256": "8298e429413ca7ebf06d82e5a2e2498c7e59f57e2773d1eea309c893cd9f9cba"
+    },
+    {
+      "key": "figman_eda",
+      "path": "visualizations/figure_manifest.json",
+      "sha256": "448323fecad2a707f67c22652dd9cf717a47da1ef813dcfc371042f98b412e9d"
+    },
+    {
+      "key": "fschema",
+      "path": "artifacts/final_five/feature_schema.json",
+      "sha256": "55f203a1e30ab6369ff937840c2bfa4cb180dc36172a2ca47047714c05fb8d9a"
+    },
+    {
+      "key": "gnbdiag",
+      "path": "reports/final_five/gnb_probability_diagnostic.json",
+      "sha256": "2df4816911e0ede96242bddb70f68636ff418b92027b63d605dd6f4ca6bddc63"
+    },
+    {
+      "key": "histaudit",
+      "path": "analysis/five_model_audit/gnb_histgb_audit.json",
+      "sha256": "053e1ee64146702670bb5c64e609e1bfe1a010b1a3ed8bc992204c0989e86f59"
+    },
+    {
+      "key": "historical_phase3",
+      "path": "experiments/phase_three/results.json",
+      "sha256": "0cd5e9f554870747df04a02ae5ac9971b8814166184fba127267d0f118bac1e1"
+    },
+    {
+      "key": "historical_results",
+      "path": "experiments/results.json",
+      "sha256": "4f308d422263e313b13253e2bca2267dba6a445303fbc7a404d9c44d9d1c1198"
+    },
+    {
+      "key": "indaudit",
+      "path": "analysis/final_model_review/final_review_report.json",
+      "sha256": "d7ba83c015e2ba1a3c7bf420ac2c386cf4d0bbd462b7bfdaaacc8996fa9d5398"
+    },
+    {
+      "key": "liveapi",
+      "path": "reports/final_five/live/live_api.json",
+      "sha256": "ca26526800263e94839eab5ace8be96d50ea59e5242d818ab6c6856c24b2d896"
+    },
+    {
+      "key": "map_metadata",
+      "path": "visualizations/final_five/maps/final_development_trip_00000009.metadata.json",
+      "sha256": "0a8d9441f87958c248160481680a806d564e2971dee773fe8ced16b649b26ceb"
+    },
+    {
+      "key": "mconfig5",
+      "path": "artifacts/final_five/match_config.json",
+      "sha256": "10405aa6b6f370e41d4ddcb01207fd1e8f58900fd0395e541ee6bc78146168c5"
+    },
+    {
+      "key": "mfreeze",
+      "path": "artifacts/final_five/model_freeze.json",
+      "sha256": "1a76a509558972a14f4a5800ae56016e12681b51f752ef738707f39ba0000efe"
+    },
+    {
+      "key": "mmeta",
+      "path": "artifacts/final_five/model_metadata.json",
+      "sha256": "c354885e22158e9da14e0f8bc8e01d3e7c6fbe810e196192c6b59c7cbdbbf4c5"
+    },
+    {
+      "key": "model",
+      "path": "artifacts/final_five/model.joblib",
+      "sha256": "c9cc8e9f36838f656a94d07ed69632979df9981ca94a9daf3b52fbce052e4b34"
+    },
+    {
+      "key": "modelcard",
+      "path": "artifacts/final_five/MODEL_CARD.md",
+      "sha256": "1613baa563501f85edd921fdc660b14ea00bc21fe38ce325728750637db0f015"
+    },
+    {
+      "key": "offlinev",
+      "path": "reports/final_five/offline_delivery_verification.json",
+      "sha256": "aba2c384123cef5b2b690b10f53873f174000fbe0942572010d0afc8e3afb8f6"
+    },
+    {
+      "key": "pertrip",
+      "path": "analysis/data_audit/per_trip.json",
+      "sha256": "72deb5f23b9ca84244c100125bd3f5b57459348e77497768e0445be9ceeb8a68"
+    },
+    {
+      "key": "protocol",
+      "path": "experiments/final_five/PROTOCOL.md",
+      "sha256": "8e02a4a6c027ad64e85b1f1335944372cf6e9a6258a355060e823a2f28bec440"
+    },
+    {
+      "key": "provsumm",
+      "path": "analysis/final_requirements/provenance_summary.md",
+      "sha256": "02955c0fe68da3d6fc36ce835392a340bd6d4c0faf0ad5c83c85cc32810bca40"
+    },
+    {
+      "key": "reqdoc",
+      "path": "docs/FINAL_REQUIREMENTS.md",
+      "sha256": "aa9d9d11aace3b5901cabfaab7a79f3108ad34a4091f8e23f65c5306f04f67f1"
+    },
+    {
+      "key": "reqs",
+      "path": "analysis/final_requirements/requirements_matrix.json",
+      "sha256": "1e38bb3b2e6c6e6d6697b7acb9db0ccb3337fb284f189947d072c486bad61ae1"
+    },
+    {
+      "key": "results5",
+      "path": "experiments/final_five/current/results.json",
+      "sha256": "8956d9360daae8723875e6a7f6fb8a98941ebf85d0eee9c8cab8cdf68979f6a8"
+    },
+    {
+      "key": "seq",
+      "path": "experiments/final_five/current/sequence_classification.json",
+      "sha256": "949461edf056d1fd538be23a9357f46c7a446192d301599a75fbedbff5a06585"
+    },
+    {
+      "key": "termv",
+      "path": "reports/final_five/live/api_terminal_evidence.json",
+      "sha256": "e5438fd0e104eaa9d0d72b33ce3182f5cac3e87ed2065cccaca77960d769d60f"
+    },
+    {
+      "key": "testsjson",
+      "path": "reports/final_five/test_results.json",
+      "sha256": "e1e3c768f2e5b42a0085a4c495cb71aed649a2c6b14e2caaf16f60a1860ca67d"
+    },
+    {
+      "key": "trainlog",
+      "path": "reports/final_five/training_corrected.log",
+      "sha256": "cb9f18563c7c278ec1d9f75abf9779e46a0f896ec8403dc3ec4b3996ab81aa6a"
+    }
+  ],
+  "figures": [
+    {
+      "caption": "Dataset inventory: actual trip, file and observation counts",
+      "path": "visualizations/plots/dataset_inventory.png",
+      "sha256": "8895f33a38a095828c3274be7e554916d5c054872649989e4c4793a6f769d2db"
+    },
+    {
+      "caption": "Missing values, invalid values and recorded anomalies",
+      "path": "visualizations/plots/missing_invalid_and_anomalies.png",
+      "sha256": "717b90dd9b0dfe17303466edc0bea5dc31768147a3b1a1bf13b4f44f72cb356e"
+    },
+    {
+      "caption": "Trajectory size and duration distributions",
+      "path": "visualizations/plots/trajectory_distributions.png",
+      "sha256": "c1069eba52ff221b5fbda659bff9f72b61a5ff2369f935eea4295c09d61f6c2e"
+    },
+    {
+      "caption": "Actual timestamp gaps rather than assumed uniform 1 Hz sampling",
+      "path": "visualizations/plots/timestamp_gaps.png",
+      "sha256": "bc022e3929d18bed17ba8e5edbcec822559b81bb2894e4de9f39f16961001db9"
+    },
+    {
+      "caption": "Road-network sizes and directed connectivity",
+      "path": "visualizations/plots/road_network_sizes_connectivity.png",
+      "sha256": "0a081b29f0c35e797f46abe28970d009569bda29ffb65b25c7dba8e97faa5447"
+    },
+    {
+      "caption": "Geographic coverage of the supplied student material",
+      "path": "visualizations/plots/gps_geographic_coverage.png",
+      "sha256": "c83283403296dcaaed21936361885a3210a8a6609e7eb8584f1e2853bf9aa2b3"
+    },
+    {
+      "caption": "TRAIN trip gallery, part 1",
+      "path": "visualizations/plots/gps_trip_gallery_train_01.png",
+      "sha256": "78fc6288f7c936d5a3c89b6a80f2a8d1d0720189154333d597ec46992b101485"
+    },
+    {
+      "caption": "TRAIN trip gallery, part 2",
+      "path": "visualizations/plots/gps_trip_gallery_train_02.png",
+      "sha256": "bbe634b3170227debfe96b3c6ce6a127653012cec6903a7f416eb3174293ee77"
+    },
+    {
+      "caption": "TRAIN trip gallery, part 3",
+      "path": "visualizations/plots/gps_trip_gallery_train_03.png",
+      "sha256": "28c07d4584ddff3662f4ac05d4f8eda0cda15cbc7f59182c91d5491f9b72d96e"
+    },
+    {
+      "caption": "TRAIN trip gallery, part 4",
+      "path": "visualizations/plots/gps_trip_gallery_train_04.png",
+      "sha256": "7fdb59352d7290d44304990a6c6c03a679b17407e82b8a7e7f1987026333e717"
+    },
+    {
+      "caption": "Student-development trip gallery",
+      "path": "visualizations/plots/gps_trip_gallery_student_test_01.png",
+      "sha256": "49607365d97cc1f99532224f7f853f2e1899b98dcf73eb34ff06f7d2a7a4541a"
+    },
+    {
+      "caption": "Representative directed road network and supplied reference route",
+      "path": "visualizations/plots/representative_road_route.png",
+      "sha256": "d3ae4194a3df54b81bd0c4f15201a91973331ccef4924b9f122529f4dbaea772"
+    },
+    {
+      "caption": "Primary TRAIN whole-trip CV selection objective",
+      "path": "visualizations/final_five/plots/final_five_primary_objective.png",
+      "sha256": "00fb0a6508b0c4558acc2d76acc94419821ade29b0fef080f9f77718a51ef2d6"
+    },
+    {
+      "caption": "Binary candidate CV macro F1 by configuration",
+      "path": "visualizations/final_five/plots/final_five_cv_macro_f1.png",
+      "sha256": "66979c60bf1a52d7c74a8b0a861a0044efd983d2df0caa7e595091ea7755d626"
+    },
+    {
+      "caption": "Binary candidate log loss, OOF and student",
+      "path": "visualizations/final_five/plots/final_five_binary_log_loss.png",
+      "sha256": "980dea4ca3db1ed30b6aa72928b234fe3db938906bc63e201fdf45414cd98a66"
+    },
+    {
+      "caption": "Resubstitution, grouped-CV and student loss partitions",
+      "path": "visualizations/final_five/plots/final_five_log_loss_partitions.png",
+      "sha256": "4fcd7a7ee57c756031b1612cd95a28928eb31831daf52b5e159cf7b8c588096f"
+    },
+    {
+      "caption": "Student observation top-1 and binary candidate macro F1: separate metrics",
+      "path": "visualizations/final_five/plots/final_five_student_top1_macro_f1.png",
+      "sha256": "53e56fc3a88308a226ebb184ea37885b3982434f6e99282b797ebf6de94db592"
+    },
+    {
+      "caption": "Selection comparison under the declared objective",
+      "path": "visualizations/final_five/plots/final_five_selection_comparison.png",
+      "sha256": "5a90e02450ab82928917b2148e6a74208cbdbc65a5a7738b3a163da1d6a6bcd9"
+    },
+    {
+      "caption": "Logistic Regression binary candidate confusion matrix",
+      "path": "visualizations/final_five/plots/final_five_confusion_logistic_regression.png",
+      "sha256": "9ab57ee20cc2f7c53848743fc65eb02605631934b1e0db094cb984bb9e3cd984"
+    },
+    {
+      "caption": "KNN binary candidate confusion matrix",
+      "path": "visualizations/final_five/plots/final_five_confusion_knn_distance_weighted.png",
+      "sha256": "3452b1a7e49fa6c7d431390e51006c65f767d7d5b967fdbc4a19c95e1e7c6b16"
+    },
+    {
+      "caption": "Bagging binary candidate confusion matrix",
+      "path": "visualizations/final_five/plots/final_five_confusion_bagging.png",
+      "sha256": "3a9462cf3ce67b4872aff7f46119b1da7a1345d90832d3f686f9ca03fb1c4460"
+    },
+    {
+      "caption": "GaussianNB binary candidate confusion matrix",
+      "path": "visualizations/final_five/plots/final_five_confusion_gaussian_nb.png",
+      "sha256": "5621fbc4e3585ca8770e227f37a649fc8a2baefe03f47b7e5736b95fa619cf2b"
+    },
+    {
+      "caption": "Default HistGB binary candidate confusion matrix",
+      "path": "visualizations/final_five/plots/final_five_confusion_hist_gradient_boosting.png",
+      "sha256": "730af292493386a7ef81b9848068f0218a520ded5315e36aea5e93da2ab3b23f"
+    },
+    {
+      "caption": "Tuned HistGB binary candidate confusion matrix",
+      "path": "visualizations/final_five/plots/final_five_confusion_hist_gradient_boosting_tuned.png",
+      "sha256": "0a445ed8c8b380ba55a81832c5e337ab7e4e007122652108e514f8356f4274c9"
+    },
+    {
+      "caption": "All six binary candidate confusion matrices",
+      "path": "visualizations/final_five/plots/final_five_confusion_matrices_all.png",
+      "sha256": "a66103ed05c706bcab049e1ae3bf9bfb26a10bfc3946874009af1a90ea79d0aa"
+    },
+    {
+      "caption": "Measured fold stability; descriptive variation, not a confidence guarantee",
+      "path": "visualizations/final_five/plots/final_five_fold_stability.png",
+      "sha256": "8f95bcf23025f800b853abd9cc9f89f3e715a2a26456371084d5330e5d52da11"
+    },
+    {
+      "caption": "Resubstitution and held-out differences with distinct population labels",
+      "path": "visualizations/final_five/plots/final_five_generalization_gap.png",
+      "sha256": "23cc113cbb59be34f22b6bd2513d2db7e23947ef46a19fb82205ed442b259b49"
+    },
+    {
+      "caption": "Actual training and candidate-matrix inference timings",
+      "path": "visualizations/final_five/plots/final_five_timing.png",
+      "sha256": "c3b38956e18e2a3a0f84543218849625adcc488b6903297771c6ccad819d1464"
+    },
+    {
+      "caption": "Retained twelve-trial HPO objective history, not new trials",
+      "path": "visualizations/final_five/plots/final_five_hpo_progress.png",
+      "sha256": "415522f34c4a53d675e6b97dae77d0ffc88e9d019b1c26d8d47e2c93b37be901"
+    },
+    {
+      "caption": "Observed HPO parameter associations, not causal importance",
+      "path": "visualizations/final_five/plots/final_five_hpo_parameters.png",
+      "sha256": "fc8601e53bb599f796e891d5ab3da3bf2e1f87747b11d65a200dbc937276cb21"
+    },
+    {
+      "caption": "Tuned versus default HistGB tradeoffs",
+      "path": "visualizations/final_five/plots/final_five_tuned_vs_untuned.png",
+      "sha256": "81db2b00f981d1e88b775b357a5b8463fca319b550e6d5db8e909521d56f716e"
+    },
+    {
+      "caption": "Observation edge metrics, separate from candidate binary F1",
+      "path": "visualizations/final_five/plots/final_five_observation_edge_metrics.png",
+      "sha256": "a17ea8164f5cf90dd848758223816b4f5754f197700b55c0730c7ff3d574eacb"
+    },
+    {
+      "caption": "Raw assignment adjacency diagnostics, not reconstructed-route continuity",
+      "path": "visualizations/final_five/plots/final_five_continuity.png",
+      "sha256": "b141d2f522696729685c7eb3afa40a325ff970d5a947bd504d32c818f1ab5f13"
+    },
+    {
+      "caption": "Candidate, observation and trip denominators",
+      "path": "visualizations/final_five/plots/final_five_denominators.png",
+      "sha256": "5d385b7df43903caa3b3dd4ec8175a9f29df91af7097467c1af5b65b007dba27"
+    },
+    {
+      "caption": "Actual three-method all-ten route ablation",
+      "path": "visualizations/final_five/plots/final_five_route_ablation.png",
+      "sha256": "3a6f6df16ee8fee484f9f17a137c5632e3cce71c4891b10b938b42ae92618f81"
+    },
+    {
+      "caption": "Actual deployed dark desktop view",
+      "path": "reports/final_five/live/screenshots/ui_desktop.png",
+      "sha256": "8089e79173e353a0e39ba33ee6656032375e7219fd15b6be7deb8658471bf69c"
+    },
+    {
+      "caption": "Actual raw GPS and predicted route map panel",
+      "path": "reports/final_five/live/screenshots/ui_route_map.png",
+      "sha256": "ef165839e389f97177f136b166df859f1752dc195d459456459616267388678c"
+    },
+    {
+      "caption": "Actual deployed light theme",
+      "path": "reports/final_five/live/screenshots/ui_light.png",
+      "sha256": "d15f647c52aa5673c83b6d82f60be963f5bb1f54db9c89f958f9c7f573b91001"
+    },
+    {
+      "caption": "Actual separate evaluator section",
+      "path": "reports/final_five/live/screenshots/ui_evaluator.png",
+      "sha256": "e0ed2ae759b3eddb90b316c31f44f3ff205d5ed3567e8365b0a241f309a3faf6"
+    },
+    {
+      "caption": "Actual narrow 320-pixel mobile view",
+      "path": "reports/final_five/live/screenshots/ui_mobile_320.png",
+      "sha256": "0c44f138d455b59df0070303ba1d06103d5ae4c6c3e14b2e1a9f2c4d8b66d0c5"
+    },
+    {
+      "caption": "Actual 390-pixel mobile view",
+      "path": "reports/final_five/live/screenshots/ui_mobile.png",
+      "sha256": "c98b570dbb6bcd2209e413ecd23a47c183ad32173f67a7972b0ee97387ca9fce"
+    },
+    {
+      "caption": "Genuine receiving terminal with browser-correlated request events",
+      "path": "reports/final_five/live/screenshots/api_terminal.png",
+      "sha256": "dc56dbd9ce9aa5071044c875cae5a5d0403fd59923ab60a0256642728f5738a2"
+    },
+    {
+      "caption": "Actual final tuned-HistGB development trip 9 Folium rendering",
+      "path": "visualizations/final_five/maps/final_development_trip_00000009.png",
+      "sha256": "a7cd039beede2705bc30dec46aefe0b631edb8332d39be38c758dbc3774b10c0"
+    }
+  ],
+  "facts": [
+    {
+      "name": "phase_completed",
+      "input": "results5",
+      "pointer": "completed_at_utc",
+      "computed": null,
+      "count": null,
+      "raw_value": "2026-11-18T08:26:57.159973+00:00",
+      "formatted_value": "2026-11-18T08:26:57.159973+00:00"
+    },
+    {
+      "name": "final_run_name",
+      "input": "results5",
+      "pointer": "final_run_name",
+      "computed": null,
+      "count": null,
+      "raw_value": "hist_gradient_boosting_tuned",
+      "formatted_value": "hist_gradient_boosting_tuned"
+    },
+    {
+      "name": "sel_model_run",
+      "input": "results5",
+      "pointer": "selected_model",
+      "computed": null,
+      "count": null,
+      "raw_value": "hist_gradient_boosting",
+      "formatted_value": "hist_gradient_boosting"
+    },
+    {
+      "name": "families_json",
+      "input": "results5",
+      "pointer": "families",
+      "computed": null,
+      "count": null,
+      "raw_value": [
+        "logistic_regression",
+        "knn_distance_weighted",
+        "bagging",
+        "gaussian_nb",
+        "hist_gradient_boosting"
+      ],
+      "formatted_value": "[\"logistic_regression\", \"knn_distance_weighted\", \"bagging\", \"gaussian_nb\", \"hist_gradient_boosting\"]"
+    },
+    {
+      "name": "student_role",
+      "input": "results5",
+      "pointer": "student_role",
+      "computed": null,
+      "count": null,
+      "raw_value": "historically used student-development set; not globally blind",
+      "formatted_value": "historically used student-development set; not globally blind"
+    },
+    {
+      "name": "evaluator_status",
+      "input": "results5",
+      "pointer": "evaluator_status",
+      "computed": null,
+      "count": null,
+      "raw_value": "not accessed; final decoder must freeze before evaluator work",
+      "formatted_value": "not accessed; final decoder must freeze before evaluator work"
+    },
+    {
+      "name": "cv_protocol",
+      "input": "results5",
+      "pointer": "bayesian.objective",
+      "computed": null,
+      "count": null,
+      "raw_value": "maximize out-of-fold equal-trip mean observation top1 proxy accuracy; fixed 3/5-fold GroupKFold on all 80 TRAIN trips",
+      "formatted_value": "maximize out-of-fold equal-trip mean observation top1 proxy accuracy; fixed 3/5-fold GroupKFold on all 80 TRAIN trips"
+    },
+    {
+      "name": "cv_obj_lr",
+      "input": "results5",
+      "pointer": "cv.logistic_regression.oof_metrics.trip_macro_top1_accuracy",
+      "computed": null,
+      "count": null,
+      "raw_value": 0.884,
+      "formatted_value": "0.8840"
+    },
+    {
+      "name": "cv_f1_lr",
+      "input": "results5",
+      "pointer": "cv.logistic_regression.oof_metrics.macro_f1",
+      "computed": null,
+      "count": null,
+      "raw_value": 0.9330442702864366,
+      "formatted_value": "0.9330"
+    },
+    {
+      "name": "cv_ll_lr",
+      "input": "results5",
+      "pointer": "cv.logistic_regression.oof_metrics.log_loss",
+      "computed": null,
+      "count": null,
+      "raw_value": 0.07443299221247036,
+      "formatted_value": "0.0744"
+    },
+    {
+      "name": "params_lr",
+      "input": "results5",
+      "pointer": "cv.logistic_regression.parameters",
+      "computed": null,
+      "count": null,
+      "raw_value": {
+        "C": 1.0,
+        "max_iter": 500,
+        "solver": "lbfgs"
+      },
+      "formatted_value": "{\"C\": 1.0, \"max_iter\": 500, \"solver\": \"lbfgs\"}"
+    },
+    {
+      "name": "st_top1_lr",
+      "input": "results5",
+      "pointer": "evaluations.logistic_regression.student_metrics.trip_macro_top1_accuracy",
+      "computed": null,
+      "count": null,
+      "raw_value": 0.9045802519778755,
+      "formatted_value": "0.9046"
+    },
+    {
+      "name": "st_f1_lr",
+      "input": "results5",
+      "pointer": "evaluations.logistic_regression.student_metrics.macro_f1",
+      "computed": null,
+      "count": null,
+      "raw_value": 0.9329364512824421,
+      "formatted_value": "0.9329"
+    },
+    {
+      "name": "st_ll_lr",
+      "input": "results5",
+      "pointer": "evaluations.logistic_regression.student_metrics.log_loss",
+      "computed": null,
+      "count": null,
+      "raw_value": 0.06899899065600447,
+      "formatted_value": "0.0690"
+    },
+    {
+      "name": "seq_edge_lr",
+      "input": "seq",
+      "pointer": "logistic_regression.trip_macro_observation_edge_f1",
+      "computed": null,
+      "count": null,
+      "raw_value": 0.8107067629950171,
+      "formatted_value": "0.8107"
+    },
+    {
+      "name": "seq_nll_lr",
+      "input": "seq",
+      "pointer": "logistic_regression.observation_categorical_log_loss_given_candidate",
+      "computed": null,
+      "count": null,
+      "raw_value": 0.33191949989767716,
+      "formatted_value": "0.3319"
+    },
+    {
+      "name": "sha_lr",
+      "input": "accept",
+      "pointer": "all_models.logistic_regression.sha256",
+      "computed": null,
+      "count": null,
+      "raw_value": "29157349d52a993d33cae78ed244805a9f087e79b6dc914aaa3b4461c02a58c9",
+      "formatted_value": "29157349d52a993d33cae78ed244805a9f087e79b6dc914aaa3b4461c02a58c9"
+    },
+    {
+      "name": "cv_obj_knn",
+      "input": "results5",
+      "pointer": "cv.knn_distance_weighted.oof_metrics.trip_macro_top1_accuracy",
+      "computed": null,
+      "count": null,
+      "raw_value": 0.8767857142857143,
+      "formatted_value": "0.8768"
+    },
+    {
+      "name": "cv_f1_knn",
+      "input": "results5",
+      "pointer": "cv.knn_distance_weighted.oof_metrics.macro_f1",
+      "computed": null,
+      "count": null,
+      "raw_value": 0.9274791219704925,
+      "formatted_value": "0.9275"
+    },
+    {
+      "name": "cv_ll_knn",
+      "input": "results5",
+      "pointer": "cv.knn_distance_weighted.oof_metrics.log_loss",
+      "computed": null,
+      "count": null,
+      "raw_value": 0.09411409567726087,
+      "formatted_value": "0.0941"
+    },
+    {
+      "name": "params_knn",
+      "input": "results5",
+      "pointer": "cv.knn_distance_weighted.parameters",
+      "computed": null,
+      "count": null,
+      "raw_value": {
+        "n_neighbors": 25
+      },
+      "formatted_value": "{\"n_neighbors\": 25}"
+    },
+    {
+      "name": "st_top1_knn",
+      "input": "results5",
+      "pointer": "evaluations.knn_distance_weighted.student_metrics.trip_macro_top1_accuracy",
+      "computed": null,
+      "count": null,
+      "raw_value": 0.9026615002129368,
+      "formatted_value": "0.9027"
+    },
+    {
+      "name": "st_f1_knn",
+      "input": "results5",
+      "pointer": "evaluations.knn_distance_weighted.student_metrics.macro_f1",
+      "computed": null,
+      "count": null,
+      "raw_value": 0.9274881703784643,
+      "formatted_value": "0.9275"
+    },
+    {
+      "name": "st_ll_knn",
+      "input": "results5",
+      "pointer": "evaluations.knn_distance_weighted.student_metrics.log_loss",
+      "computed": null,
+      "count": null,
+      "raw_value": 0.09604297407876781,
+      "formatted_value": "0.0960"
+    },
+    {
+      "name": "seq_edge_knn",
+      "input": "seq",
+      "pointer": "knn_distance_weighted.trip_macro_observation_edge_f1",
+      "computed": null,
+      "count": null,
+      "raw_value": 0.8045252778290812,
+      "formatted_value": "0.8045"
+    },
+    {
+      "name": "seq_nll_knn",
+      "input": "seq",
+      "pointer": "knn_distance_weighted.observation_categorical_log_loss_given_candidate",
+      "computed": null,
+      "count": null,
+      "raw_value": 0.5061773206910237,
+      "formatted_value": "0.5062"
+    },
+    {
+      "name": "sha_knn",
+      "input": "accept",
+      "pointer": "all_models.knn_distance_weighted.sha256",
+      "computed": null,
+      "count": null,
+      "raw_value": "564e6f85f9190d0ff19e75967613e4d56dbe573aaf80ef8780ed8374f8537246",
+      "formatted_value": "564e6f85f9190d0ff19e75967613e4d56dbe573aaf80ef8780ed8374f8537246"
+    },
+    {
+      "name": "cv_obj_bag",
+      "input": "results5",
+      "pointer": "cv.bagging.oof_metrics.trip_macro_top1_accuracy",
+      "computed": null,
+      "count": null,
+      "raw_value": 0.8914642857142857,
+      "formatted_value": "0.8915"
+    },
+    {
+      "name": "cv_f1_bag",
+      "input": "results5",
+      "pointer": "cv.bagging.oof_metrics.macro_f1",
+      "computed": null,
+      "count": null,
+      "raw_value": 0.9426144376936816,
+      "formatted_value": "0.9426"
+    },
+    {
+      "name": "cv_ll_bag",
+      "input": "results5",
+      "pointer": "cv.bagging.oof_metrics.log_loss",
+      "computed": null,
+      "count": null,
+      "raw_value": 0.057221017455649795,
+      "formatted_value": "0.0572"
+    },
+    {
+      "name": "params_bag",
+      "input": "results5",
+      "pointer": "cv.bagging.parameters",
+      "computed": null,
+      "count": null,
+      "raw_value": {
+        "n_estimators": 40,
+        "max_samples": 0.7,
+        "max_depth": 14,
+        "min_samples_leaf": 3
+      },
+      "formatted_value": "{\"max_depth\": 14, \"max_samples\": 0.7, \"min_samples_leaf\": 3, \"n_estimators\": 40}"
+    },
+    {
+      "name": "st_top1_bag",
+      "input": "results5",
+      "pointer": "evaluations.bagging.student_metrics.trip_macro_top1_accuracy",
+      "computed": null,
+      "count": null,
+      "raw_value": 0.9179150157813927,
+      "formatted_value": "0.9179"
+    },
+    {
+      "name": "st_f1_bag",
+      "input": "results5",
+      "pointer": "evaluations.bagging.student_metrics.macro_f1",
+      "computed": null,
+      "count": null,
+      "raw_value": 0.9437265546922589,
+      "formatted_value": "0.9437"
+    },
+    {
+      "name": "st_ll_bag",
+      "input": "results5",
+      "pointer": "evaluations.bagging.student_metrics.log_loss",
+      "computed": null,
+      "count": null,
+      "raw_value": 0.05622414970449344,
+      "formatted_value": "0.0562"
+    },
+    {
+      "name": "seq_edge_bag",
+      "input": "seq",
+      "pointer": "bagging.trip_macro_observation_edge_f1",
+      "computed": null,
+      "count": null,
+      "raw_value": 0.8365263178225357,
+      "formatted_value": "0.8365"
+    },
+    {
+      "name": "seq_nll_bag",
+      "input": "seq",
+      "pointer": "bagging.observation_categorical_log_loss_given_candidate",
+      "computed": null,
+      "count": null,
+      "raw_value": 0.2667234231538494,
+      "formatted_value": "0.2667"
+    },
+    {
+      "name": "sha_bag",
+      "input": "accept",
+      "pointer": "all_models.bagging.sha256",
+      "computed": null,
+      "count": null,
+      "raw_value": "619bc3d267fec686d3ee0d212b3d13a4c8d9bd46e35893f3f570253d232822b6",
+      "formatted_value": "619bc3d267fec686d3ee0d212b3d13a4c8d9bd46e35893f3f570253d232822b6"
+    },
+    {
+      "name": "cv_obj_gnb",
+      "input": "results5",
+      "pointer": "cv.gaussian_nb.oof_metrics.trip_macro_top1_accuracy",
+      "computed": null,
+      "count": null,
+      "raw_value": 0.8734285714285714,
+      "formatted_value": "0.8734"
+    },
+    {
+      "name": "cv_f1_gnb",
+      "input": "results5",
+      "pointer": "cv.gaussian_nb.oof_metrics.macro_f1",
+      "computed": null,
+      "count": null,
+      "raw_value": 0.9210939341885569,
+      "formatted_value": "0.9211"
+    },
+    {
+      "name": "cv_ll_gnb",
+      "input": "results5",
+      "pointer": "cv.gaussian_nb.oof_metrics.log_loss",
+      "computed": null,
+      "count": null,
+      "raw_value": 0.3391661211966567,
+      "formatted_value": "0.3392"
+    },
+    {
+      "name": "params_gnb",
+      "input": "results5",
+      "pointer": "cv.gaussian_nb.parameters",
+      "computed": null,
+      "count": null,
+      "raw_value": {
+        "var_smoothing": 1e-07
+      },
+      "formatted_value": "{\"var_smoothing\": 1e-07}"
+    },
+    {
+      "name": "st_top1_gnb",
+      "input": "results5",
+      "pointer": "evaluations.gaussian_nb.student_metrics.trip_macro_top1_accuracy",
+      "computed": null,
+      "count": null,
+      "raw_value": 0.8981907649315197,
+      "formatted_value": "0.8982"
+    },
+    {
+      "name": "st_f1_gnb",
+      "input": "results5",
+      "pointer": "evaluations.gaussian_nb.student_metrics.macro_f1",
+      "computed": null,
+      "count": null,
+      "raw_value": 0.922211223946088,
+      "formatted_value": "0.9222"
+    },
+    {
+      "name": "st_ll_gnb",
+      "input": "results5",
+      "pointer": "evaluations.gaussian_nb.student_metrics.log_loss",
+      "computed": null,
+      "count": null,
+      "raw_value": 0.35910011794860974,
+      "formatted_value": "0.3591"
+    },
+    {
+      "name": "seq_edge_gnb",
+      "input": "seq",
+      "pointer": "gaussian_nb.trip_macro_observation_edge_f1",
+      "computed": null,
+      "count": null,
+      "raw_value": 0.7934544776113359,
+      "formatted_value": "0.7935"
+    },
+    {
+      "name": "seq_nll_gnb",
+      "input": "seq",
+      "pointer": "gaussian_nb.observation_categorical_log_loss_given_candidate",
+      "computed": null,
+      "count": null,
+      "raw_value": 0.910887310380902,
+      "formatted_value": "0.9109"
+    },
+    {
+      "name": "sha_gnb",
+      "input": "accept",
+      "pointer": "all_models.gaussian_nb.sha256",
+      "computed": null,
+      "count": null,
+      "raw_value": "f79c03821ee50a9cdb9912031dd56df0f0e54379bb48ad63116315e5400b8579",
+      "formatted_value": "f79c03821ee50a9cdb9912031dd56df0f0e54379bb48ad63116315e5400b8579"
+    },
+    {
+      "name": "cv_obj_hgb",
+      "input": "results5",
+      "pointer": "cv.hist_gradient_boosting.oof_metrics.trip_macro_top1_accuracy",
+      "computed": null,
+      "count": null,
+      "raw_value": 0.8926785714285714,
+      "formatted_value": "0.8927"
+    },
+    {
+      "name": "cv_f1_hgb",
+      "input": "results5",
+      "pointer": "cv.hist_gradient_boosting.oof_metrics.macro_f1",
+      "computed": null,
+      "count": null,
+      "raw_value": 0.9428589610674079,
+      "formatted_value": "0.9429"
+    },
+    {
+      "name": "cv_ll_hgb",
+      "input": "results5",
+      "pointer": "cv.hist_gradient_boosting.oof_metrics.log_loss",
+      "computed": null,
+      "count": null,
+      "raw_value": 0.05698196818420589,
+      "formatted_value": "0.0570"
+    },
+    {
+      "name": "params_hgb",
+      "input": "results5",
+      "pointer": "cv.hist_gradient_boosting.parameters",
+      "computed": null,
+      "count": null,
+      "raw_value": {
+        "max_iter": 120,
+        "learning_rate": 0.09,
+        "max_leaf_nodes": 23,
+        "min_samples_leaf": 40,
+        "l2_regularization": 0.5
+      },
+      "formatted_value": "{\"l2_regularization\": 0.5, \"learning_rate\": 0.09, \"max_iter\": 120, \"max_leaf_nodes\": 23, \"min_samples_leaf\": 40}"
+    },
+    {
+      "name": "st_top1_hgb",
+      "input": "results5",
+      "pointer": "evaluations.hist_gradient_boosting.student_metrics.trip_macro_top1_accuracy",
+      "computed": null,
+      "count": null,
+      "raw_value": 0.9185938271227336,
+      "formatted_value": "0.9186"
+    },
+    {
+      "name": "st_f1_hgb",
+      "input": "results5",
+      "pointer": "evaluations.hist_gradient_boosting.student_metrics.macro_f1",
+      "computed": null,
+      "count": null,
+      "raw_value": 0.9442330333194171,
+      "formatted_value": "0.9442"
+    },
+    {
+      "name": "st_ll_hgb",
+      "input": "results5",
+      "pointer": "evaluations.hist_gradient_boosting.student_metrics.log_loss",
+      "computed": null,
+      "count": null,
+      "raw_value": 0.05522123883891804,
+      "formatted_value": "0.0552"
+    },
+    {
+      "name": "seq_edge_hgb",
+      "input": "seq",
+      "pointer": "hist_gradient_boosting.trip_macro_observation_edge_f1",
+      "computed": null,
+      "count": null,
+      "raw_value": 0.8386653864285852,
+      "formatted_value": "0.8387"
+    },
+    {
+      "name": "seq_nll_hgb",
+      "input": "seq",
+      "pointer": "hist_gradient_boosting.observation_categorical_log_loss_given_candidate",
+      "computed": null,
+      "count": null,
+      "raw_value": 0.2633417508328683,
+      "formatted_value": "0.2633"
+    },
+    {
+      "name": "sha_hgb",
+      "input": "accept",
+      "pointer": "all_models.hist_gradient_boosting.sha256",
+      "computed": null,
+      "count": null,
+      "raw_value": "7974b1eacc2787ade3becd48b0d1079bd673be83f15183bdad0839a4fc71ce85",
+      "formatted_value": "7974b1eacc2787ade3becd48b0d1079bd673be83f15183bdad0839a4fc71ce85"
+    },
+    {
+      "name": "cv_obj_tuned",
+      "input": "results5",
+      "pointer": "cv.hist_gradient_boosting_tuned.oof_metrics.trip_macro_top1_accuracy",
+      "computed": null,
+      "count": null,
+      "raw_value": 0.893392857142857,
+      "formatted_value": "0.8934"
+    },
+    {
+      "name": "cv_f1_tuned",
+      "input": "results5",
+      "pointer": "cv.hist_gradient_boosting_tuned.oof_metrics.macro_f1",
+      "computed": null,
+      "count": null,
+      "raw_value": 0.9416187410219833,
+      "formatted_value": "0.9416"
+    },
+    {
+      "name": "cv_ll_tuned",
+      "input": "results5",
+      "pointer": "cv.hist_gradient_boosting_tuned.oof_metrics.log_loss",
+      "computed": null,
+      "count": null,
+      "raw_value": 0.05725719146420802,
+      "formatted_value": "0.0573"
+    },
+    {
+      "name": "params_tuned",
+      "input": "results5",
+      "pointer": "cv.hist_gradient_boosting_tuned.parameters",
+      "computed": null,
+      "count": null,
+      "raw_value": {
+        "max_iter": 104,
+        "learning_rate": 0.15902391896503631,
+        "max_leaf_nodes": 22,
+        "min_samples_leaf": 38,
+        "l2_regularization": 0.8604220152998319
+      },
+      "formatted_value": "{\"l2_regularization\": 0.8604220152998319, \"learning_rate\": 0.15902391896503631, \"max_iter\": 104, \"max_leaf_nodes\": 22, \"min_samples_leaf\": 38}"
+    },
+    {
+      "name": "st_top1_tuned",
+      "input": "results5",
+      "pointer": "evaluations.hist_gradient_boosting_tuned.student_metrics.trip_macro_top1_accuracy",
+      "computed": null,
+      "count": null,
+      "raw_value": 0.9195923599353713,
+      "formatted_value": "0.9196"
+    },
+    {
+      "name": "st_f1_tuned",
+      "input": "results5",
+      "pointer": "evaluations.hist_gradient_boosting_tuned.student_metrics.macro_f1",
+      "computed": null,
+      "count": null,
+      "raw_value": 0.9447159610168164,
+      "formatted_value": "0.9447"
+    },
+    {
+      "name": "st_ll_tuned",
+      "input": "results5",
+      "pointer": "evaluations.hist_gradient_boosting_tuned.student_metrics.log_loss",
+      "computed": null,
+      "count": null,
+      "raw_value": 0.05549988431377391,
+      "formatted_value": "0.0555"
+    },
+    {
+      "name": "seq_edge_tuned",
+      "input": "seq",
+      "pointer": "hist_gradient_boosting_tuned.trip_macro_observation_edge_f1",
+      "computed": null,
+      "count": null,
+      "raw_value": 0.8433449632545184,
+      "formatted_value": "0.8433"
+    },
+    {
+      "name": "seq_nll_tuned",
+      "input": "seq",
+      "pointer": "hist_gradient_boosting_tuned.observation_categorical_log_loss_given_candidate",
+      "computed": null,
+      "count": null,
+      "raw_value": 0.2609292711310414,
+      "formatted_value": "0.2609"
+    },
+    {
+      "name": "sha_tuned",
+      "input": "accept",
+      "pointer": "all_models.hist_gradient_boosting_tuned.sha256",
+      "computed": null,
+      "count": null,
+      "raw_value": "47ea723d350567b6eeba827744e2c1a26c9baf915d322e29a590f45922ed8eeb",
+      "formatted_value": "47ea723d350567b6eeba827744e2c1a26c9baf915d322e29a590f45922ed8eeb"
+    },
+    {
+      "name": "cv_t1m_hgb",
+      "input": "results5",
+      "pointer": "cv.hist_gradient_boosting.top1_fold_mean",
+      "computed": null,
+      "count": null,
+      "raw_value": 0.8921910188576856,
+      "formatted_value": "0.8922"
+    },
+    {
+      "name": "cv_t1s_hgb",
+      "input": "results5",
+      "pointer": "cv.hist_gradient_boosting.top1_fold_std",
+      "computed": null,
+      "count": null,
+      "raw_value": 0.02812055898332582,
+      "formatted_value": "0.0281"
+    },
+    {
+      "name": "cv_t1m_tuned",
+      "input": "results5",
+      "pointer": "cv.hist_gradient_boosting_tuned.top1_fold_mean",
+      "computed": null,
+      "count": null,
+      "raw_value": 0.8928897028897028,
+      "formatted_value": "0.8929"
+    },
+    {
+      "name": "cv_t1s_tuned",
+      "input": "results5",
+      "pointer": "cv.hist_gradient_boosting_tuned.top1_fold_std",
+      "computed": null,
+      "count": null,
+      "raw_value": 0.02899488171989598,
+      "formatted_value": "0.0290"
+    },
+    {
+      "name": "cv_sec_tuned",
+      "input": "results5",
+      "pointer": "cv.hist_gradient_boosting_tuned.training_seconds_total",
+      "computed": null,
+      "count": null,
+      "raw_value": 8.852967612998327,
+      "formatted_value": "8.9"
+    },
+    {
+      "name": "cv_sec_bag",
+      "input": "results5",
+      "pointer": "cv.bagging.training_seconds_total",
+      "computed": null,
+      "count": null,
+      "raw_value": 202.30875094099792,
+      "formatted_value": "202.3"
+    },
+    {
+      "name": "cv_sec_knn_inf",
+      "input": "results5",
+      "pointer": "cv.knn_distance_weighted.inference_seconds_total",
+      "computed": null,
+      "count": null,
+      "raw_value": 299.05603106299895,
+      "formatted_value": "299.1"
+    },
+    {
+      "name": "st_prec_tuned",
+      "input": "results5",
+      "pointer": "evaluations.hist_gradient_boosting_tuned.student_metrics.precision",
+      "computed": null,
+      "count": null,
+      "raw_value": 0.8984950700570835,
+      "formatted_value": "0.8985"
+    },
+    {
+      "name": "st_rec_tuned",
+      "input": "results5",
+      "pointer": "evaluations.hist_gradient_boosting_tuned.student_metrics.recall",
+      "computed": null,
+      "count": null,
+      "raw_value": 0.9045504414607387,
+      "formatted_value": "0.9046"
+    },
+    {
+      "name": "st_inf_tuned",
+      "input": "results5",
+      "pointer": "evaluations.hist_gradient_boosting_tuned.student_inference_seconds",
+      "computed": null,
+      "count": null,
+      "raw_value": 0.49882324099962716,
+      "formatted_value": "0.499"
+    },
+    {
+      "name": "cv_gain",
+      "input": null,
+      "pointer": null,
+      "computed": {
+        "left": "cv_obj_tuned",
+        "op": "-",
+        "right": "cv_obj_hgb"
+      },
+      "count": null,
+      "raw_value": 0.0007142857142855563,
+      "formatted_value": "+0.0007"
+    },
+    {
+      "name": "st_gain",
+      "input": null,
+      "pointer": null,
+      "computed": {
+        "left": "st_top1_tuned",
+        "op": "-",
+        "right": "st_top1_hgb"
+      },
+      "count": null,
+      "raw_value": 0.0009985328126376203,
+      "formatted_value": "+0.0010"
+    },
+    {
+      "name": "train_obs",
+      "input": "mmeta",
+      "pointer": "training_observations",
+      "computed": null,
+      "count": null,
+      "raw_value": 28000,
+      "formatted_value": "28,000"
+    },
+    {
+      "name": "train_rows",
+      "input": "mmeta",
+      "pointer": "training_candidate_rows",
+      "computed": null,
+      "count": null,
+      "raw_value": 269463,
+      "formatted_value": "269,463"
+    },
+    {
+      "name": "train_miss",
+      "input": "mmeta",
+      "pointer": "metrics.grouped_cv.candidate_miss_count",
+      "computed": null,
+      "count": null,
+      "raw_value": 578,
+      "formatted_value": "578"
+    },
+    {
+      "name": "train_present",
+      "input": null,
+      "pointer": null,
+      "computed": {
+        "left": "train_obs",
+        "op": "-",
+        "right": "train_miss"
+      },
+      "count": null,
+      "raw_value": 27422,
+      "formatted_value": "27,422"
+    },
+    {
+      "name": "train_miss_rate",
+      "input": null,
+      "pointer": null,
+      "computed": {
+        "left": "train_miss",
+        "op": "/",
+        "right": "train_obs"
+      },
+      "count": null,
+      "raw_value": 0.020642857142857143,
+      "formatted_value": "2.0643%"
+    },
+    {
+      "name": "student_obs",
+      "input": "seq",
+      "pointer": "logistic_regression.observations",
+      "computed": null,
+      "count": null,
+      "raw_value": 19160,
+      "formatted_value": "19,160"
+    },
+    {
+      "name": "student_miss",
+      "input": "seq",
+      "pointer": "logistic_regression.candidate_miss_count",
+      "computed": null,
+      "count": null,
+      "raw_value": 19,
+      "formatted_value": "19"
+    },
+    {
+      "name": "student_present",
+      "input": null,
+      "pointer": null,
+      "computed": {
+        "left": "student_obs",
+        "op": "-",
+        "right": "student_miss"
+      },
+      "count": null,
+      "raw_value": 19141,
+      "formatted_value": "19,141"
+    },
+    {
+      "name": "student_miss_rate",
+      "input": null,
+      "pointer": null,
+      "computed": {
+        "left": "student_miss",
+        "op": "/",
+        "right": "student_obs"
+      },
+      "count": null,
+      "raw_value": 0.0009916492693110648,
+      "formatted_value": "0.0992%"
+    },
+    {
+      "name": "student_rows",
+      "input": "accept",
+      "pointer": "all_models.hist_gradient_boosting_tuned.student_rows",
+      "computed": null,
+      "count": null,
+      "raw_value": 175778,
+      "formatted_value": "175,778"
+    },
+    {
+      "name": "hpo_method",
+      "input": "results5",
+      "pointer": "bayesian.method",
+      "computed": null,
+      "count": null,
+      "raw_value": "GaussianProcessRegressor Matern-5/2 surrogate + analytic expected improvement",
+      "formatted_value": "GaussianProcessRegressor Matern-5/2 surrogate + analytic expected improvement"
+    },
+    {
+      "name": "hpo_space",
+      "input": "results5",
+      "pointer": "bayesian.search_space",
+      "computed": null,
+      "count": null,
+      "raw_value": {
+        "learning_rate": [
+          "log",
+          0.025,
+          0.2
+        ],
+        "max_iter": [
+          "int",
+          70,
+          200
+        ],
+        "max_leaf_nodes": [
+          "int",
+          7,
+          47
+        ],
+        "min_samples_leaf": [
+          "logint",
+          15,
+          160
+        ],
+        "l2_regularization": [
+          "log",
+          0.01,
+          20.0
+        ]
+      },
+      "formatted_value": "{\"l2_regularization\": [\"log\", 0.01, 20.0], \"learning_rate\": [\"log\", 0.025, 0.2], \"max_iter\": [\"int\", 70, 200], \"max_leaf_nodes\": [\"int\", 7, 47], \"min_samples_leaf\": [\"logint\", 15, 160]}"
+    },
+    {
+      "name": "hpo_best_params",
+      "input": "results5",
+      "pointer": "bayesian.best_parameters",
+      "computed": null,
+      "count": null,
+      "raw_value": {
+        "max_iter": 104,
+        "learning_rate": 0.15902391896503631,
+        "max_leaf_nodes": 22,
+        "min_samples_leaf": 38,
+        "l2_regularization": 0.8604220152998319
+      },
+      "formatted_value": "{\"l2_regularization\": 0.8604220152998319, \"learning_rate\": 0.15902391896503631, \"max_iter\": 104, \"max_leaf_nodes\": 22, \"min_samples_leaf\": 38}"
+    },
+    {
+      "name": "hpo_trials",
+      "input": "results5",
+      "pointer": "bayesian.trials_including_measured_prior",
+      "computed": null,
+      "count": null,
+      "raw_value": 12,
+      "formatted_value": "12"
+    },
+    {
+      "name": "hpo_seeded",
+      "input": "results5",
+      "pointer": "bayesian.seeded_initial_design_trials",
+      "computed": null,
+      "count": null,
+      "raw_value": 3,
+      "formatted_value": "3"
+    },
+    {
+      "name": "hpo_modelbased",
+      "input": "results5",
+      "pointer": "bayesian.model_based_trials",
+      "computed": null,
+      "count": null,
+      "raw_value": 8,
+      "formatted_value": "8"
+    },
+    {
+      "name": "hpo_fresh_trials",
+      "input": "results5",
+      "pointer": "bayesian.fresh_hpo_trials",
+      "computed": null,
+      "count": null,
+      "raw_value": 0,
+      "formatted_value": "0"
+    },
+    {
+      "name": "hpo_baseline",
+      "input": "results5",
+      "pointer": "bayesian.baseline_objective",
+      "computed": null,
+      "count": null,
+      "raw_value": 0.8926785714285714,
+      "formatted_value": "0.8927"
+    },
+    {
+      "name": "hpo_best",
+      "input": "results5",
+      "pointer": "bayesian.best_objective",
+      "computed": null,
+      "count": null,
+      "raw_value": 0.893392857142857,
+      "formatted_value": "0.8934"
+    },
+    {
+      "name": "hpo_seconds",
+      "input": "results5",
+      "pointer": "bayesian.seconds",
+      "computed": null,
+      "count": null,
+      "raw_value": 162.6095157130003,
+      "formatted_value": "162.6"
+    },
+    {
+      "name": "hpo_reuse_note",
+      "input": "results5",
+      "pointer": "bayesian.reuse_provenance.note",
+      "computed": null,
+      "count": null,
+      "raw_value": "Actual completed historical TRAIN-only GP-EI study; not newly executed trials. Fresh default CV reproduces the prior objective.",
+      "formatted_value": "Actual completed historical TRAIN-only GP-EI study; not newly executed trials. Fresh default CV reproduces the prior objective."
+    },
+    {
+      "name": "hpo_gain",
+      "input": null,
+      "pointer": null,
+      "computed": {
+        "left": "hpo_best",
+        "op": "-",
+        "right": "hpo_baseline"
+      },
+      "count": null,
+      "raw_value": 0.0007142857142855563,
+      "formatted_value": "+0.0007"
+    },
+    {
+      "name": "frozen_utc",
+      "input": "results5",
+      "pointer": "model_freeze.frozen_at_utc",
+      "computed": null,
+      "count": null,
+      "raw_value": "2026-11-18T08:26:50.372940+00:00",
+      "formatted_value": "2026-11-18T08:26:50.372940+00:00"
+    },
+    {
+      "name": "frozen_bytes",
+      "input": "results5",
+      "pointer": "model_freeze.bytes",
+      "computed": null,
+      "count": null,
+      "raw_value": 147906,
+      "formatted_value": "147,906"
+    },
+    {
+      "name": "fschema_sha",
+      "input": "results5",
+      "pointer": "model_freeze.feature_schema_sha256",
+      "computed": null,
+      "count": null,
+      "raw_value": "55f203a1e30ab6369ff937840c2bfa4cb180dc36172a2ca47047714c05fb8d9a",
+      "formatted_value": "55f203a1e30ab6369ff937840c2bfa4cb180dc36172a2ca47047714c05fb8d9a"
+    },
+    {
+      "name": "mmeta_sha",
+      "input": "results5",
+      "pointer": "model_freeze.metadata_sha256",
+      "computed": null,
+      "count": null,
+      "raw_value": "c354885e22158e9da14e0f8bc8e01d3e7c6fbe810e196192c6b59c7cbdbbf4c5",
+      "formatted_value": "c354885e22158e9da14e0f8bc8e01d3e7c6fbe810e196192c6b59c7cbdbbf4c5"
+    },
+    {
+      "name": "ver_python",
+      "input": "results5",
+      "pointer": "versions.python",
+      "computed": null,
+      "count": null,
+      "raw_value": "3.14.6",
+      "formatted_value": "3.14.6"
+    },
+    {
+      "name": "ver_sklearn",
+      "input": "results5",
+      "pointer": "versions.sklearn",
+      "computed": null,
+      "count": null,
+      "raw_value": "1.8.0",
+      "formatted_value": "1.8.0"
+    },
+    {
+      "name": "ver_numpy",
+      "input": "results5",
+      "pointer": "versions.numpy",
+      "computed": null,
+      "count": null,
+      "raw_value": "2.5.5",
+      "formatted_value": "2.5.5"
+    },
+    {
+      "name": "ver_scipy",
+      "input": "results5",
+      "pointer": "versions.scipy",
+      "computed": null,
+      "count": null,
+      "raw_value": "1.18.0",
+      "formatted_value": "1.18.0"
+    },
+    {
+      "name": "ver_joblib",
+      "input": "results5",
+      "pointer": "versions.joblib",
+      "computed": null,
+      "count": null,
+      "raw_value": "1.5.3",
+      "formatted_value": "1.5.3"
+    },
+    {
+      "name": "accept_fresh",
+      "input": "accept",
+      "pointer": "fresh_fits",
+      "computed": null,
+      "count": null,
+      "raw_value": [
+        "gaussian_nb",
+        "hist_gradient_boosting",
+        "hist_gradient_boosting_tuned"
+      ],
+      "formatted_value": "[\"gaussian_nb\", \"hist_gradient_boosting\", \"hist_gradient_boosting_tuned\"]"
+    },
+    {
+      "name": "clean_delta",
+      "input": "clean",
+      "pointer": "max_probability_delta",
+      "computed": null,
+      "count": null,
+      "raw_value": 0.0,
+      "formatted_value": "0"
+    },
+    {
+      "name": "clean_atol",
+      "input": "clean",
+      "pointer": "atol",
+      "computed": null,
+      "count": null,
+      "raw_value": 1e-12,
+      "formatted_value": "1e-12"
+    },
+    {
+      "name": "mm_fit_data",
+      "input": "mmeta",
+      "pointer": "fit_data",
+      "computed": null,
+      "count": null,
+      "raw_value": "TRAIN only; student and evaluator not read by this stage",
+      "formatted_value": "TRAIN only; student and evaluator not read by this stage"
+    },
+    {
+      "name": "mm_fit_seconds",
+      "input": "mmeta",
+      "pointer": "timing.fit_all80_seconds",
+      "computed": null,
+      "count": null,
+      "raw_value": 4.3964633969990246,
+      "formatted_value": "4.40"
+    },
+    {
+      "name": "mm_inf_seconds",
+      "input": "mmeta",
+      "pointer": "timing.train_inference_seconds",
+      "computed": null,
+      "count": null,
+      "raw_value": 0.7696203989980859,
+      "formatted_value": "0.770"
+    },
+    {
+      "name": "mm_train_trips",
+      "input": "mmeta",
+      "pointer": "training_trip_count",
+      "computed": null,
+      "count": null,
+      "raw_value": 80,
+      "formatted_value": "80"
+    },
+    {
+      "name": "mm_seed",
+      "input": "mmeta",
+      "pointer": "seed",
+      "computed": null,
+      "count": null,
+      "raw_value": 20261118,
+      "formatted_value": "20261118"
+    },
+    {
+      "name": "mm_feature_version",
+      "input": "mmeta",
+      "pointer": "feature_version",
+      "computed": null,
+      "count": null,
+      "raw_value": "pathsnap-candidate-v1",
+      "formatted_value": "pathsnap-candidate-v1"
+    },
+    {
+      "name": "feat_count",
+      "input": "fschema",
+      "pointer": "count",
+      "computed": null,
+      "count": null,
+      "raw_value": 38,
+      "formatted_value": "38"
+    },
+    {
+      "name": "feat_version",
+      "input": "fschema",
+      "pointer": "feature_version",
+      "computed": null,
+      "count": null,
+      "raw_value": "pathsnap-candidate-v1",
+      "formatted_value": "pathsnap-candidate-v1"
+    },
+    {
+      "name": "aud_trips",
+      "input": "audit",
+      "pointer": "trip_count",
+      "computed": null,
+      "count": null,
+      "raw_value": 90,
+      "formatted_value": "90"
+    },
+    {
+      "name": "aud_files",
+      "input": "audit",
+      "pointer": "file_count",
+      "computed": null,
+      "count": null,
+      "raw_value": 360,
+      "formatted_value": "360"
+    },
+    {
+      "name": "aud_arcs_pairs",
+      "input": "audit",
+      "pointer": "splits.train.arcs.unique_directed_pairs",
+      "computed": null,
+      "count": null,
+      "raw_value": 3875129,
+      "formatted_value": "3,875,129"
+    },
+    {
+      "name": "aud_broken_train",
+      "input": "audit",
+      "pointer": "splits.train.route_arc_offset_0.broken_joins",
+      "computed": null,
+      "count": null,
+      "raw_value": 13,
+      "formatted_value": "13"
+    },
+    {
+      "name": "aud_broken_student",
+      "input": "audit",
+      "pointer": "splits.student_test.route_arc_offset_0.broken_joins",
+      "computed": null,
+      "count": null,
+      "raw_value": 1,
+      "formatted_value": "1"
+    },
+    {
+      "name": "aud_steps_over",
+      "input": "audit",
+      "pointer": "splits.train.track.steps_over_100mps_if_seconds",
+      "computed": null,
+      "count": null,
+      "raw_value": 18,
+      "formatted_value": "18"
+    },
+    {
+      "name": "aud_time_delta",
+      "input": "audit",
+      "pointer": "splits.train.track.time_delta_not_one",
+      "computed": null,
+      "count": null,
+      "raw_value": 7289,
+      "formatted_value": "7,289"
+    },
+    {
+      "name": "aud_dup_nodes",
+      "input": "audit",
+      "pointer": "splits.train.nodes.duplicate_coordinate_extra_nodes",
+      "computed": null,
+      "count": null,
+      "raw_value": 89,
+      "formatted_value": "89"
+    },
+    {
+      "name": "aud_dup_rows",
+      "input": "audit",
+      "pointer": "splits.train.track.duplicate_coordinate_extra_rows",
+      "computed": null,
+      "count": null,
+      "raw_value": 572,
+      "formatted_value": "572"
+    },
+    {
+      "name": "aud_nonpos",
+      "input": "audit",
+      "pointer": "splits.train.track.nonpositive_time_deltas",
+      "computed": null,
+      "count": null,
+      "raw_value": 0,
+      "formatted_value": "0"
+    },
+    {
+      "name": "aud_repeated",
+      "input": "audit",
+      "pointer": "splits.train.route_validity.repeated_arc_extra_occurrences",
+      "computed": null,
+      "count": null,
+      "raw_value": 67,
+      "formatted_value": "67"
+    },
+    {
+      "name": "trip76_broken",
+      "input": "pertrip",
+      "pointer": "trip_id=00000076.route_validity.arc_index_offset_0.broken_joins",
+      "computed": null,
+      "count": null,
+      "raw_value": 1,
+      "formatted_value": "1"
+    },
+    {
+      "name": "req_total",
+      "input": "reqs",
+      "pointer": "len:requirements",
+      "computed": null,
+      "count": null,
+      "raw_value": 47,
+      "formatted_value": "47"
+    },
+    {
+      "name": "req_done",
+      "input": "reqs",
+      "pointer": null,
+      "computed": null,
+      "count": {
+        "part": "requirements.status",
+        "value": "done_evidence_exists",
+        "in": null,
+        "not_in": null
+      },
+      "raw_value": 34,
+      "formatted_value": "34"
+    },
+    {
+      "name": "req_partial",
+      "input": "reqs",
+      "pointer": null,
+      "computed": null,
+      "count": {
+        "part": "requirements.status",
+        "value": "partially_done",
+        "in": null,
+        "not_in": null
+      },
+      "raw_value": 6,
+      "formatted_value": "6"
+    },
+    {
+      "name": "req_human",
+      "input": "reqs",
+      "pointer": null,
+      "computed": null,
+      "count": {
+        "part": "requirements.status",
+        "value": "human_external_blocker",
+        "in": null,
+        "not_in": null
+      },
+      "raw_value": 5,
+      "formatted_value": "5"
+    },
+    {
+      "name": "req_notdone",
+      "input": "reqs",
+      "pointer": null,
+      "computed": null,
+      "count": {
+        "part": "requirements.status",
+        "value": "not_yet_done",
+        "in": null,
+        "not_in": null
+      },
+      "raw_value": 1,
+      "formatted_value": "1"
+    },
+    {
+      "name": "req_deferred",
+      "input": "reqs",
+      "pointer": null,
+      "computed": null,
+      "count": {
+        "part": "requirements.status",
+        "value": "deferred_by_user",
+        "in": null,
+        "not_in": null
+      },
+      "raw_value": 0,
+      "formatted_value": "0"
+    },
+    {
+      "name": "req_exception",
+      "input": "reqs",
+      "pointer": null,
+      "computed": null,
+      "count": {
+        "part": "requirements.status",
+        "value": "user_exception",
+        "in": null,
+        "not_in": null
+      },
+      "raw_value": 1,
+      "formatted_value": "1"
+    },
+    {
+      "name": "req_inprogress",
+      "input": "reqs",
+      "pointer": null,
+      "computed": null,
+      "count": {
+        "part": "requirements.status",
+        "value": "in_progress_delegated",
+        "in": null,
+        "not_in": null
+      },
+      "raw_value": 0,
+      "formatted_value": "0"
+    },
+    {
+      "name": "req_resolved",
+      "input": "reqs",
+      "pointer": null,
+      "computed": null,
+      "count": {
+        "part": "requirements.status",
+        "value": null,
+        "in": [
+          "user_exception",
+          "done_evidence_exists",
+          "human_external_blocker",
+          "deferred_by_user"
+        ],
+        "not_in": null
+      },
+      "raw_value": 40,
+      "formatted_value": "40"
+    },
+    {
+      "name": "gnb_affected",
+      "input": "gnbdiag",
+      "pointer": "affected_rows",
+      "computed": null,
+      "count": null,
+      "raw_value": 0,
+      "formatted_value": "0"
+    },
+    {
+      "name": "gnb_outside",
+      "input": "gnbdiag",
+      "pointer": "outside_bound_entries",
+      "computed": null,
+      "count": null,
+      "raw_value": 0,
+      "formatted_value": "0"
+    },
+    {
+      "name": "gnb_rowsum",
+      "input": "gnbdiag",
+      "pointer": "max_rowsum_error",
+      "computed": null,
+      "count": null,
+      "raw_value": 1.519918441772461e-05,
+      "formatted_value": "1.52e-05"
+    },
+    {
+      "name": "dec_sigma",
+      "input": "dfreeze",
+      "pointer": "config.sigma_m",
+      "computed": null,
+      "count": null,
+      "raw_value": 7.160645916267228,
+      "formatted_value": "7.161"
+    },
+    {
+      "name": "dec_beta",
+      "input": "dfreeze",
+      "pointer": "config.beta_m",
+      "computed": null,
+      "count": null,
+      "raw_value": 2.0,
+      "formatted_value": "2.000"
+    },
+    {
+      "name": "dec_maxcand",
+      "input": "dfreeze",
+      "pointer": "config.max_candidates",
+      "computed": null,
+      "count": null,
+      "raw_value": 12,
+      "formatted_value": "12"
+    },
+    {
+      "name": "dec_retry",
+      "input": "dfreeze",
+      "pointer": "config.candidate_retry_limit",
+      "computed": null,
+      "count": null,
+      "raw_value": 48,
+      "formatted_value": "48"
+    },
+    {
+      "name": "dec_radius",
+      "input": "dfreeze",
+      "pointer": "config.candidate_radius_m",
+      "computed": null,
+      "count": null,
+      "raw_value": 80.0,
+      "formatted_value": "80"
+    },
+    {
+      "name": "dec_slack",
+      "input": "dfreeze",
+      "pointer": "config.routing_slack_m",
+      "computed": null,
+      "count": null,
+      "raw_value": 300.0,
+      "formatted_value": "300"
+    },
+    {
+      "name": "dec_cls_w",
+      "input": "dfreeze",
+      "pointer": "config.classifier_weight",
+      "computed": null,
+      "count": null,
+      "raw_value": 1.0,
+      "formatted_value": "1.00"
+    },
+    {
+      "name": "dec_geo_w",
+      "input": "dfreeze",
+      "pointer": "config.geometry_weight",
+      "computed": null,
+      "count": null,
+      "raw_value": 1.0,
+      "formatted_value": "1.00"
+    },
+    {
+      "name": "dec_btol",
+      "input": "dfreeze",
+      "pointer": "config.backward_tolerance_m",
+      "computed": null,
+      "count": null,
+      "raw_value": 20.0,
+      "formatted_value": "20"
+    },
+    {
+      "name": "dec_spacing",
+      "input": "dfreeze",
+      "pointer": "config.sample_spacing_m",
+      "computed": null,
+      "count": null,
+      "raw_value": 40.0,
+      "formatted_value": "40"
+    },
+    {
+      "name": "dec_search_trips",
+      "input": "dfreeze",
+      "pointer": "len:calibration_trip_ids",
+      "computed": null,
+      "count": null,
+      "raw_value": 8,
+      "formatted_value": "8"
+    },
+    {
+      "name": "dec_frozen_utc",
+      "input": "dfreeze",
+      "pointer": "frozen_utc",
+      "computed": null,
+      "count": null,
+      "raw_value": "2026-11-18T08:37:21.093991+00:00",
+      "formatted_value": "2026-11-18T08:37:21.093991+00:00"
+    },
+    {
+      "name": "dec_selected",
+      "input": "dfreeze",
+      "pointer": "selected_configuration",
+      "computed": null,
+      "count": null,
+      "raw_value": "A_fitted",
+      "formatted_value": "A_fitted"
+    },
+    {
+      "name": "dec_a_lenf1",
+      "input": "dfreeze",
+      "pointer": "objectives.configuration=A_fitted.mean_length_f1",
+      "computed": null,
+      "count": null,
+      "raw_value": 0.9533131022754777,
+      "formatted_value": "0.9533"
+    },
+    {
+      "name": "dec_b_lenf1",
+      "input": "dfreeze",
+      "pointer": "objectives.configuration=B_twice_beta.mean_length_f1",
+      "computed": null,
+      "count": null,
+      "raw_value": 0.9521377935915321,
+      "formatted_value": "0.9521"
+    },
+    {
+      "name": "dec_c_lenf1",
+      "input": "dfreeze",
+      "pointer": "objectives.configuration=C_classifier_up.mean_length_f1",
+      "computed": null,
+      "count": null,
+      "raw_value": 0.9522727548776264,
+      "formatted_value": "0.9523"
+    },
+    {
+      "name": "dec_a_edgef1",
+      "input": "dfreeze",
+      "pointer": "objectives.configuration=A_fitted.mean_edge_f1",
+      "computed": null,
+      "count": null,
+      "raw_value": 0.9382034899562464,
+      "formatted_value": "0.9382"
+    },
+    {
+      "name": "dec_b_edgef1",
+      "input": "dfreeze",
+      "pointer": "objectives.configuration=B_twice_beta.mean_edge_f1",
+      "computed": null,
+      "count": null,
+      "raw_value": 0.9383178089776616,
+      "formatted_value": "0.9383"
+    },
+    {
+      "name": "dec_c_edgef1",
+      "input": "dfreeze",
+      "pointer": "objectives.configuration=C_classifier_up.mean_edge_f1",
+      "computed": null,
+      "count": null,
+      "raw_value": 0.9408413647627369,
+      "formatted_value": "0.9408"
+    },
+    {
+      "name": "dplan_trips",
+      "input": "dplan",
+      "pointer": "train_trip_count",
+      "computed": null,
+      "count": null,
+      "raw_value": 80,
+      "formatted_value": "80"
+    },
+    {
+      "name": "abl_trips",
+      "input": "dablt",
+      "pointer": "trip_count",
+      "computed": null,
+      "count": null,
+      "raw_value": 10,
+      "formatted_value": "10"
+    },
+    {
+      "name": "abl_failed",
+      "input": "dablt",
+      "pointer": "len:failed_trip_ids",
+      "computed": null,
+      "count": null,
+      "raw_value": 0,
+      "formatted_value": "0"
+    },
+    {
+      "name": "abl_obs",
+      "input": "dablt",
+      "pointer": "total_observations",
+      "computed": null,
+      "count": null,
+      "raw_value": 19160,
+      "formatted_value": "19,160"
+    },
+    {
+      "name": "abl_raw_top1",
+      "input": "dablt",
+      "pointer": "aggregate.classifier_only_raw.trip_macro.proxy_accuracy",
+      "computed": null,
+      "count": null,
+      "raw_value": 0.9199583987080457,
+      "formatted_value": "0.9200"
+    },
+    {
+      "name": "abl_raw_edge",
+      "input": "dablt",
+      "pointer": "aggregate.classifier_only_raw.trip_macro.route_edge_f1",
+      "computed": null,
+      "count": null,
+      "raw_value": 0.7703779811446347,
+      "formatted_value": "0.7704"
+    },
+    {
+      "name": "abl_raw_len",
+      "input": "dablt",
+      "pointer": "aggregate.classifier_only_raw.trip_macro.route_length_f1",
+      "computed": null,
+      "count": null,
+      "raw_value": 0.8227394701333495,
+      "formatted_value": "0.8227"
+    },
+    {
+      "name": "abl_hmm_top1",
+      "input": "dablt",
+      "pointer": "aggregate.classifier_plus_HMM.trip_macro.proxy_accuracy",
+      "computed": null,
+      "count": null,
+      "raw_value": 0.9388929872476017,
+      "formatted_value": "0.9389"
+    },
+    {
+      "name": "abl_hmm_edge",
+      "input": "dablt",
+      "pointer": "aggregate.classifier_plus_HMM.trip_macro.route_edge_f1",
+      "computed": null,
+      "count": null,
+      "raw_value": 0.9513611360981356,
+      "formatted_value": "0.9514"
+    },
+    {
+      "name": "abl_hmm_len",
+      "input": "dablt",
+      "pointer": "aggregate.classifier_plus_HMM.trip_macro.route_length_f1",
+      "computed": null,
+      "count": null,
+      "raw_value": 0.9794127201125091,
+      "formatted_value": "0.9794"
+    },
+    {
+      "name": "abl_geo_edge",
+      "input": "dablt",
+      "pointer": "aggregate.geometry_HMM_default_reused.trip_macro.route_edge_f1",
+      "computed": null,
+      "count": null,
+      "raw_value": 0.9261891312626117,
+      "formatted_value": "0.9262"
+    },
+    {
+      "name": "abl_geo_len",
+      "input": "dablt",
+      "pointer": "aggregate.geometry_HMM_default_reused.trip_macro.route_length_f1",
+      "computed": null,
+      "count": null,
+      "raw_value": 0.9734481048408883,
+      "formatted_value": "0.9734"
+    },
+    {
+      "name": "abl_hmm_seconds",
+      "input": "dablt",
+      "pointer": "aggregate.classifier_plus_HMM.trip_macro.inference_seconds",
+      "computed": null,
+      "count": null,
+      "raw_value": 4.3882527113994,
+      "formatted_value": "4.39"
+    },
+    {
+      "name": "abl_hmm_edge_gain",
+      "input": null,
+      "pointer": null,
+      "computed": {
+        "left": "abl_hmm_edge",
+        "op": "-",
+        "right": "abl_raw_edge"
+      },
+      "count": null,
+      "raw_value": 0.1809831549535008,
+      "formatted_value": "+0.1810"
+    },
+    {
+      "name": "off_edge_f1",
+      "input": "offlinev",
+      "pointer": "trip_macro.edge_f1",
+      "computed": null,
+      "count": null,
+      "raw_value": 0.9513611360981356,
+      "formatted_value": "0.9514"
+    },
+    {
+      "name": "off_len_f1",
+      "input": "offlinev",
+      "pointer": "trip_macro.length_f1",
+      "computed": null,
+      "count": null,
+      "raw_value": 0.9794127201125091,
+      "formatted_value": "0.9794"
+    },
+    {
+      "name": "off_edit",
+      "input": "offlinev",
+      "pointer": "trip_macro.edit_similarity",
+      "computed": null,
+      "count": null,
+      "raw_value": 0.917244621040485,
+      "formatted_value": "0.9172"
+    },
+    {
+      "name": "off_cont",
+      "input": "offlinev",
+      "pointer": "trip_macro.route_continuity",
+      "computed": null,
+      "count": null,
+      "raw_value": 1.0,
+      "formatted_value": "1.0000"
+    },
+    {
+      "name": "eval_trips",
+      "input": "evalacc",
+      "pointer": "trip_count",
+      "computed": null,
+      "count": null,
+      "raw_value": 10,
+      "formatted_value": "10"
+    },
+    {
+      "name": "eval_edge_f1",
+      "input": "evalmetrics",
+      "pointer": "summary.macro.edge_f1",
+      "computed": null,
+      "count": null,
+      "raw_value": 0.9226442590786567,
+      "formatted_value": "0.9226"
+    },
+    {
+      "name": "eval_len_f1",
+      "input": "evalmetrics",
+      "pointer": "summary.macro.length_f1",
+      "computed": null,
+      "count": null,
+      "raw_value": 0.96580634225047,
+      "formatted_value": "0.9658"
+    },
+    {
+      "name": "eval_edit",
+      "input": "evalmetrics",
+      "pointer": "summary.macro.edit_similarity",
+      "computed": null,
+      "count": null,
+      "raw_value": 0.8793459345588234,
+      "formatted_value": "0.8793"
+    },
+    {
+      "name": "eval_cont",
+      "input": "evalmetrics",
+      "pointer": "summary.macro.route_continuity",
+      "computed": null,
+      "count": null,
+      "raw_value": 1.0,
+      "formatted_value": "1.0000"
+    },
+    {
+      "name": "eval_top1",
+      "input": "evalmetrics",
+      "pointer": "summary.macro.top1_accuracy",
+      "computed": null,
+      "count": null,
+      "raw_value": 0.937758847501342,
+      "formatted_value": "0.9378"
+    },
+    {
+      "name": "eval_mf1",
+      "input": "evalmetrics",
+      "pointer": "summary.macro.macro_f1",
+      "computed": null,
+      "count": null,
+      "raw_value": 0.8742859443406772,
+      "formatted_value": "0.8743"
+    },
+    {
+      "name": "ind_findings",
+      "input": "indaudit",
+      "pointer": "len:verified_findings",
+      "computed": null,
+      "count": null,
+      "raw_value": 9,
+      "formatted_value": "9"
+    },
+    {
+      "name": "live_base",
+      "input": "liveapi",
+      "pointer": "base_url",
+      "computed": null,
+      "count": null,
+      "raw_value": "https://ml.d3va.dev",
+      "formatted_value": "https://ml.d3va.dev"
+    },
+    {
+      "name": "live_matches",
+      "input": "liveapi",
+      "pointer": "successful_count",
+      "computed": null,
+      "count": null,
+      "raw_value": 20,
+      "formatted_value": "20"
+    },
+    {
+      "name": "live_requested",
+      "input": "liveapi",
+      "pointer": "all_twenty_requested",
+      "computed": null,
+      "count": null,
+      "raw_value": true,
+      "formatted_value": "True"
+    },
+    {
+      "name": "live_health_sha",
+      "input": "liveapi",
+      "pointer": "health.model_hash",
+      "computed": null,
+      "count": null,
+      "raw_value": "c9cc8e9f36838f656a94d07ed69632979df9981ca94a9daf3b52fbce052e4b34",
+      "formatted_value": "c9cc8e9f36838f656a94d07ed69632979df9981ca94a9daf3b52fbce052e4b34"
+    },
+    {
+      "name": "term_valid",
+      "input": "termv",
+      "pointer": "valid",
+      "computed": null,
+      "count": null,
+      "raw_value": true,
+      "formatted_value": "True"
+    },
+    {
+      "name": "term_ocr",
+      "input": "termv",
+      "pointer": "ocr_privacy_guard_passed",
+      "computed": null,
+      "count": null,
+      "raw_value": true,
+      "formatted_value": "True"
+    },
+    {
+      "name": "browser_errors",
+      "input": "browser",
+      "pointer": "len:browser_errors",
+      "computed": null,
+      "count": null,
+      "raw_value": 0,
+      "formatted_value": "0"
+    },
+    {
+      "name": "browser_console",
+      "input": "browser",
+      "pointer": "len:console_errors",
+      "computed": null,
+      "count": null,
+      "raw_value": 0,
+      "formatted_value": "0"
+    },
+    {
+      "name": "tests_total",
+      "input": "testsjson",
+      "pointer": "total",
+      "computed": null,
+      "count": null,
+      "raw_value": 376,
+      "formatted_value": "376"
+    },
+    {
+      "name": "tests_passed",
+      "input": "testsjson",
+      "pointer": "passed",
+      "computed": null,
+      "count": null,
+      "raw_value": 376,
+      "formatted_value": "376"
+    },
+    {
+      "name": "tests_failed",
+      "input": "testsjson",
+      "pointer": "len:failures",
+      "computed": null,
+      "count": null,
+      "raw_value": 0,
+      "formatted_value": "0"
+    },
+    {
+      "name": "lr_infer_s",
+      "input": "results5",
+      "pointer": "evaluations.logistic_regression.student_inference_seconds",
+      "computed": null,
+      "count": null,
+      "raw_value": 0.026222116999633727,
+      "formatted_value": "0.026"
+    },
+    {
+      "name": "lr_fit_s",
+      "input": "results5",
+      "pointer": "evaluations.logistic_regression.training_seconds",
+      "computed": null,
+      "count": null,
+      "raw_value": 1.021270029000334,
+      "formatted_value": "1.021"
+    },
+    {
+      "name": "lr_train_top1",
+      "input": "results5",
+      "pointer": "evaluations.logistic_regression.train_resubstitution_metrics.top1_accuracy",
+      "computed": null,
+      "count": null,
+      "raw_value": 0.8843214285714286,
+      "formatted_value": "0.8843"
+    },
+    {
+      "name": "lr_train_binary_f1",
+      "input": "results5",
+      "pointer": "evaluations.logistic_regression.train_resubstitution_metrics.macro_f1",
+      "computed": null,
+      "count": null,
+      "raw_value": 0.9348034048857987,
+      "formatted_value": "0.9348"
+    },
+    {
+      "name": "lr_train_ll",
+      "input": "results5",
+      "pointer": "evaluations.logistic_regression.train_resubstitution_metrics.log_loss",
+      "computed": null,
+      "count": null,
+      "raw_value": 0.0675323784397404,
+      "formatted_value": "0.0675"
+    },
+    {
+      "name": "lr_binary_accuracy",
+      "input": "results5",
+      "pointer": "evaluations.logistic_regression.student_metrics.accuracy",
+      "computed": null,
+      "count": null,
+      "raw_value": 0.973722536381117,
+      "formatted_value": "0.9737"
+    },
+    {
+      "name": "lr_binary_precision",
+      "input": "results5",
+      "pointer": "evaluations.logistic_regression.student_metrics.precision",
+      "computed": null,
+      "count": null,
+      "raw_value": 0.8712926978932297,
+      "formatted_value": "0.8713"
+    },
+    {
+      "name": "lr_binary_recall",
+      "input": "results5",
+      "pointer": "evaluations.logistic_regression.student_metrics.recall",
+      "computed": null,
+      "count": null,
+      "raw_value": 0.8901833759991641,
+      "formatted_value": "0.8902"
+    },
+    {
+      "name": "lr_pooled_top1",
+      "input": "seq",
+      "pointer": "logistic_regression.top1_accuracy",
+      "computed": null,
+      "count": null,
+      "raw_value": 0.8951983298538622,
+      "formatted_value": "0.8952"
+    },
+    {
+      "name": "lr_pooled_edge_f1",
+      "input": "seq",
+      "pointer": "logistic_regression.observation_edge_macro_f1",
+      "computed": null,
+      "count": null,
+      "raw_value": 0.8070802670313553,
+      "formatted_value": "0.8071"
+    },
+    {
+      "name": "lr_all_nll",
+      "input": "seq",
+      "pointer": "logistic_regression.observation_categorical_log_loss_clipped",
+      "computed": null,
+      "count": null,
+      "raw_value": 0.3475738499430923,
+      "formatted_value": "0.3476"
+    },
+    {
+      "name": "lr_raw_continuity",
+      "input": "seq",
+      "pointer": "logistic_regression.raw_classifier_continuity",
+      "computed": null,
+      "count": null,
+      "raw_value": 0.928668407310705,
+      "formatted_value": "0.9287"
+    },
+    {
+      "name": "lr_change_continuity",
+      "input": "seq",
+      "pointer": "logistic_regression.edge_change_continuity",
+      "computed": null,
+      "count": null,
+      "raw_value": 0.7204257060990585,
+      "formatted_value": "0.7204"
+    },
+    {
+      "name": "knn_infer_s",
+      "input": "results5",
+      "pointer": "evaluations.knn_distance_weighted.student_inference_seconds",
+      "computed": null,
+      "count": null,
+      "raw_value": 187.07812934499998,
+      "formatted_value": "187.078"
+    },
+    {
+      "name": "knn_fit_s",
+      "input": "results5",
+      "pointer": "evaluations.knn_distance_weighted.training_seconds",
+      "computed": null,
+      "count": null,
+      "raw_value": 0.024137397998856613,
+      "formatted_value": "0.024"
+    },
+    {
+      "name": "knn_train_top1",
+      "input": "results5",
+      "pointer": "evaluations.knn_distance_weighted.train_resubstitution_metrics.top1_accuracy",
+      "computed": null,
+      "count": null,
+      "raw_value": 0.9076785714285714,
+      "formatted_value": "0.9077"
+    },
+    {
+      "name": "knn_train_binary_f1",
+      "input": "results5",
+      "pointer": "evaluations.knn_distance_weighted.train_resubstitution_metrics.macro_f1",
+      "computed": null,
+      "count": null,
+      "raw_value": 0.9412425247210849,
+      "formatted_value": "0.9412"
+    },
+    {
+      "name": "knn_train_ll",
+      "input": "results5",
+      "pointer": "evaluations.knn_distance_weighted.train_resubstitution_metrics.log_loss",
+      "computed": null,
+      "count": null,
+      "raw_value": 0.07233643612064526,
+      "formatted_value": "0.0723"
+    },
+    {
+      "name": "knn_binary_accuracy",
+      "input": "results5",
+      "pointer": "evaluations.knn_distance_weighted.student_metrics.accuracy",
+      "computed": null,
+      "count": null,
+      "raw_value": 0.972374244786037,
+      "formatted_value": "0.9724"
+    },
+    {
+      "name": "knn_binary_precision",
+      "input": "results5",
+      "pointer": "evaluations.knn_distance_weighted.student_metrics.precision",
+      "computed": null,
+      "count": null,
+      "raw_value": 0.8894705272915644,
+      "formatted_value": "0.8895"
+    },
+    {
+      "name": "knn_binary_recall",
+      "input": "results5",
+      "pointer": "evaluations.knn_distance_weighted.student_metrics.recall",
+      "computed": null,
+      "count": null,
+      "raw_value": 0.8522020793062014,
+      "formatted_value": "0.8522"
+    },
+    {
+      "name": "knn_pooled_top1",
+      "input": "seq",
+      "pointer": "knn_distance_weighted.top1_accuracy",
+      "computed": null,
+      "count": null,
+      "raw_value": 0.8905010438413361,
+      "formatted_value": "0.8905"
+    },
+    {
+      "name": "knn_pooled_edge_f1",
+      "input": "seq",
+      "pointer": "knn_distance_weighted.observation_edge_macro_f1",
+      "computed": null,
+      "count": null,
+      "raw_value": 0.7954781955518841,
+      "formatted_value": "0.7955"
+    },
+    {
+      "name": "knn_all_nll",
+      "input": "seq",
+      "pointer": "knn_distance_weighted.observation_categorical_log_loss_clipped",
+      "computed": null,
+      "count": null,
+      "raw_value": 0.5216588680957772,
+      "formatted_value": "0.5217"
+    },
+    {
+      "name": "knn_raw_continuity",
+      "input": "seq",
+      "pointer": "knn_distance_weighted.raw_classifier_continuity",
+      "computed": null,
+      "count": null,
+      "raw_value": 0.922976501305483,
+      "formatted_value": "0.9230"
+    },
+    {
+      "name": "knn_change_continuity",
+      "input": "seq",
+      "pointer": "knn_distance_weighted.edge_change_continuity",
+      "computed": null,
+      "count": null,
+      "raw_value": 0.7080942014644765,
+      "formatted_value": "0.7081"
+    },
+    {
+      "name": "bag_infer_s",
+      "input": "results5",
+      "pointer": "evaluations.bagging.student_inference_seconds",
+      "computed": null,
+      "count": null,
+      "raw_value": 0.8719135600003938,
+      "formatted_value": "0.872"
+    },
+    {
+      "name": "bag_fit_s",
+      "input": "results5",
+      "pointer": "evaluations.bagging.training_seconds",
+      "computed": null,
+      "count": null,
+      "raw_value": 103.75557740400109,
+      "formatted_value": "103.756"
+    },
+    {
+      "name": "bag_train_top1",
+      "input": "results5",
+      "pointer": "evaluations.bagging.train_resubstitution_metrics.top1_accuracy",
+      "computed": null,
+      "count": null,
+      "raw_value": 0.9406428571428571,
+      "formatted_value": "0.9406"
+    },
+    {
+      "name": "bag_train_binary_f1",
+      "input": "results5",
+      "pointer": "evaluations.bagging.train_resubstitution_metrics.macro_f1",
+      "computed": null,
+      "count": null,
+      "raw_value": 0.9716261948172827,
+      "formatted_value": "0.9716"
+    },
+    {
+      "name": "bag_train_ll",
+      "input": "results5",
+      "pointer": "evaluations.bagging.train_resubstitution_metrics.log_loss",
+      "computed": null,
+      "count": null,
+      "raw_value": 0.030647964804381696,
+      "formatted_value": "0.0306"
+    },
+    {
+      "name": "bag_binary_accuracy",
+      "input": "results5",
+      "pointer": "evaluations.bagging.student_metrics.accuracy",
+      "computed": null,
+      "count": null,
+      "raw_value": 0.9783419995676365,
+      "formatted_value": "0.9783"
+    },
+    {
+      "name": "bag_binary_precision",
+      "input": "results5",
+      "pointer": "evaluations.bagging.student_metrics.precision",
+      "computed": null,
+      "count": null,
+      "raw_value": 0.9083839352295728,
+      "formatted_value": "0.9084"
+    },
+    {
+      "name": "bag_binary_recall",
+      "input": "results5",
+      "pointer": "evaluations.bagging.student_metrics.recall",
+      "computed": null,
+      "count": null,
+      "raw_value": 0.89096703411525,
+      "formatted_value": "0.8910"
+    },
+    {
+      "name": "bag_pooled_top1",
+      "input": "seq",
+      "pointer": "bagging.top1_accuracy",
+      "computed": null,
+      "count": null,
+      "raw_value": 0.9048016701461378,
+      "formatted_value": "0.9048"
+    },
+    {
+      "name": "bag_pooled_edge_f1",
+      "input": "seq",
+      "pointer": "bagging.observation_edge_macro_f1",
+      "computed": null,
+      "count": null,
+      "raw_value": 0.8271458710847017,
+      "formatted_value": "0.8271"
+    },
+    {
+      "name": "bag_all_nll",
+      "input": "seq",
+      "pointer": "bagging.observation_categorical_log_loss_clipped",
+      "computed": null,
+      "count": null,
+      "raw_value": 0.28244242484112947,
+      "formatted_value": "0.2824"
+    },
+    {
+      "name": "bag_raw_continuity",
+      "input": "seq",
+      "pointer": "bagging.raw_classifier_continuity",
+      "computed": null,
+      "count": null,
+      "raw_value": 0.9321671018276763,
+      "formatted_value": "0.9322"
+    },
+    {
+      "name": "bag_change_continuity",
+      "input": "seq",
+      "pointer": "bagging.edge_change_continuity",
+      "computed": null,
+      "count": null,
+      "raw_value": 0.7202842377260982,
+      "formatted_value": "0.7203"
+    },
+    {
+      "name": "gnb_infer_s",
+      "input": "results5",
+      "pointer": "evaluations.gaussian_nb.student_inference_seconds",
+      "computed": null,
+      "count": null,
+      "raw_value": 0.1052980780004873,
+      "formatted_value": "0.105"
+    },
+    {
+      "name": "gnb_fit_s",
+      "input": "results5",
+      "pointer": "evaluations.gaussian_nb.training_seconds",
+      "computed": null,
+      "count": null,
+      "raw_value": 0.17368865499884123,
+      "formatted_value": "0.174"
+    },
+    {
+      "name": "gnb_train_top1",
+      "input": "results5",
+      "pointer": "evaluations.gaussian_nb.train_resubstitution_metrics.top1_accuracy",
+      "computed": null,
+      "count": null,
+      "raw_value": 0.874,
+      "formatted_value": "0.8740"
+    },
+    {
+      "name": "gnb_train_binary_f1",
+      "input": "results5",
+      "pointer": "evaluations.gaussian_nb.train_resubstitution_metrics.macro_f1",
+      "computed": null,
+      "count": null,
+      "raw_value": 0.9212012616763308,
+      "formatted_value": "0.9212"
+    },
+    {
+      "name": "gnb_train_ll",
+      "input": "results5",
+      "pointer": "evaluations.gaussian_nb.train_resubstitution_metrics.log_loss",
+      "computed": null,
+      "count": null,
+      "raw_value": 0.33702818677052526,
+      "formatted_value": "0.3370"
+    },
+    {
+      "name": "gnb_binary_accuracy",
+      "input": "results5",
+      "pointer": "evaluations.gaussian_nb.student_metrics.accuracy",
+      "computed": null,
+      "count": null,
+      "raw_value": 0.9693249439634084,
+      "formatted_value": "0.9693"
+    },
+    {
+      "name": "gnb_binary_precision",
+      "input": "results5",
+      "pointer": "evaluations.gaussian_nb.student_metrics.precision",
+      "computed": null,
+      "count": null,
+      "raw_value": 0.8465144412520792,
+      "formatted_value": "0.8465"
+    },
+    {
+      "name": "gnb_binary_recall",
+      "input": "results5",
+      "pointer": "evaluations.gaussian_nb.student_metrics.recall",
+      "computed": null,
+      "count": null,
+      "raw_value": 0.8773836267697612,
+      "formatted_value": "0.8774"
+    },
+    {
+      "name": "gnb_pooled_top1",
+      "input": "seq",
+      "pointer": "gaussian_nb.top1_accuracy",
+      "computed": null,
+      "count": null,
+      "raw_value": 0.8883611691022965,
+      "formatted_value": "0.8884"
+    },
+    {
+      "name": "gnb_pooled_edge_f1",
+      "input": "seq",
+      "pointer": "gaussian_nb.observation_edge_macro_f1",
+      "computed": null,
+      "count": null,
+      "raw_value": 0.7932823272465994,
+      "formatted_value": "0.7933"
+    },
+    {
+      "name": "gnb_all_nll",
+      "input": "seq",
+      "pointer": "gaussian_nb.observation_categorical_log_loss_clipped",
+      "computed": null,
+      "count": null,
+      "raw_value": 0.9259675274200966,
+      "formatted_value": "0.9260"
+    },
+    {
+      "name": "gnb_raw_continuity",
+      "input": "seq",
+      "pointer": "gaussian_nb.raw_classifier_continuity",
+      "computed": null,
+      "count": null,
+      "raw_value": 0.9229242819843342,
+      "formatted_value": "0.9229"
+    },
+    {
+      "name": "gnb_change_continuity",
+      "input": "seq",
+      "pointer": "gaussian_nb.edge_change_continuity",
+      "computed": null,
+      "count": null,
+      "raw_value": 0.7092771321646641,
+      "formatted_value": "0.7093"
+    },
+    {
+      "name": "hgb_infer_s",
+      "input": "results5",
+      "pointer": "evaluations.hist_gradient_boosting.student_inference_seconds",
+      "computed": null,
+      "count": null,
+      "raw_value": 0.5774021739998716,
+      "formatted_value": "0.577"
+    },
+    {
+      "name": "hgb_fit_s",
+      "input": "results5",
+      "pointer": "evaluations.hist_gradient_boosting.training_seconds",
+      "computed": null,
+      "count": null,
+      "raw_value": 5.350096117999783,
+      "formatted_value": "5.350"
+    },
+    {
+      "name": "hgb_train_top1",
+      "input": "results5",
+      "pointer": "evaluations.hist_gradient_boosting.train_resubstitution_metrics.top1_accuracy",
+      "computed": null,
+      "count": null,
+      "raw_value": 0.9085,
+      "formatted_value": "0.9085"
+    },
+    {
+      "name": "hgb_train_binary_f1",
+      "input": "results5",
+      "pointer": "evaluations.hist_gradient_boosting.train_resubstitution_metrics.macro_f1",
+      "computed": null,
+      "count": null,
+      "raw_value": 0.9540387657449911,
+      "formatted_value": "0.9540"
+    },
+    {
+      "name": "hgb_train_ll",
+      "input": "results5",
+      "pointer": "evaluations.hist_gradient_boosting.train_resubstitution_metrics.log_loss",
+      "computed": null,
+      "count": null,
+      "raw_value": 0.043848356759703236,
+      "formatted_value": "0.0438"
+    },
+    {
+      "name": "hgb_binary_accuracy",
+      "input": "results5",
+      "pointer": "evaluations.hist_gradient_boosting.student_metrics.accuracy",
+      "computed": null,
+      "count": null,
+      "raw_value": 0.9782964876150599,
+      "formatted_value": "0.9783"
+    },
+    {
+      "name": "hgb_binary_precision",
+      "input": "results5",
+      "pointer": "evaluations.hist_gradient_boosting.student_metrics.precision",
+      "computed": null,
+      "count": null,
+      "raw_value": 0.8979125558209575,
+      "formatted_value": "0.8979"
+    },
+    {
+      "name": "hgb_binary_recall",
+      "input": "results5",
+      "pointer": "evaluations.hist_gradient_boosting.student_metrics.recall",
+      "computed": null,
+      "count": null,
+      "raw_value": 0.9034010762238127,
+      "formatted_value": "0.9034"
+    },
+    {
+      "name": "hgb_pooled_top1",
+      "input": "seq",
+      "pointer": "hist_gradient_boosting.top1_accuracy",
+      "computed": null,
+      "count": null,
+      "raw_value": 0.9065762004175365,
+      "formatted_value": "0.9066"
+    },
+    {
+      "name": "hgb_pooled_edge_f1",
+      "input": "seq",
+      "pointer": "hist_gradient_boosting.observation_edge_macro_f1",
+      "computed": null,
+      "count": null,
+      "raw_value": 0.8305560617898742,
+      "formatted_value": "0.8306"
+    },
+    {
+      "name": "hgb_all_nll",
+      "input": "seq",
+      "pointer": "hist_gradient_boosting.observation_categorical_log_loss_clipped",
+      "computed": null,
+      "count": null,
+      "raw_value": 0.27906410595303444,
+      "formatted_value": "0.2791"
+    },
+    {
+      "name": "hgb_raw_continuity",
+      "input": "seq",
+      "pointer": "hist_gradient_boosting.raw_classifier_continuity",
+      "computed": null,
+      "count": null,
+      "raw_value": 0.9335248041775457,
+      "formatted_value": "0.9335"
+    },
+    {
+      "name": "hgb_change_continuity",
+      "input": "seq",
+      "pointer": "hist_gradient_boosting.edge_change_continuity",
+      "computed": null,
+      "count": null,
+      "raw_value": 0.72469723183391,
+      "formatted_value": "0.7247"
+    },
+    {
+      "name": "tuned_infer_s",
+      "input": "results5",
+      "pointer": "evaluations.hist_gradient_boosting_tuned.student_inference_seconds",
+      "computed": null,
+      "count": null,
+      "raw_value": 0.49882324099962716,
+      "formatted_value": "0.499"
+    },
+    {
+      "name": "tuned_fit_s",
+      "input": "results5",
+      "pointer": "evaluations.hist_gradient_boosting_tuned.training_seconds",
+      "computed": null,
+      "count": null,
+      "raw_value": 4.3964633969990246,
+      "formatted_value": "4.396"
+    },
+    {
+      "name": "tuned_train_top1",
+      "input": "results5",
+      "pointer": "evaluations.hist_gradient_boosting_tuned.train_resubstitution_metrics.top1_accuracy",
+      "computed": null,
+      "count": null,
+      "raw_value": 0.914,
+      "formatted_value": "0.9140"
+    },
+    {
+      "name": "tuned_train_binary_f1",
+      "input": "results5",
+      "pointer": "evaluations.hist_gradient_boosting_tuned.train_resubstitution_metrics.macro_f1",
+      "computed": null,
+      "count": null,
+      "raw_value": 0.956681480991245,
+      "formatted_value": "0.9567"
+    },
+    {
+      "name": "tuned_train_ll",
+      "input": "results5",
+      "pointer": "evaluations.hist_gradient_boosting_tuned.train_resubstitution_metrics.log_loss",
+      "computed": null,
+      "count": null,
+      "raw_value": 0.04086089503093243,
+      "formatted_value": "0.0409"
+    },
+    {
+      "name": "tuned_binary_accuracy",
+      "input": "results5",
+      "pointer": "evaluations.hist_gradient_boosting_tuned.student_metrics.accuracy",
+      "computed": null,
+      "count": null,
+      "raw_value": 0.9784785354253661,
+      "formatted_value": "0.9785"
+    },
+    {
+      "name": "tuned_binary_precision",
+      "input": "results5",
+      "pointer": "evaluations.hist_gradient_boosting_tuned.student_metrics.precision",
+      "computed": null,
+      "count": null,
+      "raw_value": 0.8984950700570835,
+      "formatted_value": "0.8985"
+    },
+    {
+      "name": "tuned_binary_recall",
+      "input": "results5",
+      "pointer": "evaluations.hist_gradient_boosting_tuned.student_metrics.recall",
+      "computed": null,
+      "count": null,
+      "raw_value": 0.9045504414607387,
+      "formatted_value": "0.9046"
+    },
+    {
+      "name": "tuned_pooled_top1",
+      "input": "seq",
+      "pointer": "hist_gradient_boosting_tuned.top1_accuracy",
+      "computed": null,
+      "count": null,
+      "raw_value": 0.9067849686847599,
+      "formatted_value": "0.9068"
+    },
+    {
+      "name": "tuned_pooled_edge_f1",
+      "input": "seq",
+      "pointer": "hist_gradient_boosting_tuned.observation_edge_macro_f1",
+      "computed": null,
+      "count": null,
+      "raw_value": 0.8346360523595411,
+      "formatted_value": "0.8346"
+    },
+    {
+      "name": "tuned_all_nll",
+      "input": "seq",
+      "pointer": "hist_gradient_boosting_tuned.observation_categorical_log_loss_clipped",
+      "computed": null,
+      "count": null,
+      "raw_value": 0.2766540185849411,
+      "formatted_value": "0.2767"
+    },
+    {
+      "name": "tuned_raw_continuity",
+      "input": "seq",
+      "pointer": "hist_gradient_boosting_tuned.raw_classifier_continuity",
+      "computed": null,
+      "count": null,
+      "raw_value": 0.9342558746736292,
+      "formatted_value": "0.9343"
+    },
+    {
+      "name": "tuned_change_continuity",
+      "input": "seq",
+      "pointer": "hist_gradient_boosting_tuned.edge_change_continuity",
+      "computed": null,
+      "count": null,
+      "raw_value": 0.7274891774891775,
+      "formatted_value": "0.7275"
+    },
+    {
+      "name": "historical_rf_params",
+      "input": "historical_results",
+      "pointer": "cv.random_forest.parameters",
+      "computed": null,
+      "count": null,
+      "raw_value": {
+        "n_estimators": 100,
+        "max_depth": 16,
+        "min_samples_leaf": 4,
+        "max_features": 0.7
+      },
+      "formatted_value": "{\"max_depth\": 16, \"max_features\": 0.7, \"min_samples_leaf\": 4, \"n_estimators\": 100}"
+    },
+    {
+      "name": "historical_rf_cv_f1",
+      "input": "historical_results",
+      "pointer": "cv.random_forest.oof_metrics.macro_f1",
+      "computed": null,
+      "count": null,
+      "raw_value": 0.9426726353142147,
+      "formatted_value": "0.9427"
+    },
+    {
+      "name": "historical_rf_cv_obj",
+      "input": "historical_results",
+      "pointer": "cv.random_forest.oof_metrics.trip_macro_top1_accuracy",
+      "computed": null,
+      "count": null,
+      "raw_value": 0.8913928571428571,
+      "formatted_value": "0.8914"
+    },
+    {
+      "name": "historical_rf_student_f1",
+      "input": "historical_results",
+      "pointer": "evaluations.random_forest.student_metrics.macro_f1",
+      "computed": null,
+      "count": null,
+      "raw_value": 0.9446352268806815,
+      "formatted_value": "0.9446"
+    },
+    {
+      "name": "historical_rf_student_top1",
+      "input": "historical_results",
+      "pointer": "evaluations.random_forest.student_metrics.top1_accuracy",
+      "computed": null,
+      "count": null,
+      "raw_value": 0.9049582463465553,
+      "formatted_value": "0.9050"
+    },
+    {
+      "name": "historical_rf_student_trip_top1",
+      "input": "historical_results",
+      "pointer": "evaluations.random_forest.student_metrics.trip_macro_top1_accuracy",
+      "computed": null,
+      "count": null,
+      "raw_value": 0.9181264723289665,
+      "formatted_value": "0.9181"
+    },
+    {
+      "name": "historical_rf_student_ll",
+      "input": "historical_results",
+      "pointer": "evaluations.random_forest.student_metrics.log_loss",
+      "computed": null,
+      "count": null,
+      "raw_value": 0.054804921897704334,
+      "formatted_value": "0.0548"
+    },
+    {
+      "name": "historical_rf_infer_s",
+      "input": "historical_results",
+      "pointer": "evaluations.random_forest.student_inference_seconds",
+      "computed": null,
+      "count": null,
+      "raw_value": 0.40037417900020955,
+      "formatted_value": "0.400"
+    },
+    {
+      "name": "historical_rf_fit_s",
+      "input": "historical_results",
+      "pointer": "evaluations.random_forest.training_seconds",
+      "computed": null,
+      "count": null,
+      "raw_value": 292.539161132001,
+      "formatted_value": "292.539"
+    },
+    {
+      "name": "historical_et_params",
+      "input": "historical_results",
+      "pointer": "cv.extra_trees.parameters",
+      "computed": null,
+      "count": null,
+      "raw_value": {
+        "n_estimators": 100,
+        "max_depth": 22,
+        "min_samples_leaf": 3,
+        "max_features": 0.8
+      },
+      "formatted_value": "{\"max_depth\": 22, \"max_features\": 0.8, \"min_samples_leaf\": 3, \"n_estimators\": 100}"
+    },
+    {
+      "name": "historical_et_cv_f1",
+      "input": "historical_results",
+      "pointer": "cv.extra_trees.oof_metrics.macro_f1",
+      "computed": null,
+      "count": null,
+      "raw_value": 0.9428646012934825,
+      "formatted_value": "0.9429"
+    },
+    {
+      "name": "historical_et_cv_obj",
+      "input": "historical_results",
+      "pointer": "cv.extra_trees.oof_metrics.trip_macro_top1_accuracy",
+      "computed": null,
+      "count": null,
+      "raw_value": 0.8918214285714285,
+      "formatted_value": "0.8918"
+    },
+    {
+      "name": "historical_et_student_f1",
+      "input": "historical_results",
+      "pointer": "evaluations.extra_trees.student_metrics.macro_f1",
+      "computed": null,
+      "count": null,
+      "raw_value": 0.9422375323524019,
+      "formatted_value": "0.9422"
+    },
+    {
+      "name": "historical_et_student_top1",
+      "input": "historical_results",
+      "pointer": "evaluations.extra_trees.student_metrics.top1_accuracy",
+      "computed": null,
+      "count": null,
+      "raw_value": 0.9039665970772442,
+      "formatted_value": "0.9040"
+    },
+    {
+      "name": "historical_et_student_trip_top1",
+      "input": "historical_results",
+      "pointer": "evaluations.extra_trees.student_metrics.trip_macro_top1_accuracy",
+      "computed": null,
+      "count": null,
+      "raw_value": 0.9162636434465428,
+      "formatted_value": "0.9163"
+    },
+    {
+      "name": "historical_et_student_ll",
+      "input": "historical_results",
+      "pointer": "evaluations.extra_trees.student_metrics.log_loss",
+      "computed": null,
+      "count": null,
+      "raw_value": 0.05562248006550315,
+      "formatted_value": "0.0556"
+    },
+    {
+      "name": "historical_et_infer_s",
+      "input": "historical_results",
+      "pointer": "evaluations.extra_trees.student_inference_seconds",
+      "computed": null,
+      "count": null,
+      "raw_value": 0.4911830450000707,
+      "formatted_value": "0.491"
+    },
+    {
+      "name": "historical_et_fit_s",
+      "input": "historical_results",
+      "pointer": "evaluations.extra_trees.training_seconds",
+      "computed": null,
+      "count": null,
+      "raw_value": 62.14964905399938,
+      "formatted_value": "62.150"
+    },
+    {
+      "name": "historical_bt_params",
+      "input": "historical_phase3",
+      "pointer": "cv.bagging_tuned.parameters",
+      "computed": null,
+      "count": null,
+      "raw_value": {
+        "n_estimators": 48,
+        "max_samples": 0.7160628448832399,
+        "max_depth": 13,
+        "min_samples_leaf": 2
+      },
+      "formatted_value": "{\"max_depth\": 13, \"max_samples\": 0.7160628448832399, \"min_samples_leaf\": 2, \"n_estimators\": 48}"
+    },
+    {
+      "name": "historical_bt_cv_f1",
+      "input": "historical_phase3",
+      "pointer": "cv.bagging_tuned.oof_metrics.macro_f1",
+      "computed": null,
+      "count": null,
+      "raw_value": 0.942631215656458,
+      "formatted_value": "0.9426"
+    },
+    {
+      "name": "historical_bt_cv_obj",
+      "input": "historical_phase3",
+      "pointer": "cv.bagging_tuned.oof_metrics.trip_macro_top1_accuracy",
+      "computed": null,
+      "count": null,
+      "raw_value": 0.8925000000000001,
+      "formatted_value": "0.8925"
+    },
+    {
+      "name": "historical_bt_student_f1",
+      "input": "historical_phase3",
+      "pointer": "evaluations.bagging_tuned.student_metrics.macro_f1",
+      "computed": null,
+      "count": null,
+      "raw_value": 0.9435745531009136,
+      "formatted_value": "0.9436"
+    },
+    {
+      "name": "historical_bt_student_top1",
+      "input": "historical_phase3",
+      "pointer": "evaluations.bagging_tuned.student_metrics.top1_accuracy",
+      "computed": null,
+      "count": null,
+      "raw_value": 0.90339248434238,
+      "formatted_value": "0.9034"
+    },
+    {
+      "name": "historical_bt_student_trip_top1",
+      "input": "historical_phase3",
+      "pointer": "evaluations.bagging_tuned.student_metrics.trip_macro_top1_accuracy",
+      "computed": null,
+      "count": null,
+      "raw_value": 0.9159453488227101,
+      "formatted_value": "0.9159"
+    },
+    {
+      "name": "historical_bt_student_ll",
+      "input": "historical_phase3",
+      "pointer": "evaluations.bagging_tuned.student_metrics.log_loss",
+      "computed": null,
+      "count": null,
+      "raw_value": 0.055971427527006866,
+      "formatted_value": "0.0560"
+    },
+    {
+      "name": "historical_bt_infer_s",
+      "input": "historical_phase3",
+      "pointer": "evaluations.bagging_tuned.student_inference_seconds",
+      "computed": null,
+      "count": null,
+      "raw_value": 0.9383721240010345,
+      "formatted_value": "0.938"
+    },
+    {
+      "name": "historical_bt_fit_s",
+      "input": "historical_phase3",
+      "pointer": "evaluations.bagging_tuned.training_seconds",
+      "computed": null,
+      "count": null,
+      "raw_value": 133.06433969300087,
+      "formatted_value": "133.064"
+    },
+    {
+      "name": "train_cv_folds",
+      "input": "results5",
+      "pointer": "len:cv.logistic_regression.folds",
+      "computed": null,
+      "count": null,
+      "raw_value": 3,
+      "formatted_value": "3"
+    },
+    {
+      "name": "evaluator_first_open",
+      "input": "evalacc",
+      "pointer": "chronology.first_input_open_started_utc",
+      "computed": null,
+      "count": null,
+      "raw_value": "2026-11-18T08:52:25.539066+00:00",
+      "formatted_value": "2026-11-18T08:52:25.539066+00:00"
+    },
+    {
+      "name": "evaluator_reference_start",
+      "input": "evalacc",
+      "pointer": "chronology.reference_scoring_started_at_utc",
+      "computed": null,
+      "count": null,
+      "raw_value": "2026-11-18T08:53:38.239789+00:00",
+      "formatted_value": "2026-11-18T08:53:38.239789+00:00"
+    },
+    {
+      "name": "evaluator_predictions_completed",
+      "input": "evalacc",
+      "pointer": "chronology.prediction_completed_at_utc",
+      "computed": null,
+      "count": null,
+      "raw_value": "2026-11-18T08:53:12.792273+00:00",
+      "formatted_value": "2026-11-18T08:53:12.792273+00:00"
+    },
+    {
+      "name": "evaluator_obs",
+      "input": "evalmetrics",
+      "pointer": "summary.full_observation_proxy.observations_scored",
+      "computed": null,
+      "count": null,
+      "raw_value": 19674,
+      "formatted_value": "19,674"
+    },
+    {
+      "name": "evaluator_exact",
+      "input": "evalmetrics",
+      "pointer": "summary.exact_route_count",
+      "computed": null,
+      "count": null,
+      "raw_value": 0,
+      "formatted_value": "0"
+    },
+    {
+      "name": "evaluator_refbreaks",
+      "input": "evalmetrics",
+      "pointer": "summary.reference_discontinuities",
+      "computed": null,
+      "count": null,
+      "raw_value": 0,
+      "formatted_value": "0"
+    },
+    {
+      "name": "evaluator_decoded_accuracy",
+      "input": "evalmetrics",
+      "pointer": "summary.full_observation_proxy.decoded.accuracy",
+      "computed": null,
+      "count": null,
+      "raw_value": 0.9305174341770865,
+      "formatted_value": "0.9305"
+    },
+    {
+      "name": "evaluator_decoded_f1",
+      "input": "evalmetrics",
+      "pointer": "summary.full_observation_proxy.decoded.macro_f1",
+      "computed": null,
+      "count": null,
+      "raw_value": 0.888357018438687,
+      "formatted_value": "0.8884"
+    },
+    {
+      "name": "evaluator_classifier_accuracy",
+      "input": "evalmetrics",
+      "pointer": "summary.full_observation_proxy.classifier_only.accuracy",
+      "computed": null,
+      "count": null,
+      "raw_value": 0.9327538883806038,
+      "formatted_value": "0.9328"
+    },
+    {
+      "name": "evaluator_classifier_f1",
+      "input": "evalmetrics",
+      "pointer": "summary.full_observation_proxy.classifier_only.macro_f1",
+      "computed": null,
+      "count": null,
+      "raw_value": 0.8448886174428495,
+      "formatted_value": "0.8449"
+    },
+    {
+      "name": "evaluator_weak15_edge",
+      "input": "evalacc",
+      "pointer": "expected_trips.00000015.metrics.edge_f1",
+      "computed": null,
+      "count": null,
+      "raw_value": 0.5788336933045357,
+      "formatted_value": "0.5788"
+    },
+    {
+      "name": "evaluator_weak15_length",
+      "input": "evalacc",
+      "pointer": "expected_trips.00000015.metrics.length_f1",
+      "computed": null,
+      "count": null,
+      "raw_value": 0.7750785165621779,
+      "formatted_value": "0.7751"
+    },
+    {
+      "name": "evaluator_zip_sha",
+      "input": "evalacc",
+      "pointer": "submission_zip_sha256",
+      "computed": null,
+      "count": null,
+      "raw_value": "20a62accc83d0d5221339093f4f07a34efee04018a14cb464d66ed2fce1b655b",
+      "formatted_value": "20a62accc83d0d5221339093f4f07a34efee04018a14cb464d66ed2fce1b655b"
+    },
+    {
+      "name": "overlap_exact_duplicate",
+      "input": "evalaudit",
+      "pointer": "overlap_report.any_full_trip_duplicate",
+      "computed": null,
+      "count": null,
+      "raw_value": false,
+      "formatted_value": "False"
+    },
+    {
+      "name": "overlap_any_file",
+      "input": "evalaudit",
+      "pointer": "overlap_report.any_identical_input_file",
+      "computed": null,
+      "count": null,
+      "raw_value": false,
+      "formatted_value": "False"
+    },
+    {
+      "name": "overlap_id_matches",
+      "input": "evalaudit",
+      "pointer": "overlap_report.id_matches",
+      "computed": null,
+      "count": null,
+      "raw_value": [],
+      "formatted_value": "[]"
+    },
+    {
+      "name": "overlap_train_count",
+      "input": "evalaudit",
+      "pointer": "overlap_report.training_trip_count_checked",
+      "computed": null,
+      "count": null,
+      "raw_value": 80,
+      "formatted_value": "80"
+    },
+    {
+      "name": "overlap_student_count",
+      "input": "evalaudit",
+      "pointer": "overlap_report.student_trip_count_checked",
+      "computed": null,
+      "count": null,
+      "raw_value": 10,
+      "formatted_value": "10"
+    },
+    {
+      "name": "evaluator_guard_tests",
+      "input": "evaltestqa",
+      "pointer": "tests_run",
+      "computed": null,
+      "count": null,
+      "raw_value": 9,
+      "formatted_value": "9"
+    },
+    {
+      "name": "map_points",
+      "input": "map_metadata",
+      "pointer": "gps_points",
+      "computed": null,
+      "count": null,
+      "raw_value": 1049,
+      "formatted_value": "1049"
+    },
+    {
+      "name": "map_pred_arcs",
+      "input": "map_metadata",
+      "pointer": "prediction_arc_geometry_count",
+      "computed": null,
+      "count": null,
+      "raw_value": 444,
+      "formatted_value": "444"
+    },
+    {
+      "name": "map_ref_arcs",
+      "input": "map_metadata",
+      "pointer": "reference_route_integrity.arc_rows",
+      "computed": null,
+      "count": null,
+      "raw_value": 429,
+      "formatted_value": "429"
+    },
+    {
+      "name": "map_edge_f1",
+      "input": "map_metadata",
+      "pointer": "route_metrics_recomputed_equal_delivery.edge_f1",
+      "computed": null,
+      "count": null,
+      "raw_value": 0.9690721649484535,
+      "formatted_value": "0.9691"
+    },
+    {
+      "name": "map_length_f1",
+      "input": "map_metadata",
+      "pointer": "route_metrics_recomputed_equal_delivery.length_f1",
+      "computed": null,
+      "count": null,
+      "raw_value": 0.9738641838539935,
+      "formatted_value": "0.9739"
+    },
+    {
+      "name": "map_folium_version",
+      "input": "map_metadata",
+      "pointer": "render.folium_version",
+      "computed": null,
+      "count": null,
+      "raw_value": "1.0.0",
+      "formatted_value": "1.0.0"
+    },
+    {
+      "name": "terminal_request_id",
+      "input": "termv",
+      "pointer": "request_id",
+      "computed": null,
+      "count": null,
+      "raw_value": "e5c74616aa5f40f7ac9acbf2459d9678",
+      "formatted_value": "e5c74616aa5f40f7ac9acbf2459d9678"
+    },
+    {
+      "name": "terminal_start_utc",
+      "input": "termv",
+      "pointer": "events.event=match_started.timestamp",
+      "computed": null,
+      "count": null,
+      "raw_value": "2026-11-18T09:06:25.487067+00:00",
+      "formatted_value": "2026-11-18T09:06:25.487067+00:00"
+    },
+    {
+      "name": "terminal_finish_utc",
+      "input": "termv",
+      "pointer": "events.event=match_completed.timestamp",
+      "computed": null,
+      "count": null,
+      "raw_value": "2026-11-18T09:06:28.707597+00:00",
+      "formatted_value": "2026-11-18T09:06:28.707597+00:00"
+    },
+    {
+      "name": "terminal_dataset",
+      "input": "termv",
+      "pointer": "events.event=match_started.dataset_role",
+      "computed": null,
+      "count": null,
+      "raw_value": "development",
+      "formatted_value": "development"
+    },
+    {
+      "name": "terminal_http_request_id",
+      "input": "termv",
+      "pointer": "events.event=http_request.request_id",
+      "computed": null,
+      "count": null,
+      "raw_value": "e5c74616aa5f40f7ac9acbf2459d9678",
+      "formatted_value": "e5c74616aa5f40f7ac9acbf2459d9678"
+    },
+    {
+      "name": "browser_live_request_id",
+      "input": "browser",
+      "pointer": "responses.dataset_id=development.request_id",
+      "computed": null,
+      "count": null,
+      "raw_value": "e5c74616aa5f40f7ac9acbf2459d9678",
+      "formatted_value": "e5c74616aa5f40f7ac9acbf2459d9678"
+    },
+    {
+      "name": "browser_evaluator_request_id",
+      "input": "browser",
+      "pointer": "responses.dataset_id=evaluator.request_id",
+      "computed": null,
+      "count": null,
+      "raw_value": "cdfbc4474f3840ec8f271e9e79e90635",
+      "formatted_value": "cdfbc4474f3840ec8f271e9e79e90635"
+    },
+    {
+      "name": "browser_evaluator_accuracy",
+      "input": "browser",
+      "pointer": "responses.dataset_id=evaluator.metrics.accuracy",
+      "computed": null,
+      "count": null,
+      "raw_value": 0.9907076483202287,
+      "formatted_value": "0.9907"
+    },
+    {
+      "name": "api_eval_15_nll",
+      "input": "api20",
+      "pointer": "datasets.evaluator.trips.00000015.metrics.log_loss",
+      "computed": null,
+      "count": null,
+      "raw_value": 0.3584026275743201,
+      "formatted_value": "0.358403"
+    },
+    {
+      "name": "api_eval_15_miss",
+      "input": "api20",
+      "pointer": "datasets.evaluator.trips.00000015.metrics.candidate_miss_rate",
+      "computed": null,
+      "count": null,
+      "raw_value": 0.0,
+      "formatted_value": "0.000000"
+    },
+    {
+      "name": "api_eval_17_nll",
+      "input": "api20",
+      "pointer": "datasets.evaluator.trips.00000017.metrics.log_loss",
+      "computed": null,
+      "count": null,
+      "raw_value": 0.34390466701121164,
+      "formatted_value": "0.343905"
+    },
+    {
+      "name": "api_eval_17_miss",
+      "input": "api20",
+      "pointer": "datasets.evaluator.trips.00000017.metrics.candidate_miss_rate",
+      "computed": null,
+      "count": null,
+      "raw_value": 0.007429420505200594,
+      "formatted_value": "0.007429"
+    },
+    {
+      "name": "api_eval_23_nll",
+      "input": "api20",
+      "pointer": "datasets.evaluator.trips.00000023.metrics.log_loss",
+      "computed": null,
+      "count": null,
+      "raw_value": 0.24475070540446134,
+      "formatted_value": "0.244751"
+    },
+    {
+      "name": "api_eval_23_miss",
+      "input": "api20",
+      "pointer": "datasets.evaluator.trips.00000023.metrics.candidate_miss_rate",
+      "computed": null,
+      "count": null,
+      "raw_value": 0.004366812227074236,
+      "formatted_value": "0.004367"
+    },
+    {
+      "name": "api_eval_30_nll",
+      "input": "api20",
+      "pointer": "datasets.evaluator.trips.00000030.metrics.log_loss",
+      "computed": null,
+      "count": null,
+      "raw_value": 0.5710560121680922,
+      "formatted_value": "0.571056"
+    },
+    {
+      "name": "api_eval_30_miss",
+      "input": "api20",
+      "pointer": "datasets.evaluator.trips.00000030.metrics.candidate_miss_rate",
+      "computed": null,
+      "count": null,
+      "raw_value": 0.0045871559633027525,
+      "formatted_value": "0.004587"
+    },
+    {
+      "name": "api_eval_49_nll",
+      "input": "api20",
+      "pointer": "datasets.evaluator.trips.00000049.metrics.log_loss",
+      "computed": null,
+      "count": null,
+      "raw_value": 0.03679649975461869,
+      "formatted_value": "0.036796"
+    },
+    {
+      "name": "api_eval_49_miss",
+      "input": "api20",
+      "pointer": "datasets.evaluator.trips.00000049.metrics.candidate_miss_rate",
+      "computed": null,
+      "count": null,
+      "raw_value": 0.0,
+      "formatted_value": "0.000000"
+    },
+    {
+      "name": "api_eval_59_nll",
+      "input": "api20",
+      "pointer": "datasets.evaluator.trips.00000059.metrics.log_loss",
+      "computed": null,
+      "count": null,
+      "raw_value": 0.18053519165398596,
+      "formatted_value": "0.180535"
+    },
+    {
+      "name": "api_eval_59_miss",
+      "input": "api20",
+      "pointer": "datasets.evaluator.trips.00000059.metrics.candidate_miss_rate",
+      "computed": null,
+      "count": null,
+      "raw_value": 0.0019398642095053346,
+      "formatted_value": "0.001940"
+    },
+    {
+      "name": "api_eval_67_nll",
+      "input": "api20",
+      "pointer": "datasets.evaluator.trips.00000067.metrics.log_loss",
+      "computed": null,
+      "count": null,
+      "raw_value": 0.0712868478199971,
+      "formatted_value": "0.071287"
+    },
+    {
+      "name": "api_eval_67_miss",
+      "input": "api20",
+      "pointer": "datasets.evaluator.trips.00000067.metrics.candidate_miss_rate",
+      "computed": null,
+      "count": null,
+      "raw_value": 0.0,
+      "formatted_value": "0.000000"
+    },
+    {
+      "name": "api_eval_73_nll",
+      "input": "api20",
+      "pointer": "datasets.evaluator.trips.00000073.metrics.log_loss",
+      "computed": null,
+      "count": null,
+      "raw_value": 0.06980938370923902,
+      "formatted_value": "0.069809"
+    },
+    {
+      "name": "api_eval_73_miss",
+      "input": "api20",
+      "pointer": "datasets.evaluator.trips.00000073.metrics.candidate_miss_rate",
+      "computed": null,
+      "count": null,
+      "raw_value": 0.0,
+      "formatted_value": "0.000000"
+    },
+    {
+      "name": "api_eval_87_nll",
+      "input": "api20",
+      "pointer": "datasets.evaluator.trips.00000087.metrics.log_loss",
+      "computed": null,
+      "count": null,
+      "raw_value": 0.12127006198376332,
+      "formatted_value": "0.121270"
+    },
+    {
+      "name": "api_eval_87_miss",
+      "input": "api20",
+      "pointer": "datasets.evaluator.trips.00000087.metrics.candidate_miss_rate",
+      "computed": null,
+      "count": null,
+      "raw_value": 0.0,
+      "formatted_value": "0.000000"
+    },
+    {
+      "name": "api_eval_94_nll",
+      "input": "api20",
+      "pointer": "datasets.evaluator.trips.00000094.metrics.log_loss",
+      "computed": null,
+      "count": null,
+      "raw_value": 0.15386976514431452,
+      "formatted_value": "0.153870"
+    },
+    {
+      "name": "api_eval_94_miss",
+      "input": "api20",
+      "pointer": "datasets.evaluator.trips.00000094.metrics.candidate_miss_rate",
+      "computed": null,
+      "count": null,
+      "raw_value": 0.0,
+      "formatted_value": "0.000000"
+    }
+  ],
+  "validation_limits": [
+    "Source/fact checks are not PDF layout proof. No PDF rendered or final report accepted here.",
+    "Original organizer-document hashes were checked against prior audit provenance, not re-opened binaries.",
+    "All inputs are existing public result JSON/source/asset files; no raw trip data or reference route opened."
+  ]
+}

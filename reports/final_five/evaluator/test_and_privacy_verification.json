@@ -1,0 +1,16 @@
+{
+  "checked_at_utc": "2026-11-18T08:54:43.895842+00:00",
+  "passed": true,
+  "tests_run": 9,
+  "failures": 0,
+  "errors": 0,
+  "synthetic_only": true,
+  "actual_evaluator_in_ci": false,
+  "test_source_sha256": "8cf6adf874718e49217175d570aad5d3b739baca79f82612edeab9257db30109",
+  "evaluator_source_sha256": "926f39d98ab7b96c835cbe8f9f17f62064ddebca1d454bbfc4f61d5cc38bad7d",
+  "scope": "synthetic guards plus read-only final manifest verification; no inference or reference scoring repeated",
+  "public_json_files_scanned": 13,
+  "frozen_hashes_unchanged": true,
+  "model_sha256": "c9cc8e9f36838f656a94d07ed69632979df9981ca94a9daf3b52fbce052e4b34",
+  "config_file_sha256": "10405aa6b6f370e41d4ddcb01207fd1e8f58900fd0395e541ee6bc78146168c5"
+}

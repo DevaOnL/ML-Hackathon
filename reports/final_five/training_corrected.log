@@ -1,0 +1,12 @@
+{"time_utc": "2026-11-18T08:26:14.886019+00:00", "event": "cv_fold", "run_name": "gaussian_nb", "fold": 0, "training_seconds": 0.1263523849993362, "top1": 0.884973544973545, "macro_f1": 0.920474031606566, "log_loss": 0.34563934806475527}
+{"time_utc": "2026-11-18T08:26:15.147892+00:00", "event": "cv_fold", "run_name": "gaussian_nb", "fold": 1, "training_seconds": 0.12533687999894028, "top1": 0.9041269841269841, "macro_f1": 0.9319466332717383, "log_loss": 0.28432980994835994}
+{"time_utc": "2026-11-18T08:26:15.401857+00:00", "event": "cv_fold", "run_name": "gaussian_nb", "fold": 2, "training_seconds": 0.12872120300016832, "top1": 0.8295604395604396, "macro_f1": 0.9098662762504783, "log_loss": 0.38868943998647015}
+{"time_utc": "2026-11-18T08:26:19.552403+00:00", "event": "cv_fold", "run_name": "hist_gradient_boosting", "fold": 0, "training_seconds": 3.4980998460014234, "top1": 0.904973544973545, "macro_f1": 0.9424385215040427, "log_loss": 0.054602716704215515}
+{"time_utc": "2026-11-18T08:26:23.471455+00:00", "event": "cv_fold", "run_name": "hist_gradient_boosting", "fold": 1, "training_seconds": 3.5204841529994155, "top1": 0.9184126984126985, "macro_f1": 0.9519158423164238, "log_loss": 0.04916248545024122}
+{"time_utc": "2026-11-18T08:26:27.345066+00:00", "event": "cv_fold", "run_name": "hist_gradient_boosting", "fold": 2, "training_seconds": 3.5029317459993763, "top1": 0.8531868131868132, "macro_f1": 0.9336638449331967, "log_loss": 0.06737948341647292}
+{"time_utc": "2026-11-18T08:26:30.973426+00:00", "event": "cv_fold", "run_name": "hist_gradient_boosting_tuned", "fold": 0, "training_seconds": 2.9748798009968596, "top1": 0.9062433862433863, "macro_f1": 0.9422939743586338, "log_loss": 0.054113846403494585}
+{"time_utc": "2026-11-18T08:26:34.248379+00:00", "event": "cv_fold", "run_name": "hist_gradient_boosting_tuned", "fold": 1, "training_seconds": 2.93657125000027, "top1": 0.9197883597883598, "macro_f1": 0.9524965326753121, "log_loss": 0.04881623239070319}
+{"time_utc": "2026-11-18T08:26:37.524357+00:00", "event": "cv_fold", "run_name": "hist_gradient_boosting_tuned", "fold": 2, "training_seconds": 2.9415165620011976, "top1": 0.8526373626373627, "macro_f1": 0.9294304978895673, "log_loss": 0.06906187963218098}
+{"event": "fresh_all80_fit", "model": "gaussian_nb", "seconds": 0.17368865499884123}
+{"event": "fresh_all80_fit", "model": "hist_gradient_boosting", "seconds": 5.350096117999783}
+{"event": "fresh_all80_fit", "model": "hist_gradient_boosting_tuned", "seconds": 4.3964633969990246}

@@ -1,0 +1,573 @@
+{
+ "checks": [
+  {
+   "check": "train_cache_identity",
+   "passed": true,
+   "detail": "trips=80 rows=269463 observations=28000 X=(269463, 38) dtype=float32"
+  },
+  {
+   "check": "student_cache_identity",
+   "passed": true,
+   "detail": "trips=10 rows=175778 observations=19160"
+  },
+  {
+   "check": "train_student_trip_disjoint",
+   "passed": true,
+   "detail": "overlap=[]"
+  },
+  {
+   "check": "train_80_trips",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "check": "student_10_trips",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "check": "train_rows_269463",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "check": "student_rows_175778",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "check": "cv_folds_logistic_regression",
+   "passed": true,
+   "detail": "folds=3 val_sizes=[27, 27, 26] val_rows=[89757, 90846, 88860]"
+  },
+  {
+   "check": "folds_match_shared_cv_folds_json",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "check": "cv_folds_knn_distance_weighted",
+   "passed": true,
+   "detail": "folds=3 val_sizes=[27, 27, 26] val_rows=[89757, 90846, 88860]"
+  },
+  {
+   "check": "cv_folds_identical_to_lr_knn_distance_weighted",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "check": "cv_folds_bagging",
+   "passed": true,
+   "detail": "folds=3 val_sizes=[27, 27, 26] val_rows=[89757, 90846, 88860]"
+  },
+  {
+   "check": "cv_folds_identical_to_lr_bagging",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "check": "cv_folds_gaussian_nb",
+   "passed": true,
+   "detail": "folds=3 val_sizes=[27, 27, 26] val_rows=[89757, 90846, 88860]"
+  },
+  {
+   "check": "cv_folds_identical_to_lr_gaussian_nb",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "check": "cv_folds_hist_gradient_boosting",
+   "passed": true,
+   "detail": "folds=3 val_sizes=[27, 27, 26] val_rows=[89757, 90846, 88860]"
+  },
+  {
+   "check": "cv_folds_identical_to_lr_hist_gradient_boosting",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "check": "cv_folds_hist_gradient_boosting_tuned",
+   "passed": true,
+   "detail": "folds=3 val_sizes=[27, 27, 26] val_rows=[89757, 90846, 88860]"
+  },
+  {
+   "check": "cv_folds_identical_to_lr_hist_gradient_boosting_tuned",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "check": "hpo_trial_log_matches_summary",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "check": "hpo_trial_ids",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "check": "hpo_proposal_schedule",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "check": "hpo_no_duplicate_configs",
+   "passed": true,
+   "detail": "unique=12"
+  },
+  {
+   "check": "hpo_trial_0_evidence",
+   "passed": true,
+   "detail": "cv/hist_gradient_boosting.json"
+  },
+  {
+   "check": "hpo_trial_1_evidence",
+   "passed": true,
+   "detail": "cv/bayes_hist_gradient_boosting_01.json"
+  },
+  {
+   "check": "hpo_trial_2_evidence",
+   "passed": true,
+   "detail": "cv/bayes_hist_gradient_boosting_02.json"
+  },
+  {
+   "check": "hpo_trial_3_evidence",
+   "passed": true,
+   "detail": "cv/bayes_hist_gradient_boosting_03.json"
+  },
+  {
+   "check": "hpo_trial_4_evidence",
+   "passed": true,
+   "detail": "cv/bayes_hist_gradient_boosting_04.json"
+  },
+  {
+   "check": "hpo_trial_5_evidence",
+   "passed": true,
+   "detail": "cv/bayes_hist_gradient_boosting_05.json"
+  },
+  {
+   "check": "hpo_trial_6_evidence",
+   "passed": true,
+   "detail": "cv/bayes_hist_gradient_boosting_06.json"
+  },
+  {
+   "check": "hpo_trial_7_evidence",
+   "passed": true,
+   "detail": "cv/bayes_hist_gradient_boosting_07.json"
+  },
+  {
+   "check": "hpo_trial_8_evidence",
+   "passed": true,
+   "detail": "cv/bayes_hist_gradient_boosting_08.json"
+  },
+  {
+   "check": "hpo_trial_9_evidence",
+   "passed": true,
+   "detail": "cv/bayes_hist_gradient_boosting_09.json"
+  },
+  {
+   "check": "hpo_trial_10_evidence",
+   "passed": true,
+   "detail": "cv/bayes_hist_gradient_boosting_10.json"
+  },
+  {
+   "check": "hpo_trial_11_evidence",
+   "passed": true,
+   "detail": "cv/bayes_hist_gradient_boosting_11.json"
+  },
+  {
+   "check": "hpo_winner_consistent",
+   "passed": true,
+   "detail": "winner=trial5 objective=0.893392857142857"
+  },
+  {
+   "check": "hpo_reuse_provenance_shas",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "check": "hpo_fresh_trials_zero",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "check": "hpo_baseline_reproduced_by_fresh_cv",
+   "passed": true,
+   "detail": "fresh=0.8926785714285714 prior=0.8926785714285714"
+  },
+  {
+   "check": "tuned_cv_matches_hpo_winner",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "check": "results_sha256_in_acceptance",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "check": "acceptance_passed_flag",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "check": "frozen_model_sha_everywhere",
+   "passed": true,
+   "detail": "model_sha256=c9cc8e9f36838f656a94d07ed69632979df9981ca94a9daf3b52fbce052e4b34"
+  },
+  {
+   "check": "freeze_metadata_schema_shas",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "check": "freeze_run_is_tuned_hgb",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "check": "results_selected_model",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "check": "cv_objectives_match_selection_records",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "check": "selection_uses_train_only",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "check": "selection_is_argmax",
+   "passed": true,
+   "detail": "{'logistic_regression': 0.884, 'knn_distance_weighted': 0.8767857142857143, 'bagging': 0.8914642857142857, 'gaussian_nb': 0.8734285714285714, 'hist_gradient_boosting': 0.8926785714285714}"
+  },
+  {
+   "check": "train_complete_source_shas",
+   "passed": true,
+   "detail": "{\"experiments/final_five/run_final_five.py\": \"6e25f0492c8d48d62ff21ac05e5e5e5f6306ffdc27485458ee5d2f69e20adb65\", \"mapmatch/final_models.py\": \"df8771780ba705517a6b3942058c7a9d86d52fb2e9a13bb0e2e00559044b53ce\", \"experiments/final_five/PROTOCOL.md\": \"8e02a4a6c027ad64e85b1f1335944372cf6e9a6258a355060e823a2f28bec440\", \"mapmatch/learning.py\": \"de626dd12085cc404ede8eab774d2f79e3269fb3d2b1858975ffdc7da167"
+  },
+  {
+   "check": "train_complete_student_evaluator_not_loaded",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "check": "acceptance_model_logistic_regression",
+   "passed": true,
+   "detail": "sha=29157349d52a class=LogisticRegression"
+  },
+  {
+   "check": "acceptance_model_knn_distance_weighted",
+   "passed": true,
+   "detail": "sha=564e6f85f919 class=KNeighborsClassifier"
+  },
+  {
+   "check": "acceptance_model_bagging",
+   "passed": true,
+   "detail": "sha=619bc3d267fe class=BaggingClassifier"
+  },
+  {
+   "check": "acceptance_model_gaussian_nb",
+   "passed": true,
+   "detail": "sha=f79c03821ee5 class=GaussianNB"
+  },
+  {
+   "check": "acceptance_model_hist_gradient_boosting",
+   "passed": true,
+   "detail": "sha=7974b1eacc27 class=HistGradientBoostingClassifier"
+  },
+  {
+   "check": "acceptance_model_hist_gradient_boosting_tuned",
+   "passed": true,
+   "detail": "sha=47ea723d3505 class=HistGradientBoostingClassifier"
+  },
+  {
+   "check": "reuse_provenance_shas_logistic_regression",
+   "passed": true,
+   "detail": "experiments/phase_three/cv/logistic_regression.json"
+  },
+  {
+   "check": "metric_replay_oof_logistic_regression",
+   "passed": true,
+   "detail": "max_delta=0.000e+00 keys={}"
+  },
+  {
+   "check": "evaluation_model_sha_logistic_regression",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "check": "evaluation_predictions_sha_logistic_regression",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "check": "metric_replay_student_logistic_regression",
+   "passed": true,
+   "detail": "max_delta=0.000e+00 keys={}"
+  },
+  {
+   "check": "evaluation_fixture_delta_logistic_regression",
+   "passed": true,
+   "detail": "recorded_delta=1.665e-15"
+  },
+  {
+   "check": "reuse_provenance_shas_knn_distance_weighted",
+   "passed": true,
+   "detail": "experiments/phase_three/cv/knn_distance_weighted.json"
+  },
+  {
+   "check": "metric_replay_oof_knn_distance_weighted",
+   "passed": true,
+   "detail": "max_delta=0.000e+00 keys={}"
+  },
+  {
+   "check": "evaluation_model_sha_knn_distance_weighted",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "check": "evaluation_predictions_sha_knn_distance_weighted",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "check": "metric_replay_student_knn_distance_weighted",
+   "passed": true,
+   "detail": "max_delta=0.000e+00 keys={}"
+  },
+  {
+   "check": "evaluation_fixture_delta_knn_distance_weighted",
+   "passed": true,
+   "detail": "recorded_delta=0.000e+00"
+  },
+  {
+   "check": "reuse_provenance_shas_bagging",
+   "passed": true,
+   "detail": "experiments/phase_three/cv/bagging.json"
+  },
+  {
+   "check": "metric_replay_oof_bagging",
+   "passed": true,
+   "detail": "max_delta=0.000e+00 keys={}"
+  },
+  {
+   "check": "evaluation_model_sha_bagging",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "check": "evaluation_predictions_sha_bagging",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "check": "metric_replay_student_bagging",
+   "passed": true,
+   "detail": "max_delta=0.000e+00 keys={}"
+  },
+  {
+   "check": "evaluation_fixture_delta_bagging",
+   "passed": true,
+   "detail": "recorded_delta=0.000e+00"
+  },
+  {
+   "check": "metric_replay_oof_gaussian_nb",
+   "passed": true,
+   "detail": "max_delta=0.000e+00 keys={}"
+  },
+  {
+   "check": "evaluation_model_sha_gaussian_nb",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "check": "evaluation_predictions_sha_gaussian_nb",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "check": "metric_replay_student_gaussian_nb",
+   "passed": true,
+   "detail": "max_delta=0.000e+00 keys={}"
+  },
+  {
+   "check": "evaluation_fixture_delta_gaussian_nb",
+   "passed": true,
+   "detail": "recorded_delta=0.000e+00"
+  },
+  {
+   "check": "evaluation_train_trips_gaussian_nb",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "check": "metric_replay_oof_hist_gradient_boosting",
+   "passed": true,
+   "detail": "max_delta=0.000e+00 keys={}"
+  },
+  {
+   "check": "evaluation_model_sha_hist_gradient_boosting",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "check": "evaluation_predictions_sha_hist_gradient_boosting",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "check": "metric_replay_student_hist_gradient_boosting",
+   "passed": true,
+   "detail": "max_delta=0.000e+00 keys={}"
+  },
+  {
+   "check": "evaluation_fixture_delta_hist_gradient_boosting",
+   "passed": true,
+   "detail": "recorded_delta=0.000e+00"
+  },
+  {
+   "check": "evaluation_train_trips_hist_gradient_boosting",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "check": "metric_replay_oof_hist_gradient_boosting_tuned",
+   "passed": true,
+   "detail": "max_delta=0.000e+00 keys={}"
+  },
+  {
+   "check": "evaluation_model_sha_hist_gradient_boosting_tuned",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "check": "evaluation_predictions_sha_hist_gradient_boosting_tuned",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "check": "metric_replay_student_hist_gradient_boosting_tuned",
+   "passed": true,
+   "detail": "max_delta=0.000e+00 keys={}"
+  },
+  {
+   "check": "evaluation_fixture_delta_hist_gradient_boosting_tuned",
+   "passed": true,
+   "detail": "recorded_delta=0.000e+00"
+  },
+  {
+   "check": "evaluation_train_trips_hist_gradient_boosting_tuned",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "check": "training_record_sha_gaussian_nb",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "check": "training_record_fresh_gaussian_nb",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "check": "training_record_sha_hist_gradient_boosting",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "check": "training_record_fresh_hist_gradient_boosting",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "check": "training_record_sha_hist_gradient_boosting_tuned",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "check": "training_record_fresh_hist_gradient_boosting_tuned",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "check": "strict_fixture_replay_logistic_regression",
+   "passed": true,
+   "detail": "max_abs_delta=1.665e-15 rows=257"
+  },
+  {
+   "check": "strict_fixture_replay_knn_distance_weighted",
+   "passed": true,
+   "detail": "max_abs_delta=0.000e+00 rows=257"
+  },
+  {
+   "check": "strict_fixture_replay_bagging",
+   "passed": true,
+   "detail": "max_abs_delta=0.000e+00 rows=257"
+  },
+  {
+   "check": "strict_fixture_replay_gaussian_nb",
+   "passed": true,
+   "detail": "max_abs_delta=0.000e+00 rows=257"
+  },
+  {
+   "check": "strict_fixture_replay_hist_gradient_boosting",
+   "passed": true,
+   "detail": "max_abs_delta=0.000e+00 rows=257"
+  },
+  {
+   "check": "strict_fixture_replay_hist_gradient_boosting_tuned",
+   "passed": true,
+   "detail": "max_abs_delta=0.000e+00 rows=257"
+  },
+  {
+   "check": "clean_report_fixture_sha",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "check": "clean_report_claims",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "check": "versions_match_results_json",
+   "passed": true,
+   "detail": "{\"python\": \"3.14.6\", \"numpy\": \"2.5.5\", \"scipy\": \"1.18.0\", \"sklearn\": \"1.8.0\", \"joblib\": \"1.5.3\"}"
+  },
+  {
+   "check": "timestamps_ordered",
+   "passed": true,
+   "detail": "{\"train_complete\": \"2026-11-18T08:26:50.373220+00:00\", \"acceptance\": \"2026-11-18T08:26:57.167541+00:00\", \"clean_report\": \"2026-11-18T08:26:59.261354+00:00\"}"
+  },
+  {
+   "check": "gnb_old_attempt_preserved_and_distinct",
+   "passed": true,
+   "detail": "old(float32)=0.8733928571428571/ll=0.3410389 new(float64)=0.8734285714285714/ll=0.3391661"
+  },
+  {
+   "check": "protocol_discloses_correction",
+   "passed": true,
+   "detail": ""
+  }
+ ],
+ "failures": [],
+ "fixture2000_parent_probability_sha256": "ab95c4e50ba21fc65b4d265c4ed3ef33bfbbe64380f15ffa15df3aed9b0b9ea9",
+ "versions_now": {
+  "python": "3.14.6",
+  "numpy": "2.5.5",
+  "scipy": "1.18.0",
+  "sklearn": "1.8.0",
+  "joblib": "1.5.3"
+ },
+ "summary": {
+  "total": 111,
+  "passed": 111,
+  "failed": 0
+ }
+}

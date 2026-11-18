@@ -1,0 +1,346 @@
+{
+  "crop_box": [
+    16,
+    1900,
+    374,
+    2410
+  ],
+  "mean_word_confidence": 68.39,
+  "method": "tesseract --psm 11; actual saved crop, original pixels",
+  "text": "04\nRETURNED BY\nE RE:\n.\nEVALUATOR\nTHE API\nRun summary\nHHM ACCURACY\n\"\ni\n99.1%\nobservations\nP\naligned\nROUTE CONTINUITY\n\"\n100.0%\nServer-reported continuity\nMODEL INFERENCE\n2.8.\nServer-side prediction\nAPI ToTAL\n3.0.\nServer inference +\ning",
+  "words": [
+    {
+      "bbox": [
+        16,
+        19,
+        28,
+        26
+      ],
+      "text": "04"
+    },
+    {
+      "bbox": [
+        47,
+        19,
+        107,
+        26
+      ],
+      "text": "RETURNED"
+    },
+    {
+      "bbox": [
+        117,
+        19,
+        130,
+        26
+      ],
+      "text": "BY"
+    },
+    {
+      "bbox": [
+        183,
+        24,
+        188,
+        31
+      ],
+      "text": "E"
+    },
+    {
+      "bbox": [
+        198,
+        24,
+        210,
+        31
+      ],
+      "text": "RE:"
+    },
+    {
+      "bbox": [
+        228,
+        24,
+        239,
+        31
+      ],
+      "text": "."
+    },
+    {
+      "bbox": [
+        264,
+        24,
+        328,
+        31
+      ],
+      "text": "EVALUATOR"
+    },
+    {
+      "bbox": [
+        15,
+        34,
+        36,
+        41
+      ],
+      "text": "THE"
+    },
+    {
+      "bbox": [
+        46,
+        34,
+        67,
+        41
+      ],
+      "text": "API"
+    },
+    {
+      "bbox": [
+        16,
+        59,
+        44,
+        70
+      ],
+      "text": "Run"
+    },
+    {
+      "bbox": [
+        56,
+        61,
+        125,
+        73
+      ],
+      "text": "summary"
+    },
+    {
+      "bbox": [
+        33,
+        112,
+        53,
+        119
+      ],
+      "text": "HHM"
+    },
+    {
+      "bbox": [
+        62,
+        112,
+        121,
+        119
+      ],
+      "text": "ACCURACY"
+    },
+    {
+      "bbox": [
+        308,
+        114,
+        311,
+        119
+      ],
+      "text": "\""
+    },
+    {
+      "bbox": [
+        320,
+        113,
+        324,
+        119
+      ],
+      "text": "i"
+    },
+    {
+      "bbox": [
+        33,
+        137,
+        105,
+        154
+      ],
+      "text": "99.1%"
+    },
+    {
+      "bbox": [
+        33,
+        170,
+        102,
+        178
+      ],
+      "text": "observations"
+    },
+    {
+      "bbox": [
+        123,
+        172,
+        127,
+        180
+      ],
+      "text": "P"
+    },
+    {
+      "bbox": [
+        160,
+        170,
+        199,
+        180
+      ],
+      "text": "aligned"
+    },
+    {
+      "bbox": [
+        33,
+        217,
+        68,
+        224
+      ],
+      "text": "ROUTE"
+    },
+    {
+      "bbox": [
+        78,
+        217,
+        152,
+        224
+      ],
+      "text": "CONTINUITY"
+    },
+    {
+      "bbox": [
+        308,
+        219,
+        311,
+        224
+      ],
+      "text": "\""
+    },
+    {
+      "bbox": [
+        33,
+        242,
+        117,
+        259
+      ],
+      "text": "100.0%"
+    },
+    {
+      "bbox": [
+        33,
+        275,
+        121,
+        285
+      ],
+      "text": "Server-reported"
+    },
+    {
+      "bbox": [
+        129,
+        276,
+        185,
+        285
+      ],
+      "text": "continuity"
+    },
+    {
+      "bbox": [
+        32,
+        322,
+        68,
+        329
+      ],
+      "text": "MODEL"
+    },
+    {
+      "bbox": [
+        78,
+        322,
+        144,
+        329
+      ],
+      "text": "INFERENCE"
+    },
+    {
+      "bbox": [
+        33,
+        347,
+        84,
+        364
+      ],
+      "text": "2.8."
+    },
+    {
+      "bbox": [
+        33,
+        380,
+        97,
+        388
+      ],
+      "text": "Server-side"
+    },
+    {
+      "bbox": [
+        105,
+        380,
+        163,
+        390
+      ],
+      "text": "prediction"
+    },
+    {
+      "bbox": [
+        32,
+        427,
+        53,
+        434
+      ],
+      "text": "API"
+    },
+    {
+      "bbox": [
+        63,
+        427,
+        98,
+        434
+      ],
+      "text": "ToTAL"
+    },
+    {
+      "bbox": [
+        33,
+        452,
+        84,
+        469
+      ],
+      "text": "3.0."
+    },
+    {
+      "bbox": [
+        33,
+        486,
+        67,
+        493
+      ],
+      "text": "Server"
+    },
+    {
+      "bbox": [
+        75,
+        485,
+        127,
+        493
+      ],
+      "text": "inference"
+    },
+    {
+      "bbox": [
+        135,
+        489,
+        139,
+        490
+      ],
+      "text": "+"
+    },
+    {
+      "bbox": [
+        171,
+        487,
+        187,
+        495
+      ],
+      "text": "ing"
+    }
+  ]
+}

@@ -1,0 +1,103 @@
+{
+  "checked_at_utc": "2026-11-18T08:26:57.167541+00:00",
+  "passed": true,
+  "families": [
+    "logistic_regression",
+    "knn_distance_weighted",
+    "bagging",
+    "gaussian_nb",
+    "hist_gradient_boosting"
+  ],
+  "exactly_five_families": true,
+  "all_models": {
+    "logistic_regression": {
+      "passed": true,
+      "artifact": "artifacts/baselines/logistic_regression.joblib",
+      "sha256": "29157349d52a993d33cae78ed244805a9f087e79b6dc914aaa3b4461c02a58c9",
+      "estimator_class": "sklearn.pipeline.Pipeline",
+      "training_trip_count": 80,
+      "student_trip_count": 10,
+      "student_observations": 19160,
+      "student_rows": 175778,
+      "strict_fixture_rows": 257,
+      "max_probability_delta": 1.6653345369377348e-15,
+      "reused_fit": true
+    },
+    "knn_distance_weighted": {
+      "passed": true,
+      "artifact": "artifacts/phase_three/baselines/knn_distance_weighted.joblib",
+      "sha256": "564e6f85f9190d0ff19e75967613e4d56dbe573aaf80ef8780ed8374f8537246",
+      "estimator_class": "sklearn.pipeline.Pipeline",
+      "training_trip_count": 80,
+      "student_trip_count": 10,
+      "student_observations": 19160,
+      "student_rows": 175778,
+      "strict_fixture_rows": 257,
+      "max_probability_delta": 0.0,
+      "reused_fit": true
+    },
+    "bagging": {
+      "passed": true,
+      "artifact": "artifacts/phase_three/baselines/bagging.joblib",
+      "sha256": "619bc3d267fec686d3ee0d212b3d13a4c8d9bd46e35893f3f570253d232822b6",
+      "estimator_class": "sklearn.ensemble._bagging.BaggingClassifier",
+      "training_trip_count": 80,
+      "student_trip_count": 10,
+      "student_observations": 19160,
+      "student_rows": 175778,
+      "strict_fixture_rows": 257,
+      "max_probability_delta": 0.0,
+      "reused_fit": true
+    },
+    "gaussian_nb": {
+      "passed": true,
+      "artifact": "artifacts/final_five/baselines/gaussian_nb.joblib",
+      "sha256": "f79c03821ee50a9cdb9912031dd56df0f0e54379bb48ad63116315e5400b8579",
+      "estimator_class": "sklearn.pipeline.Pipeline",
+      "training_trip_count": 80,
+      "student_trip_count": 10,
+      "student_observations": 19160,
+      "student_rows": 175778,
+      "strict_fixture_rows": 257,
+      "max_probability_delta": 0.0,
+      "reused_fit": false
+    },
+    "hist_gradient_boosting": {
+      "passed": true,
+      "artifact": "artifacts/final_five/baselines/hist_gradient_boosting.joblib",
+      "sha256": "7974b1eacc2787ade3becd48b0d1079bd673be83f15183bdad0839a4fc71ce85",
+      "estimator_class": "sklearn.ensemble._hist_gradient_boosting.gradient_boosting.HistGradientBoostingClassifier",
+      "training_trip_count": 80,
+      "student_trip_count": 10,
+      "student_observations": 19160,
+      "student_rows": 175778,
+      "strict_fixture_rows": 257,
+      "max_probability_delta": 0.0,
+      "reused_fit": false
+    },
+    "hist_gradient_boosting_tuned": {
+      "passed": true,
+      "artifact": "artifacts/final_five/baselines/hist_gradient_boosting_tuned.joblib",
+      "sha256": "47ea723d350567b6eeba827744e2c1a26c9baf915d322e29a590f45922ed8eeb",
+      "estimator_class": "sklearn.ensemble._hist_gradient_boosting.gradient_boosting.HistGradientBoostingClassifier",
+      "training_trip_count": 80,
+      "student_trip_count": 10,
+      "student_observations": 19160,
+      "student_rows": 175778,
+      "strict_fixture_rows": 257,
+      "max_probability_delta": 0.0,
+      "reused_fit": false
+    }
+  },
+  "fresh_fits": [
+    "gaussian_nb",
+    "hist_gradient_boosting",
+    "hist_gradient_boosting_tuned"
+  ],
+  "all80_train_trips": true,
+  "all10_student_trips": true,
+  "student_used_for_selection": false,
+  "evaluator_accessed": false,
+  "selected_model_sha256": "c9cc8e9f36838f656a94d07ed69632979df9981ca94a9daf3b52fbce052e4b34",
+  "results_sha256": "8956d9360daae8723875e6a7f6fb8a98941ebf85d0eee9c8cab8cdf68979f6a8"
+}

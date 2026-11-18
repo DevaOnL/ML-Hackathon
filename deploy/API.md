@@ -6,6 +6,14 @@ the same origin for its UI and API. There is no upload, arbitrary-path,
 model-download, reference-download, directory-listing, or public documentation
 endpoint.
 
+## Separate dataset sections
+
+`GET /datasets` returns a safe catalogue with closed IDs `development` and `evaluator`, each with label, role, availability, trip count, expected count and status. An unset evaluator root reports `not_configured` and zero available trips.
+
+`GET /datasets/{id}/trips` returns that section’s registered trips plus mandatory `dataset_id` and `dataset_role`. `POST /datasets/{id}/match` accepts exactly `{"trip_id":"00000015"}` and echoes the same dataset identity. Unknown dataset IDs are rejected before reading or parsing the request body. Paths, model/configuration choices, labels and reference geometry are never request fields.
+
+Both sections share one frozen model/configuration and bounded inference slot; registries, graph caches and private references remain separate. The same trip ID in two sections cannot select the other section’s inputs. Legacy `/trips` and `/match` continue to target development only. See the [full dataset contract](<../docs/EVALUATOR_SECTION_PLAN.md>) and [implementation tests](<../tests/test_datasets.py>).
+
 ## GET /health
 
 Returns HTTP 200 with readiness information. A reachable process is not
@@ -152,7 +160,7 @@ exact configured origins, never `*`, without credentials. Origin-present match
 requests are also explicitly rejected before model work if neither same-origin
 nor allowed; `Origin: null` is rejected. Requests with no Origin header remain
 allowed for CLI/evaluator clients. This is not authentication: the public
-deployment intentionally exposes its fixed ten-trip demo. One inference is admitted at a time by default; excess work
+deployment intentionally exposes two fixed ten-trip sections when the evaluator partition is explicitly configured. One inference is admitted at a time by default; excess work
 is rejected rather than queued without bound. The launcher also bounds Uvicorn
 connection concurrency.
 

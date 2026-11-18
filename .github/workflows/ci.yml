@@ -25,3 +25,5 @@ jobs:
         run: python -B -m unittest discover -s infrastructure -p test_hosting.py -v
       - name: Frontend API adapter tests
         run: node frontend/smoke.mjs && node --test tests/frontend_adapter.test.mjs
+      - name: Check final measured report and all public evidence hashes
+        run: python -B scripts/build_final_report.py --check

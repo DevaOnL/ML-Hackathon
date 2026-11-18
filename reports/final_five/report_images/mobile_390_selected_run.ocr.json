@@ -1,0 +1,184 @@
+{
+  "crop_box": [
+    16,
+    1125,
+    374,
+    1315
+  ],
+  "mean_word_confidence": 78.69,
+  "method": "tesseract --psm 11; actual saved crop, original pixels",
+  "text": "SELECTED TRIP\n00000087\n1,309 original 6ps observations\n[\nRun again -\n1\nInference and scoring run on the server.",
+  "words": [
+    {
+      "bbox": [
+        30,
+        26,
+        90,
+        33
+      ],
+      "text": "SELECTED"
+    },
+    {
+      "bbox": [
+        100,
+        26,
+        129,
+        33
+      ],
+      "text": "TRIP"
+    },
+    {
+      "bbox": [
+        30,
+        46,
+        92,
+        55
+      ],
+      "text": "00000087"
+    },
+    {
+      "bbox": [
+        31,
+        70,
+        62,
+        79
+      ],
+      "text": "1,309"
+    },
+    {
+      "bbox": [
+        70,
+        69,
+        122,
+        79
+      ],
+      "text": "original"
+    },
+    {
+      "bbox": [
+        130,
+        70,
+        148,
+        77
+      ],
+      "text": "6ps"
+    },
+    {
+      "bbox": [
+        156,
+        69,
+        234,
+        77
+      ],
+      "text": "observations"
+    },
+    {
+      "bbox": [
+        115,
+        119,
+        118,
+        131
+      ],
+      "text": "["
+    },
+    {
+      "bbox": [
+        134,
+        119,
+        155,
+        128
+      ],
+      "text": "Run"
+    },
+    {
+      "bbox": [
+        163,
+        121,
+        199,
+        131
+      ],
+      "text": "again"
+    },
+    {
+      "bbox": [
+        211,
+        122,
+        222,
+        129
+      ],
+      "text": "-"
+    },
+    {
+      "bbox": [
+        240,
+        119,
+        243,
+        131
+      ],
+      "text": "1"
+    },
+    {
+      "bbox": [
+        16,
+        158,
+        71,
+        166
+      ],
+      "text": "Inference"
+    },
+    {
+      "bbox": [
+        79,
+        158,
+        96,
+        166
+      ],
+      "text": "and"
+    },
+    {
+      "bbox": [
+        104,
+        160,
+        147,
+        168
+      ],
+      "text": "scoring"
+    },
+    {
+      "bbox": [
+        155,
+        160,
+        172,
+        166
+      ],
+      "text": "run"
+    },
+    {
+      "bbox": [
+        179,
+        160,
+        191,
+        166
+      ],
+      "text": "on"
+    },
+    {
+      "bbox": [
+        199,
+        158,
+        216,
+        166
+      ],
+      "text": "the"
+    },
+    {
+      "bbox": [
+        224,
+        160,
+        260,
+        166
+      ],
+      "text": "server."
+    }
+  ]
+}

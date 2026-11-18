@@ -1,0 +1,238 @@
+{
+  "crop_box": [
+    385,
+    1090,
+    890,
+    1345
+  ],
+  "mean_word_confidence": 71.32,
+  "method": "tesseract --psm 11; actual saved crop, original pixels",
+  "text": "04\nRETURNED BY THE API\nRun summary\nHHM ACCURACY\nROUTE CONTINUITY\n.\n91.1%\n100.0%\nobservations\nproxy-aligned\nServer-reported continuity\nHMH MACRO F1\nCLASSIFIER ToP-1\n87.0%\n87.3%",
+  "words": [
+    {
+      "bbox": [
+        8,
+        20,
+        20,
+        27
+      ],
+      "text": "04"
+    },
+    {
+      "bbox": [
+        39,
+        20,
+        99,
+        27
+      ],
+      "text": "RETURNED"
+    },
+    {
+      "bbox": [
+        109,
+        20,
+        122,
+        27
+      ],
+      "text": "BY"
+    },
+    {
+      "bbox": [
+        132,
+        20,
+        153,
+        27
+      ],
+      "text": "THE"
+    },
+    {
+      "bbox": [
+        163,
+        20,
+        184,
+        27
+      ],
+      "text": "API"
+    },
+    {
+      "bbox": [
+        8,
+        44,
+        36,
+        55
+      ],
+      "text": "Run"
+    },
+    {
+      "bbox": [
+        49,
+        46,
+        117,
+        58
+      ],
+      "text": "summary"
+    },
+    {
+      "bbox": [
+        25,
+        98,
+        45,
+        105
+      ],
+      "text": "HHM"
+    },
+    {
+      "bbox": [
+        54,
+        98,
+        113,
+        105
+      ],
+      "text": "ACCURACY"
+    },
+    {
+      "bbox": [
+        273,
+        98,
+        308,
+        105
+      ],
+      "text": "ROUTE"
+    },
+    {
+      "bbox": [
+        318,
+        98,
+        392,
+        105
+      ],
+      "text": "CONTINUITY"
+    },
+    {
+      "bbox": [
+        475,
+        99,
+        485,
+        101
+      ],
+      "text": "."
+    },
+    {
+      "bbox": [
+        25,
+        123,
+        97,
+        140
+      ],
+      "text": "91.1%"
+    },
+    {
+      "bbox": [
+        274,
+        123,
+        360,
+        140
+      ],
+      "text": "100.0%"
+    },
+    {
+      "bbox": [
+        25,
+        156,
+        95,
+        164
+      ],
+      "text": "observations"
+    },
+    {
+      "bbox": [
+        115,
+        156,
+        191,
+        166
+      ],
+      "text": "proxy-aligned"
+    },
+    {
+      "bbox": [
+        273,
+        156,
+        361,
+        166
+      ],
+      "text": "Server-reported"
+    },
+    {
+      "bbox": [
+        369,
+        157,
+        426,
+        166
+      ],
+      "text": "continuity"
+    },
+    {
+      "bbox": [
+        25,
+        200,
+        45,
+        207
+      ],
+      "text": "HMH"
+    },
+    {
+      "bbox": [
+        56,
+        200,
+        92,
+        207
+      ],
+      "text": "MACRO"
+    },
+    {
+      "bbox": [
+        103,
+        200,
+        115,
+        207
+      ],
+      "text": "F1"
+    },
+    {
+      "bbox": [
+        355,
+        200,
+        431,
+        207
+      ],
+      "text": "CLASSIFIER"
+    },
+    {
+      "bbox": [
+        441,
+        200,
+        477,
+        207
+      ],
+      "text": "ToP-1"
+    },
+    {
+      "bbox": [
+        25,
+        223,
+        75,
+        234
+      ],
+      "text": "87.0%"
+    },
+    {
+      "bbox": [
+        356,
+        223,
+        406,
+        234
+      ],
+      "text": "87.3%"
+    }
+  ]
+}

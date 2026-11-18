@@ -1,0 +1,30 @@
+✔ public HTTPS deployment is same origin with strict API configuration (1.198994ms)
+✔ health readiness requires explicit loaded model and strips untrusted server fields (0.256983ms)
+✔ trip catalogue is dynamic, retains exact string IDs and rejects duplicate IDs (0.701719ms)
+✔ GeoJSON geometry keeps lon/lat only and discards all supplied properties (0.481334ms)
+✔ match response accepts only selected trip and allowlisted geometry/scalar metrics (0.508796ms)
+✔ match transport sends only selected trip, no-store and no labels or geometry (0.410492ms)
+✔ HTTP and network errors never interpolate sensitive server error details (0.58524ms)
+✔ timeout and caller abort remain distinct and never claim server computation cancelled (4.886445ms)
+✔ unset evaluator retains real zero count and not_configured state (0.454274ms)
+✔ two dataset sections keep exact expected_trip_count and normalize order (0.211738ms)
+✔ dataset paths accept only the exact closed development/evaluator enum (0.282712ms)
+✔ dataset catalogue rejects missing, duplicate, unknown, and conflicting identities (0.244499ms)
+✔ dataset trips require echoed dataset id and role, valid count, and string IDs (0.440468ms)
+✔ dataset match identity is mandatory even when both sections share a trip ID (0.344027ms)
+✔ freshness checks reject same-trip switches, switch backs, reconnects, and old runs (0.105087ms)
+✔ theme primitives default to dark and give accurate accessible toggle actions (0.130586ms)
+✔ dataset transport sends one exact trip_id field to each selected match endpoint (0.273153ms)
+✔ transport rejects an aborted late body even if a fetch implementation ignores abort (0.231575ms)
+✔ app leaves evaluator disabled and never requests its trips while unconfigured (28.391196ms)
+✔ app switches separate radio catalogues with keyboard tab focus and clears prior output (6.611588ms)
+✔ late same-trip result cannot overwrite a new dataset run or its loading state (3.725292ms)
+✔ app restores local light preference and toggles dark without storing predictions (2.982636ms)
+ℹ tests 22
+ℹ suites 0
+ℹ pass 22
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 101.512259

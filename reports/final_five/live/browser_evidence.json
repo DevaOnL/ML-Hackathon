@@ -1,0 +1,790 @@
+{
+  "collected_at_utc": "2026-11-18T09:06:20.453469+00:00",
+  "base_url": "https://ml.d3va.dev",
+  "mocked": false,
+  "passed": true,
+  "source": "actual Chromium page and POST responses; no interception/mocks or replacement server",
+  "browser_errors": [],
+  "console_errors": [],
+  "external_requests": [],
+  "responses": [
+    {
+      "trip_id": "00000009",
+      "http_status": 200,
+      "client_elapsed_ms": 3657.7499759987404,
+      "request_id": "e5c74616aa5f40f7ac9acbf2459d9678",
+      "timings": {
+        "inference_ms": 3044.586,
+        "scoring_ms": 149.628,
+        "total_ms": 3220.53
+      },
+      "metrics": {
+        "accuracy": 0.9113441372735939,
+        "precision": 0.8823221335911691,
+        "recall": 0.8702057249011564,
+        "macro_f1": 0.8698383843024035,
+        "top1_accuracy": 0.8732125834127741,
+        "candidate_miss_rate": 0.0,
+        "log_loss": 0.4432104809607154,
+        "route_continuity": 1.0,
+        "route_edge_f1": 0.9690721649484535,
+        "route_length_f1": 0.9738641838539935,
+        "sequence_similarity": 0.9504504504504504,
+        "classifier_accuracy": 0.8732125834127741,
+        "classifier_precision": 0.8279148110083362,
+        "classifier_recall": 0.7956414621882247,
+        "classifier_macro_f1": 0.8021536949594503,
+        "scored_observation_fraction": 1.0
+      },
+      "metrics_status": "ok",
+      "diagnostics": {
+        "observation_count": 1049,
+        "matched_observation_count": 1049,
+        "route_arc_count": 444,
+        "route_length_m": 11765.138625542873,
+        "break_count": 0,
+        "learned_emission_observations": 1049,
+        "lateral_distance_median_m": 4.545695768165574,
+        "lateral_distance_p95_m": 16.69989054381084,
+        "uses_reference_route": false,
+        "effective_max_candidates": 12,
+        "candidate_retry_attempt_count": 0,
+        "requested_max_candidates": 12
+      },
+      "model": {
+        "name": "hist_gradient_boosting",
+        "sha256": "c9cc8e9f36838f656a94d07ed69632979df9981ca94a9daf3b52fbce052e4b34",
+        "algorithm": "learned_classifier_hmm_viterbi",
+        "feature_count": 38,
+        "seed": 20261118
+      },
+      "match_config_hash": "e326b1afda125897cd784ab335fbcd7c869fcd70714c5203ef5c2c71977b3288",
+      "prediction_feature_count": 1,
+      "raw_feature_count": 1,
+      "observation_assignment_count": 1049,
+      "predicted_geometry_sha256": "10c6896d649f543aca7a80c8385deeb6e34d73ec696a553784a5330303de5bcb",
+      "matched_edge_array_sha256": "3ca542fa7b75e48bf6c5d8ba8e4e4ff6ab842b1187d757b293e2adb38dea4733",
+      "dataset_id": "development",
+      "response_checks": {
+        "http_200": true,
+        "scoring_ok": true,
+        "model_hash": true,
+        "config_hash": true,
+        "request_id_present": true,
+        "matched_states": true,
+        "predicted_geometry": true,
+        "observation_count": true,
+        "learned_every_observation": true,
+        "no_reference_in_prediction": true,
+        "length_f1": true,
+        "edge_f1": true,
+        "dataset_identity": true,
+        "model_name": true,
+        "all_observation_counts": true,
+        "finite_json": true,
+        "metric_ranges": true,
+        "metric_parity:sequence_similarity": true,
+        "metric_parity:route_continuity": true,
+        "private_reference_not_in_response": true,
+        "full_original_observation_order": true,
+        "raw_gps_count": true
+      },
+      "checks": {
+        "http_200": true,
+        "scoring_ok": true,
+        "model_hash": true,
+        "config_hash": true,
+        "request_id_present": true,
+        "matched_states": true,
+        "predicted_geometry": true,
+        "observation_count": true,
+        "learned_every_observation": true,
+        "no_reference_in_prediction": true,
+        "length_f1": true,
+        "edge_f1": true,
+        "dataset_identity": true,
+        "model_name": true,
+        "all_observation_counts": true,
+        "finite_json": true,
+        "metric_ranges": true,
+        "metric_parity:sequence_similarity": true,
+        "metric_parity:route_continuity": true,
+        "private_reference_not_in_response": true,
+        "full_original_observation_order": true,
+        "raw_gps_count": true,
+        "all_metrics_equal_actual_asgi": true,
+        "exact_request_body": true
+      }
+    },
+    {
+      "trip_id": "00000087",
+      "http_status": 200,
+      "client_elapsed_ms": 3711.222918002022,
+      "request_id": "cdfbc4474f3840ec8f271e9e79e90635",
+      "timings": {
+        "inference_ms": 2813.639,
+        "scoring_ms": 179.56,
+        "total_ms": 3019.632
+      },
+      "metrics": {
+        "accuracy": 0.9907076483202287,
+        "precision": 0.9790050635638871,
+        "recall": 0.9785067873303167,
+        "macro_f1": 0.9772888331711862,
+        "top1_accuracy": 0.9463902787705504,
+        "candidate_miss_rate": 0.0,
+        "log_loss": 0.12127006198376332,
+        "route_continuity": 1.0,
+        "route_edge_f1": 0.9988998899889989,
+        "route_length_f1": 0.9976762329899266,
+        "sequence_similarity": 0.9978021978021978,
+        "classifier_accuracy": 0.9463902787705504,
+        "classifier_precision": 0.8729626902307315,
+        "classifier_recall": 0.8472385861561119,
+        "classifier_macro_f1": 0.8543095926601082,
+        "scored_observation_fraction": 1.0
+      },
+      "metrics_status": "ok",
+      "diagnostics": {
+        "observation_count": 1399,
+        "matched_observation_count": 1399,
+        "route_arc_count": 454,
+        "route_length_m": 37812.17613468126,
+        "break_count": 0,
+        "learned_emission_observations": 1399,
+        "lateral_distance_median_m": 4.764973497808093,
+        "lateral_distance_p95_m": 14.562096462077966,
+        "uses_reference_route": false,
+        "effective_max_candidates": 12,
+        "candidate_retry_attempt_count": 0,
+        "requested_max_candidates": 12
+      },
+      "model": {
+        "name": "hist_gradient_boosting",
+        "sha256": "c9cc8e9f36838f656a94d07ed69632979df9981ca94a9daf3b52fbce052e4b34",
+        "algorithm": "learned_classifier_hmm_viterbi",
+        "feature_count": 38,
+        "seed": 20261118
+      },
+      "match_config_hash": "e326b1afda125897cd784ab335fbcd7c869fcd70714c5203ef5c2c71977b3288",
+      "prediction_feature_count": 1,
+      "raw_feature_count": 1,
+      "observation_assignment_count": 1399,
+      "predicted_geometry_sha256": "d5b73d634cdadcb18d64d8b99276c1d6abec5993e679490b19aa135b79f9ffa4",
+      "matched_edge_array_sha256": "6b09d2c0b38cc30b37430aaafb0c7c35200b6ad90c573726c671de1e6e211bfc",
+      "dataset_id": "evaluator",
+      "response_checks": {
+        "http_200": true,
+        "scoring_ok": true,
+        "model_hash": true,
+        "config_hash": true,
+        "request_id_present": true,
+        "matched_states": true,
+        "predicted_geometry": true,
+        "observation_count": true,
+        "learned_every_observation": true,
+        "no_reference_in_prediction": true,
+        "length_f1": true,
+        "edge_f1": true,
+        "dataset_identity": true,
+        "model_name": true,
+        "all_observation_counts": true,
+        "finite_json": true,
+        "metric_ranges": true,
+        "metric_parity:sequence_similarity": true,
+        "metric_parity:route_continuity": true,
+        "private_reference_not_in_response": true,
+        "full_original_observation_order": true,
+        "raw_gps_count": true
+      },
+      "checks": {
+        "http_200": true,
+        "scoring_ok": true,
+        "model_hash": true,
+        "config_hash": true,
+        "request_id_present": true,
+        "matched_states": true,
+        "predicted_geometry": true,
+        "observation_count": true,
+        "learned_every_observation": true,
+        "no_reference_in_prediction": true,
+        "length_f1": true,
+        "edge_f1": true,
+        "dataset_identity": true,
+        "model_name": true,
+        "all_observation_counts": true,
+        "finite_json": true,
+        "metric_ranges": true,
+        "metric_parity:sequence_similarity": true,
+        "metric_parity:route_continuity": true,
+        "private_reference_not_in_response": true,
+        "full_original_observation_order": true,
+        "raw_gps_count": true,
+        "all_metrics_equal_actual_asgi": true,
+        "exact_request_body": true
+      }
+    }
+  ],
+  "screenshots": [
+    {
+      "path": "reports/final_five/live/screenshots/ui_desktop.png",
+      "sha256": "8089e79173e353a0e39ba33ee6656032375e7219fd15b6be7deb8658471bf69c",
+      "width": 1440,
+      "height": 2349,
+      "bytes": 296362,
+      "dataset_id": "development",
+      "theme": "dark"
+    },
+    {
+      "path": "reports/final_five/live/screenshots/ui_route_map.png",
+      "sha256": "ef165839e389f97177f136b166df859f1752dc195d459456459616267388678c",
+      "width": 991,
+      "height": 498,
+      "bytes": 51472,
+      "dataset_id": "development",
+      "theme": "dark"
+    },
+    {
+      "path": "reports/final_five/live/screenshots/ui_light.png",
+      "sha256": "d15f647c52aa5673c83b6d82f60be963f5bb1f54db9c89f958f9c7f573b91001",
+      "width": 1440,
+      "height": 2349,
+      "bytes": 284737,
+      "dataset_id": "development",
+      "theme": "light"
+    },
+    {
+      "path": "reports/final_five/live/screenshots/ui_mobile_320.png",
+      "sha256": "0c44f138d455b59df0070303ba1d06103d5ae4c6c3e14b2e1a9f2c4d8b66d0c5",
+      "width": 320,
+      "height": 5008,
+      "bytes": 234989,
+      "dataset_id": "evaluator",
+      "theme": "dark"
+    },
+    {
+      "path": "reports/final_five/live/screenshots/ui_mobile.png",
+      "sha256": "c98b570dbb6bcd2209e413ecd23a47c183ad32173f67a7972b0ee97387ca9fce",
+      "width": 390,
+      "height": 4415,
+      "bytes": 240034,
+      "dataset_id": "evaluator",
+      "theme": "dark"
+    },
+    {
+      "path": "reports/final_five/live/screenshots/ui_evaluator.png",
+      "sha256": "e0ed2ae759b3eddb90b316c31f44f3ff205d5ed3567e8365b0a241f309a3faf6",
+      "width": 1440,
+      "height": 2349,
+      "bytes": 265708,
+      "dataset_id": "evaluator",
+      "theme": "dark"
+    }
+  ],
+  "layout_checks": [
+    {
+      "viewport_width": 320,
+      "document_width": 320,
+      "horizontal_overflow": false,
+      "body_width": 320,
+      "dataset_id": "development",
+      "theme": "dark"
+    },
+    {
+      "viewport_width": 390,
+      "document_width": 390,
+      "horizontal_overflow": false,
+      "body_width": 390,
+      "dataset_id": "development",
+      "theme": "dark"
+    },
+    {
+      "viewport_width": 768,
+      "document_width": 768,
+      "horizontal_overflow": false,
+      "body_width": 768,
+      "dataset_id": "development",
+      "theme": "dark"
+    },
+    {
+      "viewport_width": 1440,
+      "document_width": 1440,
+      "horizontal_overflow": false,
+      "body_width": 1440,
+      "dataset_id": "development",
+      "theme": "dark"
+    },
+    {
+      "viewport_width": 320,
+      "document_width": 320,
+      "horizontal_overflow": false,
+      "body_width": 320,
+      "dataset_id": "development",
+      "theme": "light"
+    },
+    {
+      "viewport_width": 390,
+      "document_width": 390,
+      "horizontal_overflow": false,
+      "body_width": 390,
+      "dataset_id": "development",
+      "theme": "light"
+    },
+    {
+      "viewport_width": 768,
+      "document_width": 768,
+      "horizontal_overflow": false,
+      "body_width": 768,
+      "dataset_id": "development",
+      "theme": "light"
+    },
+    {
+      "viewport_width": 1440,
+      "document_width": 1440,
+      "horizontal_overflow": false,
+      "body_width": 1440,
+      "dataset_id": "development",
+      "theme": "light"
+    },
+    {
+      "viewport_width": 320,
+      "document_width": 320,
+      "horizontal_overflow": false,
+      "body_width": 320,
+      "dataset_id": "evaluator",
+      "theme": "dark"
+    },
+    {
+      "viewport_width": 390,
+      "document_width": 390,
+      "horizontal_overflow": false,
+      "body_width": 390,
+      "dataset_id": "evaluator",
+      "theme": "dark"
+    },
+    {
+      "viewport_width": 768,
+      "document_width": 768,
+      "horizontal_overflow": false,
+      "body_width": 768,
+      "dataset_id": "evaluator",
+      "theme": "dark"
+    },
+    {
+      "viewport_width": 1440,
+      "document_width": 1440,
+      "horizontal_overflow": false,
+      "body_width": 1440,
+      "dataset_id": "evaluator",
+      "theme": "dark"
+    },
+    {
+      "viewport_width": 320,
+      "document_width": 320,
+      "horizontal_overflow": false,
+      "body_width": 320,
+      "dataset_id": "evaluator",
+      "theme": "light"
+    },
+    {
+      "viewport_width": 390,
+      "document_width": 390,
+      "horizontal_overflow": false,
+      "body_width": 390,
+      "dataset_id": "evaluator",
+      "theme": "light"
+    },
+    {
+      "viewport_width": 768,
+      "document_width": 768,
+      "horizontal_overflow": false,
+      "body_width": 768,
+      "dataset_id": "evaluator",
+      "theme": "light"
+    },
+    {
+      "viewport_width": 1440,
+      "document_width": 1440,
+      "horizontal_overflow": false,
+      "body_width": 1440,
+      "dataset_id": "evaluator",
+      "theme": "light"
+    }
+  ],
+  "datasets": {
+    "development": {
+      "trip_count": 10,
+      "trip_ids": [
+        "00000000",
+        "00000007",
+        "00000009",
+        "00000040",
+        "00000052",
+        "00000056",
+        "00000065",
+        "00000076",
+        "00000077",
+        "00000091"
+      ],
+      "selected_trip_id": "00000009",
+      "request_id": "e5c74616aa5f40f7ac9acbf2459d9678",
+      "displayed_request_id": "e5c74616aa5f40f7ac9acbf2459d9678",
+      "displayed_model_hash": "c9cc8e9f36838f656a94d07ed69632979df9981ca94a9daf3b52fbce052e4b34",
+      "accuracy_display": "91.1%",
+      "map": {
+        "canvases": 1,
+        "leaflet_panes": 7,
+        "leaflet_controls": 3,
+        "canvas_pixels": [
+          {
+            "width": 1189,
+            "height": 596,
+            "drawn_pixels": 14840,
+            "route_color_pixels": 6584,
+            "gps_color_pixels": 947
+          }
+        ]
+      }
+    },
+    "evaluator": {
+      "trip_count": 10,
+      "trip_ids": [
+        "00000015",
+        "00000017",
+        "00000023",
+        "00000030",
+        "00000049",
+        "00000059",
+        "00000067",
+        "00000073",
+        "00000087",
+        "00000094"
+      ],
+      "selected_trip_id": "00000087",
+      "request_id": "cdfbc4474f3840ec8f271e9e79e90635",
+      "displayed_request_id": "cdfbc4474f3840ec8f271e9e79e90635",
+      "displayed_model_hash": "c9cc8e9f36838f656a94d07ed69632979df9981ca94a9daf3b52fbce052e4b34",
+      "accuracy_display": "99.1%",
+      "map": {
+        "canvases": 1,
+        "leaflet_panes": 7,
+        "leaflet_controls": 3,
+        "canvas_pixels": [
+          {
+            "width": 1189,
+            "height": 596,
+            "drawn_pixels": 6151,
+            "route_color_pixels": 2784,
+            "gps_color_pixels": 94
+          }
+        ]
+      }
+    }
+  },
+  "checks": {
+    "dark_default": true,
+    "both_actual_ten_counts": true,
+    "theme_changes_no_post": true,
+    "two_exact_dataset_posts": true,
+    "fresh_two_request_ids": true,
+    "modal_escape_and_focus": true,
+    "theme_persists_after_reload": true,
+    "reload_no_post": true,
+    "refreshed_current_static_bytes": true,
+    "clean_browser": true
+  },
+  "source_sha256_before": {
+    "backend/__init__.py": "14e134d2078ec2e77aa956fa6a83467e8c0dd7110d4b38c137db302c22e62f15",
+    "backend/app.py": "48516bfe5f3ad99930918633ce4d2c8e2a5c1e0d39e8547454a67121f36c0635",
+    "backend/boundary.py": "918626aad3e575f7e902dfe3bab1823e9ecda4566e9f6005d1261718d4d355b6",
+    "backend/config.py": "5bd9d0652fa12a9eabf754ea447ff40dec639a0e25e7bb22c2c8f3cac9dd3a0a",
+    "backend/datasets.py": "be19af740eee72ac76d84508ed533063d325a4b837d3a0f3f201d1c0bc9f92b4",
+    "backend/emissions.py": "819384fdb1c70ddbf52e11f1227b5291317719b5b5361ced1180c442957c86cc",
+    "backend/errors.py": "57f422c9c204c910f4112aa8c9715e1d457e8302aecdabcc6d7b04f58cd8164c",
+    "backend/geometry.py": "84248a1bab5a8850e5c877b19175b6b7c72d5d4caa56de6bc094a8c9b241b993",
+    "backend/main.py": "5c92b539fbc9edc8d29348c734911c5508279e2f5b593fa1bdd70b585ef9e369",
+    "backend/registry.py": "b601bb18d80888d5d0d19555c91fe9aa6c382472943c879eaeff4522b9b79d66",
+    "backend/scoring.py": "49b20b3ddd4ec6eeebd8795fe16f72ce7ba242bb09cb925edc890b23078bfaea",
+    "backend/service.py": "cb3dbed6c1a16f9877987fff9b2a24689203424cd4fdef0a683520af02984b2c",
+    "backend/static.py": "415ae46946a4c251dca267892144acacf97de3f88b4e9224e1aca2000b05d18a",
+    "mapmatch/__init__.py": "75c90c0358ffde7229f6c7cc47989640674f4bfc711072b8e7b0f6a6e6334132",
+    "mapmatch/__main__.py": "935a1c1166b0c1ea35a82256345000bf2c73ded718d77773bc27a71ecce28f7d",
+    "mapmatch/candidates.py": "4a9d2126074ca8bd78e3d513f2cf578fcc7415cfef68768b3c5a9983cd7504e1",
+    "mapmatch/cli.py": "5885ea87e35cc628523a14ef20d905a540c719440b0865ff4912bfb096a0d10e",
+    "mapmatch/data.py": "89982d7a21c359ad0bc8dba061498b47e05967750325eb83dc81828e8ecf9ce9",
+    "mapmatch/experiments.py": "60a27b7255122e74a987eec3319f2587e414ac817cf310f932a2c0699b5b2cda",
+    "mapmatch/features.py": "d39e908b0b4f7d89d969542a835e0935f07086c97b6546dc8e686efee151adb0",
+    "mapmatch/final_models.py": "df8771780ba705517a6b3942058c7a9d86d52fb2e9a13bb0e2e00559044b53ce",
+    "mapmatch/learning.py": "de626dd12085cc404ede8eab774d2f79e3269fb3d2b1858975ffdc7da167280c",
+    "mapmatch/matcher.py": "af58502cdfe8de12cb13ea5ab3e1e8c9ef7aee9cf6f3faec8dea5cbfbedc4bff",
+    "mapmatch/metrics.py": "94e1ba8fc0ec60c46b8ea06d08ee6f86c655a915ff511da41d446ff7c5f1c882",
+    "mapmatch/phase_models.py": "05bc7b0b1bcbe70f75b769ddb3ace412a6ab5aaeb74f7ab547aab05b4fb9f0e0",
+    "mapmatch/routing.py": "fca3940cb7066b6e247bb0285690ed016dc66fa12d3e4d3c13aed5e5e032bf78",
+    "scripts/verify_final_api.py": "e01cda3bdb5ff333b00aacc2fff690c813cccdbd24f6230f5ea9b5618420880f",
+    "scripts/live_evidence.py": "b0553b294013574c3b40f5389e44227e31e2f9a3d698e69e18685289a967e804",
+    "scripts/verify_phase_three_delivery.py": "bbde9d71030648b870f52682e3d95ab89a762b2968eabe2be7d184c32b1e644e",
+    "frontend/README.md": "7373c132f0a96e4ccc2aee92565d030b8e28e7cfd1534fe4ae85dcad3c1644a4",
+    "frontend/api.mjs": "bc735deb1bc5f3262feef776aa42668eb9eef708289e3725b52ea9eb2b0f9d5f",
+    "frontend/app.mjs": "4629dbe952433402b604405536c49a8fe3b367127e9223df156873a0462d639d",
+    "frontend/browser_check.py": "e2fd838b7a610fc2fdb4d73357035e9d0aeb82a6ad0fb81c2cc341156719c3e7",
+    "frontend/favicon.svg": "d8ff7b9a59d6d250cc1b2906d259574b000fd36d16df6315cf754f777318aaa3",
+    "frontend/index.html": "3b4061dff692c65216f0973791c0e0510285ed91c1483664c88774b2e4dcbfa5",
+    "frontend/smoke.mjs": "38fecc2a13698eba048a72387a98a0ffb2ee5ad7a6162bb0d3dcf97f924f48c3",
+    "frontend/styles.css": "cee634d9a813dcba2c4453c60b593bde0c906fed9261de13a853d93a29b8ddc4",
+    "frontend/validation/browser-check.json": "48797099946b8de1a787e8dd2fa196664289b623f9186180bd9a7376732ef038",
+    "frontend/validation/desktop-not-ready.png": "654c7e5afe5e54ad3fdbe71e01972300d57ad142c623c90ff7c5a9ead0a3963f",
+    "frontend/validation/mobile-390-not-ready.png": "e13f58f17c15f01a61e985a7e978261810039b25243e832e40619e73d786c212",
+    "frontend/vendor/leaflet/LICENSE": "53e8dc25862014e4324741ca18fbe3611e11d42ef69f59f86ea8c5389647d4cb",
+    "frontend/vendor/leaflet/images/layers-2x.png": "066daca850d8ffbef007af00b06eac0015728dee279c51f3cb6c716df7c42edf",
+    "frontend/vendor/leaflet/images/layers.png": "1dbbe9d028e292f36fcba8f8b3a28d5e8932754fc2215b9ac69e4cdecf5107c6",
+    "frontend/vendor/leaflet/images/marker-icon-2x.png": "00179c4c1ee830d3a108412ae0d294f55776cfeb085c60129a39aa6fc4ae2528",
+    "frontend/vendor/leaflet/images/marker-icon.png": "574c3a5cca85f4114085b6841596d62f00d7c892c7b03f28cbfa301deb1dc437",
+    "frontend/vendor/leaflet/images/marker-shadow.png": "264f5c640339f042dd729062cfc04c17f8ea0f29882b538e3848ed8f10edb4da",
+    "frontend/vendor/leaflet/leaflet.css": "a7837102824184820dfa198d1ebcd109ff6d0ff9a2672a074b9a1b4d147d04c6",
+    "frontend/vendor/leaflet/leaflet.js": "db49d009c841f5ca34a888c96511ae936fd9f5533e90d8b2c4d57596f4e5641a",
+    "infrastructure/launch_service.py": "990a966f62e7cc3469e17a6f5b9c7781098a218132d5ce858d029778f703f7ba",
+    "scripts/activate_final_five.py": "96e477b39c7978e623b3d226cb7b77525af095ec275196b93e1ac9961dfd0554",
+    "scripts/final_live_evidence.py": "06140c64a78c2432acc2c0851b6ac2622e763b01f5f850ef3f731539b8eee7a8"
+  },
+  "collector_sha256": "06140c64a78c2432acc2c0851b6ac2622e763b01f5f850ef3f731539b8eee7a8",
+  "visual_review": "DOM, canvas-pixel and screenshot provenance checks only; no manual visual inspection claimed by collector",
+  "browser_version": "145.0.7632.6",
+  "keyboard_checks": [
+    {
+      "key": "ArrowRight",
+      "selected_dataset": "evaluator",
+      "focus_retained": true
+    },
+    {
+      "key": "ArrowRight",
+      "selected_dataset": "development",
+      "focus_retained": true
+    },
+    {
+      "key": "End",
+      "selected_dataset": "evaluator",
+      "focus_retained": true
+    },
+    {
+      "key": "Home",
+      "selected_dataset": "development",
+      "focus_retained": true
+    },
+    {
+      "key": "ArrowLeft",
+      "selected_dataset": "evaluator",
+      "focus_retained": true
+    },
+    {
+      "key": "ArrowLeft",
+      "selected_dataset": "development",
+      "focus_retained": true
+    }
+  ],
+  "response": {
+    "trip_id": "00000009",
+    "http_status": 200,
+    "client_elapsed_ms": 3657.7499759987404,
+    "request_id": "e5c74616aa5f40f7ac9acbf2459d9678",
+    "timings": {
+      "inference_ms": 3044.586,
+      "scoring_ms": 149.628,
+      "total_ms": 3220.53
+    },
+    "metrics": {
+      "accuracy": 0.9113441372735939,
+      "precision": 0.8823221335911691,
+      "recall": 0.8702057249011564,
+      "macro_f1": 0.8698383843024035,
+      "top1_accuracy": 0.8732125834127741,
+      "candidate_miss_rate": 0.0,
+      "log_loss": 0.4432104809607154,
+      "route_continuity": 1.0,
+      "route_edge_f1": 0.9690721649484535,
+      "route_length_f1": 0.9738641838539935,
+      "sequence_similarity": 0.9504504504504504,
+      "classifier_accuracy": 0.8732125834127741,
+      "classifier_precision": 0.8279148110083362,
+      "classifier_recall": 0.7956414621882247,
+      "classifier_macro_f1": 0.8021536949594503,
+      "scored_observation_fraction": 1.0
+    },
+    "metrics_status": "ok",
+    "diagnostics": {
+      "observation_count": 1049,
+      "matched_observation_count": 1049,
+      "route_arc_count": 444,
+      "route_length_m": 11765.138625542873,
+      "break_count": 0,
+      "learned_emission_observations": 1049,
+      "lateral_distance_median_m": 4.545695768165574,
+      "lateral_distance_p95_m": 16.69989054381084,
+      "uses_reference_route": false,
+      "effective_max_candidates": 12,
+      "candidate_retry_attempt_count": 0,
+      "requested_max_candidates": 12
+    },
+    "model": {
+      "name": "hist_gradient_boosting",
+      "sha256": "c9cc8e9f36838f656a94d07ed69632979df9981ca94a9daf3b52fbce052e4b34",
+      "algorithm": "learned_classifier_hmm_viterbi",
+      "feature_count": 38,
+      "seed": 20261118
+    },
+    "match_config_hash": "e326b1afda125897cd784ab335fbcd7c869fcd70714c5203ef5c2c71977b3288",
+    "prediction_feature_count": 1,
+    "raw_feature_count": 1,
+    "observation_assignment_count": 1049,
+    "predicted_geometry_sha256": "10c6896d649f543aca7a80c8385deeb6e34d73ec696a553784a5330303de5bcb",
+    "matched_edge_array_sha256": "3ca542fa7b75e48bf6c5d8ba8e4e4ff6ab842b1187d757b293e2adb38dea4733",
+    "dataset_id": "development",
+    "response_checks": {
+      "http_200": true,
+      "scoring_ok": true,
+      "model_hash": true,
+      "config_hash": true,
+      "request_id_present": true,
+      "matched_states": true,
+      "predicted_geometry": true,
+      "observation_count": true,
+      "learned_every_observation": true,
+      "no_reference_in_prediction": true,
+      "length_f1": true,
+      "edge_f1": true,
+      "dataset_identity": true,
+      "model_name": true,
+      "all_observation_counts": true,
+      "finite_json": true,
+      "metric_ranges": true,
+      "metric_parity:sequence_similarity": true,
+      "metric_parity:route_continuity": true,
+      "private_reference_not_in_response": true,
+      "full_original_observation_order": true,
+      "raw_gps_count": true
+    },
+    "checks": {
+      "http_200": true,
+      "scoring_ok": true,
+      "model_hash": true,
+      "config_hash": true,
+      "request_id_present": true,
+      "matched_states": true,
+      "predicted_geometry": true,
+      "observation_count": true,
+      "learned_every_observation": true,
+      "no_reference_in_prediction": true,
+      "length_f1": true,
+      "edge_f1": true,
+      "dataset_identity": true,
+      "model_name": true,
+      "all_observation_counts": true,
+      "finite_json": true,
+      "metric_ranges": true,
+      "metric_parity:sequence_similarity": true,
+      "metric_parity:route_continuity": true,
+      "private_reference_not_in_response": true,
+      "full_original_observation_order": true,
+      "raw_gps_count": true,
+      "all_metrics_equal_actual_asgi": true,
+      "exact_request_body": true
+    }
+  },
+  "static_assets": [
+    {
+      "url": "https://ml.d3va.dev/",
+      "http_status": 200,
+      "sha256": "3b4061dff692c65216f0973791c0e0510285ed91c1483664c88774b2e4dcbfa5",
+      "source_sha256": "3b4061dff692c65216f0973791c0e0510285ed91c1483664c88774b2e4dcbfa5",
+      "matches_current_source": true
+    },
+    {
+      "url": "https://ml.d3va.dev/styles.css",
+      "http_status": 200,
+      "sha256": "cee634d9a813dcba2c4453c60b593bde0c906fed9261de13a853d93a29b8ddc4",
+      "source_sha256": "cee634d9a813dcba2c4453c60b593bde0c906fed9261de13a853d93a29b8ddc4",
+      "matches_current_source": true
+    },
+    {
+      "url": "https://ml.d3va.dev/app.mjs",
+      "http_status": 200,
+      "sha256": "4629dbe952433402b604405536c49a8fe3b367127e9223df156873a0462d639d",
+      "source_sha256": "4629dbe952433402b604405536c49a8fe3b367127e9223df156873a0462d639d",
+      "matches_current_source": true
+    },
+    {
+      "url": "https://ml.d3va.dev/api.mjs",
+      "http_status": 200,
+      "sha256": "bc735deb1bc5f3262feef776aa42668eb9eef708289e3725b52ea9eb2b0f9d5f",
+      "source_sha256": "bc735deb1bc5f3262feef776aa42668eb9eef708289e3725b52ea9eb2b0f9d5f",
+      "matches_current_source": true
+    }
+  ],
+  "post_requests": [
+    {
+      "url": "https://ml.d3va.dev/datasets/development/match",
+      "body": {
+        "trip_id": "00000009"
+      }
+    },
+    {
+      "url": "https://ml.d3va.dev/datasets/evaluator/match",
+      "body": {
+        "trip_id": "00000087"
+      }
+    }
+  ],
+  "source_sha256_after": {
+    "backend/__init__.py": "14e134d2078ec2e77aa956fa6a83467e8c0dd7110d4b38c137db302c22e62f15",
+    "backend/app.py": "48516bfe5f3ad99930918633ce4d2c8e2a5c1e0d39e8547454a67121f36c0635",
+    "backend/boundary.py": "918626aad3e575f7e902dfe3bab1823e9ecda4566e9f6005d1261718d4d355b6",
+    "backend/config.py": "5bd9d0652fa12a9eabf754ea447ff40dec639a0e25e7bb22c2c8f3cac9dd3a0a",
+    "backend/datasets.py": "be19af740eee72ac76d84508ed533063d325a4b837d3a0f3f201d1c0bc9f92b4",
+    "backend/emissions.py": "819384fdb1c70ddbf52e11f1227b5291317719b5b5361ced1180c442957c86cc",
+    "backend/errors.py": "57f422c9c204c910f4112aa8c9715e1d457e8302aecdabcc6d7b04f58cd8164c",
+    "backend/geometry.py": "84248a1bab5a8850e5c877b19175b6b7c72d5d4caa56de6bc094a8c9b241b993",
+    "backend/main.py": "5c92b539fbc9edc8d29348c734911c5508279e2f5b593fa1bdd70b585ef9e369",
+    "backend/registry.py": "b601bb18d80888d5d0d19555c91fe9aa6c382472943c879eaeff4522b9b79d66",
+    "backend/scoring.py": "49b20b3ddd4ec6eeebd8795fe16f72ce7ba242bb09cb925edc890b23078bfaea",
+    "backend/service.py": "cb3dbed6c1a16f9877987fff9b2a24689203424cd4fdef0a683520af02984b2c",
+    "backend/static.py": "415ae46946a4c251dca267892144acacf97de3f88b4e9224e1aca2000b05d18a",
+    "mapmatch/__init__.py": "75c90c0358ffde7229f6c7cc47989640674f4bfc711072b8e7b0f6a6e6334132",
+    "mapmatch/__main__.py": "935a1c1166b0c1ea35a82256345000bf2c73ded718d77773bc27a71ecce28f7d",
+    "mapmatch/candidates.py": "4a9d2126074ca8bd78e3d513f2cf578fcc7415cfef68768b3c5a9983cd7504e1",
+    "mapmatch/cli.py": "5885ea87e35cc628523a14ef20d905a540c719440b0865ff4912bfb096a0d10e",
+    "mapmatch/data.py": "89982d7a21c359ad0bc8dba061498b47e05967750325eb83dc81828e8ecf9ce9",
+    "mapmatch/experiments.py": "60a27b7255122e74a987eec3319f2587e414ac817cf310f932a2c0699b5b2cda",
+    "mapmatch/features.py": "d39e908b0b4f7d89d969542a835e0935f07086c97b6546dc8e686efee151adb0",
+    "mapmatch/final_models.py": "df8771780ba705517a6b3942058c7a9d86d52fb2e9a13bb0e2e00559044b53ce",
+    "mapmatch/learning.py": "de626dd12085cc404ede8eab774d2f79e3269fb3d2b1858975ffdc7da167280c",
+    "mapmatch/matcher.py": "af58502cdfe8de12cb13ea5ab3e1e8c9ef7aee9cf6f3faec8dea5cbfbedc4bff",
+    "mapmatch/metrics.py": "94e1ba8fc0ec60c46b8ea06d08ee6f86c655a915ff511da41d446ff7c5f1c882",
+    "mapmatch/phase_models.py": "05bc7b0b1bcbe70f75b769ddb3ace412a6ab5aaeb74f7ab547aab05b4fb9f0e0",
+    "mapmatch/routing.py": "fca3940cb7066b6e247bb0285690ed016dc66fa12d3e4d3c13aed5e5e032bf78",
+    "scripts/verify_final_api.py": "e01cda3bdb5ff333b00aacc2fff690c813cccdbd24f6230f5ea9b5618420880f",
+    "scripts/live_evidence.py": "b0553b294013574c3b40f5389e44227e31e2f9a3d698e69e18685289a967e804",
+    "scripts/verify_phase_three_delivery.py": "bbde9d71030648b870f52682e3d95ab89a762b2968eabe2be7d184c32b1e644e",
+    "frontend/README.md": "7373c132f0a96e4ccc2aee92565d030b8e28e7cfd1534fe4ae85dcad3c1644a4",
+    "frontend/api.mjs": "bc735deb1bc5f3262feef776aa42668eb9eef708289e3725b52ea9eb2b0f9d5f",
+    "frontend/app.mjs": "4629dbe952433402b604405536c49a8fe3b367127e9223df156873a0462d639d",
+    "frontend/browser_check.py": "e2fd838b7a610fc2fdb4d73357035e9d0aeb82a6ad0fb81c2cc341156719c3e7",
+    "frontend/favicon.svg": "d8ff7b9a59d6d250cc1b2906d259574b000fd36d16df6315cf754f777318aaa3",
+    "frontend/index.html": "3b4061dff692c65216f0973791c0e0510285ed91c1483664c88774b2e4dcbfa5",
+    "frontend/smoke.mjs": "38fecc2a13698eba048a72387a98a0ffb2ee5ad7a6162bb0d3dcf97f924f48c3",
+    "frontend/styles.css": "cee634d9a813dcba2c4453c60b593bde0c906fed9261de13a853d93a29b8ddc4",
+    "frontend/validation/browser-check.json": "48797099946b8de1a787e8dd2fa196664289b623f9186180bd9a7376732ef038",
+    "frontend/validation/desktop-not-ready.png": "654c7e5afe5e54ad3fdbe71e01972300d57ad142c623c90ff7c5a9ead0a3963f",
+    "frontend/validation/mobile-390-not-ready.png": "e13f58f17c15f01a61e985a7e978261810039b25243e832e40619e73d786c212",
+    "frontend/vendor/leaflet/LICENSE": "53e8dc25862014e4324741ca18fbe3611e11d42ef69f59f86ea8c5389647d4cb",
+    "frontend/vendor/leaflet/images/layers-2x.png": "066daca850d8ffbef007af00b06eac0015728dee279c51f3cb6c716df7c42edf",
+    "frontend/vendor/leaflet/images/layers.png": "1dbbe9d028e292f36fcba8f8b3a28d5e8932754fc2215b9ac69e4cdecf5107c6",
+    "frontend/vendor/leaflet/images/marker-icon-2x.png": "00179c4c1ee830d3a108412ae0d294f55776cfeb085c60129a39aa6fc4ae2528",
+    "frontend/vendor/leaflet/images/marker-icon.png": "574c3a5cca85f4114085b6841596d62f00d7c892c7b03f28cbfa301deb1dc437",
+    "frontend/vendor/leaflet/images/marker-shadow.png": "264f5c640339f042dd729062cfc04c17f8ea0f29882b538e3848ed8f10edb4da",
+    "frontend/vendor/leaflet/leaflet.css": "a7837102824184820dfa198d1ebcd109ff6d0ff9a2672a074b9a1b4d147d04c6",
+    "frontend/vendor/leaflet/leaflet.js": "db49d009c841f5ca34a888c96511ae936fd9f5533e90d8b2c4d57596f4e5641a",
+    "infrastructure/launch_service.py": "990a966f62e7cc3469e17a6f5b9c7781098a218132d5ce858d029778f703f7ba",
+    "scripts/activate_final_five.py": "96e477b39c7978e623b3d226cb7b77525af095ec275196b93e1ac9961dfd0554",
+    "scripts/final_live_evidence.py": "06140c64a78c2432acc2c0851b6ac2622e763b01f5f850ef3f731539b8eee7a8"
+  },
+  "completed_at_utc": "2026-11-18T09:06:36.425139+00:00"
+}

@@ -1,0 +1,31 @@
+--- experiments/final_five/executed_source/run_final_five_measured.py
++++ experiments/final_five/run_final_five.py
+@@ -151,8 +151,9 @@
+     return result
+ 
+ 
+-def freeze_bundle(estimator, metadata, target=ART):
+-    target = Path(target)
++def freeze_bundle(estimator, metadata, target=None):
++    # Resolve at call time so --run-id cannot target the published bundle.
++    target = ART if target is None else Path(target)
+     outputs = [target / name for name in ("model.joblib", "model_metadata.json", "feature_schema.json", "model_freeze.json")]
+     refuse_existing(outputs)
+     target.mkdir(parents=True, exist_ok=True)
+@@ -171,6 +172,7 @@
+ 
+ def stage_train():
+     outputs = [OUT / "selection.json", OUT / "bayesian_optimization.json", ART / "model_freeze.json", ART / "model.joblib", OUT / "train_complete.json"]
++    outputs += [ART / "model_metadata.json", ART / "feature_schema.json"]
+     outputs += [OUT / "cv" / (n + ".json") for n in (*FINAL_FAMILIES, "hist_gradient_boosting_tuned")]
+     outputs += [ART / "baselines" / (n + ".joblib") for n in (*FINAL_NEW_FAMILIES, "hist_gradient_boosting_tuned")]
+     outputs += list((OUT / "predictions").glob("*_oof.npz"))
+@@ -254,7 +256,7 @@
+ 
+ 
+ def stage_student():
+-    refuse_existing([OUT / "results.json", OUT / "model_comparison.csv", OUT / "sequence_classification.json",
++    refuse_existing([REPORTS / "all_five_model_acceptance.json", OUT / "results.json", OUT / "model_comparison.csv", OUT / "sequence_classification.json",
+         *[OUT / "evaluation" / (n + ".json") for n in (*FINAL_FAMILIES, "hist_gradient_boosting_tuned")],
+         *list((OUT / "predictions").glob("*_student.npz"))])
+     read_json(OUT / "train_complete.json")

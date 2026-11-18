@@ -1,0 +1,209 @@
+[
+  {
+    "text": "PATHSNAP / ACTUAL API RECEIVING TERMINAL",
+    "bbox": [
+      0,
+      0,
+      519,
+      24
+    ]
+  },
+  {
+    "text": "Source: dedicated systemd user service journal, not a mock server",
+    "bbox": [
+      2,
+      38,
+      845,
+      60
+    ]
+  },
+  {
+    "text": "Public origin: https://ml.d3va.dev",
+    "bbox": [
+      2,
+      69,
+      441,
+      91
+    ]
+  },
+  {
+    "text": "$ journalctl --user -u path-snap-api.service --since \"2026-11-18 \u00a99:06:20 UTC\" --no-pager --output=cat",
+    "bbox": [
+      2,
+      100,
+      1325,
+      122
+    ]
+  },
+  {
+    "text": "Filtered by the measured HTTP request ID:",
+    "bbox": [
+      2,
+      131,
+      528,
+      153
+    ]
+  },
+  {
+    "text": "e5c74616aa5f40f7ac9acbf2459d9678",
+    "bbox": [
+      1,
+      162,
+      415,
+      179
+    ]
+  },
+  {
+    "text": "Request ID groups: e5c7 4616 aa5f 40f7 ac9a cbf2 459d 9678",
+    "bbox": [
+      2,
+      193,
+      753,
+      215
+    ]
+  },
+  {
+    "text": "Only original public scalar fields are displayed; no routes or secrets.",
+    "bbox": [
+      1,
+      224,
+      918,
+      246
+    ]
+  },
+  {
+    "text": "trip_id: 00000009",
+    "bbox": [
+      1,
+      286,
+      220,
+      308
+    ]
+  },
+  {
+    "text": "dataset_role: development",
+    "bbox": [
+      261,
+      286,
+      584,
+      308
+    ]
+  },
+  {
+    "text": "model_hash:",
+    "bbox": [
+      1,
+      317,
+      138,
+      337
+    ]
+  },
+  {
+    "text": "c9cc8e91368381656a94d07ed69632979df9981ca94a9daf3b52fbced52e4b34",
+    "bbox": [
+      249,
+      317,
+      1078,
+      334
+    ]
+  },
+  {
+    "text": "match_config_hash: e326blafdal25897cd784ab335fbcd7c869fcd70714c5203ef5c2c71977b3288",
+    "bbox": [
+      1,
+      348,
+      1078,
+      370
+    ]
+  },
+  {
+    "text": "match_started",
+    "bbox": [
+      1,
+      410,
+      168,
+      430
+    ]
+  },
+  {
+    "text": "2026-11-18T09:06:25.487067+00: 00",
+    "bbox": [
+      222,
+      407,
+      638,
+      437
+    ]
+  },
+  {
+    "text": "match_completed 2026-11-18T09:06:28.707597+00:00",
+    "bbox": [
+      1,
+      441,
+      636,
+      463
+    ]
+  },
+  {
+    "text": "metrics_status: ok",
+    "bbox": [
+      1,
+      472,
+      233,
+      492
+    ]
+  },
+  {
+    "text": "inference_ms: 3044.586",
+    "bbox": [
+      2,
+      503,
+      285,
+      523
+    ]
+  },
+  {
+    "text": "scoring_ms: 149.628",
+    "bbox": [
+      327,
+      503,
+      571,
+      525
+    ]
+  },
+  {
+    "text": "total_ms: 3220.53",
+    "bbox": [
+      612,
+      503,
+      831,
+      523
+    ]
+  },
+  {
+    "text": "ACTUAL API RECEIVING TERMINAL / original dedicated-service journal events",
+    "bbox": [
+      1,
+      565,
+      947,
+      587
+    ]
+  },
+  {
+    "text": "Request e5c74616aa5f40f7ac9acbf2459d9678 executed fresh learned inference.",
+    "bbox": [
+      2,
+      596,
+      957,
+      618
+    ]
+  },
+  {
+    "text": "|",
+    "bbox": [
+      0,
+      620,
+      13,
+      651
+    ]
+  }
+]

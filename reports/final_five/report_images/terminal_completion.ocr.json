@@ -1,0 +1,265 @@
+{
+  "crop_box": [
+    0,
+    395,
+    970,
+    630
+  ],
+  "mean_word_confidence": 86.76,
+  "method": "tesseract --psm 11; actual saved crop, original pixels",
+  "text": "match_started\n2026-11-18T09:06:25.487067+00: 00\nmatch_completed 2026-11-18T09:06:28.707597+00:00\nmetrics_status: ok\ninference_ms: 3044.586\nscoring_ms: 149.628\ntotal_ms: 3220.53\nACTUAL API RECEIVING TERMINAL / original dedicated-service journal events\nEequest e5c74616aa5f40f7ac9acbf2459d9678 executed fresh learned inference",
+  "words": [
+    {
+      "bbox": [
+        1,
+        15,
+        168,
+        35
+      ],
+      "text": "match_started"
+    },
+    {
+      "bbox": [
+        222,
+        16,
+        636,
+        32
+      ],
+      "text": "2026-11-18T09:06:25.487067+00:"
+    },
+    {
+      "bbox": [
+        615,
+        12,
+        638,
+        42
+      ],
+      "text": "00"
+    },
+    {
+      "bbox": [
+        1,
+        46,
+        194,
+        68
+      ],
+      "text": "match_completed"
+    },
+    {
+      "bbox": [
+        222,
+        47,
+        636,
+        63
+      ],
+      "text": "2026-11-18T09:06:28.707597+00:00"
+    },
+    {
+      "bbox": [
+        1,
+        77,
+        190,
+        97
+      ],
+      "text": "metrics_status:"
+    },
+    {
+      "bbox": [
+        209,
+        77,
+        233,
+        94
+      ],
+      "text": "ok"
+    },
+    {
+      "bbox": [
+        2,
+        108,
+        164,
+        128
+      ],
+      "text": "inference_ms:"
+    },
+    {
+      "bbox": [
+        184,
+        109,
+        285,
+        125
+      ],
+      "text": "3044.586"
+    },
+    {
+      "bbox": [
+        327,
+        108,
+        463,
+        130
+      ],
+      "text": "scoring_ms:"
+    },
+    {
+      "bbox": [
+        483,
+        109,
+        571,
+        125
+      ],
+      "text": "149.628"
+    },
+    {
+      "bbox": [
+        612,
+        108,
+        723,
+        128
+      ],
+      "text": "total_ms:"
+    },
+    {
+      "bbox": [
+        743,
+        109,
+        831,
+        125
+      ],
+      "text": "3220.53"
+    },
+    {
+      "bbox": [
+        1,
+        171,
+        77,
+        187
+      ],
+      "text": "ACTUAL"
+    },
+    {
+      "bbox": [
+        92,
+        171,
+        128,
+        187
+      ],
+      "text": "API"
+    },
+    {
+      "bbox": [
+        145,
+        171,
+        259,
+        187
+      ],
+      "text": "RECEIVING"
+    },
+    {
+      "bbox": [
+        274,
+        171,
+        376,
+        187
+      ],
+      "text": "TERMINAL"
+    },
+    {
+      "bbox": [
+        393,
+        171,
+        401,
+        187
+      ],
+      "text": "/"
+    },
+    {
+      "bbox": [
+        417,
+        170,
+        519,
+        192
+      ],
+      "text": "original"
+    },
+    {
+      "bbox": [
+        534,
+        170,
+        753,
+        187
+      ],
+      "text": "dedicated-service"
+    },
+    {
+      "bbox": [
+        768,
+        170,
+        857,
+        192
+      ],
+      "text": "journal"
+    },
+    {
+      "bbox": [
+        872,
+        172,
+        947,
+        187
+      ],
+      "text": "events"
+    },
+    {
+      "bbox": [
+        0,
+        202,
+        90,
+        235
+      ],
+      "text": "Eequest"
+    },
+    {
+      "bbox": [
+        105,
+        201,
+        519,
+        218
+      ],
+      "text": "e5c74616aa5f40f7ac9acbf2459d9678"
+    },
+    {
+      "bbox": [
+        534,
+        201,
+        636,
+        218
+      ],
+      "text": "executed"
+    },
+    {
+      "bbox": [
+        652,
+        201,
+        714,
+        218
+      ],
+      "text": "fresh"
+    },
+    {
+      "bbox": [
+        730,
+        201,
+        818,
+        218
+      ],
+      "text": "learned"
+    },
+    {
+      "bbox": [
+        834,
+        201,
+        948,
+        218
+      ],
+      "text": "inference"
+    }
+  ]
+}

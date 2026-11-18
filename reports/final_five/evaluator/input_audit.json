@@ -1,0 +1,424 @@
+{
+  "trip_count": 10,
+  "first_input_open_started_utc": "2026-11-18T08:52:25.539066+00:00",
+  "completed_at_utc": "2026-11-18T08:52:26.149217+00:00",
+  "protocol_sha256": "5c762761b95cc67ea9a048c6ac51b3238aa295a79af2640f0905cb41c8fbda00",
+  "freeze_validation_sha256": "bd966afe8cad258dd224f77b2d7985ff9477d1f3f17ce1fa98b7b62402dfc9cf",
+  "model_sha256": "c9cc8e9f36838f656a94d07ed69632979df9981ca94a9daf3b52fbce052e4b34",
+  "config_file_sha256": "10405aa6b6f370e41d4ddcb01207fd1e8f58900fd0395e541ee6bc78146168c5",
+  "references_parsed": true,
+  "trips": [
+    {
+      "trip_id": "00000015",
+      "valid": true,
+      "nodes": 1571,
+      "arcs": 3225,
+      "observations": 6854,
+      "duration_s": 6853.0,
+      "timestamp_range_s": [
+        1.0,
+        6854.0
+      ],
+      "timestamp_step_range_s": [
+        1.0,
+        1.0
+      ],
+      "graph_span_m": [
+        3346.3055615182802,
+        4305.695896802853
+      ],
+      "track_span_m": [
+        1979.4473167695805,
+        2095.582482081547
+      ],
+      "edge_length_range_m": [
+        1.225161184155933,
+        684.2420040818097
+      ],
+      "zero_length_arc_count": 0,
+      "duplicate_directed_arc_rows": 0,
+      "sha256_by_extension": {
+        ".track": "aa75e6e819752240b57af13f0bd7122dd160d7f160e0225e05a23fd4c4a7e6dd",
+        ".nodes": "7d170a275497262b743ce86fbfae99cb7b6e83b30dd206c33619846139246eb9",
+        ".arcs": "64a4cf7b07c1c40c81a981417db0a854f5dbdb60ff6ea6002a9c2358157a72ac",
+        ".route": "43c18fcea10aaaeee837f6f42acfb0948c07eadcf6325d8c04728ba9f69b2b2b"
+      },
+      "reference_hash_status": "hashed only after all predictions verified",
+      "reference_parsed": true,
+      "finite_local_coordinates": true,
+      "strict_original_timestamp_order": true
+    },
+    {
+      "trip_id": "00000017",
+      "valid": true,
+      "nodes": 36724,
+      "arcs": 76425,
+      "observations": 1346,
+      "duration_s": 1400.0,
+      "timestamp_range_s": [
+        1.0,
+        1401.0
+      ],
+      "timestamp_step_range_s": [
+        1.0,
+        8.0
+      ],
+      "graph_span_m": [
+        13649.069903303927,
+        8912.174485637284
+      ],
+      "track_span_m": [
+        12188.984829055524,
+        6697.502072626063
+      ],
+      "edge_length_range_m": [
+        0.0,
+        733.52917490919
+      ],
+      "zero_length_arc_count": 2,
+      "duplicate_directed_arc_rows": 52,
+      "sha256_by_extension": {
+        ".track": "b77d5351d7167c94135c0d54de843893fb65908efa6038ce77ac7275ae49c91e",
+        ".nodes": "d922124c004a50a0abbc89afc89c72660025f92770bb81f7f9149fe3497f1f58",
+        ".arcs": "2cb266b6218c220e47889f32d43528167f7122636d7e761c81abba66877823f7",
+        ".route": "b3cd6088976a31c196df2410017f9b1b00009073a1e03cef7aeaae3d15f38f4e"
+      },
+      "reference_hash_status": "hashed only after all predictions verified",
+      "reference_parsed": true,
+      "finite_local_coordinates": true,
+      "strict_original_timestamp_order": true
+    },
+    {
+      "trip_id": "00000023",
+      "valid": true,
+      "nodes": 5053,
+      "arcs": 10596,
+      "observations": 458,
+      "duration_s": 457.0,
+      "timestamp_range_s": [
+        1.0,
+        458.0
+      ],
+      "timestamp_step_range_s": [
+        1.0,
+        1.0
+      ],
+      "graph_span_m": [
+        9747.82101954754,
+        4392.872839706277
+      ],
+      "track_span_m": [
+        8283.123268667518,
+        2182.203449583627
+      ],
+      "edge_length_range_m": [
+        0.7274115591397754,
+        1251.6774793894492
+      ],
+      "zero_length_arc_count": 0,
+      "duplicate_directed_arc_rows": 0,
+      "sha256_by_extension": {
+        ".track": "be5a8b801df1297fb957782e712cfffdc9b31c4aa9e424956aede85c30cd4d3e",
+        ".nodes": "ad90ac6f61cb151328208d0cdf9c2fd5195c25249c8b30a5ee3e14a28f83da4e",
+        ".arcs": "83f6beb53b3c3e6eed542174e0e5f74e11586b43cf7df942ad3100b88f9ebe7b",
+        ".route": "e74e2628426f540a463363133ce3a2627c468645125e2ac1a338e16ec2e3ab04"
+      },
+      "reference_hash_status": "hashed only after all predictions verified",
+      "reference_parsed": true,
+      "finite_local_coordinates": true,
+      "strict_original_timestamp_order": true
+    },
+    {
+      "trip_id": "00000030",
+      "valid": true,
+      "nodes": 13223,
+      "arcs": 24218,
+      "observations": 654,
+      "duration_s": 666.0,
+      "timestamp_range_s": [
+        1.0,
+        667.0
+      ],
+      "timestamp_step_range_s": [
+        1.0,
+        14.0
+      ],
+      "graph_span_m": [
+        9125.936972364323,
+        4632.943017930353
+      ],
+      "track_span_m": [
+        7529.736300452711,
+        2403.2592690875804
+      ],
+      "edge_length_range_m": [
+        0.08079983150719272,
+        384.9821160824105
+      ],
+      "zero_length_arc_count": 0,
+      "duplicate_directed_arc_rows": 10,
+      "sha256_by_extension": {
+        ".track": "05485714bb7da086414087630af43e6f7b5de66699068b39f554fba09e55c557",
+        ".nodes": "b73da059cf025448b8fad3fea8998f8157e178f5a7c117bfc38aa9227b27663f",
+        ".arcs": "cfdfe27ae032300a0b01904235fa7c89c0ac7cd6ad8c1e45fbc68f23eca08a0c",
+        ".route": "c9f81478df005ddd35357da1a1afbff19fa0fa1d03cab9740802bc5937c65d7a"
+      },
+      "reference_hash_status": "hashed only after all predictions verified",
+      "reference_parsed": true,
+      "finite_local_coordinates": true,
+      "strict_original_timestamp_order": true
+    },
+    {
+      "trip_id": "00000049",
+      "valid": true,
+      "nodes": 23165,
+      "arcs": 47542,
+      "observations": 2642,
+      "duration_s": 2642.0,
+      "timestamp_range_s": [
+        1.0,
+        2643.0
+      ],
+      "timestamp_step_range_s": [
+        1.0,
+        2.0
+      ],
+      "graph_span_m": [
+        23086.23126106289,
+        47522.77578036793
+      ],
+      "track_span_m": [
+        21741.81186741923,
+        44438.00186452966
+      ],
+      "edge_length_range_m": [
+        0.1111950799531769,
+        8779.996064544654
+      ],
+      "zero_length_arc_count": 0,
+      "duplicate_directed_arc_rows": 4,
+      "sha256_by_extension": {
+        ".track": "0580eb1804ec3a261a8de5d943e76b37845d8a2b07917685b0de34bbff235f60",
+        ".nodes": "8afca091c5816e235d22ba8c3d2ebd3de51f9cf28084de4e29fd403b9d425f23",
+        ".arcs": "cb25401c3e125c42180904c5f29796affa4473d9dfac4b89dfa9bee39122e058",
+        ".route": "124f9e408b7abe166f2b157e2233e51b85aba7d6c01ad31b0dc6a3ce0683354e"
+      },
+      "reference_hash_status": "hashed only after all predictions verified",
+      "reference_parsed": true,
+      "finite_local_coordinates": true,
+      "strict_original_timestamp_order": true
+    },
+    {
+      "trip_id": "00000059",
+      "valid": true,
+      "nodes": 12631,
+      "arcs": 24024,
+      "observations": 1031,
+      "duration_s": 1054.0,
+      "timestamp_range_s": [
+        14.0,
+        1068.0
+      ],
+      "timestamp_step_range_s": [
+        1.0,
+        4.0
+      ],
+      "graph_span_m": [
+        4525.5975122845175,
+        10620.130918024477
+      ],
+      "track_span_m": [
+        2978.73733701247,
+        8399.676360841488
+      ],
+      "edge_length_range_m": [
+        0.07784902752200651,
+        724.4267269587777
+      ],
+      "zero_length_arc_count": 0,
+      "duplicate_directed_arc_rows": 12,
+      "sha256_by_extension": {
+        ".track": "ef8b87e787ba56d321a269c9f587eeb72450f7f3adda802cd060c289abaf5862",
+        ".nodes": "126928225e9d669f54805d49650d67af0876491da7b0e4e7c8276a5a9bf1a35a",
+        ".arcs": "6875dd999788043533bba6a88927b5a1df09286cf36609aaeb97adbc03881e66",
+        ".route": "af45052ada7c68f7a0271295eab2c2ed72d8682c0e3207777da66c53b610da59"
+      },
+      "reference_hash_status": "hashed only after all predictions verified",
+      "reference_parsed": true,
+      "finite_local_coordinates": true,
+      "strict_original_timestamp_order": true
+    },
+    {
+      "trip_id": "00000067",
+      "valid": true,
+      "nodes": 2265,
+      "arcs": 4485,
+      "observations": 916,
+      "duration_s": 944.0,
+      "timestamp_range_s": [
+        8.0,
+        952.0
+      ],
+      "timestamp_step_range_s": [
+        1.0,
+        19.0
+      ],
+      "graph_span_m": [
+        3162.6092550881913,
+        5093.17945501639
+      ],
+      "track_span_m": [
+        2006.2418185567287,
+        2848.8179555827155
+      ],
+      "edge_length_range_m": [
+        0.9231556643430916,
+        632.7659971176715
+      ],
+      "zero_length_arc_count": 0,
+      "duplicate_directed_arc_rows": 0,
+      "sha256_by_extension": {
+        ".track": "3b66460627dbc4e9fd8769dde4f35f6b88ce32e636946caf26bb5ed8798b03a1",
+        ".nodes": "8c47c71e7711d0ed26b27e198f162d06c225c170f410fd1373ed25c0a4ba0457",
+        ".arcs": "2dd0b1f367f1cf01dba68ba003924262af1cd4777aaf1c643722db4c8fbc7138",
+        ".route": "60c514bb4073ab5f48a8de251a4d81d9373b2d31f66bf4b5e7b1f3bac69d1f0f"
+      },
+      "reference_hash_status": "hashed only after all predictions verified",
+      "reference_parsed": true,
+      "finite_local_coordinates": true,
+      "strict_original_timestamp_order": true
+    },
+    {
+      "trip_id": "00000073",
+      "valid": true,
+      "nodes": 12151,
+      "arcs": 25631,
+      "observations": 1144,
+      "duration_s": 1734.0,
+      "timestamp_range_s": [
+        1.0,
+        1735.0
+      ],
+      "timestamp_step_range_s": [
+        0.9990000000000236,
+        220.00099999999998
+      ],
+      "graph_span_m": [
+        4380.930315427991,
+        13019.60955438418
+      ],
+      "track_span_m": [
+        2602.3685761507986,
+        10792.26090222595
+      ],
+      "edge_length_range_m": [
+        0.08969045561207167,
+        612.3149067095341
+      ],
+      "zero_length_arc_count": 0,
+      "duplicate_directed_arc_rows": 0,
+      "sha256_by_extension": {
+        ".track": "e33aa91ca5dc1d9ad24524ff6a14ebdd2081cfad671e0d409758506b21c7e9ae",
+        ".nodes": "1f86a7a77e1f6aceb7597e63c304a24849c853c39715c75e3b00611fa214b013",
+        ".arcs": "dc90ae3cc61646285d3253a79a7f2f93e8f1ac734e8a0c21e6d4028b6af79b18",
+        ".route": "1625701323ae11eeab2887c6f895eb79b47c04644a5c59459b60820e1e740ef1"
+      },
+      "reference_hash_status": "hashed only after all predictions verified",
+      "reference_parsed": true,
+      "finite_local_coordinates": true,
+      "strict_original_timestamp_order": true
+    },
+    {
+      "trip_id": "00000087",
+      "valid": true,
+      "nodes": 55234,
+      "arcs": 107451,
+      "observations": 1399,
+      "duration_s": 1402.0,
+      "timestamp_range_s": [
+        3.0,
+        1405.0
+      ],
+      "timestamp_step_range_s": [
+        1.0,
+        2.0
+      ],
+      "graph_span_m": [
+        23207.77396983695,
+        22671.78729897507
+      ],
+      "track_span_m": [
+        21504.60456885417,
+        20444.99462221897
+      ],
+      "edge_length_range_m": [
+        0.0,
+        2193.112815756952
+      ],
+      "zero_length_arc_count": 3,
+      "duplicate_directed_arc_rows": 35,
+      "sha256_by_extension": {
+        ".track": "1ece473c17ada1b29033a6c761fb8855e35a349f548175eaf003d854ab3978df",
+        ".nodes": "fec275a05921628591d823989530faab7ace2d0eb19cecb7f6a76b7b391c0703",
+        ".arcs": "0cd50174e6c0d1abc3b0af72edbad3fe0732ace32dba59640b47925b421d031e",
+        ".route": "351f62a17888948d7a77e33ec9f54995eeaedcf5fa7931d9f644a320e704e9c4"
+      },
+      "reference_hash_status": "hashed only after all predictions verified",
+      "reference_parsed": true,
+      "finite_local_coordinates": true,
+      "strict_original_timestamp_order": true
+    },
+    {
+      "trip_id": "00000094",
+      "valid": true,
+      "nodes": 6815,
+      "arcs": 14931,
+      "observations": 3230,
+      "duration_s": 3234.0,
+      "timestamp_range_s": [
+        1.0,
+        3235.0
+      ],
+      "timestamp_step_range_s": [
+        1.0,
+        4.0
+      ],
+      "graph_span_m": [
+        4562.632239025879,
+        11165.431591490094
+      ],
+      "track_span_m": [
+        3384.9490002216844,
+        8967.216050352972
+      ],
+      "edge_length_range_m": [
+        0.44486186544881073,
+        799.5255326759226
+      ],
+      "zero_length_arc_count": 0,
+      "duplicate_directed_arc_rows": 26,
+      "sha256_by_extension": {
+        ".track": "28a69c9a2cc422cf9e91f982366a421d2bfa1f653899e42005fa3c2ad68f64fc",
+        ".nodes": "382a4d3e6a47372ab62a0e2cc0e48a5944e9c9be9e7866383543bf88efb1b278",
+        ".arcs": "67095293057d6299d00e20060791d5ba00c066351a518954a9c9d14374f9c977",
+        ".route": "8e2b87c51a9f3607b50b8d6a371de5796551120acc70d19887400f332b544ad7"
+      },
+      "reference_hash_status": "hashed only after all predictions verified",
+      "reference_parsed": true,
+      "finite_local_coordinates": true,
+      "strict_original_timestamp_order": true
+    }
+  ],
+  "overlap_report": {
+    "training_trip_count_checked": 80,
+    "student_trip_count_checked": 10,
+    "id_matches": [],
+    "full_trip_duplicates": [],
+    "per_extension_matches": [],
+    "any_identical_input_file": false,
+    "any_full_trip_duplicate": false,
+    "independent_holdout_claimed": false,
+    "interpretation": "Exact input hashes checked against all frozen TRAIN80 and student-development10. ID matches alone do not establish overlap. Any duplicate content limits independence; absence of exact duplicates does not prove geographical or official unseen status."
+  },
+  "finalized_at_utc": "2026-11-18T08:53:40.412278+00:00"
+}

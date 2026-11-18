@@ -21,13 +21,57 @@ def sha256(path):
     return hashlib.sha256(Path(path).read_bytes()).hexdigest()
 
 
-def inspect_pdf(pdf, output, *, require_final=False, ocr=False):
+def required_topics(profile="phase-three"):
+    """Content profiles keep historical phase-three acceptance unchanged."""
+    if profile not in {"phase-three", "final-five"}:
+        raise ValueError("unknown report profile")
+    topics = {
+        "Logistic Regression": r"logistic\s+regression",
+        "KNN/distance": r"\bknn\b|nearest.neighbou?r",
+        "Bagging": r"bagging",
+        "directed Viterbi": r"viterbi",
+        "Bayesian search": r"bayesian",
+        "proxy-label limitation": r"proxy",
+        "live deployment": r"ml\.d3va\.dev",
+    }
+    if profile == "phase-three":
+        topics.update({"deferred five-model requirement": r"deferred",
+                       "absent evaluator limitation": r"evaluator"})
+    else:
+        topics.update({
+            "Gaussian Naive Bayes": r"gaussian.{0,15}(?:naive|nb)",
+            "Histogram Gradient Boosting": r"hist(?:ogram)?.{0,15}gradient.{0,10}boost",
+            "separate evaluator section": r"evaluator",
+            "geographical implementation map": r"folium",
+            "classifier-only comparison": r"classifier.only|raw.argmax",
+            "historical RandomForest": r"random.{0,2}forest",
+            "historical ExtraTrees": r"extra.{0,2}trees",
+            "human academic defence": r"viva",
+            "AI assistance disclosure": r"AI.assist|AI agents|AI coding",
+        })
+    return topics
+
+
+def content_text(text):
+    """Exclude page furniture so a watermark cannot hide an empty body."""
+    lines = []
+    for line in text.splitlines():
+        value = line.strip()
+        if (not value or value == "PathSnap Final Technical Report"
+                or re.fullmatch(r"Page \d+ of \d+", value)
+                or re.fullmatch(r"DRAFT\s*[-–]\s*NOT FINAL", value)):
+            continue
+        lines.append(value)
+    return "\n".join(lines)
+
+
+def inspect_pdf(pdf, output, *, require_final=False, ocr=False, profile="phase-three"):
     import fitz
     output = Path(output)
     output.mkdir(parents=True, exist_ok=False)
     report = {"checked_at_utc": datetime.now(timezone.utc).isoformat(), "pdf": str(pdf),
               "pdf_sha256": sha256(pdf), "method": "actual PDF text/span geometry and page rasterization; no human/model visual inspection claimed",
-              "require_final": require_final, "pages": [], "defects": [], "warnings": []}
+              "require_final": require_final, "profile": profile, "pages": [], "defects": [], "warnings": []}
     all_text = []
     with fitz.open(pdf) as doc:
         report["page_count"] = len(doc)
@@ -83,7 +127,8 @@ def inspect_pdf(pdf, output, *, require_final=False, ocr=False):
             if overlaps:
                 # Tables, links and superscripts can create conservative false positives.
                 report["warnings"].append(f"page {page_number}: {len(overlaps)} overlapping line candidates require inspection")
-            if len(text.strip()) < 30 and not images:
+            page_info["body_text_characters"] = len(content_text(text))
+            if len(content_text(text)) < 30 and not images:
                 report["defects"].append(f"page {page_number}: blank or almost blank content page")
             if ocr and page_number in {1, len(doc), max(1, len(doc)//2)}:
                 recognized = subprocess.run(["tesseract", str(path), "stdout"], capture_output=True, text=True, check=True).stdout
@@ -98,16 +143,13 @@ def inspect_pdf(pdf, output, *, require_final=False, ocr=False):
     (output / "extracted_text.txt").write_text(full_text)
     forbidden = re.findall(r"\b(?:TODO|TBD|FIXME|PENDING|PLACEHOLDER|NaN)\b|\?\?\?", full_text)
     report["forbidden_tokens"] = sorted(set(forbidden))
-    report["preview_watermark"] = "PREVIEW - NOT FOR SUBMISSION" in full_text or "PREVIEW" in full_text
+    report["preview_watermark"] = bool(re.search(r"PREVIEW|DRAFT\s*[-–]\s*NOT\s+FINAL", full_text))
     if require_final:
         if forbidden:
             report["defects"].append("final PDF contains unresolved placeholder tokens")
         if report["preview_watermark"]:
             report["defects"].append("final PDF still has a preview watermark")
-        required = {"Logistic Regression": r"logistic\s+regression", "KNN/distance": r"\bknn\b|nearest.neighbou?r",
-                    "Bagging": r"bagging", "directed Viterbi": r"viterbi", "Bayesian search": r"bayesian",
-                    "proxy-label limitation": r"proxy", "live deployment": r"ml\.d3va\.dev",
-                    "deferred five-model requirement": r"deferred", "absent evaluator limitation": r"evaluator"}
+        required = required_topics(profile)
         report["required_sections"] = {name: bool(re.search(pattern, full_text, re.IGNORECASE)) for name, pattern in required.items()}
         report["defects"] += ["missing required final report topic: " + name for name, found in report["required_sections"].items() if not found]
     report["passed"] = not report["defects"]
@@ -121,10 +163,11 @@ def main():
     parser.add_argument("--output", type=Path, required=True)
     parser.add_argument("--require-final", action="store_true")
     parser.add_argument("--ocr", action="store_true")
+    parser.add_argument("--profile", choices=("phase-three", "final-five"), default="phase-three")
     args = parser.parse_args()
     if args.output.resolve().exists():
         parser.error("choose a new layout-review directory; do not overwrite reviewed pages")
-    report = inspect_pdf(args.pdf.resolve(), args.output.resolve(), require_final=args.require_final, ocr=args.ocr)
+    report = inspect_pdf(args.pdf.resolve(), args.output.resolve(), require_final=args.require_final, ocr=args.ocr, profile=args.profile)
     print(json.dumps({k: report[k] for k in ("passed", "page_count", "pdf_sha256", "preview_watermark", "defects", "warnings")}, indent=2))
     raise SystemExit(0 if report["passed"] else 1)
 

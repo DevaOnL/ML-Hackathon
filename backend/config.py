@@ -42,9 +42,9 @@ def _origin(value: str) -> str:
 class Settings:
     data_dir: Path = DEFAULT_DATA_DIR
     reference_dir: Path | None = None
-    model_path: Path = ROOT / "artifacts" / "phase_three" / "model.joblib"
+    model_path: Path = ROOT / "artifacts" / "final_five" / "model.joblib"
     metadata_path: Path | None = None
-    match_config_path: Path | None = ROOT / "artifacts" / "phase_three" / "match_config.json"
+    match_config_path: Path | None = ROOT / "artifacts" / "final_five" / "match_config.json"
     match_config_required: bool = False
     cors_origins: tuple[str, ...] = ()
     expected_trip_count: int = 10
@@ -52,11 +52,17 @@ class Settings:
     graph_cache_size: int = 2
     inference_concurrency: int = 1
     frontend_dir: Path | None = ROOT / "frontend"
+    # Evaluator partition fields stay last with defaults: legacy positional
+    # construction keeps working, and no implicit evaluator path is derived.
+    evaluator_data_dir: Path | None = None
+    evaluator_reference_dir: Path | None = None
+    evaluator_expected_trip_count: int = 10
 
     def __post_init__(self) -> None:
         for name in ("data_dir", "model_path"):
             object.__setattr__(self, name, _path(getattr(self, name)))
-        for name in ("reference_dir", "metadata_path", "match_config_path", "frontend_dir"):
+        for name in ("reference_dir", "metadata_path", "match_config_path", "frontend_dir",
+                      "evaluator_data_dir", "evaluator_reference_dir"):
             value = getattr(self, name)
             if value is not None:
                 object.__setattr__(self, name, _path(value))
@@ -68,7 +74,8 @@ class Settings:
         if role not in {"development", "evaluator"}:
             raise ValueError("PATHSNAP_DATASET_ROLE must be development or evaluator")
         object.__setattr__(self, "dataset_role", role)
-        for name in ("expected_trip_count", "graph_cache_size", "inference_concurrency"):
+        for name in ("expected_trip_count", "graph_cache_size", "inference_concurrency",
+                      "evaluator_expected_trip_count"):
             value = getattr(self, name)
             if isinstance(value, bool) or not isinstance(value, int) or value < 1:
                 raise ValueError(f"{name} must be a positive integer")
@@ -76,10 +83,12 @@ class Settings:
 
     @classmethod
     def from_env(cls) -> "Settings":
-        model_path = _path(os.environ.get("PATHSNAP_MODEL", "artifacts/phase_three/model.joblib"))
+        model_path = _path(os.environ.get("PATHSNAP_MODEL", "artifacts/final_five/model.joblib"))
         metadata = os.environ.get("PATHSNAP_MODEL_METADATA")
         reference = os.environ.get("PATHSNAP_REFERENCE_DIR")
-        match_config = os.environ.get("PATHSNAP_MATCH_CONFIG", "artifacts/phase_three/match_config.json")
+        match_config = os.environ.get("PATHSNAP_MATCH_CONFIG", "artifacts/final_five/match_config.json")
+        evaluator_data = os.environ.get("PATHSNAP_EVALUATOR_DATA_DIR")
+        evaluator_reference = os.environ.get("PATHSNAP_EVALUATOR_REFERENCE_DIR")
         return cls(
             data_dir=_path(os.environ.get("PATHSNAP_DATA_DIR", str(DEFAULT_DATA_DIR))),
             reference_dir=_path(reference) if reference else None,
@@ -91,4 +100,7 @@ class Settings:
             dataset_role=os.environ.get("PATHSNAP_DATASET_ROLE") or None,
             graph_cache_size=_positive_integer(os.environ.get("PATHSNAP_GRAPH_CACHE_SIZE", "2"), "PATHSNAP_GRAPH_CACHE_SIZE"),
             inference_concurrency=_positive_integer(os.environ.get("PATHSNAP_INFERENCE_CONCURRENCY", "1"), "PATHSNAP_INFERENCE_CONCURRENCY"),
+            evaluator_data_dir=_path(evaluator_data) if evaluator_data else None,
+            evaluator_reference_dir=_path(evaluator_reference) if evaluator_reference else None,
+            evaluator_expected_trip_count=_positive_integer(os.environ.get("PATHSNAP_EVALUATOR_EXPECTED_TRIP_COUNT", "10"), "PATHSNAP_EVALUATOR_EXPECTED_TRIP_COUNT"),
         )

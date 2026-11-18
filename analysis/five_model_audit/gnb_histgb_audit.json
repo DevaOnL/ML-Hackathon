@@ -1,0 +1,1158 @@
+{
+  "audit": "historical gaussian_nb + hist_gradient_boosting artifact verification (task-30)",
+  "generated_utc": "2026-11-18T08:56:28.749246+00:00",
+  "policy": {
+    "refits": "none",
+    "hpo_reruns": "none",
+    "decoder_reruns": "none",
+    "external_http": "none",
+    "evaluator_test_access": "none",
+    "strict_tolerance": 1e-12,
+    "old_records_modified": false
+  },
+  "workspace": {
+    "git_head": "2c4a44b",
+    "audit_script": "analysis/five_model_audit/verify_gnb_histgb_audit.py"
+  },
+  "versions": {
+    "runtime": {
+      "python": "3.14.6",
+      "numpy": "2.5.5",
+      "scipy": "1.18.0",
+      "scikit_learn": "1.8.0",
+      "joblib": "1.5.3",
+      "platform": "Linux-7.1.8-1-cachyos-x86_64-with-glibc2.44"
+    },
+    "training": {
+      "python": "3.14.6",
+      "numpy": "2.5.2",
+      "scipy": "1.18.0",
+      "scikit_learn": "1.8.0",
+      "joblib": "1.5.3",
+      "platform": "Linux-7.1.8-1-cachyos-x86_64-with-glibc2.44"
+    },
+    "drift": {
+      "numpy": {
+        "trained": "2.5.2",
+        "current": "2.5.5"
+      }
+    },
+    "thread_environment": {
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1",
+      "MKL_NUM_THREADS": "1",
+      "NUMEXPR_NUM_THREADS": "1"
+    },
+    "selection_protocol": "baseline selection and HPO use TRAIN grouped CV only; student_test loaded after all selection"
+  },
+  "folds": [
+    {
+      "fold": 0,
+      "train_trips": 53,
+      "validation_trips": 27
+    },
+    {
+      "fold": 1,
+      "train_trips": 53,
+      "validation_trips": 27
+    },
+    {
+      "fold": 2,
+      "train_trips": 54,
+      "validation_trips": 26
+    }
+  ],
+  "artifact_hashes": {
+    "model_joblib": "0a308567e6eb982caf2012729fadac05c02497f81758c51df99f92cb521d1e1e",
+    "gaussian_nb": "51541261f07ce3c164db6832e8283fd3beccd9d589ffa3ec274a6b1072a5c1fb",
+    "hist_gradient_boosting": "934d59ecb052c91bc3c4090ba6152d001def89813c33d5bb94b81940e274a8e9",
+    "hist_gradient_boosting_tuned": "d6699228378395fb4f4d2f95c044d3bcf108f6e706d22d347793a3b5d4877ed7"
+  },
+  "prediction_replays": {
+    "gaussian_nb": {
+      "student": {
+        "fixture_max_abs_delta": 0.0,
+        "full_replay_max_delta": 0.0,
+        "top1_accuracy": 0.8876826722338205,
+        "trip_macro_top1_accuracy": 0.8964896072232202,
+        "macro_f1": 0.922211223946088,
+        "log_loss": 0.36171160591938634,
+        "per_trip_count": 10
+      },
+      "train_resubstitution": {
+        "max_delta": 0.0,
+        "top1_accuracy": 0.8738214285714285,
+        "macro_f1": 0.9212012616763308
+      },
+      "oof": {
+        "full_replay_max_delta": 0.0,
+        "objective_trip_macro_top1": 0.8733928571428571,
+        "top1_accuracy": 0.8733928571428572,
+        "macro_f1": 0.9210939341885569,
+        "log_loss": 0.3410388958918782,
+        "candidate_miss_count": 578
+      },
+      "folds": {
+        "count": 3,
+        "max_numeric_delta": 0.0
+      }
+    },
+    "hist_gradient_boosting": {
+      "student": {
+        "fixture_max_abs_delta": 0.0,
+        "full_replay_max_delta": 0.0,
+        "top1_accuracy": 0.9065762004175365,
+        "trip_macro_top1_accuracy": 0.9185938271227336,
+        "macro_f1": 0.9442330333194171,
+        "log_loss": 0.05522123883891804,
+        "per_trip_count": 10
+      },
+      "train_resubstitution": {
+        "max_delta": 0.0,
+        "top1_accuracy": 0.9085,
+        "macro_f1": 0.9540387657449911
+      },
+      "oof": {
+        "full_replay_max_delta": 0.0,
+        "objective_trip_macro_top1": 0.8926785714285714,
+        "top1_accuracy": 0.8926785714285714,
+        "macro_f1": 0.9428589610674079,
+        "log_loss": 0.05698196818420589,
+        "candidate_miss_count": 578
+      },
+      "folds": {
+        "count": 3,
+        "max_numeric_delta": 0.0
+      }
+    },
+    "hist_gradient_boosting_tuned": {
+      "student": {
+        "fixture_max_abs_delta": 0.0,
+        "full_replay_max_delta": 0.0,
+        "top1_accuracy": 0.9067849686847599,
+        "trip_macro_top1_accuracy": 0.9195923599353713,
+        "macro_f1": 0.9447159610168164,
+        "log_loss": 0.05549988431377391,
+        "per_trip_count": 10
+      },
+      "train_resubstitution": {
+        "max_delta": 0.0,
+        "top1_accuracy": 0.914,
+        "macro_f1": 0.956681480991245
+      },
+      "oof": {
+        "full_replay_max_delta": 0.0,
+        "objective_trip_macro_top1": 0.893392857142857,
+        "top1_accuracy": 0.8933928571428571,
+        "macro_f1": 0.9416187410219833,
+        "log_loss": 0.05725719146420802,
+        "candidate_miss_count": 578
+      },
+      "folds": {
+        "count": 3,
+        "max_numeric_delta": 0.0
+      }
+    }
+  },
+  "hpo_inventory": {
+    "total_trials_including_measured_prior": 12,
+    "composition": {
+      "gaussian_process_expected_improvement": 8,
+      "measured_baseline_prior": 1,
+      "seeded_initial_design": 3
+    },
+    "objective_description": "maximize out-of-fold equal-trip mean observation top1 proxy accuracy; fixed 3/5-fold GroupKFold on all 80 TRAIN trips",
+    "selection_data": "TRAIN only; student_test metrics not loaded during HPO",
+    "method": "GaussianProcessRegressor Matern-5/2 surrogate + analytic expected improvement",
+    "default_objective": 0.8926785714285714,
+    "winner_trial": 5,
+    "winner_objective": 0.893392857142857,
+    "winner_parameters": {
+      "max_iter": 104,
+      "learning_rate": 0.15902391896503631,
+      "max_leaf_nodes": 22,
+      "min_samples_leaf": 38,
+      "l2_regularization": 0.8604220152998319
+    },
+    "search_space": {
+      "learning_rate": [
+        "log",
+        0.025,
+        0.2
+      ],
+      "max_iter": [
+        "int",
+        70,
+        200
+      ],
+      "max_leaf_nodes": [
+        "int",
+        7,
+        47
+      ],
+      "min_samples_leaf": [
+        "logint",
+        15,
+        160
+      ],
+      "l2_regularization": [
+        "log",
+        0.01,
+        20.0
+      ]
+    },
+    "exploration_xi": 0.0003,
+    "surrogate_kernel": "0.992**2 * Matern(length_scale=[0.427, 3, 3, 0.0904, 0.346], nu=2.5) + WhiteKernel(noise_level=0.000988)",
+    "baseline_selection": {
+      "selected_model": "hist_gradient_boosting",
+      "objective": "out_of_fold_trip_macro_top1_accuracy",
+      "scores": {
+        "logistic_regression": 0.884,
+        "gaussian_nb": 0.8733928571428571,
+        "random_forest": 0.8913928571428571,
+        "extra_trees": 0.8918214285714285,
+        "hist_gradient_boosting": 0.8926785714285714
+      },
+      "student_test_consulted": false
+    },
+    "student_access_disclosure": "student_test metrics exist for all six families (development evaluation recorded after selection); they are historical development numbers, NOT a blind holdout and NOT evaluator_test",
+    "evaluator_testing_statement": "not supplied, never accessed",
+    "recovery": {
+      "original_cv_and_hpo_preserved": true,
+      "selected_model_frozen_before_slow_baselines": true,
+      "model_sha256": "0a308567e6eb982caf2012729fadac05c02497f81758c51df99f92cb521d1e1e"
+    }
+  },
+  "cross_environment": {
+    "max_abs_deltas": {
+      "gaussian_nb.train": 0.0,
+      "gaussian_nb.student": 0.0,
+      "hist_gradient_boosting.train": 0.0,
+      "hist_gradient_boosting.student": 0.0,
+      "hist_gradient_boosting_tuned.train": 0.0,
+      "hist_gradient_boosting_tuned.student": 0.0,
+      "model_joblib.student": 0.0
+    },
+    "versions": {
+      ".venv": {
+        "python": "3.14.6",
+        "numpy": "2.5.5",
+        "scipy": "1.18.0",
+        "sklearn": "1.8.0"
+      },
+      ".venv-clean": {
+        "python": "3.14.6",
+        "numpy": "2.5.5",
+        "scipy": "1.18.0",
+        "sklearn": "1.8.0"
+      }
+    }
+  },
+  "checks": {
+    "runtime_versions_recorded": {
+      "passed": true,
+      "detail": {
+        "python": "3.14.6",
+        "numpy": "2.5.5",
+        "scipy": "1.18.0",
+        "scikit_learn": "1.8.0",
+        "joblib": "1.5.3",
+        "platform": "Linux-7.1.8-1-cachyos-x86_64-with-glibc2.44"
+      },
+      "families": [
+        "shared"
+      ]
+    },
+    "training_runtime_version_drift_disclosed": {
+      "passed": true,
+      "detail": {
+        "drift": {
+          "numpy": {
+            "trained": "2.5.2",
+            "current": "2.5.5"
+          }
+        },
+        "note": "historical artifacts were trained under the recorded versions; all replay tolerances remain 1e-12 and are not loosened"
+      },
+      "families": [
+        "shared"
+      ]
+    },
+    "train_cache_shape": {
+      "passed": true,
+      "detail": {
+        "shape": [
+          269463,
+          38
+        ],
+        "rows": 269463,
+        "observations": 28000,
+        "trips": 80,
+        "dtype": "float32",
+        "finite": true
+      },
+      "families": [
+        "shared"
+      ]
+    },
+    "student_cache_shape": {
+      "passed": true,
+      "detail": {
+        "shape": [
+          175778,
+          38
+        ],
+        "rows": 175778,
+        "observations": 19160,
+        "trips": 10,
+        "dtype": "float32"
+      },
+      "families": [
+        "shared"
+      ]
+    },
+    "candidate_miss_counts": {
+      "passed": true,
+      "detail": {
+        "train_miss": 578,
+        "student_miss": 19
+      },
+      "families": [
+        "shared"
+      ]
+    },
+    "train_student_trip_disjoint": {
+      "passed": true,
+      "detail": {
+        "train_trips": 80,
+        "student_trips": 10
+      },
+      "families": [
+        "shared"
+      ]
+    },
+    "train_sampling_deterministic_linspace": {
+      "passed": true,
+      "detail": {
+        "trips": 80,
+        "sampling": "deterministic np.linspace first-to-last, maximum 350 per trip; no label-dependent sampling",
+        "total_observations_all_trips": 208417,
+        "selected_observations": 28000
+      },
+      "families": [
+        "shared"
+      ]
+    },
+    "student_all_observations_not_truncated": {
+      "passed": true,
+      "detail": {
+        "sampling": "all observations",
+        "selected": 19160,
+        "total": 19160,
+        "trips": 10
+      },
+      "families": [
+        "shared"
+      ]
+    },
+    "raw_input_manifest[train]": {
+      "passed": true,
+      "detail": {
+        "trips": 80,
+        "files_per_trip": 4,
+        "mismatches": [],
+        "fingerprint_prefix_matches_cache": true
+      },
+      "families": [
+        "shared"
+      ]
+    },
+    "raw_input_manifest[student_test]": {
+      "passed": true,
+      "detail": {
+        "trips": 10,
+        "files_per_trip": 4,
+        "mismatches": [],
+        "fingerprint_prefix_matches_cache": true
+      },
+      "families": [
+        "shared"
+      ]
+    },
+    "shared_group_folds": {
+      "passed": true,
+      "detail": {
+        "folds": 3,
+        "validation_trips_total": 80,
+        "structure": "3-fold GroupKFold over whole trips; 80 TRAIN trips partitioned"
+      },
+      "families": [
+        "shared"
+      ]
+    },
+    "frozen_model_sha256_matches_actual": {
+      "passed": true,
+      "detail": {
+        "actual": "0a308567e6eb982caf2012729fadac05c02497f81758c51df99f92cb521d1e1e",
+        "recorded_freeze": "0a308567e6eb982caf2012729fadac05c02497f81758c51df99f92cb521d1e1e",
+        "recorded_manifest": "0a308567e6eb982caf2012729fadac05c02497f81758c51df99f92cb521d1e1e",
+        "bytes": 150791
+      },
+      "families": [
+        "shared"
+      ]
+    },
+    "baseline_artifact_sha256_matches_acceptance_records": {
+      "passed": true,
+      "detail": {
+        "verified": 6,
+        "mismatches": {}
+      },
+      "families": [
+        "shared"
+      ]
+    },
+    "bundle_params_consistent[gaussian_nb]": {
+      "passed": true,
+      "detail": {
+        "artifact_params": {
+          "var_smoothing": 1e-07
+        }
+      },
+      "families": [
+        "gaussian_nb"
+      ]
+    },
+    "bundle_trained_on_all80_train[gaussian_nb]": {
+      "passed": true,
+      "detail": {
+        "trips": 80,
+        "seed": 20261118
+      },
+      "families": [
+        "gaussian_nb"
+      ]
+    },
+    "bundle_params_consistent[hist_gradient_boosting]": {
+      "passed": true,
+      "detail": {
+        "artifact_params": {
+          "max_iter": 120,
+          "learning_rate": 0.09,
+          "max_leaf_nodes": 23,
+          "min_samples_leaf": 40,
+          "l2_regularization": 0.5
+        }
+      },
+      "families": [
+        "hist_gradient_boosting"
+      ]
+    },
+    "bundle_trained_on_all80_train[hist_gradient_boosting]": {
+      "passed": true,
+      "detail": {
+        "trips": 80,
+        "seed": 20261118
+      },
+      "families": [
+        "hist_gradient_boosting"
+      ]
+    },
+    "bundle_params_consistent[hist_gradient_boosting_tuned]": {
+      "passed": true,
+      "detail": {
+        "artifact_params": {
+          "max_iter": 104,
+          "learning_rate": 0.15902391896503631,
+          "max_leaf_nodes": 22,
+          "min_samples_leaf": 38,
+          "l2_regularization": 0.8604220152998319
+        }
+      },
+      "families": [
+        "hist_gradient_boosting_tuned"
+      ]
+    },
+    "bundle_trained_on_all80_train[hist_gradient_boosting_tuned]": {
+      "passed": true,
+      "detail": {
+        "trips": 80,
+        "seed": 20261118
+      },
+      "families": [
+        "hist_gradient_boosting_tuned"
+      ]
+    },
+    "gnb_is_actual_pipeline": {
+      "passed": true,
+      "detail": {
+        "steps": [
+          "scale",
+          "classifier"
+        ],
+        "classifier_module": "sklearn.naive_bayes"
+      },
+      "families": [
+        "gaussian_nb"
+      ]
+    },
+    "gnb_parameters": {
+      "passed": true,
+      "detail": {
+        "var_smoothing": 1e-07,
+        "priors": null
+      },
+      "families": [
+        "gaussian_nb"
+      ]
+    },
+    "gnb_fitted_counts": {
+      "passed": true,
+      "detail": {
+        "class_count_": [
+          231473.515625,
+          37989.50390625
+        ],
+        "float32_weight_sums": [
+          231473.515625,
+          37989.50390625
+        ],
+        "float64_weight_sums": [
+          231473.49794075068,
+          37989.50205924938
+        ],
+        "scaler_n_samples_seen_": 269463,
+        "theta_shape": [
+          2,
+          38
+        ],
+        "var_shape": [
+          2,
+          38
+        ],
+        "note": "class_count_ is the float32 accumulation of the sample weights per class and matches exactly; its float32 sum (269463.0195) differs from the 269463 candidate rows only by float32 accumulation error - the float64 weight total is 269463.0"
+      },
+      "families": [
+        "gaussian_nb"
+      ]
+    },
+    "gnb_closed_form_refit_equations": {
+      "passed": true,
+      "detail": {
+        "float32_exact_match": {
+          "class_count_": true,
+          "theta_": true,
+          "var_": true
+        },
+        "float64_recompute_deltas": {
+          "theta_": 0.0009508525909408538,
+          "var_": 0.0028705838349862844,
+          "class_count_": 0.017684249323792756
+        },
+        "epsilon_rule": "var_smoothing * max global unweighted feature variance (float32)",
+        "note": "theta_/var_/class_count_ reproduce the weighted GaussianNB moment equations on the actual scaled TRAIN cache BIT-EXACTLY under the historical float32 arithmetic; the float64 recomputation differs only by float32 accumulation rounding (deltas above). A fabricated or mislabeled estimator would not match"
+      },
+      "families": [
+        "gaussian_nb"
+      ]
+    },
+    "gnb_weights_adjust_priors": {
+      "passed": true,
+      "detail": {
+        "class_prior_": [
+          0.8590177297592163,
+          0.1409822553396225
+        ],
+        "float32_count_ratio": [
+          0.8590177297592163,
+          0.1409822553396225
+        ],
+        "weighted_recomputed_float64": [
+          0.8590177424757782,
+          0.14098225752422178
+        ],
+        "float64_recompute_delta": 1.2716561914594138e-08,
+        "unweighted_row_proportions": [
+          0.898234637037367,
+          0.10176536296263308
+        ],
+        "note": "class_prior_ equals the float32 ratio of the stored class counts exactly, and the float64 weighted recomputation agrees to ~1.3e-8 (float32 rounding); sample weights (inverse candidate count per observation, inverse observation count per trip) shift class priors away from raw row proportions"
+      },
+      "families": [
+        "gaussian_nb"
+      ]
+    },
+    "gnb_predictions_equal_gaussian_formula": {
+      "passed": true,
+      "detail": {
+        "max_abs_delta_vs_pipeline": 0.0,
+        "fixture_rows": 257,
+        "note": "pipeline probabilities equal the literal Gaussian NB posterior formula computed from the stored parameters, bit-exactly under the historical float32 arithmetic"
+      },
+      "families": [
+        "gaussian_nb"
+      ]
+    },
+    "hgb_is_actual_estimator[hist_gradient_boosting]": {
+      "passed": true,
+      "detail": {
+        "class": "sklearn.ensemble._hist_gradient_boosting.gradient_boosting.HistGradientBoostingClassifier",
+        "pipeline_wrapped": false
+      },
+      "families": [
+        "hist_gradient_boosting"
+      ]
+    },
+    "hgb_parameters[hist_gradient_boosting]": {
+      "passed": true,
+      "detail": {
+        "recorded": {
+          "max_iter": 120,
+          "learning_rate": 0.09,
+          "max_leaf_nodes": 23,
+          "min_samples_leaf": 40,
+          "l2_regularization": 0.5
+        },
+        "random_state": 20261118,
+        "early_stopping": false
+      },
+      "families": [
+        "hist_gradient_boosting"
+      ]
+    },
+    "hgb_fitted_rounds[hist_gradient_boosting]": {
+      "passed": true,
+      "detail": {
+        "n_iter_": 120,
+        "predictors": 120,
+        "max_iter": 120,
+        "n_features_in_": 38,
+        "note": "boosting rounds actually grown equal max_iter; no sklearn early stopping"
+      },
+      "families": [
+        "hist_gradient_boosting"
+      ]
+    },
+    "hgb_is_actual_estimator[hist_gradient_boosting_tuned]": {
+      "passed": true,
+      "detail": {
+        "class": "sklearn.ensemble._hist_gradient_boosting.gradient_boosting.HistGradientBoostingClassifier",
+        "pipeline_wrapped": false
+      },
+      "families": [
+        "hist_gradient_boosting_tuned"
+      ]
+    },
+    "hgb_parameters[hist_gradient_boosting_tuned]": {
+      "passed": true,
+      "detail": {
+        "recorded": {
+          "max_iter": 104,
+          "learning_rate": 0.15902391896503631,
+          "max_leaf_nodes": 22,
+          "min_samples_leaf": 38,
+          "l2_regularization": 0.8604220152998319
+        },
+        "random_state": 20261118,
+        "early_stopping": false
+      },
+      "families": [
+        "hist_gradient_boosting_tuned"
+      ]
+    },
+    "hgb_fitted_rounds[hist_gradient_boosting_tuned]": {
+      "passed": true,
+      "detail": {
+        "n_iter_": 104,
+        "predictors": 104,
+        "max_iter": 104,
+        "n_features_in_": 38,
+        "note": "boosting rounds actually grown equal max_iter; no sklearn early stopping"
+      },
+      "families": [
+        "hist_gradient_boosting_tuned"
+      ]
+    },
+    "frozen_model_matches_tuned_baseline_predictions": {
+      "passed": true,
+      "detail": {
+        "max_abs_delta": 0.0,
+        "note": "model.joblib freeze and the recovered hist_gradient_boosting_tuned baseline are independent deterministic fits with identical parameters, seed and data"
+      },
+      "families": [
+        "shared"
+      ]
+    },
+    "student_npz_identity[gaussian_nb]": {
+      "passed": true,
+      "detail": {
+        "rows": 175778,
+        "identity_keys": 6
+      },
+      "families": [
+        "gaussian_nb"
+      ]
+    },
+    "student_fixture_replay[gaussian_nb]": {
+      "passed": true,
+      "detail": {
+        "max_abs_delta": 0.0,
+        "fixture_rows": 257,
+        "tolerance": 1e-12
+      },
+      "families": [
+        "gaussian_nb"
+      ]
+    },
+    "student_full_metrics_replay[gaussian_nb]": {
+      "passed": true,
+      "detail": {
+        "max_numeric_delta": 0.0,
+        "mismatches": [],
+        "recorded_top1": 0.8876826722338205,
+        "replayed_top1": 0.8876826722338205,
+        "trips_covered": 10
+      },
+      "families": [
+        "gaussian_nb"
+      ]
+    },
+    "train_resubstitution_replay[gaussian_nb]": {
+      "passed": true,
+      "detail": {
+        "max_numeric_delta": 0.0,
+        "mismatches": [],
+        "replayed_top1": 0.8738214285714285
+      },
+      "families": [
+        "gaussian_nb"
+      ]
+    },
+    "oof_npz_identity[gaussian_nb]": {
+      "passed": true,
+      "detail": {
+        "rows": 269463,
+        "finite": true
+      },
+      "families": [
+        "gaussian_nb"
+      ]
+    },
+    "oof_full_metrics_replay[gaussian_nb]": {
+      "passed": true,
+      "detail": {
+        "max_numeric_delta": 0.0,
+        "mismatches": [],
+        "recorded_objective": 0.8733928571428571,
+        "replayed_objective": 0.8733928571428571,
+        "candidate_miss_count": 578
+      },
+      "families": [
+        "gaussian_nb"
+      ]
+    },
+    "oof_fold_metrics_replay[gaussian_nb]": {
+      "passed": true,
+      "detail": {
+        "folds": 3,
+        "max_numeric_delta": 0.0,
+        "validation_row_sum": 269463,
+        "validation_observation_sum": 28000,
+        "note": "per-fold metrics recomputed from OOF probabilities on the whole-trip validation sets; recorded validation_rows are CANDIDATE rows (269463 across folds, 28000 underlying observations); fold trip lists equal the shared cv_folds.json"
+      },
+      "families": [
+        "gaussian_nb"
+      ]
+    },
+    "oof_is_fold_isolated_not_final_model[gaussian_nb]": {
+      "passed": true,
+      "detail": {
+        "max_abs_delta_final_vs_oof_on_train_fixture": 0.48302625864744186,
+        "fixture_rows": 257,
+        "note": "OOF probabilities differ from the final all-80 fit: they come from per-fold models"
+      },
+      "families": [
+        "gaussian_nb"
+      ]
+    },
+    "student_npz_identity[hist_gradient_boosting]": {
+      "passed": true,
+      "detail": {
+        "rows": 175778,
+        "identity_keys": 6
+      },
+      "families": [
+        "hist_gradient_boosting"
+      ]
+    },
+    "student_fixture_replay[hist_gradient_boosting]": {
+      "passed": true,
+      "detail": {
+        "max_abs_delta": 0.0,
+        "fixture_rows": 257,
+        "tolerance": 1e-12
+      },
+      "families": [
+        "hist_gradient_boosting"
+      ]
+    },
+    "student_full_metrics_replay[hist_gradient_boosting]": {
+      "passed": true,
+      "detail": {
+        "max_numeric_delta": 0.0,
+        "mismatches": [],
+        "recorded_top1": 0.9065762004175365,
+        "replayed_top1": 0.9065762004175365,
+        "trips_covered": 10
+      },
+      "families": [
+        "hist_gradient_boosting"
+      ]
+    },
+    "train_resubstitution_replay[hist_gradient_boosting]": {
+      "passed": true,
+      "detail": {
+        "max_numeric_delta": 0.0,
+        "mismatches": [],
+        "replayed_top1": 0.9085
+      },
+      "families": [
+        "hist_gradient_boosting"
+      ]
+    },
+    "oof_npz_identity[hist_gradient_boosting]": {
+      "passed": true,
+      "detail": {
+        "rows": 269463,
+        "finite": true
+      },
+      "families": [
+        "hist_gradient_boosting"
+      ]
+    },
+    "oof_full_metrics_replay[hist_gradient_boosting]": {
+      "passed": true,
+      "detail": {
+        "max_numeric_delta": 0.0,
+        "mismatches": [],
+        "recorded_objective": 0.8926785714285714,
+        "replayed_objective": 0.8926785714285714,
+        "candidate_miss_count": 578
+      },
+      "families": [
+        "hist_gradient_boosting"
+      ]
+    },
+    "oof_fold_metrics_replay[hist_gradient_boosting]": {
+      "passed": true,
+      "detail": {
+        "folds": 3,
+        "max_numeric_delta": 0.0,
+        "validation_row_sum": 269463,
+        "validation_observation_sum": 28000,
+        "note": "per-fold metrics recomputed from OOF probabilities on the whole-trip validation sets; recorded validation_rows are CANDIDATE rows (269463 across folds, 28000 underlying observations); fold trip lists equal the shared cv_folds.json"
+      },
+      "families": [
+        "hist_gradient_boosting"
+      ]
+    },
+    "oof_is_fold_isolated_not_final_model[hist_gradient_boosting]": {
+      "passed": true,
+      "detail": {
+        "max_abs_delta_final_vs_oof_on_train_fixture": 0.3145675911333858,
+        "fixture_rows": 257,
+        "note": "OOF probabilities differ from the final all-80 fit: they come from per-fold models"
+      },
+      "families": [
+        "hist_gradient_boosting"
+      ]
+    },
+    "student_npz_identity[hist_gradient_boosting_tuned]": {
+      "passed": true,
+      "detail": {
+        "rows": 175778,
+        "identity_keys": 6
+      },
+      "families": [
+        "hist_gradient_boosting_tuned"
+      ]
+    },
+    "student_fixture_replay[hist_gradient_boosting_tuned]": {
+      "passed": true,
+      "detail": {
+        "max_abs_delta": 0.0,
+        "fixture_rows": 257,
+        "tolerance": 1e-12
+      },
+      "families": [
+        "hist_gradient_boosting_tuned"
+      ]
+    },
+    "student_full_metrics_replay[hist_gradient_boosting_tuned]": {
+      "passed": true,
+      "detail": {
+        "max_numeric_delta": 0.0,
+        "mismatches": [],
+        "recorded_top1": 0.9067849686847599,
+        "replayed_top1": 0.9067849686847599,
+        "trips_covered": 10
+      },
+      "families": [
+        "hist_gradient_boosting_tuned"
+      ]
+    },
+    "train_resubstitution_replay[hist_gradient_boosting_tuned]": {
+      "passed": true,
+      "detail": {
+        "max_numeric_delta": 0.0,
+        "mismatches": [],
+        "replayed_top1": 0.914
+      },
+      "families": [
+        "hist_gradient_boosting_tuned"
+      ]
+    },
+    "oof_npz_identity[hist_gradient_boosting_tuned]": {
+      "passed": true,
+      "detail": {
+        "rows": 269463,
+        "finite": true
+      },
+      "families": [
+        "hist_gradient_boosting_tuned"
+      ]
+    },
+    "oof_replay_copy_identical[hist_gradient_boosting_tuned]": {
+      "passed": true,
+      "detail": {
+        "compared_arrays": 7
+      },
+      "families": [
+        "hist_gradient_boosting_tuned"
+      ]
+    },
+    "oof_full_metrics_replay[hist_gradient_boosting_tuned]": {
+      "passed": true,
+      "detail": {
+        "max_numeric_delta": 0.0,
+        "mismatches": [],
+        "recorded_objective": 0.893392857142857,
+        "replayed_objective": 0.893392857142857,
+        "candidate_miss_count": 578
+      },
+      "families": [
+        "hist_gradient_boosting_tuned"
+      ]
+    },
+    "oof_fold_metrics_replay[hist_gradient_boosting_tuned]": {
+      "passed": true,
+      "detail": {
+        "folds": 3,
+        "max_numeric_delta": 0.0,
+        "validation_row_sum": 269463,
+        "validation_observation_sum": 28000,
+        "note": "per-fold metrics recomputed from OOF probabilities on the whole-trip validation sets; recorded validation_rows are CANDIDATE rows (269463 across folds, 28000 underlying observations); fold trip lists equal the shared cv_folds.json"
+      },
+      "families": [
+        "hist_gradient_boosting_tuned"
+      ]
+    },
+    "oof_is_fold_isolated_not_final_model[hist_gradient_boosting_tuned]": {
+      "passed": true,
+      "detail": {
+        "max_abs_delta_final_vs_oof_on_train_fixture": 0.1705982880770224,
+        "fixture_rows": 257,
+        "note": "OOF probabilities differ from the final all-80 fit: they come from per-fold models"
+      },
+      "families": [
+        "hist_gradient_boosting_tuned"
+      ]
+    },
+    "gnb_serving_wrapper_drift_disclosed": {
+      "passed": true,
+      "detail": {
+        "git_state": "uncommitted working-tree change in mapmatch/learning.py; artifacts predate it (predict_positive_proba promotion of GaussianNB inputs to float64)",
+        "prob_max_abs_delta_full_student": 1.0070684233087768e-05,
+        "student_metric_deltas": {
+          "top1_accuracy": 0.0006784968684759862,
+          "trip_macro_top1_accuracy": 0.0017011577082994833,
+          "macro_f1": 0.0,
+          "log_loss": 0.0026114879707765937
+        },
+        "direction": "the promoted float64 path removes float32 likelihood noise and scores slightly better on student (top1 +6.8e-4, trip_macro_top1 +1.7e-3, log_loss -2.6e-3)",
+        "guard_rationale": "the raw float32 path violates the predict_positive_proba sum-to-1 guard on 2 of 269463 TRAIN rows (max deviation 1.52e-5); the promotion exists to keep guarded serving from raising",
+        "note": "disclosure only, always passes - historical records and this audit's replays use the historical float32 path, which reproduces every saved prediction and metric exactly"
+      },
+      "families": [
+        "gaussian_nb"
+      ]
+    },
+    "hpo_trial_inventory": {
+      "passed": true,
+      "detail": {
+        "total_trials": 12,
+        "composition": {
+          "gaussian_process_expected_improvement": 8,
+          "measured_baseline_prior": 1,
+          "seeded_initial_design": 3
+        }
+      },
+      "families": [
+        "shared"
+      ]
+    },
+    "hpo_winner_and_objective": {
+      "passed": true,
+      "detail": {
+        "winner_trial": 5,
+        "winner_objective": 0.893392857142857,
+        "best_objective_record": 0.893392857142857,
+        "default_baseline_objective": 0.8926785714285714,
+        "objective_description": "maximize out-of-fold equal-trip mean observation top1 proxy accuracy; fixed 3/5-fold GroupKFold on all 80 TRAIN trips",
+        "tuned_cv_run": "bayes_hist_gradient_boosting_05"
+      },
+      "families": [
+        "shared"
+      ]
+    },
+    "hpo_winner_parameters_consistent_everywhere": {
+      "passed": true,
+      "detail": {
+        "winner_parameters": {
+          "max_iter": 104,
+          "learning_rate": 0.15902391896503631,
+          "max_leaf_nodes": 22,
+          "min_samples_leaf": 38,
+          "l2_regularization": 0.8604220152998319
+        }
+      },
+      "families": [
+        "shared"
+      ]
+    },
+    "hpo_objective_is_train_cv_only": {
+      "passed": true,
+      "detail": {
+        "selection_data": "TRAIN only; student_test metrics not loaded during HPO",
+        "method": "GaussianProcessRegressor Matern-5/2 surrogate + analytic expected improvement"
+      },
+      "families": [
+        "shared"
+      ]
+    },
+    "hpo_pins_recorded": {
+      "passed": true,
+      "detail": {
+        "exploration_xi": 0.0003,
+        "surrogate_kernel": "0.992**2 * Matern(length_scale=[0.427, 3, 3, 0.0904, 0.346], nu=2.5) + WhiteKernel(noise_level=0.000988)",
+        "expected_improvement": 3.562139634141657e-05,
+        "seed": 20261118,
+        "search_space": {
+          "learning_rate": [
+            "log",
+            0.025,
+            0.2
+          ],
+          "max_iter": [
+            "int",
+            70,
+            200
+          ],
+          "max_leaf_nodes": [
+            "int",
+            7,
+            47
+          ],
+          "min_samples_leaf": [
+            "logint",
+            15,
+            160
+          ],
+          "l2_regularization": [
+            "log",
+            0.01,
+            20.0
+          ]
+        }
+      },
+      "families": [
+        "shared"
+      ]
+    },
+    "selection_used_train_cv_only": {
+      "passed": true,
+      "detail": {
+        "selected": "hist_gradient_boosting",
+        "scores": {
+          "logistic_regression": 0.884,
+          "gaussian_nb": 0.8733928571428571,
+          "random_forest": 0.8913928571428571,
+          "extra_trees": 0.8918214285714285,
+          "hist_gradient_boosting": 0.8926785714285714
+        },
+        "note": "baseline selection on TRAIN grouped-CV objective; run.log shows student_test loaded only after baseline_selected and all 12 bayesian trials"
+      },
+      "families": [
+        "shared"
+      ]
+    },
+    "final_oof_replay_record_consistent": {
+      "passed": true,
+      "detail": {
+        "max_delta": 0.0,
+        "purpose": "retain selected configuration OOF arrays, not a new HPO trial"
+      },
+      "families": [
+        "shared"
+      ]
+    },
+    "cross_environment_replay": {
+      "passed": true,
+      "detail": {
+        "max_abs_deltas": {
+          "gaussian_nb.train": 0.0,
+          "gaussian_nb.student": 0.0,
+          "hist_gradient_boosting.train": 0.0,
+          "hist_gradient_boosting.student": 0.0,
+          "hist_gradient_boosting_tuned.train": 0.0,
+          "hist_gradient_boosting_tuned.student": 0.0,
+          "model_joblib.student": 0.0
+        },
+        "tolerance": 1e-12,
+        "versions_venv": {
+          "python": "3.14.6",
+          "numpy": "2.5.5",
+          "scipy": "1.18.0",
+          "sklearn": "1.8.0"
+        },
+        "versions_venv_clean": {
+          "python": "3.14.6",
+          "numpy": "2.5.5",
+          "scipy": "1.18.0",
+          "sklearn": "1.8.0"
+        },
+        "note": ".venv and .venv-clean (clean serving environment) agree at 1e-12 on both fixtures"
+      },
+      "families": [
+        "shared"
+      ]
+    }
+  },
+  "families": {
+    "gaussian_nb": {
+      "default": "pass"
+    },
+    "hist_gradient_boosting": {
+      "default": "pass",
+      "tuned": "pass"
+    }
+  },
+  "disclosures": [
+    "Historical artifacts were trained under numpy 2.5.2; the current original .venv and .venv-clean both run numpy 2.5.5. Despite that drift, the float32 fit accumulation and the historical scoring path reproduce every stored parameter, saved prediction and recorded metric bit-exactly (max delta 0.0) under the current environment, so the drift is immaterial. The strict 1e-12 replay tolerance was applied unchanged.",
+    "GaussianNB ran float32 end to end (float32 cache X; StandardScaler and GaussianNB preserve dtype). The current working tree contains an uncommitted learning.predict_positive_proba fix that promotes GaussianNB scoring inputs to float64, because raw float32 likelihoods violate the sum-to-1 guard on 2 of 269463 TRAIN rows (max deviation 1.52e-5). Re-scoring the saved artifact through today's wrapper therefore differs from the historical predictions by at most 1.0e-5 in probability on extreme near-clip rows (typical rows stay below 1.3e-6) and 2.7e-3 in student metrics (slightly better: it removes float32 noise). All historical records remain exactly reproducible via the historical float32 path.",
+    "Fold records count CANDIDATE rows: validation_rows sum to 269463 across the three folds (28000 underlying observations). OOF predictions come from per-fold models that were not retained; they are verified via saved-array metric replay, fold partition and per-fold metric replay, not by re-prediction.",
+    "student_test was consulted historically as a development evaluation after selection; those results are not blind. evaluator_test/ and archives were never accessed by this audit.",
+    "artifacts/model.joblib was frozen before the recovery refit of the remaining baselines; the tuned baseline artifact is an independent deterministic refit verified to predict identically."
+  ],
+  "passed": true
+}

@@ -41,6 +41,19 @@ node_modules/
 /experiments/phase_three_runs/*/predictions/
 /experiments/phase_three_runs/*/cache/
 /experiments/phase_three_runs/*/*.npz
+/experiments/final_five/predictions/
+/experiments/final_five/current/predictions/
+/experiments/final_five/**/*.npz
+/experiments/final_five_runs/*/predictions/
+/experiments/final_five_runs/*/cache/
+/experiments/final_five_runs/*/*.npz
+/artifacts/final_five_runs/
+/reports/final_five_runs/
+# Missing-only replay inputs retain private candidate arrays and fresh timings.
+/experiments/final_five_replay_inputs/
+# Private transient compositor handshake is not terminal evidence.
+/reports/final_five/live/.terminal_display_ready.json
+/reports/final_five/live/.terminal_display_ready.*
 /study_materials/
 /reports/**/.terminal_display_ready.json
 /analysis/video/*.safetensors

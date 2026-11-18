@@ -1,0 +1,169 @@
+{
+  "report": "independent verification of the fresh final five-family model stage",
+  "task": "task-35",
+  "reviewed_at_utc": "2026-11-18T08:42:54.356120+00:00",
+  "passed": true,
+  "critical_defects": [],
+  "scope": "fresh five-family stage (LR, KNN, Bagging, GaussianNB, HistGradientBoosting + tuned HGB); actual artifacts, fits, banks, metrics, predictions, HPO study and selection; read-only except analysis/final_model_review/",
+  "environment": {
+    "interpreter": "original .venv (python 3.14.6, numpy 2.5.5, scipy 1.18.0, sklearn 1.8.0, joblib 1.5.3)",
+    "matches_results_json_versions": true
+  },
+  "check_counts": {
+    "main_verification_checks": "111/111",
+    "toy_mapmatcher_checks": "10/10",
+    "lead_unit_tests_tests_test_final_five": "8/8"
+  },
+  "selected_model": {
+    "family": "hist_gradient_boosting",
+    "final_run": "hist_gradient_boosting_tuned",
+    "selection_criterion": "TRAIN out-of-fold trip-macro observation top-1 (proxy); tie-break macro F1 then lower log loss",
+    "student_or_evaluator_used_for_selection": false,
+    "frozen_model": "artifacts/final_five/model.joblib",
+    "frozen_model_sha256": "c9cc8e9f36838f656a94d07ed69632979df9981ca94a9daf3b52fbce052e4b34",
+    "frozen_bytes": 147906,
+    "frozen_at_utc": "2026-11-18T08:26:50.372940+00:00",
+    "best_parameters": {
+      "max_iter": 104,
+      "learning_rate": 0.15902391896503631,
+      "max_leaf_nodes": 22,
+      "min_samples_leaf": 38,
+      "l2_regularization": 0.8604220152998319
+    },
+    "tuned_cv_objective": 0.893392857142857
+  },
+  "family_records": {
+    "logistic_regression": {
+      "cv_objective_trip_macro_top1": 0.884,
+      "cv_macro_f1": 0.9330442702864366,
+      "cv_log_loss": 0.07443299221247036,
+      "student_top1_accuracy": 0.8951983298538622,
+      "student_macro_f1": 0.9329364512824421,
+      "student_log_loss": 0.06899899065600447,
+      "reused_records": true,
+      "fresh_fit": false,
+      "artifact": "artifacts/baselines/logistic_regression.joblib",
+      "artifact_sha256": "29157349d52a993d33cae78ed244805a9f087e79b6dc914aaa3b4461c02a58c9",
+      "estimator_class": "sklearn.pipeline.Pipeline",
+      "strict_fixture_rows": 257,
+      "recorded_fixture_max_abs_delta": 1.6653345369377348e-15,
+      "training_trip_count": 80,
+      "student_trip_count": 10
+    },
+    "knn_distance_weighted": {
+      "cv_objective_trip_macro_top1": 0.8767857142857143,
+      "cv_macro_f1": 0.9274791219704925,
+      "cv_log_loss": 0.09411409567726087,
+      "student_top1_accuracy": 0.8905010438413361,
+      "student_macro_f1": 0.9274881703784643,
+      "student_log_loss": 0.09604297407876781,
+      "reused_records": true,
+      "fresh_fit": false,
+      "artifact": "artifacts/phase_three/baselines/knn_distance_weighted.joblib",
+      "artifact_sha256": "564e6f85f9190d0ff19e75967613e4d56dbe573aaf80ef8780ed8374f8537246",
+      "estimator_class": "sklearn.pipeline.Pipeline",
+      "strict_fixture_rows": 257,
+      "recorded_fixture_max_abs_delta": 0.0,
+      "training_trip_count": 80,
+      "student_trip_count": 10
+    },
+    "bagging": {
+      "cv_objective_trip_macro_top1": 0.8914642857142857,
+      "cv_macro_f1": 0.9426144376936816,
+      "cv_log_loss": 0.057221017455649795,
+      "student_top1_accuracy": 0.9048016701461378,
+      "student_macro_f1": 0.9437265546922589,
+      "student_log_loss": 0.05622414970449344,
+      "reused_records": true,
+      "fresh_fit": false,
+      "artifact": "artifacts/phase_three/baselines/bagging.joblib",
+      "artifact_sha256": "619bc3d267fec686d3ee0d212b3d13a4c8d9bd46e35893f3f570253d232822b6",
+      "estimator_class": "sklearn.ensemble._bagging.BaggingClassifier",
+      "strict_fixture_rows": 257,
+      "recorded_fixture_max_abs_delta": 0.0,
+      "training_trip_count": 80,
+      "student_trip_count": 10
+    },
+    "gaussian_nb": {
+      "cv_objective_trip_macro_top1": 0.8734285714285714,
+      "cv_macro_f1": 0.9210939341885569,
+      "cv_log_loss": 0.3391661211966567,
+      "student_top1_accuracy": 0.8883611691022965,
+      "student_macro_f1": 0.922211223946088,
+      "student_log_loss": 0.35910011794860974,
+      "reused_records": false,
+      "fresh_fit": true,
+      "artifact": "artifacts/final_five/baselines/gaussian_nb.joblib",
+      "artifact_sha256": "f79c03821ee50a9cdb9912031dd56df0f0e54379bb48ad63116315e5400b8579",
+      "estimator_class": "sklearn.pipeline.Pipeline",
+      "strict_fixture_rows": 257,
+      "recorded_fixture_max_abs_delta": 0.0,
+      "training_trip_count": 80,
+      "student_trip_count": 10
+    },
+    "hist_gradient_boosting": {
+      "cv_objective_trip_macro_top1": 0.8926785714285714,
+      "cv_macro_f1": 0.9428589610674079,
+      "cv_log_loss": 0.05698196818420589,
+      "student_top1_accuracy": 0.9065762004175365,
+      "student_macro_f1": 0.9442330333194171,
+      "student_log_loss": 0.05522123883891804,
+      "reused_records": false,
+      "fresh_fit": true,
+      "artifact": "artifacts/final_five/baselines/hist_gradient_boosting.joblib",
+      "artifact_sha256": "7974b1eacc2787ade3becd48b0d1079bd673be83f15183bdad0839a4fc71ce85",
+      "estimator_class": "sklearn.ensemble._hist_gradient_boosting.gradient_boosting.HistGradientBoostingClassifier",
+      "strict_fixture_rows": 257,
+      "recorded_fixture_max_abs_delta": 0.0,
+      "training_trip_count": 80,
+      "student_trip_count": 10
+    },
+    "hist_gradient_boosting_tuned": {
+      "cv_objective_trip_macro_top1": 0.893392857142857,
+      "cv_macro_f1": 0.9416187410219833,
+      "cv_log_loss": 0.05725719146420802,
+      "student_top1_accuracy": 0.9067849686847599,
+      "student_macro_f1": 0.9447159610168164,
+      "student_log_loss": 0.05549988431377391,
+      "reused_records": false,
+      "fresh_fit": true,
+      "artifact": "artifacts/final_five/baselines/hist_gradient_boosting_tuned.joblib",
+      "artifact_sha256": "47ea723d350567b6eeba827744e2c1a26c9baf915d322e29a590f45922ed8eeb",
+      "estimator_class": "sklearn.ensemble._hist_gradient_boosting.gradient_boosting.HistGradientBoostingClassifier",
+      "strict_fixture_rows": 257,
+      "recorded_fixture_max_abs_delta": 0.0,
+      "training_trip_count": 80,
+      "student_trip_count": 10
+    }
+  },
+  "verified_findings": {
+    "caches": "TRAIN 80 trips / 28000 obs / 269463 rows / X(269463,38) float32; student 10 trips / 19160 obs / 175778 rows; sha-pinned shared caches; TRAIN-student trips disjoint",
+    "folds": "3 whole-trip GroupKFold folds identical across all six CV records and the shared cv_folds.json; train/val disjoint; every trip validated exactly once; val sizes 27/27/26 trips (89757/90846/88860 rows)",
+    "predictions": "all 6 OOF npz + 6 student npz identity-checked (y/offsets/trip ids/observation indices/candidate edges/reference edges); binary+observation metrics recomputed from saved probabilities match records exactly (max delta 0.0, atol 1e-12)",
+    "strict_fixture_replay": "all six saved models reloaded from disk and re-run on the 257-row student fixture in the original .venv: max deltas 0.0 except logistic_regression 1.665e-15 (machine-epsilon BLAS summation-order difference, within the 1e-12 strict tolerance; honestly recorded in both the evaluation and acceptance reports)",
+    "hpo": "historical 12-trial TRAIN-only GP-EI study independently revalidated: schedule = 1 measured baseline prior + 3 seeded initial design + 8 GP expected-improvement; 12 unique configs (no collisions); every trial CV file sha-pinned under experiments/cv/ with matching parameters/objective/folds; GP-EI metadata (surrogate points == trial index, pool 3072, std>0, EI>=0); winner trial 5 (0.893392857142857) matches best_parameters; fresh default HGB CV reproduces prior baseline 0.8926785714285714 exactly; fresh_hpo_trials = 0",
+    "gnb_correction": "first-attempt float32 records preserved at experiments/final_five/cv/gaussian_nb.json (objective 0.8733928571428571, log_loss 0.3410388959) and are DISTINCT from the corrected float64 current records (objective 0.8734285714285714, log_loss 0.3391661212); PROTOCOL.md discloses the 1.52e-5 float32 probability-sum failure, the float64 input promotion (mapmatch/learning.py:32-36, GaussianNB-only, strict guards unchanged), and the 2.3e-14 measured float64 sum error; no historical number is claimed identical",
+    "freeze_bundle": "model.joblib sha256 c9cc8e9f36838f656a94d07ed69632979df9981ca94a9daf3b52fbce052e4b34 consistent across acceptance, model_freeze.json, results.json and clean_load_report.json; metadata/schema shas match disk; 147906 bytes; clean-environment replay (2000 TRAIN rows, atol 1e-12) reports delta 0.0",
+    "runner_guards": "run_final_five.py refuse_existing() blocks overwriting any measured output (existence or symlink) before any dataset load (unit-tested); isolated_run_paths() rejects traversal/invalid run-ids; stage_student verifies frozen model sha before student loading; tuned CV must reproduce the frozen HPO winner within 1e-12; all 8 Lead unit tests in tests/test_final_five.py pass",
+    "toy_mapmatcher": "all six saved estimators plus the frozen model decoded a synthetic 3-observation track through the real MapMatcher/EmissionModel feature pipeline with no reference route: learned emissions normalized (sum error <= 2.3e-16), six distinct emission signatures, frozen model emissions identical to the tuned baseline artifact (delta 0.0), GNB strict probability guard passes (float64 promotion active)"
+  },
+  "notes": [
+    "LR/KNN/Bagging records are reused (phase_three provenance, sha-pinned, parameters match FINAL_DEFAULTS) and are honestly labelled reused; their fresh work this stage is only the strict fixture replay and consolidation.",
+    "The only nonzero replay delta anywhere is logistic_regression 1.665e-15 (well inside 1e-12); it is disclosed in the records, not hidden.",
+    "Team-task claim tools (team_task_*) are not available in this legacy subagent session; task-35 status must be updated by the Lead.",
+    "No evaluator inputs, data archives, HTTP requests, new fits, or HPO trials were used by this review."
+  ],
+  "reproduction": {
+    "main_verification": ".venv/bin/python analysis/final_model_review/verify_final_five.py",
+    "toy_mapmatcher": ".venv/bin/python analysis/final_model_review/toy_mapmatcher_check.py",
+    "lead_unit_tests": ".venv/bin/python -m unittest tests.test_final_five -v"
+  },
+  "artifacts_written_by_review": [
+    "analysis/final_model_review/verify_final_five.py",
+    "analysis/final_model_review/toy_mapmatcher_check.py",
+    "analysis/final_model_review/verification_raw_output.json",
+    "analysis/final_model_review/toy_mapmatcher_raw_output.json",
+    "analysis/final_model_review/compare_old_new.py",
+    "analysis/final_model_review/final_review_report.json"
+  ]
+}

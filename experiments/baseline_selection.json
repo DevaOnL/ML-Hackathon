@@ -1,0 +1,12 @@
+{
+  "selected_model": "hist_gradient_boosting",
+  "objective": "out_of_fold_trip_macro_top1_accuracy",
+  "scores": {
+    "logistic_regression": 0.884,
+    "gaussian_nb": 0.8733928571428571,
+    "random_forest": 0.8913928571428571,
+    "extra_trees": 0.8918214285714285,
+    "hist_gradient_boosting": 0.8926785714285714
+  },
+  "student_test_consulted": false
+}

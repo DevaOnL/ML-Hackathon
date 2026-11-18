@@ -1,0 +1,24 @@
+{
+  "checked_at_utc": "2026-11-18T08:26:59.261354+00:00",
+  "passed": true,
+  "versions": {
+    "python": "3.14.6",
+    "numpy": "2.5.5",
+    "scipy": "1.18.0",
+    "sklearn": "1.8.0",
+    "joblib": "1.5.3"
+  },
+  "parent_versions": {
+    "python": "3.14.6",
+    "numpy": "2.5.5",
+    "scipy": "1.18.0",
+    "sklearn": "1.8.0",
+    "joblib": "1.5.3"
+  },
+  "fixture": "first 2000 TRAIN candidate rows; labels not used by prediction",
+  "fixture_sha256": "86c47619c6567da19e7391dbc7233cfe21978794eb5d0b31e7e14b015a21fda2",
+  "max_probability_delta": 0.0,
+  "atol": 1e-12,
+  "rtol": 0,
+  "model_sha256": "c9cc8e9f36838f656a94d07ed69632979df9981ca94a9daf3b52fbce052e4b34"
+}

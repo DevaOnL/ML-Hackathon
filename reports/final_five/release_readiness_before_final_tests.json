@@ -1,0 +1,106 @@
+{
+  "facts": 360,
+  "inputs": 50,
+  "images": 55,
+  "missing": [],
+  "load_errors": [],
+  "failed_guards": [
+    {
+      "name": "requirements_all47_resolved",
+      "ok": false,
+      "detail": "unresolved requirement rows: R-DL-03, R-DL-05, R-DL-06, R-DL-07, R-DL-08, R-DL-09, R-AP-01"
+    },
+    {
+      "name": "complete_release_suite_and_bound_logs",
+      "ok": false,
+      "detail": "complete_release_suite must be true"
+    }
+  ],
+  "all_guards": [
+    {
+      "name": "mandatory_inputs_and_snapshot",
+      "ok": true,
+      "detail": "all mandatory paths regular, canonical, nonempty and hash-bound"
+    },
+    {
+      "name": "five_families_six_configs_train_hpo",
+      "ok": true,
+      "detail": "five families, six actual fits, disjoint TRAIN folds and genuine reused twelve-trial HPO"
+    },
+    {
+      "name": "offlinev_recursive_delivery_checks",
+      "ok": true,
+      "detail": "11 nonempty check containers passed"
+    },
+    {
+      "name": "apiv_recursive_delivery_checks",
+      "ok": true,
+      "detail": "85 nonempty check containers passed"
+    },
+    {
+      "name": "deliveryv_recursive_delivery_checks",
+      "ok": true,
+      "detail": "104 nonempty check containers passed"
+    },
+    {
+      "name": "evalacc_recursive_delivery_checks",
+      "ok": true,
+      "detail": "11 nonempty check containers passed"
+    },
+    {
+      "name": "all_twenty_identity_and_full_config",
+      "ok": true,
+      "detail": "pinned model/file/compact hashes across actual offline20/ASGI20/public20"
+    },
+    {
+      "name": "browser_two_and_terminal_binding",
+      "ok": true,
+      "detail": "two real browser requests and their hash-bound receiving terminal"
+    },
+    {
+      "name": "actual_final_folium_map",
+      "ok": true,
+      "detail": "actual final HTML/PNG/PDF plus metadata/browser/OCR files are hash-bound"
+    },
+    {
+      "name": "requirements_all47_resolved",
+      "ok": false,
+      "detail": "unresolved requirement rows: R-DL-03, R-DL-05, R-DL-06, R-DL-07, R-DL-08, R-DL-09, R-AP-01"
+    },
+    {
+      "name": "complete_release_suite_and_bound_logs",
+      "ok": false,
+      "detail": "complete_release_suite must be true"
+    },
+    {
+      "name": "every_registered_fact_resolved",
+      "ok": true,
+      "detail": "360 actual measured facts resolved"
+    },
+    {
+      "name": "raw_template_and_resolved_output",
+      "ok": true,
+      "detail": "raw tokens covered; resolved text has no directives, missing links or unlabelled stale paths"
+    },
+    {
+      "name": "all_figures_png_dimensions_hashes",
+      "ok": true,
+      "detail": "23 final + 12 EDA + actual map + seven original live captures + twelve exact-pixel readable details bound"
+    },
+    {
+      "name": "clean_reload_and_versions",
+      "ok": true,
+      "detail": "passed"
+    },
+    {
+      "name": "decoder_all_ten_original_observations",
+      "ok": true,
+      "detail": "passed"
+    },
+    {
+      "name": "independent_model_audit",
+      "ok": true,
+      "detail": "passed"
+    }
+  ]
+}

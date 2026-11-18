@@ -241,6 +241,18 @@ class HostingTests(unittest.TestCase):
             with self.assertRaises(launch.LaunchError):
                 launch.read_settings(path)
 
+    def test_explicit_evaluator_settings_pass_the_narrow_allowlist(self):
+        values = {"PATHSNAP_EVALUATOR_DATA_DIR": "/synthetic/evaluator",
+                  "PATHSNAP_EVALUATOR_REFERENCE_DIR": "/synthetic/private-references",
+                  "PATHSNAP_EVALUATOR_EXPECTED_TRIP_COUNT": "10"}
+        path = self.private("runtime.env", self.settings(**values))
+        actual = launch.read_settings(path)
+        for key, value in values.items():
+            self.assertEqual(actual[key], value)
+        invalid = self.private("invalid-evaluator.env", self.settings(PATHSNAP_EVALUATOR_MODEL="forbidden"))
+        with self.assertRaises(launch.LaunchError):
+            launch.read_settings(invalid)
+
     def test_environment_values_are_never_executed(self):
         marker = self.root / "must-not-exist"
         path = self.private("runtime.env", self.settings(PATHSNAP_DATA_DIR="$(touch " + str(marker) + ")"))

@@ -1,0 +1,139 @@
+{
+  "crop_box": [
+    48,
+    900,
+    354,
+    1075
+  ],
+  "mean_word_confidence": 77.26,
+  "method": "tesseract --psm 11; actual saved crop, original pixels",
+  "text": "SELECTED TRIP\n00000009\n1,049 original 6ps observations\nInference and scoring run on the server.",
+  "words": [
+    {
+      "bbox": [
+        22,
+        19,
+        82,
+        26
+      ],
+      "text": "SELECTED"
+    },
+    {
+      "bbox": [
+        92,
+        19,
+        121,
+        26
+      ],
+      "text": "TRIP"
+    },
+    {
+      "bbox": [
+        22,
+        39,
+        84,
+        48
+      ],
+      "text": "00000009"
+    },
+    {
+      "bbox": [
+        23,
+        64,
+        54,
+        73
+      ],
+      "text": "1,049"
+    },
+    {
+      "bbox": [
+        62,
+        63,
+        114,
+        73
+      ],
+      "text": "original"
+    },
+    {
+      "bbox": [
+        122,
+        64,
+        140,
+        71
+      ],
+      "text": "6ps"
+    },
+    {
+      "bbox": [
+        148,
+        63,
+        226,
+        71
+      ],
+      "text": "observations"
+    },
+    {
+      "bbox": [
+        8,
+        152,
+        63,
+        160
+      ],
+      "text": "Inference"
+    },
+    {
+      "bbox": [
+        71,
+        152,
+        88,
+        160
+      ],
+      "text": "and"
+    },
+    {
+      "bbox": [
+        96,
+        154,
+        139,
+        162
+      ],
+      "text": "scoring"
+    },
+    {
+      "bbox": [
+        147,
+        154,
+        164,
+        160
+      ],
+      "text": "run"
+    },
+    {
+      "bbox": [
+        171,
+        154,
+        183,
+        160
+      ],
+      "text": "on"
+    },
+    {
+      "bbox": [
+        191,
+        152,
+        208,
+        160
+      ],
+      "text": "the"
+    },
+    {
+      "bbox": [
+        216,
+        154,
+        257,
+        160
+      ],
+      "text": "server."
+    }
+  ]
+}

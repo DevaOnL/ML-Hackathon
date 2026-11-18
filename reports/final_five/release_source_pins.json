@@ -1,0 +1,42 @@
+{
+  "purpose": "final synthetic-tested source snapshot; PDF content revisions change template only",
+  "sources": [
+    {
+      "path": "scripts/build_final_report.py",
+      "sha256": "ae6b72a7455a8105054d36568df46a20db201e9b5db2cd1d6a412e2a5e051c1a"
+    },
+    {
+      "path": "scripts/prepare_report_images.py",
+      "sha256": "531286d58673e9a7ad2bba245f30528a76565a805649266075bf75d4ba1e89d5"
+    },
+    {
+      "path": "scripts/review_publication.py",
+      "sha256": "8f37ec32a9abc2fb15ec2509efa0a2285e557ae62081533f4918203de5cd107f"
+    },
+    {
+      "path": "scripts/verify_report_layout.py",
+      "sha256": "1402c30b4f99157277e65d6e69dbd47843fe6e7947a817b4aa1855c436ebf7e1"
+    },
+    {
+      "path": "tests/test_final_report.py",
+      "sha256": "96af9f4618e9e9ec79c886b1337533dc27ad3d4af2199bc70a840160fa8d7207"
+    },
+    {
+      "path": "tests/test_prepare_report_images.py",
+      "sha256": "c40843b0ac5de1464f0d8a9e79be17d05d923c7f37689dbf05d906798453cacf"
+    },
+    {
+      "path": "tests/test_publication.py",
+      "sha256": "3ec273fe30864ad9da6d0e95cfd21d97c3a7cca7b8b24022482cb3d1e352789b"
+    },
+    {
+      "path": "tests/test_report_layout.py",
+      "sha256": "33f4569c30a52fa1725ece4bc02f8f7d42327aa79a195362c5342a27d79cd5c8"
+    },
+    {
+      "path": ".github/workflows/ci.yml",
+      "sha256": "5e23add73f6b70997a351c002a25677aa524af279bac115adca48c0befceb08a"
+    }
+  ],
+  "release_test_total": 421
+}

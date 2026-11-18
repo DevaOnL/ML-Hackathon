@@ -1,0 +1,1167 @@
+{
+  "schema_version": 1,
+  "scope": "manuscript proposal only; reviewed values resolved directly from existing measured public evidence",
+  "new_inputs": [
+    {
+      "key": "historical_results",
+      "path": "experiments/results.json",
+      "kind": "json",
+      "final": true,
+      "role": "Historical RF and ExtraTrees comparison only, not final family selection",
+      "owner": "historical-public-evidence"
+    },
+    {
+      "key": "historical_phase3",
+      "path": "experiments/phase_three/results.json",
+      "kind": "json",
+      "final": true,
+      "role": "Historical tuned Bagging appendix only, not final-five selection",
+      "owner": "historical-public-evidence"
+    },
+    {
+      "key": "map_metadata",
+      "path": "visualizations/final_five/maps/final_development_trip_00000009.metadata.json",
+      "kind": "json",
+      "final": true,
+      "role": "Actual final tuned-model development Folium map provenance",
+      "owner": "figures"
+    },
+    {
+      "key": "evaltestqa",
+      "path": "reports/final_five/evaluator/test_and_privacy_verification.json",
+      "kind": "json",
+      "final": true,
+      "role": "Actual offline evaluator synthetic guards and privacy QA",
+      "owner": "evaluator"
+    },
+    {
+      "key": "api20",
+      "path": "reports/final_five/api_integration_acceptance.json",
+      "kind": "json",
+      "final": true,
+      "role": "Actual twenty-trip ASGI API calls with request-local saved emission probability audits; not public-network transport proof",
+      "owner": "final-service"
+    }
+  ],
+  "new_facts": [
+    {
+      "name": "lr_infer_s",
+      "input": "results5",
+      "pointer": "evaluations.logistic_regression.student_inference_seconds",
+      "fmt": "{:.3f}",
+      "required": true
+    },
+    {
+      "name": "lr_fit_s",
+      "input": "results5",
+      "pointer": "evaluations.logistic_regression.training_seconds",
+      "fmt": "{:.3f}",
+      "required": true
+    },
+    {
+      "name": "lr_train_top1",
+      "input": "results5",
+      "pointer": "evaluations.logistic_regression.train_resubstitution_metrics.top1_accuracy",
+      "fmt": "{:.4f}",
+      "required": true
+    },
+    {
+      "name": "lr_train_binary_f1",
+      "input": "results5",
+      "pointer": "evaluations.logistic_regression.train_resubstitution_metrics.macro_f1",
+      "fmt": "{:.4f}",
+      "required": true
+    },
+    {
+      "name": "lr_train_ll",
+      "input": "results5",
+      "pointer": "evaluations.logistic_regression.train_resubstitution_metrics.log_loss",
+      "fmt": "{:.4f}",
+      "required": true
+    },
+    {
+      "name": "lr_binary_accuracy",
+      "input": "results5",
+      "pointer": "evaluations.logistic_regression.student_metrics.accuracy",
+      "fmt": "{:.4f}",
+      "required": true
+    },
+    {
+      "name": "lr_binary_precision",
+      "input": "results5",
+      "pointer": "evaluations.logistic_regression.student_metrics.precision",
+      "fmt": "{:.4f}",
+      "required": true
+    },
+    {
+      "name": "lr_binary_recall",
+      "input": "results5",
+      "pointer": "evaluations.logistic_regression.student_metrics.recall",
+      "fmt": "{:.4f}",
+      "required": true
+    },
+    {
+      "name": "lr_pooled_top1",
+      "input": "seq",
+      "pointer": "logistic_regression.top1_accuracy",
+      "fmt": "{:.4f}",
+      "required": true
+    },
+    {
+      "name": "lr_pooled_edge_f1",
+      "input": "seq",
+      "pointer": "logistic_regression.observation_edge_macro_f1",
+      "fmt": "{:.4f}",
+      "required": true
+    },
+    {
+      "name": "lr_all_nll",
+      "input": "seq",
+      "pointer": "logistic_regression.observation_categorical_log_loss_clipped",
+      "fmt": "{:.4f}",
+      "required": true
+    },
+    {
+      "name": "lr_raw_continuity",
+      "input": "seq",
+      "pointer": "logistic_regression.raw_classifier_continuity",
+      "fmt": "{:.4f}",
+      "required": true
+    },
+    {
+      "name": "lr_change_continuity",
+      "input": "seq",
+      "pointer": "logistic_regression.edge_change_continuity",
+      "fmt": "{:.4f}",
+      "required": true
+    },
+    {
+      "name": "knn_infer_s",
+      "input": "results5",
+      "pointer": "evaluations.knn_distance_weighted.student_inference_seconds",
+      "fmt": "{:.3f}",
+      "required": true
+    },
+    {
+      "name": "knn_fit_s",
+      "input": "results5",
+      "pointer": "evaluations.knn_distance_weighted.training_seconds",
+      "fmt": "{:.3f}",
+      "required": true
+    },
+    {
+      "name": "knn_train_top1",
+      "input": "results5",
+      "pointer": "evaluations.knn_distance_weighted.train_resubstitution_metrics.top1_accuracy",
+      "fmt": "{:.4f}",
+      "required": true
+    },
+    {
+      "name": "knn_train_binary_f1",
+      "input": "results5",
+      "pointer": "evaluations.knn_distance_weighted.train_resubstitution_metrics.macro_f1",
+      "fmt": "{:.4f}",
+      "required": true
+    },
+    {
+      "name": "knn_train_ll",
+      "input": "results5",
+      "pointer": "evaluations.knn_distance_weighted.train_resubstitution_metrics.log_loss",
+      "fmt": "{:.4f}",
+      "required": true
+    },
+    {
+      "name": "knn_binary_accuracy",
+      "input": "results5",
+      "pointer": "evaluations.knn_distance_weighted.student_metrics.accuracy",
+      "fmt": "{:.4f}",
+      "required": true
+    },
+    {
+      "name": "knn_binary_precision",
+      "input": "results5",
+      "pointer": "evaluations.knn_distance_weighted.student_metrics.precision",
+      "fmt": "{:.4f}",
+      "required": true
+    },
+    {
+      "name": "knn_binary_recall",
+      "input": "results5",
+      "pointer": "evaluations.knn_distance_weighted.student_metrics.recall",
+      "fmt": "{:.4f}",
+      "required": true
+    },
+    {
+      "name": "knn_pooled_top1",
+      "input": "seq",
+      "pointer": "knn_distance_weighted.top1_accuracy",
+      "fmt": "{:.4f}",
+      "required": true
+    },
+    {
+      "name": "knn_pooled_edge_f1",
+      "input": "seq",
+      "pointer": "knn_distance_weighted.observation_edge_macro_f1",
+      "fmt": "{:.4f}",
+      "required": true
+    },
+    {
+      "name": "knn_all_nll",
+      "input": "seq",
+      "pointer": "knn_distance_weighted.observation_categorical_log_loss_clipped",
+      "fmt": "{:.4f}",
+      "required": true
+    },
+    {
+      "name": "knn_raw_continuity",
+      "input": "seq",
+      "pointer": "knn_distance_weighted.raw_classifier_continuity",
+      "fmt": "{:.4f}",
+      "required": true
+    },
+    {
+      "name": "knn_change_continuity",
+      "input": "seq",
+      "pointer": "knn_distance_weighted.edge_change_continuity",
+      "fmt": "{:.4f}",
+      "required": true
+    },
+    {
+      "name": "bag_infer_s",
+      "input": "results5",
+      "pointer": "evaluations.bagging.student_inference_seconds",
+      "fmt": "{:.3f}",
+      "required": true
+    },
+    {
+      "name": "bag_fit_s",
+      "input": "results5",
+      "pointer": "evaluations.bagging.training_seconds",
+      "fmt": "{:.3f}",
+      "required": true
+    },
+    {
+      "name": "bag_train_top1",
+      "input": "results5",
+      "pointer": "evaluations.bagging.train_resubstitution_metrics.top1_accuracy",
+      "fmt": "{:.4f}",
+      "required": true
+    },
+    {
+      "name": "bag_train_binary_f1",
+      "input": "results5",
+      "pointer": "evaluations.bagging.train_resubstitution_metrics.macro_f1",
+      "fmt": "{:.4f}",
+      "required": true
+    },
+    {
+      "name": "bag_train_ll",
+      "input": "results5",
+      "pointer": "evaluations.bagging.train_resubstitution_metrics.log_loss",
+      "fmt": "{:.4f}",
+      "required": true
+    },
+    {
+      "name": "bag_binary_accuracy",
+      "input": "results5",
+      "pointer": "evaluations.bagging.student_metrics.accuracy",
+      "fmt": "{:.4f}",
+      "required": true
+    },
+    {
+      "name": "bag_binary_precision",
+      "input": "results5",
+      "pointer": "evaluations.bagging.student_metrics.precision",
+      "fmt": "{:.4f}",
+      "required": true
+    },
+    {
+      "name": "bag_binary_recall",
+      "input": "results5",
+      "pointer": "evaluations.bagging.student_metrics.recall",
+      "fmt": "{:.4f}",
+      "required": true
+    },
+    {
+      "name": "bag_pooled_top1",
+      "input": "seq",
+      "pointer": "bagging.top1_accuracy",
+      "fmt": "{:.4f}",
+      "required": true
+    },
+    {
+      "name": "bag_pooled_edge_f1",
+      "input": "seq",
+      "pointer": "bagging.observation_edge_macro_f1",
+      "fmt": "{:.4f}",
+      "required": true
+    },
+    {
+      "name": "bag_all_nll",
+      "input": "seq",
+      "pointer": "bagging.observation_categorical_log_loss_clipped",
+      "fmt": "{:.4f}",
+      "required": true
+    },
+    {
+      "name": "bag_raw_continuity",
+      "input": "seq",
+      "pointer": "bagging.raw_classifier_continuity",
+      "fmt": "{:.4f}",
+      "required": true
+    },
+    {
+      "name": "bag_change_continuity",
+      "input": "seq",
+      "pointer": "bagging.edge_change_continuity",
+      "fmt": "{:.4f}",
+      "required": true
+    },
+    {
+      "name": "gnb_infer_s",
+      "input": "results5",
+      "pointer": "evaluations.gaussian_nb.student_inference_seconds",
+      "fmt": "{:.3f}",
+      "required": true
+    },
+    {
+      "name": "gnb_fit_s",
+      "input": "results5",
+      "pointer": "evaluations.gaussian_nb.training_seconds",
+      "fmt": "{:.3f}",
+      "required": true
+    },
+    {
+      "name": "gnb_train_top1",
+      "input": "results5",
+      "pointer": "evaluations.gaussian_nb.train_resubstitution_metrics.top1_accuracy",
+      "fmt": "{:.4f}",
+      "required": true
+    },
+    {
+      "name": "gnb_train_binary_f1",
+      "input": "results5",
+      "pointer": "evaluations.gaussian_nb.train_resubstitution_metrics.macro_f1",
+      "fmt": "{:.4f}",
+      "required": true
+    },
+    {
+      "name": "gnb_train_ll",
+      "input": "results5",
+      "pointer": "evaluations.gaussian_nb.train_resubstitution_metrics.log_loss",
+      "fmt": "{:.4f}",
+      "required": true
+    },
+    {
+      "name": "gnb_binary_accuracy",
+      "input": "results5",
+      "pointer": "evaluations.gaussian_nb.student_metrics.accuracy",
+      "fmt": "{:.4f}",
+      "required": true
+    },
+    {
+      "name": "gnb_binary_precision",
+      "input": "results5",
+      "pointer": "evaluations.gaussian_nb.student_metrics.precision",
+      "fmt": "{:.4f}",
+      "required": true
+    },
+    {
+      "name": "gnb_binary_recall",
+      "input": "results5",
+      "pointer": "evaluations.gaussian_nb.student_metrics.recall",
+      "fmt": "{:.4f}",
+      "required": true
+    },
+    {
+      "name": "gnb_pooled_top1",
+      "input": "seq",
+      "pointer": "gaussian_nb.top1_accuracy",
+      "fmt": "{:.4f}",
+      "required": true
+    },
+    {
+      "name": "gnb_pooled_edge_f1",
+      "input": "seq",
+      "pointer": "gaussian_nb.observation_edge_macro_f1",
+      "fmt": "{:.4f}",
+      "required": true
+    },
+    {
+      "name": "gnb_all_nll",
+      "input": "seq",
+      "pointer": "gaussian_nb.observation_categorical_log_loss_clipped",
+      "fmt": "{:.4f}",
+      "required": true
+    },
+    {
+      "name": "gnb_raw_continuity",
+      "input": "seq",
+      "pointer": "gaussian_nb.raw_classifier_continuity",
+      "fmt": "{:.4f}",
+      "required": true
+    },
+    {
+      "name": "gnb_change_continuity",
+      "input": "seq",
+      "pointer": "gaussian_nb.edge_change_continuity",
+      "fmt": "{:.4f}",
+      "required": true
+    },
+    {
+      "name": "hgb_infer_s",
+      "input": "results5",
+      "pointer": "evaluations.hist_gradient_boosting.student_inference_seconds",
+      "fmt": "{:.3f}",
+      "required": true
+    },
+    {
+      "name": "hgb_fit_s",
+      "input": "results5",
+      "pointer": "evaluations.hist_gradient_boosting.training_seconds",
+      "fmt": "{:.3f}",
+      "required": true
+    },
+    {
+      "name": "hgb_train_top1",
+      "input": "results5",
+      "pointer": "evaluations.hist_gradient_boosting.train_resubstitution_metrics.top1_accuracy",
+      "fmt": "{:.4f}",
+      "required": true
+    },
+    {
+      "name": "hgb_train_binary_f1",
+      "input": "results5",
+      "pointer": "evaluations.hist_gradient_boosting.train_resubstitution_metrics.macro_f1",
+      "fmt": "{:.4f}",
+      "required": true
+    },
+    {
+      "name": "hgb_train_ll",
+      "input": "results5",
+      "pointer": "evaluations.hist_gradient_boosting.train_resubstitution_metrics.log_loss",
+      "fmt": "{:.4f}",
+      "required": true
+    },
+    {
+      "name": "hgb_binary_accuracy",
+      "input": "results5",
+      "pointer": "evaluations.hist_gradient_boosting.student_metrics.accuracy",
+      "fmt": "{:.4f}",
+      "required": true
+    },
+    {
+      "name": "hgb_binary_precision",
+      "input": "results5",
+      "pointer": "evaluations.hist_gradient_boosting.student_metrics.precision",
+      "fmt": "{:.4f}",
+      "required": true
+    },
+    {
+      "name": "hgb_binary_recall",
+      "input": "results5",
+      "pointer": "evaluations.hist_gradient_boosting.student_metrics.recall",
+      "fmt": "{:.4f}",
+      "required": true
+    },
+    {
+      "name": "hgb_pooled_top1",
+      "input": "seq",
+      "pointer": "hist_gradient_boosting.top1_accuracy",
+      "fmt": "{:.4f}",
+      "required": true
+    },
+    {
+      "name": "hgb_pooled_edge_f1",
+      "input": "seq",
+      "pointer": "hist_gradient_boosting.observation_edge_macro_f1",
+      "fmt": "{:.4f}",
+      "required": true
+    },
+    {
+      "name": "hgb_all_nll",
+      "input": "seq",
+      "pointer": "hist_gradient_boosting.observation_categorical_log_loss_clipped",
+      "fmt": "{:.4f}",
+      "required": true
+    },
+    {
+      "name": "hgb_raw_continuity",
+      "input": "seq",
+      "pointer": "hist_gradient_boosting.raw_classifier_continuity",
+      "fmt": "{:.4f}",
+      "required": true
+    },
+    {
+      "name": "hgb_change_continuity",
+      "input": "seq",
+      "pointer": "hist_gradient_boosting.edge_change_continuity",
+      "fmt": "{:.4f}",
+      "required": true
+    },
+    {
+      "name": "tuned_infer_s",
+      "input": "results5",
+      "pointer": "evaluations.hist_gradient_boosting_tuned.student_inference_seconds",
+      "fmt": "{:.3f}",
+      "required": true
+    },
+    {
+      "name": "tuned_fit_s",
+      "input": "results5",
+      "pointer": "evaluations.hist_gradient_boosting_tuned.training_seconds",
+      "fmt": "{:.3f}",
+      "required": true
+    },
+    {
+      "name": "tuned_train_top1",
+      "input": "results5",
+      "pointer": "evaluations.hist_gradient_boosting_tuned.train_resubstitution_metrics.top1_accuracy",
+      "fmt": "{:.4f}",
+      "required": true
+    },
+    {
+      "name": "tuned_train_binary_f1",
+      "input": "results5",
+      "pointer": "evaluations.hist_gradient_boosting_tuned.train_resubstitution_metrics.macro_f1",
+      "fmt": "{:.4f}",
+      "required": true
+    },
+    {
+      "name": "tuned_train_ll",
+      "input": "results5",
+      "pointer": "evaluations.hist_gradient_boosting_tuned.train_resubstitution_metrics.log_loss",
+      "fmt": "{:.4f}",
+      "required": true
+    },
+    {
+      "name": "tuned_binary_accuracy",
+      "input": "results5",
+      "pointer": "evaluations.hist_gradient_boosting_tuned.student_metrics.accuracy",
+      "fmt": "{:.4f}",
+      "required": true
+    },
+    {
+      "name": "tuned_binary_precision",
+      "input": "results5",
+      "pointer": "evaluations.hist_gradient_boosting_tuned.student_metrics.precision",
+      "fmt": "{:.4f}",
+      "required": true
+    },
+    {
+      "name": "tuned_binary_recall",
+      "input": "results5",
+      "pointer": "evaluations.hist_gradient_boosting_tuned.student_metrics.recall",
+      "fmt": "{:.4f}",
+      "required": true
+    },
+    {
+      "name": "tuned_pooled_top1",
+      "input": "seq",
+      "pointer": "hist_gradient_boosting_tuned.top1_accuracy",
+      "fmt": "{:.4f}",
+      "required": true
+    },
+    {
+      "name": "tuned_pooled_edge_f1",
+      "input": "seq",
+      "pointer": "hist_gradient_boosting_tuned.observation_edge_macro_f1",
+      "fmt": "{:.4f}",
+      "required": true
+    },
+    {
+      "name": "tuned_all_nll",
+      "input": "seq",
+      "pointer": "hist_gradient_boosting_tuned.observation_categorical_log_loss_clipped",
+      "fmt": "{:.4f}",
+      "required": true
+    },
+    {
+      "name": "tuned_raw_continuity",
+      "input": "seq",
+      "pointer": "hist_gradient_boosting_tuned.raw_classifier_continuity",
+      "fmt": "{:.4f}",
+      "required": true
+    },
+    {
+      "name": "tuned_change_continuity",
+      "input": "seq",
+      "pointer": "hist_gradient_boosting_tuned.edge_change_continuity",
+      "fmt": "{:.4f}",
+      "required": true
+    },
+    {
+      "name": "historical_rf_params",
+      "input": "historical_results",
+      "pointer": "cv.random_forest.parameters",
+      "fmt": "json",
+      "required": true
+    },
+    {
+      "name": "historical_rf_cv_f1",
+      "input": "historical_results",
+      "pointer": "cv.random_forest.oof_metrics.macro_f1",
+      "fmt": "{:.4f}",
+      "required": true
+    },
+    {
+      "name": "historical_rf_cv_obj",
+      "input": "historical_results",
+      "pointer": "cv.random_forest.oof_metrics.trip_macro_top1_accuracy",
+      "fmt": "{:.4f}",
+      "required": true
+    },
+    {
+      "name": "historical_rf_student_f1",
+      "input": "historical_results",
+      "pointer": "evaluations.random_forest.student_metrics.macro_f1",
+      "fmt": "{:.4f}",
+      "required": true
+    },
+    {
+      "name": "historical_rf_student_top1",
+      "input": "historical_results",
+      "pointer": "evaluations.random_forest.student_metrics.top1_accuracy",
+      "fmt": "{:.4f}",
+      "required": true
+    },
+    {
+      "name": "historical_rf_student_trip_top1",
+      "input": "historical_results",
+      "pointer": "evaluations.random_forest.student_metrics.trip_macro_top1_accuracy",
+      "fmt": "{:.4f}",
+      "required": true
+    },
+    {
+      "name": "historical_rf_student_ll",
+      "input": "historical_results",
+      "pointer": "evaluations.random_forest.student_metrics.log_loss",
+      "fmt": "{:.4f}",
+      "required": true
+    },
+    {
+      "name": "historical_rf_infer_s",
+      "input": "historical_results",
+      "pointer": "evaluations.random_forest.student_inference_seconds",
+      "fmt": "{:.3f}",
+      "required": true
+    },
+    {
+      "name": "historical_rf_fit_s",
+      "input": "historical_results",
+      "pointer": "evaluations.random_forest.training_seconds",
+      "fmt": "{:.3f}",
+      "required": true
+    },
+    {
+      "name": "historical_et_params",
+      "input": "historical_results",
+      "pointer": "cv.extra_trees.parameters",
+      "fmt": "json",
+      "required": true
+    },
+    {
+      "name": "historical_et_cv_f1",
+      "input": "historical_results",
+      "pointer": "cv.extra_trees.oof_metrics.macro_f1",
+      "fmt": "{:.4f}",
+      "required": true
+    },
+    {
+      "name": "historical_et_cv_obj",
+      "input": "historical_results",
+      "pointer": "cv.extra_trees.oof_metrics.trip_macro_top1_accuracy",
+      "fmt": "{:.4f}",
+      "required": true
+    },
+    {
+      "name": "historical_et_student_f1",
+      "input": "historical_results",
+      "pointer": "evaluations.extra_trees.student_metrics.macro_f1",
+      "fmt": "{:.4f}",
+      "required": true
+    },
+    {
+      "name": "historical_et_student_top1",
+      "input": "historical_results",
+      "pointer": "evaluations.extra_trees.student_metrics.top1_accuracy",
+      "fmt": "{:.4f}",
+      "required": true
+    },
+    {
+      "name": "historical_et_student_trip_top1",
+      "input": "historical_results",
+      "pointer": "evaluations.extra_trees.student_metrics.trip_macro_top1_accuracy",
+      "fmt": "{:.4f}",
+      "required": true
+    },
+    {
+      "name": "historical_et_student_ll",
+      "input": "historical_results",
+      "pointer": "evaluations.extra_trees.student_metrics.log_loss",
+      "fmt": "{:.4f}",
+      "required": true
+    },
+    {
+      "name": "historical_et_infer_s",
+      "input": "historical_results",
+      "pointer": "evaluations.extra_trees.student_inference_seconds",
+      "fmt": "{:.3f}",
+      "required": true
+    },
+    {
+      "name": "historical_et_fit_s",
+      "input": "historical_results",
+      "pointer": "evaluations.extra_trees.training_seconds",
+      "fmt": "{:.3f}",
+      "required": true
+    },
+    {
+      "name": "historical_bt_params",
+      "input": "historical_phase3",
+      "pointer": "cv.bagging_tuned.parameters",
+      "fmt": "json",
+      "required": true
+    },
+    {
+      "name": "historical_bt_cv_f1",
+      "input": "historical_phase3",
+      "pointer": "cv.bagging_tuned.oof_metrics.macro_f1",
+      "fmt": "{:.4f}",
+      "required": true
+    },
+    {
+      "name": "historical_bt_cv_obj",
+      "input": "historical_phase3",
+      "pointer": "cv.bagging_tuned.oof_metrics.trip_macro_top1_accuracy",
+      "fmt": "{:.4f}",
+      "required": true
+    },
+    {
+      "name": "historical_bt_student_f1",
+      "input": "historical_phase3",
+      "pointer": "evaluations.bagging_tuned.student_metrics.macro_f1",
+      "fmt": "{:.4f}",
+      "required": true
+    },
+    {
+      "name": "historical_bt_student_top1",
+      "input": "historical_phase3",
+      "pointer": "evaluations.bagging_tuned.student_metrics.top1_accuracy",
+      "fmt": "{:.4f}",
+      "required": true
+    },
+    {
+      "name": "historical_bt_student_trip_top1",
+      "input": "historical_phase3",
+      "pointer": "evaluations.bagging_tuned.student_metrics.trip_macro_top1_accuracy",
+      "fmt": "{:.4f}",
+      "required": true
+    },
+    {
+      "name": "historical_bt_student_ll",
+      "input": "historical_phase3",
+      "pointer": "evaluations.bagging_tuned.student_metrics.log_loss",
+      "fmt": "{:.4f}",
+      "required": true
+    },
+    {
+      "name": "historical_bt_infer_s",
+      "input": "historical_phase3",
+      "pointer": "evaluations.bagging_tuned.student_inference_seconds",
+      "fmt": "{:.3f}",
+      "required": true
+    },
+    {
+      "name": "historical_bt_fit_s",
+      "input": "historical_phase3",
+      "pointer": "evaluations.bagging_tuned.training_seconds",
+      "fmt": "{:.3f}",
+      "required": true
+    },
+    {
+      "name": "train_cv_folds",
+      "input": "results5",
+      "pointer": "len:cv.logistic_regression.folds",
+      "fmt": "{:}",
+      "required": true
+    },
+    {
+      "name": "evaluator_first_open",
+      "input": "evalacc",
+      "pointer": "chronology.first_input_open_started_utc",
+      "fmt": "{:}",
+      "required": true
+    },
+    {
+      "name": "evaluator_reference_start",
+      "input": "evalacc",
+      "pointer": "chronology.reference_scoring_started_at_utc",
+      "fmt": "{:}",
+      "required": true
+    },
+    {
+      "name": "evaluator_predictions_completed",
+      "input": "evalacc",
+      "pointer": "chronology.prediction_completed_at_utc",
+      "fmt": "{:}",
+      "required": true
+    },
+    {
+      "name": "evaluator_obs",
+      "input": "evalmetrics",
+      "pointer": "summary.full_observation_proxy.observations_scored",
+      "fmt": "{:,d}",
+      "required": true
+    },
+    {
+      "name": "evaluator_exact",
+      "input": "evalmetrics",
+      "pointer": "summary.exact_route_count",
+      "fmt": "{:}",
+      "required": true
+    },
+    {
+      "name": "evaluator_refbreaks",
+      "input": "evalmetrics",
+      "pointer": "summary.reference_discontinuities",
+      "fmt": "{:}",
+      "required": true
+    },
+    {
+      "name": "evaluator_decoded_accuracy",
+      "input": "evalmetrics",
+      "pointer": "summary.full_observation_proxy.decoded.accuracy",
+      "fmt": "{:.4f}",
+      "required": true
+    },
+    {
+      "name": "evaluator_decoded_f1",
+      "input": "evalmetrics",
+      "pointer": "summary.full_observation_proxy.decoded.macro_f1",
+      "fmt": "{:.4f}",
+      "required": true
+    },
+    {
+      "name": "evaluator_classifier_accuracy",
+      "input": "evalmetrics",
+      "pointer": "summary.full_observation_proxy.classifier_only.accuracy",
+      "fmt": "{:.4f}",
+      "required": true
+    },
+    {
+      "name": "evaluator_classifier_f1",
+      "input": "evalmetrics",
+      "pointer": "summary.full_observation_proxy.classifier_only.macro_f1",
+      "fmt": "{:.4f}",
+      "required": true
+    },
+    {
+      "name": "evaluator_weak15_edge",
+      "input": "evalacc",
+      "pointer": "expected_trips.00000015.metrics.edge_f1",
+      "fmt": "{:.4f}",
+      "required": true
+    },
+    {
+      "name": "evaluator_weak15_length",
+      "input": "evalacc",
+      "pointer": "expected_trips.00000015.metrics.length_f1",
+      "fmt": "{:.4f}",
+      "required": true
+    },
+    {
+      "name": "evaluator_zip_sha",
+      "input": "evalacc",
+      "pointer": "submission_zip_sha256",
+      "fmt": "{:}",
+      "required": true
+    },
+    {
+      "name": "overlap_exact_duplicate",
+      "input": "evalaudit",
+      "pointer": "overlap_report.any_full_trip_duplicate",
+      "fmt": "{:}",
+      "required": true
+    },
+    {
+      "name": "overlap_any_file",
+      "input": "evalaudit",
+      "pointer": "overlap_report.any_identical_input_file",
+      "fmt": "{:}",
+      "required": true
+    },
+    {
+      "name": "overlap_id_matches",
+      "input": "evalaudit",
+      "pointer": "overlap_report.id_matches",
+      "fmt": "json",
+      "required": true
+    },
+    {
+      "name": "overlap_train_count",
+      "input": "evalaudit",
+      "pointer": "overlap_report.training_trip_count_checked",
+      "fmt": "{:}",
+      "required": true
+    },
+    {
+      "name": "overlap_student_count",
+      "input": "evalaudit",
+      "pointer": "overlap_report.student_trip_count_checked",
+      "fmt": "{:}",
+      "required": true
+    },
+    {
+      "name": "evaluator_guard_tests",
+      "input": "evaltestqa",
+      "pointer": "tests_run",
+      "fmt": "{:}",
+      "required": true
+    },
+    {
+      "name": "map_points",
+      "input": "map_metadata",
+      "pointer": "gps_points",
+      "fmt": "{:}",
+      "required": true
+    },
+    {
+      "name": "map_pred_arcs",
+      "input": "map_metadata",
+      "pointer": "prediction_arc_geometry_count",
+      "fmt": "{:}",
+      "required": true
+    },
+    {
+      "name": "map_ref_arcs",
+      "input": "map_metadata",
+      "pointer": "reference_route_integrity.arc_rows",
+      "fmt": "{:}",
+      "required": true
+    },
+    {
+      "name": "map_edge_f1",
+      "input": "map_metadata",
+      "pointer": "route_metrics_recomputed_equal_delivery.edge_f1",
+      "fmt": "{:.4f}",
+      "required": true
+    },
+    {
+      "name": "map_length_f1",
+      "input": "map_metadata",
+      "pointer": "route_metrics_recomputed_equal_delivery.length_f1",
+      "fmt": "{:.4f}",
+      "required": true
+    },
+    {
+      "name": "map_folium_version",
+      "input": "map_metadata",
+      "pointer": "render.folium_version",
+      "fmt": "{:}",
+      "required": true
+    },
+    {
+      "name": "terminal_request_id",
+      "input": "termv",
+      "pointer": "request_id",
+      "fmt": "{:}",
+      "required": true
+    },
+    {
+      "name": "terminal_start_utc",
+      "input": "termv",
+      "pointer": "events.event=match_started.timestamp",
+      "fmt": "{:}",
+      "required": true
+    },
+    {
+      "name": "terminal_finish_utc",
+      "input": "termv",
+      "pointer": "events.event=match_completed.timestamp",
+      "fmt": "{:}",
+      "required": true
+    },
+    {
+      "name": "terminal_dataset",
+      "input": "termv",
+      "pointer": "events.event=match_started.dataset_role",
+      "fmt": "{:}",
+      "required": true
+    },
+    {
+      "name": "terminal_http_request_id",
+      "input": "termv",
+      "pointer": "events.event=http_request.request_id",
+      "fmt": "{:}",
+      "required": true
+    },
+    {
+      "name": "browser_live_request_id",
+      "input": "browser",
+      "pointer": "responses.dataset_id=development.request_id",
+      "fmt": "{:}",
+      "required": true
+    },
+    {
+      "name": "browser_evaluator_request_id",
+      "input": "browser",
+      "pointer": "responses.dataset_id=evaluator.request_id",
+      "fmt": "{:}",
+      "required": true
+    },
+    {
+      "name": "browser_evaluator_accuracy",
+      "input": "browser",
+      "pointer": "responses.dataset_id=evaluator.metrics.accuracy",
+      "fmt": "{:.4f}",
+      "required": true
+    },
+    {
+      "name": "api_eval_15_nll",
+      "input": "api20",
+      "pointer": "datasets.evaluator.trips.00000015.metrics.log_loss",
+      "fmt": "{:.6f}",
+      "required": true
+    },
+    {
+      "name": "api_eval_15_miss",
+      "input": "api20",
+      "pointer": "datasets.evaluator.trips.00000015.metrics.candidate_miss_rate",
+      "fmt": "{:.6f}",
+      "required": true
+    },
+    {
+      "name": "api_eval_17_nll",
+      "input": "api20",
+      "pointer": "datasets.evaluator.trips.00000017.metrics.log_loss",
+      "fmt": "{:.6f}",
+      "required": true
+    },
+    {
+      "name": "api_eval_17_miss",
+      "input": "api20",
+      "pointer": "datasets.evaluator.trips.00000017.metrics.candidate_miss_rate",
+      "fmt": "{:.6f}",
+      "required": true
+    },
+    {
+      "name": "api_eval_23_nll",
+      "input": "api20",
+      "pointer": "datasets.evaluator.trips.00000023.metrics.log_loss",
+      "fmt": "{:.6f}",
+      "required": true
+    },
+    {
+      "name": "api_eval_23_miss",
+      "input": "api20",
+      "pointer": "datasets.evaluator.trips.00000023.metrics.candidate_miss_rate",
+      "fmt": "{:.6f}",
+      "required": true
+    },
+    {
+      "name": "api_eval_30_nll",
+      "input": "api20",
+      "pointer": "datasets.evaluator.trips.00000030.metrics.log_loss",
+      "fmt": "{:.6f}",
+      "required": true
+    },
+    {
+      "name": "api_eval_30_miss",
+      "input": "api20",
+      "pointer": "datasets.evaluator.trips.00000030.metrics.candidate_miss_rate",
+      "fmt": "{:.6f}",
+      "required": true
+    },
+    {
+      "name": "api_eval_49_nll",
+      "input": "api20",
+      "pointer": "datasets.evaluator.trips.00000049.metrics.log_loss",
+      "fmt": "{:.6f}",
+      "required": true
+    },
+    {
+      "name": "api_eval_49_miss",
+      "input": "api20",
+      "pointer": "datasets.evaluator.trips.00000049.metrics.candidate_miss_rate",
+      "fmt": "{:.6f}",
+      "required": true
+    },
+    {
+      "name": "api_eval_59_nll",
+      "input": "api20",
+      "pointer": "datasets.evaluator.trips.00000059.metrics.log_loss",
+      "fmt": "{:.6f}",
+      "required": true
+    },
+    {
+      "name": "api_eval_59_miss",
+      "input": "api20",
+      "pointer": "datasets.evaluator.trips.00000059.metrics.candidate_miss_rate",
+      "fmt": "{:.6f}",
+      "required": true
+    },
+    {
+      "name": "api_eval_67_nll",
+      "input": "api20",
+      "pointer": "datasets.evaluator.trips.00000067.metrics.log_loss",
+      "fmt": "{:.6f}",
+      "required": true
+    },
+    {
+      "name": "api_eval_67_miss",
+      "input": "api20",
+      "pointer": "datasets.evaluator.trips.00000067.metrics.candidate_miss_rate",
+      "fmt": "{:.6f}",
+      "required": true
+    },
+    {
+      "name": "api_eval_73_nll",
+      "input": "api20",
+      "pointer": "datasets.evaluator.trips.00000073.metrics.log_loss",
+      "fmt": "{:.6f}",
+      "required": true
+    },
+    {
+      "name": "api_eval_73_miss",
+      "input": "api20",
+      "pointer": "datasets.evaluator.trips.00000073.metrics.candidate_miss_rate",
+      "fmt": "{:.6f}",
+      "required": true
+    },
+    {
+      "name": "api_eval_87_nll",
+      "input": "api20",
+      "pointer": "datasets.evaluator.trips.00000087.metrics.log_loss",
+      "fmt": "{:.6f}",
+      "required": true
+    },
+    {
+      "name": "api_eval_87_miss",
+      "input": "api20",
+      "pointer": "datasets.evaluator.trips.00000087.metrics.candidate_miss_rate",
+      "fmt": "{:.6f}",
+      "required": true
+    },
+    {
+      "name": "api_eval_94_nll",
+      "input": "api20",
+      "pointer": "datasets.evaluator.trips.00000094.metrics.log_loss",
+      "fmt": "{:.6f}",
+      "required": true
+    },
+    {
+      "name": "api_eval_94_miss",
+      "input": "api20",
+      "pointer": "datasets.evaluator.trips.00000094.metrics.candidate_miss_rate",
+      "fmt": "{:.6f}",
+      "required": true
+    }
+  ],
+  "optional_existing_facts": [],
+  "table_hooks": [],
+  "notes": [
+    "Retain every original201 token. source pointers in facts make candidate/observation/population definitions explicit.",
+    "historical_phase3 source is deliberate historical appendix; it must be exempted from blanket historical-path ban only for clearly labelled appendix source citations."
+  ]
+}

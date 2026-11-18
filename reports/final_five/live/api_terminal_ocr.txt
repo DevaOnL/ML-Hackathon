@@ -1,0 +1,27 @@
+PATHSNAP / ACTUAL API RECEIVING TERMINAL
+
+Source: dedicated systemd user service journal, not a mock server
+
+Public origin: https://ml.d3va.dev
+
+$ journalctl --user -u path-snap-api.service --since "2026-11-18 ©9:06:20 UTC" --no-pager --output=cat
+Filtered by the measured HTTP request ID:
+
+e5c74616aa5f40f7ac9acbf2459d9678
+
+Request ID groups: e5c7 4616 aa5f 40f7 ac9a cbf2 459d 9678
+
+Only original public scalar fields are displayed; no routes or secrets.
+
+trip_id: 00000009 dataset_role: development
+model_hash: c9cc8e9f368381656a94d07ed69632979d19981ca94a9daf3b52fbced52e4b34
+match_config_hash: e326blafdal25897cd784ab335fbcd7c869fcd70714c5203ef5c2c71977b3288
+
+match_started 2026-11-18T@9:06:25.487067+00:00
+match_completed 2026-11-18T09:06:28.707597+00:00
+metrics_status: ok
+
+inference_ms: 3044.586 scoring_ms: 149.628 total_ms: 3220.53
+
+ACTUAL API RECEIVING TERMINAL / original dedicated-service journal events
+Request e5c74616aa5f40f7ac9acbf2459d9678 executed fresh learned inference.

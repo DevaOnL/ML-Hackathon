@@ -1,0 +1,1918 @@
+{
+  "all_pixel_equality_checks": true,
+  "coordinate_convention": "half-open [left, top, right, bottom] original screenshot pixels",
+  "crop_count": 12,
+  "crops": [
+    {
+      "crop_box": [
+        32,
+        300,
+        720,
+        415
+      ],
+      "name": "development_dataset_controls",
+      "ocr_mean_word_confidence": 67.8,
+      "ocr_path": "reports/final_five/report_images/development_dataset_controls.ocr.json",
+      "ocr_sha256": "8d58651fb1a8b36369bdc20f443fab657fedf99770f15e069ce560ae904b098e",
+      "output_height": 115,
+      "output_path": "reports/final_five/report_images/development_dataset_controls.png",
+      "output_sha256": "fdcefb5f4d9bacce4a3e4b6895cd6e0eceb57eb565a4f13e6e06b3f990835ef7",
+      "output_width": 688,
+      "path": "reports/final_five/report_images/development_dataset_controls.png",
+      "pixel_equality_checks": true,
+      "pixel_sha256": "6f0271fb25916401c3bd8cb8ff19b877327b6d3eb482f53f43ca54b4cc76bbe4",
+      "recommended_print_width_pt": 504,
+      "sha256": "fdcefb5f4d9bacce4a3e4b6895cd6e0eceb57eb565a4f13e6e06b3f990835ef7",
+      "source_height": 2349,
+      "source_ocr_lines_within_crop": [
+        {
+          "bbox": [
+            50,
+            323,
+            62,
+            330
+          ],
+          "text": "01"
+        },
+        {
+          "bbox": [
+            81,
+            323,
+            141,
+            330
+          ],
+          "text": "DATASETS"
+        },
+        {
+          "bbox": [
+            51,
+            367,
+            195,
+            379
+          ],
+          "text": "Student development"
+        }
+      ],
+      "source_path": "reports/final_five/live/screenshots/ui_desktop.png",
+      "source_sha256": "8089e79173e353a0e39ba33ee6656032375e7219fd15b6be7deb8658471bf69c",
+      "source_width": 1440,
+      "transform": "lossless original-pixel rectangle only; no resize or annotation",
+      "why": "Selected Student development dataset tab and original catalogue context."
+    },
+    {
+      "crop_box": [
+        48,
+        900,
+        354,
+        1075
+      ],
+      "name": "development_selected_run",
+      "ocr_mean_word_confidence": 77.26,
+      "ocr_path": "reports/final_five/report_images/development_selected_run.ocr.json",
+      "ocr_sha256": "b91927e56585fac2d7ebdf2fe896ab2570634a823dd4a2a26b6348ef75912fcf",
+      "output_height": 175,
+      "output_path": "reports/final_five/report_images/development_selected_run.png",
+      "output_sha256": "1e934d285ce428cf362a6145a0606895f58059475f88382846941218e3259e93",
+      "output_width": 306,
+      "path": "reports/final_five/report_images/development_selected_run.png",
+      "pixel_equality_checks": true,
+      "pixel_sha256": "9bf3f0cb74275e801021d27903423b7b27c3f9f7b6be6f998e1c5081f6d4a6b5",
+      "recommended_print_width_pt": 504,
+      "sha256": "1e934d285ce428cf362a6145a0606895f58059475f88382846941218e3259e93",
+      "source_height": 2349,
+      "source_ocr_lines_within_crop": [
+        {
+          "bbox": [
+            70,
+            919,
+            169,
+            926
+          ],
+          "text": "SELECTED TRIP"
+        },
+        {
+          "bbox": [
+            71,
+            939,
+            132,
+            948
+          ],
+          "text": "00000009"
+        },
+        {
+          "bbox": [
+            71,
+            963,
+            188,
+            973
+          ],
+          "text": "1,049 original Ges"
+        },
+        {
+          "bbox": [
+            198,
+            963,
+            241,
+            971
+          ],
+          "text": "observa"
+        },
+        {
+          "bbox": [
+            263,
+            965,
+            273,
+            971
+          ],
+          "text": "ns"
+        },
+        {
+          "bbox": [
+            55,
+            977,
+            349,
+            1060
+          ],
+          "text": "e ]"
+        },
+        {
+          "bbox": [
+            56,
+            1052,
+            136,
+            1060
+          ],
+          "text": "Inference and"
+        },
+        {
+          "bbox": [
+            176,
+            1054,
+            208,
+            1062
+          ],
+          "text": "ng run"
+        },
+        {
+          "bbox": [
+            220,
+            1054,
+            227,
+            1060
+          ],
+          "text": "or"
+        },
+        {
+          "bbox": [
+            251,
+            1054,
+            297,
+            1060
+          ],
+          "text": "e server"
+        }
+      ],
+      "source_path": "reports/final_five/live/screenshots/ui_desktop.png",
+      "source_sha256": "8089e79173e353a0e39ba33ee6656032375e7219fd15b6be7deb8658471bf69c",
+      "source_width": 1440,
+      "transform": "lossless original-pixel rectangle only; no resize or annotation",
+      "why": "Selected development trip and genuine run control."
+    },
+    {
+      "crop_box": [
+        385,
+        1090,
+        890,
+        1345
+      ],
+      "name": "development_scores",
+      "ocr_mean_word_confidence": 65.0,
+      "ocr_path": "reports/final_five/report_images/development_scores.ocr.json",
+      "ocr_sha256": "7363062e0e7389aca94c4602858be1cd33ab6abdf91bc1ef8a9a123c3476cf95",
+      "output_height": 255,
+      "output_path": "reports/final_five/report_images/development_scores.png",
+      "output_sha256": "62b657b3fac287ab70d518857922688b4096d258133bc5c40a5380ebff3ef236",
+      "output_width": 505,
+      "path": "reports/final_five/report_images/development_scores.png",
+      "pixel_equality_checks": true,
+      "pixel_sha256": "810084ec40b8265920b5ed18273f6882971ba983996c497d2c92d1860da7bed8",
+      "recommended_print_width_pt": 504,
+      "sha256": "62b657b3fac287ab70d518857922688b4096d258133bc5c40a5380ebff3ef236",
+      "source_height": 2349,
+      "source_ocr_lines_within_crop": [
+        {
+          "bbox": [
+            393,
+            1110,
+            405,
+            1117
+          ],
+          "text": "04"
+        },
+        {
+          "bbox": [
+            424,
+            1110,
+            569,
+            1117
+          ],
+          "text": "RETURNED BY THE API"
+        },
+        {
+          "bbox": [
+            393,
+            1134,
+            502,
+            1148
+          ],
+          "text": "Run summary"
+        },
+        {
+          "bbox": [
+            860,
+            1189,
+            870,
+            1191
+          ],
+          "text": "."
+        },
+        {
+          "bbox": [
+            410,
+            1188,
+            498,
+            1195
+          ],
+          "text": "HHM ACCURACY"
+        },
+        {
+          "bbox": [
+            606,
+            1189,
+            622,
+            1195
+          ],
+          "text": "ne1"
+        },
+        {
+          "bbox": [
+            658,
+            1188,
+            777,
+            1195
+          ],
+          "text": "ROUTE CONTINUITY"
+        },
+        {
+          "bbox": [
+            854,
+            1190,
+            857,
+            1195
+          ],
+          "text": "\""
+        },
+        {
+          "bbox": [
+            866,
+            1192,
+            870,
+            1195
+          ],
+          "text": "2"
+        },
+        {
+          "bbox": [
+            410,
+            1213,
+            482,
+            1251
+          ],
+          "text": "o1.3%"
+        },
+        {
+          "bbox": [
+            447,
+            1248,
+            468,
+            1254
+          ],
+          "text": "atio"
+        },
+        {
+          "bbox": [
+            476,
+            1251,
+            480,
+            1254
+          ],
+          "text": "s"
+        },
+        {
+          "bbox": [
+            537,
+            1246,
+            576,
+            1256
+          ],
+          "text": "aligned"
+        },
+        {
+          "bbox": [
+            658,
+            1213,
+            745,
+            1251
+          ],
+          "text": "}99.0%"
+        },
+        {
+          "bbox": [
+            754,
+            1248,
+            805,
+            1254
+          ],
+          "text": "continuie"
+        },
+        {
+          "bbox": [
+            410,
+            1290,
+            500,
+            1297
+          ],
+          "text": "HMH MACRO F1"
+        },
+        {
+          "bbox": [
+            740,
+            1290,
+            862,
+            1297
+          ],
+          "text": "CLASSIFIER ToP-1"
+        },
+        {
+          "bbox": [
+            410,
+            1313,
+            460,
+            1324
+          ],
+          "text": "87.0%"
+        },
+        {
+          "bbox": [
+            741,
+            1313,
+            791,
+            1324
+          ],
+          "text": "87.3%"
+        }
+      ],
+      "source_path": "reports/final_five/live/screenshots/ui_desktop.png",
+      "source_sha256": "8089e79173e353a0e39ba33ee6656032375e7219fd15b6be7deb8658471bf69c",
+      "source_width": 1440,
+      "transform": "lossless original-pixel rectangle only; no resize or annotation",
+      "why": "Development live result cards with HMM accuracy, continuity and macro F1."
+    },
+    {
+      "crop_box": [
+        890,
+        1485,
+        1385,
+        1735
+      ],
+      "name": "development_execution",
+      "ocr_mean_word_confidence": 58.86,
+      "ocr_path": "reports/final_five/report_images/development_execution.ocr.json",
+      "ocr_sha256": "e9979c62400065b34d42756036e41bfa4b13f37b5a1170d36cef775783736403",
+      "output_height": 250,
+      "output_path": "reports/final_five/report_images/development_execution.png",
+      "output_sha256": "cd1669b339efa4cdc32df0cd5f98cf029773325a8b185f3bcdf5e33d6393b0d6",
+      "output_width": 495,
+      "path": "reports/final_five/report_images/development_execution.png",
+      "pixel_equality_checks": true,
+      "pixel_sha256": "cf539d13886f032a4368b4ca96a757ca8defb4c2f894c3393c82e456343fa18b",
+      "recommended_print_width_pt": 504,
+      "sha256": "cd1669b339efa4cdc32df0cd5f98cf029773325a8b185f3bcdf5e33d6393b0d6",
+      "source_height": 2349,
+      "source_ocr_lines_within_crop": [
+        {
+          "bbox": [
+            900,
+            1501,
+            1019,
+            1508
+          ],
+          "text": "EXECUTION RECORD"
+        },
+        {
+          "bbox": [
+            900,
+            1535,
+            933,
+            1542
+          ],
+          "text": "WoDEL"
+        },
+        {
+          "bbox": [
+            1088,
+            1533,
+            1245,
+            1545
+          ],
+          "text": "hist_gradient_boosting"
+        },
+        {
+          "bbox": [
+            900,
+            1567,
+            961,
+            1574
+          ],
+          "text": "ALGORITHN"
+        },
+        {
+          "bbox": [
+            1089,
+            1565,
+            1303,
+            1576
+          ],
+          "text": "learned_classifier_hmm_viterbi"
+        },
+        {
+          "bbox": [
+            900,
+            1600,
+            981,
+            1607
+          ],
+          "text": "MODEL SHA-25!"
+        },
+        {
+          "bbox": [
+            1088,
+            1588,
+            1364,
+            1616
+          ],
+          "text": "COCCBe9T36838T656294007206963297901 908"
+        },
+        {
+          "bbox": [
+            1088,
+            1616,
+            1274,
+            1625
+          ],
+          "text": "1ca04a90af3b52rbce052ednad"
+        },
+        {
+          "bbox": [
+            900,
+            1651,
+            968,
+            1660
+          ],
+          "text": "REQUEST T"
+        },
+        {
+          "bbox": [
+            1088,
+            1649,
+            1317,
+            1658
+          ],
+          "text": "€5C74616aa574077ac9ach 245909678"
+        },
+        {
+          "bbox": [
+            900,
+            1684,
+            947,
+            1691
+          ],
+          "text": "DATASET"
+        },
+        {
+          "bbox": [
+            1088,
+            1682,
+            1323,
+            1694
+          ],
+          "text": "Student development (development)"
+        },
+        {
+          "bbox": [
+            900,
+            1716,
+            919,
+            1723
+          ],
+          "text": "Gps"
+        },
+        {
+          "bbox": [
+            928,
+            1716,
+            968,
+            1723
+          ],
+          "text": "oBSERV"
+        },
+        {
+          "bbox": [
+            984,
+            1716,
+            1009,
+            1723
+          ],
+          "text": "Tons"
+        },
+        {
+          "bbox": [
+            1088,
+            1714,
+            1123,
+            1725
+          ],
+          "text": "1,049"
+        }
+      ],
+      "source_path": "reports/final_five/live/screenshots/ui_desktop.png",
+      "source_sha256": "8089e79173e353a0e39ba33ee6656032375e7219fd15b6be7deb8658471bf69c",
+      "source_width": 1440,
+      "transform": "lossless original-pixel rectangle only; no resize or annotation",
+      "why": "Development execution details: model identity, full hash, request ID and dataset."
+    },
+    {
+      "crop_box": [
+        715,
+        300,
+        1408,
+        415
+      ],
+      "name": "evaluator_dataset_controls",
+      "ocr_mean_word_confidence": 85.72,
+      "ocr_path": "reports/final_five/report_images/evaluator_dataset_controls.ocr.json",
+      "ocr_sha256": "ea50ec2242a2610dc54aef5a00c04fe8973e7a28a40c375b6439ba5d1baf9aa3",
+      "output_height": 115,
+      "output_path": "reports/final_five/report_images/evaluator_dataset_controls.png",
+      "output_sha256": "250a00e15d7f20d634493b0ba22dd51786d8d1e1e6790d67481203b83b7a6984",
+      "output_width": 693,
+      "path": "reports/final_five/report_images/evaluator_dataset_controls.png",
+      "pixel_equality_checks": true,
+      "pixel_sha256": "f2b339bd59d968f79b4441c213b408efb608df2401a061d32f958bd94c348c80",
+      "recommended_print_width_pt": 504,
+      "sha256": "250a00e15d7f20d634493b0ba22dd51786d8d1e1e6790d67481203b83b7a6984",
+      "source_height": 2349,
+      "source_ocr_lines_within_crop": [
+        {
+          "bbox": [
+            1016,
+            323,
+            1096,
+            332
+          ],
+          "text": "Separate trip"
+        },
+        {
+          "bbox": [
+            1108,
+            323,
+            1172,
+            332
+          ],
+          "text": "catalogues"
+        },
+        {
+          "bbox": [
+            1187,
+            322,
+            1298,
+            330
+          ],
+          "text": "Both use the same"
+        },
+        {
+          "bbox": [
+            1313,
+            322,
+            1383,
+            330
+          ],
+          "text": "rozen model"
+        },
+        {
+          "bbox": [
+            739,
+            367,
+            807,
+            376
+          ],
+          "text": "Evaluator"
+        }
+      ],
+      "source_path": "reports/final_five/live/screenshots/ui_evaluator.png",
+      "source_sha256": "e0ed2ae759b3eddb90b316c31f44f3ff205d5ed3567e8365b0a241f309a3faf6",
+      "source_width": 1440,
+      "transform": "lossless original-pixel rectangle only; no resize or annotation",
+      "why": "Selected evaluator dataset tab and separate catalogue context."
+    },
+    {
+      "crop_box": [
+        385,
+        1090,
+        890,
+        1345
+      ],
+      "name": "evaluator_scores",
+      "ocr_mean_word_confidence": 64.89,
+      "ocr_path": "reports/final_five/report_images/evaluator_scores.ocr.json",
+      "ocr_sha256": "dfdbe021165a4b688a984b12aa647ac0dfc557f94a0a86059155a0513227d9ce",
+      "output_height": 255,
+      "output_path": "reports/final_five/report_images/evaluator_scores.png",
+      "output_sha256": "ca73addc822622dd8d593fc2498d2dced895ceaece538923cca79b23e5d468b9",
+      "output_width": 505,
+      "path": "reports/final_five/report_images/evaluator_scores.png",
+      "pixel_equality_checks": true,
+      "pixel_sha256": "bfd9b3c9189b1a3a61e5567215115a828d1b4ed28020c6c6b02ffcc18a111506",
+      "recommended_print_width_pt": 504,
+      "sha256": "ca73addc822622dd8d593fc2498d2dced895ceaece538923cca79b23e5d468b9",
+      "source_height": 2349,
+      "source_ocr_lines_within_crop": [
+        {
+          "bbox": [
+            393,
+            1110,
+            405,
+            1117
+          ],
+          "text": "04"
+        },
+        {
+          "bbox": [
+            424,
+            1110,
+            569,
+            1117
+          ],
+          "text": "RETURNED BY THE API"
+        },
+        {
+          "bbox": [
+            393,
+            1134,
+            502,
+            1148
+          ],
+          "text": "Run summary"
+        },
+        {
+          "bbox": [
+            860,
+            1189,
+            870,
+            1191
+          ],
+          "text": "."
+        },
+        {
+          "bbox": [
+            410,
+            1188,
+            498,
+            1195
+          ],
+          "text": "HHM ACCURACY"
+        },
+        {
+          "bbox": [
+            606,
+            1189,
+            622,
+            1195
+          ],
+          "text": "ne1"
+        },
+        {
+          "bbox": [
+            658,
+            1188,
+            777,
+            1195
+          ],
+          "text": "ROUTE CONTINUITY"
+        },
+        {
+          "bbox": [
+            854,
+            1190,
+            857,
+            1195
+          ],
+          "text": "\""
+        },
+        {
+          "bbox": [
+            866,
+            1192,
+            870,
+            1195
+          ],
+          "text": "2"
+        },
+        {
+          "bbox": [
+            410,
+            1213,
+            482,
+            1230
+          ],
+          "text": "99.1%"
+        },
+        {
+          "bbox": [
+            687,
+            1213,
+            742,
+            1230
+          ],
+          "text": "0.0%"
+        },
+        {
+          "bbox": [
+            410,
+            1246,
+            480,
+            1254
+          ],
+          "text": "observations"
+        },
+        {
+          "bbox": [
+            500,
+            1248,
+            504,
+            1256
+          ],
+          "text": "P"
+        },
+        {
+          "bbox": [
+            537,
+            1246,
+            576,
+            1256
+          ],
+          "text": "aligned"
+        },
+        {
+          "bbox": [
+            658,
+            1213,
+            685,
+            1252
+          ],
+          "text": "}9"
+        },
+        {
+          "bbox": [
+            700,
+            1248,
+            716,
+            1256
+          ],
+          "text": "ren"
+        },
+        {
+          "bbox": [
+            724,
+            1246,
+            806,
+            1254
+          ],
+          "text": "rted continuin"
+        },
+        {
+          "bbox": [
+            410,
+            1290,
+            500,
+            1297
+          ],
+          "text": "HMH MACRO F1"
+        },
+        {
+          "bbox": [
+            740,
+            1290,
+            862,
+            1297
+          ],
+          "text": "CLASSIFIER ToP-1"
+        },
+        {
+          "bbox": [
+            410,
+            1313,
+            460,
+            1324
+          ],
+          "text": "97.7%"
+        },
+        {
+          "bbox": [
+            741,
+            1313,
+            791,
+            1324
+          ],
+          "text": "94.6%"
+        }
+      ],
+      "source_path": "reports/final_five/live/screenshots/ui_evaluator.png",
+      "source_sha256": "e0ed2ae759b3eddb90b316c31f44f3ff205d5ed3567e8365b0a241f309a3faf6",
+      "source_width": 1440,
+      "transform": "lossless original-pixel rectangle only; no resize or annotation",
+      "why": "Evaluator live result cards, shown separately from Student development."
+    },
+    {
+      "crop_box": [
+        385,
+        1090,
+        890,
+        1345
+      ],
+      "name": "light_scores",
+      "ocr_mean_word_confidence": 71.32,
+      "ocr_path": "reports/final_five/report_images/light_scores.ocr.json",
+      "ocr_sha256": "ed6c25f9724d541bbb63ae36dd2d8a787cbad3d69c46e3da6901382d989c372f",
+      "output_height": 255,
+      "output_path": "reports/final_five/report_images/light_scores.png",
+      "output_sha256": "869fc5204b620b5fd471770dcbd5bcb8f56f33bcf81ed38ea67c63dd03e86756",
+      "output_width": 505,
+      "path": "reports/final_five/report_images/light_scores.png",
+      "pixel_equality_checks": true,
+      "pixel_sha256": "cdb265fbfca8f6d05f80fe7a0f5b01373f62a8c1fc063ac4a8825349328e81f4",
+      "recommended_print_width_pt": 504,
+      "sha256": "869fc5204b620b5fd471770dcbd5bcb8f56f33bcf81ed38ea67c63dd03e86756",
+      "source_height": 2349,
+      "source_ocr_lines_within_crop": [
+        {
+          "bbox": [
+            393,
+            1110,
+            405,
+            1117
+          ],
+          "text": "04"
+        },
+        {
+          "bbox": [
+            424,
+            1110,
+            569,
+            1117
+          ],
+          "text": "RETURNED BY THE API"
+        },
+        {
+          "bbox": [
+            393,
+            1134,
+            502,
+            1148
+          ],
+          "text": "Run summary"
+        },
+        {
+          "bbox": [
+            410,
+            1188,
+            498,
+            1195
+          ],
+          "text": "HHM ACCURACY"
+        },
+        {
+          "bbox": [
+            604,
+            1189,
+            622,
+            1195
+          ],
+          "text": "nox"
+        },
+        {
+          "bbox": [
+            658,
+            1188,
+            777,
+            1195
+          ],
+          "text": "ROUTE CONTINUITY"
+        },
+        {
+          "bbox": [
+            852,
+            1189,
+            870,
+            1195
+          ],
+          "text": "noz"
+        },
+        {
+          "bbox": [
+            410,
+            1213,
+            482,
+            1230
+          ],
+          "text": "91.1%"
+        },
+        {
+          "bbox": [
+            659,
+            1213,
+            745,
+            1230
+          ],
+          "text": "100.0%"
+        },
+        {
+          "bbox": [
+            410,
+            1246,
+            480,
+            1254
+          ],
+          "text": "observations"
+        },
+        {
+          "bbox": [
+            500,
+            1246,
+            576,
+            1256
+          ],
+          "text": "proxy-aligned"
+        },
+        {
+          "bbox": [
+            658,
+            1246,
+            811,
+            1256
+          ],
+          "text": "Server-reported continuity"
+        },
+        {
+          "bbox": [
+            410,
+            1290,
+            500,
+            1297
+          ],
+          "text": "HMH MACRO F1"
+        },
+        {
+          "bbox": [
+            740,
+            1290,
+            862,
+            1297
+          ],
+          "text": "CLASSIFIER ToP-1"
+        },
+        {
+          "bbox": [
+            410,
+            1313,
+            460,
+            1324
+          ],
+          "text": "87.0%"
+        },
+        {
+          "bbox": [
+            741,
+            1313,
+            791,
+            1324
+          ],
+          "text": "87.3%"
+        }
+      ],
+      "source_path": "reports/final_five/live/screenshots/ui_light.png",
+      "source_sha256": "d15f647c52aa5673c83b6d82f60be963f5bb1f54db9c89f958f9c7f573b91001",
+      "source_width": 1440,
+      "transform": "lossless original-pixel rectangle only; no resize or annotation",
+      "why": "The same genuine development score region in the captured light theme."
+    },
+    {
+      "crop_box": [
+        16,
+        1125,
+        374,
+        1315
+      ],
+      "name": "mobile_390_selected_run",
+      "ocr_mean_word_confidence": 78.69,
+      "ocr_path": "reports/final_five/report_images/mobile_390_selected_run.ocr.json",
+      "ocr_sha256": "e058e292b099d315ae9bf97b74cdd2e607433b475ff966e1899d20896171f9ce",
+      "output_height": 190,
+      "output_path": "reports/final_five/report_images/mobile_390_selected_run.png",
+      "output_sha256": "b5034325604de73bc78e31410691411a3bbfedff930db49877b9101bb298136b",
+      "output_width": 358,
+      "path": "reports/final_five/report_images/mobile_390_selected_run.png",
+      "pixel_equality_checks": true,
+      "pixel_sha256": "40edc88f7e6033fb2418f436175eb33a344671b16c0fac82846bb69bdc63cb89",
+      "recommended_print_width_pt": 504,
+      "sha256": "b5034325604de73bc78e31410691411a3bbfedff930db49877b9101bb298136b",
+      "source_height": 4415,
+      "source_ocr_lines_within_crop": [
+        {
+          "bbox": [
+            46,
+            1151,
+            145,
+            1158
+          ],
+          "text": "SELECTED TRIP"
+        },
+        {
+          "bbox": [
+            47,
+            1171,
+            108,
+            1180
+          ],
+          "text": "00000087"
+        },
+        {
+          "bbox": [
+            47,
+            1194,
+            250,
+            1204
+          ],
+          "text": "1,309 original 6ps observations"
+        },
+        {
+          "bbox": [
+            131,
+            1244,
+            134,
+            1256
+          ],
+          "text": "["
+        },
+        {
+          "bbox": [
+            150,
+            1244,
+            259,
+            1256
+          ],
+          "text": "Run again - ]"
+        },
+        {
+          "bbox": [
+            32,
+            1283,
+            112,
+            1291
+          ],
+          "text": "Inference and"
+        },
+        {
+          "bbox": [
+            139,
+            1283,
+            273,
+            1293
+          ],
+          "text": "ring run on the server"
+        }
+      ],
+      "source_path": "reports/final_five/live/screenshots/ui_mobile.png",
+      "source_sha256": "c98b570dbb6bcd2209e413ecd23a47c183ad32173f67a7972b0ee97387ca9fce",
+      "source_width": 390,
+      "transform": "lossless original-pixel rectangle only; no resize or annotation",
+      "why": "390-pixel mobile selected trip and run control."
+    },
+    {
+      "crop_box": [
+        16,
+        1900,
+        374,
+        2410
+      ],
+      "name": "mobile_390_scores",
+      "ocr_mean_word_confidence": 68.39,
+      "ocr_path": "reports/final_five/report_images/mobile_390_scores.ocr.json",
+      "ocr_sha256": "e2592e5cf5e8e35f55bf472af77382416c3457b20ebb5cf055ac5bdaacf8c1e0",
+      "output_height": 510,
+      "output_path": "reports/final_five/report_images/mobile_390_scores.png",
+      "output_sha256": "d0235b15d026a998589f8f1ba899aa90694eb0946579832d06add17de3322a5a",
+      "output_width": 358,
+      "path": "reports/final_five/report_images/mobile_390_scores.png",
+      "pixel_equality_checks": true,
+      "pixel_sha256": "f29f29d28746a420756f4df97bfabce4af2c746b1fea48e502df5e837eb0ac69",
+      "recommended_print_width_pt": 306.75686274509803,
+      "sha256": "d0235b15d026a998589f8f1ba899aa90694eb0946579832d06add17de3322a5a",
+      "source_height": 4415,
+      "source_ocr_lines_within_crop": [
+        {
+          "bbox": [
+            32,
+            1919,
+            44,
+            1926
+          ],
+          "text": "04"
+        },
+        {
+          "bbox": [
+            63,
+            1919,
+            146,
+            1926
+          ],
+          "text": "RETURNED BY"
+        },
+        {
+          "bbox": [
+            178,
+            1924,
+            255,
+            1931
+          ],
+          "text": "LIVE RESULT"
+        },
+        {
+          "bbox": [
+            280,
+            1924,
+            344,
+            1931
+          ],
+          "text": "EVALUATOR"
+        },
+        {
+          "bbox": [
+            31,
+            1934,
+            83,
+            1941
+          ],
+          "text": "THE API"
+        },
+        {
+          "bbox": [
+            192,
+            1940,
+            248,
+            1947
+          ],
+          "text": "00800087"
+        },
+        {
+          "bbox": [
+            32,
+            1959,
+            141,
+            1973
+          ],
+          "text": "Run summary"
+        },
+        {
+          "bbox": [
+            330,
+            2013,
+            333,
+            2014
+          ],
+          "text": "."
+        },
+        {
+          "bbox": [
+            49,
+            2012,
+            137,
+            2019
+          ],
+          "text": "HHM ACCURACY"
+        },
+        {
+          "bbox": [
+            324,
+            2013,
+            340,
+            2019
+          ],
+          "text": "ne1"
+        },
+        {
+          "bbox": [
+            49,
+            2037,
+            121,
+            2054
+          ],
+          "text": "99.1%"
+        },
+        {
+          "bbox": [
+            49,
+            2070,
+            119,
+            2078
+          ],
+          "text": "observations"
+        },
+        {
+          "bbox": [
+            139,
+            2070,
+            215,
+            2080
+          ],
+          "text": "proxy-aligned"
+        },
+        {
+          "bbox": [
+            49,
+            2117,
+            168,
+            2124
+          ],
+          "text": "ROUTE CONTINUITY"
+        },
+        {
+          "bbox": [
+            324,
+            2119,
+            327,
+            2124
+          ],
+          "text": "\""
+        },
+        {
+          "bbox": [
+            49,
+            2142,
+            133,
+            2159
+          ],
+          "text": "100.0%"
+        },
+        {
+          "bbox": [
+            49,
+            2175,
+            202,
+            2185
+          ],
+          "text": "Server-reported continuity"
+        },
+        {
+          "bbox": [
+            48,
+            2222,
+            160,
+            2229
+          ],
+          "text": "MODEL INFERENCE"
+        },
+        {
+          "bbox": [
+            49,
+            2247,
+            100,
+            2264
+          ],
+          "text": "2.8."
+        },
+        {
+          "bbox": [
+            49,
+            2280,
+            179,
+            2290
+          ],
+          "text": "Server-side prediction"
+        },
+        {
+          "bbox": [
+            48,
+            2327,
+            114,
+            2334
+          ],
+          "text": "API ToTAL"
+        },
+        {
+          "bbox": [
+            49,
+            2352,
+            100,
+            2369
+          ],
+          "text": "3.0."
+        },
+        {
+          "bbox": [
+            49,
+            2385,
+            203,
+            2395
+          ],
+          "text": "Server inference + scoring"
+        }
+      ],
+      "source_path": "reports/final_five/live/screenshots/ui_mobile.png",
+      "source_sha256": "c98b570dbb6bcd2209e413ecd23a47c183ad32173f67a7972b0ee97387ca9fce",
+      "source_width": 390,
+      "transform": "lossless original-pixel rectangle only; no resize or annotation",
+      "why": "390-pixel mobile evaluator result header and first four result cards."
+    },
+    {
+      "crop_box": [
+        16,
+        2095,
+        304,
+        2610
+      ],
+      "name": "mobile_320_scores",
+      "ocr_mean_word_confidence": 70.59,
+      "ocr_path": "reports/final_five/report_images/mobile_320_scores.ocr.json",
+      "ocr_sha256": "f7c0c52ba592fe1930745cc9966f6a4ac04e43bc8a260c8feb0e7e015e32c934",
+      "output_height": 515,
+      "output_path": "reports/final_five/report_images/mobile_320_scores.png",
+      "output_sha256": "9e0096eec66cf1e84b7aa8234a07f5f81626b95591b019a09d0b525ded500cd7",
+      "output_width": 288,
+      "path": "reports/final_five/report_images/mobile_320_scores.png",
+      "pixel_equality_checks": true,
+      "pixel_sha256": "527c6438dbd64fa2949b8157222c351156da00fd42ef7ea4ca3391ff09385f28",
+      "recommended_print_width_pt": 244.38058252427186,
+      "sha256": "9e0096eec66cf1e84b7aa8234a07f5f81626b95591b019a09d0b525ded500cd7",
+      "source_height": 5008,
+      "source_ocr_lines_within_crop": [
+        {
+          "bbox": [
+            32,
+            2097,
+            44,
+            2104
+          ],
+          "text": "04"
+        },
+        {
+          "bbox": [
+            63,
+            2097,
+            123,
+            2104
+          ],
+          "text": "RETURNED"
+        },
+        {
+          "bbox": [
+            156,
+            2102,
+            226,
+            2109
+          ],
+          "text": "IVE RESULT"
+        },
+        {
+          "bbox": [
+            32,
+            2112,
+            107,
+            2119
+          ],
+          "text": "BY THE API"
+        },
+        {
+          "bbox": [
+            148,
+            2118,
+            211,
+            2125
+          ],
+          "text": "EVALUATOR"
+        },
+        {
+          "bbox": [
+            32,
+            2137,
+            60,
+            2148
+          ],
+          "text": "Run"
+        },
+        {
+          "bbox": [
+            148,
+            2134,
+            204,
+            2141
+          ],
+          "text": "00800087"
+        },
+        {
+          "bbox": [
+            32,
+            2165,
+            101,
+            2177
+          ],
+          "text": "summary"
+        },
+        {
+          "bbox": [
+            260,
+            2217,
+            263,
+            2218
+          ],
+          "text": "."
+        },
+        {
+          "bbox": [
+            49,
+            2216,
+            137,
+            2223
+          ],
+          "text": "HHM ACCURACY"
+        },
+        {
+          "bbox": [
+            254,
+            2217,
+            270,
+            2223
+          ],
+          "text": "ne1"
+        },
+        {
+          "bbox": [
+            49,
+            2241,
+            121,
+            2258
+          ],
+          "text": "99.1%"
+        },
+        {
+          "bbox": [
+            49,
+            2275,
+            119,
+            2283
+          ],
+          "text": "observations"
+        },
+        {
+          "bbox": [
+            139,
+            2275,
+            215,
+            2285
+          ],
+          "text": "proxy-aligned"
+        },
+        {
+          "bbox": [
+            49,
+            2321,
+            168,
+            2328
+          ],
+          "text": "ROUTE CONTINUITY"
+        },
+        {
+          "bbox": [
+            254,
+            2323,
+            257,
+            2328
+          ],
+          "text": "\""
+        },
+        {
+          "bbox": [
+            49,
+            2346,
+            133,
+            2363
+          ],
+          "text": "100.0%"
+        },
+        {
+          "bbox": [
+            49,
+            2380,
+            202,
+            2390
+          ],
+          "text": "Server-reported continuity"
+        },
+        {
+          "bbox": [
+            48,
+            2426,
+            160,
+            2433
+          ],
+          "text": "MODEL INFERENCE"
+        },
+        {
+          "bbox": [
+            49,
+            2451,
+            100,
+            2468
+          ],
+          "text": "2.8."
+        },
+        {
+          "bbox": [
+            49,
+            2485,
+            179,
+            2495
+          ],
+          "text": "Server-side prediction"
+        },
+        {
+          "bbox": [
+            48,
+            2531,
+            114,
+            2538
+          ],
+          "text": "API ToTAL"
+        },
+        {
+          "bbox": [
+            49,
+            2556,
+            100,
+            2573
+          ],
+          "text": "3.0."
+        },
+        {
+          "bbox": [
+            49,
+            2590,
+            203,
+            2600
+          ],
+          "text": "Server inference + scoring"
+        }
+      ],
+      "source_path": "reports/final_five/live/screenshots/ui_mobile_320.png",
+      "source_sha256": "0c44f138d455b59df0070303ba1d06103d5ae4c6c3e14b2e1a9f2c4d8b66d0c5",
+      "source_width": 320,
+      "transform": "lossless original-pixel rectangle only; no resize or annotation",
+      "why": "320-pixel mobile evaluator result header and first four result cards."
+    },
+    {
+      "crop_box": [
+        0,
+        120,
+        1120,
+        380
+      ],
+      "name": "terminal_identity",
+      "ocr_mean_word_confidence": 85.43,
+      "ocr_path": "reports/final_five/report_images/terminal_identity.ocr.json",
+      "ocr_sha256": "70ec19793470e0d3045c31db4433160180a84b449655704fa1f2dc18c6440d4b",
+      "output_height": 260,
+      "output_path": "reports/final_five/report_images/terminal_identity.png",
+      "output_sha256": "6f132f2d60d8c46e732bb69690496d47529aee4286f06534c0b68b71b155a10e",
+      "output_width": 1120,
+      "path": "reports/final_five/report_images/terminal_identity.png",
+      "pixel_equality_checks": true,
+      "pixel_sha256": "4aa1d53e3523eedcc3040643241bba057fe9b00069896768418a78dc18a944d3",
+      "recommended_print_width_pt": 504,
+      "sha256": "6f132f2d60d8c46e732bb69690496d47529aee4286f06534c0b68b71b155a10e",
+      "source_height": 1440,
+      "source_ocr_lines_within_crop": [
+        {
+          "bbox": [
+            2,
+            131,
+            528,
+            153
+          ],
+          "text": "Filtered by the measured HTTP request ID:"
+        },
+        {
+          "bbox": [
+            1,
+            162,
+            415,
+            179
+          ],
+          "text": "e5c74616aa5f40f7ac9acbf2459d9678"
+        },
+        {
+          "bbox": [
+            2,
+            193,
+            753,
+            215
+          ],
+          "text": "Request ID groups: e5c7 4616 aa5f 40f7 ac9a cbf2 459d 9678"
+        },
+        {
+          "bbox": [
+            1,
+            224,
+            918,
+            246
+          ],
+          "text": "Only original public scalar fields are displayed; no routes or secrets."
+        },
+        {
+          "bbox": [
+            1,
+            286,
+            220,
+            308
+          ],
+          "text": "trip_id: 00000009"
+        },
+        {
+          "bbox": [
+            261,
+            286,
+            584,
+            308
+          ],
+          "text": "dataset_role: development"
+        },
+        {
+          "bbox": [
+            1,
+            317,
+            138,
+            337
+          ],
+          "text": "model_hash:"
+        },
+        {
+          "bbox": [
+            249,
+            317,
+            1078,
+            334
+          ],
+          "text": "c9cc8e91368381656a94d07ed69632979df9981ca94a9daf3b52fbced52e4b34"
+        },
+        {
+          "bbox": [
+            1,
+            348,
+            1078,
+            370
+          ],
+          "text": "match_config_hash: e326blafdal25897cd784ab335fbcd7c869fcd70714c5203ef5c2c71977b3288"
+        }
+      ],
+      "source_path": "reports/final_five/live/screenshots/api_terminal.png",
+      "source_sha256": "dc56dbd9ce9aa5071044c875cae5a5d0403fd59923ab60a0256642728f5738a2",
+      "source_width": 2368,
+      "transform": "lossless original-pixel rectangle only; no resize or annotation",
+      "why": "Authentic request ID, trip, dataset, full model and config hashes. Wider crop preserves the complete original hash lines."
+    },
+    {
+      "crop_box": [
+        0,
+        395,
+        970,
+        630
+      ],
+      "name": "terminal_completion",
+      "ocr_mean_word_confidence": 86.76,
+      "ocr_path": "reports/final_five/report_images/terminal_completion.ocr.json",
+      "ocr_sha256": "60478152bc33a2a7f6a3ed2b650735810afbee9d5856c9fa8bf71bc56bc2c729",
+      "output_height": 235,
+      "output_path": "reports/final_five/report_images/terminal_completion.png",
+      "output_sha256": "0439ca01d9be9705b95dbc0a922ead682693c8db0398ca2088b6096da0677a31",
+      "output_width": 970,
+      "path": "reports/final_five/report_images/terminal_completion.png",
+      "pixel_equality_checks": true,
+      "pixel_sha256": "6b0d5a20ac9a969d9dca06d4324079ea728538b08330ad923b6ed9d7f11af984",
+      "recommended_print_width_pt": 504,
+      "sha256": "0439ca01d9be9705b95dbc0a922ead682693c8db0398ca2088b6096da0677a31",
+      "source_height": 1440,
+      "source_ocr_lines_within_crop": [
+        {
+          "bbox": [
+            1,
+            410,
+            168,
+            430
+          ],
+          "text": "match_started"
+        },
+        {
+          "bbox": [
+            222,
+            407,
+            638,
+            437
+          ],
+          "text": "2026-11-18T09:06:25.487067+00: 00"
+        },
+        {
+          "bbox": [
+            1,
+            441,
+            636,
+            463
+          ],
+          "text": "match_completed 2026-11-18T09:06:28.707597+00:00"
+        },
+        {
+          "bbox": [
+            1,
+            472,
+            233,
+            492
+          ],
+          "text": "metrics_status: ok"
+        },
+        {
+          "bbox": [
+            2,
+            503,
+            285,
+            523
+          ],
+          "text": "inference_ms: 3044.586"
+        },
+        {
+          "bbox": [
+            327,
+            503,
+            571,
+            525
+          ],
+          "text": "scoring_ms: 149.628"
+        },
+        {
+          "bbox": [
+            612,
+            503,
+            831,
+            523
+          ],
+          "text": "total_ms: 3220.53"
+        },
+        {
+          "bbox": [
+            1,
+            565,
+            947,
+            587
+          ],
+          "text": "ACTUAL API RECEIVING TERMINAL / original dedicated-service journal events"
+        },
+        {
+          "bbox": [
+            2,
+            596,
+            957,
+            618
+          ],
+          "text": "Request e5c74616aa5f40f7ac9acbf2459d9678 executed fresh learned inference."
+        }
+      ],
+      "source_path": "reports/final_five/live/screenshots/api_terminal.png",
+      "source_sha256": "dc56dbd9ce9aa5071044c875cae5a5d0403fd59923ab60a0256642728f5738a2",
+      "source_width": 2368,
+      "transform": "lossless original-pixel rectangle only; no resize or annotation",
+      "why": "Authentic started/completed journal events, metrics status and inference/scoring/total timings."
+    }
+  ],
+  "determinism": "fixed crop boxes, lossless PNG, no timestamps or image resizing",
+  "inputs": [
+    {
+      "path": "analysis/final_report_layout/crop_coordinate_ocr/api_terminal.lines.json",
+      "sha256": "34cfe055dac771a248f4c12068077eccaa9a4dea0ff8886a7d5c84df48bda6eb"
+    },
+    {
+      "path": "analysis/final_report_layout/crop_coordinate_ocr/ui_desktop.lines.json",
+      "sha256": "a150dd3129fc1c16852888863e6c52c817af6e5cca67abfb7309ce587352a1cf"
+    },
+    {
+      "path": "analysis/final_report_layout/crop_coordinate_ocr/ui_evaluator.lines.json",
+      "sha256": "56f6e45578cf223fdd675fb37488e141d7808137742c6dcf9b129a3efc5ceb2e"
+    },
+    {
+      "path": "analysis/final_report_layout/crop_coordinate_ocr/ui_light.lines.json",
+      "sha256": "6b4cf0f66728f22cd345c2a54bdd535af3211805447d7123f5fbbd086db9628c"
+    },
+    {
+      "path": "analysis/final_report_layout/crop_coordinate_ocr/ui_mobile.lines.json",
+      "sha256": "a9113874380d6c3c7e8367d1de45ee105952c721b5a04715a6efff2a763b9bbf"
+    },
+    {
+      "path": "analysis/final_report_layout/crop_coordinate_ocr/ui_mobile_320.lines.json",
+      "sha256": "3fb0cd834b3df5785cb14518e87d3f366c81d97bf2eb4f1ee9271111bfc085ac"
+    },
+    {
+      "path": "reports/final_five/live/api_terminal_evidence.json",
+      "sha256": "e5438fd0e104eaa9d0d72b33ce3182f5cac3e87ed2065cccaca77960d769d60f"
+    },
+    {
+      "path": "reports/final_five/live/browser_evidence.json",
+      "sha256": "89ddfba49860dd892b675c5ea3af639803cc828afae621bcce114f2fe1278189"
+    },
+    {
+      "path": "scripts/prepare_report_images.py",
+      "sha256": "531286d58673e9a7ad2bba245f30528a76565a805649266075bf75d4ba1e89d5"
+    }
+  ],
+  "inspection": "Actual OCR positions and exact pixel comparison; no manual visual inspection claimed",
+  "passed": true,
+  "schema_version": 1,
+  "source_hashes_unchanged_before_after": true,
+  "sources": [
+    {
+      "bytes": 296362,
+      "dataset_id": "development",
+      "height": 2349,
+      "path": "reports/final_five/live/screenshots/ui_desktop.png",
+      "sha256": "8089e79173e353a0e39ba33ee6656032375e7219fd15b6be7deb8658471bf69c",
+      "theme": "dark",
+      "width": 1440
+    },
+    {
+      "bytes": 51472,
+      "dataset_id": "development",
+      "height": 498,
+      "path": "reports/final_five/live/screenshots/ui_route_map.png",
+      "sha256": "ef165839e389f97177f136b166df859f1752dc195d459456459616267388678c",
+      "theme": "dark",
+      "width": 991
+    },
+    {
+      "bytes": 284737,
+      "dataset_id": "development",
+      "height": 2349,
+      "path": "reports/final_five/live/screenshots/ui_light.png",
+      "sha256": "d15f647c52aa5673c83b6d82f60be963f5bb1f54db9c89f958f9c7f573b91001",
+      "theme": "light",
+      "width": 1440
+    },
+    {
+      "bytes": 234989,
+      "dataset_id": "evaluator",
+      "height": 5008,
+      "path": "reports/final_five/live/screenshots/ui_mobile_320.png",
+      "sha256": "0c44f138d455b59df0070303ba1d06103d5ae4c6c3e14b2e1a9f2c4d8b66d0c5",
+      "theme": "dark",
+      "width": 320
+    },
+    {
+      "bytes": 240034,
+      "dataset_id": "evaluator",
+      "height": 4415,
+      "path": "reports/final_five/live/screenshots/ui_mobile.png",
+      "sha256": "c98b570dbb6bcd2209e413ecd23a47c183ad32173f67a7972b0ee97387ca9fce",
+      "theme": "dark",
+      "width": 390
+    },
+    {
+      "bytes": 265708,
+      "dataset_id": "evaluator",
+      "height": 2349,
+      "path": "reports/final_five/live/screenshots/ui_evaluator.png",
+      "sha256": "e0ed2ae759b3eddb90b316c31f44f3ff205d5ed3567e8365b0a241f309a3faf6",
+      "theme": "dark",
+      "width": 1440
+    },
+    {
+      "height": 1440,
+      "path": "reports/final_five/live/screenshots/api_terminal.png",
+      "sha256": "dc56dbd9ce9aa5071044c875cae5a5d0403fd59923ab60a0256642728f5738a2",
+      "width": 2368
+    }
+  ]
+}

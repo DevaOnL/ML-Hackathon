@@ -1,0 +1,1224 @@
+{
+  "meta": {
+    "title": "PathSnap original-requirements traceability matrix",
+    "generated": "2026-11-18",
+    "generated_by": "requirements-audit subagent fc571adb (AI, DeepSeek Harness)",
+    "purpose": "Independent audit of the five original organizer DOCX requirements, with user-scope overrides and honest status. Feeds the final five-family build.",
+    "authoritative_sources": [
+      "PathSnap_student_materials/Main Guidelines.docx",
+      "PathSnap_student_materials/Dataset Exploration.docx",
+      "PathSnap_student_materials/Models and Training Guidelines.docx",
+      "PathSnap_student_materials/Deliverables.docx",
+      "PathSnap_student_materials/Assessment and Plagiarism Policy.docx"
+    ],
+    "synthesis_crosscheck": "PathSnap_student_materials/PathSnap - Complete Guidelines.docx verified byte-text-identical to the five documents concatenated in order (480/480 non-empty XML paragraphs identical); it adds no requirement of its own.",
+    "locator_convention": "P<n> = nth non-empty XML paragraph in document order (matches analysis/instructions_review/*__xml_text.md). Table <n> = nth table in the same extracts. Quotes are verbatim from the original DOCX, including the original's own typo 'at leastFIVE'.",
+    "status_legend": {
+      "done_evidence_exists": "Completed with named verifiable evidence in preserved phase-three or current final-five work; final_evidence and updated_at_utc identify Lead-reviewed completion updates.",
+      "partially_done": "Done for 3 of the 5 final families; final-five consolidation outstanding.",
+      "in_progress_delegated": "Owned right now by the model-audit child (d868726d, analysis/five_model_audit/).",
+      "not_yet_done": "Not started or not finished under the current final-five scope.",
+      "deferred_by_user": "Explicitly ordered later by the user (evaluator section after final model/decoder freeze).",
+      "user_exception": "User replaced the organizer requirement with a different instruction; replacement evidence exists.",
+      "human_external_blocker": "Cannot be truthfully completed by an AI agent; requires the human team and must be disclosed, not faked."
+    },
+    "out_of_scope_guard": "evaluator_test/ and data archives were never opened; no web access; no model inference; no new model fits. OCR statements come from the prior tesseract audit (analysis/instructions_review/IMAGE_OCR_REVIEW.md); this agent did not visually inspect images and makes no human-inspection claim.",
+    "updated_at_utc": "2026-11-18T09:56:00+00:00"
+  },
+  "requirements": [
+    {
+      "id": "R-DS-01",
+      "area": "dataset",
+      "title": "Investigate the actual raw files instead of assuming uniformity",
+      "requirement": "Verify trip organisation, file naming, row counts, data types and column meanings; do not assume every trip is identical or that a GPS row corresponds to a network row.",
+      "sources": [
+        {
+          "path": "PathSnap_student_materials/Dataset Exploration.docx",
+          "locator": "P13 (§2), P36-P37 (§3 closing note)"
+        }
+      ],
+      "classification": "mandatory",
+      "acceptance_evidence": "Dataset audit manifest covering every trip and file (counts, sizes, dtypes), plus report §2.2 answers.",
+      "status": "done_evidence_exists",
+      "status_note": "analysis/data_audit/ (manifest.csv, per_trip.csv, summary.json) and the phase-three PDF; refresh only if inputs change before final submission."
+    },
+    {
+      "id": "R-DS-02",
+      "area": "dataset",
+      "title": "Honour documented raw file formats (.track/.nodes/.arcs/.route)",
+      "requirement": "3-column whitespace .track (lon, lat, ts seconds, ~1 Hz), 2-column .nodes, integer from/to .arcs (row index = arc_id), 1-column .route of chronological ground-truth arc_ids.",
+      "sources": [
+        {
+          "path": "PathSnap_student_materials/Dataset Exploration.docx",
+          "locator": "P15-P33 (§3 Tables 2-4, incl. nested rows)"
+        }
+      ],
+      "classification": "mandatory",
+      "acceptance_evidence": "Parsers read exactly these formats; .route treated as arc sequence, not per-observation labels.",
+      "status": "done_evidence_exists",
+      "status_note": "Implemented; proxy observation labels derived from route geometry are disclosed as such in DEVELOPMENT_PROVENANCE.md and the report."
+    },
+    {
+      "id": "R-DS-03",
+      "area": "dataset",
+      "title": "Structured initial EDA covering all listed items",
+      "requirement": "Identify trips per partition, observations per trip, file availability/sizes, types/columns, missing or invalid GPS, timestamp ordering and gaps, geographic extent, network nodes/segments, connectivity, isolated nodes/disconnected components, anomalous trips, reference-route availability and structure.",
+      "sources": [
+        {
+          "path": "PathSnap_student_materials/Dataset Exploration.docx",
+          "locator": "P38-P50 (§4)"
+        }
+      ],
+      "classification": "mandatory",
+      "acceptance_evidence": "EDA outputs and report §2.2 addressing each item; partition named per analysis.",
+      "status": "done_evidence_exists",
+      "status_note": "Covered by data audit + phase-three report; final-five PDF must carry it forward."
+    },
+    {
+      "id": "R-DS-04",
+      "area": "dataset",
+      "title": "Geographically appropriate distance computations",
+      "requirement": "Justify projected CRS or geodesic distance (degrees-Euclidean is not physical distance), check coordinate order and plausibility, account for noise/gaps/irregular timestamps.",
+      "sources": [
+        {
+          "path": "PathSnap_student_materials/Dataset Exploration.docx",
+          "locator": "P51-P60 (§5)"
+        }
+      ],
+      "classification": "suggestion_with_justification",
+      "acceptance_evidence": "Report states the distance computation used and why it fits the dataset scale.",
+      "status": "done_evidence_exists",
+      "status_note": "Geodesic/projected handling documented in the phase-three report."
+    },
+    {
+      "id": "R-DS-05",
+      "area": "dataset",
+      "title": "Treat reference routes as reference, not error-free ground truth",
+      "requirement": "Do not assume supplied routes are independently verified physical truth; identify limitations, state assumptions, avoid overstating label certainty.",
+      "sources": [
+        {
+          "path": "PathSnap_student_materials/Dataset Exploration.docx",
+          "locator": "P61-P67 (§6)"
+        }
+      ],
+      "classification": "mandatory",
+      "acceptance_evidence": "Report and provenance state the limitation; metrics derived from route-derived labels labelled as proxy.",
+      "status": "done_evidence_exists",
+      "status_note": "Proxy-label disclosure present in DEVELOPMENT_PROVENANCE.md and report; keep in the final-five PDF."
+    },
+    {
+      "id": "R-DS-06",
+      "area": "dataset",
+      "title": "Honour the 80/10/10 partition scheme",
+      "requirement": "80 training trips for fitting/development/CV/optimisation; 10 student-testing trips for development-stage comparison; 10 evaluator-testing trips for final evaluation only.",
+      "sources": [
+        {
+          "path": "PathSnap_student_materials/Dataset Exploration.docx",
+          "locator": "P69-P81 (§7 Table 6)"
+        }
+      ],
+      "classification": "mandatory",
+      "acceptance_evidence": "Protocol files and code show the split; no evaluator trip in any training artefact.",
+      "status": "done_evidence_exists",
+      "status_note": "Grouped TRAIN CV + student-test evaluation used throughout phase three."
+    },
+    {
+      "id": "R-DS-07",
+      "area": "dataset",
+      "title": "Leakage-prevention rules",
+      "requirement": "No trip split across partitions; evaluator data not used for training, feature selection, algorithm or hyperparameter choice; no manual alteration from known routes; no hardcoded answers; preprocessing fitted on permitted training data only; evaluator ground truth kept out of the pipeline.",
+      "sources": [
+        {
+          "path": "PathSnap_student_materials/Dataset Exploration.docx",
+          "locator": "P82-P87 (§7 rules)"
+        },
+        {
+          "path": "PathSnap_student_materials/Assessment and Plagiarism Policy.docx",
+          "locator": "P55-P58 (§7)"
+        }
+      ],
+      "classification": "mandatory",
+      "acceptance_evidence": "Code review + freeze records show TRAIN-only fitting; evaluator inputs untouched.",
+      "status": "done_evidence_exists",
+      "status_note": "Evaluator_test/ never opened by this audit or (per records) by the pipeline; maintain at final freeze."
+    },
+    {
+      "id": "R-DS-08",
+      "area": "dataset",
+      "title": "Retain exploration evidence",
+      "requirement": "Dataset inventory, summary statistics, coordinate/pattern plots, interactive Folium maps, network size/connectivity tables, data-quality record.",
+      "sources": [
+        {
+          "path": "PathSnap_student_materials/Dataset Exploration.docx",
+          "locator": "P88-P96 (§8)"
+        }
+      ],
+      "classification": "suggestion",
+      "acceptance_evidence": "Artifacts committed in the repository.",
+      "status": "done_evidence_exists",
+      "status_note": "Present in repo and phase-three report figures."
+    },
+    {
+      "id": "R-DS-09",
+      "area": "dataset",
+      "title": "Team can explain dataset organisation, relations, quality concerns, assumptions",
+      "requirement": "At the end of exploration each team should be able to explain how the raw dataset is organised, what each file represents, how components relate, quality concerns and assumptions.",
+      "sources": [
+        {
+          "path": "PathSnap_student_materials/Dataset Exploration.docx",
+          "locator": "P97-P104 (§9)"
+        }
+      ],
+      "classification": "mandatory_understanding",
+      "acceptance_evidence": "Written answers exist (done); a human can answer viva questions on them (not verifiable by AI).",
+      "status": "human_external_blocker",
+      "status_note": "Documented evidence exists; the explanation ability itself belongs to the human team at viva. Disclose; do not fake."
+    },
+    {
+      "id": "R-MT-01",
+      "area": "models",
+      "title": "At least FIVE distinct models trained, evaluated and compared before selection",
+      "requirement": "Verbatim: 'Teams must train and evaluate at leastFIVE different models before selecting their final model.' Selection must be supported by experimental results, performance comparisons and technical reasoning; direct selection without meaningful experiments incurs deductions.",
+      "sources": [
+        {
+          "path": "PathSnap_student_materials/Models and Training Guidelines.docx",
+          "locator": "P12-P13 (§2), P54 (§4 item 1), P73 (§6)"
+        },
+        {
+          "path": "PathSnap_student_materials/Deliverables.docx",
+          "locator": "P62-P65 (§3, §3.1)"
+        },
+        {
+          "path": "PathSnap_student_materials/Assessment and Plagiarism Policy.docx",
+          "locator": "P19 (§3)"
+        }
+      ],
+      "classification": "mandatory",
+      "acceptance_evidence": "Final report table with all five models (LR, KNN/distance-weighted, Bagging, GaussianNB, HistGradientBoosting), each with TRAIN grouped-CV and student-test metrics from actual runs, plus per-model subsections.",
+      "status": "done_evidence_exists",
+      "status_note": "Completed in final five-family phase; see hash-pinned final_evidence. Source wording/classification preserved.",
+      "initial_status": "partially_done",
+      "final_evidence": [
+        {
+          "path": "reports/final_five/all_five_model_acceptance.json",
+          "sha256": "0829918e6c5bb3335d6b6d02a1d8a0fc2abd8b43f6769b41c73cd26c65296d65"
+        },
+        {
+          "path": "analysis/final_model_review/final_review_report.json",
+          "sha256": "d7ba83c015e2ba1a3c7bf420ac2c386cf4d0bbd462b7bfdaaacc8996fa9d5398"
+        }
+      ],
+      "updated_at_utc": "2026-11-18T09:06:37.158547+00:00"
+    },
+    {
+      "id": "R-MT-02",
+      "area": "models",
+      "title": "Multiple algorithm families",
+      "requirement": "Students are strongly encouraged to explore models from multiple algorithm families; the family table is examples and suggestions, not a fixed list.",
+      "sources": [
+        {
+          "path": "PathSnap_student_materials/Models and Training Guidelines.docx",
+          "locator": "P10 (§2), P14-P49 (§3 Tables 2-4)"
+        }
+      ],
+      "classification": "suggestion",
+      "acceptance_evidence": "Five final families span the encouraged table: linear/probabilistic (LR, GNB), instance-based (distance-weighted KNN), ensemble (Bagging), boosting (HistGB).",
+      "status": "done_evidence_exists",
+      "status_note": "The final five distinct families span linear, instance-based, bagging, probabilistic and boosting approaches; the organizer family table is a suggestion, not a prescribed list.",
+      "initial_status": "partially_done",
+      "final_evidence": [
+        {
+          "path": "reports/final_five/all_five_model_acceptance.json",
+          "sha256": "0829918e6c5bb3335d6b6d02a1d8a0fc2abd8b43f6769b41c73cd26c65296d65"
+        }
+      ],
+      "updated_at_utc": "2026-11-18T09:11:57.403182+00:00"
+    },
+    {
+      "id": "R-MT-03",
+      "area": "models",
+      "title": "Experimental-design rules for every model",
+      "requirement": "Train >=5 distinct models; record each configuration; fit and cross-validate on the 80 training trips; compare on the ten student-testing trips; apply preprocessing consistently; avoid training-accuracy-only selection; record training and inference time where practical; retain logs, seeds, configurations and results.",
+      "sources": [
+        {
+          "path": "PathSnap_student_materials/Models and Training Guidelines.docx",
+          "locator": "P53-P60 (§4)"
+        }
+      ],
+      "classification": "mandatory",
+      "acceptance_evidence": "Per-model config records, seeds, timing and result files for all five families under the final protocol.",
+      "status": "done_evidence_exists",
+      "status_note": "Completed in final five-family phase; see hash-pinned final_evidence. Source wording/classification preserved.",
+      "initial_status": "partially_done",
+      "final_evidence": [
+        {
+          "path": "experiments/final_five/current/results.json",
+          "sha256": "8956d9360daae8723875e6a7f6fb8a98941ebf85d0eee9c8cab8cdf68979f6a8"
+        },
+        {
+          "path": "reports/final_five/all_five_model_acceptance.json",
+          "sha256": "0829918e6c5bb3335d6b6d02a1d8a0fc2abd8b43f6769b41c73cd26c65296d65"
+        }
+      ],
+      "updated_at_utc": "2026-11-18T09:06:37.158547+00:00"
+    },
+    {
+      "id": "R-MT-04",
+      "area": "models",
+      "title": "Evaluation-metric set and primary-metric justification",
+      "requirement": "Report, where applicable: accuracy, precision, recall, F1, confusion matrix, log loss, observation-level Top-1 accuracy, candidate miss rate, route continuity, sequence-level performance, training and inference time; explain the primary selection metric and why it is appropriate.",
+      "sources": [
+        {
+          "path": "PathSnap_student_materials/Models and Training Guidelines.docx",
+          "locator": "P61-P71 (§5)"
+        }
+      ],
+      "classification": "mandatory_where_applicable",
+      "acceptance_evidence": "Metric tables per model; primary-metric justification paragraph in the report.",
+      "status": "done_evidence_exists",
+      "status_note": "Completed in final five-family phase; see hash-pinned final_evidence. Source wording/classification preserved.",
+      "initial_status": "partially_done",
+      "final_evidence": [
+        {
+          "path": "experiments/final_five/current/results.json",
+          "sha256": "8956d9360daae8723875e6a7f6fb8a98941ebf85d0eee9c8cab8cdf68979f6a8"
+        },
+        {
+          "path": "experiments/final_five/current/sequence_classification.json",
+          "sha256": "949461edf056d1fd538be23a9357f46c7a446192d301599a75fbedbff5a06585"
+        }
+      ],
+      "updated_at_utc": "2026-11-18T09:06:37.158547+00:00"
+    },
+    {
+      "id": "R-MT-05",
+      "area": "models",
+      "title": "Comparison identifies the listed per-model facts",
+      "requirement": "Comparison must identify model name, algorithm family, important configuration, training/CV performance, student-testing performance, precision, recall, F1, log loss where applicable, computational efficiency, route continuity.",
+      "sources": [
+        {
+          "path": "PathSnap_student_materials/Models and Training Guidelines.docx",
+          "locator": "P72-P85 (§6)"
+        }
+      ],
+      "classification": "mandatory",
+      "acceptance_evidence": "The consolidated report table (see R-DL-05) filled for all five models from actual results.",
+      "status": "done_evidence_exists",
+      "status_note": "Completed in final five-family phase; see hash-pinned final_evidence. Source wording/classification preserved.",
+      "initial_status": "partially_done",
+      "final_evidence": [
+        {
+          "path": "experiments/final_five/current/model_comparison.csv",
+          "sha256": "fa446f8e7263ae6cdc722563d5c4cdfb41d3bf433e5837f14cd2ef8556f147bc"
+        },
+        {
+          "path": "experiments/final_five/current/results.json",
+          "sha256": "8956d9360daae8723875e6a7f6fb8a98941ebf85d0eee9c8cab8cdf68979f6a8"
+        }
+      ],
+      "updated_at_utc": "2026-11-18T09:06:37.158547+00:00"
+    },
+    {
+      "id": "R-MT-06",
+      "area": "models",
+      "title": "Selection considerations including generalisation; never training accuracy alone",
+      "requirement": "Selection must consider generalisation performance, stability across validation folds, probability quality, inference speed, model complexity, decoder compatibility; 'Do not select a model solely because it achieves high training accuracy.'",
+      "sources": [
+        {
+          "path": "PathSnap_student_materials/Models and Training Guidelines.docx",
+          "locator": "P85-P96 (§6)"
+        }
+      ],
+      "classification": "mandatory",
+      "acceptance_evidence": "Selection rationale in the final report referencing measured CV-vs-student-test behaviour and fold stability for all five candidates.",
+      "status": "done_evidence_exists",
+      "status_note": "Completed in final five-family phase; see hash-pinned final_evidence. Source wording/classification preserved.",
+      "initial_status": "partially_done",
+      "final_evidence": [
+        {
+          "path": "experiments/final_five/current/selection.json",
+          "sha256": "d186221eea0eaeaa09d2fbee648499a9856402d3b12c4d9906c7ebab2dd31519"
+        },
+        {
+          "path": "experiments/final_five/current/cv/hist_gradient_boosting.json",
+          "sha256": "7d2edaee69ebcfec47a217fb331751a6fb99da47cfcd3c8a5374761e8a46fe65"
+        }
+      ],
+      "updated_at_utc": "2026-11-18T09:06:37.158547+00:00"
+    },
+    {
+      "id": "R-MT-07",
+      "area": "models",
+      "title": "Bayesian hyperparameter optimisation protocol",
+      "requirement": "After the initial comparison, run a Bayesian search on a promising model: justified search space, stated objective, group-aware CV on the 80 training trips, recorded trials, best configuration, refit, evaluation on the ten student-testing trips, tuned-vs-untuned comparison, reported computational cost.",
+      "sources": [
+        {
+          "path": "PathSnap_student_materials/Models and Training Guidelines.docx",
+          "locator": "P97-P105 (§7)"
+        },
+        {
+          "path": "PathSnap_student_materials/Deliverables.docx",
+          "locator": "P150-P159 (§4)"
+        },
+        {
+          "path": "PathSnap_student_materials/Assessment and Plagiarism Policy.docx",
+          "locator": "P20-P21 (§3)"
+        }
+      ],
+      "classification": "mandatory",
+      "acceptance_evidence": "Search configs, trial log (search_results.jsonl), objective CSV, best values, tuned-vs-untuned metric comparison on identical partitions, cost statement.",
+      "status": "done_evidence_exists",
+      "status_note": "Completed in final five-family phase; see hash-pinned final_evidence. Source wording/classification preserved.",
+      "initial_status": "partially_done",
+      "final_evidence": [
+        {
+          "path": "experiments/final_five/current/bayesian_optimization.json",
+          "sha256": "0e77818b2b70c372a60bca1ac2d02227c8f240ad148d4ac2e5f2af7ec46a3c18"
+        },
+        {
+          "path": "experiments/bayesian_trials.jsonl",
+          "sha256": "cbe4e6c949be9c7904ee10e408bd5be48b4396d1dde31b98400179af55a8fb0c"
+        }
+      ],
+      "updated_at_utc": "2026-11-18T09:06:37.158547+00:00"
+    },
+    {
+      "id": "R-MT-08",
+      "area": "models",
+      "title": "Evaluator partition excluded from every optimisation choice",
+      "requirement": "The evaluator-testing partition must not be used to choose the search space, objective, hyperparameters, model or thresholds.",
+      "sources": [
+        {
+          "path": "PathSnap_student_materials/Models and Training Guidelines.docx",
+          "locator": "P106 (§7)"
+        }
+      ],
+      "classification": "mandatory",
+      "acceptance_evidence": "All search records reference TRAIN grouped CV only; no evaluator artifacts in any search input.",
+      "status": "done_evidence_exists",
+      "status_note": "Completed in final five-family phase; see hash-pinned final_evidence. Source wording/classification preserved.",
+      "initial_status": "done_evidence_exists",
+      "final_evidence": [
+        {
+          "path": "reports/final_five/decoder/freeze.json",
+          "sha256": "d5a3f507efe29b4db72b12bb3e06db3a00d5c27f387db09eb1b33f7620a790b1"
+        },
+        {
+          "path": "reports/final_five/evaluator/acceptance.json",
+          "sha256": "678689d7be6523d9edfe2efc5c1ef29abfcbc8bf2d91aa878a8554599d605858"
+        }
+      ],
+      "updated_at_utc": "2026-11-18T09:06:37.158547+00:00"
+    },
+    {
+      "id": "R-HM-01",
+      "area": "hmm",
+      "title": "HMM route reconstruction driven by the selected model's outputs",
+      "requirement": "Route reconstruction should use the selected model's outputs consistently; sequential information plus network connectivity produce a coherent route.",
+      "sources": [
+        {
+          "path": "PathSnap_student_materials/Models and Training Guidelines.docx",
+          "locator": "P107-P111 (§8)"
+        }
+      ],
+      "classification": "mandatory",
+      "acceptance_evidence": "Decoder consumes the frozen final classifier's probabilities; no independent hand-tuned matcher.",
+      "status": "done_evidence_exists",
+      "status_note": "Completed in final five-family phase; see hash-pinned final_evidence. Source wording/classification preserved.",
+      "initial_status": "partially_done",
+      "final_evidence": [
+        {
+          "path": "reports/final_five/decoder/student_ablation.json",
+          "sha256": "045513ee402984d2fb4db200ca1fdb01a447ad563ab1a07632ee41bfcc5a353a"
+        },
+        {
+          "path": "reports/final_five/offline_delivery_verification.json",
+          "sha256": "aba2c384123cef5b2b690b10f53873f174000fbe0942572010d0afc8e3afb8f6"
+        }
+      ],
+      "updated_at_utc": "2026-11-18T09:06:37.158547+00:00"
+    },
+    {
+      "id": "R-HM-02",
+      "area": "hmm",
+      "title": "Required route-reconstruction experiments (incl. classifier-only negative control)",
+      "requirement": "Describe hidden states; preserve candidate-to-segment correspondence; explain emission and transition modelling; explain the Viterbi recurrence; handle missing candidates and invalid transitions; handle GPS gaps; return a predicted segment per relevant observation; compare classifier-only with classifier-plus-HMM predictions (the negative control); report pointwise and sequence-level performance; analyse route continuity.",
+      "sources": [
+        {
+          "path": "PathSnap_student_materials/Models and Training Guidelines.docx",
+          "locator": "P112-P123 (§9)"
+        },
+        {
+          "path": "PathSnap_student_materials/Deliverables.docx",
+          "locator": "P160-P172 (§5)"
+        }
+      ],
+      "classification": "mandatory",
+      "acceptance_evidence": "Ablation artifacts (classifier-only vs classifier+HMM) on student data, per-observation assignments, continuity metrics, and report §5 answers.",
+      "status": "done_evidence_exists",
+      "status_note": "Completed in final five-family phase; see hash-pinned final_evidence. Source wording/classification preserved.",
+      "initial_status": "partially_done",
+      "final_evidence": [
+        {
+          "path": "mapmatch/matcher.py",
+          "sha256": "af58502cdfe8de12cb13ea5ab3e1e8c9ef7aee9cf6f3faec8dea5cbfbedc4bff"
+        },
+        {
+          "path": "scripts/final_five_decoder.py",
+          "sha256": "53bb1892ac1d3c9252d9eeff871a0879f4ea3ffdb1801663b57324ba3cbcc239"
+        },
+        {
+          "path": "reports/final_five/decoder/freeze.json",
+          "sha256": "d5a3f507efe29b4db72b12bb3e06db3a00d5c27f387db09eb1b33f7620a790b1"
+        }
+      ],
+      "updated_at_utc": "2026-11-18T09:06:37.158547+00:00"
+    },
+    {
+      "id": "R-HM-03",
+      "area": "hmm",
+      "title": "Decoder parameters optimised on training/student data only",
+      "requirement": "Optimise decoder parameters using training and student-testing data only.",
+      "sources": [
+        {
+          "path": "PathSnap_student_materials/Models and Training Guidelines.docx",
+          "locator": "P124 (§9)"
+        }
+      ],
+      "classification": "mandatory",
+      "acceptance_evidence": "Decoder calibration records reference permitted partitions only.",
+      "status": "done_evidence_exists",
+      "status_note": "Completed in final five-family phase; see hash-pinned final_evidence. Source wording/classification preserved.",
+      "initial_status": "done_evidence_exists",
+      "final_evidence": [
+        {
+          "path": "reports/final_five/decoder/student_ablation.json",
+          "sha256": "045513ee402984d2fb4db200ca1fdb01a447ad563ab1a07632ee41bfcc5a353a"
+        }
+      ],
+      "updated_at_utc": "2026-11-18T09:06:37.158547+00:00"
+    },
+    {
+      "id": "R-SY-01",
+      "area": "system",
+      "title": "Nine required components",
+      "requirement": "Data-processing implementation, model-experimentation implementation, Bayesian-optimisation implementation, HMM/Viterbi implementation, API (FastAPI), UI, model and configuration artifacts, technical report, GitHub repository.",
+      "sources": [
+        {
+          "path": "PathSnap_student_materials/Models and Training Guidelines.docx",
+          "locator": "P125-P146 (§5 Table 8)"
+        }
+      ],
+      "classification": "mandatory",
+      "acceptance_evidence": "Each component present and cross-referenced in the repository and report.",
+      "status": "done_evidence_exists",
+      "status_note": "All exist from phase three; final-five updates flow into the same components."
+    },
+    {
+      "id": "R-SY-02",
+      "area": "system",
+      "title": "Two-laptop deployment architecture",
+      "requirement": "Laptop 1 hosts the trained classifier, HMM/Viterbi, road-network information and server-side evaluation; Laptop 2 displays the ten evaluation-trip options, sends the selection to the API and shows the returned route and results. Final-evaluation steps 1-9 run API on Laptop 1 and UI on Laptop 2.",
+      "sources": [
+        {
+          "path": "PathSnap_student_materials/Main Guidelines.docx",
+          "locator": "P20-P29 (§3 Table 3)"
+        },
+        {
+          "path": "PathSnap_student_materials/Models and Training Guidelines.docx",
+          "locator": "P146-P158 (§6 Final Evaluation)"
+        }
+      ],
+      "classification": "mandatory_per_brief",
+      "acceptance_evidence": "Per the brief: a live two-laptop demonstration at evaluation. Replacement evidence per user instruction: public same-origin deployment at https://ml.d3va.dev with API bound to loopback, reference data server-private, UI/API served through a Cloudflare tunnel from this computer.",
+      "status": "user_exception",
+      "status_note": "The user explicitly replaced the separate-UI-laptop requirement with the public website; the site is deployed and verified. If organisers insist on the literal two-laptop setup at the venue, humans must set up and demonstrate it: that part is a human_external_blocker. Disclose the substitution in the report rather than implying the original architecture was used."
+    },
+    {
+      "id": "R-SY-03",
+      "area": "system",
+      "title": "Ten reserved evaluation trips selectable and scored end-to-end",
+      "requirement": "The UI displays the ten reserved trips; evaluator selects any one; UI sends the trip ID; the API runs the complete prediction pipeline and computes accuracy from its internal reference data; UI displays route and results. Must work for all ten, not one demo example.",
+      "sources": [
+        {
+          "path": "PathSnap_student_materials/Models and Training Guidelines.docx",
+          "locator": "P147-P158 (§6)"
+        }
+      ],
+      "classification": "mandatory_per_brief",
+      "acceptance_evidence": "Evaluator-section implementation supporting an evaluator root without code changes; all-ten run recorded after the final model/decoder freeze.",
+      "status": "done_evidence_exists",
+      "status_note": "Actual final frozen-model website captured and source/hash reconciled. Original two-laptop wording is fulfilled through the user-approved public-site substitute, not a claimed physical venue run.",
+      "initial_status": "deferred_by_user",
+      "final_evidence": [
+        {
+          "path": "reports/final_five/live/live_api.json",
+          "sha256": "ca26526800263e94839eab5ace8be96d50ea59e5242d818ab6c6856c24b2d896"
+        },
+        {
+          "path": "reports/final_five/live/browser_evidence.json",
+          "sha256": "89ddfba49860dd892b675c5ea3af639803cc828afae621bcce114f2fe1278189"
+        }
+      ],
+      "updated_at_utc": "2026-11-18T09:11:57.403182+00:00"
+    },
+    {
+      "id": "R-SY-04",
+      "area": "system",
+      "title": "Ground truth stays server-side; no hardcoding or API bypass",
+      "requirement": "Ground-truth labels must remain server-side and never be exposed to the prediction model or UI; hardcoded outputs and bypassing the API are not permitted; repositories will be examined.",
+      "sources": [
+        {
+          "path": "PathSnap_student_materials/Models and Training Guidelines.docx",
+          "locator": "P159-P160 (§6)"
+        },
+        {
+          "path": "PathSnap_student_materials/Assessment and Plagiarism Policy.docx",
+          "locator": "P57-P58 (§7)"
+        }
+      ],
+      "classification": "mandatory",
+      "acceptance_evidence": "Architecture review: reference data private to the server; no evaluator labels in UI bundle or model inputs; no hardcoded trip answers in code.",
+      "status": "done_evidence_exists",
+      "status_note": "Actual final all-20 ASGI/public and both browser reconstructions verify learned inference before private scoring, no reference geometry or labels in responses, no precomputed route or response cache, shared frozen model with separate graph/reference registries.",
+      "final_evidence": [
+        {
+          "path": "reports/final_five/delivery_verification.json",
+          "sha256": "56bcdb86245048c7cb96aaf3bbe1c64c2baa1fe04fd140f34f473a50cdcb049d"
+        },
+        {
+          "path": "analysis/final_code_review/review.json",
+          "sha256": "f913e7412582e1f89f42b5a518dae74d35e7b1eb8c78c07b260840afdad4e881"
+        },
+        {
+          "path": "tests/test_datasets.py",
+          "sha256": "337d78f36d4abd2b9596087cce66e07000f63bf09bc3b77fb9d9216e601856fc"
+        }
+      ]
+    },
+    {
+      "id": "R-SY-05",
+      "area": "system",
+      "title": "Show the evaluator the API request logs",
+      "requirement": "Students are required to show the evaluator the API logs on the laptop receiving the inference requests, on the endpoint.",
+      "sources": [
+        {
+          "path": "PathSnap_student_materials/Models and Training Guidelines.docx",
+          "locator": "P160 (§6)"
+        }
+      ],
+      "classification": "mandatory",
+      "acceptance_evidence": "Persisted, presentable request logs for the evaluator session; in the replacement deployment, receiving-terminal service events for real HTTPS match requests.",
+      "status": "done_evidence_exists",
+      "status_note": "Actual final frozen-model website captured and source/hash reconciled. Original two-laptop wording is fulfilled through the user-approved public-site substitute, not a claimed physical venue run.",
+      "initial_status": "partially_done",
+      "final_evidence": [
+        {
+          "path": "reports/final_five/live/api_terminal_evidence.json",
+          "sha256": "e5438fd0e104eaa9d0d72b33ce3182f5cac3e87ed2065cccaca77960d769d60f"
+        },
+        {
+          "path": "reports/final_five/delivery_verification.json",
+          "sha256": "56bcdb86245048c7cb96aaf3bbe1c64c2baa1fe04fd140f34f473a50cdcb049d"
+        }
+      ],
+      "updated_at_utc": "2026-11-18T09:11:57.403182+00:00"
+    },
+    {
+      "id": "R-DL-01",
+      "area": "deliverables",
+      "title": "Deliverable 1: public GitHub repository with eleven required components",
+      "requirement": "Repository contains data processing, feature engineering, model training (every model experimented with), model evaluation, hyperparameter optimisation, HMM and Viterbi, API, UI, deployment configuration, visualisations (Folium map generation), and supporting results (CSVs, logs, configs, summaries).",
+      "sources": [
+        {
+          "path": "PathSnap_student_materials/Deliverables.docx",
+          "locator": "P5-P30 (§1 Table 2)"
+        }
+      ],
+      "classification": "mandatory",
+      "acceptance_evidence": "Public repo (github.com/DevaOnL/ML-Hackathon) with all components; final-five additions merged.",
+      "status": "done_evidence_exists",
+      "status_note": "PR #5 merged to main covers the three-family phase. The five-family, OpenCode-website and final-report updates still need a later merge."
+    },
+    {
+      "id": "R-DL-02",
+      "area": "deliverables",
+      "title": "Repository rules",
+      "requirement": "All source committed (not only the final model); saved weights and configs subject to size constraints; README with installation, execution and deployment instructions; clearly named folders; accessible to evaluators; no secrets committed.",
+      "sources": [
+        {
+          "path": "PathSnap_student_materials/Deliverables.docx",
+          "locator": "P31-P42 (§1 'Important requirements')"
+        }
+      ],
+      "classification": "mandatory",
+      "acceptance_evidence": "Repo audit: README, folder layout, included artifacts, secret scan clean.",
+      "status": "done_evidence_exists",
+      "status_note": "Held in main; re-run the secret scan before the final merge."
+    },
+    {
+      "id": "R-DL-03",
+      "area": "deliverables",
+      "title": "Deliverable 2: one consolidated PDF report",
+      "requirement": "One consolidated PDF per team, following the required structure, with actual experimental results, tables, graphs and geographical visualisations; every reported result verifiable from the repository; no separate per-model reports.",
+      "sources": [
+        {
+          "path": "PathSnap_student_materials/Deliverables.docx",
+          "locator": "P43-P49 (§1, §2)"
+        }
+      ],
+      "classification": "mandatory",
+      "acceptance_evidence": "Final PDF regenerated after the five-family freeze; report facts traceable to repo artifacts (checked evidence facts).",
+      "status": "done_evidence_exists",
+      "status_note": "A complete actual unwatermarked57-page consolidated candidate,360facts/55images, passed independent layout/OCR/pixel/link checks. Deployment-export provenance corrected before acceptance. This closes the documentary-existence cycle; canonical --final must now pass every normal guard and bind final bytes in its own manifest. The final canonical PDF is the sole submitted report; historical phase-three report is not substituted.",
+      "final_evidence": [
+        {
+          "path": "reports/final_five/report_prepublication_acceptance.json",
+          "sha256": "196a6d7b00817872db59e5dbb6774b7186b557c11dc5ed85e14ad844cbfe1aaa"
+        },
+        {
+          "path": "reports/final_five/REPORT_TEMPLATE.md",
+          "sha256": "637096eb4bfc5ab73df5181dcd8a776fd1b9376c1cf545df8168177576a86f4f"
+        },
+        {
+          "path": "scripts/build_final_report.py",
+          "sha256": "ae6b72a7455a8105054d36568df46a20db201e9b5db2cd1d6a412e2a5e051c1a"
+        },
+        {
+          "path": "analysis/final_report_layout/final_candidate/candidate2.json",
+          "sha256": "589bfa98e4c43f940cbd43db989f9c36ec2b06359dac0d868d5df387e354b3df"
+        }
+      ]
+    },
+    {
+      "id": "R-DL-04",
+      "area": "deliverables",
+      "title": "Report §2.2 dataset understanding and EDA",
+      "requirement": "Answer how the data was preprocessed and what patterns were observed; which features were extracted and why; include missing-value analysis, GPS trajectory plots, road-network visualisations, at least one Folium map; clearly mention which partition each analysis used.",
+      "sources": [
+        {
+          "path": "PathSnap_student_materials/Deliverables.docx",
+          "locator": "P50-P59 (§2.2)"
+        }
+      ],
+      "classification": "mandatory",
+      "acceptance_evidence": "Report section with the listed items and partition labels.",
+      "status": "done_evidence_exists",
+      "status_note": "Present in the phase-three PDF; carry forward into the final report."
+    },
+    {
+      "id": "R-DL-05",
+      "area": "deliverables",
+      "title": "Report §3.1 consolidated comparison table with >=5 models",
+      "requirement": "Table columns exactly: Model, Algorithm Family, Key Configuration, CV Macro F1-score, Top-1 Accuracy, Route continuity, Student-Test Macro F1-score, Log Loss, Inference Time; actual results; N/A cells explained.",
+      "sources": [
+        {
+          "path": "PathSnap_student_materials/Deliverables.docx",
+          "locator": "P62-P121 (§3, §3.1 Tables)"
+        }
+      ],
+      "classification": "mandatory",
+      "acceptance_evidence": "Five filled rows (LR, KNN, Bagging, GaussianNB, HistGB) from actual runs under one protocol.",
+      "status": "done_evidence_exists",
+      "status_note": "Exact nine required column names and six measured configurations (five families) appear in report4.3; metric populations, N/A continuity and estimator-call timing scope explained.",
+      "final_evidence": [
+        {
+          "path": "reports/final_five/REPORT_TEMPLATE.md",
+          "sha256": "637096eb4bfc5ab73df5181dcd8a776fd1b9376c1cf545df8168177576a86f4f"
+        },
+        {
+          "path": "scripts/build_final_report.py",
+          "sha256": "ae6b72a7455a8105054d36568df46a20db201e9b5db2cd1d6a412e2a5e051c1a"
+        },
+        {
+          "path": "analysis/final_report_completion/content_review.json",
+          "sha256": "766c85adfa65b96512f80e5ef3e6bce160049c51bf4bfcd64c3550ab4ab770ea"
+        },
+        {
+          "path": "analysis/final_report_completion/evidence_validation.json",
+          "sha256": "af03d1c81d57ffdb6087ca554e7528358d32f5212476ab12a5dc7a91cb878592"
+        },
+        {
+          "path": "experiments/final_five/current/results.json",
+          "sha256": "8956d9360daae8723875e6a7f6fb8a98941ebf85d0eee9c8cab8cdf68979f6a8"
+        }
+      ]
+    },
+    {
+      "id": "R-DL-06",
+      "area": "deliverables",
+      "title": "Report §3.2 compulsory per-model questions",
+      "requirement": "For every model: why the algorithm suits PathSnap; strengths and limitations; important hyperparameters and initial values; loss function or optimisation objective; student-testing performance; observation-level Top-1, Macro F1 and Log Loss where applicable; overfitting/underfitting with supporting evidence. No textbook-only answers.",
+      "sources": [
+        {
+          "path": "PathSnap_student_materials/Deliverables.docx",
+          "locator": "P122-P133 (§3.2)"
+        }
+      ],
+      "classification": "mandatory",
+      "acceptance_evidence": "Five per-model subsections with measured numbers and behaviour tied to actual experiments.",
+      "status": "done_evidence_exists",
+      "status_note": "Report5 answers algorithm suitability, strengths/limits, initial parameters, loss/objective, actual student metrics and supported fit/overfitting observations for each of five families; epoch curves explicitly N/A.",
+      "final_evidence": [
+        {
+          "path": "reports/final_five/REPORT_TEMPLATE.md",
+          "sha256": "637096eb4bfc5ab73df5181dcd8a776fd1b9376c1cf545df8168177576a86f4f"
+        },
+        {
+          "path": "scripts/build_final_report.py",
+          "sha256": "ae6b72a7455a8105054d36568df46a20db201e9b5db2cd1d6a412e2a5e051c1a"
+        },
+        {
+          "path": "analysis/final_report_completion/content_review.json",
+          "sha256": "766c85adfa65b96512f80e5ef3e6bce160049c51bf4bfcd64c3550ab4ab770ea"
+        },
+        {
+          "path": "analysis/final_report_completion/evidence_validation.json",
+          "sha256": "af03d1c81d57ffdb6087ca554e7528358d32f5212476ab12a5dc7a91cb878592"
+        },
+        {
+          "path": "experiments/final_five/current/results.json",
+          "sha256": "8956d9360daae8723875e6a7f6fb8a98941ebf85d0eee9c8cab8cdf68979f6a8"
+        }
+      ]
+    },
+    {
+      "id": "R-DL-07",
+      "area": "deliverables",
+      "title": "Report §3.3 compulsory model visualisations",
+      "requirement": "CV Macro F1 comparison across all models; student-testing Top-1 and Macro F1 comparisons; Log Loss comparison where applicable; confusion matrices optional; training and validation loss plots only for models producing epoch-wise training histories; every graph from actual results; model-comparison plots justifying selection; no artificial training curves.",
+      "sources": [
+        {
+          "path": "PathSnap_student_materials/Deliverables.docx",
+          "locator": "P134-P147 (§3.3)"
+        }
+      ],
+      "classification": "mandatory",
+      "acceptance_evidence": "Chart set covering all five models, generated from actual result files, with a stated N/A explanation for epoch-wise loss plots where the family produces no training history.",
+      "status": "done_evidence_exists",
+      "status_note": "All23 final model/decoder measured figures and12 unchanged EDA images are mandatory hash-bound report images; no invented epoch history.",
+      "final_evidence": [
+        {
+          "path": "reports/final_five/REPORT_TEMPLATE.md",
+          "sha256": "637096eb4bfc5ab73df5181dcd8a776fd1b9376c1cf545df8168177576a86f4f"
+        },
+        {
+          "path": "scripts/build_final_report.py",
+          "sha256": "ae6b72a7455a8105054d36568df46a20db201e9b5db2cd1d6a412e2a5e051c1a"
+        },
+        {
+          "path": "analysis/final_report_completion/content_review.json",
+          "sha256": "766c85adfa65b96512f80e5ef3e6bce160049c51bf4bfcd64c3550ab4ab770ea"
+        },
+        {
+          "path": "analysis/final_report_completion/evidence_validation.json",
+          "sha256": "af03d1c81d57ffdb6087ca554e7528358d32f5212476ab12a5dc7a91cb878592"
+        },
+        {
+          "path": "visualizations/final_five/figure_manifest.json",
+          "sha256": "8298e429413ca7ebf06d82e5a2e2498c7e59f57e2773d1eea309c893cd9f9cba"
+        },
+        {
+          "path": "visualizations/final_five/asset_verification.json",
+          "sha256": "9677e2a913336874d4244b8609e71357e76e52727468dab56ca76bfe3e7f7427"
+        }
+      ]
+    },
+    {
+      "id": "R-DL-08",
+      "area": "deliverables",
+      "title": "Report §4 Bayesian optimisation section",
+      "requirement": "State hyperparameters searched, ranges or distributions, objective function, trial count, best values, tuned-vs-untuned comparison on CV Macro F1, student Top-1, student Macro F1, Log Loss where applicable, and inference time, using the same metrics and partitions for both.",
+      "sources": [
+        {
+          "path": "PathSnap_student_materials/Deliverables.docx",
+          "locator": "P150-P159 (§4)"
+        }
+      ],
+      "classification": "mandatory",
+      "acceptance_evidence": "Section backed by search configs, trial log and a like-for-like tuned/untuned metric table for the final selected model.",
+      "status": "done_evidence_exists",
+      "status_note": "Report6 documents actual twelve-trial historical GP-EI reuse, ranges/objective/schedule/best values, fresh default-versus-tuned verification and each required comparison; freshHPO=0.",
+      "final_evidence": [
+        {
+          "path": "reports/final_five/REPORT_TEMPLATE.md",
+          "sha256": "637096eb4bfc5ab73df5181dcd8a776fd1b9376c1cf545df8168177576a86f4f"
+        },
+        {
+          "path": "scripts/build_final_report.py",
+          "sha256": "ae6b72a7455a8105054d36568df46a20db201e9b5db2cd1d6a412e2a5e051c1a"
+        },
+        {
+          "path": "analysis/final_report_completion/content_review.json",
+          "sha256": "766c85adfa65b96512f80e5ef3e6bce160049c51bf4bfcd64c3550ab4ab770ea"
+        },
+        {
+          "path": "analysis/final_report_completion/evidence_validation.json",
+          "sha256": "af03d1c81d57ffdb6087ca554e7528358d32f5212476ab12a5dc7a91cb878592"
+        },
+        {
+          "path": "experiments/final_five/current/bayesian_optimization.json",
+          "sha256": "0e77818b2b70c372a60bca1ac2d02227c8f240ad148d4ac2e5f2af7ec46a3c18"
+        }
+      ]
+    },
+    {
+      "id": "R-DL-09",
+      "area": "deliverables",
+      "title": "Report §5 HMM/Viterbi section with improvement evidence",
+      "requirement": "Explain hidden states, emission and transition calculation, missing candidates and GPS gaps, disconnected-segment handling; whether HMM decoding improved the route, supported by experimental results; compare classifier-only vs classifier-plus-HMM; discuss cases where decoding did not help.",
+      "sources": [
+        {
+          "path": "PathSnap_student_materials/Deliverables.docx",
+          "locator": "P160-P172 (§5)"
+        }
+      ],
+      "classification": "mandatory",
+      "acceptance_evidence": "Section plus ablation numbers for the final model.",
+      "status": "done_evidence_exists",
+      "status_note": "Report7 gives emissions/transitions/Viterbi cost, topology/gap/candidate retry policy and classifier-only/geometry-HMM/final-HMM ablation; also reports evaluator pooled-accuracy decrease and weaktrip15.",
+      "final_evidence": [
+        {
+          "path": "reports/final_five/REPORT_TEMPLATE.md",
+          "sha256": "637096eb4bfc5ab73df5181dcd8a776fd1b9376c1cf545df8168177576a86f4f"
+        },
+        {
+          "path": "scripts/build_final_report.py",
+          "sha256": "ae6b72a7455a8105054d36568df46a20db201e9b5db2cd1d6a412e2a5e051c1a"
+        },
+        {
+          "path": "analysis/final_report_completion/content_review.json",
+          "sha256": "766c85adfa65b96512f80e5ef3e6bce160049c51bf4bfcd64c3550ab4ab770ea"
+        },
+        {
+          "path": "analysis/final_report_completion/evidence_validation.json",
+          "sha256": "af03d1c81d57ffdb6087ca554e7528358d32f5212476ab12a5dc7a91cb878592"
+        },
+        {
+          "path": "reports/final_five/decoder/student_ablation.json",
+          "sha256": "045513ee402984d2fb4db200ca1fdb01a447ad563ab1a07632ee41bfcc5a353a"
+        },
+        {
+          "path": "reports/final_five/evaluator/route_metrics.json",
+          "sha256": "8b56e13f931d849b299d0659ee64e5824f3d1317dc9d8a033fe97bd2909165c1"
+        }
+      ]
+    },
+    {
+      "id": "R-DL-10",
+      "area": "deliverables",
+      "title": "Report §6 Folium geographical visualisation",
+      "requirement": "Mandatory Folium maps from the team's actual implementation showing GPS observations, road-network geometry, reference route where available, and predicted route; distinguishable colours/markers, labels or legend, appropriate extent and zoom, comparability, layer controls; at least one map screenshot/export in the PDF; interactive HTML or generator code in the repo; no unrelated or fabricated maps.",
+      "sources": [
+        {
+          "path": "PathSnap_student_materials/Deliverables.docx",
+          "locator": "P175-P189 (§6)"
+        }
+      ],
+      "classification": "mandatory",
+      "acceptance_evidence": "Maps in the final PDF plus committed HTML/generation code.",
+      "status": "done_evidence_exists",
+      "status_note": "Present from phase three; regenerate the predicted-route layers for the final model and the OpenCode site."
+    },
+    {
+      "id": "R-DL-11",
+      "area": "deliverables",
+      "title": "Report §7 API, UI and deployment evidence",
+      "requirement": "Screenshots of the working UI; screenshots of successful API responses on the CMD of the receiving laptop; submitted source must match the demonstrated implementation.",
+      "sources": [
+        {
+          "path": "PathSnap_student_materials/Deliverables.docx",
+          "locator": "P190-P195 (§7)"
+        }
+      ],
+      "classification": "mandatory",
+      "acceptance_evidence": "Final report carries UI screenshots and captured API responses from the final deployment (the OpenCode-themed site), and the demonstrated source equals the submitted source.",
+      "status": "done_evidence_exists",
+      "status_note": "Actual final frozen-model website captured and source/hash reconciled. Original two-laptop wording is fulfilled through the user-approved public-site substitute, not a claimed physical venue run.",
+      "initial_status": "not_yet_done",
+      "final_evidence": [
+        {
+          "path": "reports/final_five/live/browser_evidence.json",
+          "sha256": "89ddfba49860dd892b675c5ea3af639803cc828afae621bcce114f2fe1278189"
+        },
+        {
+          "path": "reports/final_five/live/api_terminal_evidence.json",
+          "sha256": "e5438fd0e104eaa9d0d72b33ce3182f5cac3e87ed2065cccaca77960d769d60f"
+        },
+        {
+          "path": "reports/final_five/delivery_verification.json",
+          "sha256": "56bcdb86245048c7cb96aaf3bbe1c64c2baa1fe04fd140f34f473a50cdcb049d"
+        }
+      ],
+      "updated_at_utc": "2026-11-18T09:11:57.403182+00:00"
+    },
+    {
+      "id": "R-DL-12",
+      "area": "deliverables",
+      "title": "Report §8 academic-integrity acknowledgement",
+      "requirement": "Reports and GitHub submissions face integrity checks: plagiarism checks on content, cross-team comparison of code/configs/weights/results, verification of reported metrics against actual outputs, technical questioning; the report must represent the team's actual work; every member must be able to explain it.",
+      "sources": [
+        {
+          "path": "PathSnap_student_materials/Deliverables.docx",
+          "locator": "P197-P208 (§8)"
+        }
+      ],
+      "classification": "mandatory",
+      "acceptance_evidence": "Truthful report whose numbers are reproducible from the repo (mechanically verifiable) and a team able to defend it (human).",
+      "status": "human_external_blocker",
+      "status_note": "The mechanical part is upheld by policy (only measured results, AI assistance disclosed in DEVELOPMENT_PROVENANCE.md). The member-explanation and integrity-defence part belongs to the humans; disclose the AI-assisted provenance rather than claiming unaided human authorship."
+    },
+    {
+      "id": "R-DL-13",
+      "area": "deliverables",
+      "title": "First-phase evaluation before lunch break",
+      "requirement": "Notice on the title table: 'There will be first phase evaluation before lunch break.'",
+      "sources": [
+        {
+          "path": "PathSnap_student_materials/Deliverables.docx",
+          "locator": "P4-P5 (title table, Table 1)"
+        }
+      ],
+      "classification": "notice",
+      "acceptance_evidence": "Team knows the event schedule and has a submission ready before the first-phase checkpoint.",
+      "status": "human_external_blocker",
+      "status_note": "The organisers' schedule is not in the workspace; the user must confirm when the first-phase evaluation happens. No date guessing."
+    },
+    {
+      "id": "R-AP-01",
+      "area": "assessment",
+      "title": "Evidence of meaningful experimentation",
+      "requirement": "Train and compare at least five models before selecting a final one; support selection with recorded results; explain strengths and limitations of the chosen approach; demonstrate Bayesian HPO; retain the search record; evaluate models and the decoder using permitted development data. Selecting without meaningful experimentation may cost marks.",
+      "sources": [
+        {
+          "path": "PathSnap_student_materials/Assessment and Plagiarism Policy.docx",
+          "locator": "P17-P23 (§3)"
+        }
+      ],
+      "classification": "mandatory",
+      "acceptance_evidence": "Same as R-MT-01/03/07 plus the explanation in the report.",
+      "status": "done_evidence_exists",
+      "status_note": "Five actual distinct families and sixth tuned configuration independently verified before final selection; complete measured CV/HPO/model/decoder and limitation records retained.",
+      "final_evidence": [
+        {
+          "path": "reports/final_five/REPORT_TEMPLATE.md",
+          "sha256": "637096eb4bfc5ab73df5181dcd8a776fd1b9376c1cf545df8168177576a86f4f"
+        },
+        {
+          "path": "scripts/build_final_report.py",
+          "sha256": "ae6b72a7455a8105054d36568df46a20db201e9b5db2cd1d6a412e2a5e051c1a"
+        },
+        {
+          "path": "analysis/final_report_completion/content_review.json",
+          "sha256": "766c85adfa65b96512f80e5ef3e6bce160049c51bf4bfcd64c3550ab4ab770ea"
+        },
+        {
+          "path": "analysis/final_report_completion/evidence_validation.json",
+          "sha256": "af03d1c81d57ffdb6087ca554e7528358d32f5212476ab12a5dc7a91cb878592"
+        },
+        {
+          "path": "analysis/final_model_review/final_review_report.json",
+          "sha256": "d7ba83c015e2ba1a3c7bf420ac2c386cf4d0bbd462b7bfdaaacc8996fa9d5398"
+        },
+        {
+          "path": "experiments/final_five/current/results.json",
+          "sha256": "8956d9360daae8723875e6a7f6fb8a98941ebf85d0eee9c8cab8cdf68979f6a8"
+        }
+      ]
+    },
+    {
+      "id": "R-AP-02",
+      "area": "assessment",
+      "title": "Independent work; no inter-team sharing",
+      "requirement": "Each team independently implements, trains, evaluates and selects its own models; sharing model files, weights, configurations, code, derived datasets or results between teams is prohibited; submissions are compared across teams and sections; teams must explain selection, implementation, training and results during evaluation.",
+      "sources": [
+        {
+          "path": "PathSnap_student_materials/Assessment and Plagiarism Policy.docx",
+          "locator": "P26-P31 (§4)"
+        },
+        {
+          "path": "PathSnap_student_materials/Models and Training Guidelines.docx",
+          "locator": "P161-P166 (§11)"
+        }
+      ],
+      "classification": "mandatory",
+      "acceptance_evidence": "No inter-team transfer in the workspace record; development provenance disclosed; humans able to explain the work.",
+      "status": "human_external_blocker",
+      "status_note": "Nothing in the workspace indicates inter-team sharing; the work is AI-assisted at the owner's request and that is disclosed in docs/DEVELOPMENT_PROVENANCE.md with commit attribution kept honest. The during-evaluation explanation requirement is human. Do not claim human-only independent work."
+    },
+    {
+      "id": "R-AP-03",
+      "area": "assessment",
+      "title": "Report authenticity",
+      "requirement": "Prohibited: fabricating metrics, graphs or execution results; fabricating citations or implementation details; copying another team's report; submitting explanations the team cannot defend. Teams remain responsible for accuracy and originality of all content.",
+      "sources": [
+        {
+          "path": "PathSnap_student_materials/Assessment and Plagiarism Policy.docx",
+          "locator": "P32-P40 (§5)"
+        }
+      ],
+      "classification": "mandatory",
+      "acceptance_evidence": "Every reported number traceable to a measured artifact; no invented plots or citations.",
+      "status": "done_evidence_exists",
+      "status_note": "Held so far by policy (checked evidence facts in the phase-three PDF; proxy-label metrics explicitly labelled). Keep the same discipline through the final build; the AI-provenance disclosure stays in the submission."
+    },
+    {
+      "id": "R-AP-04",
+      "area": "assessment",
+      "title": "Viva and demonstration topics",
+      "requirement": "Organisers may ask team members to explain dataset structure, preprocessing, feature engineering, model comparisons and selection, Bayesian HPO, HMM implementation, Viterbi decoding, API, UI and experimental results; teams should demonstrate they understand and can reproduce their submitted work.",
+      "sources": [
+        {
+          "path": "PathSnap_student_materials/Assessment and Plagiarism Policy.docx",
+          "locator": "P41-P54 (§6)"
+        }
+      ],
+      "classification": "mandatory_human",
+      "acceptance_evidence": "Each team member can answer questions on the listed topics and can reproduce the work from the repository.",
+      "status": "human_external_blocker",
+      "status_note": "No document states a five-member team; the rule binds 'every team member' regardless of size. An AI agent cannot make humans understand the material. Recommend the team schedule a walkthrough of the final report and a live reproduction run before evaluation."
+    },
+    {
+      "id": "R-AP-05",
+      "area": "assessment",
+      "title": "Similarity review scope",
+      "requirement": "Organisers compare source code, repository history, model architectures, weights, hyperparameter configurations, experimental results, reports, graphs and tables; similarity may trigger review; no single similarity measure is automatic proof of plagiarism.",
+      "sources": [
+        {
+          "path": "PathSnap_student_materials/Assessment and Plagiarism Policy.docx",
+          "locator": "P59-P69 (§5 Similarity Review)"
+        }
+      ],
+      "classification": "context",
+      "acceptance_evidence": "Nothing to produce; awareness that standard algorithms naturally resemble other teams' work.",
+      "status": "done_evidence_exists",
+      "status_note": "Recorded for awareness; no action beyond honest provenance."
+    },
+    {
+      "id": "R-US-01",
+      "area": "user_scope",
+      "title": "Final five-family scope (latest user instruction)",
+      "requirement": "User order: complete Logistic Regression, KNN and Bagging (done), then Gaussian Naive Bayes and HistGradientBoosting, for the entire set of deliverables across all five original DOCX. This latest instruction overrides the earlier three-family deferral recorded in docs/PHASE_SCOPE.json.",
+      "sources": [
+        {
+          "path": "docs/PHASE_SCOPE.json",
+          "locator": "superseded 'three-model-first' scope"
+        },
+        {
+          "path": "docs/FINAL_COORDINATION.md",
+          "locator": "Current user order section"
+        }
+      ],
+      "classification": "user_scope",
+      "acceptance_evidence": "Five families trained/audited under one final protocol; final report and deployment reflect all five.",
+      "status": "done_evidence_exists",
+      "status_note": "Completed in final five-family phase; see hash-pinned final_evidence. Source wording/classification preserved.",
+      "initial_status": "in_progress_delegated",
+      "final_evidence": [
+        {
+          "path": "reports/final_five/all_five_model_acceptance.json",
+          "sha256": "0829918e6c5bb3335d6b6d02a1d8a0fc2abd8b43f6769b41c73cd26c65296d65"
+        },
+        {
+          "path": "analysis/final_model_review/final_review_report.json",
+          "sha256": "d7ba83c015e2ba1a3c7bf420ac2c386cf4d0bbd462b7bfdaaacc8996fa9d5398"
+        }
+      ],
+      "updated_at_utc": "2026-11-18T09:06:37.158547+00:00"
+    },
+    {
+      "id": "R-US-02",
+      "area": "user_scope",
+      "title": "OpenCode website with the kind theme, after all five models",
+      "requirement": "User order: AFTER all five models are trained and tested, visit the OpenCode website and use the kind theme for the project website. Not present in the organizer documents.",
+      "sources": [
+        {
+          "path": "docs/FINAL_COORDINATION.md",
+          "locator": "Current user order"
+        }
+      ],
+      "classification": "user_scope",
+      "acceptance_evidence": "Rebuilt frontend in the kind theme; §7 screenshots re-captured from it.",
+      "status": "done_evidence_exists",
+      "status_note": "Completed in final five-family phase; see hash-pinned final_evidence. Source wording/classification preserved.",
+      "initial_status": "not_yet_done",
+      "final_evidence": [
+        {
+          "path": "docs/OPENCODE_DESIGN_REFERENCE.md",
+          "sha256": "6048ae12efdc4434bbf587962c4fe99fd03a24f2c3b3fdc41011fa4807ba852f"
+        },
+        {
+          "path": "docs/WEBSITE_DESIGN.md",
+          "sha256": "63b9b4114ddc60b094c64b8e03d4a7d204eb95a5f8e0ff5ccae36f05fc2f5167"
+        },
+        {
+          "path": "frontend/styles.css",
+          "sha256": "cee634d9a813dcba2c4453c60b593bde0c906fed9261de13a853d93a29b8ddc4"
+        }
+      ],
+      "updated_at_utc": "2026-11-18T09:06:37.158547+00:00"
+    },
+    {
+      "id": "R-US-03",
+      "area": "user_scope",
+      "title": "Public deployment https://ml.d3va.dev replaces the second laptop",
+      "requirement": "User-approved replacement of the brief's separate UI laptop with a real public website: same-origin UI/API, loopback-bound API, server-private reference data, isolated restartable services, no credentials in Git.",
+      "sources": [
+        {
+          "path": "docs/DEVELOPMENT_PROVENANCE.md",
+          "locator": "deployment provenance"
+        },
+        {
+          "path": "README.md",
+          "locator": "Public deployment section"
+        }
+      ],
+      "classification": "user_scope",
+      "acceptance_evidence": "Live HTTPS verification of DNS, UI, API, health report and real inference requests at the exact hostname.",
+      "status": "done_evidence_exists",
+      "status_note": "Verified for the phase-three model; refresh the frozen artifact hash and request logs after the final five-family freeze."
+    },
+    {
+      "id": "R-US-04",
+      "area": "user_scope",
+      "title": "Evaluator section deferred until after the final freeze",
+      "requirement": "The ten human-reported evaluator trips and their separate website section are handled only AFTER the final model/decoder freeze; the new inputs are not read before that point.",
+      "sources": [
+        {
+          "path": "docs/PHASE_SCOPE.json",
+          "locator": "deferred_evaluator_website_request"
+        },
+        {
+          "path": "docs/FINAL_COORDINATION.md",
+          "locator": "No evaluator reads before final freeze"
+        }
+      ],
+      "classification": "user_scope",
+      "acceptance_evidence": "Freeze record dated before the first evaluator-data access; evaluator section works for all ten trips.",
+      "status": "done_evidence_exists",
+      "status_note": "Completed in final five-family phase; see hash-pinned final_evidence. Source wording/classification preserved.",
+      "initial_status": "deferred_by_user",
+      "final_evidence": [
+        {
+          "path": "docs/FINAL_EVALUATOR_PROTOCOL.md",
+          "sha256": "5c762761b95cc67ea9a048c6ac51b3238aa295a79af2640f0905cb41c8fbda00"
+        },
+        {
+          "path": "reports/final_five/evaluator/acceptance.json",
+          "sha256": "678689d7be6523d9edfe2efc5c1ef29abfcbc8bf2d91aa878a8554599d605858"
+        },
+        {
+          "path": "reports/final_five/api_integration_acceptance.json",
+          "sha256": "108ad4ed275a3e9334b3e08b13987ea788cb57b5b94a5f86e98bc49ec50f5fb3"
+        }
+      ],
+      "updated_at_utc": "2026-11-18T09:06:37.158547+00:00"
+    }
+  ],
+  "completion_update": {
+    "updated_at_utc": "2026-11-18T09:11:57.403182+00:00",
+    "by": "Lead; AI-assisted, not independent human certification",
+    "initial_audit": "analysis/final_requirements/initial_requirements_matrix.json",
+    "note": "Only already-measured/source-complete requirements advanced; final PDF/browser and publication rows remain pending until evidence exists."
+  }
+}

@@ -1,0 +1,86 @@
+{
+  "recorded_at_utc": "2026-11-18T09:58:46.755Z",
+  "scope": "Canonical rebuilt deterministic report source/manuscript/output/test/requirement pins",
+  "pins": [
+    {
+      "path": "scripts/build_final_report.py",
+      "bytes": 133603,
+      "sha256": "ae6b72a7455a8105054d36568df46a20db201e9b5db2cd1d6a412e2a5e051c1a"
+    },
+    {
+      "path": "scripts/prepare_report_images.py",
+      "bytes": 13346,
+      "sha256": "531286d58673e9a7ad2bba245f30528a76565a805649266075bf75d4ba1e89d5"
+    },
+    {
+      "path": "scripts/verify_report_layout.py",
+      "bytes": 9375,
+      "sha256": "1402c30b4f99157277e65d6e69dbd47843fe6e7947a817b4aa1855c436ebf7e1"
+    },
+    {
+      "path": "scripts/review_publication.py",
+      "bytes": 6194,
+      "sha256": "8f37ec32a9abc2fb15ec2509efa0a2285e557ae62081533f4918203de5cd107f"
+    },
+    {
+      "path": "tests/test_final_report.py",
+      "bytes": 18804,
+      "sha256": "96af9f4618e9e9ec79c886b1337533dc27ad3d4af2199bc70a840160fa8d7207"
+    },
+    {
+      "path": "tests/test_prepare_report_images.py",
+      "bytes": 4093,
+      "sha256": "c40843b0ac5de1464f0d8a9e79be17d05d923c7f37689dbf05d906798453cacf"
+    },
+    {
+      "path": "tests/test_report_layout.py",
+      "bytes": 2040,
+      "sha256": "33f4569c30a52fa1725ece4bc02f8f7d42327aa79a195362c5342a27d79cd5c8"
+    },
+    {
+      "path": "tests/test_publication.py",
+      "bytes": 4930,
+      "sha256": "3ec273fe30864ad9da6d0e95cfd21d97c3a7cca7b8b24022482cb3d1e352789b"
+    },
+    {
+      "path": "reports/final_five/REPORT_TEMPLATE.md",
+      "bytes": 64666,
+      "sha256": "637096eb4bfc5ab73df5181dcd8a776fd1b9376c1cf545df8168177576a86f4f"
+    },
+    {
+      "path": "reports/final_five/TECHNICAL_REPORT.md",
+      "bytes": 73676,
+      "sha256": "909b9bca8f51907000c0ef90bc9d3391dacc7155bef1ebf94c251da0f1b7eddb"
+    },
+    {
+      "path": "reports/final_five/PathSnap_Final_Technical_Report.pdf",
+      "bytes": 14649363,
+      "sha256": "f6bdd47595a4e06295ed23b10db94f22c7bf69484f8bf9476ae15785ce2e65e2"
+    },
+    {
+      "path": "reports/final_five/report_manifest.json",
+      "bytes": 34777,
+      "sha256": "a4338451518a596c7e2abc5f61f6c02809974f38de23e108c191964a1d4946c5"
+    },
+    {
+      "path": "reports/final_five/test_results.json",
+      "bytes": 2137,
+      "sha256": "469a01a28ac055866ae07bf0faf5272a9cb24c0d7a799960ac5c2664c4e685b1"
+    },
+    {
+      "path": "analysis/final_requirements/requirements_matrix.json",
+      "bytes": 65007,
+      "sha256": "afe7c50d87645dfe491baa6198e28a07917a96fb4a3ac3f48eec707b84203540"
+    },
+    {
+      "path": "reports/final_five/report_prepublication_acceptance.json",
+      "bytes": 974,
+      "sha256": "196a6d7b00817872db59e5dbb6774b7186b557c11dc5ed85e14ad844cbfe1aaa"
+    },
+    {
+      "path": "reports/final_five/report_images/manifest.json",
+      "bytes": 45560,
+      "sha256": "e58dd127246e1fb34a6507a4157faac1b03aeaf018d47b2c45662f272402dbd3"
+    }
+  ]
+}

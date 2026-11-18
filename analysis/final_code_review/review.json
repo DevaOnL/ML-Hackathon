@@ -1,0 +1,506 @@
+{
+  "schema_version": 1,
+  "task_id": "task-41",
+  "reviewer": {
+    "name": "code-review",
+    "type": "automated coding agent",
+    "independent_of_implementation": true,
+    "human_review_claimed": false
+  },
+  "completed_at_utc": "2026-11-18T09:12:58.218Z",
+  "verdict": "GO_WITH_LOW_SEVERITY_OBSERVATION",
+  "merge_blockers": [],
+  "summary": "No critical, high or medium defect was found in the reviewed backend, frontend, active CLI defaults or output-guard changes. The frozen-asset deployment can proceed. One low-severity provenance edge case reproduces if a trusted artifact is replaced between the two dataset startups; it does not change the shared in-memory classifier or its predictions.",
+  "finding_counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 1
+  },
+  "scope": {
+    "write_scope": "analysis/final_code_review/",
+    "source_review": [
+      "All backend Python modules",
+      "Frontend application, API adapter, HTML/CSS and static smoke source",
+      "CLI and model loading/probability helpers",
+      "Final-five maintained runner versus exact measured runner snapshot",
+      "Publication path allowlist and synthetic tests"
+    ],
+    "context_review": [
+      "Input and decoder validation",
+      "Backend/dataset, final-five, Node and publication tests",
+      "Output-hardening and publication-policy disclosures"
+    ],
+    "excluded": [
+      "Raw TRAIN/student/evaluator inputs or private reference assets",
+      "Production fitting, HPO, model probability fixtures or actual all-20 API replay",
+      "New external HTTP requests or listening servers",
+      "Service activation or Git operations",
+      "In-flight final report, figure and clean-reproduction deliverables"
+    ],
+    "test_transport": "Existing backend tests use in-process TestClient. Additional probes call ASGI directly and use tiny synthetic files. No new listening service or external HTTP request was started.",
+    "fit_disclosure": "The requested complete synthetic unit suite includes toy-estimator fits on generated arrays. No experiment stage or production fit/HPO was run."
+  },
+  "findings": [
+    {
+      "id": "CR-01",
+      "severity": "low",
+      "category": "provenance correctness under trusted-file mutation",
+      "title": "Secondary dataset can label the primary's loaded model with a newer file hash",
+      "release_blocker": false,
+      "preconditions": [
+        "A trusted operator or file publisher replaces the model file after primary startup and before secondary startup.",
+        "The primary retains its already-loaded classifier."
+      ],
+      "source_locations": [
+        {
+          "path": "backend/datasets.py",
+          "start_line": 38,
+          "end_line": 63
+        },
+        {
+          "path": "backend/service.py",
+          "start_line": 139,
+          "end_line": 177
+        }
+      ],
+      "evidence": {
+        "script": {
+          "path": "analysis/final_code_review/synthetic_security_probes.py",
+          "start_line": 189,
+          "end_line": 217
+        },
+        "result": {
+          "path": "analysis/final_code_review/synthetic_security_probes.json",
+          "start_line": 336,
+          "end_line": 344
+        },
+        "observed": {
+          "loader_calls": 1,
+          "same_model_object": true,
+          "same_config_object": true,
+          "primary_loaded_hash": "a7d156c540a817c4212cf1c4a95c75ae58f7d1c227b6dbf3f4a4190d83c07c22",
+          "secondary_reported_hash": "e2e641b60fd42d93f8177f28e80dbe22cc718943230c1184fb30c9b7a4d511ec"
+        }
+      },
+      "explanation": "The shared runtime returns the primary model object, then inherited loading logic hashes the current artifact path again. The hashes can disagree even though both datasets use the same object and decoder. Missing or corrupt replacement metadata can also keep the secondary unavailable despite the primary's loaded model.",
+      "impact": "Misleading secondary model provenance after trusted on-disk replacement. This is not a remote model-selection path or a reference leak. Normal startup with immutable frozen artifacts does not trigger it.",
+      "suggested_follow_up": "Keep the frozen artifact bundle read-only throughout process startup and serving. For a future shared-runtime revision, copy the primary model, model_hash, public model_info and decoder state under the primary model lock instead of reopening model/metadata files. Add a synthetic startup test that changes the trusted file between primary and secondary initialization.",
+      "disposition": "Reported to Lead during review; no source edit made while API integration is frozen."
+    }
+  ],
+  "verified_controls": [
+    {
+      "name": "One loaded emission model and decoder, separate input registries, one shared inference budget",
+      "outcome": "PASS for immutable assets",
+      "evidence": [
+        {
+          "path": "backend/datasets.py",
+          "start_line": 38,
+          "end_line": 88
+        },
+        {
+          "path": "backend/service.py",
+          "start_line": 211,
+          "end_line": 238
+        },
+        {
+          "path": "tests/test_datasets.py",
+          "start_line": 334,
+          "end_line": 361
+        }
+      ],
+      "detail": "The default secondary runtime shares the primary model/config objects and semaphore. GraphCache instances belong to separate registries, so equal trip IDs across datasets do not alias graphs. Request audits and matcher results are local variables; no prediction/result cache exists."
+    },
+    {
+      "name": "Prediction completes before reference lookup and scoring",
+      "outcome": "PASS",
+      "evidence": [
+        {
+          "path": "backend/service.py",
+          "start_line": 210,
+          "end_line": 248
+        },
+        {
+          "path": "backend/registry.py",
+          "start_line": 82,
+          "end_line": 98
+        },
+        {
+          "path": "backend/scoring.py",
+          "start_line": 72,
+          "end_line": 122
+        },
+        {
+          "path": "tests/test_backend.py",
+          "start_line": 116,
+          "end_line": 195
+        }
+      ],
+      "detail": "Only validated registered GPS/graph inputs and an audited emission wrapper reach the matcher. Reference-path lookup starts after match and prediction validation; scoring failure leaves the live prediction intact with unavailable metrics. No reference array or arbitrary diagnostic is returned."
+    },
+    {
+      "name": "Public body, path and method boundary",
+      "outcome": "PASS",
+      "evidence": [
+        {
+          "path": "backend/app.py",
+          "start_line": 20,
+          "end_line": 22
+        },
+        {
+          "path": "backend/boundary.py",
+          "start_line": 73,
+          "end_line": 140
+        },
+        {
+          "path": "analysis/final_code_review/synthetic_security_probes.json",
+          "start_line": 1,
+          "end_line": 329
+        }
+      ],
+      "detail": "Twenty-five unknown-dataset/method combinations returned 404 without receive. Origin, media type, identity-only encoding, declared size and streamed size checks passed on all three inference paths. Six unsupported-method/path combinations returned 404/405 without receive. Strict body-extra, trip ID and origin cases also pass in the complete unit suite."
+    },
+    {
+      "name": "Client cancellation does not release the server budget early",
+      "outcome": "PASS",
+      "evidence": [
+        {
+          "path": "backend/app.py",
+          "start_line": 70,
+          "end_line": 84
+        },
+        {
+          "path": "backend/service.py",
+          "start_line": 211,
+          "end_line": 213
+        },
+        {
+          "path": "backend/service.py",
+          "start_line": 284,
+          "end_line": 288
+        },
+        {
+          "path": "analysis/final_code_review/synthetic_security_probes.json",
+          "start_line": 331,
+          "end_line": 334
+        }
+      ],
+      "detail": "After cancelling an in-memory ASGI inference task, the other dataset still received inference_busy/429 until the blocked synthetic worker finished. The semaphore became available after worker completion."
+    },
+    {
+      "name": "Public response, log and static asset filtering",
+      "outcome": "PASS",
+      "evidence": [
+        {
+          "path": "backend/service.py",
+          "start_line": 38,
+          "end_line": 40
+        },
+        {
+          "path": "backend/service.py",
+          "start_line": 250,
+          "end_line": 282
+        },
+        {
+          "path": "backend/scoring.py",
+          "start_line": 125,
+          "end_line": 135
+        },
+        {
+          "path": "backend/static.py",
+          "start_line": 1,
+          "end_line": 25
+        },
+        {
+          "path": "backend/boundary.py",
+          "start_line": 17,
+          "end_line": 27
+        },
+        {
+          "path": "backend/boundary.py",
+          "start_line": 58,
+          "end_line": 67
+        }
+      ],
+      "detail": "Response serializers select predicted/GPS geometry and fixed scalar fields. Scorer notes come from a closed allowlist, nonfinite metrics become null, exception messages do not expose inputs, and logs use safe event/endpoint values. Static files use an exact frontend asset allowlist, not a repository mount."
+    },
+    {
+      "name": "Dataset-aware stale response and finally guards",
+      "outcome": "PASS",
+      "evidence": [
+        {
+          "path": "frontend/api.mjs",
+          "start_line": 285,
+          "end_line": 291
+        },
+        {
+          "path": "frontend/api.mjs",
+          "start_line": 349,
+          "end_line": 353
+        },
+        {
+          "path": "frontend/app.mjs",
+          "start_line": 551,
+          "end_line": 605
+        },
+        {
+          "path": "tests/frontend_adapter.test.mjs",
+          "start_line": 342,
+          "end_line": 386
+        }
+      ],
+      "detail": "Success, failure and finally all check API base, dataset ID, trip ID and request generation. Same-ID switches and switch-backs cannot overwrite the newer result or clear its loading state. Aborted late response bodies are rejected by the adapter."
+    },
+    {
+      "name": "Honest catalogue availability and finite/N/A client metrics",
+      "outcome": "PASS",
+      "evidence": [
+        {
+          "path": "backend/datasets.py",
+          "start_line": 105,
+          "end_line": 129
+        },
+        {
+          "path": "frontend/api.mjs",
+          "start_line": 295,
+          "end_line": 325
+        },
+        {
+          "path": "frontend/app.mjs",
+          "start_line": 258,
+          "end_line": 320
+        },
+        {
+          "path": "frontend/api.mjs",
+          "start_line": 56,
+          "end_line": 67
+        },
+        {
+          "path": "frontend/api.mjs",
+          "start_line": 244,
+          "end_line": 272
+        }
+      ],
+      "detail": "The unconfigured secondary section stays at its actual zero count and never receives trip requests. Missing/inconsistent catalogues or identity echoes fail closed. Invalid metric/timing values display as N/A; no score is invented."
+    },
+    {
+      "name": "GeoJSON sanitization and data-to-DOM XSS boundary",
+      "outcome": "PASS",
+      "evidence": [
+        {
+          "path": "frontend/api.mjs",
+          "start_line": 168,
+          "end_line": 209
+        },
+        {
+          "path": "frontend/app.mjs",
+          "start_line": 20,
+          "end_line": 26
+        },
+        {
+          "path": "frontend/app.mjs",
+          "start_line": 367,
+          "end_line": 409
+        },
+        {
+          "path": "frontend/smoke.mjs",
+          "start_line": 54,
+          "end_line": 54
+        }
+      ],
+      "detail": "DTO construction drops supplied properties and extra coordinate components; it rejects unsupported geometry, malformed/nonfinite/out-of-range longitude/latitude, and oversized coordinate/feature sets. API text uses textContent or text nodes. The two Leaflet attribution HTML strings are fixed literals, not API data."
+    },
+    {
+      "name": "Current CLI/backend learned-model defaults and GNB guard",
+      "outcome": "PASS with documented historical helper default",
+      "evidence": [
+        {
+          "path": "backend/config.py",
+          "start_line": 84,
+          "end_line": 103
+        },
+        {
+          "path": "mapmatch/cli.py",
+          "start_line": 30,
+          "end_line": 36
+        },
+        {
+          "path": "mapmatch/cli.py",
+          "start_line": 68,
+          "end_line": 75
+        },
+        {
+          "path": "mapmatch/cli.py",
+          "start_line": 174,
+          "end_line": 180
+        },
+        {
+          "path": "mapmatch/learning.py",
+          "start_line": 25,
+          "end_line": 45
+        },
+        {
+          "path": "mapmatch/learning.py",
+          "start_line": 104,
+          "end_line": 111
+        },
+        {
+          "path": "README.md",
+          "start_line": 27,
+          "end_line": 27
+        },
+        {
+          "path": "README.md",
+          "start_line": 78,
+          "end_line": 78
+        }
+      ],
+      "detail": "The active CLI/backend pass final-five paths explicitly, require the configured decoder in their default entry points, and do not fall back to a geometry-only model. The generic helper retains its archival phase-three default, documented in README; external callers should pass a path explicitly. GNB alone promotes scoring inputs to float64; strict probability validation remains in place. No flat-probability recovery was added."
+    },
+    {
+      "name": "Maintained runner differs from measured source only in output safety",
+      "outcome": "PASS",
+      "evidence": [
+        {
+          "path": "analysis/final_code_review/runner_output_guard.diff",
+          "start_line": 1,
+          "end_line": 31
+        },
+        {
+          "path": "tests/test_final_five.py",
+          "start_line": 108,
+          "end_line": 148
+        },
+        {
+          "path": "docs/FINAL_REPRODUCTION_HARDENING.md",
+          "start_line": 3,
+          "end_line": 7
+        }
+      ],
+      "detail": "The exact diff contains only call-time ART resolution, refusal of partial schema/metadata outputs and refusal of an existing acceptance report. No estimator, seed, fold, selection, feature, probability or scoring expression changed.",
+      "measured_source_sha256": "6e25f0492c8d48d62ff21ac05e5e5e5f6306ffdc27485458ee5d2f69e20adb65",
+      "maintained_source_sha256": "42b6bddd738518fb6eb533593b7b10f984cf1dcd1493de528c5350f1dfd2d46e"
+    },
+    {
+      "name": "Publication exemptions remain exact paths",
+      "outcome": "PASS for reviewed mechanism",
+      "evidence": [
+        {
+          "path": "scripts/review_publication.py",
+          "start_line": 26,
+          "end_line": 54
+        },
+        {
+          "path": "scripts/review_publication.py",
+          "start_line": 56,
+          "end_line": 87
+        },
+        {
+          "path": "tests/test_publication.py",
+          "start_line": 42,
+          "end_line": 73
+        }
+      ],
+      "detail": "Only twelve named aggregate JSON reports and one document bypass the evaluator/private-name prohibition. Raw extensions, row-cache locations, unknown/nested nearby paths and secret matches remain refused. Exempt files still pass secret/size scanning. Tests mock index-blob reads; this review did not run Git or certify the final staged publication set."
+    }
+  ],
+  "validation": [
+    {
+      "name": "Complete Python unit discovery",
+      "command": "PYTHONDONTWRITEBYTECODE=1 OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 .venv-clean/bin/python -m unittest discover -s tests -v",
+      "exit_code": 0,
+      "passed": 291,
+      "failed": 0,
+      "reported_seconds": 3.832,
+      "evidence": {
+        "path": "analysis/final_code_review/python_unit_tests.log",
+        "start_line": 590,
+        "end_line": 594
+      },
+      "notes": "Includes synthetic backend/dataset/publication/output-guard tests. Some tests inspect existing public figure/report manifests, which passed at this snapshot. No partial peer deliverable was reported as a defect."
+    },
+    {
+      "name": "Hosting unit discovery",
+      "command": "PYTHONDONTWRITEBYTECODE=1 OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 .venv-clean/bin/python -m unittest discover -s infrastructure -p test_hosting.py -v",
+      "exit_code": 0,
+      "passed": 29,
+      "failed": 0,
+      "reported_seconds": 0.017,
+      "evidence": {
+        "path": "analysis/final_code_review/hosting_discovery_tests.log",
+        "start_line": 31,
+        "end_line": 34
+      }
+    },
+    {
+      "name": "Node adapter and synthetic DOM suite",
+      "command": "node --test tests/frontend_adapter.test.mjs",
+      "exit_code": 0,
+      "passed": 22,
+      "failed": 0,
+      "evidence": {
+        "path": "analysis/final_code_review/frontend_unit_tests.log",
+        "start_line": 1,
+        "end_line": 30
+      },
+      "notes": "Four app-wiring tests use an in-memory DOM; this is not a real-browser or visual review."
+    },
+    {
+      "name": "Frontend static smoke",
+      "command": "node frontend/smoke.mjs",
+      "exit_code": 0,
+      "evidence": {
+        "path": "analysis/final_code_review/frontend_smoke.log",
+        "start_line": 1,
+        "end_line": 1
+      },
+      "notes": "No API URL supplied, so optional live HTTP checks were not invoked."
+    },
+    {
+      "name": "Direct ASGI, cancellation and provenance probes",
+      "command": "PYTHONDONTWRITEBYTECODE=1 OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 .venv-clean/bin/python -B analysis/final_code_review/synthetic_security_probes.py",
+      "exit_code": 0,
+      "evidence": {
+        "path": "analysis/final_code_review/synthetic_security_probes.json",
+        "start_line": 1,
+        "end_line": 347
+      },
+      "counts": {
+        "unknown_id_method_rejections_without_receive": 25,
+        "guarded_origin_type_encoding_length_stream_cases": 27,
+        "unsupported_path_method_rejections_without_receive": 6,
+        "cancellation_scenario": 1,
+        "trusted_artifact_mutation_reproduction": 1
+      },
+      "notes": "The probe intentionally asserts that CR-01 reproduces; its zero exit means the observation was reproduced, not that the provenance issue was fixed."
+    }
+  ],
+  "unsuccessful_validation_attempts": [
+    {
+      "command": "PYTHONDONTWRITEBYTECODE=1 .venv-clean/bin/python -m unittest infrastructure.test_hosting -v",
+      "exit_code": 1,
+      "cause": "ModuleNotFoundError: cloudflare_deploy. The file imports a sibling module and needs infrastructure as the discovery root.",
+      "evidence": {
+        "path": "analysis/final_code_review/hosting_unit_tests.log",
+        "start_line": 1,
+        "end_line": 18
+      },
+      "resolution": "Reran using unittest discover -s infrastructure -p test_hosting.py; all 29 passed. This was a review invocation error, not a source regression."
+    }
+  ],
+  "limitations": [
+    "This is an automated source-and-synthetic-test review, not human approval, a real-browser accessibility/visual review or a penetration-test certification.",
+    "Production all-20 model/geometry/state/score and public deployment checks belong to the final-service/Lead work. They were not duplicated or independently claimed here.",
+    "The final publication index and whole repository contents were not scanned because Git operations were out of scope. The Lead must retain its exact-index publication gate.",
+    "The one-slot semaphore is an inference-concurrency bound. It is not authentication or per-client rate limiting. This review found no request path that bypassed that inference budget.",
+    "Frozen classifier/decoder identity depends on trusted immutable deployment assets. CR-01 records the distinct secondary provenance edge case under deliberate asset replacement.",
+    "The no-argument generic loading helper still selects phase-three for archival compatibility; active final-five API/CLI paths were checked explicitly."
+  ],
+  "reviewed_source_hashes": "analysis/final_code_review/reviewed_source_hashes.json",
+  "source_pins_are_working_tree_bytes": true,
+  "git_used": false,
+  "production_artifacts_changed": false,
+  "reviewed_release_source_files_edited": false,
+  "service_activation_authorized_by_this_report": false
+}

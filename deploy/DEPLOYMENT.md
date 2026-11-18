@@ -20,7 +20,7 @@ live. Readiness must be checked after deployment.
 Run from the repository root. Python 3.14 is recommended; the current environment
 was checked with Python 3.14.6. Dependencies in [the serving requirements](<requirements.txt>)
 match the training environment's scikit-learn/numpy/scipy/joblib versions.
-Only use trusted local joblib files: pickle-based models can execute Python code.
+Only use trusted local joblib files: pickle-based models can execute Python code. Keep the entire frozen bundle unchanged throughout startup and serving. The [independent code review](<../analysis/final_code_review/review.json>) records a low-severity provenance limitation if a trusted operator replaces the model between the two dataset runtimes starting: the secondary can report the newer file hash while still using the primary’s loaded object. The deployed immutable bundle and all actual parity checks are unaffected.
 
 ```bash
 python3 -m venv .venv
@@ -47,10 +47,10 @@ or stop it. Manual host/port changes require explicit configuration.
 
 ## Required trusted assets
 
-- The model at `artifacts/phase_three/model.joblib`, produced by the submitted training code,
-  with matching `artifacts/phase_three/model_metadata.json`. The UI receives only safe model
+- The model at `artifacts/final_five/model.joblib`, produced by the submitted training code,
+  with matching `artifacts/final_five/model_metadata.json`. The UI receives only safe model
   name/hash/feature-count/seed metadata, never training IDs or estimator internals.
-- Decoder JSON at `artifacts/phase_three/match_config.json`. The default path is loaded if
+- Decoder JSON at `artifacts/final_five/match_config.json`. The default path is loaded if
   present; an explicitly configured missing file is an error. Effective settings
   including defaults are hashed in health, requests and logs. Final model/config
   assets must be frozen before a persistent deployment starts.
@@ -62,10 +62,7 @@ or stop it. Manual host/port changes require explicit configuration.
   opened only after live prediction has finished. Missing references make scores
   unavailable; they never trigger precomputed predictions.
 
-The provided data contains 80 training and ten student-testing trips. The ten
-hidden evaluator trips are **not supplied** in this checkout. Development-trip
-results are not final evaluator performance. Installing new evaluator files is a
-configuration change at final evaluation, not permission to tune on them.
+The authorized local data contains 80 training trips, ten student-development trips and ten subsequently supplied evaluator trips. Raw inputs are not distributed in the public checkout. The evaluator inputs were first parsed only after the final-five model and decoder freezes and a written preregistration; all predictions passed before private reference scoring. See the [evaluator protocol](<../docs/FINAL_EVALUATOR_PROTOCOL.md>) and [input audit](<../reports/final_five/evaluator/input_audit.json>). Installing evaluator files never permits tuning on them.
 
 ## Environment
 
@@ -78,12 +75,15 @@ does not implicitly read this example.
 | `PATHSNAP_DATA_DIR` | `Student folder/student_test` relative to repository root |
 | `PATHSNAP_DATASET_ROLE` | `development` for the default root, otherwise `evaluator`; may explicitly select one |
 | `PATHSNAP_REFERENCE_DIR` | Omitted: private .route beside each input; set to a separate private root if available |
-| `PATHSNAP_MODEL` | `artifacts/phase_three/model.joblib` |
+| `PATHSNAP_MODEL` | `artifacts/final_five/model.joblib` |
 | `PATHSNAP_MODEL_METADATA` | `model_metadata.json` next to the chosen model |
-| `PATHSNAP_MATCH_CONFIG` | `artifacts/phase_three/match_config.json` if present; an explicit nonempty value must exist and validate |
+| `PATHSNAP_MATCH_CONFIG` | `artifacts/final_five/match_config.json` if present; an explicit nonempty value must exist and validate |
 | `PATHSNAP_CORS_ORIGINS` | Empty: same-origin hosting only; otherwise comma-separated exact http(s) origins, no wildcards/paths |
 | `PATHSNAP_GRAPH_CACHE_SIZE` | 2 input graphs; no model outputs or labels are cached |
-| `PATHSNAP_INFERENCE_CONCURRENCY` | 1 active match, additional matches HTTP 429 |
+| `PATHSNAP_INFERENCE_CONCURRENCY` | 1 active match shared across both datasets; additional matches HTTP 429 |
+| `PATHSNAP_EVALUATOR_DATA_DIR` | Optional explicit second input root; unset means evaluator section unavailable |
+| `PATHSNAP_EVALUATOR_REFERENCE_DIR` | Optional private second reference root; unset means beside evaluator inputs |
+| `PATHSNAP_EVALUATOR_EXPECTED_TRIP_COUNT` | 10; checked when evaluator section is configured |
 | `PATHSNAP_HOST` | Launcher only: 127.0.0.1; keep loopback for Cloudflare Tunnel |
 | `PATHSNAP_PORT` | Launcher only: 8000 |
 | `PATHSNAP_PYTHON` | Launcher only: repository .venv/bin/python |
@@ -94,24 +94,20 @@ already-loaded model/configuration/dataset. A missing model is retried lazily so
 health remains visible during first-time training, but a loaded model is not
 silently swapped underneath an active run.
 
-### Hidden evaluator handoff
+### Separate evaluator section
 
-At final evaluation, obtain the ten reserved input trips and private references
-through the authorized process. Keep references on this computer only, then set:
+Keep the primary student-development root configured. After the final model and decoder freezes, add only trusted server-side settings for the second partition:
 
 ```bash
-export PATHSNAP_DATA_DIR=/private/pathsnap/evaluator_inputs
-export PATHSNAP_REFERENCE_DIR=/private/pathsnap/evaluator_references
-export PATHSNAP_DATASET_ROLE=evaluator
-export PATHSNAP_MODEL=artifacts/phase_three/model.joblib
-export PATHSNAP_MATCH_CONFIG=artifacts/phase_three/match_config.json
+export PATHSNAP_EVALUATOR_DATA_DIR=/private/pathsnap/evaluator_inputs
+export PATHSNAP_EVALUATOR_REFERENCE_DIR=/private/pathsnap/evaluator_references
+export PATHSNAP_EVALUATOR_EXPECTED_TRIP_COUNT=10
+export PATHSNAP_MODEL=artifacts/final_five/model.joblib
+export PATHSNAP_MODEL_METADATA=artifacts/final_five/model_metadata.json
+export PATHSNAP_MATCH_CONFIG=artifacts/final_five/match_config.json
 ```
 
-Restart using the documented managed process. Verify health says evaluator role,
-ten trips and the same frozen model/config hashes. `GET /trips` must display the
-newly discovered ten IDs without source edits. The prediction model never sees
-the route files, and no evaluator labels may inform training, threshold changes,
-feature selection, model choice or tuning.
+Restart only the dedicated API through the scoped final activator after its acceptance checks. Verify health reports the frozen HistGB hash and `GET /datasets` reports two ready ten-trip entries. The UI calls `GET /datasets/{development|evaluator}/trips` and `POST /datasets/{id}/match`, with only `trip_id` in the body. Legacy `/trips` and `/match` remain development-only. Both sections share one loaded model/configuration and inference semaphore; graph caches, registries and private references remain separate. Missing evaluator configuration leaves the section unavailable, not populated with invented trips. See the [dataset API contract](<../docs/EVALUATOR_SECTION_PLAN.md>).
 
 ## Public-site deployment and verification
 
@@ -172,7 +168,7 @@ as a nonroot user with dropped capabilities and a read-only root filesystem.
 ```bash
 export PATHSNAP_HOST_DATA_DIR="/absolute/path/to/Student folder/student_test"
 export PATHSNAP_HOST_REFERENCE_DIR="/absolute/path/to/private/references"
-export PATHSNAP_HOST_ARTIFACTS="/absolute/path/to/artifacts/phase_three"
+export PATHSNAP_HOST_ARTIFACTS="/absolute/path/to/artifacts/final_five"
 export PATHSNAP_DATASET_ROLE=development
 # Choose readable mount permissions for container UID 10001; never make secrets public.
 docker compose -f deploy/compose.yaml up --build -d
@@ -198,7 +194,7 @@ local Docker check.
   result; let active work finish before retrying.
 
 An unauthenticated public demo is not a general confidential-data service.
-Raw GPS and predictions are intentionally visible for its ten registered trips.
+Raw GPS and predictions are intentionally visible for the ten registered trips in each configured section.
 Keep sensitive personal trips off the public dataset; retain private references
 and credentials only on the server. Optional map tiles contact OpenStreetMap when
 the user enables them; the self-hosted route overlay works without basemap tiles.
