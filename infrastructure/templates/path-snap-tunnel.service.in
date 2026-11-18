@@ -1,0 +1,28 @@
+[Unit]
+Description=PathSnap dedicated Cloudflare Tunnel for ml.d3va.dev
+Wants=network-online.target path-snap-api.service
+After=network-online.target path-snap-api.service
+ConditionPathExists=@AUTH_PATH@
+ConditionPathExists=@TUNNEL_CONFIG_PATH@
+ConditionPathExists=@CREDENTIALS_PATH@
+StartLimitIntervalSec=0
+
+[Service]
+Type=simple
+WorkingDirectory=@CONFIG_PATH@
+ExecStart=/usr/bin/env -i HOME=%h USER=%u LOGNAME=%u PATH=/usr/bin:/bin XDG_RUNTIME_DIR=%t /usr/bin/python3 -I @LAUNCHER_ARG@ tunnel --config-dir @CONFIG_ARG@
+Restart=always
+RestartSec=5
+TimeoutStopSec=45
+KillSignal=SIGTERM
+UMask=0077
+NoNewPrivileges=true
+LockPersonality=true
+RestrictSUIDSGID=true
+RestrictAddressFamilies=AF_UNIX AF_INET AF_INET6
+StandardOutput=journal
+StandardError=journal
+SyslogIdentifier=path-snap-tunnel
+
+[Install]
+WantedBy=default.target

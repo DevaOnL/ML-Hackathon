@@ -1,0 +1,27 @@
+name: tests
+on:
+  push:
+  pull_request:
+jobs:
+  independent-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.14"
+          cache: pip
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "24"
+      - name: Install runtime
+        run: python -m pip install -r requirements.txt && python -m pip install -e . --no-deps
+      - name: Independent Python tests
+        env:
+          OPENBLAS_NUM_THREADS: "1"
+          OMP_NUM_THREADS: "1"
+        run: python -m unittest discover -s tests -v
+      - name: Scoped hosting safety tests
+        run: python -B -m unittest discover -s infrastructure -p test_hosting.py -v
+      - name: Frontend API adapter tests
+        run: node frontend/smoke.mjs && node --test tests/frontend_adapter.test.mjs
