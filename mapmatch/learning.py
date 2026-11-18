@@ -11,6 +11,8 @@ from typing import Sequence
 
 import joblib
 import numpy as np
+from sklearn.naive_bayes import GaussianNB
+from sklearn.pipeline import Pipeline
 from sklearn.metrics import (accuracy_score, confusion_matrix, f1_score, log_loss,
                              precision_score, recall_score)
 
@@ -27,7 +29,12 @@ def predict_positive_proba(model, X: np.ndarray) -> np.ndarray:
     """Binary positive-class probabilities; never assume a class-column order."""
     if not len(X):
         return np.empty(0, dtype=float)
-    probabilities = np.asarray(model.predict_proba(X), dtype=float)
+    # GaussianNB joint likelihoods can accumulate in float32 when scaler inputs
+    # are float32. Measured real rows then had sum(p)=1+1.52e-5. Promote only
+    # GaussianNB scoring inputs, preserving strict guards and other estimators.
+    classifier = model.steps[-1][1] if isinstance(model, Pipeline) else model
+    inference_X = np.asarray(X, dtype=np.float64) if isinstance(classifier, GaussianNB) else X
+    probabilities = np.asarray(model.predict_proba(inference_X), dtype=float)
     classes = np.asarray(model.classes_)
     positive = np.flatnonzero(classes == 1)
     if classes.ndim != 1 or len(classes) != 2 or set(classes.tolist()) != {0, 1} or len(positive) != 1 or probabilities.shape != (len(X), 2):

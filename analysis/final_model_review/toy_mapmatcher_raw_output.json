@@ -1,0 +1,62 @@
+{
+ "models": {},
+ "failures": [],
+ "checks": [
+  {
+   "check": "toy_match_logistic_regression",
+   "passed": true,
+   "detail": "route=[np.int64(0), np.int64(1)] edges=[np.int64(0), np.int64(0), np.int64(1)] nll=0.0382 sum_err_max=0.00e+00 obs0_scores=[0.999966, 3.4e-05]"
+  },
+  {
+   "check": "toy_match_knn_distance_weighted",
+   "passed": true,
+   "detail": "route=[np.int64(0), np.int64(1)] edges=[np.int64(0), np.int64(0), np.int64(1)] nll=1.2507 sum_err_max=0.00e+00 obs0_scores=[0.920026, 0.079974]"
+  },
+  {
+   "check": "toy_match_bagging",
+   "passed": true,
+   "detail": "route=[np.int64(0), np.int64(1)] edges=[np.int64(0), np.int64(0), np.int64(1)] nll=0.3327 sum_err_max=1.11e-16 obs0_scores=[0.997267, 0.002733]"
+  },
+  {
+   "check": "toy_match_gaussian_nb",
+   "passed": true,
+   "detail": "route=[np.int64(0), np.int64(1)] edges=[np.int64(0), np.int64(0), np.int64(1)] nll=0.0363 sum_err_max=2.22e-16 obs0_scores=[1.0, 0.0]"
+  },
+  {
+   "check": "toy_match_hist_gradient_boosting",
+   "passed": true,
+   "detail": "route=[np.int64(0), np.int64(1)] edges=[np.int64(0), np.int64(0), np.int64(1)] nll=0.0446 sum_err_max=0.00e+00 obs0_scores=[0.999491, 0.000509]"
+  },
+  {
+   "check": "toy_match_hist_gradient_boosting_tuned",
+   "passed": true,
+   "detail": "route=[np.int64(0), np.int64(1)] edges=[np.int64(0), np.int64(0), np.int64(1)] nll=0.0518 sum_err_max=2.22e-16 obs0_scores=[0.999239, 0.000761]"
+  },
+  {
+   "check": "toy_match_frozen_selected_model",
+   "passed": true,
+   "detail": "route=[np.int64(0), np.int64(1)] edges=[np.int64(0), np.int64(0), np.int64(1)] nll=0.0518 sum_err_max=2.22e-16 obs0_scores=[0.999239, 0.000761]"
+  },
+  {
+   "check": "toy_emission_separation",
+   "passed": true,
+   "detail": "distinct first-observation signatures=6 of 6"
+  },
+  {
+   "check": "frozen_matches_tuned_baseline_emissions",
+   "passed": true,
+   "detail": "max_delta=0.0"
+  },
+  {
+   "check": "gnb_toy_probability_guard",
+   "passed": true,
+   "detail": "sum_errors=[0.0, 2.220446049250313e-16, 2.220446049250313e-16]"
+  }
+ ],
+ "summary": {
+  "total": 10,
+  "passed": 10,
+  "failed": 0,
+  "note": "synthetic metric graph + 3-observation track; actual fitted estimators; no reference route, no fitting, no HTTP"
+ }
+}

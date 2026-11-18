@@ -1,0 +1,24 @@
+{
+  "started_at_utc": "2026-11-18T08:52:31.877347+00:00",
+  "attempt_number": 1,
+  "command": [
+    ".venv/bin/python",
+    "-u",
+    "-B",
+    "-m",
+    "mapmatch",
+    "predict",
+    "--input",
+    "evaluator_test",
+    "--output",
+    "outputs/final_evaluator_test",
+    "--model",
+    "artifacts/final_five/model.joblib",
+    "--config",
+    "artifacts/final_five/match_config.json"
+  ],
+  "model_sha256": "c9cc8e9f36838f656a94d07ed69632979df9981ca94a9daf3b52fbce052e4b34",
+  "config_file_sha256": "10405aa6b6f370e41d4ddcb01207fd1e8f58900fd0395e541ee6bc78146168c5",
+  "references_read": false,
+  "state": "started; result not yet known"
+}

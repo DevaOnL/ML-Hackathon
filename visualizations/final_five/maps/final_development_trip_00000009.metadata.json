@@ -1,0 +1,121 @@
+{
+  "phase": "five-model-completion",
+  "trip_id": "00000009",
+  "partition": "Student development (student_test)",
+  "development_only": true,
+  "contains_reference_geometry": true,
+  "do_not_serve_in_application": true,
+  "prediction_source": "outputs/final_student_test/routes/00000009.route",
+  "model_family": "hist_gradient_boosting",
+  "model_run": "hist_gradient_boosting_tuned",
+  "prediction_label": "HistGradientBoosting (tuned)",
+  "model_artifact_sha256": "c9cc8e9f36838f656a94d07ed69632979df9981ca94a9daf3b52fbce052e4b34",
+  "decoder_config_sha256": "10405aa6b6f370e41d4ddcb01207fd1e8f58900fd0395e541ee6bc78146168c5",
+  "training_trip_count": 80,
+  "nodes": 6745,
+  "directed_arcs": 13106,
+  "gps_points": 1049,
+  "prediction_arc_geometry_count": 444,
+  "prediction_route_integrity": {
+    "arc_rows": 444,
+    "distinct_arcs": 442,
+    "repeated_traversal_arcs": 2,
+    "repeated_traversal_rows": 4,
+    "duplicate_occurrences_beyond_first": 2,
+    "broken_joins": 0,
+    "broken_join_positions": [],
+    "empty_geometry_count": 0,
+    "connectors_inserted": 0
+  },
+  "reference_route_integrity": {
+    "arc_rows": 429,
+    "distinct_arcs": 429,
+    "repeated_traversal_arcs": 0,
+    "repeated_traversal_rows": 0,
+    "duplicate_occurrences_beyond_first": 0,
+    "broken_joins": 0,
+    "broken_join_positions": [],
+    "empty_geometry_count": 0,
+    "connectors_inserted": 0
+  },
+  "prediction_geometry_latlon_sha256": "154f2c9f3bbe8d777f4fc917e6127f893afb898218b5eb237cbe831b933c05ce",
+  "route_metrics_recomputed_equal_delivery": {
+    "exact_match": false,
+    "edge_precision": 0.9527027027027027,
+    "edge_recall": 0.986013986013986,
+    "edge_f1": 0.9690721649484535,
+    "length_precision": 0.9561038938954256,
+    "length_recall": 0.9922967816922956,
+    "length_f1": 0.9738641838539935,
+    "duplicate_canonical_length_f1": 0.9738641838539935,
+    "edit_distance": 22,
+    "edit_similarity": 0.9504504504504504,
+    "predicted_arc_count": 444,
+    "reference_arc_count": 429,
+    "common_arc_count": 423,
+    "predicted_length_m": 11765.138625542873,
+    "reference_length_m": 11336.018678723442,
+    "common_length_m": 11248.694852101022,
+    "length_metric_basis": "meters",
+    "route_continuity": 1.0,
+    "prediction_connected": true,
+    "reference_connected": true,
+    "reference_discontinuity_count": 0,
+    "metric_note": "Directed arc multiset overlap; sequence edit separately. Not an official organizer score."
+  },
+  "tiles": null,
+  "geometry_note": "Every predicted arc is drawn in CLI order, including duplicate occurrences, using its supplied endpoints. No road shape or connector is invented.",
+  "proxy_note": "Observation labels use geometry-and-motion proxies; route overlap compares supplied arc traversals directly.",
+  "time_note": "Traversal tooltips report observed time ranges pooled by arc ID; per-traversal times are never inferred.",
+  "input_sha256": {
+    "Student folder/student_test/00000009/00000009.nodes": "f8ff92932d7a12874f412453c9cbe4f09cf1c2796f62843c8da95e1e104a4a99",
+    "Student folder/student_test/00000009/00000009.arcs": "563870614e8fabaedb4077308db7598ef6c4314b2d9680a49e28dccb451b9e90",
+    "Student folder/student_test/00000009/00000009.track": "74853acd9fdbb2b80b8cd164cc63932e25fd0fca6fce86fd9c9fc6aa171a8451",
+    "Student folder/student_test/00000009/00000009.route": "9424170099cc2edfbfe9f8fae750a6f90f68cc19ba9a426d58254360566f2823",
+    "outputs/final_student_test/routes/00000009.route": "a5871b8e928fd8d52fad34153781810b8ab618faf53c282bc80b9fc0510cfc32",
+    "artifacts/final_five/model.joblib": "c9cc8e9f36838f656a94d07ed69632979df9981ca94a9daf3b52fbce052e4b34",
+    "artifacts/final_five/model_metadata.json": "c354885e22158e9da14e0f8bc8e01d3e7c6fbe810e196192c6b59c7cbdbbf4c5",
+    "artifacts/final_five/model_freeze.json": "1a76a509558972a14f4a5800ae56016e12681b51f752ef738707f39ba0000efe",
+    "artifacts/final_five/match_config.json": "10405aa6b6f370e41d4ddcb01207fd1e8f58900fd0395e541ee6bc78146168c5",
+    "reports/final_five/decoder/freeze.json": "d5a3f507efe29b4db72b12bb3e06db3a00d5c27f387db09eb1b33f7620a790b1",
+    "reports/final_five/offline_delivery_verification.json": "aba2c384123cef5b2b690b10f53873f174000fbe0942572010d0afc8e3afb8f6",
+    "outputs/final_student_test/run_config.json": "785568f6adba621fe2b8b2a152c77c98801780ce050c80e1e8ffd72ff3f8c190",
+    "outputs/final_student_test/index.csv": "18f5b43094ba98b80564e39b71d1cb622733818532ac0b02c00214785c86ed43",
+    "outputs/final_student_test/diagnostics/00000009.json": "56e2c66fa3dc6f776f6c0448a2c21eb07c6f3c56c9a2a4fa7e93323d69135c55",
+    "outputs/final_student_test/observations/00000009.csv": "0d23467fb8df360709c09c8e39ab275bf0126316b3327577d47b4c19bf6d2428",
+    "visualizations/final_five/generate_final_map.py": "125fc38b354ae3496bb560ed53370d238275beb0a5b97d205340a86eea6fad31",
+    "visualizations/final_five/figure_integrity.py": "30250dc6a54acb08cb40f0aeccd0b36288545e8dc5eadd9122fdf89a48f70125",
+    "mapmatch/data.py": "89982d7a21c359ad0bc8dba061498b47e05967750325eb83dc81828e8ecf9ce9",
+    "mapmatch/metrics.py": "94e1ba8fc0ec60c46b8ea06d08ee6f86c655a915ff511da41d446ff7c5f1c882",
+    "backend/geometry.py": "84248a1bab5a8850e5c877b19175b6b7c72d5d4caa56de6bc094a8c9b241b993",
+    "frontend/vendor/leaflet/leaflet.js": "db49d009c841f5ca34a888c96511ae936fd9f5533e90d8b2c4d57596f4e5641a",
+    "frontend/vendor/leaflet/leaflet.css": "a7837102824184820dfa198d1ebcd109ff6d0ff9a2672a074b9a1b4d147d04c6",
+    "frontend/vendor/leaflet/images/layers.png": "1dbbe9d028e292f36fcba8f8b3a28d5e8932754fc2215b9ac69e4cdecf5107c6",
+    "frontend/vendor/leaflet/images/layers-2x.png": "066daca850d8ffbef007af00b06eac0015728dee279c51f3cb6c716df7c42edf"
+  },
+  "frozen_input_hashes_unchanged_before_after": true,
+  "render": {
+    "folium_version": "1.0.0",
+    "leaflet_assets": "frontend/vendor/leaflet",
+    "layers": {
+      "network": {
+        "variable": "feature_group_462cb0f7eeeba6c850b29db208de79b0",
+        "child_count": 2
+      },
+      "reference": {
+        "variable": "feature_group_d1ee97669d6e4e57f60d889fde8d3a31",
+        "child_count": 2
+      },
+      "gps": {
+        "variable": "feature_group_d99896a24e400242ab8af9178a50cd6d",
+        "child_count": 1051
+      },
+      "prediction": {
+        "variable": "feature_group_f3d3eb15a67cedd4ecb5573587f4da39",
+        "child_count": 445
+      }
+    },
+    "full_network_arc_geometries": 13106
+  },
+  "created_at_utc": "2026-11-18T09:05:57.646752+00:00"
+}

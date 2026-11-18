@@ -1,0 +1,927 @@
+{
+  "phase": "five-model-completion",
+  "generated_utc": "2026-11-18T09:00:06.090486+00:00",
+  "generator": "visualizations/final_five/generate_final_five.py",
+  "generator_sha256": "1f7c64aed1c86fc57bfa0f089dd09ec4d7a21cd3367bc9c0de71fb7fba784fbb",
+  "mode": "all",
+  "scope_guard": "all writes confined to visualizations/final_five/",
+  "families": [
+    "logistic_regression",
+    "knn_distance_weighted",
+    "bagging",
+    "gaussian_nb",
+    "hist_gradient_boosting"
+  ],
+  "runs": [
+    "logistic_regression",
+    "knn_distance_weighted",
+    "bagging",
+    "gaussian_nb",
+    "hist_gradient_boosting",
+    "hist_gradient_boosting_tuned"
+  ],
+  "run_note": "five model families plus the tuned variant of the selected family (hist_gradient_boosting_tuned) = six measured configurations",
+  "selected_model": {
+    "family": "hist_gradient_boosting",
+    "final_run": "hist_gradient_boosting_tuned",
+    "model_sha256": "c9cc8e9f36838f656a94d07ed69632979df9981ca94a9daf3b52fbce052e4b34",
+    "selected_by": "TRAIN out-of-fold trip-macro top-1 (selection.json); student/evaluator never used",
+    "final_fit": "tuned run refitted last on all 80 TRAIN trips, fresh 4.40 s, CPU only (no GPU claim)"
+  },
+  "inputs": {
+    "results": {
+      "path": "experiments/final_five/current/results.json",
+      "sha256": "8956d9360daae8723875e6a7f6fb8a98941ebf85d0eee9c8cab8cdf68979f6a8"
+    },
+    "model_comparison_csv": {
+      "path": "experiments/final_five/current/model_comparison.csv",
+      "sha256": "fa446f8e7263ae6cdc722563d5c4cdfb41d3bf433e5837f14cd2ef8556f147bc"
+    },
+    "selection": {
+      "path": "experiments/final_five/current/selection.json",
+      "sha256": "d186221eea0eaeaa09d2fbee648499a9856402d3b12c4d9906c7ebab2dd31519"
+    },
+    "sequence_classification": {
+      "path": "experiments/final_five/current/sequence_classification.json",
+      "sha256": "949461edf056d1fd538be23a9357f46c7a446192d301599a75fbedbff5a06585"
+    },
+    "bayesian_optimization": {
+      "path": "experiments/final_five/current/bayesian_optimization.json",
+      "sha256": "0e77818b2b70c372a60bca1ac2d02227c8f240ad148d4ac2e5f2af7ec46a3c18"
+    },
+    "cv": {
+      "logistic_regression": {
+        "path": "experiments/final_five/current/cv/logistic_regression.json",
+        "sha256": "a105618650ad5e3002a25eb36f379169e9fdb662f06efb98e311a425abe22334"
+      },
+      "knn_distance_weighted": {
+        "path": "experiments/final_five/current/cv/knn_distance_weighted.json",
+        "sha256": "bcc7cc3fb8ac08fd800803f320de58545517070faa36ab7367775025ba1217b3"
+      },
+      "bagging": {
+        "path": "experiments/final_five/current/cv/bagging.json",
+        "sha256": "e3c062b4b22a5cca7c211dd43599cd0fd16308268eeea70941b1c86fc5ecd764"
+      },
+      "gaussian_nb": {
+        "path": "experiments/final_five/current/cv/gaussian_nb.json",
+        "sha256": "22c60626a9c87e3b3070821597e9d35edc7d4ebaa2c1a0c47247d311835fd3e6"
+      },
+      "hist_gradient_boosting": {
+        "path": "experiments/final_five/current/cv/hist_gradient_boosting.json",
+        "sha256": "7d2edaee69ebcfec47a217fb331751a6fb99da47cfcd3c8a5374761e8a46fe65"
+      },
+      "hist_gradient_boosting_tuned": {
+        "path": "experiments/final_five/current/cv/hist_gradient_boosting_tuned.json",
+        "sha256": "a10a500ee43d8598b04a0be2ee0276a1bdb7ca68f58e43add743efd61ee494ac"
+      }
+    },
+    "evaluation": {
+      "logistic_regression": {
+        "path": "experiments/final_five/current/evaluation/logistic_regression.json",
+        "sha256": "2557ebd1a799e299392ada3c2813fabf238c3c0cc9d2e60b866f590ff6d7e23b"
+      },
+      "knn_distance_weighted": {
+        "path": "experiments/final_five/current/evaluation/knn_distance_weighted.json",
+        "sha256": "f9fe375b36e9acc4744159a517da8201c637b3e7f268f90fa99a8865ac041e58"
+      },
+      "bagging": {
+        "path": "experiments/final_five/current/evaluation/bagging.json",
+        "sha256": "7c028b57e4eb044d03c19dbaf58a2ef342c9c680565234c0fd195e70178d10fd"
+      },
+      "gaussian_nb": {
+        "path": "experiments/final_five/current/evaluation/gaussian_nb.json",
+        "sha256": "87b1c689cc42e47238714423a01b2b1f2151533156f676fc49372ac9afe801c6"
+      },
+      "hist_gradient_boosting": {
+        "path": "experiments/final_five/current/evaluation/hist_gradient_boosting.json",
+        "sha256": "c0c12553b2efafeedcb1079ff27cccb854608a10a653cb58f0ee6a40dffd3591"
+      },
+      "hist_gradient_boosting_tuned": {
+        "path": "experiments/final_five/current/evaluation/hist_gradient_boosting_tuned.json",
+        "sha256": "6aae73c17e661a73ca165ef65c33952b8a232fcf24f78a616babff634088ef8c"
+      }
+    },
+    "hpo_trial_log": {
+      "path": "experiments/bayesian_trials.jsonl",
+      "sha256": "cbe4e6c949be9c7904ee10e408bd5be48b4396d1dde31b98400179af55a8fb0c"
+    },
+    "model_acceptance": {
+      "path": "reports/final_five/all_five_model_acceptance.json",
+      "sha256": "0829918e6c5bb3335d6b6d02a1d8a0fc2abd8b43f6769b41c73cd26c65296d65"
+    },
+    "clean_load_report": {
+      "path": "artifacts/final_five/clean_load_report.json",
+      "sha256": "7585e2693958fe3717e3056e76edb958065fe20b9a2c413ff240adca67c54e7e"
+    },
+    "eda_pin_source": {
+      "path": "visualizations/phase_three/figure_manifest.json",
+      "sha256": "6b0d4ec46c11954cb44b3d1c6848244a90afbb4fcb112a9479dce456e8a3c11f"
+    },
+    "figure_source": {
+      "path": "visualizations/final_five/generate_final_five.py",
+      "sha256": "1f7c64aed1c86fc57bfa0f089dd09ec4d7a21cd3367bc9c0de71fb7fba784fbb"
+    },
+    "figure_integrity_source": {
+      "path": "visualizations/final_five/figure_integrity.py",
+      "sha256": "30250dc6a54acb08cb40f0aeccd0b36288545e8dc5eadd9122fdf89a48f70125"
+    },
+    "decoder_report": {
+      "path": "reports/final_five/decoder/student_ablation.json",
+      "sha256": "045513ee402984d2fb4db200ca1fdb01a447ad563ab1a07632ee41bfcc5a353a"
+    },
+    "decoder_source": {
+      "path": "scripts/final_five_decoder.py",
+      "sha256": "53bb1892ac1d3c9252d9eeff871a0879f4ea3ffdb1801663b57324ba3cbcc239"
+    }
+  },
+  "figures": [
+    {
+      "path": "visualizations/final_five/plots/final_five_cv_macro_f1.png",
+      "pdf_path": "visualizations/final_five/plots/final_five_cv_macro_f1.pdf",
+      "bytes": 320988,
+      "sha256": "66979c60bf1a52d7c74a8b0a861a0044efd983d2df0caa7e595091ea7755d626",
+      "pdf_sha256": "3d3fa329a3caf1cb1ce8b394df37de48e8639587e09fb02892679cdd588b2d75",
+      "dpi": 300,
+      "pixels": {
+        "width": 2481,
+        "height": 1755
+      },
+      "page": "A4 half (landscape)",
+      "title": "Cross-validated binary macro F1: five families plus the tuned HistGB run",
+      "caption": "Pooled out-of-fold binary macro F1 from 3-fold grouped CV over all 80 TRAIN trips (350 observations per trip, 269,463 candidate rows, 27,422 positive). Error bars show the standard deviation across the three folds. Binary candidate-row metric: one row per (observation, candidate directed arc) at threshold 0.5; distinct from positive-class F1 and from observation-level edge F1. This metric did not drive selection; the recorded objective was TRAIN trip-macro top-1 (see the primary-objective figure). Y-axis starts at 0.90; the metric range is 0 to 1. Proxy labels: nearest reference-route segment plus weak GPS-motion orientation; not supplied pointwise ground truth. Source: experiments/final_five/current/cv/*.json, results.json.",
+      "units": "fraction 0-1 (binary macro F1 over candidate rows)",
+      "source": "experiments/final_five/current/cv/*.json; experiments/final_five/current/results.json",
+      "stage": "models",
+      "status": "actual_measured",
+      "created_utc": "2026-11-18T08:59:51.011101+00:00",
+      "ocr_expect": [
+        "macro",
+        "f1",
+        "fold"
+      ]
+    },
+    {
+      "path": "visualizations/final_five/plots/final_five_primary_objective.png",
+      "pdf_path": "visualizations/final_five/plots/final_five_primary_objective.pdf",
+      "bytes": 301070,
+      "sha256": "00fb0a6508b0c4558acc2d76acc94419821ade29b0fef080f9f77718a51ef2d6",
+      "pdf_sha256": "f26310146f65108e22f13c8b9d88aa096941d4166c069eb71ea5cd09c9426591",
+      "dpi": 300,
+      "pixels": {
+        "width": 2481,
+        "height": 1755
+      },
+      "page": "A4 half (landscape)",
+      "title": "Primary selection objective: TRAIN out-of-fold trip-macro top-1 accuracy",
+      "caption": "Criterion recorded in selection.json: out-of-fold trip-macro top-1 accuracy on the 80 TRAIN trips, measured before any student or evaluator data was loaded. Every TRAIN trip contributes 350 observations, so pooled and trip-macro top-1 coincide exactly on CV. Among the five family defaults HistGradientBoosting is highest (0.8927); its tuned variant reaches 0.8934 and was refitted on all 80 trips as the final frozen artifact. Binary macro F1 and log loss were tie-breakers only. Y-axis starts at 0.85; the metric range is 0 to 1. Source: selection.json, cv/*.json, bayesian_optimization.json.",
+      "units": "fraction 0-1 (trip-macro top-1 accuracy)",
+      "source": "experiments/final_five/current/selection.json; cv/*.json",
+      "stage": "models",
+      "status": "actual_measured",
+      "created_utc": "2026-11-18T08:59:51.511857+00:00",
+      "ocr_expect": [
+        "objective",
+        "top-1",
+        "trip"
+      ]
+    },
+    {
+      "path": "visualizations/final_five/plots/final_five_student_top1_macro_f1.png",
+      "pdf_path": "visualizations/final_five/plots/final_five_student_top1_macro_f1.pdf",
+      "bytes": 374667,
+      "sha256": "53e56fc3a88308a226ebb184ea37885b3982434f6e99282b797ebf6de94db592",
+      "pdf_sha256": "01f7e3dc455f6b3dc2d4aea78daa11741b8b81f0094f37324b8ce0c19d3a5cf1",
+      "dpi": 300,
+      "pixels": {
+        "width": 2481,
+        "height": 1755
+      },
+      "page": "A4 half (landscape)",
+      "title": "Student-development results: pooled top-1, trip-macro top-1, and binary macro F1",
+      "caption": "All 10 student-development trips: 19,160 observations, 175,778 candidate rows, 19,141 positive. Pooled top-1 weighs every observation equally, so longer trips count more; the diamond markers show the unweighted mean of the 10 per-trip rates, which is higher for every configuration because the below-average trips carry more observations than the above-average ones do. On CV the two coincide (equal 350-observation trips); on this partition they are distinct denominators. Binary candidate-row metric: one row per (observation, candidate directed arc) at threshold 0.5; distinct from positive-class F1 and from observation-level edge F1. The student partition was measured after selection and never used to choose or tune a model. Y-axis starts at 0.85. Source: evaluation/*.json.",
+      "units": "fractions 0-1 (top-1 accuracy; binary macro F1)",
+      "source": "experiments/final_five/current/evaluation/*.json",
+      "stage": "models",
+      "status": "actual_measured",
+      "created_utc": "2026-11-18T08:59:52.113385+00:00",
+      "ocr_expect": [
+        "student",
+        "top-1",
+        "macro"
+      ]
+    },
+    {
+      "path": "visualizations/final_five/plots/final_five_binary_log_loss.png",
+      "pdf_path": "visualizations/final_five/plots/final_five_binary_log_loss.pdf",
+      "bytes": 361156,
+      "sha256": "980dea4ca3db1ed30b6aa72928b234fe3db938906bc63e201fdf45414cd98a66",
+      "pdf_sha256": "1386258bfddb971ee57f4a36fa2716916a6973020d91c172828ca1cb98646066",
+      "dpi": 300,
+      "pixels": {
+        "width": 2481,
+        "height": 1755
+      },
+      "page": "A4 half (landscape)",
+      "title": "Binary log loss: CV out-of-fold and student-development",
+      "caption": "Lower is better. GaussianNB is competitive on binary macro F1 yet clearly worst on log loss (CV 0.3392, student 0.3591): its probability outputs are poorly calibrated on this candidate-row task. The student value comes from the fresh float64 refit of this phase, not from the historical artifact (see reports/final_five/gnb_probability_diagnostic.json: probabilities finite, within [0,1], row sums within 1.6e-5 of 1). Every other family stays below 0.10 on both partitions. Binary candidate-row metric: one row per (observation, candidate directed arc) at threshold 0.5; distinct from positive-class F1 and from observation-level edge F1. Source: cv/*.json, evaluation/*.json.",
+      "units": "nats per candidate row (natural-log loss)",
+      "source": "experiments/final_five/current/cv/*.json; evaluation/*.json",
+      "stage": "models",
+      "status": "actual_measured",
+      "created_utc": "2026-11-18T08:59:52.724358+00:00",
+      "ocr_expect": [
+        "log",
+        "loss",
+        "gaussian"
+      ]
+    },
+    {
+      "path": "visualizations/final_five/plots/final_five_log_loss_partitions.png",
+      "pdf_path": "visualizations/final_five/plots/final_five_log_loss_partitions.pdf",
+      "bytes": 312958,
+      "sha256": "4fcd7a7ee57c756031b1612cd95a28928eb31831daf52b5e159cf7b8c588096f",
+      "pdf_sha256": "763104e0016dab292a09ec2650f8a6eb5bf8af3adcfa37535e1315979916ded9",
+      "dpi": 300,
+      "pixels": {
+        "width": 2481,
+        "height": 1755
+      },
+      "page": "A4 half (landscape)",
+      "title": "Binary log loss on three measured partitions (epoch-wise history: N/A)",
+      "caption": "Train resubstitution (refit on all 80 TRAIN trips, rescored on TRAIN), CV out-of-fold, and student log loss per configuration. None of the five families keeps an epoch-wise training history under this sklearn pipeline; per-epoch loss curves are stated as N/A in docs/FINAL_REQUIREMENTS.md instead of being fabricated. These measured partition losses replace epoch plots; resubstitution loss is optimistic by construction because the same rows are scored that trained the fit. GaussianNB's calibration gap dominates both partitions. Source: evaluation/*.json, cv/*.json.",
+      "units": "nats per candidate row (natural-log loss)",
+      "source": "experiments/final_five/current/evaluation/*.json; cv/*.json",
+      "stage": "models",
+      "status": "actual_measured",
+      "created_utc": "2026-11-18T08:59:53.310332+00:00",
+      "ocr_expect": [
+        "partition",
+        "log",
+        "loss"
+      ]
+    },
+    {
+      "path": "visualizations/final_five/plots/final_five_selection_comparison.png",
+      "pdf_path": "visualizations/final_five/plots/final_five_selection_comparison.pdf",
+      "bytes": 422109,
+      "sha256": "5a90e02450ab82928917b2148e6a74208cbdbc65a5a7738b3a163da1d6a6bcd9",
+      "pdf_sha256": "2a7ae3085735f8cb6236515c80c0b4d235023a37b60486ba8b3b6dede323f481",
+      "dpi": 300,
+      "pixels": {
+        "width": 2481,
+        "height": 1755
+      },
+      "page": "A4 half (landscape)",
+      "title": "Why HistGradientBoosting was selected: four measured axes",
+      "caption": "The recorded decision (selection.json) ranks the five family defaults by TRAIN out-of-fold trip-macro top-1, with binary macro F1 and log loss as tie-breakers. HistGradientBoosting leads the objective (0.8927 vs Bagging 0.8915) and also holds the best CV macro F1 (0.9429 vs 0.9426); GaussianNB loses the log-loss tie-breaker, and KNN pays 187 s of student inference where the selected tuned model pays 0.50 s. No student or evaluator number entered the decision. Y-axes for the rate panels start at the stated values; the inference panel is log-scaled across four orders of magnitude. Source: results.json, model_comparison.csv, evaluation/*.json.",
+      "units": "fractions 0-1 for rates; seconds for inference (log panel)",
+      "source": "experiments/final_five/current/results.json; model_comparison.csv",
+      "stage": "models",
+      "status": "actual_measured",
+      "created_utc": "2026-11-18T08:59:54.489947+00:00",
+      "ocr_expect": [
+        "objective",
+        "macro",
+        "inference"
+      ]
+    },
+    {
+      "path": "visualizations/final_five/plots/final_five_confusion_logistic_regression.png",
+      "pdf_path": "visualizations/final_five/plots/final_five_confusion_logistic_regression.pdf",
+      "bytes": 251761,
+      "sha256": "9ab57ee20cc2f7c53848743fc65eb02605631934b1e0db094cb984bb9e3cd984",
+      "pdf_sha256": "e35b357abbfd9175e5fd87b32e561ace8c3feda00c7d7751b68033bd7593c159",
+      "dpi": 300,
+      "pixels": {
+        "width": 2481,
+        "height": 1755
+      },
+      "page": "A4 half (landscape)",
+      "title": "Student-development confusion matrix: logistic_regression (binary candidate rows)",
+      "caption": "Binary candidate-row confusion over all 10 student-development trips: 175,778 rows, 19,141 positive, threshold 0.5. Percentages are row-normalized (per true class). Class imbalance keeps raw row accuracy near 0.97 to 0.98 for every configuration, which is why accuracy alone is not the headline number. The 19 observations whose proxy target road is absent from the candidate set contribute no positive row and are counted separately as candidate misses. Binary candidate-row metric: one row per (observation, candidate directed arc) at threshold 0.5; distinct from positive-class F1 and from observation-level edge F1. Source: evaluation/<run>.json.",
+      "units": "candidate-row counts; row-normalized percentages",
+      "source": "experiments/final_five/current/evaluation/logistic_regression.json",
+      "stage": "models",
+      "status": "actual_measured",
+      "created_utc": "2026-11-18T08:59:54.945079+00:00",
+      "ocr_expect": [
+        "confusion",
+        "predicted",
+        "true"
+      ]
+    },
+    {
+      "path": "visualizations/final_five/plots/final_five_confusion_knn_distance_weighted.png",
+      "pdf_path": "visualizations/final_five/plots/final_five_confusion_knn_distance_weighted.pdf",
+      "bytes": 248786,
+      "sha256": "3452b1a7e49fa6c7d431390e51006c65f767d7d5b967fdbc4a19c95e1e7c6b16",
+      "pdf_sha256": "cf0bf56559b37dbb77063c0c96e92223e9edc858589edaa8b067236631eb2b85",
+      "dpi": 300,
+      "pixels": {
+        "width": 2481,
+        "height": 1755
+      },
+      "page": "A4 half (landscape)",
+      "title": "Student-development confusion matrix: knn_distance_weighted (binary candidate rows)",
+      "caption": "Binary candidate-row confusion over all 10 student-development trips: 175,778 rows, 19,141 positive, threshold 0.5. Percentages are row-normalized (per true class). Class imbalance keeps raw row accuracy near 0.97 to 0.98 for every configuration, which is why accuracy alone is not the headline number. The 19 observations whose proxy target road is absent from the candidate set contribute no positive row and are counted separately as candidate misses. Binary candidate-row metric: one row per (observation, candidate directed arc) at threshold 0.5; distinct from positive-class F1 and from observation-level edge F1. Source: evaluation/<run>.json.",
+      "units": "candidate-row counts; row-normalized percentages",
+      "source": "experiments/final_five/current/evaluation/knn_distance_weighted.json",
+      "stage": "models",
+      "status": "actual_measured",
+      "created_utc": "2026-11-18T08:59:55.382247+00:00",
+      "ocr_expect": [
+        "confusion",
+        "predicted",
+        "true"
+      ]
+    },
+    {
+      "path": "visualizations/final_five/plots/final_five_confusion_bagging.png",
+      "pdf_path": "visualizations/final_five/plots/final_five_confusion_bagging.pdf",
+      "bytes": 249322,
+      "sha256": "3a9462cf3ce67b4872aff7f46119b1da7a1345d90832d3f686f9ca03fb1c4460",
+      "pdf_sha256": "29e27fd26fa8546119cb9f51c4fc5d9a9f378c9baae1b835dd63860b3d942bb6",
+      "dpi": 300,
+      "pixels": {
+        "width": 2481,
+        "height": 1755
+      },
+      "page": "A4 half (landscape)",
+      "title": "Student-development confusion matrix: bagging (binary candidate rows)",
+      "caption": "Binary candidate-row confusion over all 10 student-development trips: 175,778 rows, 19,141 positive, threshold 0.5. Percentages are row-normalized (per true class). Class imbalance keeps raw row accuracy near 0.97 to 0.98 for every configuration, which is why accuracy alone is not the headline number. The 19 observations whose proxy target road is absent from the candidate set contribute no positive row and are counted separately as candidate misses. Binary candidate-row metric: one row per (observation, candidate directed arc) at threshold 0.5; distinct from positive-class F1 and from observation-level edge F1. Source: evaluation/<run>.json.",
+      "units": "candidate-row counts; row-normalized percentages",
+      "source": "experiments/final_five/current/evaluation/bagging.json",
+      "stage": "models",
+      "status": "actual_measured",
+      "created_utc": "2026-11-18T08:59:55.806329+00:00",
+      "ocr_expect": [
+        "confusion",
+        "predicted",
+        "true"
+      ]
+    },
+    {
+      "path": "visualizations/final_five/plots/final_five_confusion_gaussian_nb.png",
+      "pdf_path": "visualizations/final_five/plots/final_five_confusion_gaussian_nb.pdf",
+      "bytes": 247777,
+      "sha256": "5621fbc4e3585ca8770e227f37a649fc8a2baefe03f47b7e5736b95fa619cf2b",
+      "pdf_sha256": "00e2bae083723299bcdc719497a37f794eea2da9339438bba4f636c0404c4e1d",
+      "dpi": 300,
+      "pixels": {
+        "width": 2481,
+        "height": 1755
+      },
+      "page": "A4 half (landscape)",
+      "title": "Student-development confusion matrix: gaussian_nb (binary candidate rows)",
+      "caption": "Binary candidate-row confusion over all 10 student-development trips: 175,778 rows, 19,141 positive, threshold 0.5. Percentages are row-normalized (per true class). Class imbalance keeps raw row accuracy near 0.97 to 0.98 for every configuration, which is why accuracy alone is not the headline number. The 19 observations whose proxy target road is absent from the candidate set contribute no positive row and are counted separately as candidate misses. Binary candidate-row metric: one row per (observation, candidate directed arc) at threshold 0.5; distinct from positive-class F1 and from observation-level edge F1. Source: evaluation/<run>.json.",
+      "units": "candidate-row counts; row-normalized percentages",
+      "source": "experiments/final_five/current/evaluation/gaussian_nb.json",
+      "stage": "models",
+      "status": "actual_measured",
+      "created_utc": "2026-11-18T08:59:56.361055+00:00",
+      "ocr_expect": [
+        "confusion",
+        "predicted",
+        "true"
+      ]
+    },
+    {
+      "path": "visualizations/final_five/plots/final_five_confusion_hist_gradient_boosting.png",
+      "pdf_path": "visualizations/final_five/plots/final_five_confusion_hist_gradient_boosting.pdf",
+      "bytes": 246709,
+      "sha256": "730af292493386a7ef81b9848068f0218a520ded5315e36aea5e93da2ab3b23f",
+      "pdf_sha256": "bf74db651b2ce64d9ee88fd3ffa7e6bc55e944f482d81d226513da7863c84a79",
+      "dpi": 300,
+      "pixels": {
+        "width": 2481,
+        "height": 1755
+      },
+      "page": "A4 half (landscape)",
+      "title": "Student-development confusion matrix: hist_gradient_boosting (binary candidate rows)",
+      "caption": "Binary candidate-row confusion over all 10 student-development trips: 175,778 rows, 19,141 positive, threshold 0.5. Percentages are row-normalized (per true class). Class imbalance keeps raw row accuracy near 0.97 to 0.98 for every configuration, which is why accuracy alone is not the headline number. The 19 observations whose proxy target road is absent from the candidate set contribute no positive row and are counted separately as candidate misses. Binary candidate-row metric: one row per (observation, candidate directed arc) at threshold 0.5; distinct from positive-class F1 and from observation-level edge F1. Source: evaluation/<run>.json.",
+      "units": "candidate-row counts; row-normalized percentages",
+      "source": "experiments/final_five/current/evaluation/hist_gradient_boosting.json",
+      "stage": "models",
+      "status": "actual_measured",
+      "created_utc": "2026-11-18T08:59:56.780677+00:00",
+      "ocr_expect": [
+        "confusion",
+        "predicted",
+        "true"
+      ]
+    },
+    {
+      "path": "visualizations/final_five/plots/final_five_confusion_hist_gradient_boosting_tuned.png",
+      "pdf_path": "visualizations/final_five/plots/final_five_confusion_hist_gradient_boosting_tuned.pdf",
+      "bytes": 245984,
+      "sha256": "0a445ed8c8b380ba55a81832c5e337ab7e4e007122652108e514f8356f4274c9",
+      "pdf_sha256": "6bcfe3d6206edcdc00367f05de2c4be61787a1ce41ed3fd2d8c1fe807dff641e",
+      "dpi": 300,
+      "pixels": {
+        "width": 2481,
+        "height": 1755
+      },
+      "page": "A4 half (landscape)",
+      "title": "Student-development confusion matrix: hist_gradient_boosting_tuned (binary candidate rows)",
+      "caption": "Binary candidate-row confusion over all 10 student-development trips: 175,778 rows, 19,141 positive, threshold 0.5. Percentages are row-normalized (per true class). Class imbalance keeps raw row accuracy near 0.97 to 0.98 for every configuration, which is why accuracy alone is not the headline number. The 19 observations whose proxy target road is absent from the candidate set contribute no positive row and are counted separately as candidate misses. Binary candidate-row metric: one row per (observation, candidate directed arc) at threshold 0.5; distinct from positive-class F1 and from observation-level edge F1. Source: evaluation/<run>.json.",
+      "units": "candidate-row counts; row-normalized percentages",
+      "source": "experiments/final_five/current/evaluation/hist_gradient_boosting_tuned.json",
+      "stage": "models",
+      "status": "actual_measured",
+      "created_utc": "2026-11-18T08:59:57.264549+00:00",
+      "ocr_expect": [
+        "confusion",
+        "predicted",
+        "true"
+      ]
+    },
+    {
+      "path": "visualizations/final_five/plots/final_five_confusion_matrices_all.png",
+      "pdf_path": "visualizations/final_five/plots/final_five_confusion_matrices_all.pdf",
+      "bytes": 627691,
+      "sha256": "a66103ed05c706bcab049e1ae3bf9bfb26a10bfc3946874009af1a90ea79d0aa",
+      "pdf_sha256": "59bc72112b3fe1528f6820a891e3a1f7dde76d773cfa2e2a691d1432b4ba6357",
+      "dpi": 300,
+      "pixels": {
+        "width": 2481,
+        "height": 3507
+      },
+      "page": "A4 full (portrait)",
+      "title": "All six configurations: student-development confusion matrices (3x2 grid)",
+      "caption": "Five model families plus the tuned HistGradientBoosting variant make six measured configurations; this grid shows all six so the tuned run is never confused with a sixth family. Binary candidate-row confusion over all 10 student-development trips: 175,778 rows, 19,141 positive, threshold 0.5. Percentages are row-normalized (per true class). Class imbalance keeps raw row accuracy near 0.97 to 0.98 for every configuration, which is why accuracy alone is not the headline number. The 19 observations whose proxy target road is absent from the candidate set contribute no positive row and are counted separately as candidate misses. Binary candidate-row metric: one row per (observation, candidate directed arc) at threshold 0.5; distinct from positive-class F1 and from observation-level edge F1. Source: evaluation/<run>.json.",
+      "units": "candidate-row counts; row-normalized percentages",
+      "source": "experiments/final_five/current/evaluation/*.json",
+      "stage": "models",
+      "status": "actual_measured",
+      "created_utc": "2026-11-18T08:59:58.189790+00:00",
+      "ocr_expect": [
+        "confusion",
+        "predicted"
+      ]
+    },
+    {
+      "path": "visualizations/final_five/plots/final_five_fold_stability.png",
+      "pdf_path": "visualizations/final_five/plots/final_five_fold_stability.pdf",
+      "bytes": 331231,
+      "sha256": "8f95bcf23025f800b853abd9cc9f89f3e715a2a26456371084d5330e5d52da11",
+      "pdf_sha256": "0407f02b59c08dc66f99d3c3ea2f9c8786cbae0b775199e841dfe511927a7cf7",
+      "dpi": 300,
+      "pixels": {
+        "width": 2481,
+        "height": 1755
+      },
+      "page": "A4 half (landscape)",
+      "title": "Fold stability: every fold of the 3-fold grouped CV, per configuration",
+      "caption": "Each dot is one GroupKFold fold (27, 27 and 26 validation trips). Black bars join the fold mean. Fold 2 is the hardest fold for every configuration, which moves the fold spread more than the choice of model does; fold standard deviations of macro F1 range from 0.007 to 0.009. The tuned HistGB run is not more stable than the default (macro F1 fold SD 0.0094 vs 0.0075). Y-axes start at 0.80; the metric range is 0 to 1. Source: cv/*.json folds.",
+      "units": "fractions 0-1 (per-fold binary macro F1; per-fold top-1 accuracy)",
+      "source": "experiments/final_five/current/cv/*.json",
+      "stage": "models",
+      "status": "actual_measured",
+      "created_utc": "2026-11-18T08:59:58.760068+00:00",
+      "ocr_expect": [
+        "fold",
+        "stability"
+      ]
+    },
+    {
+      "path": "visualizations/final_five/plots/final_five_generalization_gap.png",
+      "pdf_path": "visualizations/final_five/plots/final_five_generalization_gap.pdf",
+      "bytes": 332071,
+      "sha256": "23cc113cbb59be34f22b6bd2513d2db7e23947ef46a19fb82205ed442b259b49",
+      "pdf_sha256": "f641f669c52a8297bb2b2fd1be3592c8d1bea164813acab97d949ee717c2dca2",
+      "dpi": 300,
+      "pixels": {
+        "width": 2481,
+        "height": 1755
+      },
+      "page": "A4 half (landscape)",
+      "title": "Generalization gap: train resubstitution vs CV vs student macro F1",
+      "caption": "Binary macro F1 on three partitions: refit on all 80 TRAIN trips and rescored on TRAIN (optimistic by construction), out-of-fold CV on the same 80 trips, and the 10 student-development trips scored after selection. Resubstitution sits above CV by between 0.000 (GaussianNB, little capacity to overfit) and 0.029 (Bagging, 40 deep trees). Student stays within 0.004 of CV for every configuration, so no configuration collapses on the student partition. Binary candidate-row metric: one row per (observation, candidate directed arc) at threshold 0.5; distinct from positive-class F1 and from observation-level edge F1. Y-axis starts at 0.88. Source: evaluation/*.json, cv/*.json.",
+      "units": "fraction 0-1 (binary macro F1)",
+      "source": "experiments/final_five/current/evaluation/*.json; cv/*.json",
+      "stage": "models",
+      "status": "actual_measured",
+      "created_utc": "2026-11-18T08:59:59.407332+00:00",
+      "ocr_expect": [
+        "generalization",
+        "resubstitution",
+        "student"
+      ]
+    },
+    {
+      "path": "visualizations/final_five/plots/final_five_timing.png",
+      "pdf_path": "visualizations/final_five/plots/final_five_timing.pdf",
+      "bytes": 368979,
+      "sha256": "c3b38956e18e2a3a0f84543218849625adcc488b6903297771c6ccad819d1464",
+      "pdf_sha256": "029a799079166a54f1d255e2b775be5fe4070e1effe20feb80734df974b06a06",
+      "dpi": 300,
+      "pixels": {
+        "width": 2481,
+        "height": 1755
+      },
+      "page": "A4 half (landscape)",
+      "title": "Measured compute cost per configuration (log scale, CPU only)",
+      "caption": "Wall-clock seconds as measured by the pipeline on CPU; no GPU was used or claimed. KNN spends almost nothing on fitting (it stores a reference bank) but needs 299 s of CV inference and 187.1 s on the 10 student trips, against 0.50 s for the selected tuned HistGB (roughly 375x faster on student inference). The tuned final artifact was refit on all 80 trips in 4.40 s. Log scale spans five orders of magnitude; every bar is labelled with its measured value. Source: cv/*.json, evaluation/*.json, model_comparison.csv.",
+      "units": "seconds (wall-clock, log-scaled panels)",
+      "source": "experiments/final_five/current/cv/*.json; evaluation/*.json; model_comparison.csv",
+      "stage": "models",
+      "status": "actual_measured",
+      "created_utc": "2026-11-18T09:00:00.552149+00:00",
+      "ocr_expect": [
+        "seconds",
+        "inference",
+        "training"
+      ]
+    },
+    {
+      "path": "visualizations/final_five/plots/final_five_tuned_vs_untuned.png",
+      "pdf_path": "visualizations/final_five/plots/final_five_tuned_vs_untuned.pdf",
+      "bytes": 361973,
+      "sha256": "81db2b00f981d1e88b775b357a5b8463fca319b550e6d5db8e909521d56f716e",
+      "pdf_sha256": "cb508cb85b4b4a0c1cb149033a0cf50f2b2da5082562d4a7013eda81634eaa48",
+      "dpi": 300,
+      "pixels": {
+        "width": 2481,
+        "height": 1755
+      },
+      "page": "A4 half (landscape)",
+      "title": "Tuned vs default HistGradientBoosting on identical partitions: different metrics, different winners",
+      "caption": "Same 3-fold CV and the same student partition; only the parameters differ (tuned: max_iter 104, learning_rate 0.159, max_leaf_nodes 22, min_samples_leaf 38, l2_regularization 0.86; from Bayesian trial 5). The tuned run wins the recorded selection objective (CV trip-macro top-1 0.8934 vs 0.8927) and both student accuracy panels, but CV binary macro F1 declines (0.9416 vs 0.9429) and student log loss is marginally worse (0.05550 vs 0.05522). The tuned run was kept because the recorded objective is top-1; these small contrary movements are reported rather than hidden. Panel y-axes are zoomed to the pair of values; read the printed numbers. Source: cv/hist_gradient_boosting*.json, evaluation/hist_gradient_boosting*.json.",
+      "units": "fractions 0-1 (accuracies, F1); nats (log loss)",
+      "source": "experiments/final_five/current/cv/hist_gradient_boosting*.json; evaluation/hist_gradient_boosting*.json",
+      "stage": "models",
+      "status": "actual_measured",
+      "created_utc": "2026-11-18T09:00:01.353936+00:00",
+      "ocr_expect": [
+        "tuned",
+        "default",
+        "wins"
+      ]
+    },
+    {
+      "path": "visualizations/final_five/plots/final_five_hpo_progress.png",
+      "pdf_path": "visualizations/final_five/plots/final_five_hpo_progress.pdf",
+      "bytes": 393535,
+      "sha256": "415522f34c4a53d675e6b97dae77d0ffc88e9d019b1c26d8d47e2c93b37be901",
+      "pdf_sha256": "3620af8fdcc7551ac577b9a0d8f640aaa3b943322b77528794cbdcfc2bb2a29b",
+      "dpi": 300,
+      "pixels": {
+        "width": 2481,
+        "height": 1755
+      },
+      "page": "A4 half (landscape)",
+      "title": "Bayesian HPO progress: observed objective across 12 trials",
+      "caption": "Objective: out-of-fold trip-macro top-1 on the 80 TRAIN trips; the search never loaded student or evaluator data. Trial 0 reuses the measured default-parameter baseline; trials 1-3 form the seeded initial design; trials 4-11 are Gaussian-process (Matern-5/2) proposals chosen by expected improvement. The best observed objective is trial 5 (0.8934, ringed), 0.0007 above the baseline; the whole search spans just over 0.004, so the tuning gain is real but small. These are observed objective values from the retained trial log, not smoothed or predicted curves. Y-axis spans 0.006 of the 0-1 range to keep differences legible. Source: bayesian_optimization.json, experiments/bayesian_trials.jsonl.",
+      "units": "fraction 0-1 (CV trip-macro top-1 objective)",
+      "source": "experiments/final_five/current/bayesian_optimization.json; experiments/bayesian_trials.jsonl",
+      "stage": "models",
+      "status": "actual_measured",
+      "created_utc": "2026-11-18T09:00:01.951129+00:00",
+      "ocr_expect": [
+        "trial",
+        "objective",
+        "baseline"
+      ]
+    },
+    {
+      "path": "visualizations/final_five/plots/final_five_hpo_parameters.png",
+      "pdf_path": "visualizations/final_five/plots/final_five_hpo_parameters.pdf",
+      "bytes": 452368,
+      "sha256": "fc8601e53bb599f796e891d5ab3da3bf2e1f87747b11d65a200dbc937276cb21",
+      "pdf_sha256": "8a8ad79cb9d6f98309fe6c39404641fbed888adcbf1b242d34a836dafdb27ca8",
+      "dpi": 300,
+      "pixels": {
+        "width": 4713,
+        "height": 1614
+      },
+      "page": "A4 full (portrait)",
+      "title": "Observed HPO parameter values per trial (no causal importance claimed)",
+      "caption": "Sampled hyperparameter values for each of the 12 Bayesian trials, coloured by the measured objective (darker is better); the best trial is ringed. These are observed samples from the retained search record. They are not a causal importance or sensitivity analysis: with 12 correlated trials chosen by the acquisition rule, parameter-objective patterns cannot support effect claims, and none are made here. Search space: learning_rate log 0.025-0.2, max_iter 70-200, max_leaf_nodes 7-47, min_samples_leaf log-int 15-160, l2_regularization log 0.01-20. Source: bayesian_optimization.json.",
+      "units": "parameter values in native units per panel; trial index 0-11",
+      "source": "experiments/final_five/current/bayesian_optimization.json",
+      "stage": "models",
+      "status": "actual_measured",
+      "created_utc": "2026-11-18T09:00:03.214127+00:00",
+      "ocr_expect": [
+        "trial",
+        "learning",
+        "parameter"
+      ]
+    },
+    {
+      "path": "visualizations/final_five/plots/final_five_observation_edge_metrics.png",
+      "pdf_path": "visualizations/final_five/plots/final_five_observation_edge_metrics.pdf",
+      "bytes": 374355,
+      "sha256": "a17ea8164f5cf90dd848758223816b4f5754f197700b55c0730c7ff3d574eacb",
+      "pdf_sha256": "8c5ce056a46c920747055f268c7f74568175ced9b636493a9effaa3da673f44d",
+      "dpi": 300,
+      "pixels": {
+        "width": 2481,
+        "height": 1614
+      },
+      "page": "A4 half (landscape)",
+      "title": "Observation-level edge metrics on the student partition",
+      "caption": "Left: graph-namespaced directed-edge macro F1; classes are trip:arc identifiers including reference-only and prediction-only roads, macro-averaged over observed classes. Right: per-observation normalized categorical negative log-likelihood of the candidate matching the proxy target (probabilities normalized within each observation, floor 1e-7, the 19 candidate misses retained with zero target mass). Both are observation-level metrics and are deliberately distinct from the binary candidate-row F1 shown elsewhere. The tuned HistGB run has the highest edge F1 and the lowest categorical NLL of the six configurations. Left y-axis starts at 0.75. Source: sequence_classification.json.",
+      "units": "fractions 0-1 (edge macro F1); nats per observation (NLL)",
+      "source": "experiments/final_five/current/sequence_classification.json",
+      "stage": "models",
+      "status": "actual_measured",
+      "created_utc": "2026-11-18T09:00:03.887718+00:00",
+      "ocr_expect": [
+        "edge",
+        "observation",
+        "nll"
+      ]
+    },
+    {
+      "path": "visualizations/final_five/plots/final_five_continuity.png",
+      "pdf_path": "visualizations/final_five/plots/final_five_continuity.pdf",
+      "bytes": 310550,
+      "sha256": "b141d2f522696729685c7eb3afa40a325ff970d5a947bd504d32c818f1ab5f13",
+      "pdf_sha256": "d07f27d4861b1f0e511fc8b81812b82f04495047dcd517e184f41caa677bf60f",
+      "dpi": 300,
+      "pixels": {
+        "width": 2481,
+        "height": 1614
+      },
+      "page": "A4 half (landscape)",
+      "title": "Raw classifier continuity on the student partition (no decoder applied)",
+      "caption": "Continuity is scored on adjacent available observation assignments of the raw classifier argmax: a pair is continuous if it stays on the same canonical edge or the head of the previous edge equals the tail of the next; no routed connectors are inserted and observed time gaps are included. Right panel restricts to the 4,620 to 5,077 pairs where the edge changes, the stricter test. This is the classifier-only baseline that the frozen decoder ablation (classifier + HMM) will be compared against once its report exists. Y-axes start at 0.60. Source: sequence_classification.json.",
+      "units": "fractions 0-1 (continuity rates over adjacent observation pairs)",
+      "source": "experiments/final_five/current/sequence_classification.json",
+      "stage": "models",
+      "status": "actual_measured",
+      "created_utc": "2026-11-18T09:00:04.525959+00:00",
+      "ocr_expect": [
+        "continuity",
+        "edge"
+      ]
+    },
+    {
+      "path": "visualizations/final_five/plots/final_five_denominators.png",
+      "pdf_path": "visualizations/final_five/plots/final_five_denominators.pdf",
+      "bytes": 346347,
+      "sha256": "5d385b7df43903caa3b3dd4ec8175a9f29df91af7097467c1af5b65b007dba27",
+      "pdf_sha256": "fd7871c97fa72efe143e29327fd933dc43cb7ac4480d3c0760431c9dec84debd",
+      "dpi": 300,
+      "pixels": {
+        "width": 2481,
+        "height": 1614
+      },
+      "page": "A4 half (landscape)",
+      "title": "What each metric divides: observations, candidate rows, and proxy-target misses",
+      "caption": "Left: observations, candidate rows and positive rows per partition, log-scaled because candidate rows outnumber positives about 9 to 1. Right: proxy-target candidate misses. Candidate sets were never empty on either partition (zero missing candidate sets); in 578 of 28,000 TRAIN observations (2.06%) and 19 of 19,160 student observations (0.099%) the proxy target road was not among the candidates, so those observations cannot be scored top-1 correct no matter what the model does. Pooled top-1 divides by observations; trip-macro divides equally by trips; on TRAIN every trip has exactly 350 observations so the two coincide, on the student partition they do not. Source: cv/*.json oof_metrics, evaluation/*.json student_metrics.",
+      "units": "counts (rows, observations); miss rates in percent",
+      "source": "experiments/final_five/current/cv/*.json; evaluation/*.json",
+      "stage": "models",
+      "status": "actual_measured",
+      "created_utc": "2026-11-18T09:00:05.297709+00:00",
+      "ocr_expect": [
+        "denominators",
+        "candidate",
+        "misses"
+      ]
+    },
+    {
+      "path": "visualizations/final_five/plots/final_five_route_ablation.png",
+      "pdf_path": "visualizations/final_five/plots/final_five_route_ablation.pdf",
+      "bytes": 374724,
+      "sha256": "3a6f6df16ee8fee484f9f17a137c5632e3cce71c4891b10b938b42ae92618f81",
+      "pdf_sha256": "deef22e3df99485cdff87699303e707253fb735280923b9ae386cb10dcabc20e",
+      "dpi": 300,
+      "pixels": {
+        "width": 4713,
+        "height": 1491
+      },
+      "page": "A4 full (portrait)",
+      "title": "Final-five decoder ablation: classifier-only vs classifier+HMM",
+      "caption": "Decoder evidence from reports/final_five/decoder/student_ablation.json on all 10 student-development trips; trip-macro denominator 10 trips. Metrics are computed over chronological arc-ID traversals (repeats and loops preserved) directly against the supplied reference arc traversals. The paired decoder experiment uses the same effective candidates for classifier-only and Viterbi decoding; observation-level proxy labels are a separate measure. Routes and metrics come from the frozen decoder ablation, not from this plotter. Source: reports/final_five/decoder/student_ablation.json (sha256 045513ee4029...).",
+      "units": "fractions 0-1 (route-level F1, similarity, continuity)",
+      "source": "reports/final_five/decoder/student_ablation.json",
+      "stage": "decoder",
+      "status": "actual_measured",
+      "created_utc": "2026-11-18T09:00:06.087765+00:00",
+      "ocr_expect": [
+        "ablation",
+        "route"
+      ]
+    }
+  ],
+  "figure_count": 23,
+  "model_figure_count": 22,
+  "decoder_figure_count": 1,
+  "expected_figure_counts": {
+    "models": 22,
+    "decoder": 1,
+    "total": 23
+  },
+  "eda_reused_read_only": [
+    {
+      "bytes": 146997,
+      "caption": "Source: completed byte/row audit, 360 original files. Student-development is not the reserved evaluator partition.",
+      "partition": "all 80 train + 10 student_test development trips; no evaluator data",
+      "path": "visualizations/plots/dataset_inventory.png",
+      "phase_role": "eda_context_historical_complete",
+      "reused_read_only": true,
+      "sha256": "8895f33a38a095828c3274be7e554916d5c054872649989e4c4793a6f769d2db",
+      "source": "analysis/data_audit/{summary,per_trip,manifest}.json plus all original .track files; visualizations/eda_summary.json hashes",
+      "status": "stable_actual",
+      "title": "Dataset inventory: all 80 training + 10 student-development trips",
+      "origin_manifest": "visualizations/phase_three/figure_manifest.json",
+      "note": "completed phase-one EDA figure, reused read-only for the final report; path and source hash unchanged, no edits"
+    },
+    {
+      "bytes": 188152,
+      "caption": "Source: complete file and cross-file audit. Blank/malformed rows are counted; missing values are not inferred from absent timestamps.\nRepeated coordinates can represent stops. Apparent speed uses GPS displacement / supplied seconds, not independently measured vehicle speed.",
+      "partition": "all 80 train + 10 student_test development trips; no evaluator data",
+      "path": "visualizations/plots/missing_invalid_and_anomalies.png",
+      "phase_role": "eda_context_historical_complete",
+      "reused_read_only": true,
+      "sha256": "717b90dd9b0dfe17303466edc0bea5dc31768147a3b1a1bf13b4f44f72cb356e",
+      "source": "analysis/data_audit/{summary,per_trip,manifest}.json plus all original .track files; visualizations/eda_summary.json hashes",
+      "status": "stable_actual",
+      "title": "Data quality across every permitted trip",
+      "origin_manifest": "visualizations/phase_three/figure_manifest.json",
+      "note": "completed phase-one EDA figure, reused read-only for the final report; path and source hash unchanged, no edits"
+    },
+    {
+      "bytes": 208320,
+      "caption": "All 80 training and 10 student-development trips; no subsampling. Chord sums do not claim exact physical road length.\nReference routes are chronological arc traversals, not an independently supplied label for every GPS observation.",
+      "partition": "all 80 train + 10 student_test development trips; no evaluator data",
+      "path": "visualizations/plots/trajectory_distributions.png",
+      "phase_role": "eda_context_historical_complete",
+      "reused_read_only": true,
+      "sha256": "c1069eba52ff221b5fbda659bff9f72b61a5ff2369f935eea4295c09d61f6c2e",
+      "source": "analysis/data_audit/{summary,per_trip,manifest}.json plus all original .track files; visualizations/eda_summary.json hashes",
+      "status": "stable_actual",
+      "title": "Trajectory size, duration and reference-route structure",
+      "origin_manifest": "visualizations/phase_three/figure_manifest.json",
+      "note": "completed phase-one EDA figure, reused read-only for the final report; path and source hash unchanged, no edits"
+    },
+    {
+      "bytes": 150849,
+      "caption": "Training (80 trips): 96.50% \u22481 s, max 153,064 s; Student-development (10 trips): 98.62% \u22481 s, max 210 s.\n\u22481 s uses absolute tolerance 1e\u22126 s; exact audit counts are retained in eda_summary.json. No gaps filled or timestamps invented.",
+      "partition": "all 80 train + 10 student_test development trips; no evaluator data",
+      "path": "visualizations/plots/timestamp_gaps.png",
+      "phase_role": "eda_context_historical_complete",
+      "reused_read_only": true,
+      "sha256": "bc022e3929d18bed17ba8e5edbcec822559b81bb2894e4de9f39f16961001db9",
+      "source": "analysis/data_audit/{summary,per_trip,manifest}.json plus all original .track files; visualizations/eda_summary.json hashes",
+      "status": "stable_actual",
+      "title": "Timestamp ordering and sampling gaps: every consecutive pair",
+      "origin_manifest": "visualizations/phase_three/figure_manifest.json",
+      "note": "completed phase-one EDA figure, reused read-only for the final report; path and source hash unchanged, no edits"
+    },
+    {
+      "bytes": 244604,
+      "caption": "Complete directed-graph audit, computed per trip. Networks can overlap geographically; totals are not a unique global road network.\nWeak connectivity ignores direction; strong connectivity requires directed paths both ways. Zero isolated nodes does not mean connected.",
+      "partition": "all 80 train + 10 student_test development trips; no evaluator data",
+      "path": "visualizations/plots/road_network_sizes_connectivity.png",
+      "phase_role": "eda_context_historical_complete",
+      "reused_read_only": true,
+      "sha256": "0a081b29f0c35e797f46abe28970d009569bda29ffb65b25c7dba8e97faa5447",
+      "source": "analysis/data_audit/{summary,per_trip,manifest}.json plus all original .track files; visualizations/eda_summary.json hashes",
+      "status": "stable_actual",
+      "title": "Road-network sizes and connectivity: all 90 trip graphs",
+      "origin_manifest": "visualizations/phase_three/figure_manifest.json",
+      "note": "completed phase-one EDA figure, reused read-only for the final report; path and source hash unchanged, no edits"
+    },
+    {
+      "bytes": 95492,
+      "caption": "All raw positions from 80 training and 10 student-development tracks; shared longitude/latitude axes; no web tiles.\nAt this multi-region scale a trip can appear as a compact point; the local-scale galleries below show every trajectory separately.",
+      "partition": "all 80 train + 10 student_test development trips; no evaluator data",
+      "path": "visualizations/plots/gps_geographic_coverage.png",
+      "phase_role": "eda_context_historical_complete",
+      "reused_read_only": true,
+      "sha256": "c83283403296dcaaed21936361885a3210a8a6609e7eb8584f1e2853bf9aa2b3",
+      "source": "analysis/data_audit/{summary,per_trip,manifest}.json plus all original .track files; visualizations/eda_summary.json hashes",
+      "status": "stable_actual",
+      "title": "Geographic GPS coverage: every observed trajectory",
+      "origin_manifest": "visualizations/phase_three/figure_manifest.json",
+      "note": "completed phase-one EDA figure, reused read-only for the final report; path and source hash unchanged, no edits"
+    },
+    {
+      "bytes": 289007,
+      "caption": "Every observation included. Green dot = first GPS row; red \u00d7 = last. Independent local-km panel axes, centered at median coordinate.\nEquirectangular projection uses cos(median latitude). Panels have different scales; timestamps/gaps are not interpolated.",
+      "partition": "train: all 80 trips, pages 1\u20134 together",
+      "path": "visualizations/plots/gps_trip_gallery_train_01.png",
+      "phase_role": "eda_context_historical_complete",
+      "reused_read_only": true,
+      "sha256": "78fc6288f7c936d5a3c89b6a80f2a8d1d0720189154333d597ec46992b101485",
+      "source": "Every original TRAIN .track observation, SHA256-checked against analysis/data_audit/manifest.json",
+      "status": "stable_actual",
+      "title": "Every raw GPS trajectory \u00b7 Training (80 trips) \u00b7 page 1",
+      "origin_manifest": "visualizations/phase_three/figure_manifest.json",
+      "note": "completed phase-one EDA figure, reused read-only for the final report; path and source hash unchanged, no edits"
+    },
+    {
+      "bytes": 314994,
+      "caption": "Every observation included. Green dot = first GPS row; red \u00d7 = last. Independent local-km panel axes, centered at median coordinate.\nEquirectangular projection uses cos(median latitude). Panels have different scales; timestamps/gaps are not interpolated.",
+      "partition": "train: all 80 trips, pages 1\u20134 together",
+      "path": "visualizations/plots/gps_trip_gallery_train_02.png",
+      "phase_role": "eda_context_historical_complete",
+      "reused_read_only": true,
+      "sha256": "bbe634b3170227debfe96b3c6ce6a127653012cec6903a7f416eb3174293ee77",
+      "source": "Every original TRAIN .track observation, SHA256-checked against analysis/data_audit/manifest.json",
+      "status": "stable_actual",
+      "title": "Every raw GPS trajectory \u00b7 Training (80 trips) \u00b7 page 2",
+      "origin_manifest": "visualizations/phase_three/figure_manifest.json",
+      "note": "completed phase-one EDA figure, reused read-only for the final report; path and source hash unchanged, no edits"
+    },
+    {
+      "bytes": 346505,
+      "caption": "Every observation included. Green dot = first GPS row; red \u00d7 = last. Independent local-km panel axes, centered at median coordinate.\nEquirectangular projection uses cos(median latitude). Panels have different scales; timestamps/gaps are not interpolated.",
+      "partition": "train: all 80 trips, pages 1\u20134 together",
+      "path": "visualizations/plots/gps_trip_gallery_train_03.png",
+      "phase_role": "eda_context_historical_complete",
+      "reused_read_only": true,
+      "sha256": "28c07d4584ddff3662f4ac05d4f8eda0cda15cbc7f59182c91d5491f9b72d96e",
+      "source": "Every original TRAIN .track observation, SHA256-checked against analysis/data_audit/manifest.json",
+      "status": "stable_actual",
+      "title": "Every raw GPS trajectory \u00b7 Training (80 trips) \u00b7 page 3",
+      "origin_manifest": "visualizations/phase_three/figure_manifest.json",
+      "note": "completed phase-one EDA figure, reused read-only for the final report; path and source hash unchanged, no edits"
+    },
+    {
+      "bytes": 346613,
+      "caption": "Every observation included. Green dot = first GPS row; red \u00d7 = last. Independent local-km panel axes, centered at median coordinate.\nEquirectangular projection uses cos(median latitude). Panels have different scales; timestamps/gaps are not interpolated.",
+      "partition": "train: all 80 trips, pages 1\u20134 together",
+      "path": "visualizations/plots/gps_trip_gallery_train_04.png",
+      "phase_role": "eda_context_historical_complete",
+      "reused_read_only": true,
+      "sha256": "7fdb59352d7290d44304990a6c6c03a679b17407e82b8a7e7f1987026333e717",
+      "source": "Every original TRAIN .track observation, SHA256-checked against analysis/data_audit/manifest.json",
+      "status": "stable_actual",
+      "title": "Every raw GPS trajectory \u00b7 Training (80 trips) \u00b7 page 4",
+      "origin_manifest": "visualizations/phase_three/figure_manifest.json",
+      "note": "completed phase-one EDA figure, reused read-only for the final report; path and source hash unchanged, no edits"
+    },
+    {
+      "bytes": 204737,
+      "caption": "Every observation included. Green dot = first GPS row; red \u00d7 = last. Independent local-km panel axes, centered at median coordinate.\nEquirectangular projection uses cos(median latitude). Panels have different scales; timestamps/gaps are not interpolated.",
+      "partition": "student_test development: all 10 trips",
+      "path": "visualizations/plots/gps_trip_gallery_student_test_01.png",
+      "phase_role": "eda_context_historical_complete",
+      "reused_read_only": true,
+      "sha256": "49607365d97cc1f99532224f7f853f2e1899b98dcf73eb34ff06f7d2a7a4541a",
+      "source": "Every original student_test .track observation, SHA256-checked against analysis/data_audit/manifest.json",
+      "status": "stable_actual",
+      "title": "Every raw GPS trajectory \u00b7 Student-development (10 trips) \u00b7 page 1",
+      "origin_manifest": "visualizations/phase_three/figure_manifest.json",
+      "note": "completed phase-one EDA figure, reused read-only for the final report; path and source hash unchanged, no edits"
+    },
+    {
+      "bytes": 299212,
+      "caption": "Learned prediction, final model: tuned classifier + HMM/Viterbi (config A_fitted). Development reference geometry is internal to this report, never evaluator-facing.\nArcs use supplied node-endpoint chords; repeated traversal arcs retained; broken joins are not filled with invented connectors.",
+      "partition": "student_test development trip 00000009 only",
+      "path": "visualizations/plots/representative_road_route.png",
+      "phase_role": "eda_context_historical_complete",
+      "reused_read_only": true,
+      "sha256": "d3ae4194a3df54b81bd0c4f15201a91973331ccef4924b9f122529f4dbaea772",
+      "source": "Original student_test trip 00000009 .nodes/.arcs/.track/.route plus explicitly labelled prediction (see map metadata)",
+      "status": "stable_actual",
+      "title": "Illustrative development road graph / route \u00b7 trip 00000009",
+      "origin_manifest": "visualizations/phase_three/figure_manifest.json",
+      "note": "completed phase-one EDA figure, reused read-only for the final report; path and source hash unchanged, no edits"
+    }
+  ],
+  "epoch_wise_loss": {
+    "status": "N/A for all five families",
+    "detail": "None of the five families keeps an epoch-wise training history under this sklearn pipeline; per-epoch loss curves are stated as N/A in docs/FINAL_REQUIREMENTS.md instead of being fabricated.",
+    "per_family": {
+      "logistic_regression": "N/A - no epoch-wise training history retained by this sklearn estimator; no curves fabricated (docs/FINAL_REQUIREMENTS.md)",
+      "knn_distance_weighted": "N/A - no epoch-wise training history retained by this sklearn estimator; no curves fabricated (docs/FINAL_REQUIREMENTS.md)",
+      "bagging": "N/A - no epoch-wise training history retained by this sklearn estimator; no curves fabricated (docs/FINAL_REQUIREMENTS.md)",
+      "gaussian_nb": "N/A - no epoch-wise training history retained by this sklearn estimator; no curves fabricated (docs/FINAL_REQUIREMENTS.md)",
+      "hist_gradient_boosting": "N/A - no epoch-wise training history retained by this sklearn estimator; no curves fabricated (docs/FINAL_REQUIREMENTS.md)"
+    },
+    "substitute_figure": "final_five_log_loss_partitions.png"
+  },
+  "decoder": {
+    "status": "charted",
+    "report": "reports/final_five/decoder/student_ablation.json",
+    "report_sha256": "045513ee402984d2fb4db200ca1fdb01a447ad563ab1a07632ee41bfcc5a353a",
+    "figures": [
+      "visualizations/final_five/plots/final_five_route_ablation.png"
+    ]
+  },
+  "partial": false,
+  "verification": "run visualizations/final_five/verify_final_figures.py (OCR + integrity)",
+  "notes": [
+    "Every plotted value is read from the measured result files listed under inputs.",
+    "Binary macro F1, positive-class F1, and observation-level edge F1 are distinct metrics; each figure states which one it shows.",
+    "HPO parameter figures show observed samples only; no causal importance claim is made.",
+    "Binary candidate-row metric: one row per (observation, candidate directed arc) at threshold 0.5; distinct from positive-class F1 and from observation-level edge F1.",
+    "Proxy labels: nearest reference-route segment plus weak GPS-motion orientation; not supplied pointwise ground truth."
+  ],
+  "completed_at_utc_source": "2026-11-18T08:26:57.159973+00:00",
+  "versions": {
+    "python": "3.14.6",
+    "numpy": "2.5.5",
+    "scipy": "1.18.0",
+    "sklearn": "1.8.0",
+    "joblib": "1.5.3"
+  },
+  "student_role": "historically used student-development set; not globally blind",
+  "evaluator_status": "not accessed; final decoder must freeze before evaluator work"
+}

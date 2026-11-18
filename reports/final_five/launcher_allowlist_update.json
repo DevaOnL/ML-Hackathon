@@ -1,0 +1,10 @@
+{
+  "scope": "only dedicated launcher three evaluator env allowlist keys",
+  "before_sha256": "a93b3f36642ffb4c919c6998856c2c672c73c570d643f09de4779e96c41ab5e5",
+  "after_sha256": "990a966f62e7cc3469e17a6f5b9c7781098a218132d5ce858d029778f703f7ba",
+  "matches_reviewed_repository_source": true,
+  "preserved_mode": "0o600",
+  "systemd_units_changed": false,
+  "services_restarted": false,
+  "tunnel_or_dns_changed": false
+}

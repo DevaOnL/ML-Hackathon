@@ -1,0 +1,18 @@
+test_hosting (unittest.loader._FailedTest.test_hosting) ... ERROR
+
+======================================================================
+ERROR: test_hosting (unittest.loader._FailedTest.test_hosting)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: test_hosting
+Traceback (most recent call last):
+  File "/usr/lib/python3.14/unittest/loader.py", line 137, in loadTestsFromName
+    module = __import__(module_name)
+  File "/home/d3va/Downloads/ML_Hackathon/infrastructure/test_hosting.py", line 16, in <module>
+    import cloudflare_deploy as cf
+ModuleNotFoundError: No module named 'cloudflare_deploy'
+
+
+----------------------------------------------------------------------
+Ran 1 test in 0.000s
+
+FAILED (errors=1)

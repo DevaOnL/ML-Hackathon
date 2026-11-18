@@ -1,0 +1,13 @@
+{
+  "task_id": "task-41",
+  "reviewer": "code-review (automated coding agent)",
+  "scope": "Independent read-only source review; synthetic test suites; report and reproductions only under analysis/final_code_review/",
+  "excluded": [
+    "production model fits/HPO (unit suites include tiny synthetic toy-estimator fits only)",
+    "raw or evaluator inputs",
+    "new HTTP requests/listening services",
+    "Git operations",
+    "service activation",
+    "unfinished report/reproduction/figure deliverables"
+  ]
+}

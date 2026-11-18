@@ -1,0 +1,29 @@
+{
+  "phase": "five-model-completion",
+  "human_instruction": "Finish Logistic Regression, distance-weighted KNN, Bagging, Gaussian Naive Bayes and HistGradientBoosting; then restyle the existing website using OpenCode inspiration; finish all requirements in the five original guideline documents.",
+  "model_families": [
+    "logistic_regression",
+    "knn_distance_weighted",
+    "bagging",
+    "gaussian_nb",
+    "hist_gradient_boosting"
+  ],
+  "historical_phase_three": {
+    "complete": true,
+    "immutable": true,
+    "report": "reports/phase_three/PathSnap_Technical_Report.pdf",
+    "merge_commit": "2c4a44b6576e17da5c5e1437122c10987be2a52b"
+  },
+  "model_policy": "Audit existing actual fitted GNB and HistGB artifacts/CV/evaluations before deciding whether new fits are necessary. Reuse only if full provenance, identity, strict saved-model replay and complete metrics validate. Disclose historical reuse; never pretend a reused result is a newly executed fit.",
+  "selection_policy": "Compare the exact five untuned family records under the same whole-trip TRAIN CV trip-macro observation top-1 objective. Never select on student/evaluator results. Reuse a completed TRAIN-only Bayesian study only if its selected family/config/folds/objective are identical and the full trial history validates.",
+  "scope_paths": {
+    "experiments": "experiments/final_five/",
+    "artifacts": "artifacts/final_five/",
+    "reports": "reports/final_five/",
+    "routes": "outputs/final_student_test/",
+    "visualizations": "visualizations/final_five/"
+  },
+  "website_order": "Do not edit frontend theme until all five actual model training/testing acceptance checks pass. Then inspect https://opencode.ai as visual reference, implement original PathSnap design with inspiration rather than copying branding.",
+  "evaluator_policy": "New evaluator inputs remain unread until final family selection, model and decoder freezes are complete. Then inspect only to build separate evaluator registry/routes and run frozen inference. Reference scoring strictly postprediction, private and isolated; no evaluator input may alter model, hyperparameters, feature schema or decoder.",
+  "provenance": "Student-development results have historical experimental use and are not globally blind. Explicitly disclose all reuse, calibration-in-sample and numerical build limitations."
+}

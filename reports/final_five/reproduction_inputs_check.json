@@ -1,0 +1,193 @@
+{
+  "stage": "check",
+  "checked_at_utc": "2026-11-18T09:15:52.398258+00:00",
+  "status": "PASSED",
+  "fits_performed": 0,
+  "prediction_calls": 0,
+  "dataset_builds": 0,
+  "evaluator_accessed": false,
+  "runtime": {
+    "python": "3.14.6",
+    "numpy": "2.5.5",
+    "scipy": "1.18.0",
+    "sklearn": "1.8.0",
+    "joblib": "1.5.3"
+  },
+  "published_runtime": {
+    "python": "3.14.6",
+    "numpy": "2.5.5",
+    "scipy": "1.18.0",
+    "sklearn": "1.8.0",
+    "joblib": "1.5.3"
+  },
+  "runtime_note": "Matching package versions do not guarantee matching BLAS builds or CPU reduction order. All metric comparisons use atol=1e-12, rtol=0; a difference fails restoration.",
+  "metric_atol": 1e-12,
+  "metric_rtol": 0,
+  "checks": [
+    {
+      "kind": "dataset_cache",
+      "path": "experiments/cache/train_edee9a8f151dd25e.npz",
+      "sha256": "db523c112a6119f16b6f473d6221e3c56b6730ccb2db64dee55433aedbf3ba9e",
+      "array_sha256_verified": true,
+      "trips": 80,
+      "observations": 28000,
+      "candidate_rows": 269463,
+      "candidate_misses": 578
+    },
+    {
+      "kind": "group_folds",
+      "path": "experiments/cv_folds.json",
+      "sha256": "175e9476604746bc2d801c4d2e0eb5a2a5876ecf4f95d730443cd5841d5fd5fa",
+      "folds": 3
+    },
+    {
+      "kind": "prediction_archive",
+      "path": "experiments/predictions/logistic_regression_oof.npz",
+      "sha256": "937a54e0139b90c999edfb8675eb2afe71a1ffd7d75a61f343c104b7d9bc6432",
+      "identity_verified": true,
+      "all_saved_metrics_verified": true,
+      "fold_metrics_verified": 3,
+      "candidate_rows": 269463,
+      "observations": 28000
+    },
+    {
+      "kind": "prediction_archive",
+      "path": "experiments/phase_three/predictions/knn_distance_weighted_oof.npz",
+      "sha256": "6f6af2d90247b1c142f12dd91687a60334d1e22dc3522423dba87ca485953a4f",
+      "identity_verified": true,
+      "all_saved_metrics_verified": true,
+      "fold_metrics_verified": 3,
+      "candidate_rows": 269463,
+      "observations": 28000
+    },
+    {
+      "kind": "prediction_archive",
+      "path": "experiments/phase_three/predictions/bagging_oof.npz",
+      "sha256": "6b52ce4d0e7a28ec248eb196f2d8578fbc418cd1e81e989060cb06d376bac791",
+      "identity_verified": true,
+      "all_saved_metrics_verified": true,
+      "fold_metrics_verified": 3,
+      "candidate_rows": 269463,
+      "observations": 28000
+    },
+    {
+      "kind": "final_freezes",
+      "model_sha256": "c9cc8e9f36838f656a94d07ed69632979df9981ca94a9daf3b52fbce052e4b34",
+      "model_freeze_sha256": "1a76a509558972a14f4a5800ae56016e12681b51f752ef738707f39ba0000efe",
+      "decoder_freeze_sha256": "d5a3f507efe29b4db72b12bb3e06db3a00d5c27f387db09eb1b33f7620a790b1",
+      "config_sha256": "10405aa6b6f370e41d4ddcb01207fd1e8f58900fd0395e541ee6bc78146168c5"
+    },
+    {
+      "kind": "dataset_cache",
+      "path": "experiments/cache/student_test_240a8fbfc79205b3.npz",
+      "sha256": "ae96abb4784501b2b086c9b4aa2f5668e1c9d7f29abda907b7f402118af81b73",
+      "array_sha256_verified": true,
+      "trips": 10,
+      "observations": 19160,
+      "candidate_rows": 175778,
+      "candidate_misses": 19
+    },
+    {
+      "kind": "prediction_archive",
+      "path": "experiments/predictions/logistic_regression_student.npz",
+      "sha256": "31562ba3540e4d7bab0c07d7b5a30dbb05f524ccde4fbb5967b8d041201d3c9b",
+      "identity_verified": true,
+      "all_saved_metrics_verified": true,
+      "fold_metrics_verified": 0,
+      "candidate_rows": 175778,
+      "observations": 19160
+    },
+    {
+      "kind": "published_baseline",
+      "path": "artifacts/baselines/logistic_regression.joblib",
+      "sha256": "29157349d52a993d33cae78ed244805a9f087e79b6dc914aaa3b4461c02a58c9",
+      "training_trips": 80,
+      "features": 38,
+      "schema_classes_parameters_verified": true
+    },
+    {
+      "kind": "prediction_archive",
+      "path": "experiments/phase_three/predictions/knn_distance_weighted_student.npz",
+      "sha256": "39b3a63532de522c722243bfbe7e5d20e9996514c3440d2b7942dd0b53c2b5b8",
+      "identity_verified": true,
+      "all_saved_metrics_verified": true,
+      "fold_metrics_verified": 0,
+      "candidate_rows": 175778,
+      "observations": 19160
+    },
+    {
+      "kind": "published_baseline",
+      "path": "artifacts/phase_three/baselines/knn_distance_weighted.joblib",
+      "sha256": "564e6f85f9190d0ff19e75967613e4d56dbe573aaf80ef8780ed8374f8537246",
+      "training_trips": 80,
+      "features": 38,
+      "schema_classes_parameters_verified": true
+    },
+    {
+      "kind": "prediction_archive",
+      "path": "experiments/phase_three/predictions/bagging_student.npz",
+      "sha256": "06ecf2a846d6d5950d6b90c893419fc0c0f7fcafe4534813ce78cdb023e6857f",
+      "identity_verified": true,
+      "all_saved_metrics_verified": true,
+      "fold_metrics_verified": 0,
+      "candidate_rows": 175778,
+      "observations": 19160
+    },
+    {
+      "kind": "published_baseline",
+      "path": "artifacts/phase_three/baselines/bagging.joblib",
+      "sha256": "619bc3d267fec686d3ee0d212b3d13a4c8d9bd46e35893f3f570253d232822b6",
+      "training_trips": 80,
+      "features": 38,
+      "schema_classes_parameters_verified": true
+    }
+  ],
+  "missing": [],
+  "failures": [],
+  "inventory": [
+    {
+      "path": "experiments/cv_folds.json",
+      "present": true
+    },
+    {
+      "path": "experiments/cache/train_edee9a8f151dd25e.npz",
+      "present": true
+    },
+    {
+      "path": "experiments/cache/train_edee9a8f151dd25e.json",
+      "present": true
+    },
+    {
+      "path": "experiments/predictions/logistic_regression_oof.npz",
+      "present": true
+    },
+    {
+      "path": "experiments/phase_three/predictions/knn_distance_weighted_oof.npz",
+      "present": true
+    },
+    {
+      "path": "experiments/phase_three/predictions/bagging_oof.npz",
+      "present": true
+    },
+    {
+      "path": "experiments/cache/student_test_240a8fbfc79205b3.npz",
+      "present": true
+    },
+    {
+      "path": "experiments/cache/student_test_240a8fbfc79205b3.json",
+      "present": true
+    },
+    {
+      "path": "experiments/predictions/logistic_regression_student.npz",
+      "present": true
+    },
+    {
+      "path": "experiments/phase_three/predictions/knn_distance_weighted_student.npz",
+      "present": true
+    },
+    {
+      "path": "experiments/phase_three/predictions/bagging_student.npz",
+      "present": true
+    }
+  ]
+}

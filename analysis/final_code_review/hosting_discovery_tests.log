@@ -1,0 +1,34 @@
+test_api_apply_and_rerun_only_create_own_resources (test_hosting.HostingTests.test_api_apply_and_rerun_only_create_own_resources) ... ok
+test_apply_refuses_while_another_apply_holds_the_lock (test_hosting.HostingTests.test_apply_refuses_while_another_apply_holds_the_lock) ... ok
+test_apply_rejects_foreign_checkout_identity (test_hosting.HostingTests.test_apply_rejects_foreign_checkout_identity) ... ok
+test_apply_requires_installer_runtime_identity (test_hosting.HostingTests.test_apply_requires_installer_runtime_identity) ... ok
+test_dedicated_directory_tightens_only_verified_directories (test_hosting.HostingTests.test_dedicated_directory_tightens_only_verified_directories) ... ok
+test_dns_conflict_blocks_before_creating_tunnel (test_hosting.HostingTests.test_dns_conflict_blocks_before_creating_tunnel) ... ok
+test_environment_drops_inherited_credentials (test_hosting.HostingTests.test_environment_drops_inherited_credentials) ... ok
+test_environment_rejects_unknown_keys_wildcards_and_high_concurrency (test_hosting.HostingTests.test_environment_rejects_unknown_keys_wildcards_and_high_concurrency) ... ok
+test_environment_values_are_never_executed (test_hosting.HostingTests.test_environment_values_are_never_executed) ... ok
+test_explicit_evaluator_settings_pass_the_narrow_allowlist (test_hosting.HostingTests.test_explicit_evaluator_settings_pass_the_narrow_allowlist) ... ok
+test_identifier_validation_rejects_paths_and_missing_zone (test_hosting.HostingTests.test_identifier_validation_rejects_paths_and_missing_zone) ... ok
+test_incomplete_owned_state_blocks (test_hosting.HostingTests.test_incomplete_owned_state_blocks) ... ok
+test_origin_cert_apply_route_never_overwrites (test_hosting.HostingTests.test_origin_cert_apply_route_never_overwrites) ... ok
+test_origin_cert_parse_never_emits_token (test_hosting.HostingTests.test_origin_cert_parse_never_emits_token) ... ok
+test_owned_record_must_be_proxied_and_exact (test_hosting.HostingTests.test_owned_record_must_be_proxied_and_exact) ... ok
+test_preflight_no_mutations_or_files (test_hosting.HostingTests.test_preflight_no_mutations_or_files) ... ok
+test_preflight_rejects_foreign_runtime_identity (test_hosting.HostingTests.test_preflight_rejects_foreign_runtime_identity) ... ok
+test_readiness_rejects_redirect_handler (test_hosting.HostingTests.test_readiness_rejects_redirect_handler) ... ok
+test_secret_file_symlink_rejected (test_hosting.HostingTests.test_secret_file_symlink_rejected) ... ok
+test_secret_files_not_allowed_in_checkout (test_hosting.HostingTests.test_secret_files_not_allowed_in_checkout) ... ok
+test_shared_config_directory_rejected_without_permission_change (test_hosting.HostingTests.test_shared_config_directory_rejected_without_permission_change) ... ok
+test_static_authorization_never_allows_public_tunnel (test_hosting.HostingTests.test_static_authorization_never_allows_public_tunnel) ... ok
+test_static_phase_explicitly_allows_missing_artifacts (test_hosting.HostingTests.test_static_phase_explicitly_allows_missing_artifacts) ... ok
+test_symlinked_ancestor_of_external_path_rejected (test_hosting.HostingTests.test_symlinked_ancestor_of_external_path_rejected) ... ok
+test_tunnel_launcher_requires_explicit_ready_phase (test_hosting.HostingTests.test_tunnel_launcher_requires_explicit_ready_phase) ... ok
+test_unit_paths_not_shell_quoted (test_hosting.HostingTests.test_unit_paths_not_shell_quoted) ... ok
+test_unowned_same_named_tunnel_blocks (test_hosting.HostingTests.test_unowned_same_named_tunnel_blocks) ... ok
+test_verifier_detects_private_keys_recursively (test_hosting.HostingTests.test_verifier_detects_private_keys_recursively) ... ok
+test_world_readable_credential_rejected (test_hosting.HostingTests.test_world_readable_credential_rejected) ... ok
+
+----------------------------------------------------------------------
+Ran 29 tests in 0.017s
+
+OK

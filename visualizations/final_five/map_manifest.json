@@ -1,0 +1,144 @@
+{
+  "phase": "five-model-completion",
+  "passed": true,
+  "development_only": true,
+  "contains_reference_geometry": true,
+  "do_not_serve_in_application": true,
+  "map_path": "visualizations/final_five/maps/final_development_trip_00000009.html",
+  "metadata_path": "visualizations/final_five/maps/final_development_trip_00000009.metadata.json",
+  "browser_path": "visualizations/final_five/maps/final_development_trip_00000009.browser.json",
+  "figure_count": 1,
+  "files": [
+    {
+      "path": "visualizations/final_five/maps/final_development_trip_00000009.html",
+      "sha256": "d9e22c33087119f47bb06b7205ee71e2e62b26f82c6875ea9f4f43535503dd4c",
+      "bytes": 1883434
+    },
+    {
+      "path": "visualizations/final_five/maps/final_development_trip_00000009.png",
+      "sha256": "a7cd039beede2705bc30dec46aefe0b631edb8332d39be38c758dbc3774b10c0",
+      "bytes": 382393
+    },
+    {
+      "path": "visualizations/final_five/maps/final_development_trip_00000009.pdf",
+      "sha256": "37be0af0abd28d6653e3c40bf26253294dd1a2e9ed6b591d9e811d76c8ca6381",
+      "bytes": 372455
+    },
+    {
+      "path": "visualizations/final_five/maps/final_development_trip_00000009.metadata.json",
+      "sha256": "0a8d9441f87958c248160481680a806d564e2971dee773fe8ced16b649b26ceb",
+      "bytes": 6482
+    },
+    {
+      "path": "visualizations/final_five/maps/final_development_trip_00000009.browser.json",
+      "sha256": "57ce1846e869a0d0bf7969430c3bd727b71dde479e951063beeb4bdeb5339fe9",
+      "bytes": 4114
+    },
+    {
+      "path": "visualizations/final_five/maps/final_development_trip_00000009.ocr.txt",
+      "sha256": "ab36a71975300bc9b43ddadb9a85d63b20e295a77da80ac0bb7d48fa6b926b39",
+      "bytes": 1224
+    }
+  ],
+  "inputs": [
+    {
+      "path": "Student folder/student_test/00000009/00000009.nodes",
+      "sha256": "f8ff92932d7a12874f412453c9cbe4f09cf1c2796f62843c8da95e1e104a4a99"
+    },
+    {
+      "path": "Student folder/student_test/00000009/00000009.arcs",
+      "sha256": "563870614e8fabaedb4077308db7598ef6c4314b2d9680a49e28dccb451b9e90"
+    },
+    {
+      "path": "Student folder/student_test/00000009/00000009.track",
+      "sha256": "74853acd9fdbb2b80b8cd164cc63932e25fd0fca6fce86fd9c9fc6aa171a8451"
+    },
+    {
+      "path": "Student folder/student_test/00000009/00000009.route",
+      "sha256": "9424170099cc2edfbfe9f8fae750a6f90f68cc19ba9a426d58254360566f2823"
+    },
+    {
+      "path": "outputs/final_student_test/routes/00000009.route",
+      "sha256": "a5871b8e928fd8d52fad34153781810b8ab618faf53c282bc80b9fc0510cfc32"
+    },
+    {
+      "path": "artifacts/final_five/model.joblib",
+      "sha256": "c9cc8e9f36838f656a94d07ed69632979df9981ca94a9daf3b52fbce052e4b34"
+    },
+    {
+      "path": "artifacts/final_five/model_metadata.json",
+      "sha256": "c354885e22158e9da14e0f8bc8e01d3e7c6fbe810e196192c6b59c7cbdbbf4c5"
+    },
+    {
+      "path": "artifacts/final_five/model_freeze.json",
+      "sha256": "1a76a509558972a14f4a5800ae56016e12681b51f752ef738707f39ba0000efe"
+    },
+    {
+      "path": "artifacts/final_five/match_config.json",
+      "sha256": "10405aa6b6f370e41d4ddcb01207fd1e8f58900fd0395e541ee6bc78146168c5"
+    },
+    {
+      "path": "reports/final_five/decoder/freeze.json",
+      "sha256": "d5a3f507efe29b4db72b12bb3e06db3a00d5c27f387db09eb1b33f7620a790b1"
+    },
+    {
+      "path": "reports/final_five/offline_delivery_verification.json",
+      "sha256": "aba2c384123cef5b2b690b10f53873f174000fbe0942572010d0afc8e3afb8f6"
+    },
+    {
+      "path": "outputs/final_student_test/run_config.json",
+      "sha256": "785568f6adba621fe2b8b2a152c77c98801780ce050c80e1e8ffd72ff3f8c190"
+    },
+    {
+      "path": "outputs/final_student_test/index.csv",
+      "sha256": "18f5b43094ba98b80564e39b71d1cb622733818532ac0b02c00214785c86ed43"
+    },
+    {
+      "path": "outputs/final_student_test/diagnostics/00000009.json",
+      "sha256": "56e2c66fa3dc6f776f6c0448a2c21eb07c6f3c56c9a2a4fa7e93323d69135c55"
+    },
+    {
+      "path": "outputs/final_student_test/observations/00000009.csv",
+      "sha256": "0d23467fb8df360709c09c8e39ab275bf0126316b3327577d47b4c19bf6d2428"
+    },
+    {
+      "path": "visualizations/final_five/generate_final_map.py",
+      "sha256": "125fc38b354ae3496bb560ed53370d238275beb0a5b97d205340a86eea6fad31"
+    },
+    {
+      "path": "visualizations/final_five/figure_integrity.py",
+      "sha256": "30250dc6a54acb08cb40f0aeccd0b36288545e8dc5eadd9122fdf89a48f70125"
+    },
+    {
+      "path": "mapmatch/data.py",
+      "sha256": "89982d7a21c359ad0bc8dba061498b47e05967750325eb83dc81828e8ecf9ce9"
+    },
+    {
+      "path": "mapmatch/metrics.py",
+      "sha256": "94e1ba8fc0ec60c46b8ea06d08ee6f86c655a915ff511da41d446ff7c5f1c882"
+    },
+    {
+      "path": "backend/geometry.py",
+      "sha256": "84248a1bab5a8850e5c877b19175b6b7c72d5d4caa56de6bc094a8c9b241b993"
+    },
+    {
+      "path": "frontend/vendor/leaflet/leaflet.js",
+      "sha256": "db49d009c841f5ca34a888c96511ae936fd9f5533e90d8b2c4d57596f4e5641a"
+    },
+    {
+      "path": "frontend/vendor/leaflet/leaflet.css",
+      "sha256": "a7837102824184820dfa198d1ebcd109ff6d0ff9a2672a074b9a1b4d147d04c6"
+    },
+    {
+      "path": "frontend/vendor/leaflet/images/layers.png",
+      "sha256": "1dbbe9d028e292f36fcba8f8b3a28d5e8932754fc2215b9ac69e4cdecf5107c6"
+    },
+    {
+      "path": "frontend/vendor/leaflet/images/layers-2x.png",
+      "sha256": "066daca850d8ffbef007af00b06eac0015728dee279c51f3cb6c716df7c42edf"
+    }
+  ],
+  "model_artifact_sha256": "c9cc8e9f36838f656a94d07ed69632979df9981ca94a9daf3b52fbce052e4b34",
+  "decoder_config_sha256": "10405aa6b6f370e41d4ddcb01207fd1e8f58900fd0395e541ee6bc78146168c5",
+  "created_at_utc": "2026-11-18T09:05:57.648827+00:00"
+}

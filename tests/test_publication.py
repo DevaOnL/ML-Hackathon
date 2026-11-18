@@ -46,6 +46,18 @@ class PublicationPrivacyTests(unittest.TestCase):
                 self.assertFalse(result["passed"])
                 self.assertTrue(any(x["rule"]=="raw_private_or_row_level_input" for x in result["findings"]))
 
+    def test_only_exact_audited_evaluator_aggregate_names_are_exempt(self):
+        for name in publication.PUBLIC_EVALUATOR_REPORTS | publication.PUBLIC_EVALUATOR_DOCUMENTS:
+            with self.subTest(path=name):
+                self.assertTrue(self.scan(name, b"synthetic aggregate counts only")["passed"])
+        for name in ("reports/final_five/evaluator/raw.json", "reports/final_five/evaluator/acceptance.json/secret.txt",
+                     "docs/EVALUATOR_SECRET.md", "reports/final_five/evaluator/track.npz",
+                     "reports/other/evaluator/acceptance.json"):
+            with self.subTest(path=name):
+                self.assertFalse(self.scan(name, b"synthetic")["passed"])
+        name = "reports/final_five/evaluator/acceptance.json"
+        self.assertFalse(self.scan(name, b"-----BEGIN " + b"PRIVATE " + b"KEY-----")["passed"])
+
     def test_only_flat_ten_derived_route_submission_archive_is_allowed(self):
         self.assertTrue(self.scan("outputs/phase_three_student_test/submission.zip",submission())["passed"])
         cases=[("archive.zip",submission()),("evaluator_test.zip",submission()),

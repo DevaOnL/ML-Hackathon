@@ -1,0 +1,7 @@
+# Reproduction-only hardening after measurement
+
+The measured five-family run used the exact source now preserved at [run_final_five_measured.py](<../experiments/final_five/executed_source/run_final_five_measured.py>), SHA-256 `6e25f0492c8d48d62ff21ac05e5e5e5f6306ffdc27485458ee5d2f69e20adb65`. The original source hash remains unchanged in [train_complete.json](<../experiments/final_five/current/train_complete.json>). The corrected numerical experiment, fitted bundles, model freeze, OOF arrays, student arrays, metrics and timings are immutable.
+
+The maintained [runner](<../experiments/final_five/run_final_five.py>) subsequently received three output-safety fixes. Its model export now resolves the artifact directory at call time, so an isolated `--run-id` cannot point back to the published bundle through a captured Python default argument. Training also refuses a partial pre-existing feature schema or metadata sidecar; student testing refuses an existing acceptance report. These edits do not change estimator construction, weights, seeds, features, folds, probabilities, selection, fitting or metric formulas.
+
+Ten synthetic tests pass, including an actual toy estimator export into the patched isolated artifact directory and refusal checks before data loading. Fresh reproductions must use a new run ID. They do not overwrite or impersonate the published measurements. The source snapshot is an archival byte copy, not a command-line entry point; use the maintained runner for new experiments.

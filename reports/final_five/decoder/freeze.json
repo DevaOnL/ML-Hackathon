@@ -1,0 +1,178 @@
+{
+  "frozen_utc": "2026-11-18T08:37:21.093991+00:00",
+  "phase": "five-model-completion",
+  "selected_configuration": "A_fitted",
+  "config": {
+    "sigma_m": 7.160645916267228,
+    "beta_m": 2.0,
+    "max_candidates": 12,
+    "candidate_radius_m": 80.0,
+    "max_radius_m": 1000.0,
+    "routing_slack_m": 300.0,
+    "backward_tolerance_m": 20.0,
+    "observation_distance_m": 0.0,
+    "observation_interval": 5.0,
+    "sample_spacing_m": 40.0,
+    "cache_size": 2048,
+    "classifier_weight": 1.0,
+    "geometry_weight": 1.0,
+    "candidate_retry_limit": 48
+  },
+  "config_file_sha256": "10405aa6b6f370e41d4ddcb01207fd1e8f58900fd0395e541ee6bc78146168c5",
+  "effective_config_sha256": "8b5bee1d217eddcd4e05156a87fe572394676c0798ec93eece5d5d1651f9c0d8",
+  "model_sha256": "c9cc8e9f36838f656a94d07ed69632979df9981ca94a9daf3b52fbce052e4b34",
+  "model_path": "artifacts/final_five/model.joblib",
+  "loader_module": "mapmatch.learning",
+  "family_check": {
+    "requested_families": [
+      "logistic_regression",
+      "knn_distance_weighted",
+      "bagging",
+      "gaussian_nb",
+      "hist_gradient_boosting"
+    ],
+    "metadata_fields": {
+      "model_name": "hist_gradient_boosting",
+      "run_name": "hist_gradient_boosting_tuned",
+      "family": null
+    },
+    "matched_requested_families": [
+      "hist_gradient_boosting"
+    ],
+    "consistent_with_requested_five": true,
+    "selected_family_matches_metadata": true,
+    "enforcement": "informational; the strict family/parameter gate is verify_final_model"
+  },
+  "final_model_check": {
+    "family": "hist_gradient_boosting",
+    "run_name": "hist_gradient_boosting_tuned",
+    "fixed_parameters": {
+      "max_iter": 104,
+      "learning_rate": 0.15902391896503631,
+      "max_leaf_nodes": 22,
+      "min_samples_leaf": 38,
+      "l2_regularization": 0.8604220152998319
+    },
+    "parameters_match_fixed": true,
+    "training_trip_count": 80,
+    "enforcement": "strict; the decoder aborts on any other family or configuration"
+  },
+  "acceptance": {
+    "acceptance_path": "/home/d3va/Downloads/ML_Hackathon/reports/final_five/all_five_model_acceptance.json",
+    "acceptance_sha256": "0829918e6c5bb3335d6b6d02a1d8a0fc2abd8b43f6769b41c73cd26c65296d65",
+    "acceptance_passed": true,
+    "clean_load_path": "/home/d3va/Downloads/ML_Hackathon/artifacts/final_five/clean_load_report.json",
+    "clean_load_sha256": "7585e2693958fe3717e3056e76edb958065fe20b9a2c413ff240adca67c54e7e",
+    "clean_load_passed": true,
+    "model_freeze_sha256": "1a76a509558972a14f4a5800ae56016e12681b51f752ef738707f39ba0000efe",
+    "model_sha256": "c9cc8e9f36838f656a94d07ed69632979df9981ca94a9daf3b52fbce052e4b34",
+    "gate_note": "Decoder inference started only after the five-family acceptance and clean-environment load both passed with this exact model hash."
+  },
+  "selection_evidence_sha256": {
+    "experiments/final_five/selection.json": "6c14947a461944c9a139f495208a52f998f4fb6981c9c4e290ca1d298381624a",
+    "experiments/final_five/bayesian_optimization.json": "03155faff727a0ba56d0da0d6e05d02cbc443de76eb12f4191943507ad6bb6a8"
+  },
+  "model_metadata": {
+    "model_name": "hist_gradient_boosting",
+    "run_name": "hist_gradient_boosting_tuned",
+    "family": null,
+    "parameters": {
+      "max_iter": 104,
+      "learning_rate": 0.15902391896503631,
+      "max_leaf_nodes": 22,
+      "min_samples_leaf": 38,
+      "l2_regularization": 0.8604220152998319
+    },
+    "feature_version": "pathsnap-candidate-v1",
+    "training_trip_count": 80,
+    "training_observations": 28000,
+    "training_candidate_rows": 269463,
+    "fit_data": "TRAIN only; student and evaluator not read by this stage"
+  },
+  "plan_sha256": "3d8c40531d4d54022a681a003d4173c943db6b6e2a4cffd56665b3e73b6c80f3",
+  "scale_evidence": {
+    "path": "reports/decoder/scale_fit.json",
+    "sha256": "0efa5a44f610edda9cd33c5995fa67a591c161a9d3a33a129afaae05252148f9",
+    "fitted": {
+      "sigma_m": 7.160645916267228,
+      "beta_m": 2.0
+    },
+    "sigma_unclamped_m": 7.160645916267228,
+    "beta_unclamped_m": 1.424672666285088,
+    "sigma_clamped": false,
+    "beta_clamped": true,
+    "sigma_sample_count": 20480,
+    "sigma_observations_excluded": 0,
+    "beta_pair_status_counts": {
+      "identified": 10070,
+      "no_forward_reference_occurrence": 163,
+      "backward_proxy_without_reference_loop": 3,
+      "reference_span_crosses_discontinuity": 4
+    },
+    "training_trip_count": 80,
+    "training_reference_discontinuity_count": 13,
+    "residual_samples_path": "reports/decoder/training_residual_samples.csv",
+    "residual_samples_sha256": "984b05c53e401788f09689b139bd9e97c5f45998877dadcd991fc1b62367ddc1",
+    "transition_samples_path": "reports/decoder/training_transition_samples.csv",
+    "transition_samples_sha256": "e7421825360706f80b7f6b005393aba539387ad66b885c1cd3da3eac46bd0068",
+    "original_plan_sha256": "23f0b2b053c16ecf73c115c07c540d1964475273a6f821506f7b5b6f96a209c8",
+    "reuse_rationale": "Geometry-only sigma/beta come from TRAIN reference residuals and transition spans and do not depend on the emission classifier family, so the historical immutable fit is reused read-only instead of recomputed."
+  },
+  "calibration_trip_ids": [
+    "00000001",
+    "00000011",
+    "00000021",
+    "00000031",
+    "00000041",
+    "00000051",
+    "00000061",
+    "00000071"
+  ],
+  "student_results_seen_for_selection": false,
+  "student_results_used_for_selection": false,
+  "prior_student_context_available": true,
+  "evaluator_accessed": false,
+  "selection_boundary_note": "Historical geometry-only, phase-three trio and earlier HistGB student results were available as context; this predeclared search reads only TRAIN predictions/references and never reads student scores. Final student ablation starts only after this freeze.",
+  "historical_note": "Historical decoder freezes at artifacts/match_config.json (reports/decoder/freeze.json, earlier HistGB) and artifacts/phase_three/match_config.json (reports/phase_three/decoder/freeze.json, requested trio) are preserved read-only; neither is this phase's final result.",
+  "objective": "mean exact-original-ID length-weighted repeated-arc route F1 across the eight TRAIN calibration trips; a failed trip contributes zero",
+  "objectives": [
+    {
+      "configuration": "A_fitted",
+      "mean_length_f1": 0.9533131022754777,
+      "mean_edge_f1": 0.9382034899562464,
+      "successful_trips": 8,
+      "total_trips": 8,
+      "total_seconds": 32.219959666999785
+    },
+    {
+      "configuration": "B_twice_beta",
+      "mean_length_f1": 0.9521377935915321,
+      "mean_edge_f1": 0.9383178089776616,
+      "successful_trips": 8,
+      "total_trips": 8,
+      "total_seconds": 31.767605419994652
+    },
+    {
+      "configuration": "C_classifier_up",
+      "mean_length_f1": 0.9522727548776264,
+      "mean_edge_f1": 0.9408413647627369,
+      "successful_trips": 8,
+      "total_trips": 8,
+      "total_seconds": 32.10475747500459
+    }
+  ],
+  "elapsed_seconds": 96.36939757000073,
+  "source_sha256": {
+    "scripts/final_five_decoder.py": "53bb1892ac1d3c9252d9eeff871a0879f4ea3ffdb1801663b57324ba3cbcc239",
+    "mapmatch/data.py": "89982d7a21c359ad0bc8dba061498b47e05967750325eb83dc81828e8ecf9ce9",
+    "mapmatch/candidates.py": "4a9d2126074ca8bd78e3d513f2cf578fcc7415cfef68768b3c5a9983cd7504e1",
+    "mapmatch/matcher.py": "af58502cdfe8de12cb13ea5ab3e1e8c9ef7aee9cf6f3faec8dea5cbfbedc4bff",
+    "mapmatch/routing.py": "fca3940cb7066b6e247bb0285690ed016dc66fa12d3e4d3c13aed5e5e032bf78",
+    "mapmatch/features.py": "d39e908b0b4f7d89d969542a835e0935f07086c97b6546dc8e686efee151adb0",
+    "mapmatch/learning.py": "de626dd12085cc404ede8eab774d2f79e3269fb3d2b1858975ffdc7da167280c",
+    "mapmatch/metrics.py": "94e1ba8fc0ec60c46b8ea06d08ee6f86c655a915ff511da41d446ff7c5f1c882",
+    "mapmatch/final_models.py": "df8771780ba705517a6b3942058c7a9d86d52fb2e9a13bb0e2e00559044b53ce",
+    "backend/emissions.py": "819384fdb1c70ddbf52e11f1227b5291317719b5b5361ced1180c442957c86cc",
+    "backend/scoring.py": "49b20b3ddd4ec6eeebd8795fe16f72ce7ba242bb09cb925edc890b23078bfaea"
+  }
+}

@@ -126,7 +126,7 @@ STUDENT_ARRAY_SHA256 = {
     "reference_edges": {"shape": [19160], "dtype": "int64", "sha256": "44670e1099c6fc9c7271120d178df0520e5574fe4e212cf3cf1312374e8deb1b"},
     "candidate_edges": {"shape": [175778], "dtype": "int64", "sha256": "9b0204d6b60cd64e011e070c9fa9d69808f6a35b4b61988501069c13a422cbfb"},
     "candidate_fractions": {"shape": [175778], "dtype": "float64", "sha256": "ef89d7bf2d18c03c1cab89687dafbb175b3a2343e2c027f3fe3c374209e836d6"},
-    "candidate_distances": {"shape": [175778], "dtype": "float64", "sha256": "cd7fdb3a8923e7716894a5599c318aeeb85e0d96e769a8b51b207fe24dba519f"},
+    "candidate_distances": {"shape": [175778], "dtype": "float64", "sha256": "cd7fdb3a8923e7716894a5599c318aeeb85e0d96e767a8b51b207fe24dba519f"},
     "proxy_distances": {"shape": [19160], "dtype": "float64", "sha256": "7e7f678267512c0102b79f115b5a05c881b85f41ee8214713d64f360abcd1e5a"},
     "ambiguous": {"shape": [19160], "dtype": "bool", "sha256": "dae3d0aa51dfc31f56593dd31bc5840a88aa6dc34ea90072fbb19b52746b1639"},
     "expanded": {"shape": [19160], "dtype": "bool", "sha256": "87c42a054d2f98a7f3e9dd9080babe76a9e1588a54edfcfc9da180297bc9046a"},

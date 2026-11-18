@@ -2,6 +2,7 @@
 from __future__ import annotations
 
 import asyncio
+import re
 import time
 import uuid
 from urllib.parse import urlsplit
@@ -11,6 +12,11 @@ from starlette.responses import JSONResponse
 from .service import log_event
 
 MAX_REQUEST_BYTES = 1024
+# Public API paths whose names are safe to log; dataset IDs come from a closed
+# allowlist so no user-controlled path segment ever reaches a log line.
+KNOWN_API_PATHS = frozenset({"/health", "/trips", "/match", "/datasets"})
+DATASET_API_PATH = re.compile(r"/datasets/(?:development|evaluator)/(?:trips|match)\Z")
+GUARDED_POST_PATHS = frozenset({"/match", "/datasets/development/match", "/datasets/evaluator/match"})
 SECURITY_HEADERS = {
     b"cache-control": b"no-store, no-transform",
     b"x-content-type-options": b"nosniff",
@@ -49,7 +55,7 @@ class PublicBoundary:
         response_started = False
         started = time.perf_counter()
         path = scope.get("path", "")
-        route = path if path in {"/health", "/trips", "/match"} else "static_or_unknown"
+        route = path if path in KNOWN_API_PATHS or DATASET_API_PATH.fullmatch(path) else "static_or_unknown"
 
         async def safe_send(message):
             nonlocal status_code, response_started
@@ -64,8 +70,13 @@ class PublicBoundary:
             await JSONResponse({"detail": {"code": code, "message": message, "request_id": request_id}}, status_code=status)(scope, receive, safe_send)
 
         try:
+            # Reject unknown dataset IDs before FastAPI can read or parse a body.
+            # Only the two trusted server-side registries can be addressed.
+            if path.startswith("/datasets/") and path.split("/", 3)[2] not in {"development", "evaluator"}:
+                await error(404, "unknown_dataset", "This dataset is not available.")
+                return
             next_receive = receive
-            if scope.get("method") == "POST" and path.rstrip("/") == "/match":
+            if scope.get("method") == "POST" and path.rstrip("/") in GUARDED_POST_PATHS:
                 headers = {key.lower(): value for key, value in scope.get("headers", [])}
                 origins = [value for key, value in scope.get("headers", []) if key.lower() == b"origin"]
                 if origins:
@@ -78,7 +89,7 @@ class PublicBoundary:
                         await error(403, "origin_not_allowed", "This origin is not allowed to invoke inference.")
                         return
                 if headers.get(b"content-type", b"").split(b";", 1)[0].strip().lower() != b"application/json":
-                    await error(415, "unsupported_media_type", "POST /match accepts application/json containing only trip_id.")
+                    await error(415, "unsupported_media_type", "Match endpoints accept application/json containing only trip_id.")
                     return
                 if headers.get(b"content-encoding", b"identity").lower() != b"identity":
                     await error(415, "unsupported_content_encoding", "Compressed request bodies are not accepted.")
@@ -94,7 +105,7 @@ class PublicBoundary:
                         await error(400, "invalid_content_length", "The request Content-Length is invalid.")
                         return
                     if length > MAX_REQUEST_BYTES:
-                        await error(413, "request_too_large", "POST /match accepts at most 1024 bytes.")
+                        await error(413, "request_too_large", "Match requests are limited to 1024 bytes.")
                         return
                 chunks = []
                 size = 0
@@ -110,7 +121,7 @@ class PublicBoundary:
                     chunk = message.get("body", b"")
                     size += len(chunk)
                     if size > MAX_REQUEST_BYTES:
-                        await error(413, "request_too_large", "POST /match accepts at most 1024 bytes.")
+                        await error(413, "request_too_large", "Match requests are limited to 1024 bytes.")
                         return
                     chunks.append(chunk)
                     if not message.get("more_body", False):

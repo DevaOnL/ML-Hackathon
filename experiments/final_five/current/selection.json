@@ -1,0 +1,22 @@
+{
+  "selected_at_utc": "2026-11-18T08:26:27.647462+00:00",
+  "selected_model": "hist_gradient_boosting",
+  "families": [
+    "logistic_regression",
+    "knn_distance_weighted",
+    "bagging",
+    "gaussian_nb",
+    "hist_gradient_boosting"
+  ],
+  "criterion": "TRAIN out_of_fold_trip_macro_top1_accuracy; binary macro F1 then lower binary log loss as tie-breakers",
+  "objectives": {
+    "logistic_regression": 0.884,
+    "knn_distance_weighted": 0.8767857142857143,
+    "bagging": 0.8914642857142857,
+    "gaussian_nb": 0.8734285714285714,
+    "hist_gradient_boosting": 0.8926785714285714
+  },
+  "student_used": false,
+  "evaluator_used": false,
+  "historical_student_context_available": true
+}

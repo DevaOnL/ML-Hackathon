@@ -1,0 +1,530 @@
+{
+  "passed": true,
+  "checked_at_utc": "2026-11-18T09:00:48.725330+00:00",
+  "verifier": "visualizations/final_five/verify_final_figures.py",
+  "manifest": "/home/d3va/Downloads/ML_Hackathon/visualizations/final_five/figure_manifest.json",
+  "thresholds": {
+    "min_text_chars": 80,
+    "min_mean_confidence": 55.0
+  },
+  "tooling": "tesseract 5.5.3",
+  "figure_count": 23,
+  "figures": [
+    {
+      "path": "visualizations/final_five/plots/final_five_cv_macro_f1.png",
+      "checks": {
+        "png_sha256": true,
+        "dpi_300": true,
+        "pixels": true,
+        "pdf_sha256": true,
+        "ocr_text_present": true,
+        "no_missing_glyphs": true,
+        "no_nan_inf": true,
+        "expected_token_found": true,
+        "mean_confidence": true
+      },
+      "ocr": {
+        "chars": 919,
+        "words": 120,
+        "mean_confidence": 84.33
+      }
+    },
+    {
+      "path": "visualizations/final_five/plots/final_five_primary_objective.png",
+      "checks": {
+        "png_sha256": true,
+        "dpi_300": true,
+        "pixels": true,
+        "pdf_sha256": true,
+        "ocr_text_present": true,
+        "no_missing_glyphs": true,
+        "no_nan_inf": true,
+        "expected_token_found": true,
+        "mean_confidence": true
+      },
+      "ocr": {
+        "chars": 917,
+        "words": 122,
+        "mean_confidence": 87.63
+      }
+    },
+    {
+      "path": "visualizations/final_five/plots/final_five_student_top1_macro_f1.png",
+      "checks": {
+        "png_sha256": true,
+        "dpi_300": true,
+        "pixels": true,
+        "pdf_sha256": true,
+        "ocr_text_present": true,
+        "no_missing_glyphs": true,
+        "no_nan_inf": true,
+        "expected_token_found": true,
+        "mean_confidence": true
+      },
+      "ocr": {
+        "chars": 1140,
+        "words": 166,
+        "mean_confidence": 83.09
+      }
+    },
+    {
+      "path": "visualizations/final_five/plots/final_five_binary_log_loss.png",
+      "checks": {
+        "png_sha256": true,
+        "dpi_300": true,
+        "pixels": true,
+        "pdf_sha256": true,
+        "ocr_text_present": true,
+        "no_missing_glyphs": true,
+        "no_nan_inf": true,
+        "expected_token_found": true,
+        "mean_confidence": true
+      },
+      "ocr": {
+        "chars": 1099,
+        "words": 159,
+        "mean_confidence": 85.8
+      }
+    },
+    {
+      "path": "visualizations/final_five/plots/final_five_log_loss_partitions.png",
+      "checks": {
+        "png_sha256": true,
+        "dpi_300": true,
+        "pixels": true,
+        "pdf_sha256": true,
+        "ocr_text_present": true,
+        "no_missing_glyphs": true,
+        "no_nan_inf": true,
+        "expected_token_found": true,
+        "mean_confidence": true
+      },
+      "ocr": {
+        "chars": 996,
+        "words": 140,
+        "mean_confidence": 83.02
+      }
+    },
+    {
+      "path": "visualizations/final_five/plots/final_five_selection_comparison.png",
+      "checks": {
+        "png_sha256": true,
+        "dpi_300": true,
+        "pixels": true,
+        "pdf_sha256": true,
+        "ocr_text_present": true,
+        "no_missing_glyphs": true,
+        "no_nan_inf": true,
+        "expected_token_found": true,
+        "mean_confidence": true
+      },
+      "ocr": {
+        "chars": 1463,
+        "words": 193,
+        "mean_confidence": 86.77
+      }
+    },
+    {
+      "path": "visualizations/final_five/plots/final_five_confusion_logistic_regression.png",
+      "checks": {
+        "png_sha256": true,
+        "dpi_300": true,
+        "pixels": true,
+        "pdf_sha256": true,
+        "ocr_text_present": true,
+        "no_missing_glyphs": true,
+        "no_nan_inf": true,
+        "expected_token_found": true,
+        "mean_confidence": true
+      },
+      "ocr": {
+        "chars": 811,
+        "words": 105,
+        "mean_confidence": 90.42
+      }
+    },
+    {
+      "path": "visualizations/final_five/plots/final_five_confusion_knn_distance_weighted.png",
+      "checks": {
+        "png_sha256": true,
+        "dpi_300": true,
+        "pixels": true,
+        "pdf_sha256": true,
+        "ocr_text_present": true,
+        "no_missing_glyphs": true,
+        "no_nan_inf": true,
+        "expected_token_found": true,
+        "mean_confidence": true
+      },
+      "ocr": {
+        "chars": 808,
+        "words": 104,
+        "mean_confidence": 89.68
+      }
+    },
+    {
+      "path": "visualizations/final_five/plots/final_five_confusion_bagging.png",
+      "checks": {
+        "png_sha256": true,
+        "dpi_300": true,
+        "pixels": true,
+        "pdf_sha256": true,
+        "ocr_text_present": true,
+        "no_missing_glyphs": true,
+        "no_nan_inf": true,
+        "expected_token_found": true,
+        "mean_confidence": true
+      },
+      "ocr": {
+        "chars": 814,
+        "words": 107,
+        "mean_confidence": 90.61
+      }
+    },
+    {
+      "path": "visualizations/final_five/plots/final_five_confusion_gaussian_nb.png",
+      "checks": {
+        "png_sha256": true,
+        "dpi_300": true,
+        "pixels": true,
+        "pdf_sha256": true,
+        "ocr_text_present": true,
+        "no_missing_glyphs": true,
+        "no_nan_inf": true,
+        "expected_token_found": true,
+        "mean_confidence": true
+      },
+      "ocr": {
+        "chars": 801,
+        "words": 105,
+        "mean_confidence": 89.7
+      }
+    },
+    {
+      "path": "visualizations/final_five/plots/final_five_confusion_hist_gradient_boosting.png",
+      "checks": {
+        "png_sha256": true,
+        "dpi_300": true,
+        "pixels": true,
+        "pdf_sha256": true,
+        "ocr_text_present": true,
+        "no_missing_glyphs": true,
+        "no_nan_inf": true,
+        "expected_token_found": true,
+        "mean_confidence": true
+      },
+      "ocr": {
+        "chars": 805,
+        "words": 104,
+        "mean_confidence": 90.6
+      }
+    },
+    {
+      "path": "visualizations/final_five/plots/final_five_confusion_hist_gradient_boosting_tuned.png",
+      "checks": {
+        "png_sha256": true,
+        "dpi_300": true,
+        "pixels": true,
+        "pdf_sha256": true,
+        "ocr_text_present": true,
+        "no_missing_glyphs": true,
+        "no_nan_inf": true,
+        "expected_token_found": true,
+        "mean_confidence": true
+      },
+      "ocr": {
+        "chars": 803,
+        "words": 103,
+        "mean_confidence": 90.6
+      }
+    },
+    {
+      "path": "visualizations/final_five/plots/final_five_confusion_matrices_all.png",
+      "checks": {
+        "png_sha256": true,
+        "dpi_300": true,
+        "pixels": true,
+        "pdf_sha256": true,
+        "ocr_text_present": true,
+        "no_missing_glyphs": true,
+        "no_nan_inf": true,
+        "expected_token_found": true,
+        "mean_confidence": true
+      },
+      "ocr": {
+        "chars": 1711,
+        "words": 213,
+        "mean_confidence": 91.02
+      }
+    },
+    {
+      "path": "visualizations/final_five/plots/final_five_fold_stability.png",
+      "checks": {
+        "png_sha256": true,
+        "dpi_300": true,
+        "pixels": true,
+        "pdf_sha256": true,
+        "ocr_text_present": true,
+        "no_missing_glyphs": true,
+        "no_nan_inf": true,
+        "expected_token_found": true,
+        "mean_confidence": true
+      },
+      "ocr": {
+        "chars": 936,
+        "words": 159,
+        "mean_confidence": 77.26
+      }
+    },
+    {
+      "path": "visualizations/final_five/plots/final_five_generalization_gap.png",
+      "checks": {
+        "png_sha256": true,
+        "dpi_300": true,
+        "pixels": true,
+        "pdf_sha256": true,
+        "ocr_text_present": true,
+        "no_missing_glyphs": true,
+        "no_nan_inf": true,
+        "expected_token_found": true,
+        "mean_confidence": true
+      },
+      "ocr": {
+        "chars": 891,
+        "words": 123,
+        "mean_confidence": 82.46
+      }
+    },
+    {
+      "path": "visualizations/final_five/plots/final_five_timing.png",
+      "checks": {
+        "png_sha256": true,
+        "dpi_300": true,
+        "pixels": true,
+        "pdf_sha256": true,
+        "ocr_text_present": true,
+        "no_missing_glyphs": true,
+        "no_nan_inf": true,
+        "expected_token_found": true,
+        "mean_confidence": true
+      },
+      "ocr": {
+        "chars": 1312,
+        "words": 195,
+        "mean_confidence": 85.81
+      }
+    },
+    {
+      "path": "visualizations/final_five/plots/final_five_tuned_vs_untuned.png",
+      "checks": {
+        "png_sha256": true,
+        "dpi_300": true,
+        "pixels": true,
+        "pdf_sha256": true,
+        "ocr_text_present": true,
+        "no_missing_glyphs": true,
+        "no_nan_inf": true,
+        "expected_token_found": true,
+        "mean_confidence": true
+      },
+      "ocr": {
+        "chars": 1198,
+        "words": 170,
+        "mean_confidence": 84.77
+      }
+    },
+    {
+      "path": "visualizations/final_five/plots/final_five_hpo_progress.png",
+      "checks": {
+        "png_sha256": true,
+        "dpi_300": true,
+        "pixels": true,
+        "pdf_sha256": true,
+        "ocr_text_present": true,
+        "no_missing_glyphs": true,
+        "no_nan_inf": true,
+        "expected_token_found": true,
+        "mean_confidence": true
+      },
+      "ocr": {
+        "chars": 1128,
+        "words": 183,
+        "mean_confidence": 83.3
+      }
+    },
+    {
+      "path": "visualizations/final_five/plots/final_five_hpo_parameters.png",
+      "checks": {
+        "png_sha256": true,
+        "dpi_300": true,
+        "pixels": true,
+        "pdf_sha256": true,
+        "ocr_text_present": true,
+        "no_missing_glyphs": true,
+        "no_nan_inf": true,
+        "expected_token_found": true,
+        "mean_confidence": true
+      },
+      "ocr": {
+        "chars": 1016,
+        "words": 167,
+        "mean_confidence": 70.74
+      }
+    },
+    {
+      "path": "visualizations/final_five/plots/final_five_observation_edge_metrics.png",
+      "checks": {
+        "png_sha256": true,
+        "dpi_300": true,
+        "pixels": true,
+        "pdf_sha256": true,
+        "ocr_text_present": true,
+        "no_missing_glyphs": true,
+        "no_nan_inf": true,
+        "expected_token_found": true,
+        "mean_confidence": true
+      },
+      "ocr": {
+        "chars": 1072,
+        "words": 140,
+        "mean_confidence": 79.7
+      }
+    },
+    {
+      "path": "visualizations/final_five/plots/final_five_continuity.png",
+      "checks": {
+        "png_sha256": true,
+        "dpi_300": true,
+        "pixels": true,
+        "pdf_sha256": true,
+        "ocr_text_present": true,
+        "no_missing_glyphs": true,
+        "no_nan_inf": true,
+        "expected_token_found": true,
+        "mean_confidence": true
+      },
+      "ocr": {
+        "chars": 948,
+        "words": 163,
+        "mean_confidence": 76.94
+      }
+    },
+    {
+      "path": "visualizations/final_five/plots/final_five_denominators.png",
+      "checks": {
+        "png_sha256": true,
+        "dpi_300": true,
+        "pixels": true,
+        "pdf_sha256": true,
+        "ocr_text_present": true,
+        "no_missing_glyphs": true,
+        "no_nan_inf": true,
+        "expected_token_found": true,
+        "mean_confidence": true
+      },
+      "ocr": {
+        "chars": 1063,
+        "words": 158,
+        "mean_confidence": 83.06
+      }
+    },
+    {
+      "path": "visualizations/final_five/plots/final_five_route_ablation.png",
+      "checks": {
+        "png_sha256": true,
+        "dpi_300": true,
+        "pixels": true,
+        "pdf_sha256": true,
+        "ocr_text_present": true,
+        "no_missing_glyphs": true,
+        "no_nan_inf": true,
+        "expected_token_found": true,
+        "mean_confidence": true
+      },
+      "ocr": {
+        "chars": 1275,
+        "words": 170,
+        "mean_confidence": 77.8
+      }
+    }
+  ],
+  "input_hashes": {
+    "experiments/final_five/current/results.json": "match",
+    "experiments/final_five/current/model_comparison.csv": "match",
+    "experiments/final_five/current/selection.json": "match",
+    "experiments/final_five/current/sequence_classification.json": "match",
+    "experiments/final_five/current/bayesian_optimization.json": "match",
+    "experiments/final_five/current/cv/logistic_regression.json": "match",
+    "experiments/final_five/current/cv/knn_distance_weighted.json": "match",
+    "experiments/final_five/current/cv/bagging.json": "match",
+    "experiments/final_five/current/cv/gaussian_nb.json": "match",
+    "experiments/final_five/current/cv/hist_gradient_boosting.json": "match",
+    "experiments/final_five/current/cv/hist_gradient_boosting_tuned.json": "match",
+    "experiments/final_five/current/evaluation/logistic_regression.json": "match",
+    "experiments/final_five/current/evaluation/knn_distance_weighted.json": "match",
+    "experiments/final_five/current/evaluation/bagging.json": "match",
+    "experiments/final_five/current/evaluation/gaussian_nb.json": "match",
+    "experiments/final_five/current/evaluation/hist_gradient_boosting.json": "match",
+    "experiments/final_five/current/evaluation/hist_gradient_boosting_tuned.json": "match",
+    "experiments/bayesian_trials.jsonl": "match",
+    "reports/final_five/all_five_model_acceptance.json": "match",
+    "artifacts/final_five/clean_load_report.json": "match",
+    "visualizations/phase_three/figure_manifest.json": "match",
+    "visualizations/final_five/generate_final_five.py": "match",
+    "visualizations/final_five/figure_integrity.py": "match",
+    "reports/final_five/decoder/student_ablation.json": "match",
+    "scripts/final_five_decoder.py": "match"
+  },
+  "eda_reuse_pins": [
+    {
+      "path": "visualizations/plots/dataset_inventory.png",
+      "still_matches_phase_three_pin": true
+    },
+    {
+      "path": "visualizations/plots/missing_invalid_and_anomalies.png",
+      "still_matches_phase_three_pin": true
+    },
+    {
+      "path": "visualizations/plots/trajectory_distributions.png",
+      "still_matches_phase_three_pin": true
+    },
+    {
+      "path": "visualizations/plots/timestamp_gaps.png",
+      "still_matches_phase_three_pin": true
+    },
+    {
+      "path": "visualizations/plots/road_network_sizes_connectivity.png",
+      "still_matches_phase_three_pin": true
+    },
+    {
+      "path": "visualizations/plots/gps_geographic_coverage.png",
+      "still_matches_phase_three_pin": true
+    },
+    {
+      "path": "visualizations/plots/gps_trip_gallery_train_01.png",
+      "still_matches_phase_three_pin": true
+    },
+    {
+      "path": "visualizations/plots/gps_trip_gallery_train_02.png",
+      "still_matches_phase_three_pin": true
+    },
+    {
+      "path": "visualizations/plots/gps_trip_gallery_train_03.png",
+      "still_matches_phase_three_pin": true
+    },
+    {
+      "path": "visualizations/plots/gps_trip_gallery_train_04.png",
+      "still_matches_phase_three_pin": true
+    },
+    {
+      "path": "visualizations/plots/gps_trip_gallery_student_test_01.png",
+      "still_matches_phase_three_pin": true
+    },
+    {
+      "path": "visualizations/plots/representative_road_route.png",
+      "still_matches_phase_three_pin": true
+    }
+  ],
+  "problems": [],
+  "note": "verification is OCR- and hash-based; no human visual inspection was performed or claimed"
+}

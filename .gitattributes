@@ -5,3 +5,6 @@
 *.pdf binary
 # Folium emits whitespace-only template lines; preserve hash-pinned generated HTML.
 visualizations/phase_three/maps/*.html -text whitespace=-blank-at-eol,-blank-at-eof
+visualizations/final_five/maps/*.html -text whitespace=-blank-at-eol,-blank-at-eof
+# A hash-pinned review patch retains its literal context-line whitespace.
+analysis/final_code_review/runner_output_guard.diff -text whitespace=-blank-at-eol,-blank-at-eof

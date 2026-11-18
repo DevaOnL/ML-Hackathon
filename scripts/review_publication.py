@@ -25,6 +25,16 @@ SECRET_RULES = {
 }
 RAW_EXTENSIONS = {".nodes", ".arcs", ".track", ".docx", ".mp4", ".pt", ".wav", ".pem", ".key"}
 RAW_PARTS = {"Student folder", "PathSnap_student_materials", ".venv", ".venv-clean", ".git"}
+# Audited aggregate/hash-only evidence, never a directory-wide exemption.
+PUBLIC_EVALUATOR_REPORTS = frozenset(
+    "reports/final_five/evaluator/" + filename for filename in (
+        "freeze_validation.json", "stage_plan.json", "input_audit_pre_prediction.json",
+        "prediction_attempt.json", "cli_result.json", "prediction_verification.json",
+        "reference_scoring_started.json", "route_metrics.json", "input_audit.json",
+        "expected_trips.json", "acceptance.json", "test_and_privacy_verification.json",
+    )
+)
+PUBLIC_EVALUATOR_DOCUMENTS = frozenset({"docs/EVALUATOR_SECTION_PLAN.md"})
 
 
 def audit(paths):
@@ -39,7 +49,8 @@ def audit(paths):
                 or relative.name == ".env" or relative.name.startswith(".env.")
                 or "cache" in relative.parts or "predictions" in relative.parts
                 or relative.suffix.lower() == ".npz"
-                or any(part.lower().startswith(("evaluator", "private")) for part in relative.parts)
+                or (any(part.lower().startswith(("evaluator", "private")) for part in relative.parts)
+                    and relative.as_posix() not in PUBLIC_EVALUATOR_REPORTS | PUBLIC_EVALUATOR_DOCUMENTS)
                 or (relative.suffix == ".route" and relative.parts[0] != "outputs")):
             findings.append({"path": name, "rule": "raw_private_or_row_level_input"})
         # Audit the exact index blob, not a concurrently edited working copy.

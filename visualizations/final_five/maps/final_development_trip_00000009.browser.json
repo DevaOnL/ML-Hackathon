@@ -1,0 +1,115 @@
+{
+  "leaflet_version": "1.9.4",
+  "layer_count": 1501,
+  "checked_layers": 4,
+  "title": "Final HistGradientBoosting \u00b7 trip 00000009\nStudent development \u00b7 learned Viterbi route \u00b7 1,049 raw GPS observations\nHistGradientBoosting (tuned) \u00b7 TRAIN 80 trips \u00b7 model SHA-256 c9cc8e9f3683\nINTERNAL REPORT ONLY \u00b7 supplied reference included \u00b7 never serve in the application",
+  "legend": "Actual geographic observations and arc traversals\nFull supplied road graph: gray endpoint chords\nRaw GPS: amber points and chronological polyline\nSupplied development reference: green (toggle above)\nFrozen learned Viterbi prediction: blue, 444 traversals\nAll repeated traversals retained; original graph coordinates; no inserted joins.\nObservation accuracy uses geometry-and-motion proxy labels, not timestamp-aligned truth.\nRoute F1 compares supplied arc traversals directly; it is not an official organizer score.",
+  "boxes": {
+    "#final-map-title": {
+      "left": 60,
+      "top": 16,
+      "right": 1480,
+      "bottom": 187.71875,
+      "width": 1420,
+      "height": 171.71875,
+      "scrollWidth": 1418,
+      "clientWidth": 1418,
+      "scrollHeight": 170,
+      "clientHeight": 170
+    },
+    "#final-map-legend": {
+      "left": 24,
+      "top": 757.9375,
+      "right": 980,
+      "bottom": 1052,
+      "width": 956,
+      "height": 294.0625,
+      "scrollWidth": 954,
+      "clientWidth": 954,
+      "scrollHeight": 292,
+      "clientHeight": 292
+    },
+    "#final-map-badge": {
+      "left": 1350,
+      "top": 831,
+      "right": 1896,
+      "bottom": 1052,
+      "width": 546,
+      "height": 221,
+      "scrollWidth": 544,
+      "clientWidth": 544,
+      "scrollHeight": 219,
+      "clientHeight": 219
+    },
+    ".leaflet-control-layers": {
+      "left": 1518,
+      "top": 10,
+      "right": 1910,
+      "bottom": 297.125,
+      "width": 392,
+      "height": 287.125,
+      "scrollWidth": 388,
+      "clientWidth": 388,
+      "scrollHeight": 283,
+      "clientHeight": 283
+    }
+  },
+  "all_overlays_inside_viewport": true,
+  "no_overlay_overlap": true,
+  "body_scrolls": false,
+  "visible_layer_color_pixels": {
+    "gps_amber": 679,
+    "road_gray": 40562,
+    "reference_green": 6484,
+    "prediction_blue": 5577
+  },
+  "canvas_shape": [
+    2304,
+    1296
+  ],
+  "actual_layer_counts": {
+    "network": 1,
+    "reference": 1,
+    "gps": 1050,
+    "prediction": 444
+  },
+  "prediction_geometry_latlon_sha256": "154f2c9f3bbe8d777f4fc917e6127f893afb898218b5eb237cbe831b933c05ce",
+  "prediction_geometry_matches_every_cli_arc": true,
+  "all_full_graph_and_gps_coordinates_match": true,
+  "reference_toggle_verified": true,
+  "browser_version": "145.0.7632.6",
+  "source_html": "visualizations/final_five/maps/final_development_trip_00000009.html",
+  "screenshot_path": "visualizations/final_five/maps/final_development_trip_00000009.png",
+  "pdf_path": "visualizations/final_five/maps/final_development_trip_00000009.pdf",
+  "viewport": {
+    "width": 1920,
+    "height": 1080
+  },
+  "page_errors": [],
+  "console_errors": [],
+  "requests": [
+    "file:///home/d3va/Downloads/ML_Hackathon/visualizations/final_five/maps/final_development_trip_00000009.html",
+    "file:///home/d3va/Downloads/ML_Hackathon/frontend/vendor/leaflet/leaflet.js",
+    "file:///home/d3va/Downloads/ML_Hackathon/frontend/vendor/leaflet/leaflet.css"
+  ],
+  "blocked_network_requests": [],
+  "failed_requests": [],
+  "external_requests": [],
+  "no_external_requests": true,
+  "no_console_errors": true,
+  "ocr": {
+    "text_path": "visualizations/final_five/maps/final_development_trip_00000009.ocr.txt",
+    "words": 176,
+    "mean_confidence": 89.88,
+    "required_title_tokens_found": true
+  },
+  "pdf": {
+    "pages": 1,
+    "width_pt": 842.88,
+    "height_pt": 595.91998,
+    "title_text_present": true
+  },
+  "capture_method": "Actual installed Playwright Chromium; local file URL; all network blocked",
+  "inspection": "DOM, exact Leaflet coordinates, canvas color counts, OCR and PDF text; no human visual inspection claimed",
+  "created_at_utc": "2026-11-18T09:05:57.644293+00:00"
+}

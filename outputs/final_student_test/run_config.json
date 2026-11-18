@@ -1,0 +1,33 @@
+{
+  "config": {
+    "sigma_m": 7.160645916267228,
+    "beta_m": 2.0,
+    "max_candidates": 12,
+    "candidate_radius_m": 80.0,
+    "max_radius_m": 1000.0,
+    "routing_slack_m": 300.0,
+    "backward_tolerance_m": 20.0,
+    "observation_distance_m": 0.0,
+    "observation_interval": 5.0,
+    "sample_spacing_m": 40.0,
+    "cache_size": 2048,
+    "classifier_weight": 1.0,
+    "geometry_weight": 1.0,
+    "candidate_retry_limit": 48
+  },
+  "model_sha256": "c9cc8e9f36838f656a94d07ed69632979df9981ca94a9daf3b52fbce052e4b34",
+  "baseline": false,
+  "uses_reference_routes": false,
+  "trip_ids": [
+    "00000000",
+    "00000007",
+    "00000009",
+    "00000040",
+    "00000052",
+    "00000056",
+    "00000065",
+    "00000076",
+    "00000077",
+    "00000091"
+  ]
+}

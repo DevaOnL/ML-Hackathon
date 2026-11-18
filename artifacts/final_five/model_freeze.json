@@ -1,0 +1,13 @@
+{
+  "frozen_at_utc": "2026-11-18T08:26:50.372940+00:00",
+  "phase": "five-model-completion",
+  "model_name": "hist_gradient_boosting",
+  "run_name": "hist_gradient_boosting_tuned",
+  "model": "artifacts/final_five/model.joblib",
+  "model_sha256": "c9cc8e9f36838f656a94d07ed69632979df9981ca94a9daf3b52fbce052e4b34",
+  "bytes": 147906,
+  "metadata_sha256": "c354885e22158e9da14e0f8bc8e01d3e7c6fbe810e196192c6b59c7cbdbbf4c5",
+  "feature_schema_sha256": "55f203a1e30ab6369ff937840c2bfa4cb180dc36172a2ca47047714c05fb8d9a",
+  "student_used_for_selection": false,
+  "evaluator_used_for_selection": false
+}

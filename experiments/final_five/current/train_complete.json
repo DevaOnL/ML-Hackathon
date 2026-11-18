@@ -1,0 +1,44 @@
+{
+  "completed_at_utc": "2026-11-18T08:26:50.373220+00:00",
+  "selected_model": "hist_gradient_boosting",
+  "families": [
+    "logistic_regression",
+    "knn_distance_weighted",
+    "bagging",
+    "gaussian_nb",
+    "hist_gradient_boosting"
+  ],
+  "fresh_fits": [
+    "gaussian_nb",
+    "hist_gradient_boosting",
+    "hist_gradient_boosting_tuned"
+  ],
+  "config": {
+    "seed": 20261118,
+    "train_observations_per_trip": 350,
+    "student_observations_per_trip": 0,
+    "folds": 3,
+    "bayesian_trials": 12,
+    "n_jobs": 2,
+    "candidate_radius_m": 80.0,
+    "max_radius_m": 1000.0,
+    "max_candidates": 12,
+    "sample_spacing_m": 40.0
+  },
+  "versions": {
+    "python": "3.14.6",
+    "numpy": "2.5.5",
+    "scipy": "1.18.0",
+    "sklearn": "1.8.0",
+    "joblib": "1.5.3"
+  },
+  "source_sha256": {
+    "experiments/final_five/run_final_five.py": "6e25f0492c8d48d62ff21ac05e5e5e5f6306ffdc27485458ee5d2f69e20adb65",
+    "mapmatch/final_models.py": "df8771780ba705517a6b3942058c7a9d86d52fb2e9a13bb0e2e00559044b53ce",
+    "experiments/final_five/PROTOCOL.md": "8e02a4a6c027ad64e85b1f1335944372cf6e9a6258a355060e823a2f28bec440",
+    "mapmatch/learning.py": "de626dd12085cc404ede8eab774d2f79e3269fb3d2b1858975ffdc7da167280c"
+  },
+  "model_freeze": "artifacts/final_five/model_freeze.json",
+  "student_loaded": false,
+  "evaluator_loaded": false
+}

@@ -2,10 +2,12 @@
  * Public PathSnap API boundary. No dataset files, cached predictions, labels,
  * reference geometry, or local matching logic belong in this module.
  *
- * Agreed service contract: GET /health; GET /trips; POST /match {trip_id}.
+ * Contract: GET /health, GET /datasets, GET /datasets/{id}/trips,
+ * POST /datasets/{id}/match {trip_id}; legacy /trips and /match adapters remain.
  * Only documented scalar metadata and geometry are retained by the adapter.
  */
 export const API_STORAGE_KEY = "pathsnap.apiBaseUrl";
+export const THEME_STORAGE_KEY = "pathsnap.theme";
 export const MATCH_TIMEOUT_MS = 180_000;
 export const CATALOG_TIMEOUT_MS = 15_000;
 const MAX_COORDINATES = 250_000;
@@ -100,11 +102,13 @@ export async function requestJson(base, path, {
       credentials: "same-origin",
       signal: controller.signal,
     });
+    if (controller.signal.aborted) throw new ApiError("Stopped waiting for the API. The server may still finish this request.", { kind: "cancelled" });
     let payload;
     try { payload = await response.json(); } catch {
       if (!response.ok) throw httpError(response.status);
       throw new ApiError("The API returned a non-JSON response. Check that the base URL points to the model API, not a static file server.");
     }
+    if (controller.signal.aborted) throw new ApiError("Stopped waiting for the API. The server may still finish this request.", { kind: "cancelled" });
     if (!response.ok) throw httpError(response.status);
     if (!isRecord(payload)) throw new ApiError("The API response must be a JSON object. Check the documented service contract.");
     return payload;
@@ -237,9 +241,9 @@ export const METRIC_DEFINITIONS = [
   ["classifier_macro_f1", "Classifier macro F1", "ratio"],
 ];
 
-export function normalizeMatch(payload, selectedId) {
+export function normalizeMatch(payload, selectedId, expectedDatasetId = null) {
   if (!isRecord(payload)) throw new ApiError("The match response is not a JSON object.");
-  if (String(payload.trip_id) !== String(selectedId)) throw new ApiError("The API returned a different trip. The result was not displayed; refresh the catalogue and retry.");
+  if ((expectedDatasetId !== null && typeof payload.trip_id !== "string") || String(payload.trip_id) !== String(selectedId)) throw new ApiError("The API returned a different trip. The result was not displayed; refresh the catalogue and retry.");
   const metricsIn = isRecord(payload.metrics) ? payload.metrics : {};
   const timingsIn = isRecord(payload.timings) ? payload.timings : {};
   const modelIn = isRecord(payload.model) ? payload.model : {};
@@ -249,8 +253,13 @@ export function normalizeMatch(payload, selectedId) {
     metrics[key] = (type === "ratio" ? ratio : nonNegative)(metricsIn[key]);
   }
   const notes = Array.isArray(payload.metric_notes) ? payload.metric_notes.filter((note) => typeof note === "string").map((note) => shortText(note, 1000)).filter(Boolean).slice(0, 20) : [];
+  const datasetId = expectedDatasetId === null
+    ? (payload.dataset_id === undefined ? null : normalizeDatasetId(payload.dataset_id))
+    : requireDatasetIdentity(payload, expectedDatasetId);
   return {
     tripId: String(payload.trip_id),
+    datasetId,
+    datasetRole: ["development", "evaluator"].includes(payload.dataset_role) ? payload.dataset_role : "",
     requestId: shortText(payload.request_id, 140),
     predictedRoute: normalizeGeoJSON(payload.predicted_route, "predicted_route"),
     rawGps: normalizeGeoJSON(payload.raw_gps, "raw_gps"),
@@ -261,4 +270,94 @@ export function normalizeMatch(payload, selectedId) {
     timings: { inferenceMs: nonNegative(timingsIn.inference_ms), scoringMs: nonNegative(timingsIn.scoring_ms), totalMs: nonNegative(timingsIn.total_ms) },
     model: { name: shortText(modelIn.name), algorithm: shortText(modelIn.algorithm), sha256: shortText(modelIn.sha256, 64) },
   };
+}
+
+/** Public dataset IDs are fixed by the service; never accept arbitrary paths. */
+export const DATASET_IDS = Object.freeze(["development", "evaluator"]);
+
+export function normalizeDatasetId(value) {
+  if (!DATASET_IDS.includes(value)) {
+    throw new ApiError("The API returned an unknown dataset ID. Only development and evaluator are supported.", { kind: "contract" });
+  }
+  return value;
+}
+
+/** Require the server to echo both section identities on dataset endpoints. */
+function requireDatasetIdentity(payload, requestedDatasetId) {
+  const expected = normalizeDatasetId(requestedDatasetId);
+  if (payload.dataset_id !== expected || payload.dataset_role !== expected) {
+    throw new ApiError("The API did not confirm the requested dataset. The response was not displayed; refresh the catalogue and retry.", { kind: "contract" });
+  }
+  return expected;
+}
+
+/** GET /datasets; unknown fields are dropped, required identities fail closed. */
+export function normalizeDatasets(payload) {
+  if (!isRecord(payload) || !Array.isArray(payload.datasets)) {
+    throw new ApiError("The dataset catalogue response is missing its datasets array.", { kind: "contract" });
+  }
+  const seen = new Set();
+  const datasets = payload.datasets.map((entry) => {
+    if (!isRecord(entry)) throw new ApiError("The dataset catalogue contains an invalid entry.", { kind: "contract" });
+    const id = normalizeDatasetId(entry.id);
+    if (seen.has(id) || entry.role !== id) {
+      throw new ApiError("The dataset catalogue contains duplicate or conflicting dataset identities.", { kind: "contract" });
+    }
+    seen.add(id);
+    if (typeof entry.available !== "boolean" || integer(entry.trip_count) === null ||
+        integer(entry.expected_trip_count) === null || entry.expected_trip_count < 1 ||
+        !["ready", "not_ready", "error", ...(id === "evaluator" ? ["not_configured"] : [])].includes(entry.status)) {
+      throw new ApiError("The dataset catalogue is missing valid availability, counts, or status.", { kind: "contract" });
+    }
+    if (entry.status === "not_configured" && (entry.available || entry.trip_count !== 0)) {
+      throw new ApiError("An unconfigured evaluator dataset cannot report available trips.", { kind: "contract" });
+    }
+    return {
+      id, role: entry.role,
+      label: shortText(entry.label, 80) || (id === "development" ? "Student development" : "Evaluator"),
+      available: entry.available, tripCount: entry.trip_count,
+      expectedCount: entry.expected_trip_count, status: entry.status,
+    };
+  });
+  if (seen.size !== DATASET_IDS.length) {
+    throw new ApiError("The dataset catalogue must report both development and evaluator, including unavailable sections.", { kind: "contract" });
+  }
+  return { datasets: DATASET_IDS.map((id) => datasets.find((entry) => entry.id === id)) };
+}
+
+export function datasetTripsPath(datasetId) {
+  return "/datasets/" + normalizeDatasetId(datasetId) + "/trips";
+}
+
+export function datasetMatchPath(datasetId) {
+  return "/datasets/" + normalizeDatasetId(datasetId) + "/match";
+}
+
+export function normalizeDatasetTrips(payload, requestedDatasetId) {
+  if (!isRecord(payload)) throw new ApiError("The trip catalogue is not a JSON object.", { kind: "contract" });
+  const datasetId = requireDatasetIdentity(payload, requestedDatasetId);
+  const catalogue = normalizeTrips(payload);
+  if (payload.trips.some((trip) => typeof trip.trip_id !== "string")) {
+    throw new ApiError("Dataset trip IDs must be strings.", { kind: "contract" });
+  }
+  if (integer(payload.count) !== catalogue.trips.length || integer(payload.expected_count) === null) {
+    throw new ApiError("The dataset trip catalogue has missing or inconsistent counts.", { kind: "contract" });
+  }
+  return { ...catalogue, datasetId };
+}
+
+/** A generation check also rejects a late response after leaving and returning. */
+export function isCurrentMatch(request, current) {
+  return request.version === current.matchVersion && request.apiBase === current.apiBase &&
+    request.datasetId === current.datasetId && request.tripId === current.selectedId;
+}
+
+/** Theme is a local preference; unexpected or unavailable values mean dark. */
+export function normalizeTheme(value) {
+  return value === "light" ? "light" : "dark";
+}
+
+export function themeToggleState(value) {
+  const theme = normalizeTheme(value);
+  return { theme, pressed: theme === "light", action: "Switch to " + (theme === "light" ? "dark" : "light") + " theme" };
 }
