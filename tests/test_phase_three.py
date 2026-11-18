@@ -270,6 +270,25 @@ class RequestedTrioTests(unittest.TestCase):
         np.testing.assert_array_equal(knn_reference_bank(y, weights, 200, 31), np.arange(100))
         self.assertEqual(len({bank_seed(20261118, i) for i in range(4)}), 4)
 
+    def test_new_numerical_run_paths_are_explicit_isolated_and_restored(self):
+        phase = importlib.import_module("experiments.phase_three.run_phase_three")
+        original = phase.PHASE_DIR, phase.ARTIFACTS
+        seen=[]
+        with tempfile.TemporaryDirectory() as temporary:
+            root=Path(temporary)
+            with mock.patch.object(phase,"ROOT",root), mock.patch.object(phase,"execute_stages",side_effect=lambda args:seen.append((phase.PHASE_DIR,phase.ARTIFACTS,args.stage))):
+                phase.main(["--stage","cv","--run-id","reproduction-1"])
+                self.assertEqual(seen,[(root/"experiments/phase_three_runs/reproduction-1",root/"artifacts/phase_three_runs/reproduction-1","cv")])
+                self.assertEqual((phase.PHASE_DIR,phase.ARTIFACTS),original)
+                for invalid in ("../phase_three","", "UPPER", "a/b", "a"*49):
+                    with self.subTest(run_id=invalid), self.assertRaises(ValueError):
+                        phase.main(["--stage","cv","--run-id",invalid])
+                (root/"experiments").mkdir()
+                (root/"experiments/phase_three_runs").symlink_to(root,target_is_directory=True)
+                with self.assertRaisesRegex(ValueError,"symlink"):
+                    phase.main(["--stage","cv","--run-id","escape"])
+            self.assertFalse((root/"artifacts").exists())
+
     def test_completed_or_partial_phase_stages_refuse_before_loading_or_fitting(self):
         phase = importlib.import_module("experiments.phase_three.run_phase_three")
         with tempfile.TemporaryDirectory() as temporary:

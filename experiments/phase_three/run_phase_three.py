@@ -15,8 +15,9 @@ diagnostic can run before the winner is frozen:
             results.json / model_comparison.csv (shared schema)
     all     cv -> select -> hpo -> freeze -> student
 
-Writes only under experiments/phase_three/ and artifacts/phase_three/ (plus
-this file itself). Never mutates shared experiments/ root files, the deployed
+Writes numerical outputs only under experiments/phase_three/ and
+artifacts/phase_three/, or explicit isolated *_runs/<run-id>/ trees.
+Never mutates shared experiments/ root files, the deployed
 artifacts/model.joblib, or any mapmatch source module; shared primitives are
 imported read-only. See experiments/phase_three/PROTOCOL.md.
 """
@@ -646,16 +647,16 @@ def stage_freeze(config):
     smoke = clean_environment_smoke_load()
     manifest["files"]["clean_load_report.json"] = {"sha256": _sha256(ARTIFACTS / "clean_load_report.json")}
     save_json(ARTIFACTS / "artifact_manifest.json", manifest)
-    freeze = {"model": "artifacts/phase_three/model.joblib", "sha256": sha, "bytes": size,
+    freeze = {"model": str(model_path.relative_to(ROOT)), "sha256": sha, "bytes": size,
               "model_name": name, "run_name": run_name, "parameters": parameters,
               "objective": winner_cv["objective"],
-              "feature_schema": "artifacts/phase_three/feature_schema.json",
-              "metadata": "artifacts/phase_three/model_metadata.json",
+              "feature_schema": str((ARTIFACTS / "feature_schema.json").relative_to(ROOT)),
+              "metadata": str((ARTIFACTS / "model_metadata.json").relative_to(ROOT)),
               "clean_environment_load": {"passed": smoke["passed"], "python": smoke["python"],
-                                         "report": "artifacts/phase_three/clean_load_report.json"},
+                                         "report": str((ARTIFACTS / "clean_load_report.json").relative_to(ROOT))},
               "frozen_at_utc": utc_now(),
               "extras": {"phase": PHASE_NAME, "immutable_after_freeze": True,
-                         "selection_file": "experiments/phase_three/selection.json",
+                         "selection_file": str((PHASE_DIR / "selection.json").relative_to(ROOT)),
                          "historical_artifact_untouched": "artifacts/model.joblib (prior freeze) is not modified by phase three",
                          "consumer_note": "phase-three winner for decoder/routes/live phase_three scopes; routes must be re-derived by their owners"}}
     save_json(ARTIFACTS / "model_freeze.json", freeze)
@@ -930,11 +931,39 @@ def stage_student(config):
     return results
 
 
+def isolated_run_paths(run_id: str) -> tuple[Path, Path]:
+    """Explicit new experiment outputs; never a redirect of the current freeze."""
+    import re
+    if not re.fullmatch(r"[a-z0-9][a-z0-9_-]{0,47}", run_id):
+        raise ValueError("run ID must be 1-48 lowercase letters, digits, underscores or hyphens")
+    paths = (ROOT / "experiments" / "phase_three_runs" / run_id,
+             ROOT / "artifacts" / "phase_three_runs" / run_id)
+    for path in paths:
+        current = path
+        while current != ROOT:
+            if current.is_symlink():
+                raise ValueError("isolated run output must not follow a symlink")
+            current = current.parent
+    return paths
+
+
 def main(argv=None):
+    global PHASE_DIR, ARTIFACTS
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--stage", choices=["cv", "select", "hpo", "freeze", "student", "all"],
                         required=True)
+    parser.add_argument("--run-id", help="Explicit isolated new numerical run under experiments/phase_three_runs and artifacts/phase_three_runs; never overwrite current phase")
     args = parser.parse_args(argv)
+    previous_paths = PHASE_DIR, ARTIFACTS
+    if args.run_id is not None:
+        PHASE_DIR, ARTIFACTS = isolated_run_paths(args.run_id)
+    try:
+        return execute_stages(args)
+    finally:
+        PHASE_DIR, ARTIFACTS = previous_paths
+
+
+def execute_stages(args):
     stages = ["cv", "select", "hpo", "freeze", "student"] if args.stage == "all" else [args.stage]
     for stage in stages:
         refuse_existing_stage(stage)  # Before directories or run metadata are touched.

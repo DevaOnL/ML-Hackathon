@@ -59,7 +59,7 @@ The original dataset and organiser materials are not redistributed. Extract the 
 - Track: longitude/latitude/timestamp seconds, strictly increasing original times.
 - Reference route: chronological arc-ID sequence, **not** a per-observation label file.
 
-Raw inputs stay read-only. `.route` files are read only by explicit fitting, auditing or postprediction evaluation, never by the matcher. Reserved evaluator trips are separate from the ten permitted student-development trips and have not been provided.
+Raw inputs stay read-only. `.route` files are read only by explicit fitting, auditing or postprediction evaluation, never by the matcher. The user reported ten new evaluator trips after the current model was frozen, tested and deployed. They remain uninspected and unassessed in this report; their separate website section is queued for later.
 
 ## Reproduce the requested-trio phase
 
@@ -67,12 +67,20 @@ The measured phase runner deliberately requires verified shared caches and the s
 
 ```bash
 export OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 NUMEXPR_NUM_THREADS=1
-python experiments/phase_three/run_phase_three.py --stage cv
-python experiments/phase_three/run_phase_three.py --stage select
-python experiments/phase_three/run_phase_three.py --stage hpo
-python experiments/phase_three/run_phase_three.py --stage freeze
-python experiments/phase_three/run_phase_three.py --stage student
+# Only for a deliberate NEW numerical experiment after input preparation:
+python experiments/phase_three/run_phase_three.py --stage cv --run-id reproduction-1
+python experiments/phase_three/run_phase_three.py --stage select --run-id reproduction-1
+python experiments/phase_three/run_phase_three.py --stage hpo --run-id reproduction-1
+python experiments/phase_three/run_phase_three.py --stage freeze --run-id reproduction-1
+python experiments/phase_three/run_phase_three.py --stage student --run-id reproduction-1
 ```
+
+These commands write only to isolated `experiments/phase_three_runs/reproduction-1/`
+and `artifacts/phase_three_runs/reproduction-1/` trees. Existing completed or
+partial stages refuse overwrites; omit `--run-id` only to address the original
+phase, whose completed stages also refuse reruns. The bundled frozen model is
+ready for inference and does not require training again. See the
+[preparation guide](<docs/PHASE_REPRODUCTION.md>) before starting a new run.
 
 The three trip-grouped TRAIN folds use 80 trips with 350 deterministically sampled observations per trip. KNN fits a predeclared 60,000-row training-fold-only reference bank. Bagging is a genuine bootstrap `BaggingClassifier` of decision trees. Eight Bayesian trials include one measured baseline prior, two seeded proposals and five Gaussian-process expected-improvement proposals. Family selection and tuning precede the new phase's student diagnostics; the earlier historical student results were already available and are disclosed as prior development context.
 

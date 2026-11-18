@@ -183,7 +183,13 @@ summarized above, and the two are kept separate on purpose.
   refits before loading data. Use the frozen artifacts for inference. Rebuild
   inputs with this tool in a separate working copy, and use a deliberately
   separate output tree for a new numerical experiment; do not delete the
-  supplied freeze just to make a command run.
+  supplied freeze just to make a command run. An explicit `--run-id` on each
+  phase-runner stage writes to isolated experiment and artifact trees. For
+  example, `--stage cv --run-id reproduction-1` starts a new comparison and
+  `--stage select --run-id reproduction-1` continues that same isolated run.
+  Reuse the same identifier for HPO, freeze and student stages; each completed
+  stage still refuses accidental overwrites. No isolated numerical run was
+  executed merely to test this option; path isolation has synthetic tests.
 - The CV folds, aggregate records and LR baseline are included in the reviewed
   publication scope; row-level caches remain private and must be regenerated
   from authorized local raw data.
