@@ -1,0 +1,29 @@
+{
+  "model": "artifacts/phase_three/model.joblib",
+  "sha256": "c7f2572d5d037d07a5c07710fbb1ffefd4ff13fbe866c8940022e4902669c733",
+  "bytes": 2028652,
+  "model_name": "bagging",
+  "run_name": "bagging_tuned",
+  "parameters": {
+    "n_estimators": 48,
+    "max_samples": 0.7160628448832399,
+    "max_depth": 13,
+    "min_samples_leaf": 2
+  },
+  "objective": 0.8925000000000001,
+  "feature_schema": "artifacts/phase_three/feature_schema.json",
+  "metadata": "artifacts/phase_three/model_metadata.json",
+  "clean_environment_load": {
+    "passed": true,
+    "python": ".venv-clean/bin/python",
+    "report": "artifacts/phase_three/clean_load_report.json"
+  },
+  "frozen_at_utc": "2026-11-18T07:09:04.496901+00:00",
+  "extras": {
+    "phase": "three-model-first",
+    "immutable_after_freeze": true,
+    "selection_file": "experiments/phase_three/selection.json",
+    "historical_artifact_untouched": "artifacts/model.joblib (prior freeze) is not modified by phase three",
+    "consumer_note": "phase-three winner for decoder/routes/live phase_three scopes; routes must be re-derived by their owners"
+  }
+}

@@ -42,9 +42,9 @@ def _origin(value: str) -> str:
 class Settings:
     data_dir: Path = DEFAULT_DATA_DIR
     reference_dir: Path | None = None
-    model_path: Path = ROOT / "artifacts" / "model.joblib"
+    model_path: Path = ROOT / "artifacts" / "phase_three" / "model.joblib"
     metadata_path: Path | None = None
-    match_config_path: Path | None = ROOT / "artifacts" / "match_config.json"
+    match_config_path: Path | None = ROOT / "artifacts" / "phase_three" / "match_config.json"
     match_config_required: bool = False
     cors_origins: tuple[str, ...] = ()
     expected_trip_count: int = 10
@@ -76,17 +76,17 @@ class Settings:
 
     @classmethod
     def from_env(cls) -> "Settings":
-        model_path = _path(os.environ.get("PATHSNAP_MODEL", "artifacts/model.joblib"))
+        model_path = _path(os.environ.get("PATHSNAP_MODEL", "artifacts/phase_three/model.joblib"))
         metadata = os.environ.get("PATHSNAP_MODEL_METADATA")
         reference = os.environ.get("PATHSNAP_REFERENCE_DIR")
-        match_config = os.environ.get("PATHSNAP_MATCH_CONFIG", "artifacts/match_config.json")
+        match_config = os.environ.get("PATHSNAP_MATCH_CONFIG", "artifacts/phase_three/match_config.json")
         return cls(
             data_dir=_path(os.environ.get("PATHSNAP_DATA_DIR", str(DEFAULT_DATA_DIR))),
             reference_dir=_path(reference) if reference else None,
             model_path=model_path,
             metadata_path=_path(metadata) if metadata else None,
             match_config_path=_path(match_config) if match_config else None,
-            match_config_required="PATHSNAP_MATCH_CONFIG" in os.environ and bool(match_config),
+            match_config_required=bool(match_config),
             cors_origins=tuple(v.strip() for v in os.environ.get("PATHSNAP_CORS_ORIGINS", "").split(",") if v.strip()),
             dataset_role=os.environ.get("PATHSNAP_DATASET_ROLE") or None,
             graph_cache_size=_positive_integer(os.environ.get("PATHSNAP_GRAPH_CACHE_SIZE", "2"), "PATHSNAP_GRAPH_CACHE_SIZE"),

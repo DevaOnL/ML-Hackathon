@@ -1,0 +1,26 @@
+{
+  "stage": "cv",
+  "phase": "three-model-first",
+  "student_test_consulted": false,
+  "completed_at_utc": "2026-11-18T06:37:11.356580+00:00",
+  "models": {
+    "logistic_regression": {
+      "objective": 0.884,
+      "macro_f1": 0.9330442702864366,
+      "log_loss": 0.07443299221247036,
+      "reused": true
+    },
+    "knn_distance_weighted": {
+      "objective": 0.8767857142857143,
+      "macro_f1": 0.9274791219704925,
+      "log_loss": 0.09411409567726087,
+      "reused": false
+    },
+    "bagging": {
+      "objective": 0.8914642857142857,
+      "macro_f1": 0.9426144376936816,
+      "log_loss": 0.057221017455649795,
+      "reused": false
+    }
+  }
+}

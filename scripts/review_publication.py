@@ -9,10 +9,12 @@ from __future__ import annotations
 import argparse
 from datetime import datetime, timezone
 import hashlib
+import io
 import json
 from pathlib import Path
 import re
 import subprocess
+from zipfile import BadZipFile, ZipFile
 
 ROOT = Path(__file__).resolve().parents[1]
 SECRET_RULES = {
@@ -36,10 +38,32 @@ def audit(paths):
         if (set(relative.parts) & RAW_PARTS or relative.suffix.lower() in RAW_EXTENSIONS
                 or relative.name == ".env" or relative.name.startswith(".env.")
                 or "cache" in relative.parts or "predictions" in relative.parts
+                or relative.suffix.lower() == ".npz"
+                or any(part.lower().startswith(("evaluator", "private")) for part in relative.parts)
                 or (relative.suffix == ".route" and relative.parts[0] != "outputs")):
             findings.append({"path": name, "rule": "raw_private_or_row_level_input"})
         # Audit the exact index blob, not a concurrently edited working copy.
         data = subprocess.check_output(["git", "show", ":" + name], cwd=ROOT)
+        if relative.suffix.lower() == ".zip":
+            if relative.parts[0] != "outputs" or relative.name != "submission.zip":
+                findings.append({"path": name, "rule": "non_submission_archive"})
+            else:
+                try:
+                    with ZipFile(io.BytesIO(data)) as archive:
+                        entries = archive.infolist()
+                        valid = (len(entries) == 10 and len({entry.filename for entry in entries}) == 10
+                                 and all(re.fullmatch(r"[0-9]{8}\.route", entry.filename)
+                                         and not entry.is_dir() and entry.file_size < 5_000_000 for entry in entries)
+                                 and archive.testzip() is None)
+                        if not valid:
+                            findings.append({"path": name, "rule": "invalid_flat_ten_route_submission"})
+                        if valid:
+                            for entry in entries:
+                                member = archive.read(entry)
+                                if any(re.search(pattern, member) for pattern in SECRET_RULES.values()):
+                                    findings.append({"path": name, "rule": "secret_in_submission_member"})
+                except (BadZipFile, RuntimeError, ValueError):
+                    findings.append({"path": name, "rule": "invalid_submission_archive"})
         if len(data) >= 90 * 1024 * 1024:
             findings.append({"path": name, "rule": "github_large_blob"})
         for rule, pattern in SECRET_RULES.items():

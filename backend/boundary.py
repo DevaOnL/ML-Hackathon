@@ -12,7 +12,7 @@ from .service import log_event
 
 MAX_REQUEST_BYTES = 1024
 SECURITY_HEADERS = {
-    b"cache-control": b"no-store",
+    b"cache-control": b"no-store, no-transform",
     b"x-content-type-options": b"nosniff",
     b"referrer-policy": b"no-referrer",
     b"x-frame-options": b"DENY",

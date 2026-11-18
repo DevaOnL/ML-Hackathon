@@ -1,0 +1,19 @@
+{
+  "phase": "three-model-first",
+  "created_at_utc": "2026-11-18T07:09:02.883506+00:00",
+  "files": {
+    "model.joblib": {
+      "sha256": "c7f2572d5d037d07a5c07710fbb1ffefd4ff13fbe866c8940022e4902669c733",
+      "bytes": 2028652
+    },
+    "model_metadata.json": {
+      "sha256": "1586893c164ecb8aa071f4ffc09937d17dde90e891c1b54990308cd03b00c7e4"
+    },
+    "feature_schema.json": {
+      "sha256": "8e10b385fa2c65dff10ff2ba5df78d13440971660325b6b5a9a7fba87b6346a6"
+    },
+    "clean_load_report.json": {
+      "sha256": "66c3de13f931798a45cf6a35e38c79e8797dceccd05a352f038c8efcfe5701ff"
+    }
+  }
+}

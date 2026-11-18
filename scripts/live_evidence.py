@@ -177,18 +177,19 @@ def collect_browser(base, output, ready=False, trip_id="00000009", freeze_path=N
         response = page.goto(base, wait_until="networkidle")
         if response is None or response.status != 200:
             raise RuntimeError("website did not return 200")
-        page.wait_for_function('document.querySelectorAll("#trip-list input[type=radio]").length===10')
+        page.wait_for_function('() => document.querySelectorAll("#trip-list input[type=radio]").length===10')
         evidence["checks"].append({"trip_options": page.locator("#trip-list input[type=radio]").count(),
                                    "api_host": page.locator("#api-host").inner_text(),
                                    "connection": page.locator("#connection-label").inner_text()})
         if ready:
             health = page.request.get(base.rstrip("/") + "/health").json()
             check_health(health, freeze_path)
-            page.wait_for_function('!document.getElementById("match-button").disabled', timeout=30000)
+            page.wait_for_function('() => document.querySelectorAll("#trip-list input[type=radio]:not(:disabled)").length===10', timeout=30000)
             selected = page.locator('#trip-list input[type=radio][value="' + trip_id + '"]')
             if selected.count() != 1:
                 raise RuntimeError("browser trip missing from genuine catalog")
             selected.check()
+            page.wait_for_function('() => !document.getElementById("match-button").disabled', timeout=30000)
             started = time.perf_counter()
             with page.expect_response(lambda r: r.url.endswith("/match") and r.request.method == "POST", timeout=240000) as info:
                 page.locator("#match-button").click()
@@ -196,17 +197,37 @@ def collect_browser(base, output, ready=False, trip_id="00000009", freeze_path=N
             if info.value.status != 200:
                 raise RuntimeError("browser real inference failed")
             inspect_public(payload)
-            page.wait_for_function('!document.getElementById("match-button").disabled', timeout=240000)
-            page.wait_for_function('document.getElementById("metric-accuracy").textContent.trim()!=="—"', timeout=15000)
+            page.wait_for_function('() => !document.getElementById("match-button").disabled', timeout=240000)
+            page.wait_for_function('() => document.getElementById("metric-accuracy").textContent.trim()!=="—"', timeout=15000)
             page.locator("#result-details").evaluate("el=>el.open=true")
             page.locator("#route-map").scroll_into_view_if_needed()
             evidence["response"] = summarize_response(payload, trip_id, info.value.status,
                                                       (time.perf_counter() - started) * 1000)
+            # Leaflet intentionally uses a Canvas renderer; SVG path count is not
+            # evidence of a blank map. Read actual canvas alpha/color pixels.
+            page.evaluate("() => new Promise(resolve => requestAnimationFrame(() => requestAnimationFrame(resolve)))")
+            canvas = page.locator("#route-map canvas").evaluate_all("""elements => elements.map(c => {
+              const pixels=c.getContext('2d').getImageData(0,0,c.width,c.height).data;
+              let drawn=0, route=0, gps=0;
+              for(let i=0;i<pixels.length;i+=4){
+                const r=pixels[i],g=pixels[i+1],b=pixels[i+2],a=pixels[i+3];
+                if(a>100) drawn++;
+                if(a>100 && g>r*1.4 && g>b*.8) route++;
+                if(a>100 && r>g*1.3 && g>b*1.2) gps++;
+              }
+              return {width:c.width,height:c.height,drawn_pixels:drawn,route_color_pixels:route,gps_color_pixels:gps};
+            })""")
+            if (not canvas or sum(c["route_color_pixels"] for c in canvas) < 10
+                    or sum(c["gps_color_pixels"] for c in canvas) < 10):
+                raise RuntimeError("real map canvas missing predicted-route or original-GPS pixels")
+            displayed_request = page.locator("#result-request").inner_text()
+            if displayed_request != payload["request_id"]:
+                raise RuntimeError("UI request ID differs from actual POST response")
             evidence["checks"].append({"real_post_status": info.value.status,
                                        "hmm_accuracy_display": page.locator("#metric-accuracy").inner_text(),
                                        "continuity_display": page.locator("#metric-continuity").inner_text(),
-                                       "request_id": page.locator("#result-request").inner_text(),
-                                       "map_svg_paths": page.locator(".leaflet-overlay-pane path").count()})
+                                       "request_id": displayed_request, "leaflet_canvas": canvas,
+                                       "map_accessible_label": page.locator("#route-map").get_attribute("aria-label")})
             page.screenshot(path=str(screenshots / "ui_desktop.png"), full_page=True)
             page.locator("#route-map").screenshot(path=str(screenshots / "ui_route_map.png"))
         else:
@@ -215,14 +236,14 @@ def collect_browser(base, output, ready=False, trip_id="00000009", freeze_path=N
             page.set_viewport_size({"width": width, "height": 844})
             # Poll a measured layout condition, not a fixed animation delay.
             page.evaluate("() => new Promise(resolve => requestAnimationFrame(() => requestAnimationFrame(resolve)))")
-            overflow = page.evaluate("document.documentElement.scrollWidth>window.innerWidth")
+            overflow = page.evaluate("() => document.documentElement.scrollWidth>window.innerWidth")
             evidence["checks"].append({"viewport_width": width, "horizontal_overflow": overflow})
             if overflow:
                 raise RuntimeError("horizontal overflow at width " + str(width))
             if width == 390 and ready:
                 page.screenshot(path=str(screenshots / "ui_mobile.png"), full_page=True)
         page.locator("#open-settings").click()
-        page.wait_for_function('document.getElementById("settings-dialog").open')
+        page.wait_for_function('() => document.getElementById("settings-dialog").open')
         page.keyboard.press("Escape")
         closed = not page.locator("#settings-dialog").evaluate("el=>el.open")
         evidence["checks"].append({"settings_escape_closes": closed,

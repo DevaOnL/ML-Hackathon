@@ -4,6 +4,12 @@
 
 The six documents added in `PathSnap_student_materials/` supersede the initial video-only interpretation. The complete guide is a concatenation of the five supporting documents. The video introduces map matching; the written materials require a distributed learned system and two final deliverables: a **public GitHub repository** and **one consolidated PDF report**.
 
+## Latest user scope overrides the model-count package
+
+The user now requests the entire deliverables for exactly **Logistic Regression, KNN/distance-based, and Bagging** first, and will instruct later on the other two models. The historical package4below remains the organizer's requirement and prior-work record, not the current completed-phase claim. Use the requested-trio source/results under `experiments/phase_three/`, artifact under `artifacts/phase_three/`, new decoder evidence under `reports/phase_three/decoder/`, final routes under `outputs/phase_three_student_test/`, and consolidated report under `reports/phase_three/`. Do not substitute the older frozen HistGradientBoosting artifact or its metrics. The explicit scope is in `docs/PHASE_SCOPE.json`.
+
+Public Cloudflare authorization is now available. Lead provisioned only the dedicated tunnel and exact `ml.d3va.dev` CNAME; standard verified HTTPS health/UI plus a genuine initial POST passed. Current deployment status must be refreshed again after switching to the requested-trio model. Earlier missing-credential/down findings were time-specific and are superseded by current measured evidence, not silently erased.
+
 ## Ordered work packages
 
 1. **Inspect inputs.** Read all documents including nested tables and embedded images; read the entire video timeline and narration; parse every row of all 360 dataset files; record hashes and anomalies.

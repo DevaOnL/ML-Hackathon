@@ -1,0 +1,3330 @@
+{
+  "phase": "three-model-first",
+  "target": "route-projection proxy, not independently supplied per-GPS ground truth",
+  "models": {
+    "logistic_regression": {
+      "student_test": {
+        "observation_edge_macro_f1": 0.8070802670313553,
+        "observation_edge_macro_precision": 0.8298915741453633,
+        "observation_edge_macro_recall": 0.8002277729703025,
+        "edge_class_namespace": "trip_id:canonical_directed_original_arc_id; class union includes reference-only and prediction-only roads",
+        "observation_categorical_log_loss_clipped": 0.3475738499430923,
+        "observation_categorical_log_loss_given_candidate": 0.33191949989767716,
+        "categorical_log_loss_policy": "Normalize binary positive probabilities within each observation; absent target receives zero mass and finite log score uses floor1e-7. This is an emission log score, not a calibration claim. Misses are included in the unconditional score.",
+        "observations": 19160,
+        "candidate_miss_count": 19,
+        "candidate_miss_rate": 0.0009916492693110648,
+        "top1_accuracy": 0.8951983298538622,
+        "per_trip": [
+          {
+            "trip_id": "00000000",
+            "observations": 2503,
+            "top1_accuracy": 0.9524570515381542,
+            "candidate_miss_rate": 0.0011985617259288853,
+            "observation_edge_macro_f1": 0.809622808774808,
+            "observation_categorical_log_loss_clipped": 0.1647335768435521,
+            "adjacent_observation_pairs": 2502,
+            "directly_continuous_pairs": 2414,
+            "raw_classifier_continuity": 0.964828137490008,
+            "same_edge_pairs": 2222,
+            "edge_change_pairs": 280,
+            "directly_continuous_edge_change_pairs": 192,
+            "edge_change_continuity": 0.6857142857142857
+          },
+          {
+            "trip_id": "00000007",
+            "observations": 1354,
+            "top1_accuracy": 0.9202363367799113,
+            "candidate_miss_rate": 0.0,
+            "observation_edge_macro_f1": 0.9616527660642923,
+            "observation_categorical_log_loss_clipped": 0.1665453786916442,
+            "adjacent_observation_pairs": 1353,
+            "directly_continuous_pairs": 1348,
+            "raw_classifier_continuity": 0.9963045084996305,
+            "same_edge_pairs": 1147,
+            "edge_change_pairs": 206,
+            "directly_continuous_edge_change_pairs": 201,
+            "edge_change_continuity": 0.9757281553398058
+          },
+          {
+            "trip_id": "00000009",
+            "observations": 1049,
+            "top1_accuracy": 0.8579599618684461,
+            "candidate_miss_rate": 0.0,
+            "observation_edge_macro_f1": 0.7681417884922689,
+            "observation_categorical_log_loss_clipped": 0.5360034467894181,
+            "adjacent_observation_pairs": 1048,
+            "directly_continuous_pairs": 927,
+            "raw_classifier_continuity": 0.8845419847328244,
+            "same_edge_pairs": 614,
+            "edge_change_pairs": 434,
+            "directly_continuous_edge_change_pairs": 313,
+            "edge_change_continuity": 0.7211981566820277
+          },
+          {
+            "trip_id": "00000040",
+            "observations": 2995,
+            "top1_accuracy": 0.9402337228714525,
+            "candidate_miss_rate": 0.0,
+            "observation_edge_macro_f1": 0.8348859176267713,
+            "observation_categorical_log_loss_clipped": 0.16874512698741287,
+            "adjacent_observation_pairs": 2994,
+            "directly_continuous_pairs": 2887,
+            "raw_classifier_continuity": 0.9642618570474282,
+            "same_edge_pairs": 2527,
+            "edge_change_pairs": 467,
+            "directly_continuous_edge_change_pairs": 360,
+            "edge_change_continuity": 0.7708779443254818
+          },
+          {
+            "trip_id": "00000052",
+            "observations": 262,
+            "top1_accuracy": 0.950381679389313,
+            "candidate_miss_rate": 0.0,
+            "observation_edge_macro_f1": 0.8304632422859024,
+            "observation_categorical_log_loss_clipped": 0.15463364509576472,
+            "adjacent_observation_pairs": 261,
+            "directly_continuous_pairs": 245,
+            "raw_classifier_continuity": 0.9386973180076629,
+            "same_edge_pairs": 175,
+            "edge_change_pairs": 86,
+            "directly_continuous_edge_change_pairs": 70,
+            "edge_change_continuity": 0.813953488372093
+          },
+          {
+            "trip_id": "00000056",
+            "observations": 3958,
+            "top1_accuracy": 0.9103082364830722,
+            "candidate_miss_rate": 0.003284487114704396,
+            "observation_edge_macro_f1": 0.8346658790742078,
+            "observation_categorical_log_loss_clipped": 0.44484775666385584,
+            "adjacent_observation_pairs": 3957,
+            "directly_continuous_pairs": 3549,
+            "raw_classifier_continuity": 0.8968915845337376,
+            "same_edge_pairs": 2537,
+            "edge_change_pairs": 1420,
+            "directly_continuous_edge_change_pairs": 1012,
+            "edge_change_continuity": 0.7126760563380282
+          },
+          {
+            "trip_id": "00000065",
+            "observations": 768,
+            "top1_accuracy": 0.9166666666666666,
+            "candidate_miss_rate": 0.0,
+            "observation_edge_macro_f1": 0.7718254316014852,
+            "observation_categorical_log_loss_clipped": 0.30847347984703294,
+            "adjacent_observation_pairs": 767,
+            "directly_continuous_pairs": 716,
+            "raw_classifier_continuity": 0.9335071707953064,
+            "same_edge_pairs": 586,
+            "edge_change_pairs": 181,
+            "directly_continuous_edge_change_pairs": 130,
+            "edge_change_continuity": 0.7182320441988951
+          },
+          {
+            "trip_id": "00000076",
+            "observations": 1486,
+            "top1_accuracy": 0.9253028263795424,
+            "candidate_miss_rate": 0.002018842530282638,
+            "observation_edge_macro_f1": 0.776520889957949,
+            "observation_categorical_log_loss_clipped": 0.2740309164143447,
+            "adjacent_observation_pairs": 1485,
+            "directly_continuous_pairs": 1336,
+            "raw_classifier_continuity": 0.8996632996632996,
+            "same_edge_pairs": 1050,
+            "edge_change_pairs": 435,
+            "directly_continuous_edge_change_pairs": 286,
+            "edge_change_continuity": 0.6574712643678161
+          },
+          {
+            "trip_id": "00000077",
+            "observations": 3911,
+            "top1_accuracy": 0.7946816670928152,
+            "candidate_miss_rate": 0.0,
+            "observation_edge_macro_f1": 0.7554843047152957,
+            "observation_categorical_log_loss_clipped": 0.5622816236814493,
+            "adjacent_observation_pairs": 3910,
+            "directly_continuous_pairs": 3594,
+            "raw_classifier_continuity": 0.9191815856777493,
+            "same_edge_pairs": 2804,
+            "edge_change_pairs": 1106,
+            "directly_continuous_edge_change_pairs": 790,
+            "edge_change_continuity": 0.7142857142857143
+          },
+          {
+            "trip_id": "00000091",
+            "observations": 874,
+            "top1_accuracy": 0.8775743707093822,
+            "candidate_miss_rate": 0.0,
+            "observation_edge_macro_f1": 0.7638046013571896,
+            "observation_categorical_log_loss_clipped": 0.3542364621159403,
+            "adjacent_observation_pairs": 873,
+            "directly_continuous_pairs": 768,
+            "raw_classifier_continuity": 0.8797250859106529,
+            "same_edge_pairs": 602,
+            "edge_change_pairs": 271,
+            "directly_continuous_edge_change_pairs": 166,
+            "edge_change_continuity": 0.6125461254612546
+          }
+        ],
+        "trip_macro_observation_edge_f1": 0.8107067629950171,
+        "raw_classifier_continuity": 0.928668407310705,
+        "directly_continuous_pairs": 17784,
+        "adjacent_observation_pairs": 19150,
+        "same_edge_pairs": 14264,
+        "edge_change_pairs": 4886,
+        "edge_change_continuity": 0.7204257060990585,
+        "continuity_definition": "Adjacent available observation assignments are continuous iff same canonical edge OR head(previous)==tail(current); no routed connectors. Empty assignments count discontinuous. Includes observed time gaps; on downsampled CV this would not imply every intervening road was predicted."
+      },
+      "train_out_of_fold": {
+        "observation_edge_macro_f1": 0.8447709965385279,
+        "observation_edge_macro_precision": 0.8542223150646184,
+        "observation_edge_macro_recall": 0.8416822545114625,
+        "edge_class_namespace": "trip_id:canonical_directed_original_arc_id; class union includes reference-only and prediction-only roads",
+        "observation_categorical_log_loss_clipped": 0.6658862469618699,
+        "observation_categorical_log_loss_given_candidate": 0.3401850933075067,
+        "categorical_log_loss_policy": "Normalize binary positive probabilities within each observation; absent target receives zero mass and finite log score uses floor1e-7. This is an emission log score, not a calibration claim. Misses are included in the unconditional score.",
+        "observations": 28000,
+        "candidate_miss_count": 578,
+        "candidate_miss_rate": 0.020642857142857143,
+        "top1_accuracy": 0.884,
+        "per_trip": [
+          {
+            "trip_id": "00000001",
+            "observations": 350,
+            "top1_accuracy": 0.96,
+            "candidate_miss_rate": 0.002857142857142857,
+            "observation_edge_macro_f1": 0.9016786570743406,
+            "observation_categorical_log_loss_clipped": 0.24730023531675296
+          },
+          {
+            "trip_id": "00000002",
+            "observations": 350,
+            "top1_accuracy": 0.8085714285714286,
+            "candidate_miss_rate": 0.08857142857142856,
+            "observation_edge_macro_f1": 0.7228956228956228,
+            "observation_categorical_log_loss_clipped": 1.8501346579940108
+          },
+          {
+            "trip_id": "00000003",
+            "observations": 350,
+            "top1_accuracy": 0.84,
+            "candidate_miss_rate": 0.0,
+            "observation_edge_macro_f1": 0.6932675213594719,
+            "observation_categorical_log_loss_clipped": 0.43584881379362167
+          },
+          {
+            "trip_id": "00000004",
+            "observations": 350,
+            "top1_accuracy": 0.9142857142857143,
+            "candidate_miss_rate": 0.002857142857142857,
+            "observation_edge_macro_f1": 0.8196999375068429,
+            "observation_categorical_log_loss_clipped": 0.29281871860290537
+          },
+          {
+            "trip_id": "00000005",
+            "observations": 350,
+            "top1_accuracy": 0.98,
+            "candidate_miss_rate": 0.0,
+            "observation_edge_macro_f1": 0.9739583333333333,
+            "observation_categorical_log_loss_clipped": 0.06352630392518425
+          },
+          {
+            "trip_id": "00000006",
+            "observations": 350,
+            "top1_accuracy": 0.94,
+            "candidate_miss_rate": 0.0,
+            "observation_edge_macro_f1": 0.8731492962648743,
+            "observation_categorical_log_loss_clipped": 0.22693971378367958
+          },
+          {
+            "trip_id": "00000008",
+            "observations": 350,
+            "top1_accuracy": 0.8028571428571428,
+            "candidate_miss_rate": 0.005714285714285714,
+            "observation_edge_macro_f1": 0.700374527433351,
+            "observation_categorical_log_loss_clipped": 0.6580626360783401
+          },
+          {
+            "trip_id": "00000010",
+            "observations": 350,
+            "top1_accuracy": 0.6771428571428572,
+            "candidate_miss_rate": 0.002857142857142857,
+            "observation_edge_macro_f1": 0.5439548696338774,
+            "observation_categorical_log_loss_clipped": 0.7914658160533262
+          },
+          {
+            "trip_id": "00000011",
+            "observations": 350,
+            "top1_accuracy": 0.9885714285714285,
+            "candidate_miss_rate": 0.0,
+            "observation_edge_macro_f1": 0.9683794466403162,
+            "observation_categorical_log_loss_clipped": 0.06093099241851086
+          },
+          {
+            "trip_id": "00000012",
+            "observations": 350,
+            "top1_accuracy": 0.9914285714285714,
+            "candidate_miss_rate": 0.0,
+            "observation_edge_macro_f1": 0.968724279835391,
+            "observation_categorical_log_loss_clipped": 0.0383604031006745
+          },
+          {
+            "trip_id": "00000013",
+            "observations": 350,
+            "top1_accuracy": 0.9457142857142857,
+            "candidate_miss_rate": 0.0,
+            "observation_edge_macro_f1": 0.9052071159589664,
+            "observation_categorical_log_loss_clipped": 0.18609421630198905
+          },
+          {
+            "trip_id": "00000014",
+            "observations": 350,
+            "top1_accuracy": 0.9,
+            "candidate_miss_rate": 0.002857142857142857,
+            "observation_edge_macro_f1": 0.7209981065081758,
+            "observation_categorical_log_loss_clipped": 0.38861259432927026
+          },
+          {
+            "trip_id": "00000016",
+            "observations": 350,
+            "top1_accuracy": 0.5942857142857143,
+            "candidate_miss_rate": 0.0,
+            "observation_edge_macro_f1": 0.47161156345094174,
+            "observation_categorical_log_loss_clipped": 1.294963751472883
+          },
+          {
+            "trip_id": "00000018",
+            "observations": 350,
+            "top1_accuracy": 0.92,
+            "candidate_miss_rate": 0.0,
+            "observation_edge_macro_f1": 0.7780320399025434,
+            "observation_categorical_log_loss_clipped": 0.24309181447687528
+          },
+          {
+            "trip_id": "00000019",
+            "observations": 350,
+            "top1_accuracy": 0.8485714285714285,
+            "candidate_miss_rate": 0.014285714285714285,
+            "observation_edge_macro_f1": 0.8091754148767636,
+            "observation_categorical_log_loss_clipped": 0.6688009407487127
+          },
+          {
+            "trip_id": "00000020",
+            "observations": 350,
+            "top1_accuracy": 0.9685714285714285,
+            "candidate_miss_rate": 0.008571428571428572,
+            "observation_edge_macro_f1": 0.9122222222222222,
+            "observation_categorical_log_loss_clipped": 0.25828337198249585
+          },
+          {
+            "trip_id": "00000021",
+            "observations": 350,
+            "top1_accuracy": 0.9285714285714286,
+            "candidate_miss_rate": 0.0,
+            "observation_edge_macro_f1": 0.9356821817682811,
+            "observation_categorical_log_loss_clipped": 0.22013209850981066
+          },
+          {
+            "trip_id": "00000022",
+            "observations": 350,
+            "top1_accuracy": 0.8942857142857142,
+            "candidate_miss_rate": 0.0,
+            "observation_edge_macro_f1": 0.811741619724813,
+            "observation_categorical_log_loss_clipped": 0.3645703029276976
+          },
+          {
+            "trip_id": "00000024",
+            "observations": 350,
+            "top1_accuracy": 0.9628571428571429,
+            "candidate_miss_rate": 0.0,
+            "observation_edge_macro_f1": 0.9071877807726865,
+            "observation_categorical_log_loss_clipped": 0.16280296836939478
+          },
+          {
+            "trip_id": "00000025",
+            "observations": 350,
+            "top1_accuracy": 0.9457142857142857,
+            "candidate_miss_rate": 0.0,
+            "observation_edge_macro_f1": 0.8432212028542304,
+            "observation_categorical_log_loss_clipped": 0.20852047758968467
+          },
+          {
+            "trip_id": "00000026",
+            "observations": 350,
+            "top1_accuracy": 0.9114285714285715,
+            "candidate_miss_rate": 0.0,
+            "observation_edge_macro_f1": 0.8682354825166868,
+            "observation_categorical_log_loss_clipped": 0.3143420327322843
+          },
+          {
+            "trip_id": "00000027",
+            "observations": 350,
+            "top1_accuracy": 0.9228571428571428,
+            "candidate_miss_rate": 0.0,
+            "observation_edge_macro_f1": 0.905330722718266,
+            "observation_categorical_log_loss_clipped": 0.20826430551032932
+          },
+          {
+            "trip_id": "00000028",
+            "observations": 350,
+            "top1_accuracy": 0.9485714285714286,
+            "candidate_miss_rate": 0.005714285714285714,
+            "observation_edge_macro_f1": 0.8793309438470729,
+            "observation_categorical_log_loss_clipped": 0.2266958806446643
+          },
+          {
+            "trip_id": "00000029",
+            "observations": 350,
+            "top1_accuracy": 0.8885714285714286,
+            "candidate_miss_rate": 0.0,
+            "observation_edge_macro_f1": 0.7614339133364103,
+            "observation_categorical_log_loss_clipped": 0.34844738648672885
+          },
+          {
+            "trip_id": "00000031",
+            "observations": 350,
+            "top1_accuracy": 0.9314285714285714,
+            "candidate_miss_rate": 0.0,
+            "observation_edge_macro_f1": 0.8648054496336077,
+            "observation_categorical_log_loss_clipped": 0.19569369946165666
+          },
+          {
+            "trip_id": "00000032",
+            "observations": 350,
+            "top1_accuracy": 0.9257142857142857,
+            "candidate_miss_rate": 0.0,
+            "observation_edge_macro_f1": 0.8798220881150245,
+            "observation_categorical_log_loss_clipped": 0.24012033490782247
+          },
+          {
+            "trip_id": "00000033",
+            "observations": 350,
+            "top1_accuracy": 0.21428571428571427,
+            "candidate_miss_rate": 0.6571428571428571,
+            "observation_edge_macro_f1": 0.5734649301315968,
+            "observation_categorical_log_loss_clipped": 10.968339072011066
+          },
+          {
+            "trip_id": "00000034",
+            "observations": 350,
+            "top1_accuracy": 0.9057142857142857,
+            "candidate_miss_rate": 0.0,
+            "observation_edge_macro_f1": 0.8669589956411662,
+            "observation_categorical_log_loss_clipped": 0.276972083059165
+          },
+          {
+            "trip_id": "00000035",
+            "observations": 350,
+            "top1_accuracy": 0.8514285714285714,
+            "candidate_miss_rate": 0.0,
+            "observation_edge_macro_f1": 0.7563724995372052,
+            "observation_categorical_log_loss_clipped": 0.4799761910668315
+          },
+          {
+            "trip_id": "00000036",
+            "observations": 350,
+            "top1_accuracy": 0.8542857142857143,
+            "candidate_miss_rate": 0.0,
+            "observation_edge_macro_f1": 0.8005261612330561,
+            "observation_categorical_log_loss_clipped": 0.282735113367331
+          },
+          {
+            "trip_id": "00000037",
+            "observations": 350,
+            "top1_accuracy": 0.9771428571428571,
+            "candidate_miss_rate": 0.0,
+            "observation_edge_macro_f1": 0.9404980842911876,
+            "observation_categorical_log_loss_clipped": 0.10445098212844686
+          },
+          {
+            "trip_id": "00000038",
+            "observations": 350,
+            "top1_accuracy": 0.9457142857142857,
+            "candidate_miss_rate": 0.0,
+            "observation_edge_macro_f1": 0.9184587567785799,
+            "observation_categorical_log_loss_clipped": 0.2225442742934302
+          },
+          {
+            "trip_id": "00000039",
+            "observations": 350,
+            "top1_accuracy": 0.9628571428571429,
+            "candidate_miss_rate": 0.0,
+            "observation_edge_macro_f1": 0.9286198580719129,
+            "observation_categorical_log_loss_clipped": 0.10132457756176269
+          },
+          {
+            "trip_id": "00000041",
+            "observations": 350,
+            "top1_accuracy": 0.9514285714285714,
+            "candidate_miss_rate": 0.0,
+            "observation_edge_macro_f1": 0.8859169472502806,
+            "observation_categorical_log_loss_clipped": 0.22211618776748496
+          },
+          {
+            "trip_id": "00000042",
+            "observations": 350,
+            "top1_accuracy": 0.9857142857142858,
+            "candidate_miss_rate": 0.0,
+            "observation_edge_macro_f1": 0.9710982658959537,
+            "observation_categorical_log_loss_clipped": 0.0896981860289501
+          },
+          {
+            "trip_id": "00000043",
+            "observations": 350,
+            "top1_accuracy": 0.7514285714285714,
+            "candidate_miss_rate": 0.04,
+            "observation_edge_macro_f1": 0.5927403638743844,
+            "observation_categorical_log_loss_clipped": 1.224738124308056
+          },
+          {
+            "trip_id": "00000044",
+            "observations": 350,
+            "top1_accuracy": 0.9571428571428572,
+            "candidate_miss_rate": 0.0,
+            "observation_edge_macro_f1": 0.8846625371015614,
+            "observation_categorical_log_loss_clipped": 0.1782421866750592
+          },
+          {
+            "trip_id": "00000045",
+            "observations": 350,
+            "top1_accuracy": 0.9028571428571428,
+            "candidate_miss_rate": 0.0,
+            "observation_edge_macro_f1": 0.7811008902937767,
+            "observation_categorical_log_loss_clipped": 0.30062466912161223
+          },
+          {
+            "trip_id": "00000046",
+            "observations": 350,
+            "top1_accuracy": 0.9542857142857143,
+            "candidate_miss_rate": 0.0,
+            "observation_edge_macro_f1": 0.8876993289674046,
+            "observation_categorical_log_loss_clipped": 0.16493694930766928
+          },
+          {
+            "trip_id": "00000047",
+            "observations": 350,
+            "top1_accuracy": 0.8828571428571429,
+            "candidate_miss_rate": 0.0,
+            "observation_edge_macro_f1": 0.9238270501428396,
+            "observation_categorical_log_loss_clipped": 0.5499978681597626
+          },
+          {
+            "trip_id": "00000048",
+            "observations": 350,
+            "top1_accuracy": 0.9857142857142858,
+            "candidate_miss_rate": 0.0,
+            "observation_edge_macro_f1": 0.9433719433719434,
+            "observation_categorical_log_loss_clipped": 0.11650427493894618
+          },
+          {
+            "trip_id": "00000050",
+            "observations": 350,
+            "top1_accuracy": 0.9742857142857143,
+            "candidate_miss_rate": 0.0,
+            "observation_edge_macro_f1": 0.9128112083231299,
+            "observation_categorical_log_loss_clipped": 0.1507298750017961
+          },
+          {
+            "trip_id": "00000051",
+            "observations": 350,
+            "top1_accuracy": 0.8142857142857143,
+            "candidate_miss_rate": 0.0,
+            "observation_edge_macro_f1": 0.8608506220081752,
+            "observation_categorical_log_loss_clipped": 0.46206540684887465
+          },
+          {
+            "trip_id": "00000053",
+            "observations": 350,
+            "top1_accuracy": 0.9085714285714286,
+            "candidate_miss_rate": 0.002857142857142857,
+            "observation_edge_macro_f1": 0.8114285714285715,
+            "observation_categorical_log_loss_clipped": 0.2991288904651296
+          },
+          {
+            "trip_id": "00000054",
+            "observations": 350,
+            "top1_accuracy": 0.09142857142857143,
+            "candidate_miss_rate": 0.5828571428571429,
+            "observation_edge_macro_f1": 0.4895833333333333,
+            "observation_categorical_log_loss_clipped": 12.73770499479208
+          },
+          {
+            "trip_id": "00000055",
+            "observations": 350,
+            "top1_accuracy": 0.9628571428571429,
+            "candidate_miss_rate": 0.0,
+            "observation_edge_macro_f1": 0.9184397163120568,
+            "observation_categorical_log_loss_clipped": 0.11856200097381936
+          },
+          {
+            "trip_id": "00000057",
+            "observations": 350,
+            "top1_accuracy": 0.92,
+            "candidate_miss_rate": 0.0,
+            "observation_edge_macro_f1": 0.9268314210061782,
+            "observation_categorical_log_loss_clipped": 0.29257119118710834
+          },
+          {
+            "trip_id": "00000058",
+            "observations": 350,
+            "top1_accuracy": 0.8885714285714286,
+            "candidate_miss_rate": 0.011428571428571429,
+            "observation_edge_macro_f1": 0.7537524366471735,
+            "observation_categorical_log_loss_clipped": 0.4765061951518908
+          },
+          {
+            "trip_id": "00000060",
+            "observations": 350,
+            "top1_accuracy": 0.9114285714285715,
+            "candidate_miss_rate": 0.0,
+            "observation_edge_macro_f1": 0.8303825136612021,
+            "observation_categorical_log_loss_clipped": 0.2518993467704393
+          },
+          {
+            "trip_id": "00000061",
+            "observations": 350,
+            "top1_accuracy": 0.7257142857142858,
+            "candidate_miss_rate": 0.05142857142857143,
+            "observation_edge_macro_f1": 0.6304566678926793,
+            "observation_categorical_log_loss_clipped": 1.4451209510692054
+          },
+          {
+            "trip_id": "00000062",
+            "observations": 350,
+            "top1_accuracy": 0.96,
+            "candidate_miss_rate": 0.0,
+            "observation_edge_macro_f1": 0.9243137091045837,
+            "observation_categorical_log_loss_clipped": 0.21226243008767598
+          },
+          {
+            "trip_id": "00000063",
+            "observations": 350,
+            "top1_accuracy": 0.8857142857142857,
+            "candidate_miss_rate": 0.0,
+            "observation_edge_macro_f1": 0.916021570567025,
+            "observation_categorical_log_loss_clipped": 0.3124997969591633
+          },
+          {
+            "trip_id": "00000064",
+            "observations": 350,
+            "top1_accuracy": 0.9828571428571429,
+            "candidate_miss_rate": 0.002857142857142857,
+            "observation_edge_macro_f1": 0.9583333333333334,
+            "observation_categorical_log_loss_clipped": 0.1242340428247927
+          },
+          {
+            "trip_id": "00000066",
+            "observations": 350,
+            "top1_accuracy": 0.9228571428571428,
+            "candidate_miss_rate": 0.0,
+            "observation_edge_macro_f1": 0.9501703445605885,
+            "observation_categorical_log_loss_clipped": 0.23242991058710405
+          },
+          {
+            "trip_id": "00000068",
+            "observations": 350,
+            "top1_accuracy": 0.9257142857142857,
+            "candidate_miss_rate": 0.0,
+            "observation_edge_macro_f1": 0.9002332080001982,
+            "observation_categorical_log_loss_clipped": 0.25451458381573955
+          },
+          {
+            "trip_id": "00000069",
+            "observations": 350,
+            "top1_accuracy": 0.8685714285714285,
+            "candidate_miss_rate": 0.0,
+            "observation_edge_macro_f1": 0.8673028063988438,
+            "observation_categorical_log_loss_clipped": 0.3943986503807986
+          },
+          {
+            "trip_id": "00000070",
+            "observations": 350,
+            "top1_accuracy": 0.9371428571428572,
+            "candidate_miss_rate": 0.0,
+            "observation_edge_macro_f1": 0.8431921020156316,
+            "observation_categorical_log_loss_clipped": 0.31234126207093427
+          },
+          {
+            "trip_id": "00000071",
+            "observations": 350,
+            "top1_accuracy": 0.9457142857142857,
+            "candidate_miss_rate": 0.0,
+            "observation_edge_macro_f1": 0.8654902602271025,
+            "observation_categorical_log_loss_clipped": 0.15681802030533784
+          },
+          {
+            "trip_id": "00000072",
+            "observations": 350,
+            "top1_accuracy": 0.7,
+            "candidate_miss_rate": 0.12,
+            "observation_edge_macro_f1": 0.731446429791468,
+            "observation_categorical_log_loss_clipped": 2.4205290257111827
+          },
+          {
+            "trip_id": "00000074",
+            "observations": 350,
+            "top1_accuracy": 0.8657142857142858,
+            "candidate_miss_rate": 0.002857142857142857,
+            "observation_edge_macro_f1": 0.7262167400242714,
+            "observation_categorical_log_loss_clipped": 0.3464978927441642
+          },
+          {
+            "trip_id": "00000075",
+            "observations": 350,
+            "top1_accuracy": 0.9342857142857143,
+            "candidate_miss_rate": 0.0,
+            "observation_edge_macro_f1": 0.8296990601315771,
+            "observation_categorical_log_loss_clipped": 0.2512446075487416
+          },
+          {
+            "trip_id": "00000078",
+            "observations": 350,
+            "top1_accuracy": 0.9771428571428571,
+            "candidate_miss_rate": 0.0,
+            "observation_edge_macro_f1": 0.9548022598870056,
+            "observation_categorical_log_loss_clipped": 0.10225501694020502
+          },
+          {
+            "trip_id": "00000079",
+            "observations": 350,
+            "top1_accuracy": 0.9114285714285715,
+            "candidate_miss_rate": 0.0,
+            "observation_edge_macro_f1": 0.78156881624123,
+            "observation_categorical_log_loss_clipped": 0.30082742473900337
+          },
+          {
+            "trip_id": "00000080",
+            "observations": 350,
+            "top1_accuracy": 0.9314285714285714,
+            "candidate_miss_rate": 0.0,
+            "observation_edge_macro_f1": 0.8418681808387691,
+            "observation_categorical_log_loss_clipped": 0.3706932832285268
+          },
+          {
+            "trip_id": "00000081",
+            "observations": 350,
+            "top1_accuracy": 0.9371428571428572,
+            "candidate_miss_rate": 0.0,
+            "observation_edge_macro_f1": 0.9122432097715005,
+            "observation_categorical_log_loss_clipped": 0.24729469663261539
+          },
+          {
+            "trip_id": "00000082",
+            "observations": 350,
+            "top1_accuracy": 0.8342857142857143,
+            "candidate_miss_rate": 0.0,
+            "observation_edge_macro_f1": 0.7057687643472901,
+            "observation_categorical_log_loss_clipped": 0.407726041060667
+          },
+          {
+            "trip_id": "00000083",
+            "observations": 350,
+            "top1_accuracy": 0.8771428571428571,
+            "candidate_miss_rate": 0.0,
+            "observation_edge_macro_f1": 0.7633928363051479,
+            "observation_categorical_log_loss_clipped": 0.4037568242608477
+          },
+          {
+            "trip_id": "00000084",
+            "observations": 350,
+            "top1_accuracy": 0.84,
+            "candidate_miss_rate": 0.002857142857142857,
+            "observation_edge_macro_f1": 0.8433834576276437,
+            "observation_categorical_log_loss_clipped": 0.488833258087424
+          },
+          {
+            "trip_id": "00000085",
+            "observations": 350,
+            "top1_accuracy": 0.92,
+            "candidate_miss_rate": 0.0,
+            "observation_edge_macro_f1": 0.8370299448287399,
+            "observation_categorical_log_loss_clipped": 0.33932779847828054
+          },
+          {
+            "trip_id": "00000086",
+            "observations": 350,
+            "top1_accuracy": 0.98,
+            "candidate_miss_rate": 0.0,
+            "observation_edge_macro_f1": 0.9518900343642611,
+            "observation_categorical_log_loss_clipped": 0.06763814063538957
+          },
+          {
+            "trip_id": "00000088",
+            "observations": 350,
+            "top1_accuracy": 0.92,
+            "candidate_miss_rate": 0.0,
+            "observation_edge_macro_f1": 0.8549018161730361,
+            "observation_categorical_log_loss_clipped": 0.4227283918109727
+          },
+          {
+            "trip_id": "00000089",
+            "observations": 350,
+            "top1_accuracy": 0.8685714285714285,
+            "candidate_miss_rate": 0.005714285714285714,
+            "observation_edge_macro_f1": 0.7681767554938286,
+            "observation_categorical_log_loss_clipped": 0.5765870335439479
+          },
+          {
+            "trip_id": "00000090",
+            "observations": 350,
+            "top1_accuracy": 0.9,
+            "candidate_miss_rate": 0.005714285714285714,
+            "observation_edge_macro_f1": 0.7947425474254743,
+            "observation_categorical_log_loss_clipped": 0.40478180404799885
+          },
+          {
+            "trip_id": "00000092",
+            "observations": 350,
+            "top1_accuracy": 0.94,
+            "candidate_miss_rate": 0.0,
+            "observation_edge_macro_f1": 0.8965294592413237,
+            "observation_categorical_log_loss_clipped": 0.20366629454571872
+          },
+          {
+            "trip_id": "00000093",
+            "observations": 350,
+            "top1_accuracy": 0.8057142857142857,
+            "candidate_miss_rate": 0.03142857142857143,
+            "observation_edge_macro_f1": 0.6670877874959508,
+            "observation_categorical_log_loss_clipped": 0.9128444086246804
+          },
+          {
+            "trip_id": "00000095",
+            "observations": 350,
+            "top1_accuracy": 0.8371428571428572,
+            "candidate_miss_rate": 0.0,
+            "observation_edge_macro_f1": 0.7783465762632429,
+            "observation_categorical_log_loss_clipped": 0.43765655220071037
+          },
+          {
+            "trip_id": "00000096",
+            "observations": 350,
+            "top1_accuracy": 0.86,
+            "candidate_miss_rate": 0.0,
+            "observation_edge_macro_f1": 0.9038787788340071,
+            "observation_categorical_log_loss_clipped": 0.3708495493932464
+          },
+          {
+            "trip_id": "00000097",
+            "observations": 350,
+            "top1_accuracy": 0.9771428571428571,
+            "candidate_miss_rate": 0.0,
+            "observation_edge_macro_f1": 0.9695165945165946,
+            "observation_categorical_log_loss_clipped": 0.06798784636408221
+          },
+          {
+            "trip_id": "00000098",
+            "observations": 350,
+            "top1_accuracy": 0.9485714285714286,
+            "candidate_miss_rate": 0.0,
+            "observation_edge_macro_f1": 0.8980169971671388,
+            "observation_categorical_log_loss_clipped": 0.11391231537593044
+          },
+          {
+            "trip_id": "00000099",
+            "observations": 350,
+            "top1_accuracy": 0.9057142857142857,
+            "candidate_miss_rate": 0.0,
+            "observation_edge_macro_f1": 0.868814192343604,
+            "observation_categorical_log_loss_clipped": 0.3014487943684903
+          }
+        ],
+        "trip_macro_observation_edge_f1": 0.8339294002087485
+      }
+    },
+    "knn_distance_weighted": {
+      "student_test": {
+        "observation_edge_macro_f1": 0.7954781955518841,
+        "observation_edge_macro_precision": 0.8193666170308963,
+        "observation_edge_macro_recall": 0.7889333032741924,
+        "edge_class_namespace": "trip_id:canonical_directed_original_arc_id; class union includes reference-only and prediction-only roads",
+        "observation_categorical_log_loss_clipped": 0.5216588680957772,
+        "observation_categorical_log_loss_given_candidate": 0.5061773206910237,
+        "categorical_log_loss_policy": "Normalize binary positive probabilities within each observation; absent target receives zero mass and finite log score uses floor1e-7. This is an emission log score, not a calibration claim. Misses are included in the unconditional score.",
+        "observations": 19160,
+        "candidate_miss_count": 19,
+        "candidate_miss_rate": 0.0009916492693110648,
+        "top1_accuracy": 0.8905010438413361,
+        "per_trip": [
+          {
+            "trip_id": "00000000",
+            "observations": 2503,
+            "top1_accuracy": 0.954854174990012,
+            "candidate_miss_rate": 0.0011985617259288853,
+            "observation_edge_macro_f1": 0.8023333526755747,
+            "observation_categorical_log_loss_clipped": 0.20795731698750494,
+            "adjacent_observation_pairs": 2502,
+            "directly_continuous_pairs": 2416,
+            "raw_classifier_continuity": 0.9656274980015987,
+            "same_edge_pairs": 2225,
+            "edge_change_pairs": 277,
+            "directly_continuous_edge_change_pairs": 191,
+            "edge_change_continuity": 0.6895306859205776
+          },
+          {
+            "trip_id": "00000007",
+            "observations": 1354,
+            "top1_accuracy": 0.9357459379615952,
+            "candidate_miss_rate": 0.0,
+            "observation_edge_macro_f1": 0.968287958895781,
+            "observation_categorical_log_loss_clipped": 0.24705400673275596,
+            "adjacent_observation_pairs": 1353,
+            "directly_continuous_pairs": 1349,
+            "raw_classifier_continuity": 0.9970436067997044,
+            "same_edge_pairs": 1137,
+            "edge_change_pairs": 216,
+            "directly_continuous_edge_change_pairs": 212,
+            "edge_change_continuity": 0.9814814814814815
+          },
+          {
+            "trip_id": "00000009",
+            "observations": 1049,
+            "top1_accuracy": 0.8531935176358436,
+            "candidate_miss_rate": 0.0,
+            "observation_edge_macro_f1": 0.754290139379894,
+            "observation_categorical_log_loss_clipped": 0.9992258250000392,
+            "adjacent_observation_pairs": 1048,
+            "directly_continuous_pairs": 920,
+            "raw_classifier_continuity": 0.8778625954198473,
+            "same_edge_pairs": 610,
+            "edge_change_pairs": 438,
+            "directly_continuous_edge_change_pairs": 310,
+            "edge_change_continuity": 0.7077625570776256
+          },
+          {
+            "trip_id": "00000040",
+            "observations": 2995,
+            "top1_accuracy": 0.9415692821368948,
+            "candidate_miss_rate": 0.0,
+            "observation_edge_macro_f1": 0.8418398236357342,
+            "observation_categorical_log_loss_clipped": 0.2703062253205504,
+            "adjacent_observation_pairs": 2994,
+            "directly_continuous_pairs": 2868,
+            "raw_classifier_continuity": 0.9579158316633266,
+            "same_edge_pairs": 2523,
+            "edge_change_pairs": 471,
+            "directly_continuous_edge_change_pairs": 345,
+            "edge_change_continuity": 0.732484076433121
+          },
+          {
+            "trip_id": "00000052",
+            "observations": 262,
+            "top1_accuracy": 0.9541984732824428,
+            "candidate_miss_rate": 0.0,
+            "observation_edge_macro_f1": 0.8503928723468953,
+            "observation_categorical_log_loss_clipped": 0.30876912003055534,
+            "adjacent_observation_pairs": 261,
+            "directly_continuous_pairs": 244,
+            "raw_classifier_continuity": 0.9348659003831418,
+            "same_edge_pairs": 174,
+            "edge_change_pairs": 87,
+            "directly_continuous_edge_change_pairs": 70,
+            "edge_change_continuity": 0.8045977011494253
+          },
+          {
+            "trip_id": "00000056",
+            "observations": 3958,
+            "top1_accuracy": 0.8906013137948459,
+            "candidate_miss_rate": 0.003284487114704396,
+            "observation_edge_macro_f1": 0.8077248316898367,
+            "observation_categorical_log_loss_clipped": 0.7312661613361827,
+            "adjacent_observation_pairs": 3957,
+            "directly_continuous_pairs": 3483,
+            "raw_classifier_continuity": 0.8802122820318423,
+            "same_edge_pairs": 2482,
+            "edge_change_pairs": 1475,
+            "directly_continuous_edge_change_pairs": 1001,
+            "edge_change_continuity": 0.6786440677966101
+          },
+          {
+            "trip_id": "00000065",
+            "observations": 768,
+            "top1_accuracy": 0.9140625,
+            "candidate_miss_rate": 0.0,
+            "observation_edge_macro_f1": 0.7489000915085494,
+            "observation_categorical_log_loss_clipped": 0.44791472955285583,
+            "adjacent_observation_pairs": 767,
+            "directly_continuous_pairs": 704,
+            "raw_classifier_continuity": 0.9178617992177314,
+            "same_edge_pairs": 577,
+            "edge_change_pairs": 190,
+            "directly_continuous_edge_change_pairs": 127,
+            "edge_change_continuity": 0.6684210526315789
+          },
+          {
+            "trip_id": "00000076",
+            "observations": 1486,
+            "top1_accuracy": 0.9347240915208613,
+            "candidate_miss_rate": 0.002018842530282638,
+            "observation_edge_macro_f1": 0.8037875918479448,
+            "observation_categorical_log_loss_clipped": 0.3478835693951374,
+            "adjacent_observation_pairs": 1485,
+            "directly_continuous_pairs": 1352,
+            "raw_classifier_continuity": 0.9104377104377105,
+            "same_edge_pairs": 1061,
+            "edge_change_pairs": 424,
+            "directly_continuous_edge_change_pairs": 291,
+            "edge_change_continuity": 0.6863207547169812
+          },
+          {
+            "trip_id": "00000077",
+            "observations": 3911,
+            "top1_accuracy": 0.7849654819739197,
+            "candidate_miss_rate": 0.0,
+            "observation_edge_macro_f1": 0.7289077928467368,
+            "observation_categorical_log_loss_clipped": 0.7487612978550823,
+            "adjacent_observation_pairs": 3910,
+            "directly_continuous_pairs": 3572,
+            "raw_classifier_continuity": 0.9135549872122762,
+            "same_edge_pairs": 2712,
+            "edge_change_pairs": 1198,
+            "directly_continuous_edge_change_pairs": 860,
+            "edge_change_continuity": 0.7178631051752922
+          },
+          {
+            "trip_id": "00000091",
+            "observations": 874,
+            "top1_accuracy": 0.8627002288329519,
+            "candidate_miss_rate": 0.0,
+            "observation_edge_macro_f1": 0.738788323463866,
+            "observation_categorical_log_loss_clipped": 0.5922113038598582,
+            "adjacent_observation_pairs": 873,
+            "directly_continuous_pairs": 767,
+            "raw_classifier_continuity": 0.8785796105383734,
+            "same_edge_pairs": 596,
+            "edge_change_pairs": 277,
+            "directly_continuous_edge_change_pairs": 171,
+            "edge_change_continuity": 0.6173285198555957
+          }
+        ],
+        "trip_macro_observation_edge_f1": 0.8045252778290812,
+        "raw_classifier_continuity": 0.922976501305483,
+        "directly_continuous_pairs": 17675,
+        "adjacent_observation_pairs": 19150,
+        "same_edge_pairs": 14097,
+        "edge_change_pairs": 5053,
+        "edge_change_continuity": 0.7080942014644765,
+        "continuity_definition": "Adjacent available observation assignments are continuous iff same canonical edge OR head(previous)==tail(current); no routed connectors. Empty assignments count discontinuous. Includes observed time gaps; on downsampled CV this would not imply every intervening road was predicted."
+      },
+      "train_out_of_fold": {
+        "observation_edge_macro_f1": 0.8295577765848454,
+        "observation_edge_macro_precision": 0.8393844478450139,
+        "observation_edge_macro_recall": 0.8264896476800649,
+        "edge_class_namespace": "trip_id:canonical_directed_original_arc_id; class union includes reference-only and prediction-only roads",
+        "observation_categorical_log_loss_clipped": 0.811264587814923,
+        "observation_categorical_log_loss_given_candidate": 0.4886277139728662,
+        "categorical_log_loss_policy": "Normalize binary positive probabilities within each observation; absent target receives zero mass and finite log score uses floor1e-7. This is an emission log score, not a calibration claim. Misses are included in the unconditional score.",
+        "observations": 28000,
+        "candidate_miss_count": 578,
+        "candidate_miss_rate": 0.020642857142857143,
+        "top1_accuracy": 0.8767857142857143,
+        "per_trip": [
+          {
+            "trip_id": "00000001",
+            "observations": 350,
+            "top1_accuracy": 0.9657142857142857,
+            "candidate_miss_rate": 0.002857142857142857,
+            "observation_edge_macro_f1": 0.9159420289855073,
+            "observation_categorical_log_loss_clipped": 0.24769408325546707
+          },
+          {
+            "trip_id": "00000002",
+            "observations": 350,
+            "top1_accuracy": 0.76,
+            "candidate_miss_rate": 0.08857142857142856,
+            "observation_edge_macro_f1": 0.6221189033189032,
+            "observation_categorical_log_loss_clipped": 2.4238133276527125
+          },
+          {
+            "trip_id": "00000003",
+            "observations": 350,
+            "top1_accuracy": 0.8171428571428572,
+            "candidate_miss_rate": 0.0,
+            "observation_edge_macro_f1": 0.6537021737039376,
+            "observation_categorical_log_loss_clipped": 0.629269378490755
+          },
+          {
+            "trip_id": "00000004",
+            "observations": 350,
+            "top1_accuracy": 0.9142857142857143,
+            "candidate_miss_rate": 0.002857142857142857,
+            "observation_edge_macro_f1": 0.8193250946061126,
+            "observation_categorical_log_loss_clipped": 0.546542492236687
+          },
+          {
+            "trip_id": "00000005",
+            "observations": 350,
+            "top1_accuracy": 0.9714285714285714,
+            "candidate_miss_rate": 0.0,
+            "observation_edge_macro_f1": 0.9685897435897435,
+            "observation_categorical_log_loss_clipped": 0.19842915571064956
+          },
+          {
+            "trip_id": "00000006",
+            "observations": 350,
+            "top1_accuracy": 0.94,
+            "candidate_miss_rate": 0.0,
+            "observation_edge_macro_f1": 0.8744893297657117,
+            "observation_categorical_log_loss_clipped": 0.36595301819952997
+          },
+          {
+            "trip_id": "00000008",
+            "observations": 350,
+            "top1_accuracy": 0.8085714285714286,
+            "candidate_miss_rate": 0.005714285714285714,
+            "observation_edge_macro_f1": 0.7127104092488707,
+            "observation_categorical_log_loss_clipped": 0.8845339002960173
+          },
+          {
+            "trip_id": "00000010",
+            "observations": 350,
+            "top1_accuracy": 0.6342857142857142,
+            "candidate_miss_rate": 0.002857142857142857,
+            "observation_edge_macro_f1": 0.5003008379545034,
+            "observation_categorical_log_loss_clipped": 1.0956143097243616
+          },
+          {
+            "trip_id": "00000011",
+            "observations": 350,
+            "top1_accuracy": 0.9914285714285714,
+            "candidate_miss_rate": 0.0,
+            "observation_edge_macro_f1": 0.9761904761904762,
+            "observation_categorical_log_loss_clipped": 0.12848822402427068
+          },
+          {
+            "trip_id": "00000012",
+            "observations": 350,
+            "top1_accuracy": 0.9971428571428571,
+            "candidate_miss_rate": 0.0,
+            "observation_edge_macro_f1": 0.9875,
+            "observation_categorical_log_loss_clipped": 0.021563830156551493
+          },
+          {
+            "trip_id": "00000013",
+            "observations": 350,
+            "top1_accuracy": 0.9285714285714286,
+            "candidate_miss_rate": 0.0,
+            "observation_edge_macro_f1": 0.8782844733984799,
+            "observation_categorical_log_loss_clipped": 0.23205778841599223
+          },
+          {
+            "trip_id": "00000014",
+            "observations": 350,
+            "top1_accuracy": 0.8771428571428571,
+            "candidate_miss_rate": 0.002857142857142857,
+            "observation_edge_macro_f1": 0.6797438966062735,
+            "observation_categorical_log_loss_clipped": 0.625621690308792
+          },
+          {
+            "trip_id": "00000016",
+            "observations": 350,
+            "top1_accuracy": 0.5428571428571428,
+            "candidate_miss_rate": 0.0,
+            "observation_edge_macro_f1": 0.457098480703696,
+            "observation_categorical_log_loss_clipped": 2.0092382083523845
+          },
+          {
+            "trip_id": "00000018",
+            "observations": 350,
+            "top1_accuracy": 0.9142857142857143,
+            "candidate_miss_rate": 0.0,
+            "observation_edge_macro_f1": 0.7531491982196208,
+            "observation_categorical_log_loss_clipped": 0.39199407910710965
+          },
+          {
+            "trip_id": "00000019",
+            "observations": 350,
+            "top1_accuracy": 0.8285714285714286,
+            "candidate_miss_rate": 0.014285714285714285,
+            "observation_edge_macro_f1": 0.7637947167844075,
+            "observation_categorical_log_loss_clipped": 0.7719343559818115
+          },
+          {
+            "trip_id": "00000020",
+            "observations": 350,
+            "top1_accuracy": 0.96,
+            "candidate_miss_rate": 0.008571428571428572,
+            "observation_edge_macro_f1": 0.9010359869138495,
+            "observation_categorical_log_loss_clipped": 0.31056398269127306
+          },
+          {
+            "trip_id": "00000021",
+            "observations": 350,
+            "top1_accuracy": 0.9257142857142857,
+            "candidate_miss_rate": 0.0,
+            "observation_edge_macro_f1": 0.9304892658491082,
+            "observation_categorical_log_loss_clipped": 0.2636026967206636
+          },
+          {
+            "trip_id": "00000022",
+            "observations": 350,
+            "top1_accuracy": 0.8914285714285715,
+            "candidate_miss_rate": 0.0,
+            "observation_edge_macro_f1": 0.8033097154945894,
+            "observation_categorical_log_loss_clipped": 0.8483756180709606
+          },
+          {
+            "trip_id": "00000024",
+            "observations": 350,
+            "top1_accuracy": 0.94,
+            "candidate_miss_rate": 0.0,
+            "observation_edge_macro_f1": 0.8523157208088714,
+            "observation_categorical_log_loss_clipped": 0.16539042125849415
+          },
+          {
+            "trip_id": "00000025",
+            "observations": 350,
+            "top1_accuracy": 0.9142857142857143,
+            "candidate_miss_rate": 0.0,
+            "observation_edge_macro_f1": 0.7736550077258042,
+            "observation_categorical_log_loss_clipped": 0.2983099977573193
+          },
+          {
+            "trip_id": "00000026",
+            "observations": 350,
+            "top1_accuracy": 0.8914285714285715,
+            "candidate_miss_rate": 0.0,
+            "observation_edge_macro_f1": 0.8196753037978073,
+            "observation_categorical_log_loss_clipped": 0.6864081656936157
+          },
+          {
+            "trip_id": "00000027",
+            "observations": 350,
+            "top1_accuracy": 0.9257142857142857,
+            "candidate_miss_rate": 0.0,
+            "observation_edge_macro_f1": 0.905487567987568,
+            "observation_categorical_log_loss_clipped": 0.26864759969453883
+          },
+          {
+            "trip_id": "00000028",
+            "observations": 350,
+            "top1_accuracy": 0.9228571428571428,
+            "candidate_miss_rate": 0.005714285714285714,
+            "observation_edge_macro_f1": 0.8275462962962963,
+            "observation_categorical_log_loss_clipped": 0.36181175986603104
+          },
+          {
+            "trip_id": "00000029",
+            "observations": 350,
+            "top1_accuracy": 0.8657142857142858,
+            "candidate_miss_rate": 0.0,
+            "observation_edge_macro_f1": 0.7269984708427999,
+            "observation_categorical_log_loss_clipped": 0.44292402734279934
+          },
+          {
+            "trip_id": "00000031",
+            "observations": 350,
+            "top1_accuracy": 0.9228571428571428,
+            "candidate_miss_rate": 0.0,
+            "observation_edge_macro_f1": 0.8504456579731977,
+            "observation_categorical_log_loss_clipped": 0.4194756267445561
+          },
+          {
+            "trip_id": "00000032",
+            "observations": 350,
+            "top1_accuracy": 0.9257142857142857,
+            "candidate_miss_rate": 0.0,
+            "observation_edge_macro_f1": 0.885845251191786,
+            "observation_categorical_log_loss_clipped": 0.3877326554515117
+          },
+          {
+            "trip_id": "00000033",
+            "observations": 350,
+            "top1_accuracy": 0.19142857142857142,
+            "candidate_miss_rate": 0.6571428571428571,
+            "observation_edge_macro_f1": 0.5109159348618799,
+            "observation_categorical_log_loss_clipped": 11.185096986750946
+          },
+          {
+            "trip_id": "00000034",
+            "observations": 350,
+            "top1_accuracy": 0.8771428571428571,
+            "candidate_miss_rate": 0.0,
+            "observation_edge_macro_f1": 0.8600875868317729,
+            "observation_categorical_log_loss_clipped": 0.5376075318670454
+          },
+          {
+            "trip_id": "00000035",
+            "observations": 350,
+            "top1_accuracy": 0.8342857142857143,
+            "candidate_miss_rate": 0.0,
+            "observation_edge_macro_f1": 0.7304337624592132,
+            "observation_categorical_log_loss_clipped": 0.8051455572996414
+          },
+          {
+            "trip_id": "00000036",
+            "observations": 350,
+            "top1_accuracy": 0.8771428571428571,
+            "candidate_miss_rate": 0.0,
+            "observation_edge_macro_f1": 0.7748447992077427,
+            "observation_categorical_log_loss_clipped": 0.44943395031068656
+          },
+          {
+            "trip_id": "00000037",
+            "observations": 350,
+            "top1_accuracy": 0.9771428571428571,
+            "candidate_miss_rate": 0.0,
+            "observation_edge_macro_f1": 0.9335674979510595,
+            "observation_categorical_log_loss_clipped": 0.11901061693972564
+          },
+          {
+            "trip_id": "00000038",
+            "observations": 350,
+            "top1_accuracy": 0.9285714285714286,
+            "candidate_miss_rate": 0.0,
+            "observation_edge_macro_f1": 0.87578453292739,
+            "observation_categorical_log_loss_clipped": 0.38369135083476935
+          },
+          {
+            "trip_id": "00000039",
+            "observations": 350,
+            "top1_accuracy": 0.9685714285714285,
+            "candidate_miss_rate": 0.0,
+            "observation_edge_macro_f1": 0.9392635716773649,
+            "observation_categorical_log_loss_clipped": 0.24945604300109095
+          },
+          {
+            "trip_id": "00000041",
+            "observations": 350,
+            "top1_accuracy": 0.9285714285714286,
+            "candidate_miss_rate": 0.0,
+            "observation_edge_macro_f1": 0.8287775716347144,
+            "observation_categorical_log_loss_clipped": 0.37481768112092484
+          },
+          {
+            "trip_id": "00000042",
+            "observations": 350,
+            "top1_accuracy": 0.9885714285714285,
+            "candidate_miss_rate": 0.0,
+            "observation_edge_macro_f1": 0.9768115942028985,
+            "observation_categorical_log_loss_clipped": 0.07185941116210966
+          },
+          {
+            "trip_id": "00000043",
+            "observations": 350,
+            "top1_accuracy": 0.7485714285714286,
+            "candidate_miss_rate": 0.04,
+            "observation_edge_macro_f1": 0.5942255062944718,
+            "observation_categorical_log_loss_clipped": 1.370909127720404
+          },
+          {
+            "trip_id": "00000044",
+            "observations": 350,
+            "top1_accuracy": 0.9571428571428572,
+            "candidate_miss_rate": 0.0,
+            "observation_edge_macro_f1": 0.8869766629688977,
+            "observation_categorical_log_loss_clipped": 0.3397714384100421
+          },
+          {
+            "trip_id": "00000045",
+            "observations": 350,
+            "top1_accuracy": 0.8914285714285715,
+            "candidate_miss_rate": 0.0,
+            "observation_edge_macro_f1": 0.7911045226171276,
+            "observation_categorical_log_loss_clipped": 0.6386575829953046
+          },
+          {
+            "trip_id": "00000046",
+            "observations": 350,
+            "top1_accuracy": 0.9457142857142857,
+            "candidate_miss_rate": 0.0,
+            "observation_edge_macro_f1": 0.8736184167423556,
+            "observation_categorical_log_loss_clipped": 0.27904377389971313
+          },
+          {
+            "trip_id": "00000047",
+            "observations": 350,
+            "top1_accuracy": 0.86,
+            "candidate_miss_rate": 0.0,
+            "observation_edge_macro_f1": 0.9147459467929616,
+            "observation_categorical_log_loss_clipped": 0.7514543855268515
+          },
+          {
+            "trip_id": "00000048",
+            "observations": 350,
+            "top1_accuracy": 0.9857142857142858,
+            "candidate_miss_rate": 0.0,
+            "observation_edge_macro_f1": 0.9522366522366522,
+            "observation_categorical_log_loss_clipped": 0.1222771571831268
+          },
+          {
+            "trip_id": "00000050",
+            "observations": 350,
+            "top1_accuracy": 0.9571428571428572,
+            "candidate_miss_rate": 0.0,
+            "observation_edge_macro_f1": 0.869057897596288,
+            "observation_categorical_log_loss_clipped": 0.21355986531406254
+          },
+          {
+            "trip_id": "00000051",
+            "observations": 350,
+            "top1_accuracy": 0.8628571428571429,
+            "candidate_miss_rate": 0.0,
+            "observation_edge_macro_f1": 0.8510012654284986,
+            "observation_categorical_log_loss_clipped": 0.80380972890301
+          },
+          {
+            "trip_id": "00000053",
+            "observations": 350,
+            "top1_accuracy": 0.9085714285714286,
+            "candidate_miss_rate": 0.002857142857142857,
+            "observation_edge_macro_f1": 0.8185787545787546,
+            "observation_categorical_log_loss_clipped": 0.40225653829539926
+          },
+          {
+            "trip_id": "00000054",
+            "observations": 350,
+            "top1_accuracy": 0.08571428571428572,
+            "candidate_miss_rate": 0.5828571428571429,
+            "observation_edge_macro_f1": 0.38303066989507667,
+            "observation_categorical_log_loss_clipped": 10.721889875254524
+          },
+          {
+            "trip_id": "00000055",
+            "observations": 350,
+            "top1_accuracy": 0.96,
+            "candidate_miss_rate": 0.0,
+            "observation_edge_macro_f1": 0.9217081850533808,
+            "observation_categorical_log_loss_clipped": 0.09684652445033098
+          },
+          {
+            "trip_id": "00000057",
+            "observations": 350,
+            "top1_accuracy": 0.9114285714285715,
+            "candidate_miss_rate": 0.0,
+            "observation_edge_macro_f1": 0.900994045416909,
+            "observation_categorical_log_loss_clipped": 0.432296287812907
+          },
+          {
+            "trip_id": "00000058",
+            "observations": 350,
+            "top1_accuracy": 0.8828571428571429,
+            "candidate_miss_rate": 0.011428571428571429,
+            "observation_edge_macro_f1": 0.7331908831908832,
+            "observation_categorical_log_loss_clipped": 0.611095642123301
+          },
+          {
+            "trip_id": "00000060",
+            "observations": 350,
+            "top1_accuracy": 0.9171428571428571,
+            "candidate_miss_rate": 0.0,
+            "observation_edge_macro_f1": 0.8460526315789473,
+            "observation_categorical_log_loss_clipped": 0.3712372851585942
+          },
+          {
+            "trip_id": "00000061",
+            "observations": 350,
+            "top1_accuracy": 0.7228571428571429,
+            "candidate_miss_rate": 0.05142857142857143,
+            "observation_edge_macro_f1": 0.6134730835593386,
+            "observation_categorical_log_loss_clipped": 1.9962697833650216
+          },
+          {
+            "trip_id": "00000062",
+            "observations": 350,
+            "top1_accuracy": 0.94,
+            "candidate_miss_rate": 0.0,
+            "observation_edge_macro_f1": 0.8864971184673788,
+            "observation_categorical_log_loss_clipped": 0.34283974251844945
+          },
+          {
+            "trip_id": "00000063",
+            "observations": 350,
+            "top1_accuracy": 0.8971428571428571,
+            "candidate_miss_rate": 0.0,
+            "observation_edge_macro_f1": 0.915914457443383,
+            "observation_categorical_log_loss_clipped": 0.34913828831391613
+          },
+          {
+            "trip_id": "00000064",
+            "observations": 350,
+            "top1_accuracy": 0.9857142857142858,
+            "candidate_miss_rate": 0.002857142857142857,
+            "observation_edge_macro_f1": 0.9651567944250871,
+            "observation_categorical_log_loss_clipped": 0.14359882558329534
+          },
+          {
+            "trip_id": "00000066",
+            "observations": 350,
+            "top1_accuracy": 0.9171428571428571,
+            "candidate_miss_rate": 0.0,
+            "observation_edge_macro_f1": 0.9409566177007339,
+            "observation_categorical_log_loss_clipped": 0.523163770331485
+          },
+          {
+            "trip_id": "00000068",
+            "observations": 350,
+            "top1_accuracy": 0.9314285714285714,
+            "candidate_miss_rate": 0.0,
+            "observation_edge_macro_f1": 0.9013548417394571,
+            "observation_categorical_log_loss_clipped": 0.4746860440150105
+          },
+          {
+            "trip_id": "00000069",
+            "observations": 350,
+            "top1_accuracy": 0.8657142857142858,
+            "candidate_miss_rate": 0.0,
+            "observation_edge_macro_f1": 0.841338316641714,
+            "observation_categorical_log_loss_clipped": 0.5306231660914146
+          },
+          {
+            "trip_id": "00000070",
+            "observations": 350,
+            "top1_accuracy": 0.94,
+            "candidate_miss_rate": 0.0,
+            "observation_edge_macro_f1": 0.8529232129779326,
+            "observation_categorical_log_loss_clipped": 0.3819263719706356
+          },
+          {
+            "trip_id": "00000071",
+            "observations": 350,
+            "top1_accuracy": 0.9314285714285714,
+            "candidate_miss_rate": 0.0,
+            "observation_edge_macro_f1": 0.843019943019943,
+            "observation_categorical_log_loss_clipped": 0.18069596226335014
+          },
+          {
+            "trip_id": "00000072",
+            "observations": 350,
+            "top1_accuracy": 0.72,
+            "candidate_miss_rate": 0.12,
+            "observation_edge_macro_f1": 0.7296016007229208,
+            "observation_categorical_log_loss_clipped": 2.5134120661254897
+          },
+          {
+            "trip_id": "00000074",
+            "observations": 350,
+            "top1_accuracy": 0.8228571428571428,
+            "candidate_miss_rate": 0.002857142857142857,
+            "observation_edge_macro_f1": 0.6673235209235209,
+            "observation_categorical_log_loss_clipped": 0.4756319652708183
+          },
+          {
+            "trip_id": "00000075",
+            "observations": 350,
+            "top1_accuracy": 0.9057142857142857,
+            "candidate_miss_rate": 0.0,
+            "observation_edge_macro_f1": 0.7739946591760593,
+            "observation_categorical_log_loss_clipped": 0.4076382572607478
+          },
+          {
+            "trip_id": "00000078",
+            "observations": 350,
+            "top1_accuracy": 0.9685714285714285,
+            "candidate_miss_rate": 0.0,
+            "observation_edge_macro_f1": 0.9449906367041198,
+            "observation_categorical_log_loss_clipped": 0.1720204650432305
+          },
+          {
+            "trip_id": "00000079",
+            "observations": 350,
+            "top1_accuracy": 0.9171428571428571,
+            "candidate_miss_rate": 0.0,
+            "observation_edge_macro_f1": 0.7758116769611023,
+            "observation_categorical_log_loss_clipped": 0.4525933641168386
+          },
+          {
+            "trip_id": "00000080",
+            "observations": 350,
+            "top1_accuracy": 0.9228571428571428,
+            "candidate_miss_rate": 0.0,
+            "observation_edge_macro_f1": 0.8266097026966592,
+            "observation_categorical_log_loss_clipped": 0.48970991029927957
+          },
+          {
+            "trip_id": "00000081",
+            "observations": 350,
+            "top1_accuracy": 0.9428571428571428,
+            "candidate_miss_rate": 0.0,
+            "observation_edge_macro_f1": 0.9097466840617526,
+            "observation_categorical_log_loss_clipped": 0.5393926727699284
+          },
+          {
+            "trip_id": "00000082",
+            "observations": 350,
+            "top1_accuracy": 0.8257142857142857,
+            "candidate_miss_rate": 0.0,
+            "observation_edge_macro_f1": 0.724871261540001,
+            "observation_categorical_log_loss_clipped": 0.5822888956484007
+          },
+          {
+            "trip_id": "00000083",
+            "observations": 350,
+            "top1_accuracy": 0.8542857142857143,
+            "candidate_miss_rate": 0.0,
+            "observation_edge_macro_f1": 0.7471403986171856,
+            "observation_categorical_log_loss_clipped": 0.716424284314185
+          },
+          {
+            "trip_id": "00000084",
+            "observations": 350,
+            "top1_accuracy": 0.8571428571428571,
+            "candidate_miss_rate": 0.002857142857142857,
+            "observation_edge_macro_f1": 0.8754742596523578,
+            "observation_categorical_log_loss_clipped": 0.783849160440656
+          },
+          {
+            "trip_id": "00000085",
+            "observations": 350,
+            "top1_accuracy": 0.9257142857142857,
+            "candidate_miss_rate": 0.0,
+            "observation_edge_macro_f1": 0.8638909631524069,
+            "observation_categorical_log_loss_clipped": 0.5901148265230741
+          },
+          {
+            "trip_id": "00000086",
+            "observations": 350,
+            "top1_accuracy": 0.9771428571428571,
+            "candidate_miss_rate": 0.0,
+            "observation_edge_macro_f1": 0.958498546127412,
+            "observation_categorical_log_loss_clipped": 0.07281975224398751
+          },
+          {
+            "trip_id": "00000088",
+            "observations": 350,
+            "top1_accuracy": 0.9114285714285715,
+            "candidate_miss_rate": 0.0,
+            "observation_edge_macro_f1": 0.8193053962693432,
+            "observation_categorical_log_loss_clipped": 0.646256825037688
+          },
+          {
+            "trip_id": "00000089",
+            "observations": 350,
+            "top1_accuracy": 0.86,
+            "candidate_miss_rate": 0.005714285714285714,
+            "observation_edge_macro_f1": 0.7538077530934673,
+            "observation_categorical_log_loss_clipped": 0.8519306107117238
+          },
+          {
+            "trip_id": "00000090",
+            "observations": 350,
+            "top1_accuracy": 0.9028571428571428,
+            "candidate_miss_rate": 0.005714285714285714,
+            "observation_edge_macro_f1": 0.7934514224369297,
+            "observation_categorical_log_loss_clipped": 0.5867927979169302
+          },
+          {
+            "trip_id": "00000092",
+            "observations": 350,
+            "top1_accuracy": 0.9314285714285714,
+            "candidate_miss_rate": 0.0,
+            "observation_edge_macro_f1": 0.8768289438680501,
+            "observation_categorical_log_loss_clipped": 0.4506836506658065
+          },
+          {
+            "trip_id": "00000093",
+            "observations": 350,
+            "top1_accuracy": 0.7828571428571428,
+            "candidate_miss_rate": 0.03142857142857143,
+            "observation_edge_macro_f1": 0.6304556003231501,
+            "observation_categorical_log_loss_clipped": 1.1625860043423926
+          },
+          {
+            "trip_id": "00000095",
+            "observations": 350,
+            "top1_accuracy": 0.8657142857142858,
+            "candidate_miss_rate": 0.0,
+            "observation_edge_macro_f1": 0.7795670791062496,
+            "observation_categorical_log_loss_clipped": 0.6452690044371316
+          },
+          {
+            "trip_id": "00000096",
+            "observations": 350,
+            "top1_accuracy": 0.8657142857142858,
+            "candidate_miss_rate": 0.0,
+            "observation_edge_macro_f1": 0.8851578139384247,
+            "observation_categorical_log_loss_clipped": 0.5208524794846067
+          },
+          {
+            "trip_id": "00000097",
+            "observations": 350,
+            "top1_accuracy": 0.9828571428571429,
+            "candidate_miss_rate": 0.0,
+            "observation_edge_macro_f1": 0.9752851711026616,
+            "observation_categorical_log_loss_clipped": 0.1208741848658638
+          },
+          {
+            "trip_id": "00000098",
+            "observations": 350,
+            "top1_accuracy": 0.9514285714285714,
+            "candidate_miss_rate": 0.0,
+            "observation_edge_macro_f1": 0.9034090909090909,
+            "observation_categorical_log_loss_clipped": 0.21006640819184452
+          },
+          {
+            "trip_id": "00000099",
+            "observations": 350,
+            "top1_accuracy": 0.8942857142857142,
+            "candidate_miss_rate": 0.0,
+            "observation_edge_macro_f1": 0.8548323471400394,
+            "observation_categorical_log_loss_clipped": 0.6298027494912776
+          }
+        ],
+        "trip_macro_observation_edge_f1": 0.817968022682513
+      }
+    },
+    "bagging": {
+      "student_test": {
+        "observation_edge_macro_f1": 0.8271458710847017,
+        "observation_edge_macro_precision": 0.8484996832237754,
+        "observation_edge_macro_recall": 0.8208734500371354,
+        "edge_class_namespace": "trip_id:canonical_directed_original_arc_id; class union includes reference-only and prediction-only roads",
+        "observation_categorical_log_loss_clipped": 0.28244242484112947,
+        "observation_categorical_log_loss_given_candidate": 0.2667234231538494,
+        "categorical_log_loss_policy": "Normalize binary positive probabilities within each observation; absent target receives zero mass and finite log score uses floor1e-7. This is an emission log score, not a calibration claim. Misses are included in the unconditional score.",
+        "observations": 19160,
+        "candidate_miss_count": 19,
+        "candidate_miss_rate": 0.0009916492693110648,
+        "top1_accuracy": 0.9048016701461378,
+        "per_trip": [
+          {
+            "trip_id": "00000000",
+            "observations": 2503,
+            "top1_accuracy": 0.9524570515381542,
+            "candidate_miss_rate": 0.0011985617259288853,
+            "observation_edge_macro_f1": 0.8277196722505881,
+            "observation_categorical_log_loss_clipped": 0.1386900103542191,
+            "adjacent_observation_pairs": 2502,
+            "directly_continuous_pairs": 2419,
+            "raw_classifier_continuity": 0.9668265387689848,
+            "same_edge_pairs": 2231,
+            "edge_change_pairs": 271,
+            "directly_continuous_edge_change_pairs": 188,
+            "edge_change_continuity": 0.6937269372693727
+          },
+          {
+            "trip_id": "00000007",
+            "observations": 1354,
+            "top1_accuracy": 0.9741506646971935,
+            "candidate_miss_rate": 0.0,
+            "observation_edge_macro_f1": 0.9722991641204376,
+            "observation_categorical_log_loss_clipped": 0.0962531680199301,
+            "adjacent_observation_pairs": 1353,
+            "directly_continuous_pairs": 1349,
+            "raw_classifier_continuity": 0.9970436067997044,
+            "same_edge_pairs": 1182,
+            "edge_change_pairs": 171,
+            "directly_continuous_edge_change_pairs": 167,
+            "edge_change_continuity": 0.9766081871345029
+          },
+          {
+            "trip_id": "00000009",
+            "observations": 1049,
+            "top1_accuracy": 0.8722592945662536,
+            "candidate_miss_rate": 0.0,
+            "observation_edge_macro_f1": 0.7897806229410003,
+            "observation_categorical_log_loss_clipped": 0.46547537335072187,
+            "adjacent_observation_pairs": 1048,
+            "directly_continuous_pairs": 929,
+            "raw_classifier_continuity": 0.8864503816793893,
+            "same_edge_pairs": 612,
+            "edge_change_pairs": 436,
+            "directly_continuous_edge_change_pairs": 317,
+            "edge_change_continuity": 0.7270642201834863
+          },
+          {
+            "trip_id": "00000040",
+            "observations": 2995,
+            "top1_accuracy": 0.9515859766277128,
+            "candidate_miss_rate": 0.0,
+            "observation_edge_macro_f1": 0.8612676018895443,
+            "observation_categorical_log_loss_clipped": 0.1250770966647284,
+            "adjacent_observation_pairs": 2994,
+            "directly_continuous_pairs": 2889,
+            "raw_classifier_continuity": 0.9649298597194389,
+            "same_edge_pairs": 2551,
+            "edge_change_pairs": 443,
+            "directly_continuous_edge_change_pairs": 338,
+            "edge_change_continuity": 0.7629796839729119
+          },
+          {
+            "trip_id": "00000052",
+            "observations": 262,
+            "top1_accuracy": 0.9656488549618321,
+            "candidate_miss_rate": 0.0,
+            "observation_edge_macro_f1": 0.8815280160882639,
+            "observation_categorical_log_loss_clipped": 0.12419992384240501,
+            "adjacent_observation_pairs": 261,
+            "directly_continuous_pairs": 246,
+            "raw_classifier_continuity": 0.9425287356321839,
+            "same_edge_pairs": 175,
+            "edge_change_pairs": 86,
+            "directly_continuous_edge_change_pairs": 71,
+            "edge_change_continuity": 0.8255813953488372
+          },
+          {
+            "trip_id": "00000056",
+            "observations": 3958,
+            "top1_accuracy": 0.9143506821627084,
+            "candidate_miss_rate": 0.003284487114704396,
+            "observation_edge_macro_f1": 0.8463606980968467,
+            "observation_categorical_log_loss_clipped": 0.3627731442002043,
+            "adjacent_observation_pairs": 3957,
+            "directly_continuous_pairs": 3562,
+            "raw_classifier_continuity": 0.900176901693202,
+            "same_edge_pairs": 2551,
+            "edge_change_pairs": 1406,
+            "directly_continuous_edge_change_pairs": 1011,
+            "edge_change_continuity": 0.7190611664295875
+          },
+          {
+            "trip_id": "00000065",
+            "observations": 768,
+            "top1_accuracy": 0.9309895833333334,
+            "candidate_miss_rate": 0.0,
+            "observation_edge_macro_f1": 0.8284361152543144,
+            "observation_categorical_log_loss_clipped": 0.23405920754440068,
+            "adjacent_observation_pairs": 767,
+            "directly_continuous_pairs": 722,
+            "raw_classifier_continuity": 0.9413298565840938,
+            "same_edge_pairs": 599,
+            "edge_change_pairs": 168,
+            "directly_continuous_edge_change_pairs": 123,
+            "edge_change_continuity": 0.7321428571428571
+          },
+          {
+            "trip_id": "00000076",
+            "observations": 1486,
+            "top1_accuracy": 0.9306864064602961,
+            "candidate_miss_rate": 0.002018842530282638,
+            "observation_edge_macro_f1": 0.8015349287242411,
+            "observation_categorical_log_loss_clipped": 0.21567879315118965,
+            "adjacent_observation_pairs": 1485,
+            "directly_continuous_pairs": 1356,
+            "raw_classifier_continuity": 0.9131313131313131,
+            "same_edge_pairs": 1062,
+            "edge_change_pairs": 423,
+            "directly_continuous_edge_change_pairs": 294,
+            "edge_change_continuity": 0.6950354609929078
+          },
+          {
+            "trip_id": "00000077",
+            "observations": 3911,
+            "top1_accuracy": 0.7980056251598057,
+            "candidate_miss_rate": 0.0,
+            "observation_edge_macro_f1": 0.7560151708191978,
+            "observation_categorical_log_loss_clipped": 0.46746368693382223,
+            "adjacent_observation_pairs": 3910,
+            "directly_continuous_pairs": 3605,
+            "raw_classifier_continuity": 0.921994884910486,
+            "same_edge_pairs": 2939,
+            "edge_change_pairs": 971,
+            "directly_continuous_edge_change_pairs": 666,
+            "edge_change_continuity": 0.685890834191555
+          },
+          {
+            "trip_id": "00000091",
+            "observations": 874,
+            "top1_accuracy": 0.8890160183066361,
+            "candidate_miss_rate": 0.0,
+            "observation_edge_macro_f1": 0.800321188040922,
+            "observation_categorical_log_loss_clipped": 0.31388590500985103,
+            "adjacent_observation_pairs": 873,
+            "directly_continuous_pairs": 774,
+            "raw_classifier_continuity": 0.8865979381443299,
+            "same_edge_pairs": 604,
+            "edge_change_pairs": 269,
+            "directly_continuous_edge_change_pairs": 170,
+            "edge_change_continuity": 0.6319702602230484
+          }
+        ],
+        "trip_macro_observation_edge_f1": 0.8365263178225357,
+        "raw_classifier_continuity": 0.9321671018276763,
+        "directly_continuous_pairs": 17851,
+        "adjacent_observation_pairs": 19150,
+        "same_edge_pairs": 14506,
+        "edge_change_pairs": 4644,
+        "edge_change_continuity": 0.7202842377260982,
+        "continuity_definition": "Adjacent available observation assignments are continuous iff same canonical edge OR head(previous)==tail(current); no routed connectors. Empty assignments count discontinuous. Includes observed time gaps; on downsampled CV this would not imply every intervening road was predicted."
+      },
+      "train_out_of_fold": {
+        "observation_edge_macro_f1": 0.854629184228505,
+        "observation_edge_macro_precision": 0.8641342119781511,
+        "observation_edge_macro_recall": 0.8513167727632357,
+        "edge_class_namespace": "trip_id:canonical_directed_original_arc_id; class union includes reference-only and prediction-only roads",
+        "observation_categorical_log_loss_clipped": 0.6011403843126694,
+        "observation_categorical_log_loss_given_candidate": 0.2740745195281465,
+        "categorical_log_loss_policy": "Normalize binary positive probabilities within each observation; absent target receives zero mass and finite log score uses floor1e-7. This is an emission log score, not a calibration claim. Misses are included in the unconditional score.",
+        "observations": 28000,
+        "candidate_miss_count": 578,
+        "candidate_miss_rate": 0.020642857142857143,
+        "top1_accuracy": 0.8914642857142857,
+        "per_trip": [
+          {
+            "trip_id": "00000001",
+            "observations": 350,
+            "top1_accuracy": 0.9742857142857143,
+            "candidate_miss_rate": 0.002857142857142857,
+            "observation_edge_macro_f1": 0.9375134669252316,
+            "observation_categorical_log_loss_clipped": 0.18868592175920915
+          },
+          {
+            "trip_id": "00000002",
+            "observations": 350,
+            "top1_accuracy": 0.7657142857142857,
+            "candidate_miss_rate": 0.08857142857142856,
+            "observation_edge_macro_f1": 0.663579350932292,
+            "observation_categorical_log_loss_clipped": 1.8952381045526425
+          },
+          {
+            "trip_id": "00000003",
+            "observations": 350,
+            "top1_accuracy": 0.8657142857142858,
+            "candidate_miss_rate": 0.0,
+            "observation_edge_macro_f1": 0.6702527156817453,
+            "observation_categorical_log_loss_clipped": 0.3329335315812216
+          },
+          {
+            "trip_id": "00000004",
+            "observations": 350,
+            "top1_accuracy": 0.9085714285714286,
+            "candidate_miss_rate": 0.002857142857142857,
+            "observation_edge_macro_f1": 0.8011029519851196,
+            "observation_categorical_log_loss_clipped": 0.3048925813224369
+          },
+          {
+            "trip_id": "00000005",
+            "observations": 350,
+            "top1_accuracy": 0.9771428571428571,
+            "candidate_miss_rate": 0.0,
+            "observation_edge_macro_f1": 0.9551587301587301,
+            "observation_categorical_log_loss_clipped": 0.05938732414847381
+          },
+          {
+            "trip_id": "00000006",
+            "observations": 350,
+            "top1_accuracy": 0.9428571428571428,
+            "candidate_miss_rate": 0.0,
+            "observation_edge_macro_f1": 0.8839564475928113,
+            "observation_categorical_log_loss_clipped": 0.18728360732740781
+          },
+          {
+            "trip_id": "00000008",
+            "observations": 350,
+            "top1_accuracy": 0.7828571428571428,
+            "candidate_miss_rate": 0.005714285714285714,
+            "observation_edge_macro_f1": 0.6842082590612003,
+            "observation_categorical_log_loss_clipped": 0.6910063868972366
+          },
+          {
+            "trip_id": "00000010",
+            "observations": 350,
+            "top1_accuracy": 0.6828571428571428,
+            "candidate_miss_rate": 0.002857142857142857,
+            "observation_edge_macro_f1": 0.5554468937035524,
+            "observation_categorical_log_loss_clipped": 0.7379916838324477
+          },
+          {
+            "trip_id": "00000011",
+            "observations": 350,
+            "top1_accuracy": 0.9914285714285714,
+            "candidate_miss_rate": 0.0,
+            "observation_edge_macro_f1": 0.9761904761904762,
+            "observation_categorical_log_loss_clipped": 0.02913615061760606
+          },
+          {
+            "trip_id": "00000012",
+            "observations": 350,
+            "top1_accuracy": 0.9885714285714285,
+            "candidate_miss_rate": 0.0,
+            "observation_edge_macro_f1": 0.9615541922290389,
+            "observation_categorical_log_loss_clipped": 0.023445123399189347
+          },
+          {
+            "trip_id": "00000013",
+            "observations": 350,
+            "top1_accuracy": 0.9571428571428572,
+            "candidate_miss_rate": 0.0,
+            "observation_edge_macro_f1": 0.9213333333333332,
+            "observation_categorical_log_loss_clipped": 0.1628999987380617
+          },
+          {
+            "trip_id": "00000014",
+            "observations": 350,
+            "top1_accuracy": 0.9,
+            "candidate_miss_rate": 0.002857142857142857,
+            "observation_edge_macro_f1": 0.7133361552527894,
+            "observation_categorical_log_loss_clipped": 0.31690478647240267
+          },
+          {
+            "trip_id": "00000016",
+            "observations": 350,
+            "top1_accuracy": 0.6342857142857142,
+            "candidate_miss_rate": 0.0,
+            "observation_edge_macro_f1": 0.470915493051636,
+            "observation_categorical_log_loss_clipped": 1.3044506239495004
+          },
+          {
+            "trip_id": "00000018",
+            "observations": 350,
+            "top1_accuracy": 0.9314285714285714,
+            "candidate_miss_rate": 0.0,
+            "observation_edge_macro_f1": 0.8081334723670489,
+            "observation_categorical_log_loss_clipped": 0.1948020441468325
+          },
+          {
+            "trip_id": "00000019",
+            "observations": 350,
+            "top1_accuracy": 0.8342857142857143,
+            "candidate_miss_rate": 0.014285714285714285,
+            "observation_edge_macro_f1": 0.8144925734787486,
+            "observation_categorical_log_loss_clipped": 0.6057800386140577
+          },
+          {
+            "trip_id": "00000020",
+            "observations": 350,
+            "top1_accuracy": 0.9714285714285714,
+            "candidate_miss_rate": 0.008571428571428572,
+            "observation_edge_macro_f1": 0.9206837606837608,
+            "observation_categorical_log_loss_clipped": 0.23432515373681306
+          },
+          {
+            "trip_id": "00000021",
+            "observations": 350,
+            "top1_accuracy": 0.92,
+            "candidate_miss_rate": 0.0,
+            "observation_edge_macro_f1": 0.922771749429208,
+            "observation_categorical_log_loss_clipped": 0.16644468805069146
+          },
+          {
+            "trip_id": "00000022",
+            "observations": 350,
+            "top1_accuracy": 0.9057142857142857,
+            "candidate_miss_rate": 0.0,
+            "observation_edge_macro_f1": 0.8299580248078102,
+            "observation_categorical_log_loss_clipped": 0.3506666989589363
+          },
+          {
+            "trip_id": "00000024",
+            "observations": 350,
+            "top1_accuracy": 0.9742857142857143,
+            "candidate_miss_rate": 0.0,
+            "observation_edge_macro_f1": 0.9362041467304626,
+            "observation_categorical_log_loss_clipped": 0.11056840793951439
+          },
+          {
+            "trip_id": "00000025",
+            "observations": 350,
+            "top1_accuracy": 0.9485714285714286,
+            "candidate_miss_rate": 0.0,
+            "observation_edge_macro_f1": 0.8547875064004096,
+            "observation_categorical_log_loss_clipped": 0.16208879567742418
+          },
+          {
+            "trip_id": "00000026",
+            "observations": 350,
+            "top1_accuracy": 0.9257142857142857,
+            "candidate_miss_rate": 0.0,
+            "observation_edge_macro_f1": 0.8870036836729474,
+            "observation_categorical_log_loss_clipped": 0.2755173110522362
+          },
+          {
+            "trip_id": "00000027",
+            "observations": 350,
+            "top1_accuracy": 0.9371428571428572,
+            "candidate_miss_rate": 0.0,
+            "observation_edge_macro_f1": 0.9210762899651789,
+            "observation_categorical_log_loss_clipped": 0.1679473031966038
+          },
+          {
+            "trip_id": "00000028",
+            "observations": 350,
+            "top1_accuracy": 0.9514285714285714,
+            "candidate_miss_rate": 0.005714285714285714,
+            "observation_edge_macro_f1": 0.8790035587188612,
+            "observation_categorical_log_loss_clipped": 0.2310678683438875
+          },
+          {
+            "trip_id": "00000029",
+            "observations": 350,
+            "top1_accuracy": 0.9085714285714286,
+            "candidate_miss_rate": 0.0,
+            "observation_edge_macro_f1": 0.8162226292053925,
+            "observation_categorical_log_loss_clipped": 0.3063500244945459
+          },
+          {
+            "trip_id": "00000031",
+            "observations": 350,
+            "top1_accuracy": 0.9428571428571428,
+            "candidate_miss_rate": 0.0,
+            "observation_edge_macro_f1": 0.8927017427017426,
+            "observation_categorical_log_loss_clipped": 0.1547358917685231
+          },
+          {
+            "trip_id": "00000032",
+            "observations": 350,
+            "top1_accuracy": 0.9257142857142857,
+            "candidate_miss_rate": 0.0,
+            "observation_edge_macro_f1": 0.8856014207704693,
+            "observation_categorical_log_loss_clipped": 0.21540090405983173
+          },
+          {
+            "trip_id": "00000033",
+            "observations": 350,
+            "top1_accuracy": 0.21714285714285714,
+            "candidate_miss_rate": 0.6571428571428571,
+            "observation_edge_macro_f1": 0.5913315985338145,
+            "observation_categorical_log_loss_clipped": 10.939744609044995
+          },
+          {
+            "trip_id": "00000034",
+            "observations": 350,
+            "top1_accuracy": 0.9057142857142857,
+            "candidate_miss_rate": 0.0,
+            "observation_edge_macro_f1": 0.8772208298524088,
+            "observation_categorical_log_loss_clipped": 0.2604544132070281
+          },
+          {
+            "trip_id": "00000035",
+            "observations": 350,
+            "top1_accuracy": 0.8485714285714285,
+            "candidate_miss_rate": 0.0,
+            "observation_edge_macro_f1": 0.7550651103282683,
+            "observation_categorical_log_loss_clipped": 0.4158072167669465
+          },
+          {
+            "trip_id": "00000036",
+            "observations": 350,
+            "top1_accuracy": 0.9,
+            "candidate_miss_rate": 0.0,
+            "observation_edge_macro_f1": 0.8670726801888775,
+            "observation_categorical_log_loss_clipped": 0.249125620406372
+          },
+          {
+            "trip_id": "00000037",
+            "observations": 350,
+            "top1_accuracy": 0.9885714285714285,
+            "candidate_miss_rate": 0.0,
+            "observation_edge_macro_f1": 0.9688811188811189,
+            "observation_categorical_log_loss_clipped": 0.05907141330301982
+          },
+          {
+            "trip_id": "00000038",
+            "observations": 350,
+            "top1_accuracy": 0.9514285714285714,
+            "candidate_miss_rate": 0.0,
+            "observation_edge_macro_f1": 0.9351826972516629,
+            "observation_categorical_log_loss_clipped": 0.18005115238666455
+          },
+          {
+            "trip_id": "00000039",
+            "observations": 350,
+            "top1_accuracy": 0.9685714285714285,
+            "candidate_miss_rate": 0.0,
+            "observation_edge_macro_f1": 0.9415236104891278,
+            "observation_categorical_log_loss_clipped": 0.09618673318677452
+          },
+          {
+            "trip_id": "00000041",
+            "observations": 350,
+            "top1_accuracy": 0.9457142857142857,
+            "candidate_miss_rate": 0.0,
+            "observation_edge_macro_f1": 0.8757776883883079,
+            "observation_categorical_log_loss_clipped": 0.18341332128527937
+          },
+          {
+            "trip_id": "00000042",
+            "observations": 350,
+            "top1_accuracy": 0.98,
+            "candidate_miss_rate": 0.0,
+            "observation_edge_macro_f1": 0.9597701149425287,
+            "observation_categorical_log_loss_clipped": 0.06640807555858667
+          },
+          {
+            "trip_id": "00000043",
+            "observations": 350,
+            "top1_accuracy": 0.76,
+            "candidate_miss_rate": 0.04,
+            "observation_edge_macro_f1": 0.5746458341888063,
+            "observation_categorical_log_loss_clipped": 1.3111243350421828
+          },
+          {
+            "trip_id": "00000044",
+            "observations": 350,
+            "top1_accuracy": 0.9514285714285714,
+            "candidate_miss_rate": 0.0,
+            "observation_edge_macro_f1": 0.8846604215456675,
+            "observation_categorical_log_loss_clipped": 0.1571471544897476
+          },
+          {
+            "trip_id": "00000045",
+            "observations": 350,
+            "top1_accuracy": 0.9285714285714286,
+            "candidate_miss_rate": 0.0,
+            "observation_edge_macro_f1": 0.8315672036165395,
+            "observation_categorical_log_loss_clipped": 0.1696557074431588
+          },
+          {
+            "trip_id": "00000046",
+            "observations": 350,
+            "top1_accuracy": 0.9542857142857143,
+            "candidate_miss_rate": 0.0,
+            "observation_edge_macro_f1": 0.8957930503012471,
+            "observation_categorical_log_loss_clipped": 0.12862988260659308
+          },
+          {
+            "trip_id": "00000047",
+            "observations": 350,
+            "top1_accuracy": 0.8771428571428571,
+            "candidate_miss_rate": 0.0,
+            "observation_edge_macro_f1": 0.9481294639313217,
+            "observation_categorical_log_loss_clipped": 0.4575942825491011
+          },
+          {
+            "trip_id": "00000048",
+            "observations": 350,
+            "top1_accuracy": 0.98,
+            "candidate_miss_rate": 0.0,
+            "observation_edge_macro_f1": 0.9351828231292517,
+            "observation_categorical_log_loss_clipped": 0.09495748641514881
+          },
+          {
+            "trip_id": "00000050",
+            "observations": 350,
+            "top1_accuracy": 0.9685714285714285,
+            "candidate_miss_rate": 0.0,
+            "observation_edge_macro_f1": 0.8975280090451229,
+            "observation_categorical_log_loss_clipped": 0.11949111515429664
+          },
+          {
+            "trip_id": "00000051",
+            "observations": 350,
+            "top1_accuracy": 0.8942857142857142,
+            "candidate_miss_rate": 0.0,
+            "observation_edge_macro_f1": 0.8988659522592023,
+            "observation_categorical_log_loss_clipped": 0.31012609339744773
+          },
+          {
+            "trip_id": "00000053",
+            "observations": 350,
+            "top1_accuracy": 0.9114285714285715,
+            "candidate_miss_rate": 0.002857142857142857,
+            "observation_edge_macro_f1": 0.8244306418219463,
+            "observation_categorical_log_loss_clipped": 0.2663281283890385
+          },
+          {
+            "trip_id": "00000054",
+            "observations": 350,
+            "top1_accuracy": 0.09428571428571429,
+            "candidate_miss_rate": 0.5828571428571429,
+            "observation_edge_macro_f1": 0.5388888888888889,
+            "observation_categorical_log_loss_clipped": 10.75039921165311
+          },
+          {
+            "trip_id": "00000055",
+            "observations": 350,
+            "top1_accuracy": 0.9685714285714285,
+            "candidate_miss_rate": 0.0,
+            "observation_edge_macro_f1": 0.9288256227758007,
+            "observation_categorical_log_loss_clipped": 0.0900095421860427
+          },
+          {
+            "trip_id": "00000057",
+            "observations": 350,
+            "top1_accuracy": 0.9342857142857143,
+            "candidate_miss_rate": 0.0,
+            "observation_edge_macro_f1": 0.921256038647343,
+            "observation_categorical_log_loss_clipped": 0.22607851943239077
+          },
+          {
+            "trip_id": "00000058",
+            "observations": 350,
+            "top1_accuracy": 0.9,
+            "candidate_miss_rate": 0.011428571428571429,
+            "observation_edge_macro_f1": 0.7770040883920717,
+            "observation_categorical_log_loss_clipped": 0.4528415506171939
+          },
+          {
+            "trip_id": "00000060",
+            "observations": 350,
+            "top1_accuracy": 0.9228571428571428,
+            "candidate_miss_rate": 0.0,
+            "observation_edge_macro_f1": 0.8573643410852713,
+            "observation_categorical_log_loss_clipped": 0.19042340320166984
+          },
+          {
+            "trip_id": "00000061",
+            "observations": 350,
+            "top1_accuracy": 0.7342857142857143,
+            "candidate_miss_rate": 0.05142857142857143,
+            "observation_edge_macro_f1": 0.6185005451323138,
+            "observation_categorical_log_loss_clipped": 1.4195600106219042
+          },
+          {
+            "trip_id": "00000062",
+            "observations": 350,
+            "top1_accuracy": 0.9542857142857143,
+            "candidate_miss_rate": 0.0,
+            "observation_edge_macro_f1": 0.9149478194761214,
+            "observation_categorical_log_loss_clipped": 0.19072754926961896
+          },
+          {
+            "trip_id": "00000063",
+            "observations": 350,
+            "top1_accuracy": 0.8542857142857143,
+            "candidate_miss_rate": 0.0,
+            "observation_edge_macro_f1": 0.9154843556078123,
+            "observation_categorical_log_loss_clipped": 0.25586670549355034
+          },
+          {
+            "trip_id": "00000064",
+            "observations": 350,
+            "top1_accuracy": 0.9857142857142858,
+            "candidate_miss_rate": 0.002857142857142857,
+            "observation_edge_macro_f1": 0.9681433549029369,
+            "observation_categorical_log_loss_clipped": 0.09091451745319988
+          },
+          {
+            "trip_id": "00000066",
+            "observations": 350,
+            "top1_accuracy": 0.9457142857142857,
+            "candidate_miss_rate": 0.0,
+            "observation_edge_macro_f1": 0.9451514100785945,
+            "observation_categorical_log_loss_clipped": 0.2998569710545333
+          },
+          {
+            "trip_id": "00000068",
+            "observations": 350,
+            "top1_accuracy": 0.9342857142857143,
+            "candidate_miss_rate": 0.0,
+            "observation_edge_macro_f1": 0.916982313079874,
+            "observation_categorical_log_loss_clipped": 0.1853001875041944
+          },
+          {
+            "trip_id": "00000069",
+            "observations": 350,
+            "top1_accuracy": 0.8828571428571429,
+            "candidate_miss_rate": 0.0,
+            "observation_edge_macro_f1": 0.8817866675382118,
+            "observation_categorical_log_loss_clipped": 0.30147813595141654
+          },
+          {
+            "trip_id": "00000070",
+            "observations": 350,
+            "top1_accuracy": 0.9371428571428572,
+            "candidate_miss_rate": 0.0,
+            "observation_edge_macro_f1": 0.8613135458552694,
+            "observation_categorical_log_loss_clipped": 0.2553341428789007
+          },
+          {
+            "trip_id": "00000071",
+            "observations": 350,
+            "top1_accuracy": 0.96,
+            "candidate_miss_rate": 0.0,
+            "observation_edge_macro_f1": 0.9005406240345998,
+            "observation_categorical_log_loss_clipped": 0.13084534234555278
+          },
+          {
+            "trip_id": "00000072",
+            "observations": 350,
+            "top1_accuracy": 0.7371428571428571,
+            "candidate_miss_rate": 0.12,
+            "observation_edge_macro_f1": 0.7149286659814159,
+            "observation_categorical_log_loss_clipped": 2.2994269528293008
+          },
+          {
+            "trip_id": "00000074",
+            "observations": 350,
+            "top1_accuracy": 0.8771428571428571,
+            "candidate_miss_rate": 0.002857142857142857,
+            "observation_edge_macro_f1": 0.7386583755227822,
+            "observation_categorical_log_loss_clipped": 0.31994613882791556
+          },
+          {
+            "trip_id": "00000075",
+            "observations": 350,
+            "top1_accuracy": 0.9457142857142857,
+            "candidate_miss_rate": 0.0,
+            "observation_edge_macro_f1": 0.8666469972323894,
+            "observation_categorical_log_loss_clipped": 0.17107868569993745
+          },
+          {
+            "trip_id": "00000078",
+            "observations": 350,
+            "top1_accuracy": 0.98,
+            "candidate_miss_rate": 0.0,
+            "observation_edge_macro_f1": 0.9628580421781555,
+            "observation_categorical_log_loss_clipped": 0.08281800020209075
+          },
+          {
+            "trip_id": "00000079",
+            "observations": 350,
+            "top1_accuracy": 0.92,
+            "candidate_miss_rate": 0.0,
+            "observation_edge_macro_f1": 0.80853393832954,
+            "observation_categorical_log_loss_clipped": 0.24461028098633594
+          },
+          {
+            "trip_id": "00000080",
+            "observations": 350,
+            "top1_accuracy": 0.9114285714285715,
+            "candidate_miss_rate": 0.0,
+            "observation_edge_macro_f1": 0.8016557252271538,
+            "observation_categorical_log_loss_clipped": 0.3272957510040881
+          },
+          {
+            "trip_id": "00000081",
+            "observations": 350,
+            "top1_accuracy": 0.9571428571428572,
+            "candidate_miss_rate": 0.0,
+            "observation_edge_macro_f1": 0.9413549413549414,
+            "observation_categorical_log_loss_clipped": 0.17386616632052357
+          },
+          {
+            "trip_id": "00000082",
+            "observations": 350,
+            "top1_accuracy": 0.8657142857142858,
+            "candidate_miss_rate": 0.0,
+            "observation_edge_macro_f1": 0.7541403512494843,
+            "observation_categorical_log_loss_clipped": 0.3204165353145775
+          },
+          {
+            "trip_id": "00000083",
+            "observations": 350,
+            "top1_accuracy": 0.8885714285714286,
+            "candidate_miss_rate": 0.0,
+            "observation_edge_macro_f1": 0.7432819603853292,
+            "observation_categorical_log_loss_clipped": 0.3754632859870737
+          },
+          {
+            "trip_id": "00000084",
+            "observations": 350,
+            "top1_accuracy": 0.8571428571428571,
+            "candidate_miss_rate": 0.002857142857142857,
+            "observation_edge_macro_f1": 0.8738377143139049,
+            "observation_categorical_log_loss_clipped": 0.40707593197854974
+          },
+          {
+            "trip_id": "00000085",
+            "observations": 350,
+            "top1_accuracy": 0.9257142857142857,
+            "candidate_miss_rate": 0.0,
+            "observation_edge_macro_f1": 0.8628124335449563,
+            "observation_categorical_log_loss_clipped": 0.2580736610005107
+          },
+          {
+            "trip_id": "00000086",
+            "observations": 350,
+            "top1_accuracy": 0.9857142857142858,
+            "candidate_miss_rate": 0.0,
+            "observation_edge_macro_f1": 0.9653979238754326,
+            "observation_categorical_log_loss_clipped": 0.03672259781313876
+          },
+          {
+            "trip_id": "00000088",
+            "observations": 350,
+            "top1_accuracy": 0.9171428571428571,
+            "candidate_miss_rate": 0.0,
+            "observation_edge_macro_f1": 0.8430617692421096,
+            "observation_categorical_log_loss_clipped": 0.3943988576674491
+          },
+          {
+            "trip_id": "00000089",
+            "observations": 350,
+            "top1_accuracy": 0.8685714285714285,
+            "candidate_miss_rate": 0.005714285714285714,
+            "observation_edge_macro_f1": 0.7752034686181027,
+            "observation_categorical_log_loss_clipped": 0.5276469051555345
+          },
+          {
+            "trip_id": "00000090",
+            "observations": 350,
+            "top1_accuracy": 0.9057142857142857,
+            "candidate_miss_rate": 0.005714285714285714,
+            "observation_edge_macro_f1": 0.8103526468058488,
+            "observation_categorical_log_loss_clipped": 0.32513148848504947
+          },
+          {
+            "trip_id": "00000092",
+            "observations": 350,
+            "top1_accuracy": 0.94,
+            "candidate_miss_rate": 0.0,
+            "observation_edge_macro_f1": 0.9028800755429651,
+            "observation_categorical_log_loss_clipped": 0.15247305520818896
+          },
+          {
+            "trip_id": "00000093",
+            "observations": 350,
+            "top1_accuracy": 0.8085714285714286,
+            "candidate_miss_rate": 0.03142857142857143,
+            "observation_edge_macro_f1": 0.6820765971450903,
+            "observation_categorical_log_loss_clipped": 0.882272441530191
+          },
+          {
+            "trip_id": "00000095",
+            "observations": 350,
+            "top1_accuracy": 0.8571428571428571,
+            "candidate_miss_rate": 0.0,
+            "observation_edge_macro_f1": 0.8092382867264384,
+            "observation_categorical_log_loss_clipped": 0.38468390858982066
+          },
+          {
+            "trip_id": "00000096",
+            "observations": 350,
+            "top1_accuracy": 0.9057142857142857,
+            "candidate_miss_rate": 0.0,
+            "observation_edge_macro_f1": 0.9205126009646944,
+            "observation_categorical_log_loss_clipped": 0.3013684433481882
+          },
+          {
+            "trip_id": "00000097",
+            "observations": 350,
+            "top1_accuracy": 0.9857142857142858,
+            "candidate_miss_rate": 0.0,
+            "observation_edge_macro_f1": 0.982824427480916,
+            "observation_categorical_log_loss_clipped": 0.046755589055726805
+          },
+          {
+            "trip_id": "00000098",
+            "observations": 350,
+            "top1_accuracy": 0.9628571428571429,
+            "candidate_miss_rate": 0.0,
+            "observation_edge_macro_f1": 0.9252873563218391,
+            "observation_categorical_log_loss_clipped": 0.08668347380474382
+          },
+          {
+            "trip_id": "00000099",
+            "observations": 350,
+            "top1_accuracy": 0.9257142857142857,
+            "candidate_miss_rate": 0.0,
+            "observation_edge_macro_f1": 0.8870195065978199,
+            "observation_categorical_log_loss_clipped": 0.2581191092712199
+          }
+        ],
+        "trip_macro_observation_edge_f1": 0.8443071411732707
+      }
+    },
+    "bagging_tuned": {
+      "student_test": {
+        "observation_edge_macro_f1": 0.8248287541046038,
+        "observation_edge_macro_precision": 0.8466006089934054,
+        "observation_edge_macro_recall": 0.8181404757283716,
+        "edge_class_namespace": "trip_id:canonical_directed_original_arc_id; class union includes reference-only and prediction-only roads",
+        "observation_categorical_log_loss_clipped": 0.2816623415849135,
+        "observation_categorical_log_loss_given_candidate": 0.26594256556077184,
+        "categorical_log_loss_policy": "Normalize binary positive probabilities within each observation; absent target receives zero mass and finite log score uses floor1e-7. This is an emission log score, not a calibration claim. Misses are included in the unconditional score.",
+        "observations": 19160,
+        "candidate_miss_count": 19,
+        "candidate_miss_rate": 0.0009916492693110648,
+        "top1_accuracy": 0.90339248434238,
+        "per_trip": [
+          {
+            "trip_id": "00000000",
+            "observations": 2503,
+            "top1_accuracy": 0.9536556132640831,
+            "candidate_miss_rate": 0.0011985617259288853,
+            "observation_edge_macro_f1": 0.8308835623357745,
+            "observation_categorical_log_loss_clipped": 0.13905457768723814,
+            "adjacent_observation_pairs": 2502,
+            "directly_continuous_pairs": 2417,
+            "raw_classifier_continuity": 0.966027178257394,
+            "same_edge_pairs": 2228,
+            "edge_change_pairs": 274,
+            "directly_continuous_edge_change_pairs": 189,
+            "edge_change_continuity": 0.6897810218978102
+          },
+          {
+            "trip_id": "00000007",
+            "observations": 1354,
+            "top1_accuracy": 0.9682422451994092,
+            "candidate_miss_rate": 0.0,
+            "observation_edge_macro_f1": 0.9721238843311026,
+            "observation_categorical_log_loss_clipped": 0.0996477500324056,
+            "adjacent_observation_pairs": 1353,
+            "directly_continuous_pairs": 1349,
+            "raw_classifier_continuity": 0.9970436067997044,
+            "same_edge_pairs": 1170,
+            "edge_change_pairs": 183,
+            "directly_continuous_edge_change_pairs": 179,
+            "edge_change_continuity": 0.9781420765027322
+          },
+          {
+            "trip_id": "00000009",
+            "observations": 1049,
+            "top1_accuracy": 0.8741658722592945,
+            "candidate_miss_rate": 0.0,
+            "observation_edge_macro_f1": 0.7976331137851328,
+            "observation_categorical_log_loss_clipped": 0.45152632253364805,
+            "adjacent_observation_pairs": 1048,
+            "directly_continuous_pairs": 934,
+            "raw_classifier_continuity": 0.8912213740458015,
+            "same_edge_pairs": 620,
+            "edge_change_pairs": 428,
+            "directly_continuous_edge_change_pairs": 314,
+            "edge_change_continuity": 0.7336448598130841
+          },
+          {
+            "trip_id": "00000040",
+            "observations": 2995,
+            "top1_accuracy": 0.9512520868113522,
+            "candidate_miss_rate": 0.0,
+            "observation_edge_macro_f1": 0.8669789743200748,
+            "observation_categorical_log_loss_clipped": 0.12514422863336302,
+            "adjacent_observation_pairs": 2994,
+            "directly_continuous_pairs": 2878,
+            "raw_classifier_continuity": 0.9612558450233801,
+            "same_edge_pairs": 2543,
+            "edge_change_pairs": 451,
+            "directly_continuous_edge_change_pairs": 335,
+            "edge_change_continuity": 0.7427937915742794
+          },
+          {
+            "trip_id": "00000052",
+            "observations": 262,
+            "top1_accuracy": 0.9580152671755725,
+            "candidate_miss_rate": 0.0,
+            "observation_edge_macro_f1": 0.8572888159095057,
+            "observation_categorical_log_loss_clipped": 0.11355496334532364,
+            "adjacent_observation_pairs": 261,
+            "directly_continuous_pairs": 246,
+            "raw_classifier_continuity": 0.9425287356321839,
+            "same_edge_pairs": 175,
+            "edge_change_pairs": 86,
+            "directly_continuous_edge_change_pairs": 71,
+            "edge_change_continuity": 0.8255813953488372
+          },
+          {
+            "trip_id": "00000056",
+            "observations": 3958,
+            "top1_accuracy": 0.9143506821627084,
+            "candidate_miss_rate": 0.003284487114704396,
+            "observation_edge_macro_f1": 0.841472541261037,
+            "observation_categorical_log_loss_clipped": 0.3626813614011432,
+            "adjacent_observation_pairs": 3957,
+            "directly_continuous_pairs": 3562,
+            "raw_classifier_continuity": 0.900176901693202,
+            "same_edge_pairs": 2550,
+            "edge_change_pairs": 1407,
+            "directly_continuous_edge_change_pairs": 1012,
+            "edge_change_continuity": 0.7192608386638237
+          },
+          {
+            "trip_id": "00000065",
+            "observations": 768,
+            "top1_accuracy": 0.9270833333333334,
+            "candidate_miss_rate": 0.0,
+            "observation_edge_macro_f1": 0.8140680948613999,
+            "observation_categorical_log_loss_clipped": 0.23645029788487126,
+            "adjacent_observation_pairs": 767,
+            "directly_continuous_pairs": 718,
+            "raw_classifier_continuity": 0.9361147327249022,
+            "same_edge_pairs": 594,
+            "edge_change_pairs": 173,
+            "directly_continuous_edge_change_pairs": 124,
+            "edge_change_continuity": 0.7167630057803468
+          },
+          {
+            "trip_id": "00000076",
+            "observations": 1486,
+            "top1_accuracy": 0.9300134589502019,
+            "candidate_miss_rate": 0.002018842530282638,
+            "observation_edge_macro_f1": 0.793237491211618,
+            "observation_categorical_log_loss_clipped": 0.2156267412323749,
+            "adjacent_observation_pairs": 1485,
+            "directly_continuous_pairs": 1351,
+            "raw_classifier_continuity": 0.9097643097643098,
+            "same_edge_pairs": 1058,
+            "edge_change_pairs": 427,
+            "directly_continuous_edge_change_pairs": 293,
+            "edge_change_continuity": 0.6861826697892272
+          },
+          {
+            "trip_id": "00000077",
+            "observations": 3911,
+            "top1_accuracy": 0.7936589107645103,
+            "candidate_miss_rate": 0.0,
+            "observation_edge_macro_f1": 0.7516005467676438,
+            "observation_categorical_log_loss_clipped": 0.4660308694388143,
+            "adjacent_observation_pairs": 3910,
+            "directly_continuous_pairs": 3603,
+            "raw_classifier_continuity": 0.9214833759590793,
+            "same_edge_pairs": 2950,
+            "edge_change_pairs": 960,
+            "directly_continuous_edge_change_pairs": 653,
+            "edge_change_continuity": 0.6802083333333333
+          },
+          {
+            "trip_id": "00000091",
+            "observations": 874,
+            "top1_accuracy": 0.8890160183066361,
+            "candidate_miss_rate": 0.0,
+            "observation_edge_macro_f1": 0.8033985984634344,
+            "observation_categorical_log_loss_clipped": 0.3149995431726507,
+            "adjacent_observation_pairs": 873,
+            "directly_continuous_pairs": 777,
+            "raw_classifier_continuity": 0.8900343642611683,
+            "same_edge_pairs": 604,
+            "edge_change_pairs": 269,
+            "directly_continuous_edge_change_pairs": 173,
+            "edge_change_continuity": 0.6431226765799256
+          }
+        ],
+        "trip_macro_observation_edge_f1": 0.8328685623246723,
+        "raw_classifier_continuity": 0.931331592689295,
+        "directly_continuous_pairs": 17835,
+        "adjacent_observation_pairs": 19150,
+        "same_edge_pairs": 14492,
+        "edge_change_pairs": 4658,
+        "edge_change_continuity": 0.7176899957063118,
+        "continuity_definition": "Adjacent available observation assignments are continuous iff same canonical edge OR head(previous)==tail(current); no routed connectors. Empty assignments count discontinuous. Includes observed time gaps; on downsampled CV this would not imply every intervening road was predicted."
+      },
+      "train_out_of_fold": {
+        "observation_edge_macro_f1": 0.8558924800060443,
+        "observation_edge_macro_precision": 0.8653011125329994,
+        "observation_edge_macro_recall": 0.8525527868691289,
+        "edge_class_namespace": "trip_id:canonical_directed_original_arc_id; class union includes reference-only and prediction-only roads",
+        "observation_categorical_log_loss_clipped": 0.6025601681687124,
+        "observation_categorical_log_loss_given_candidate": 0.275524229540881,
+        "categorical_log_loss_policy": "Normalize binary positive probabilities within each observation; absent target receives zero mass and finite log score uses floor1e-7. This is an emission log score, not a calibration claim. Misses are included in the unconditional score.",
+        "observations": 28000,
+        "candidate_miss_count": 578,
+        "candidate_miss_rate": 0.020642857142857143,
+        "top1_accuracy": 0.8925,
+        "per_trip": [
+          {
+            "trip_id": "00000001",
+            "observations": 350,
+            "top1_accuracy": 0.9714285714285714,
+            "candidate_miss_rate": 0.002857142857142857,
+            "observation_edge_macro_f1": 0.9304422498926578,
+            "observation_categorical_log_loss_clipped": 0.18843466421732025
+          },
+          {
+            "trip_id": "00000002",
+            "observations": 350,
+            "top1_accuracy": 0.78,
+            "candidate_miss_rate": 0.08857142857142856,
+            "observation_edge_macro_f1": 0.6880385487528345,
+            "observation_categorical_log_loss_clipped": 1.9286256577959648
+          },
+          {
+            "trip_id": "00000003",
+            "observations": 350,
+            "top1_accuracy": 0.8714285714285714,
+            "candidate_miss_rate": 0.0,
+            "observation_edge_macro_f1": 0.6773802240732005,
+            "observation_categorical_log_loss_clipped": 0.33370200893435165
+          },
+          {
+            "trip_id": "00000004",
+            "observations": 350,
+            "top1_accuracy": 0.9114285714285715,
+            "candidate_miss_rate": 0.002857142857142857,
+            "observation_edge_macro_f1": 0.8033736782892545,
+            "observation_categorical_log_loss_clipped": 0.32131673029842267
+          },
+          {
+            "trip_id": "00000005",
+            "observations": 350,
+            "top1_accuracy": 0.9714285714285714,
+            "candidate_miss_rate": 0.0,
+            "observation_edge_macro_f1": 0.9507936507936507,
+            "observation_categorical_log_loss_clipped": 0.07042244178559165
+          },
+          {
+            "trip_id": "00000006",
+            "observations": 350,
+            "top1_accuracy": 0.94,
+            "candidate_miss_rate": 0.0,
+            "observation_edge_macro_f1": 0.8785094302682243,
+            "observation_categorical_log_loss_clipped": 0.187776910512322
+          },
+          {
+            "trip_id": "00000008",
+            "observations": 350,
+            "top1_accuracy": 0.7828571428571428,
+            "candidate_miss_rate": 0.005714285714285714,
+            "observation_edge_macro_f1": 0.6671492475778189,
+            "observation_categorical_log_loss_clipped": 0.6917698498017473
+          },
+          {
+            "trip_id": "00000010",
+            "observations": 350,
+            "top1_accuracy": 0.6857142857142857,
+            "candidate_miss_rate": 0.002857142857142857,
+            "observation_edge_macro_f1": 0.5596253746253745,
+            "observation_categorical_log_loss_clipped": 0.7527128438626279
+          },
+          {
+            "trip_id": "00000011",
+            "observations": 350,
+            "top1_accuracy": 0.9914285714285714,
+            "candidate_miss_rate": 0.0,
+            "observation_edge_macro_f1": 0.9761904761904762,
+            "observation_categorical_log_loss_clipped": 0.029894943162111946
+          },
+          {
+            "trip_id": "00000012",
+            "observations": 350,
+            "top1_accuracy": 0.9885714285714285,
+            "candidate_miss_rate": 0.0,
+            "observation_edge_macro_f1": 0.9615541922290389,
+            "observation_categorical_log_loss_clipped": 0.024260921462982234
+          },
+          {
+            "trip_id": "00000013",
+            "observations": 350,
+            "top1_accuracy": 0.9657142857142857,
+            "candidate_miss_rate": 0.0,
+            "observation_edge_macro_f1": 0.9251473164516641,
+            "observation_categorical_log_loss_clipped": 0.15801912892913988
+          },
+          {
+            "trip_id": "00000014",
+            "observations": 350,
+            "top1_accuracy": 0.8971428571428571,
+            "candidate_miss_rate": 0.002857142857142857,
+            "observation_edge_macro_f1": 0.7109877451264449,
+            "observation_categorical_log_loss_clipped": 0.3186241250255705
+          },
+          {
+            "trip_id": "00000016",
+            "observations": 350,
+            "top1_accuracy": 0.6228571428571429,
+            "candidate_miss_rate": 0.0,
+            "observation_edge_macro_f1": 0.4714800079086934,
+            "observation_categorical_log_loss_clipped": 1.286873551231406
+          },
+          {
+            "trip_id": "00000018",
+            "observations": 350,
+            "top1_accuracy": 0.9342857142857143,
+            "candidate_miss_rate": 0.0,
+            "observation_edge_macro_f1": 0.8165266106442576,
+            "observation_categorical_log_loss_clipped": 0.1945958868589403
+          },
+          {
+            "trip_id": "00000019",
+            "observations": 350,
+            "top1_accuracy": 0.8371428571428572,
+            "candidate_miss_rate": 0.014285714285714285,
+            "observation_edge_macro_f1": 0.8066122199080527,
+            "observation_categorical_log_loss_clipped": 0.6077513869420316
+          },
+          {
+            "trip_id": "00000020",
+            "observations": 350,
+            "top1_accuracy": 0.9742857142857143,
+            "candidate_miss_rate": 0.008571428571428572,
+            "observation_edge_macro_f1": 0.9247863247863247,
+            "observation_categorical_log_loss_clipped": 0.2340448580459803
+          },
+          {
+            "trip_id": "00000021",
+            "observations": 350,
+            "top1_accuracy": 0.9142857142857143,
+            "candidate_miss_rate": 0.0,
+            "observation_edge_macro_f1": 0.916217344926136,
+            "observation_categorical_log_loss_clipped": 0.17524665446203427
+          },
+          {
+            "trip_id": "00000022",
+            "observations": 350,
+            "top1_accuracy": 0.9085714285714286,
+            "candidate_miss_rate": 0.0,
+            "observation_edge_macro_f1": 0.8416652130937846,
+            "observation_categorical_log_loss_clipped": 0.33426764580401797
+          },
+          {
+            "trip_id": "00000024",
+            "observations": 350,
+            "top1_accuracy": 0.9657142857142857,
+            "candidate_miss_rate": 0.0,
+            "observation_edge_macro_f1": 0.9178403755868545,
+            "observation_categorical_log_loss_clipped": 0.1132201128178979
+          },
+          {
+            "trip_id": "00000025",
+            "observations": 350,
+            "top1_accuracy": 0.9457142857142857,
+            "candidate_miss_rate": 0.0,
+            "observation_edge_macro_f1": 0.8462793068297655,
+            "observation_categorical_log_loss_clipped": 0.16449954093548744
+          },
+          {
+            "trip_id": "00000026",
+            "observations": 350,
+            "top1_accuracy": 0.9314285714285714,
+            "candidate_miss_rate": 0.0,
+            "observation_edge_macro_f1": 0.8987770464396877,
+            "observation_categorical_log_loss_clipped": 0.2696706101925151
+          },
+          {
+            "trip_id": "00000027",
+            "observations": 350,
+            "top1_accuracy": 0.9371428571428572,
+            "candidate_miss_rate": 0.0,
+            "observation_edge_macro_f1": 0.9210762899651789,
+            "observation_categorical_log_loss_clipped": 0.17062848690079294
+          },
+          {
+            "trip_id": "00000028",
+            "observations": 350,
+            "top1_accuracy": 0.9514285714285714,
+            "candidate_miss_rate": 0.005714285714285714,
+            "observation_edge_macro_f1": 0.8790035587188612,
+            "observation_categorical_log_loss_clipped": 0.2240456530737339
+          },
+          {
+            "trip_id": "00000029",
+            "observations": 350,
+            "top1_accuracy": 0.9171428571428571,
+            "candidate_miss_rate": 0.0,
+            "observation_edge_macro_f1": 0.83437666710394,
+            "observation_categorical_log_loss_clipped": 0.3060340860038367
+          },
+          {
+            "trip_id": "00000031",
+            "observations": 350,
+            "top1_accuracy": 0.9428571428571428,
+            "candidate_miss_rate": 0.0,
+            "observation_edge_macro_f1": 0.8952686202686203,
+            "observation_categorical_log_loss_clipped": 0.14503817588097362
+          },
+          {
+            "trip_id": "00000032",
+            "observations": 350,
+            "top1_accuracy": 0.9285714285714286,
+            "candidate_miss_rate": 0.0,
+            "observation_edge_macro_f1": 0.8918658773178795,
+            "observation_categorical_log_loss_clipped": 0.21203058712915626
+          },
+          {
+            "trip_id": "00000033",
+            "observations": 350,
+            "top1_accuracy": 0.21714285714285714,
+            "candidate_miss_rate": 0.6571428571428571,
+            "observation_edge_macro_f1": 0.5793368399607484,
+            "observation_categorical_log_loss_clipped": 10.929277086708963
+          },
+          {
+            "trip_id": "00000034",
+            "observations": 350,
+            "top1_accuracy": 0.9142857142857143,
+            "candidate_miss_rate": 0.0,
+            "observation_edge_macro_f1": 0.8807440169050076,
+            "observation_categorical_log_loss_clipped": 0.2564652052972688
+          },
+          {
+            "trip_id": "00000035",
+            "observations": 350,
+            "top1_accuracy": 0.8542857142857143,
+            "candidate_miss_rate": 0.0,
+            "observation_edge_macro_f1": 0.7600047972529415,
+            "observation_categorical_log_loss_clipped": 0.4063442071105725
+          },
+          {
+            "trip_id": "00000036",
+            "observations": 350,
+            "top1_accuracy": 0.9,
+            "candidate_miss_rate": 0.0,
+            "observation_edge_macro_f1": 0.8391759706951095,
+            "observation_categorical_log_loss_clipped": 0.2408930980916816
+          },
+          {
+            "trip_id": "00000037",
+            "observations": 350,
+            "top1_accuracy": 0.9828571428571429,
+            "candidate_miss_rate": 0.0,
+            "observation_edge_macro_f1": 0.9583829365079366,
+            "observation_categorical_log_loss_clipped": 0.058608935330214336
+          },
+          {
+            "trip_id": "00000038",
+            "observations": 350,
+            "top1_accuracy": 0.9542857142857143,
+            "candidate_miss_rate": 0.0,
+            "observation_edge_macro_f1": 0.9361880024737167,
+            "observation_categorical_log_loss_clipped": 0.17961456930860847
+          },
+          {
+            "trip_id": "00000039",
+            "observations": 350,
+            "top1_accuracy": 0.9628571428571429,
+            "candidate_miss_rate": 0.0,
+            "observation_edge_macro_f1": 0.9341180275663035,
+            "observation_categorical_log_loss_clipped": 0.094507981905534
+          },
+          {
+            "trip_id": "00000041",
+            "observations": 350,
+            "top1_accuracy": 0.94,
+            "candidate_miss_rate": 0.0,
+            "observation_edge_macro_f1": 0.8622280069416635,
+            "observation_categorical_log_loss_clipped": 0.19342667315599105
+          },
+          {
+            "trip_id": "00000042",
+            "observations": 350,
+            "top1_accuracy": 0.9857142857142858,
+            "candidate_miss_rate": 0.0,
+            "observation_edge_macro_f1": 0.9710982658959537,
+            "observation_categorical_log_loss_clipped": 0.06465544078004233
+          },
+          {
+            "trip_id": "00000043",
+            "observations": 350,
+            "top1_accuracy": 0.76,
+            "candidate_miss_rate": 0.04,
+            "observation_edge_macro_f1": 0.5818861850874953,
+            "observation_categorical_log_loss_clipped": 1.318402877512743
+          },
+          {
+            "trip_id": "00000044",
+            "observations": 350,
+            "top1_accuracy": 0.9571428571428572,
+            "candidate_miss_rate": 0.0,
+            "observation_edge_macro_f1": 0.8879953620792578,
+            "observation_categorical_log_loss_clipped": 0.15777186084267789
+          },
+          {
+            "trip_id": "00000045",
+            "observations": 350,
+            "top1_accuracy": 0.9171428571428571,
+            "candidate_miss_rate": 0.0,
+            "observation_edge_macro_f1": 0.824733955386462,
+            "observation_categorical_log_loss_clipped": 0.1863025597049642
+          },
+          {
+            "trip_id": "00000046",
+            "observations": 350,
+            "top1_accuracy": 0.9571428571428572,
+            "candidate_miss_rate": 0.0,
+            "observation_edge_macro_f1": 0.8858996501515969,
+            "observation_categorical_log_loss_clipped": 0.12651524353301674
+          },
+          {
+            "trip_id": "00000047",
+            "observations": 350,
+            "top1_accuracy": 0.8657142857142858,
+            "candidate_miss_rate": 0.0,
+            "observation_edge_macro_f1": 0.9411568128629824,
+            "observation_categorical_log_loss_clipped": 0.44242305963833845
+          },
+          {
+            "trip_id": "00000048",
+            "observations": 350,
+            "top1_accuracy": 0.9857142857142858,
+            "candidate_miss_rate": 0.0,
+            "observation_edge_macro_f1": 0.9652541138779671,
+            "observation_categorical_log_loss_clipped": 0.08888010817649995
+          },
+          {
+            "trip_id": "00000050",
+            "observations": 350,
+            "top1_accuracy": 0.9685714285714285,
+            "candidate_miss_rate": 0.0,
+            "observation_edge_macro_f1": 0.9071788478520597,
+            "observation_categorical_log_loss_clipped": 0.11357465711964039
+          },
+          {
+            "trip_id": "00000051",
+            "observations": 350,
+            "top1_accuracy": 0.8857142857142857,
+            "candidate_miss_rate": 0.0,
+            "observation_edge_macro_f1": 0.8987404007107334,
+            "observation_categorical_log_loss_clipped": 0.3100817188827086
+          },
+          {
+            "trip_id": "00000053",
+            "observations": 350,
+            "top1_accuracy": 0.9028571428571428,
+            "candidate_miss_rate": 0.002857142857142857,
+            "observation_edge_macro_f1": 0.8126886446886448,
+            "observation_categorical_log_loss_clipped": 0.2689597692992768
+          },
+          {
+            "trip_id": "00000054",
+            "observations": 350,
+            "top1_accuracy": 0.09142857142857143,
+            "candidate_miss_rate": 0.5828571428571429,
+            "observation_edge_macro_f1": 0.5310734463276836,
+            "observation_categorical_log_loss_clipped": 10.934654454905997
+          },
+          {
+            "trip_id": "00000055",
+            "observations": 350,
+            "top1_accuracy": 0.9685714285714285,
+            "candidate_miss_rate": 0.0,
+            "observation_edge_macro_f1": 0.9288256227758007,
+            "observation_categorical_log_loss_clipped": 0.08894739147813992
+          },
+          {
+            "trip_id": "00000057",
+            "observations": 350,
+            "top1_accuracy": 0.9457142857142857,
+            "candidate_miss_rate": 0.0,
+            "observation_edge_macro_f1": 0.9275728155339805,
+            "observation_categorical_log_loss_clipped": 0.21457430481734094
+          },
+          {
+            "trip_id": "00000058",
+            "observations": 350,
+            "top1_accuracy": 0.9,
+            "candidate_miss_rate": 0.011428571428571429,
+            "observation_edge_macro_f1": 0.7683235867446395,
+            "observation_categorical_log_loss_clipped": 0.44248250435685754
+          },
+          {
+            "trip_id": "00000060",
+            "observations": 350,
+            "top1_accuracy": 0.9257142857142857,
+            "candidate_miss_rate": 0.0,
+            "observation_edge_macro_f1": 0.863768115942029,
+            "observation_categorical_log_loss_clipped": 0.19947940784274862
+          },
+          {
+            "trip_id": "00000061",
+            "observations": 350,
+            "top1_accuracy": 0.7542857142857143,
+            "candidate_miss_rate": 0.05142857142857143,
+            "observation_edge_macro_f1": 0.6460769257889677,
+            "observation_categorical_log_loss_clipped": 1.4149588789037748
+          },
+          {
+            "trip_id": "00000062",
+            "observations": 350,
+            "top1_accuracy": 0.9571428571428572,
+            "candidate_miss_rate": 0.0,
+            "observation_edge_macro_f1": 0.9196761571761572,
+            "observation_categorical_log_loss_clipped": 0.18287028632294458
+          },
+          {
+            "trip_id": "00000063",
+            "observations": 350,
+            "top1_accuracy": 0.8685714285714285,
+            "candidate_miss_rate": 0.0,
+            "observation_edge_macro_f1": 0.9247247220276266,
+            "observation_categorical_log_loss_clipped": 0.2581911439716607
+          },
+          {
+            "trip_id": "00000064",
+            "observations": 350,
+            "top1_accuracy": 0.9857142857142858,
+            "candidate_miss_rate": 0.002857142857142857,
+            "observation_edge_macro_f1": 0.9681433549029369,
+            "observation_categorical_log_loss_clipped": 0.09289921386435354
+          },
+          {
+            "trip_id": "00000066",
+            "observations": 350,
+            "top1_accuracy": 0.9542857142857143,
+            "candidate_miss_rate": 0.0,
+            "observation_edge_macro_f1": 0.9457380694431757,
+            "observation_categorical_log_loss_clipped": 0.2744830137103143
+          },
+          {
+            "trip_id": "00000068",
+            "observations": 350,
+            "top1_accuracy": 0.94,
+            "candidate_miss_rate": 0.0,
+            "observation_edge_macro_f1": 0.9116679437067788,
+            "observation_categorical_log_loss_clipped": 0.1903842288847992
+          },
+          {
+            "trip_id": "00000069",
+            "observations": 350,
+            "top1_accuracy": 0.88,
+            "candidate_miss_rate": 0.0,
+            "observation_edge_macro_f1": 0.885450829536851,
+            "observation_categorical_log_loss_clipped": 0.29799631148126277
+          },
+          {
+            "trip_id": "00000070",
+            "observations": 350,
+            "top1_accuracy": 0.9371428571428572,
+            "candidate_miss_rate": 0.0,
+            "observation_edge_macro_f1": 0.8650883838383838,
+            "observation_categorical_log_loss_clipped": 0.24721222828358497
+          },
+          {
+            "trip_id": "00000071",
+            "observations": 350,
+            "top1_accuracy": 0.9571428571428572,
+            "candidate_miss_rate": 0.0,
+            "observation_edge_macro_f1": 0.8939505604176262,
+            "observation_categorical_log_loss_clipped": 0.12371944700934616
+          },
+          {
+            "trip_id": "00000072",
+            "observations": 350,
+            "top1_accuracy": 0.7542857142857143,
+            "candidate_miss_rate": 0.12,
+            "observation_edge_macro_f1": 0.7218220562334712,
+            "observation_categorical_log_loss_clipped": 2.3015202769841783
+          },
+          {
+            "trip_id": "00000074",
+            "observations": 350,
+            "top1_accuracy": 0.88,
+            "candidate_miss_rate": 0.002857142857142857,
+            "observation_edge_macro_f1": 0.7500592000592001,
+            "observation_categorical_log_loss_clipped": 0.3332651567937075
+          },
+          {
+            "trip_id": "00000075",
+            "observations": 350,
+            "top1_accuracy": 0.9428571428571428,
+            "candidate_miss_rate": 0.0,
+            "observation_edge_macro_f1": 0.8459739665368956,
+            "observation_categorical_log_loss_clipped": 0.1777215479273049
+          },
+          {
+            "trip_id": "00000078",
+            "observations": 350,
+            "top1_accuracy": 0.9857142857142858,
+            "candidate_miss_rate": 0.0,
+            "observation_edge_macro_f1": 0.9715099715099715,
+            "observation_categorical_log_loss_clipped": 0.08036238927757805
+          },
+          {
+            "trip_id": "00000079",
+            "observations": 350,
+            "top1_accuracy": 0.9171428571428571,
+            "candidate_miss_rate": 0.0,
+            "observation_edge_macro_f1": 0.7961196984903882,
+            "observation_categorical_log_loss_clipped": 0.24490895087589593
+          },
+          {
+            "trip_id": "00000080",
+            "observations": 350,
+            "top1_accuracy": 0.9057142857142857,
+            "candidate_miss_rate": 0.0,
+            "observation_edge_macro_f1": 0.7867766036780123,
+            "observation_categorical_log_loss_clipped": 0.3211567615149011
+          },
+          {
+            "trip_id": "00000081",
+            "observations": 350,
+            "top1_accuracy": 0.9628571428571429,
+            "candidate_miss_rate": 0.0,
+            "observation_edge_macro_f1": 0.9491952491952491,
+            "observation_categorical_log_loss_clipped": 0.15872726062058765
+          },
+          {
+            "trip_id": "00000082",
+            "observations": 350,
+            "top1_accuracy": 0.8685714285714285,
+            "candidate_miss_rate": 0.0,
+            "observation_edge_macro_f1": 0.7606862955862618,
+            "observation_categorical_log_loss_clipped": 0.3218965211267832
+          },
+          {
+            "trip_id": "00000083",
+            "observations": 350,
+            "top1_accuracy": 0.9,
+            "candidate_miss_rate": 0.0,
+            "observation_edge_macro_f1": 0.764187192448062,
+            "observation_categorical_log_loss_clipped": 0.3686969233100713
+          },
+          {
+            "trip_id": "00000084",
+            "observations": 350,
+            "top1_accuracy": 0.8514285714285714,
+            "candidate_miss_rate": 0.002857142857142857,
+            "observation_edge_macro_f1": 0.8667976760082023,
+            "observation_categorical_log_loss_clipped": 0.4178205094822611
+          },
+          {
+            "trip_id": "00000085",
+            "observations": 350,
+            "top1_accuracy": 0.9314285714285714,
+            "candidate_miss_rate": 0.0,
+            "observation_edge_macro_f1": 0.8720740859960634,
+            "observation_categorical_log_loss_clipped": 0.24705210391383398
+          },
+          {
+            "trip_id": "00000086",
+            "observations": 350,
+            "top1_accuracy": 0.9828571428571429,
+            "candidate_miss_rate": 0.0,
+            "observation_edge_macro_f1": 0.9586206896551724,
+            "observation_categorical_log_loss_clipped": 0.03507457057808138
+          },
+          {
+            "trip_id": "00000088",
+            "observations": 350,
+            "top1_accuracy": 0.9142857142857143,
+            "candidate_miss_rate": 0.0,
+            "observation_edge_macro_f1": 0.8425556963676158,
+            "observation_categorical_log_loss_clipped": 0.38601028784530245
+          },
+          {
+            "trip_id": "00000089",
+            "observations": 350,
+            "top1_accuracy": 0.8742857142857143,
+            "candidate_miss_rate": 0.005714285714285714,
+            "observation_edge_macro_f1": 0.7851680726680726,
+            "observation_categorical_log_loss_clipped": 0.5324339540896916
+          },
+          {
+            "trip_id": "00000090",
+            "observations": 350,
+            "top1_accuracy": 0.9028571428571428,
+            "candidate_miss_rate": 0.005714285714285714,
+            "observation_edge_macro_f1": 0.8045829442888266,
+            "observation_categorical_log_loss_clipped": 0.3364074400059972
+          },
+          {
+            "trip_id": "00000092",
+            "observations": 350,
+            "top1_accuracy": 0.9428571428571428,
+            "candidate_miss_rate": 0.0,
+            "observation_edge_macro_f1": 0.9057129367327669,
+            "observation_categorical_log_loss_clipped": 0.15722729001967142
+          },
+          {
+            "trip_id": "00000093",
+            "observations": 350,
+            "top1_accuracy": 0.82,
+            "candidate_miss_rate": 0.03142857142857143,
+            "observation_edge_macro_f1": 0.7028868862778898,
+            "observation_categorical_log_loss_clipped": 0.8751593536938257
+          },
+          {
+            "trip_id": "00000095",
+            "observations": 350,
+            "top1_accuracy": 0.8542857142857143,
+            "candidate_miss_rate": 0.0,
+            "observation_edge_macro_f1": 0.7993346767994655,
+            "observation_categorical_log_loss_clipped": 0.3788525876553345
+          },
+          {
+            "trip_id": "00000096",
+            "observations": 350,
+            "top1_accuracy": 0.8942857142857142,
+            "candidate_miss_rate": 0.0,
+            "observation_edge_macro_f1": 0.9238753373115405,
+            "observation_categorical_log_loss_clipped": 0.29092568707873667
+          },
+          {
+            "trip_id": "00000097",
+            "observations": 350,
+            "top1_accuracy": 0.9857142857142858,
+            "candidate_miss_rate": 0.0,
+            "observation_edge_macro_f1": 0.982824427480916,
+            "observation_categorical_log_loss_clipped": 0.05359561159655244
+          },
+          {
+            "trip_id": "00000098",
+            "observations": 350,
+            "top1_accuracy": 0.9657142857142857,
+            "candidate_miss_rate": 0.0,
+            "observation_edge_macro_f1": 0.930835734870317,
+            "observation_categorical_log_loss_clipped": 0.08331636481784645
+          },
+          {
+            "trip_id": "00000099",
+            "observations": 350,
+            "top1_accuracy": 0.9171428571428571,
+            "candidate_miss_rate": 0.0,
+            "observation_edge_macro_f1": 0.8728168680407487,
+            "observation_categorical_log_loss_clipped": 0.25961657399003196
+          }
+        ],
+        "trip_macro_observation_edge_f1": 0.8449034404382875
+      }
+    }
+  }
+}

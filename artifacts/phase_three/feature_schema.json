@@ -1,0 +1,198 @@
+{
+  "version": "pathsnap-candidate-v1",
+  "dtype": "float32",
+  "row_order": "observation order, then unchanged Candidates.edges/fractions/distances order; IDs persisted separately, never numerical features",
+  "reference_route_used_as_features": false,
+  "features": [
+    {
+      "index": 0,
+      "name": "distance_m",
+      "description": "Exact observation-to-directed-segment distance in projected metres"
+    },
+    {
+      "index": 1,
+      "name": "log1p_distance_m",
+      "description": "log(1 + lateral distance in metres)"
+    },
+    {
+      "index": 2,
+      "name": "distance_squared_10m",
+      "description": "Squared lateral distance divided by 100, clipped at 10000"
+    },
+    {
+      "index": 3,
+      "name": "distance_minus_nearest_m",
+      "description": "Lateral distance minus nearest candidate distance"
+    },
+    {
+      "index": 4,
+      "name": "distance_ratio_nearest",
+      "description": "(distance+1)/(nearest distance+1), clipped at 100"
+    },
+    {
+      "index": 5,
+      "name": "strict_distance_rank",
+      "description": "Fraction of other candidates strictly closer (ties share a rank)"
+    },
+    {
+      "index": 6,
+      "name": "candidate_count",
+      "description": "Number of candidates at this observation"
+    },
+    {
+      "index": 7,
+      "name": "nearest_distinct_gap_m",
+      "description": "Distance gap between nearest and next distinct lateral distance"
+    },
+    {
+      "index": 8,
+      "name": "fraction",
+      "description": "Clipped projection fraction along the directed arc"
+    },
+    {
+      "index": 9,
+      "name": "distance_to_endpoint_m",
+      "description": "Along-segment distance to the nearer endpoint"
+    },
+    {
+      "index": 10,
+      "name": "log1p_edge_length_m",
+      "description": "log(1 + segment length in metres)"
+    },
+    {
+      "index": 11,
+      "name": "projection_is_interior",
+      "description": "Projection is strictly inside the segment"
+    },
+    {
+      "index": 12,
+      "name": "heading_cos_short",
+      "description": "Signed arc alignment with centred +/-1 observation GPS motion"
+    },
+    {
+      "index": 13,
+      "name": "heading_cos_medium",
+      "description": "Signed arc alignment with centred +/-3 observation GPS motion"
+    },
+    {
+      "index": 14,
+      "name": "heading_cos_long",
+      "description": "Signed arc alignment with centred +/-8 observation GPS motion"
+    },
+    {
+      "index": 15,
+      "name": "heading_abs_cos_medium",
+      "description": "Undirected medium-window alignment"
+    },
+    {
+      "index": 16,
+      "name": "heading_reliability_short",
+      "description": "Short-window displacement / 12m clipped to [0,1]"
+    },
+    {
+      "index": 17,
+      "name": "heading_reliability_medium",
+      "description": "Medium-window displacement / 12m clipped to [0,1]"
+    },
+    {
+      "index": 18,
+      "name": "heading_reliability_long",
+      "description": "Long-window displacement / 12m clipped to [0,1]"
+    },
+    {
+      "index": 19,
+      "name": "reliable_direction_mismatch",
+      "description": "(1 - signed medium alignment) times heading reliability"
+    },
+    {
+      "index": 20,
+      "name": "previous_lateral_distance_m",
+      "description": "Distance from GPS observation three rows earlier to this segment"
+    },
+    {
+      "index": 21,
+      "name": "next_lateral_distance_m",
+      "description": "Distance from GPS observation three rows later to this segment"
+    },
+    {
+      "index": 22,
+      "name": "neighbour_mean_lateral_distance_m",
+      "description": "Mean of previous and next lateral distances"
+    },
+    {
+      "index": 23,
+      "name": "neighbour_max_lateral_distance_m",
+      "description": "Maximum of previous and next lateral distances"
+    },
+    {
+      "index": 24,
+      "name": "neighbour_projected_speed_mps",
+      "description": "Signed speed of neighbouring GPS projections along this segment"
+    },
+    {
+      "index": 25,
+      "name": "motion_along_arc_mps",
+      "description": "Medium GPS velocity dotted with unit directed arc vector; duration floored at 1s"
+    },
+    {
+      "index": 26,
+      "name": "log1p_speed_short_mps",
+      "description": "log(1 + short centred GPS speed); duration floored at 1s"
+    },
+    {
+      "index": 27,
+      "name": "log1p_speed_medium_mps",
+      "description": "log(1 + medium centred GPS speed); duration floored at 1s"
+    },
+    {
+      "index": 28,
+      "name": "speed_change_mps",
+      "description": "Forward minus backward local GPS speed, clipped to +/-100m/s"
+    },
+    {
+      "index": 29,
+      "name": "gps_turn_cos",
+      "description": "Cosine between incoming and outgoing +/-3 GPS motion vectors"
+    },
+    {
+      "index": 30,
+      "name": "log1p_previous_gap_s",
+      "description": "log(1 + time since previous GPS observation)"
+    },
+    {
+      "index": 31,
+      "name": "log1p_next_gap_s",
+      "description": "log(1 + time to next GPS observation)"
+    },
+    {
+      "index": 32,
+      "name": "low_motion",
+      "description": "Medium-window GPS displacement below 3 metres"
+    },
+    {
+      "index": 33,
+      "name": "log1p_tail_indegree",
+      "description": "Canonical directed incoming degree of arc tail"
+    },
+    {
+      "index": 34,
+      "name": "log1p_tail_outdegree",
+      "description": "Canonical directed outgoing degree of arc tail"
+    },
+    {
+      "index": 35,
+      "name": "log1p_head_indegree",
+      "description": "Canonical directed incoming degree of arc head"
+    },
+    {
+      "index": 36,
+      "name": "log1p_head_outdegree",
+      "description": "Canonical directed outgoing degree of arc head"
+    },
+    {
+      "index": 37,
+      "name": "edge_is_zero_length",
+      "description": "Segment length below one micrometre"
+    }
+  ]
+}

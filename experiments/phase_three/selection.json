@@ -1,0 +1,52 @@
+{
+  "phase": "three-model-first",
+  "selected_model": "bagging",
+  "objective_name": "out_of_fold_trip_macro_top1_accuracy",
+  "selection_data": "TRAIN grouped CV only; the student development set was not loaded",
+  "student_test_consulted": false,
+  "families_considered": [
+    "logistic_regression",
+    "knn_distance_weighted",
+    "bagging"
+  ],
+  "scores": {
+    "logistic_regression": {
+      "objective": 0.884,
+      "macro_f1": 0.9330442702864366,
+      "log_loss": 0.07443299221247036,
+      "parameters": {
+        "C": 1.0,
+        "max_iter": 500,
+        "solver": "lbfgs"
+      },
+      "cv_file": "cv/logistic_regression.json",
+      "reused": true
+    },
+    "knn_distance_weighted": {
+      "objective": 0.8767857142857143,
+      "macro_f1": 0.9274791219704925,
+      "log_loss": 0.09411409567726087,
+      "parameters": {
+        "n_neighbors": 25
+      },
+      "cv_file": "cv/knn_distance_weighted.json",
+      "reused": false
+    },
+    "bagging": {
+      "objective": 0.8914642857142857,
+      "macro_f1": 0.9426144376936816,
+      "log_loss": 0.057221017455649795,
+      "parameters": {
+        "n_estimators": 40,
+        "max_samples": 0.7,
+        "max_depth": 14,
+        "min_samples_leaf": 3
+      },
+      "cv_file": "cv/bagging.json",
+      "reused": false
+    }
+  },
+  "tie_break": "objective, then binary macro-F1, then lower log loss",
+  "selected_at_utc": "2026-11-18T06:37:20.492652+00:00",
+  "protocol": "experiments/phase_three/PROTOCOL.md"
+}
