@@ -32,6 +32,14 @@ node_modules/
 /experiments/cache/
 /experiments/candidate_data*/
 /experiments/*.npz
+# Derived row-level proxy labels / probability caches are reproducible, not public artifacts.
+/experiments/predictions/
+/experiments/selected_replay/predictions/
+/experiments/phase_three/cache/
+/experiments/phase_three/predictions/
+/experiments/phase_three/*.npz
+/study_materials/
+/reports/**/.terminal_display_ready.json
 /analysis/video/*.safetensors
 /analysis/video_audio/models/
 /analysis/video_audio/cache/
