@@ -1,0 +1,348 @@
+/home/d3va/.local/lib/python3.14/site-packages/joblib/numpy_pickle.py:207: DeprecationWarning: Setting the shape on a NumPy array has been deprecated in NumPy 2.5.
+As an alternative, you can create a new view using np.reshape (with copy=False if needed).
+  array.shape = self.shape
+{"event": "accuracy_cv_fold", "run_name": "tiny", "family": "bagging", "profile": "v1", "fold": 0, "top1": 1.0, "binary_macro_f1": 0.3333333333333333, "binary_log_loss": 0.8313324399048628, "fit_seconds": 1.0612473180008237, "inference_seconds": 0.042765281003084965}
+{"event": "accuracy_cv_fold", "run_name": "tiny", "family": "bagging", "profile": "v1", "fold": 1, "top1": 1.0, "binary_macro_f1": 0.5, "binary_log_loss": 0.737008882119496, "fit_seconds": 0.012453715000447119, "inference_seconds": 0.011951794997003162}
+{"event": "accuracy_cv_fold", "run_name": "tiny", "family": "bagging", "profile": "v1", "fold": 2, "top1": 1.0, "binary_macro_f1": 0.3333333333333333, "binary_log_loss": 0.7898361555362976, "fit_seconds": 0.01250058400182752, "inference_seconds": 0.012259046998224221}
+/home/d3va/.local/lib/python3.14/site-packages/joblib/numpy_pickle.py:207: DeprecationWarning: Setting the shape on a NumPy array has been deprecated in NumPy 2.5.
+As an alternative, you can create a new view using np.reshape (with copy=False if needed).
+  array.shape = self.shape
+/home/d3va/.local/lib/python3.14/site-packages/sklearn/linear_model/_logistic.py:1184: FutureWarning: 'n_jobs' has no effect since 1.8 and will be removed in 1.10. You provided 'n_jobs=1', please leave it unspecified.
+  warnings.warn(msg, category=FutureWarning)
+/home/d3va/.local/lib/python3.14/site-packages/joblib/numpy_pickle.py:207: DeprecationWarning: Setting the shape on a NumPy array has been deprecated in NumPy 2.5.
+As an alternative, you can create a new view using np.reshape (with copy=False if needed).
+  array.shape = self.shape
+/home/d3va/.local/lib/python3.14/site-packages/joblib/numpy_pickle.py:207: DeprecationWarning: Setting the shape on a NumPy array has been deprecated in NumPy 2.5.
+As an alternative, you can create a new view using np.reshape (with copy=False if needed).
+  array.shape = self.shape
+/home/d3va/.local/lib/python3.14/site-packages/joblib/numpy_pickle.py:207: DeprecationWarning: Setting the shape on a NumPy array has been deprecated in NumPy 2.5.
+As an alternative, you can create a new view using np.reshape (with copy=False if needed).
+  array.shape = self.shape
+{"elapsed_ms": 0.038, "endpoint": "static_or_unknown", "event": "http_request", "method": "POST", "request_id": "bf4b2fa7101c4be290ddedf8dd930242", "status_code": 404, "timestamp": "2026-11-18T12:01:01.064074+00:00"}
+{"stage": "declare", "status": "declared", "plan_sha256": "185c079f400c741b3cc2cee542cbdf3eab23b0f499b17fcbc3a2906dd5650e0b", "plan_path": "/tmp/tmpyhws11qj/report/calibration_plan.json", "calibration_trip_ids": ["00000001", "00000011", "00000021", "00000031", "00000041", "00000051", "00000061", "00000071"], "scale_fit_sha256": "8a730f4dc8202ee50b908452b83aaba2d2ea2accff7ddc95757d8e5126a12f5b", "decoder_script_sha256": "53bb1892ac1d3c9252d9eeff871a0879f4ea3ffdb1801663b57324ba3cbcc239"}
+{"stage": "declare", "status": "declared", "plan_sha256": "c853180757b5f468bf0e00ad760b985ef5f8d6aa88e2fd88f99a901270119d8c", "plan_path": "/tmp/tmpgjd5n8ci/report/calibration_plan.json", "calibration_trip_ids": ["00000001", "00000011", "00000021", "00000031", "00000041", "00000051", "00000061", "00000071"], "scale_fit_sha256": "8a730f4dc8202ee50b908452b83aaba2d2ea2accff7ddc95757d8e5126a12f5b", "decoder_script_sha256": "53bb1892ac1d3c9252d9eeff871a0879f4ea3ffdb1801663b57324ba3cbcc239"}
+{"stage": "declare", "status": "already_declared", "plan_sha256": "c853180757b5f468bf0e00ad760b985ef5f8d6aa88e2fd88f99a901270119d8c", "plan_path": "/tmp/tmpgjd5n8ci/report/calibration_plan.json"}
+/home/d3va/.local/lib/python3.14/site-packages/joblib/numpy_pickle.py:207: DeprecationWarning: Setting the shape on a NumPy array has been deprecated in NumPy 2.5.
+As an alternative, you can create a new view using np.reshape (with copy=False if needed).
+  array.shape = self.shape
+[phase-prep] LR CV fold 0: top1 0.500000, macro_f1 0.333333, fit 0.0s
+[phase-prep] LR CV fold 1: top1 0.750000, macro_f1 0.828571, fit 0.0s
+[phase-prep] LR CV fold 2: top1 0.500000, macro_f1 0.368421, fit 0.0s
+[phase-prep] STAGE check: read-only verification; no cache is built and no model is fitted
+[phase-prep] runtime now: {"joblib": "1.5.3", "numpy": "2.5.5", "python": "3.14.6", "scipy": "1.18.0", "sklearn": "1.8.0"}
+[phase-prep] runtime of the original shared run: {"joblib": "1.5.3", "numpy": "2.5.2", "python": "3.14.6", "scipy": "1.18.0", "sklearn": "1.8.0"}
+[phase-prep] version drift vs original run: {"numpy": ["2.5.2", "2.5.5"]} (npz container SHAs may differ even when array content matches; see docs/PHASE_REPRODUCTION.md)
+[phase-prep] shared config for fingerprinting: {"bayesian_trials": 12, "candidate_radius_m": 80.0, "folds": 3, "max_candidates": 12, "max_radius_m": 1000.0, "n_jobs": 2, "sample_spacing_m": 40.0, "seed": 20261118, "student_observations_per_trip": 0, "train_observations_per_trip": 350}
+[phase-prep] fingerprint uses bayesian_trials=12 (saved shared run), not the phase HPO budget of 8
+[phase-prep] raw train: 3 complete trips, fingerprint 775b1369b9e1993b (pinned match)
+[phase-prep] raw student: 3 complete trips (presence only; content not hashed in this mode)
+[phase-prep] train cache: sha256 train_775b1369b9e1993b.npz: 5cb84bbc3bef6c4b1ba3d08abc6c8ef44302f5cfbdf052c173c3c8950f097b2c (pinned match)
+[phase-prep] student cache: sha256 student_test_af578002d5eb58e1.npz: 57794a15b39f52df96645afdf6f88e15751fdba379d3d9053e5b285e8e58bc58 (pinned match)
+[phase-prep] cv_folds: 3 group folds, structure valid
+[phase-prep] experiments/cv_folds.json: present, sha256 6abe8589823034e20ab39afcdf232bf8303c3a82c003d6a4da91b189e167993b (DIFFERS from reference 175e9476604746bc2d801c4d2e0eb5a2a5876ecf4f95d730443cd5841d5fd5fa)
+[phase-prep] cv LR record: parameters match the phase defaults; objective None
+[phase-prep] experiments/cv/logistic_regression.json: present, sha256 992edeb1346bd6dc7b9ed9019f11486aef3096074701dfd14d6a7fa8b5bf92d0 (DIFFERS from reference ae4bb5a57b1ef3c22d388d189260c7e93353e6a0887d5c9767434b08fdd4815b)
+[phase-prep] experiments/predictions/logistic_regression_oof.npz: present, sha256 b0841117e0b0b48ad6cb2682008841b64a0aa4d0c52bfc734cd889ebc4ed8595 (DIFFERS from reference 937a54e0139b90c999edfb8675eb2afe71a1ffd7d75a61f343c104b7d9bc6432)
+[phase-prep] OOF record: recomputed metrics agree with the committed record within 1e-09
+[phase-prep] evaluation LR record: parameters match; student top1 0.5
+[phase-prep] experiments/evaluation/logistic_regression.json: present, sha256 eab186a45a73ab4f37bac46139144227fadcaa76f8209385e97a262916328f44 (DIFFERS from reference 9c385f4ea675dce282a887d4c43ead3b0b777fad649456a2917fd7febcc8cb61)
+[phase-prep] experiments/predictions/logistic_regression_student.npz: present, sha256 45a6d79936ff251f60cacbae4bc5ac6e8d3df951c2bf36df2db78a2458921e77 (DIFFERS from reference 31562ba3540e4d7bab0c07d7b5a30dbb05f524ccde4fbb5967b8d041201d3c9b)
+[phase-prep] artifacts/baselines/logistic_regression.joblib: present, sha256 f16d05ec6b29248d2c61adb1e9263f78e4f7bace1b955014a2d17872cfe4064d (DIFFERS from reference 29157349d52a993d33cae78ed244805a9f087e79b6dc914aaa3b4461c02a58c9)
+[phase-prep] results.json: committed historical record, 1 comparison rows, 1 columns; schema present (never created or modified by this tool)
+[phase-prep] phase gate selection.json: absent
+[phase-prep] phase gate model_freeze.json: absent
+[phase-prep] check verdict: every phase-required shared input is present and verified; nothing to prepare
+[phase-prep] STAGE check: read-only verification; no cache is built and no model is fitted
+[phase-prep] runtime now: {"joblib": "1.5.3", "numpy": "2.5.5", "python": "3.14.6", "scipy": "1.18.0", "sklearn": "1.8.0"}
+[phase-prep] runtime of the original shared run: {"joblib": "1.5.3", "numpy": "2.5.2", "python": "3.14.6", "scipy": "1.18.0", "sklearn": "1.8.0"}
+[phase-prep] version drift vs original run: {"numpy": ["2.5.2", "2.5.5"]} (npz container SHAs may differ even when array content matches; see docs/PHASE_REPRODUCTION.md)
+[phase-prep] shared config for fingerprinting: {"bayesian_trials": 12, "candidate_radius_m": 80.0, "folds": 3, "max_candidates": 12, "max_radius_m": 1000.0, "n_jobs": 2, "sample_spacing_m": 40.0, "seed": 20261118, "student_observations_per_trip": 0, "train_observations_per_trip": 350}
+[phase-prep] fingerprint uses bayesian_trials=12 (saved shared run), not the phase HPO budget of 8
+[phase-prep] phase gate selection.json: absent
+[phase-prep] phase gate model_freeze.json: absent
+[phase-prep] MISSING raw train data under /tmp/phase_prep_test_ex43kmw7/empty_data/train (raw data unusable at /tmp/phase_prep_test_ex43kmw7/empty_data/train: /tmp/phase_prep_test_ex43kmw7/empty_data/train)
+[phase-prep] MISSING raw student data directory /tmp/phase_prep_test_ex43kmw7/empty_data/student_test
+[phase-prep] MISSING experiments/cache/train_775b1369b9e1993b.npz (+ .json)
+[phase-prep] MISSING experiments/cache/student_test_af578002d5eb58e1.npz (+ .json)
+[phase-prep] MISSING experiments/cv_folds.json (train stage creates it when missing)
+[phase-prep] MISSING experiments/cv/logistic_regression.json (train stage creates it via LR-only CV when missing)
+[phase-prep] MISSING experiments/predictions/logistic_regression_oof.npz (train stage rebuilds it via LR-only grouped CV)
+[phase-prep] MISSING experiments/evaluation/logistic_regression.json (committed historical record; the preparer never fabricates it)
+[phase-prep] MISSING experiments/predictions/logistic_regression_student.npz (student stage rebuilds it after the phase freeze)
+[phase-prep] MISSING artifacts/baselines/logistic_regression.joblib
+[phase-prep] MISSING experiments/results.json (committed historical record; this tool refuses to fabricate measured results)
+[phase-prep] check verdict: 11 required input(s) missing; run the matching stage in a fresh clone
+[phase-prep] STAGE check: read-only verification; no cache is built and no model is fitted
+[phase-prep] runtime now: {"joblib": "1.5.3", "numpy": "2.5.5", "python": "3.14.6", "scipy": "1.18.0", "sklearn": "1.8.0"}
+[phase-prep] runtime of the original shared run: {"joblib": "1.5.3", "numpy": "2.5.2", "python": "3.14.6", "scipy": "1.18.0", "sklearn": "1.8.0"}
+[phase-prep] version drift vs original run: {"numpy": ["2.5.2", "2.5.5"]} (npz container SHAs may differ even when array content matches; see docs/PHASE_REPRODUCTION.md)
+[phase-prep] shared config for fingerprinting: {"bayesian_trials": 12, "candidate_radius_m": 80.0, "folds": 3, "max_candidates": 12, "max_radius_m": 1000.0, "n_jobs": 2, "sample_spacing_m": 40.0, "seed": 20261118, "student_observations_per_trip": 0, "train_observations_per_trip": 350}
+[phase-prep] fingerprint uses bayesian_trials=12 (saved shared run), not the phase HPO budget of 8
+[phase-prep] raw train: 3 complete trips, fingerprint 775b1369b9e1993b (pinned match)
+[phase-prep] raw student: 3 complete trips (presence only; content not hashed in this mode)
+[phase-prep] train cache: sha256 train_775b1369b9e1993b.npz: 3f0833f97a1894899893ed8e5f2f344841f42c547c0633e6046a6fd81c1ab080 != pinned 5cb84bbc3bef6c4b1ba3d08abc6c8ef44302f5cfbdf052c173c3c8950f097b2c
+[phase-prep] train cache: array X: sha256 e473327437f69408f68d93de15519fddd061ed9271583a465ee2f61064f46a52 != reference db8d9ffd35672ab1381a505f6d8bab5652d4503f9872c66a73d9b70f3d7c488e (shape [36, 38], dtype float32)
+[phase-prep] train cache: array candidate_fractions: sha256 593031875a29c0bf49462f9f395e0a1e6c75f292f5beb15528911facd1e00ad2 != reference 4b995072654cd40f24e56e030efb3bcdcd34bf04e387858da8929911cfcd7678 (shape [36], dtype float64)
+[phase-prep] train cache: array candidate_distances: sha256 49806d22503d80551584ad982420b7eface92256babf1a329ce3595ee976cb89 != reference 8bb9ae5448f2dd78180d4e1bdda43e020e5bfbf647e6418968465af783a44a93 (shape [36], dtype float64)
+[phase-prep] train cache: array proxy_distances: sha256 b0eb5b08de26abb2a31efd7717c4123d6146778749d50c200e8c510afa317905 != reference e7b2013a5f5bedc05a18eb82ce304b126ec8c5945ebbdc3665631cc4914d78ae (shape [12], dtype float64)
+[phase-prep] student cache: sha256 student_test_af578002d5eb58e1.npz: 57794a15b39f52df96645afdf6f88e15751fdba379d3d9053e5b285e8e58bc58 (pinned match)
+[phase-prep] phase gate selection.json: absent
+[phase-prep] phase gate model_freeze.json: absent
+[phase-prep] MISSING experiments/cv_folds.json (train stage creates it when missing)
+[phase-prep] MISSING experiments/cv/logistic_regression.json (train stage creates it via LR-only CV when missing)
+[phase-prep] MISSING experiments/predictions/logistic_regression_oof.npz (train stage rebuilds it via LR-only grouped CV)
+[phase-prep] MISSING experiments/evaluation/logistic_regression.json (committed historical record; the preparer never fabricates it)
+[phase-prep] MISSING experiments/predictions/logistic_regression_student.npz (student stage rebuilds it after the phase freeze)
+[phase-prep] MISSING artifacts/baselines/logistic_regression.joblib
+[phase-prep] MISSING experiments/results.json (committed historical record; this tool refuses to fabricate measured results)
+[phase-prep] FAILURE train cache failed pinned verification (see report above)
+[phase-prep] check verdict: verification failures present; nothing was written and nothing was silently accepted
+[phase-prep] STAGE check: read-only verification; no cache is built and no model is fitted
+[phase-prep] runtime now: {"joblib": "1.5.3", "numpy": "2.5.5", "python": "3.14.6", "scipy": "1.18.0", "sklearn": "1.8.0"}
+[phase-prep] runtime of the original shared run: {"joblib": "1.5.3", "numpy": "2.5.2", "python": "3.14.6", "scipy": "1.18.0", "sklearn": "1.8.0"}
+[phase-prep] version drift vs original run: {"numpy": ["2.5.2", "2.5.5"]} (npz container SHAs may differ even when array content matches; see docs/PHASE_REPRODUCTION.md)
+[phase-prep] shared config for fingerprinting: {"bayesian_trials": 12, "candidate_radius_m": 80.0, "folds": 3, "max_candidates": 12, "max_radius_m": 1000.0, "n_jobs": 2, "sample_spacing_m": 40.0, "seed": 20261118, "student_observations_per_trip": 0, "train_observations_per_trip": 350}
+[phase-prep] fingerprint uses bayesian_trials=12 (saved shared run), not the phase HPO budget of 8
+[phase-prep] raw student: 3 complete trips (presence only; content not hashed in this mode)
+[phase-prep] train cache: sha256 train_775b1369b9e1993b.npz: 5cb84bbc3bef6c4b1ba3d08abc6c8ef44302f5cfbdf052c173c3c8950f097b2c (pinned match)
+[phase-prep] student cache: sha256 student_test_af578002d5eb58e1.npz: 57794a15b39f52df96645afdf6f88e15751fdba379d3d9053e5b285e8e58bc58 (pinned match)
+[phase-prep] phase gate selection.json: absent
+[phase-prep] phase gate model_freeze.json: absent
+[phase-prep] MISSING experiments/cv_folds.json (train stage creates it when missing)
+[phase-prep] MISSING experiments/cv/logistic_regression.json (train stage creates it via LR-only CV when missing)
+[phase-prep] MISSING experiments/predictions/logistic_regression_oof.npz (train stage rebuilds it via LR-only grouped CV)
+[phase-prep] MISSING experiments/evaluation/logistic_regression.json (committed historical record; the preparer never fabricates it)
+[phase-prep] MISSING experiments/predictions/logistic_regression_student.npz (student stage rebuilds it after the phase freeze)
+[phase-prep] MISSING artifacts/baselines/logistic_regression.joblib
+[phase-prep] MISSING experiments/results.json (committed historical record; this tool refuses to fabricate measured results)
+[phase-prep] FAILURE raw train fingerprint 27c38ab66ab5ca2675759f0bf1e991e256d267f2f5c252ab1fee24bdae086271 != pinned 775b1369b9e1993b56eefadad93d79e5d63bf7b9805db4a021b2ee64b7eef940
+[phase-prep] check verdict: verification failures present; nothing was written and nothing was silently accepted
+[phase-prep] STAGE check: read-only verification; no cache is built and no model is fitted
+[phase-prep] runtime now: {"joblib": "1.5.3", "numpy": "2.5.5", "python": "3.14.6", "scipy": "1.18.0", "sklearn": "1.8.0"}
+[phase-prep] runtime of the original shared run: {"joblib": "1.5.3", "numpy": "2.5.2", "python": "3.14.6", "scipy": "1.18.0", "sklearn": "1.8.0"}
+[phase-prep] version drift vs original run: {"numpy": ["2.5.2", "2.5.5"]} (npz container SHAs may differ even when array content matches; see docs/PHASE_REPRODUCTION.md)
+[phase-prep] shared config for fingerprinting: {"bayesian_trials": 12, "candidate_radius_m": 80.0, "folds": 3, "max_candidates": 12, "max_radius_m": 1000.0, "n_jobs": 2, "sample_spacing_m": 40.0, "seed": 20261118, "student_observations_per_trip": 0, "train_observations_per_trip": 350}
+[phase-prep] fingerprint uses bayesian_trials=12 (saved shared run), not the phase HPO budget of 8
+[phase-prep] phase gate selection.json: absent
+[phase-prep] phase gate model_freeze.json: absent
+[phase-prep] MISSING raw train data under /tmp/tmpvnklfqkn/data/train (raw data unusable at /tmp/tmpvnklfqkn/data/train: /tmp/tmpvnklfqkn/data/train)
+[phase-prep] MISSING raw student data directory /tmp/tmpvnklfqkn/data/student_test
+[phase-prep] MISSING experiments/cache/train_edee9a8f151dd25e.npz (+ .json)
+[phase-prep] MISSING experiments/cache/student_test_240a8fbfc79205b3.npz (+ .json)
+[phase-prep] MISSING experiments/cv_folds.json (train stage creates it when missing)
+[phase-prep] MISSING experiments/cv/logistic_regression.json (train stage creates it via LR-only CV when missing)
+[phase-prep] MISSING experiments/predictions/logistic_regression_oof.npz (train stage rebuilds it via LR-only grouped CV)
+[phase-prep] MISSING experiments/evaluation/logistic_regression.json (committed historical record; the preparer never fabricates it)
+[phase-prep] MISSING experiments/predictions/logistic_regression_student.npz (student stage rebuilds it after the phase freeze)
+[phase-prep] MISSING artifacts/baselines/logistic_regression.joblib
+[phase-prep] MISSING experiments/results.json (committed historical record; this tool refuses to fabricate measured results)
+[phase-prep] check verdict: 11 required input(s) missing; run the matching stage in a fresh clone
+[phase-prep] LR CV fold 0: top1 0.500000, macro_f1 0.333333, fit 0.0s
+[phase-prep] LR CV fold 1: top1 0.750000, macro_f1 0.828571, fit 0.0s
+[phase-prep] LR CV fold 2: top1 0.500000, macro_f1 0.368421, fit 0.0s
+{"time_utc": "2026-11-18T12:01:02.813796+00:00", "event": "cv_fold", "run_name": "logistic_regression", "fold": 0, "training_seconds": 0.0029621389985550195, "top1": 0.5, "macro_f1": 0.3333333333333333, "log_loss": 0.8054158841330897}
+{"time_utc": "2026-11-18T12:01:02.826590+00:00", "event": "cv_fold", "run_name": "logistic_regression", "fold": 1, "training_seconds": 0.00280819799809251, "top1": 0.75, "macro_f1": 0.8285714285714285, "log_loss": 0.49992955250600946}
+{"time_utc": "2026-11-18T12:01:02.838166+00:00", "event": "cv_fold", "run_name": "logistic_regression", "fold": 2, "training_seconds": 0.0026373440014140215, "top1": 0.5, "macro_f1": 0.3684210526315789, "log_loss": 0.7261296735795978}
+[phase-prep] STAGE student: rebuild the student-test cache and LR student predictions
+[phase-prep] runtime now: {"joblib": "1.5.3", "numpy": "2.5.5", "python": "3.14.6", "scipy": "1.18.0", "sklearn": "1.8.0"}
+[phase-prep] runtime of the original shared run: {"joblib": "1.5.3", "numpy": "2.5.2", "python": "3.14.6", "scipy": "1.18.0", "sklearn": "1.8.0"}
+[phase-prep] version drift vs original run: {"numpy": ["2.5.2", "2.5.5"]} (npz container SHAs may differ even when array content matches; see docs/PHASE_REPRODUCTION.md)
+[phase-prep] phase gates passed: selection.json selects 'logistic_regression'; freeze record valid (model.joblib sha256 6aeef188ef8744db)
+[phase-prep] raw student fingerprint af578002d5eb58e1 (pinned match)
+[phase-prep] building student-test dataset cache via mapmatch.experiments.build_dataset (features only)
+[phase-prep] rebuilt student cache: sha256 student_test_af578002d5eb58e1.npz: 57794a15b39f52df96645afdf6f88e15751fdba379d3d9053e5b285e8e58bc58 (pinned match)
+[phase-prep] --allow-lr-fit: performing a FRESH logistic-regression-only all-80 fit. This is a deliberate regeneration, recorded as such; it is not the historical baseline.
+[phase-prep] fresh LR all-80 fit completed in 0.0s (warnings: 0)
+[phase-prep] wrote artifacts/baselines/logistic_regression.joblib (was missing; fresh LR-only fit)
+[phase-prep] wrote experiments/predictions/logistic_regression_student.npz; recomputed metrics agree with the committed record within 1e-09 (fresh LR-only fit (0.0s); inference 0.0s, top1 0.3333333333333333)
+[phase-prep] STAGE student complete: student cache and LR student predictions are in place
+/home/d3va/.local/lib/python3.14/site-packages/joblib/numpy_pickle.py:207: DeprecationWarning: Setting the shape on a NumPy array has been deprecated in NumPy 2.5.
+As an alternative, you can create a new view using np.reshape (with copy=False if needed).
+  array.shape = self.shape
+[phase-prep] STAGE student: rebuild the student-test cache and LR student predictions
+[phase-prep] runtime now: {"joblib": "1.5.3", "numpy": "2.5.5", "python": "3.14.6", "scipy": "1.18.0", "sklearn": "1.8.0"}
+[phase-prep] runtime of the original shared run: {"joblib": "1.5.3", "numpy": "2.5.2", "python": "3.14.6", "scipy": "1.18.0", "sklearn": "1.8.0"}
+[phase-prep] version drift vs original run: {"numpy": ["2.5.2", "2.5.5"]} (npz container SHAs may differ even when array content matches; see docs/PHASE_REPRODUCTION.md)
+[phase-prep] STAGE student: rebuild the student-test cache and LR student predictions
+[phase-prep] runtime now: {"joblib": "1.5.3", "numpy": "2.5.5", "python": "3.14.6", "scipy": "1.18.0", "sklearn": "1.8.0"}
+[phase-prep] runtime of the original shared run: {"joblib": "1.5.3", "numpy": "2.5.2", "python": "3.14.6", "scipy": "1.18.0", "sklearn": "1.8.0"}
+[phase-prep] version drift vs original run: {"numpy": ["2.5.2", "2.5.5"]} (npz container SHAs may differ even when array content matches; see docs/PHASE_REPRODUCTION.md)
+[phase-prep] STAGE student: rebuild the student-test cache and LR student predictions
+[phase-prep] runtime now: {"joblib": "1.5.3", "numpy": "2.5.5", "python": "3.14.6", "scipy": "1.18.0", "sklearn": "1.8.0"}
+[phase-prep] runtime of the original shared run: {"joblib": "1.5.3", "numpy": "2.5.2", "python": "3.14.6", "scipy": "1.18.0", "sklearn": "1.8.0"}
+[phase-prep] version drift vs original run: {"numpy": ["2.5.2", "2.5.5"]} (npz container SHAs may differ even when array content matches; see docs/PHASE_REPRODUCTION.md)
+[phase-prep] STAGE student: rebuild the student-test cache and LR student predictions
+[phase-prep] runtime now: {"joblib": "1.5.3", "numpy": "2.5.5", "python": "3.14.6", "scipy": "1.18.0", "sklearn": "1.8.0"}
+[phase-prep] runtime of the original shared run: {"joblib": "1.5.3", "numpy": "2.5.2", "python": "3.14.6", "scipy": "1.18.0", "sklearn": "1.8.0"}
+[phase-prep] version drift vs original run: {"numpy": ["2.5.2", "2.5.5"]} (npz container SHAs may differ even when array content matches; see docs/PHASE_REPRODUCTION.md)
+[phase-prep] STAGE student: rebuild the student-test cache and LR student predictions
+[phase-prep] runtime now: {"joblib": "1.5.3", "numpy": "2.5.5", "python": "3.14.6", "scipy": "1.18.0", "sklearn": "1.8.0"}
+[phase-prep] runtime of the original shared run: {"joblib": "1.5.3", "numpy": "2.5.2", "python": "3.14.6", "scipy": "1.18.0", "sklearn": "1.8.0"}
+[phase-prep] version drift vs original run: {"numpy": ["2.5.2", "2.5.5"]} (npz container SHAs may differ even when array content matches; see docs/PHASE_REPRODUCTION.md)
+[phase-prep] phase gates passed: selection.json selects 'logistic_regression'; freeze record valid (model.joblib sha256 6aeef188ef8744db)
+[phase-prep] raw student fingerprint af578002d5eb58e1 (pinned match)
+[phase-prep] building student-test dataset cache via mapmatch.experiments.build_dataset (features only)
+[phase-prep] rebuilt student cache: sha256 student_test_af578002d5eb58e1.npz: 57794a15b39f52df96645afdf6f88e15751fdba379d3d9053e5b285e8e58bc58 (pinned match)
+/home/d3va/.local/lib/python3.14/site-packages/joblib/numpy_pickle.py:207: DeprecationWarning: Setting the shape on a NumPy array has been deprecated in NumPy 2.5.
+As an alternative, you can create a new view using np.reshape (with copy=False if needed).
+  array.shape = self.shape
+[phase-prep] LR student predictions: read-only load of the committed all-80 baseline artifacts/baselines/logistic_regression.joblib (no fit)
+[phase-prep] STAGE student: rebuild the student-test cache and LR student predictions
+[phase-prep] runtime now: {"joblib": "1.5.3", "numpy": "2.5.5", "python": "3.14.6", "scipy": "1.18.0", "sklearn": "1.8.0"}
+[phase-prep] runtime of the original shared run: {"joblib": "1.5.3", "numpy": "2.5.2", "python": "3.14.6", "scipy": "1.18.0", "sklearn": "1.8.0"}
+[phase-prep] version drift vs original run: {"numpy": ["2.5.2", "2.5.5"]} (npz container SHAs may differ even when array content matches; see docs/PHASE_REPRODUCTION.md)
+[phase-prep] phase gates passed: selection.json selects 'logistic_regression'; freeze record valid (model.joblib sha256 6aeef188ef8744db)
+[phase-prep] raw student fingerprint af578002d5eb58e1 (pinned match)
+[phase-prep] building student-test dataset cache via mapmatch.experiments.build_dataset (features only)
+[phase-prep] rebuilt student cache: sha256 student_test_af578002d5eb58e1.npz: 57794a15b39f52df96645afdf6f88e15751fdba379d3d9053e5b285e8e58bc58 (pinned match)
+[phase-prep] STAGE student: rebuild the student-test cache and LR student predictions
+[phase-prep] runtime now: {"joblib": "1.5.3", "numpy": "2.5.5", "python": "3.14.6", "scipy": "1.18.0", "sklearn": "1.8.0"}
+[phase-prep] runtime of the original shared run: {"joblib": "1.5.3", "numpy": "2.5.2", "python": "3.14.6", "scipy": "1.18.0", "sklearn": "1.8.0"}
+[phase-prep] version drift vs original run: {"numpy": ["2.5.2", "2.5.5"]} (npz container SHAs may differ even when array content matches; see docs/PHASE_REPRODUCTION.md)
+[phase-prep] phase gates passed: selection.json selects 'logistic_regression'; freeze record valid (model.joblib sha256 6aeef188ef8744db)
+[phase-prep] raw student fingerprint af578002d5eb58e1 (pinned match)
+[phase-prep] STAGE student: rebuild the student-test cache and LR student predictions
+[phase-prep] runtime now: {"joblib": "1.5.3", "numpy": "2.5.5", "python": "3.14.6", "scipy": "1.18.0", "sklearn": "1.8.0"}
+[phase-prep] runtime of the original shared run: {"joblib": "1.5.3", "numpy": "2.5.2", "python": "3.14.6", "scipy": "1.18.0", "sklearn": "1.8.0"}
+[phase-prep] version drift vs original run: {"numpy": ["2.5.2", "2.5.5"]} (npz container SHAs may differ even when array content matches; see docs/PHASE_REPRODUCTION.md)
+[phase-prep] phase gates passed: selection.json selects 'logistic_regression'; freeze record valid (model.joblib sha256 6aeef188ef8744db)
+[phase-prep] raw student fingerprint af578002d5eb58e1 (pinned match)
+[phase-prep] building student-test dataset cache via mapmatch.experiments.build_dataset (features only)
+[phase-prep] rebuilt student cache: sha256 student_test_af578002d5eb58e1.npz: 57794a15b39f52df96645afdf6f88e15751fdba379d3d9053e5b285e8e58bc58 (pinned match)
+/home/d3va/.local/lib/python3.14/site-packages/joblib/numpy_pickle.py:207: DeprecationWarning: Setting the shape on a NumPy array has been deprecated in NumPy 2.5.
+As an alternative, you can create a new view using np.reshape (with copy=False if needed).
+  array.shape = self.shape
+[phase-prep] LR student predictions: read-only load of the committed all-80 baseline artifacts/baselines/logistic_regression.joblib (no fit)
+[phase-prep] wrote experiments/predictions/logistic_regression_student.npz; recomputed metrics agree with the committed record within 1e-09 (committed baseline load; inference 0.0s, top1 0.3333333333333333)
+[phase-prep] STAGE student complete: student cache and LR student predictions are in place
+[phase-prep] STAGE train: rebuild the TRAIN cache, shared folds and LR grouped-CV OOF record
+[phase-prep] runtime now: {"joblib": "1.5.3", "numpy": "2.5.5", "python": "3.14.6", "scipy": "1.18.0", "sklearn": "1.8.0"}
+[phase-prep] runtime of the original shared run: {"joblib": "1.5.3", "numpy": "2.5.2", "python": "3.14.6", "scipy": "1.18.0", "sklearn": "1.8.0"}
+[phase-prep] version drift vs original run: {"numpy": ["2.5.2", "2.5.5"]} (npz container SHAs may differ even when array content matches; see docs/PHASE_REPRODUCTION.md)
+[phase-prep] LR CV fold 0: top1 0.500000, macro_f1 0.333333, fit 0.0s
+[phase-prep] LR CV fold 1: top1 0.750000, macro_f1 0.828571, fit 0.0s
+[phase-prep] LR CV fold 2: top1 0.500000, macro_f1 0.368421, fit 0.0s
+[phase-prep] STAGE train: rebuild the TRAIN cache, shared folds and LR grouped-CV OOF record
+[phase-prep] runtime now: {"joblib": "1.5.3", "numpy": "2.5.5", "python": "3.14.6", "scipy": "1.18.0", "sklearn": "1.8.0"}
+[phase-prep] runtime of the original shared run: {"joblib": "1.5.3", "numpy": "2.5.2", "python": "3.14.6", "scipy": "1.18.0", "sklearn": "1.8.0"}
+[phase-prep] version drift vs original run: {"numpy": ["2.5.2", "2.5.5"]} (npz container SHAs may differ even when array content matches; see docs/PHASE_REPRODUCTION.md)
+[phase-prep] raw TRAIN fingerprint 775b1369b9e1993b (pinned match; bytes hashed, labels never parsed)
+[phase-prep] building TRAIN dataset cache via mapmatch.experiments.build_dataset (features only, no models)
+[phase-prep] rebuilt train cache: sha256 train_775b1369b9e1993b.npz: 5cb84bbc3bef6c4b1ba3d08abc6c8ef44302f5cfbdf052c173c3c8950f097b2c (pinned match)
+[phase-prep] TRAIN cache rebuilt and verified against the pinned spec
+[phase-prep] wrote experiments/cv_folds.json (was missing; same schema as the shared run)
+[phase-prep] committed LR CV record found: rebuilding only the git-excluded OOF arrays via the LR-only mirror
+[phase-prep] LR CV fold 0: top1 0.500000, macro_f1 0.333333, fit 0.0s
+[phase-prep] LR CV fold 1: top1 0.750000, macro_f1 0.828571, fit 0.0s
+[phase-prep] LR CV fold 2: top1 0.500000, macro_f1 0.368421, fit 0.0s
+[phase-prep] wrote experiments/predictions/logistic_regression_oof.npz; metrics agree with the committed record within 1e-09 (LR-only mirror, 0.1s)
+[phase-prep] STAGE train complete: TRAIN cache, folds and LR OOF record are in place
+[phase-prep] STAGE train: rebuild the TRAIN cache, shared folds and LR grouped-CV OOF record
+[phase-prep] runtime now: {"joblib": "1.5.3", "numpy": "2.5.5", "python": "3.14.6", "scipy": "1.18.0", "sklearn": "1.8.0"}
+[phase-prep] runtime of the original shared run: {"joblib": "1.5.3", "numpy": "2.5.2", "python": "3.14.6", "scipy": "1.18.0", "sklearn": "1.8.0"}
+[phase-prep] version drift vs original run: {"numpy": ["2.5.2", "2.5.5"]} (npz container SHAs may differ even when array content matches; see docs/PHASE_REPRODUCTION.md)
+[phase-prep] raw TRAIN fingerprint 775b1369b9e1993b (pinned match; bytes hashed, labels never parsed)
+[phase-prep] building TRAIN dataset cache via mapmatch.experiments.build_dataset (features only, no models)
+[phase-prep] rebuilt train cache: sha256 train_775b1369b9e1993b.npz: 5cb84bbc3bef6c4b1ba3d08abc6c8ef44302f5cfbdf052c173c3c8950f097b2c (pinned match)
+[phase-prep] TRAIN cache rebuilt and verified against the pinned spec
+[phase-prep] wrote experiments/cv_folds.json (was missing; same schema as the shared run)
+[phase-prep] committed LR CV record found: rebuilding only the git-excluded OOF arrays via the LR-only mirror
+[phase-prep] LR CV fold 0: top1 0.500000, macro_f1 0.333333, fit 0.0s
+[phase-prep] LR CV fold 1: top1 0.750000, macro_f1 0.828571, fit 0.0s
+[phase-prep] LR CV fold 2: top1 0.500000, macro_f1 0.368421, fit 0.0s
+[phase-prep] STAGE train: rebuild the TRAIN cache, shared folds and LR grouped-CV OOF record
+[phase-prep] runtime now: {"joblib": "1.5.3", "numpy": "2.5.5", "python": "3.14.6", "scipy": "1.18.0", "sklearn": "1.8.0"}
+[phase-prep] runtime of the original shared run: {"joblib": "1.5.3", "numpy": "2.5.2", "python": "3.14.6", "scipy": "1.18.0", "sklearn": "1.8.0"}
+[phase-prep] version drift vs original run: {"numpy": ["2.5.2", "2.5.5"]} (npz container SHAs may differ even when array content matches; see docs/PHASE_REPRODUCTION.md)
+[phase-prep] STAGE train: rebuild the TRAIN cache, shared folds and LR grouped-CV OOF record
+[phase-prep] runtime now: {"joblib": "1.5.3", "numpy": "2.5.5", "python": "3.14.6", "scipy": "1.18.0", "sklearn": "1.8.0"}
+[phase-prep] runtime of the original shared run: {"joblib": "1.5.3", "numpy": "2.5.2", "python": "3.14.6", "scipy": "1.18.0", "sklearn": "1.8.0"}
+[phase-prep] version drift vs original run: {"numpy": ["2.5.2", "2.5.5"]} (npz container SHAs may differ even when array content matches; see docs/PHASE_REPRODUCTION.md)
+[phase-prep] STAGE train: rebuild the TRAIN cache, shared folds and LR grouped-CV OOF record
+[phase-prep] runtime now: {"joblib": "1.5.3", "numpy": "2.5.5", "python": "3.14.6", "scipy": "1.18.0", "sklearn": "1.8.0"}
+[phase-prep] runtime of the original shared run: {"joblib": "1.5.3", "numpy": "2.5.2", "python": "3.14.6", "scipy": "1.18.0", "sklearn": "1.8.0"}
+[phase-prep] version drift vs original run: {"numpy": ["2.5.2", "2.5.5"]} (npz container SHAs may differ even when array content matches; see docs/PHASE_REPRODUCTION.md)
+[phase-prep] raw TRAIN fingerprint 775b1369b9e1993b (pinned match; bytes hashed, labels never parsed)
+[phase-prep] building TRAIN dataset cache via mapmatch.experiments.build_dataset (features only, no models)
+[phase-prep] rebuilt train cache: sha256 train_775b1369b9e1993b.npz: 3f0833f97a1894899893ed8e5f2f344841f42c547c0633e6046a6fd81c1ab080 != pinned 5cb84bbc3bef6c4b1ba3d08abc6c8ef44302f5cfbdf052c173c3c8950f097b2c
+[phase-prep] rebuilt train cache: array X: sha256 e473327437f69408f68d93de15519fddd061ed9271583a465ee2f61064f46a52 != reference db8d9ffd35672ab1381a505f6d8bab5652d4503f9872c66a73d9b70f3d7c488e (shape [36, 38], dtype float32)
+[phase-prep] rebuilt train cache: array candidate_fractions: sha256 593031875a29c0bf49462f9f395e0a1e6c75f292f5beb15528911facd1e00ad2 != reference 4b995072654cd40f24e56e030efb3bcdcd34bf04e387858da8929911cfcd7678 (shape [36], dtype float64)
+[phase-prep] rebuilt train cache: array candidate_distances: sha256 49806d22503d80551584ad982420b7eface92256babf1a329ce3595ee976cb89 != reference 8bb9ae5448f2dd78180d4e1bdda43e020e5bfbf647e6418968465af783a44a93 (shape [36], dtype float64)
+[phase-prep] rebuilt train cache: array proxy_distances: sha256 b0eb5b08de26abb2a31efd7717c4123d6146778749d50c200e8c510afa317905 != reference e7b2013a5f5bedc05a18eb82ce304b126ec8c5945ebbdc3665631cc4914d78ae (shape [12], dtype float64)
+[phase-prep] STAGE train: rebuild the TRAIN cache, shared folds and LR grouped-CV OOF record
+[phase-prep] runtime now: {"joblib": "1.5.3", "numpy": "2.5.5", "python": "3.14.6", "scipy": "1.18.0", "sklearn": "1.8.0"}
+[phase-prep] runtime of the original shared run: {"joblib": "1.5.3", "numpy": "2.5.2", "python": "3.14.6", "scipy": "1.18.0", "sklearn": "1.8.0"}
+[phase-prep] version drift vs original run: {"numpy": ["2.5.2", "2.5.5"]} (npz container SHAs may differ even when array content matches; see docs/PHASE_REPRODUCTION.md)
+[phase-prep] raw TRAIN fingerprint 775b1369b9e1993b (pinned match; bytes hashed, labels never parsed)
+[phase-prep] building TRAIN dataset cache via mapmatch.experiments.build_dataset (features only, no models)
+[phase-prep] rebuilt train cache: sha256 train_775b1369b9e1993b.npz: 5cb84bbc3bef6c4b1ba3d08abc6c8ef44302f5cfbdf052c173c3c8950f097b2c (pinned match)
+[phase-prep] TRAIN cache rebuilt and verified against the pinned spec
+[phase-prep] wrote experiments/cv_folds.json (was missing; same schema as the shared run)
+[phase-prep] committed LR CV record missing: running logistic-regression-only grouped CV via the shared cross_validate_model (writes cv and predictions records; no other family)
+{"time_utc": "2026-11-18T12:01:03.403207+00:00", "event": "cv_fold", "run_name": "logistic_regression", "fold": 0, "training_seconds": 0.0023773020002408884, "top1": 0.5, "macro_f1": 0.3333333333333333, "log_loss": 0.8054158841330897}
+{"time_utc": "2026-11-18T12:01:03.417961+00:00", "event": "cv_fold", "run_name": "logistic_regression", "fold": 1, "training_seconds": 0.003434312999161193, "top1": 0.75, "macro_f1": 0.8285714285714285, "log_loss": 0.49992955250600946}
+{"time_utc": "2026-11-18T12:01:03.434817+00:00", "event": "cv_fold", "run_name": "logistic_regression", "fold": 2, "training_seconds": 0.002840409000782529, "top1": 0.5, "macro_f1": 0.3684210526315789, "log_loss": 0.7261296735795978}
+[phase-prep] LR CV record created: objective 0.5833333333333334
+[phase-prep] STAGE train complete: TRAIN cache, folds and LR OOF record are in place
+/home/d3va/.local/lib/python3.14/site-packages/joblib/numpy_pickle.py:207: DeprecationWarning: Setting the shape on a NumPy array has been deprecated in NumPy 2.5.
+As an alternative, you can create a new view using np.reshape (with copy=False if needed).
+  array.shape = self.shape
+/home/d3va/.local/lib/python3.14/site-packages/joblib/numpy_pickle.py:207: DeprecationWarning: Setting the shape on a NumPy array has been deprecated in NumPy 2.5.
+As an alternative, you can create a new view using np.reshape (with copy=False if needed).
+  array.shape = self.shape
+/home/d3va/.local/lib/python3.14/site-packages/joblib/numpy_pickle.py:207: DeprecationWarning: Setting the shape on a NumPy array has been deprecated in NumPy 2.5.
+As an alternative, you can create a new view using np.reshape (with copy=False if needed).
+  array.shape = self.shape
+/home/d3va/.local/lib/python3.14/site-packages/joblib/numpy_pickle.py:207: DeprecationWarning: Setting the shape on a NumPy array has been deprecated in NumPy 2.5.
+As an alternative, you can create a new view using np.reshape (with copy=False if needed).
+  array.shape = self.shape
+/home/d3va/.local/lib/python3.14/site-packages/joblib/numpy_pickle.py:207: DeprecationWarning: Setting the shape on a NumPy array has been deprecated in NumPy 2.5.
+As an alternative, you can create a new view using np.reshape (with copy=False if needed).
+  array.shape = self.shape
+/home/d3va/.local/lib/python3.14/site-packages/sklearn/ensemble/_bagging.py:98: UserWarning: Using the fractional value max_samples=0.7 when the number of samples is 12 results in a low number (8) of bootstrap samples. We recommend passing `max_samples` as an integer instead.
+  warn(
+/home/d3va/.local/lib/python3.14/site-packages/joblib/numpy_pickle.py:207: DeprecationWarning: Setting the shape on a NumPy array has been deprecated in NumPy 2.5.
+As an alternative, you can create a new view using np.reshape (with copy=False if needed).
+  array.shape = self.shape
+{"time_utc": "2026-11-18T12:01:04.160260+00:00", "event": "phase_model_frozen", "phase": "three-model-first", "model_name": "logistic_regression", "sha256": "53c4aeb5838b4d02dc0c60cdfd4e9c7d8e841904b079448c91ff23e520b06d6a", "bytes": 4534}
+/home/d3va/.local/lib/python3.14/site-packages/joblib/numpy_pickle.py:207: DeprecationWarning: Setting the shape on a NumPy array has been deprecated in NumPy 2.5.
+As an alternative, you can create a new view using np.reshape (with copy=False if needed).
+  array.shape = self.shape
+/home/d3va/.local/lib/python3.14/site-packages/joblib/numpy_pickle.py:207: DeprecationWarning: Setting the shape on a NumPy array has been deprecated in NumPy 2.5.
+As an alternative, you can create a new view using np.reshape (with copy=False if needed).
+  array.shape = self.shape
+/home/d3va/.local/lib/python3.14/site-packages/joblib/numpy_pickle.py:207: DeprecationWarning: Setting the shape on a NumPy array has been deprecated in NumPy 2.5.
+As an alternative, you can create a new view using np.reshape (with copy=False if needed).
+  array.shape = self.shape
+/home/d3va/.local/lib/python3.14/site-packages/joblib/numpy_pickle.py:207: DeprecationWarning: Setting the shape on a NumPy array has been deprecated in NumPy 2.5.
+As an alternative, you can create a new view using np.reshape (with copy=False if needed).
+  array.shape = self.shape
+/home/d3va/.local/lib/python3.14/site-packages/joblib/numpy_pickle.py:207: DeprecationWarning: Setting the shape on a NumPy array has been deprecated in NumPy 2.5.
+As an alternative, you can create a new view using np.reshape (with copy=False if needed).
+  array.shape = self.shape
+/home/d3va/.local/lib/python3.14/site-packages/joblib/numpy_pickle.py:207: DeprecationWarning: Setting the shape on a NumPy array has been deprecated in NumPy 2.5.
+As an alternative, you can create a new view using np.reshape (with copy=False if needed).
+  array.shape = self.shape
+/home/d3va/.local/lib/python3.14/site-packages/joblib/numpy_pickle.py:207: DeprecationWarning: Setting the shape on a NumPy array has been deprecated in NumPy 2.5.
+As an alternative, you can create a new view using np.reshape (with copy=False if needed).
+  array.shape = self.shape
+/home/d3va/.local/lib/python3.14/site-packages/joblib/numpy_pickle.py:207: DeprecationWarning: Setting the shape on a NumPy array has been deprecated in NumPy 2.5.
+As an alternative, you can create a new view using np.reshape (with copy=False if needed).
+  array.shape = self.shape
+/home/d3va/.local/lib/python3.14/site-packages/joblib/numpy_pickle.py:207: DeprecationWarning: Setting the shape on a NumPy array has been deprecated in NumPy 2.5.
+As an alternative, you can create a new view using np.reshape (with copy=False if needed).
+  array.shape = self.shape
+/home/d3va/.local/lib/python3.14/site-packages/joblib/numpy_pickle.py:207: DeprecationWarning: Setting the shape on a NumPy array has been deprecated in NumPy 2.5.
+As an alternative, you can create a new view using np.reshape (with copy=False if needed).
+  array.shape = self.shape
+/home/d3va/.local/lib/python3.14/site-packages/joblib/numpy_pickle.py:207: DeprecationWarning: Setting the shape on a NumPy array has been deprecated in NumPy 2.5.
+As an alternative, you can create a new view using np.reshape (with copy=False if needed).
+  array.shape = self.shape
+/home/d3va/.local/lib/python3.14/site-packages/joblib/numpy_pickle.py:207: DeprecationWarning: Setting the shape on a NumPy array has been deprecated in NumPy 2.5.
+As an alternative, you can create a new view using np.reshape (with copy=False if needed).
+  array.shape = self.shape
+----------------------------------------------------------------------
+Ran 508 tests in 9.655s
+
+OK
+{"signal": "PHASE_MODEL_FROZEN", "model": "artifacts/phase_three_runs/synthetic-export/model.joblib", "sha256": "53c4aeb5838b4d02dc0c60cdfd4e9c7d8e841904b079448c91ff23e520b06d6a", "bytes": 4534, "model_name": "logistic_regression", "run_name": "logistic_regression_tuned", "parameters": {"C": 1.0, "max_iter": 500, "solver": "lbfgs"}, "objective": 0.5, "frozen_at_utc": "2026-11-18T12:01:04.160159+00:00"}

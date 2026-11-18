@@ -4,14 +4,15 @@ A learned GPS-to-road map matcher with directed HMM/Viterbi reconstruction, a Fa
 
 - Website: [ml.d3va.dev](https://ml.d3va.dev)
 - Repository: [DevaOnL/ML-Hackathon](https://github.com/DevaOnL/ML-Hackathon)
-- Final measured experiments: [five-family results](<experiments/final_five/current/results.json>) and [comparison table](<experiments/final_five/current/model_comparison.csv>)
-- Selected weights and configuration: [HistGradientBoosting bundle](<artifacts/final_five/model.joblib>), [metadata](<artifacts/final_five/model_metadata.json>), [decoder](<artifacts/final_five/match_config.json>) and [model card](<artifacts/final_five/MODEL_CARD.md>)
+- Final measured route result: **98.212% directed-route edge F1**, up from **95.136%**, on the same ten student-development trips and19,160 GPS observations; zero failures and 100% continuity. This is route F1, not classification accuracy or blind-test evidence. [Measured comparison](<experiments/target96/student_comparison/summary.json>)
+- Selected pipeline: [70-feature HistGB](<artifacts/target96/model.joblib>), [training metadata](<artifacts/target96/training_metadata.json>), [decoder](<artifacts/target96/match_config.json>), [arc policy](<artifacts/target96/arc_policy.json>), [model card](<artifacts/target96/MODEL_CARD.md>) and [acceptance](<artifacts/target96/acceptance.json>). The existing public service now serves this accepted release.
+- Concise assignment report: [final PDF](<reports/submission/PathSnap_Final_Report.pdf>); exact new route submissions: [student development ZIP](<outputs/target96/candidate/submission.zip>) and [evaluator ZIP](<outputs/target96/evaluator/submission.zip>). Frozen evaluator route-edge F1 is **98.487%**, with zero failures. Historical five-family measurements and previous accepted artifacts remain below unchanged.
 
-## Accuracy-improvement study
+## Previous classification-accuracy study
 
 A new TRAIN-only study improved all five families’ observation top-1 accuracy in paired internal confirmation: Logistic Regression **91.607% → 91.768%**, KNN **90.589% → 91.750%**, Bagging **92.161% → 92.696%**, GaussianNB **90.554% → 91.089%**, and HistGradientBoosting **92.054% → 93.018%**. Both controls and candidates fit on the same64 TRAIN trips; these16 reserved trips were historically exposed to earlier releases, so this is not blind-test evidence. Secondary metrics do not all improve.
 
-The new HGB/context candidate also improved both route F1 metrics internally. Its final frozen student-development comparison had **2/10 route failures**, so it was **not accepted or deployed**. The existing live model and original deliverables below remain unchanged. [Measured accuracy addendum](<reports/accuracy_improvement/ACCURACY_REPORT.md>), [comparison CSV](<reports/accuracy_improvement/model_comparison.csv>), [frozen protocol](<experiments/accuracy_improvement/PROTOCOL.json>) and [release decision](<reports/accuracy_improvement/release_decision.json>) retain every tradeoff and the expedited Bagging budget deviation.
+The new HGB/context candidate also improved both route F1 metrics internally. Its final frozen student-development comparison had **2/10 route failures**, so it was **not accepted or deployed**. That failed fixed-K12 release remains rejected. The new route-primary study above subsequently met its target with a separately frozen decoder; historical artifacts below are preserved. [Measured accuracy addendum](<reports/accuracy_improvement/ACCURACY_REPORT.md>), [comparison CSV](<reports/accuracy_improvement/model_comparison.csv>), [frozen protocol](<experiments/accuracy_improvement/PROTOCOL.json>) and [release decision](<reports/accuracy_improvement/release_decision.json>) retain every tradeoff and the expedited Bagging budget deviation.
 
 ## Five trained and tested families
 
@@ -61,7 +62,7 @@ node frontend/smoke.mjs
 node --test tests/frontend_adapter.test.mjs
 ```
 
-With authorized local student inputs, fresh reference-free prediction is:
+With authorized local inputs, the following legacy CLI reproduces the preserved38-feature baseline, not the new final70-feature pipeline. The accepted final pipeline is served with explicit target96 artifact paths (next block).
 
 ```bash
 OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 .venv/bin/python -m mapmatch predict \
@@ -75,9 +76,12 @@ OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 .venv/bin/python -m mapmatch predict \
 
 Prediction never opens reference routes; evaluation is explicit and separate. Existing prediction directories are refused. [Complete final-five reproduction](<docs/FINAL_REPRODUCTION.md>) explains how to rebuild missing private inputs without changing measured evidence. [Post-measurement output-safety hardening](<docs/FINAL_REPRODUCTION_HARDENING.md>) records the maintained runner changes. New reproductions use a fresh `--run-id`, never the published result directory.
 
-For local API execution, provide trusted dataset roots and use:
+For local API execution of the accepted final pipeline, provide trusted dataset roots and explicitly select its artifacts:
 
 ```bash
+PATHSNAP_MODEL=artifacts/target96/model.joblib \
+PATHSNAP_MODEL_METADATA=artifacts/target96/training_metadata.json \
+PATHSNAP_MATCH_CONFIG=artifacts/target96/match_config.json \
 .venv/bin/python -m uvicorn backend.main:app --host 127.0.0.1 --port 8000 --workers 1
 ```
 
@@ -85,7 +89,7 @@ The backend and CLI default to the final-five artifact paths and fail rather tha
 
 ## Website and API
 
-The existing public deployment now runs the selected HistGB bundle. [Delivery verification](<reports/final_five/delivery_verification.json>) passed 1,534 checks: twenty real ASGI matches, twenty real HTTPS matches, two genuine browser reconstructions and a request-bound receiving-terminal capture. All 38,834 observations match the offline route/state checksums and metric checks; 386,979 learned candidate probabilities were audited. [Browser evidence](<reports/final_five/live/browser_evidence.json>) covers dark/light themes, keyboard tabs and sixteen responsive layouts. Validation uses actual DOM, canvas pixels, OCR and hashes; no manual visual inspection is claimed.
+The existing public URL now runs the accepted70-feature HistGB plus route-tuned decoder. [Deployment receipt](<reports/target96/deployment.json>) verifies HTTP200 health with the exact new model hash; [genuine browser evidence](<reports/target96/live/browser_evidence.json>) verifies actual public response geometry against the frozen final route. [Actual receiving-host response](<reports/target96/terminal/api_response.json>) and its screenshot are preserved. Earlier [release verification](<reports/final_five/delivery_verification.json>) remains historical evidence, not validation of this new model. No physical two-laptop demonstration or manual visual inspection is claimed.
 
 The site has separate Student development and Evaluator sections, an original OpenCode-inspired monochrome theme, working dark/light preference and keyboard dataset navigation. [OpenCode was inspected](<docs/OPENCODE_DESIGN_REFERENCE.md>) only after the five-model training/testing gate. No OpenCode branding, fonts or runtime scripts are copied. Leaflet is bundled locally; the default map makes no external tile requests. [Website implementation](<docs/WEBSITE_DESIGN.md>) documents behavior.
 
@@ -93,7 +97,7 @@ The API exposes `/health`, `/datasets`, `/datasets/development/trips`, `/dataset
 
 ## Evidence, requirements and provenance
 
-**Final deliverables:** [Consolidated technical report (PDF)](<reports/final_five/PathSnap_Final_Technical_Report.pdf>) · [readable report source](<reports/final_five/TECHNICAL_REPORT.md>) · [student-development prediction ZIP](<outputs/final_student_test/submission.zip>) · [evaluator prediction ZIP](<outputs/final_evaluator_test/submission.zip>) · [delivery guide](<docs/FINAL_DELIVERY_GUIDE.md>).
+**Preserved earlier-release deliverables:** [Previous technical report (PDF)](<reports/final_five/PathSnap_Final_Technical_Report.pdf>) · [readable report source](<reports/final_five/TECHNICAL_REPORT.md>) · [student-development prediction ZIP](<outputs/final_student_test/submission.zip>) · [evaluator prediction ZIP](<outputs/final_evaluator_test/submission.zip>) · [delivery guide](<docs/FINAL_DELIVERY_GUIDE.md>).
 
 The complete synthetic release suite passed **421 tests** (370 Python, 29 hosting, 22 Node), plus the static frontend smoke check, from an exact staged checkout without private datasets or probability arrays. The [release test record](<reports/final_five/test_results.json>) binds all four passing logs. Report generation checks 360 resolved facts, 50 public inputs and 55 image bindings, including twelve source-pixel-verified readable screenshot details.
 

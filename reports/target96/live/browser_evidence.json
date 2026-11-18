@@ -1,0 +1,51 @@
+{
+  "url": "https://ml.d3va.dev",
+  "mocked": false,
+  "request_body": {
+    "trip_id": "00000009"
+  },
+  "model_hash": "139464145836679fd97d868e0e190f762d4c45f4eca029b856d2bffc358cc81d",
+  "screenshots": {
+    "ui_route_map": {
+      "path": "reports/target96/live/ui_route_map.png",
+      "sha256": "8a9cff77b0269a140a667cb8333b468a864a5351bb69c4e59b012d832cab7f0d"
+    },
+    "ui_controls": {
+      "path": "reports/target96/live/ui_controls.png",
+      "sha256": "6f86010e15a3cf1942cf80faee1cabefb72bdb1d1e0dfb629179c6c0cab512ef"
+    },
+    "ui_desktop": {
+      "path": "reports/target96/live/ui_desktop.png",
+      "sha256": "84c7ad9b8fe2284ddb10903c2df6dae4560739c5e1efb1d88907f1b81c13123a"
+    }
+  },
+  "errors": [],
+  "role": "actual public application after accepted release; student development not blind",
+  "http_status": 200,
+  "request_id": "2bd6172901e14333acc5a2fa06bfa41d",
+  "response_metrics": {
+    "accuracy": 0.9332697807435653,
+    "precision": 0.9277486910994763,
+    "recall": 0.9243876760238017,
+    "macro_f1": 0.9230872132647684,
+    "top1_accuracy": 0.8951382268827455,
+    "candidate_miss_rate": 0.0,
+    "log_loss": 0.4008261212133313,
+    "route_continuity": 1.0,
+    "route_edge_f1": 0.9767981438515081,
+    "route_length_f1": 0.976627198155423,
+    "sequence_similarity": 0.9653579676674365,
+    "classifier_accuracy": 0.8951382268827455,
+    "classifier_precision": 0.8641087130295763,
+    "classifier_recall": 0.8260171616286723,
+    "classifier_macro_f1": 0.8371920112927306,
+    "scored_observation_fraction": 1.0
+  },
+  "timings": {
+    "inference_ms": 4081.465,
+    "scoring_ms": 156.384,
+    "total_ms": 4264.665
+  },
+  "frozen_prediction_geometry_matches": true,
+  "trip_count": 10
+}

@@ -1,0 +1,6 @@
+{
+  "appended_arc_penalty": 5.0,
+  "reverse_penalty": 3,
+  "reverse_chord_limit_m": 20,
+  "edge_switch_penalty": 0.0
+}

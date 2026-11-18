@@ -1,0 +1,14 @@
+{
+  "created_at_utc": "2026-11-18T12:09:58.061510+00:00",
+  "accepted": true,
+  "target_met": true,
+  "observed_edge_f1": 0.9821150783141797,
+  "baseline_edge_f1": 0.9513611360981356,
+  "failed_trips": 0,
+  "route_continuity": 1.0,
+  "mean_length_f1": 0.9883620932434412,
+  "release_manifest_sha256": "a137a2a5141d3b4a4f2885ed267cd7c21f0816d8ffcf5a074c6d2c708d643cb1",
+  "comparison_sha256": "a710575e9bddb18de54ea6d786ef9ad2387f0bf86361bd3b683ffb7ed5504416",
+  "not_official_or_blind": true,
+  "production_switched": false
+}

@@ -1,0 +1,28 @@
+[
+  {
+    "path": "reports/target96/live/report_images/development_dataset_controls.png",
+    "box": [
+      32,
+      300,
+      720,
+      415
+    ],
+    "source_sha256": "84c7ad9b8fe2284ddb10903c2df6dae4560739c5e1efb1d88907f1b81c13123a",
+    "sha256": "836aeb9de18086c210367356be9c471dd6a2eacb3aba6bd7db9ce6b1c7da3835",
+    "pixel_values_modified": false,
+    "annotation_added": false
+  },
+  {
+    "path": "reports/target96/live/report_images/development_scores.png",
+    "box": [
+      385,
+      1090,
+      890,
+      1345
+    ],
+    "source_sha256": "84c7ad9b8fe2284ddb10903c2df6dae4560739c5e1efb1d88907f1b81c13123a",
+    "sha256": "fbbb7de92139d114bafa40d52d0ce45c99e2a92f2035163c68d6d8b3b2d21e9f",
+    "pixel_values_modified": false,
+    "annotation_added": false
+  }
+]

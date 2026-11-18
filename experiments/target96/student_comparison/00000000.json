@@ -1,0 +1,233 @@
+{
+  "created_at_utc": "2026-11-18T12:08:02.109009+00:00",
+  "trip_id": "00000000",
+  "observations": 2503,
+  "records": {
+    "candidate": {
+      "success": true,
+      "elapsed_seconds": 3.276887235999311,
+      "observations": 2503,
+      "effective_max_candidates": 24,
+      "candidate_retry_attempts": [],
+      "route_sha256": "78902bcfda895d9f712734566030605827d41dd44fede7baf73c8c5c63dcfb65",
+      "route_file_sha256": "8981e55fc452dac60b5c3f385ef546eeff10240e10dffb102d6361bc4d9d94e8",
+      "metrics": {
+        "exact_match": false,
+        "edge_precision": 0.9944444444444445,
+        "edge_recall": 1.0,
+        "edge_f1": 0.9972144846796658,
+        "length_precision": 0.998975755053692,
+        "length_recall": 1.0,
+        "length_f1": 0.9994876151230356,
+        "duplicate_canonical_length_f1": 0.9994876151230356,
+        "edit_distance": 1,
+        "edit_similarity": 0.9944444444444445,
+        "predicted_arc_count": 180,
+        "reference_arc_count": 179,
+        "common_arc_count": 179,
+        "predicted_length_m": 51349.11214363076,
+        "reference_length_m": 51296.51807502024,
+        "common_length_m": 51296.51807502025,
+        "length_metric_basis": "meters",
+        "route_continuity": 1.0,
+        "prediction_connected": true,
+        "reference_connected": true,
+        "reference_discontinuity_count": 0,
+        "metric_note": "Directed arc multiset overlap; sequence edit separately. Not an official organizer score."
+      },
+      "observation_metrics": {
+        "accuracy": 0.9884696016771488,
+        "precision": 0.9542379625945085,
+        "recall": 0.958050339592489,
+        "f1": 0.956140350877193,
+        "macro_precision": 0.9739500309743232,
+        "macro_recall": 0.9755565083979215,
+        "macro_f1": 0.9747513243644956,
+        "confusion_matrix": [
+          [
+            16462,
+            115
+          ],
+          [
+            105,
+            2398
+          ]
+        ],
+        "log_loss": 0.027250330734349185,
+        "candidate_rows": 19080,
+        "positive_rows": 2503,
+        "observations": 2503,
+        "candidate_present_observations": 2503,
+        "candidate_miss_count": 0,
+        "candidate_miss_rate": 0.0,
+        "top1_accuracy": 0.9568517778665602,
+        "top1_accuracy_given_candidate": 0.9568517778665602,
+        "top1_correct_observations": 2395,
+        "metric_target": "route_projection_proxy_not_independent_per_GPS_ground_truth",
+        "per_trip": [
+          {
+            "trip_id": "trip",
+            "observations": 2503,
+            "top1_accuracy": 0.9568517778665602,
+            "candidate_miss_rate": 0.0
+          }
+        ],
+        "trip_macro_top1_accuracy": 0.9568517778665602,
+        "edge_macro_f1": 0.8354445562889511,
+        "edge_macro_f1_class_namespace": "trip_id:canonical_directed_arc_id",
+        "observation_edge_macro_f1": 0.8354445562889511,
+        "hmm_nonimproving_observation": false,
+        "observation_nll": 0.115755698850063,
+        "probability_call_seconds": 0.06917108500056202,
+        "decoded_proxy_accuracy": 0.9872153415900919,
+        "decoded_proxy_macro_f1": 0.9712252690738673,
+        "raw_adjacency": 0.9668265387689848
+      },
+      "classifier_only_route": {
+        "exact_match": false,
+        "edge_precision": 0.6277372262773723,
+        "edge_recall": 0.9608938547486033,
+        "edge_f1": 0.7593818984547461,
+        "length_precision": 0.8848272884323755,
+        "length_recall": 0.9983188774244608,
+        "length_f1": 0.9381531835585549,
+        "duplicate_canonical_length_f1": 0.9381531835585549,
+        "edit_distance": 105,
+        "edit_similarity": 0.6167883211678833,
+        "predicted_arc_count": 274,
+        "reference_arc_count": 179,
+        "common_arc_count": 172,
+        "predicted_length_m": 57876.020563477025,
+        "reference_length_m": 51296.51807502024,
+        "common_length_m": 51210.28234043778,
+        "length_metric_basis": "meters",
+        "route_continuity": 0.6959706959706959,
+        "prediction_connected": false,
+        "reference_connected": true,
+        "reference_discontinuity_count": 0,
+        "metric_note": "Directed arc multiset overlap; sequence edit separately. Not an official organizer score."
+      }
+    },
+    "baseline": {
+      "success": true,
+      "elapsed_seconds": 3.1481378069984203,
+      "observations": 2503,
+      "effective_max_candidates": 24,
+      "candidate_retry_attempts": [
+        {
+          "max_candidates": 12,
+          "failure": "no connected directed transition between observations 1884 and 1885; no route was fabricated"
+        }
+      ],
+      "route_sha256": "0134b64a8118d5970673d3ee89249cc6cda390eb263337330e35796c8a284d5e",
+      "route_file_sha256": "b2cb0f6698af6512925b5ae651da85db9f8fa5902bc580ca63488b6a834e03c8",
+      "metrics": {
+        "exact_match": false,
+        "edge_precision": 0.8592233009708737,
+        "edge_recall": 0.9888268156424581,
+        "edge_f1": 0.9194805194805196,
+        "length_precision": 0.9911970645472413,
+        "length_recall": 0.9981534426155693,
+        "length_f1": 0.9946630910198921,
+        "duplicate_canonical_length_f1": 0.9946630910198921,
+        "edit_distance": 29,
+        "edit_similarity": 0.8592233009708738,
+        "predicted_arc_count": 206,
+        "reference_arc_count": 179,
+        "common_arc_count": 177,
+        "predicted_length_m": 51656.52516753686,
+        "reference_length_m": 51296.51807502024,
+        "common_length_m": 51201.79611077323,
+        "length_metric_basis": "meters",
+        "route_continuity": 1.0,
+        "prediction_connected": true,
+        "reference_connected": true,
+        "reference_discontinuity_count": 0,
+        "metric_note": "Directed arc multiset overlap; sequence edit separately. Not an official organizer score."
+      },
+      "observation_metrics": {
+        "accuracy": 0.9878930817610063,
+        "precision": 0.9518695306284806,
+        "recall": 0.9560527367159408,
+        "f1": 0.9539565477376919,
+        "macro_precision": 0.9726147121933904,
+        "macro_recall": 0.9743767333214741,
+        "macro_f1": 0.973493375096858,
+        "confusion_matrix": [
+          [
+            16456,
+            121
+          ],
+          [
+            110,
+            2393
+          ]
+        ],
+        "log_loss": 0.030764715166783932,
+        "candidate_rows": 19080,
+        "positive_rows": 2503,
+        "observations": 2503,
+        "candidate_present_observations": 2503,
+        "candidate_miss_count": 0,
+        "candidate_miss_rate": 0.0,
+        "top1_accuracy": 0.9568517778665602,
+        "top1_accuracy_given_candidate": 0.9568517778665602,
+        "top1_correct_observations": 2395,
+        "metric_target": "route_projection_proxy_not_independent_per_GPS_ground_truth",
+        "per_trip": [
+          {
+            "trip_id": "trip",
+            "observations": 2503,
+            "top1_accuracy": 0.9568517778665602,
+            "candidate_miss_rate": 0.0
+          }
+        ],
+        "trip_macro_top1_accuracy": 0.9568517778665602,
+        "edge_macro_f1": 0.8437485987861648,
+        "edge_macro_f1_class_namespace": "trip_id:canonical_directed_arc_id",
+        "observation_edge_macro_f1": 0.8437485987861648,
+        "hmm_nonimproving_observation": false,
+        "observation_nll": 0.12614326840251627,
+        "probability_call_seconds": 0.036732435000885744,
+        "decoded_proxy_accuracy": 0.9672393128246105,
+        "decoded_proxy_macro_f1": 0.9092018518282187,
+        "raw_adjacency": 0.9664268585131894
+      },
+      "classifier_only_route": {
+        "exact_match": false,
+        "edge_precision": 0.63003663003663,
+        "edge_recall": 0.9608938547486033,
+        "edge_f1": 0.7610619469026548,
+        "length_precision": 0.8854852115048849,
+        "length_recall": 0.9983188774244608,
+        "length_f1": 0.9385228618204504,
+        "duplicate_canonical_length_f1": 0.9385228618204504,
+        "edit_distance": 105,
+        "edit_similarity": 0.6153846153846154,
+        "predicted_arc_count": 273,
+        "reference_arc_count": 179,
+        "common_arc_count": 172,
+        "predicted_length_m": 57833.01818604711,
+        "reference_length_m": 51296.51807502024,
+        "common_length_m": 51210.28234043778,
+        "length_metric_basis": "meters",
+        "route_continuity": 0.6911764705882353,
+        "prediction_connected": false,
+        "reference_connected": true,
+        "reference_discontinuity_count": 0,
+        "metric_note": "Directed arc multiset overlap; sequence edit separately. Not an official organizer score."
+      }
+    }
+  },
+  "release_manifest_sha256": "a137a2a5141d3b4a4f2885ed267cd7c21f0816d8ffcf5a074c6d2c708d643cb1",
+  "reference_loaded_after_both_predictions": true,
+  "source_sha256": "12954b0d37ebc700d92d854518fe189ce9e2652128a1a4232ba2090dd849c71d",
+  "student_role": "historically exposed development; no blindtestclaim",
+  "evaluator_used": false,
+  "input_sha256": {
+    ".nodes": "79cf3601a40e2854c637ff9a0de49b80cfbf53861fcc47e48efea8236d5f63c7",
+    ".arcs": "db080c619345c4fda7d0f54487b55e1681ef6f41c512e89eddc1c82d51897d3e",
+    ".track": "10a2eb387890cfa01d80c8aec5d010b6775e09e50be03c0271b9e7f83288055b",
+    ".route": "c5c67899752d0fa2b90ece6b821f84290566988d5dec5fc6201e443fcbf20abe"
+  }
+}

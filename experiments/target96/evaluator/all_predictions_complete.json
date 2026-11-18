@@ -1,0 +1,26 @@
+{
+  "completed_at_utc": "2026-11-18T12:15:09.992346+00:00",
+  "trip_count": 10,
+  "observations": 19674,
+  "references_opened": 0,
+  "all_dense_connected_learned": true,
+  "route_sha256": {
+    "00000015": "b800b6b9f685ab39dff6cb996ac6693a816b5c26a332eb09ec1c909baaca8392",
+    "00000017": "b3cd6088976a31c196df2410017f9b1b00009073a1e03cef7aeaae3d15f38f4e",
+    "00000023": "e74e2628426f540a463363133ce3a2627c468645125e2ac1a338e16ec2e3ab04",
+    "00000030": "6b2aa624f6fe05da69938e4cdb7a1bc582e737c5d55d2126f0ffdfe169a77ca5",
+    "00000049": "1a2130fd15aef8d3078f974662c8240f610c4bfbace04d498dd138b6d87b1e85",
+    "00000059": "af45052ada7c68f7a0271295eab2c2ed72d8682c0e3207777da66c53b610da59",
+    "00000067": "d2b21f3f716d3cbe20cee7a960c70c52ded44a8a8b9f60cafe820bfce7d1b3c7",
+    "00000073": "1625701323ae11eeab2887c6f895eb79b47c04644a5c59459b60820e1e740ef1",
+    "00000087": "17a3c0ab15261459dbbe86c5621015a3c2597f3061aa3c0cc50245801e38c53f",
+    "00000094": "fc5eb89eeee949d17a9b0fc9319549e3f1f1180eba05d57618b84a011fb400f1"
+  },
+  "submission": {
+    "path": "outputs/target96/evaluator/submission.zip",
+    "sha256": "028512a5469a80164d5140851c7352ec1a2292bc90482b315969746e9e27d266",
+    "flat_route_members": 10,
+    "only_predictions": true,
+    "byte_parity_verified": true
+  }
+}

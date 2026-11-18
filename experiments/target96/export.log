@@ -1,0 +1,67 @@
+{"event": "route96_frozen_artifacts", "profile": "context", "model_sha256": "139464145836679fd97d868e0e190f762d4c45f4eca029b856d2bffc358cc81d", "configuration": "context_k24_arc5.0"}
+{
+  "schema": "pathsnap-route96-frozen-release-v1",
+  "created_at_utc": "2026-11-18T12:07:20.994291+00:00",
+  "model_sha256": "139464145836679fd97d868e0e190f762d4c45f4eca029b856d2bffc358cc81d",
+  "training_protocol_sha256": "4a164a1191d9ee8e4ec918281adb6857e851e1d1d171c0090684069d7f891fa5",
+  "route_protocol_sha256": "46eefaac2f4c3c05bf653158dfc6d4329bbc85e4f1c2aeae0f33d355825f1fd7",
+  "frozen_selection_sha256": "f45efd7b0e175fe28f088c1fbb6a8b738e9789ae5ec51cc10cf215814835c8a6",
+  "profile": "context",
+  "configuration": {
+    "name": "context_k24_arc5.0",
+    "profile": "context",
+    "match_config": {
+      "sigma_m": 7.160645916267228,
+      "beta_m": 5,
+      "max_candidates": 24,
+      "candidate_radius_m": 80.0,
+      "max_radius_m": 1000.0,
+      "routing_slack_m": 300.0,
+      "backward_tolerance_m": 20.0,
+      "observation_distance_m": 0.0,
+      "observation_interval": 5.0,
+      "sample_spacing_m": 40.0,
+      "cache_size": 2048,
+      "classifier_weight": 1,
+      "geometry_weight": 0.25,
+      "candidate_retry_limit": 48
+    },
+    "arc_policy": {
+      "appended_arc_penalty": 5.0,
+      "reverse_penalty": 3,
+      "reverse_chord_limit_m": 20,
+      "edge_switch_penalty": 0.0
+    }
+  },
+  "files": {
+    "training_metadata.json": "9921b441797d4958c4e70568026a0cc5c58626a07ad3bcd2ce4777f80e426032",
+    "model.joblib": "139464145836679fd97d868e0e190f762d4c45f4eca029b856d2bffc358cc81d",
+    "arc_policy.json": "b162fd7d2cb0ba71b16daf525fb03a1c799f6081049595e249634155d027f6ac",
+    "match_config.json": "aada67cc0bb7a39a403a4b931dc79ce53aa3a8094ffb4de63d2893d4d17ee4d6",
+    "training_metrics.json": "c2667bfa1158c3e39efaa16aaad0632aa5888af839a870a291e73cf42167dac1"
+  },
+  "source_sha256": {
+    "scripts/target96_release.py": "12954b0d37ebc700d92d854518fe189ce9e2652128a1a4232ba2090dd849c71d",
+    "mapmatch/target96_arc.py": "cabb85c502aa28942b7cf034cc48517a2ab5a301d3c95ad7512ff5d67f98d4e2",
+    "mapmatch/target96.py": "65b43bcb8a36d8f9b5d8f743f3b7e1acb439b6236391fd2882f4628f2bda125f",
+    "mapmatch/matcher.py": "af58502cdfe8de12cb13ea5ab3e1e8c9ef7aee9cf6f3faec8dea5cbfbedc4bff",
+    "mapmatch/metrics.py": "94e1ba8fc0ec60c46b8ea06d08ee6f86c655a915ff511da41d446ff7c5f1c882",
+    "mapmatch/features.py": "d39e908b0b4f7d89d969542a835e0935f07086c97b6546dc8e686efee151adb0",
+    "mapmatch/accuracy_features.py": "3f15e5e82072b9e49bdebbe9a791e3333d59246cda36913ee0b4deeeff1891b9",
+    "mapmatch/accuracy_artifacts.py": "ce957e023b41cbb10d6b98888981ae01794e56fe60e897546e60be59ce1cc22d",
+    "mapmatch/accuracy_matcher.py": "df84fcfdf922f5c73866857eaa3aa4a7800b1fbda73424e6891ec195b32d5678",
+    "mapmatch/learning.py": "de626dd12085cc404ede8eab774d2f79e3269fb3d2b1858975ffdc7da167280c",
+    "backend/emissions.py": "819384fdb1c70ddbf52e11f1227b5291317719b5b5361ced1180c442957c86cc"
+  },
+  "baseline_model_sha256": "c9cc8e9f36838f656a94d07ed69632979df9981ca94a9daf3b52fbce052e4b34",
+  "baseline_config_sha256": "10405aa6b6f370e41d4ddcb01207fd1e8f58900fd0395e541ee6bc78146168c5",
+  "training_fit_reused": true,
+  "model_changed": true,
+  "student_role": "historicallyexposeddevelopment,notblind",
+  "evaluator_role": "never used for training/selection",
+  "final_comparison_gate": "all10trips/all19160GPS;zero failures;continuity1;edgeF1>=0.96;lengthF1>=baseline-0.002",
+  "deployment_authorized": false,
+  "retraining_or_selection_after_student_allowed": false,
+  "baseline_route_reference": "reports/final_five/decoder/student_ablation.json",
+  "timing_note": "final fullroute times independent uncached requests; TRAIN shared-cache searchtime is not a production benchmark"
+}

@@ -1,0 +1,51 @@
+{
+  "deployed_at_utc": "2026-11-18T12:13:40.657139+00:00",
+  "existing_url": "https://ml.d3va.dev",
+  "existing_service": "path-snap-api.service",
+  "new_server_started": false,
+  "model_sha256": "139464145836679fd97d868e0e190f762d4c45f4eca029b856d2bffc358cc81d",
+  "api_config_sha256": "2ac126387e2205a2b4549f9b9dff82f3e071dc9ea54ab029c020d2b1d0035950",
+  "artifact_match_config_sha256": "aada67cc0bb7a39a403a4b931dc79ce53aa3a8094ffb4de63d2893d4d17ee4d6",
+  "policy_sha256": "b162fd7d2cb0ba71b16daf525fb03a1c799f6081049595e249634155d027f6ac",
+  "release_manifest_sha256": "a137a2a5141d3b4a4f2885ed267cd7c21f0816d8ffcf5a074c6d2c708d643cb1",
+  "acceptance_sha256": "16507c4faf483d43a1b715bacc757c6763d4b89ca7e713bb63d78bc1a961220e",
+  "public_health": {
+    "status": "ready",
+    "model_loaded": true,
+    "model_name": "accuracy_improved_hist_gradient_boosting",
+    "algorithm": "learned_classifier_hmm_viterbi",
+    "model_hash": "139464145836679fd97d868e0e190f762d4c45f4eca029b856d2bffc358cc81d",
+    "model_metadata_loaded": true,
+    "match_config_hash": "2ac126387e2205a2b4549f9b9dff82f3e071dc9ea54ab029c020d2b1d0035950",
+    "dataset_role": "development",
+    "trip_count": 10,
+    "expected_trip_count": 10,
+    "inference_concurrency": 1,
+    "prediction_cache": false,
+    "errors": [],
+    "datasets": [
+      {
+        "id": "development",
+        "label": "Student development",
+        "role": "development",
+        "available": true,
+        "trip_count": 10,
+        "expected_trip_count": 10,
+        "status": "ready"
+      },
+      {
+        "id": "evaluator",
+        "label": "Evaluator",
+        "role": "evaluator",
+        "available": true,
+        "trip_count": 10,
+        "expected_trip_count": 10,
+        "status": "ready"
+      }
+    ]
+  },
+  "ui_frozen_prediction_geometry_matches": true,
+  "actual_terminal_http_status": 200,
+  "rollback_model": "artifacts/final_five/model.joblib",
+  "physical_two_laptop_demo_claimed": false
+}

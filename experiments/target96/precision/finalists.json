@@ -1,0 +1,364 @@
+{
+  "created_at_utc": "2026-11-18T12:02:28.984972+00:00",
+  "protocol_sha256": "46eefaac2f4c3c05bf653158dfc6d4329bbc85e4f1c2aeae0f33d355825f1fd7",
+  "names": [
+    "context_k24_arc5.0",
+    "context_k24_arc2.0",
+    "v1_release_control"
+  ],
+  "initial_scores": [
+    {
+      "configuration": {
+        "name": "stage1_best_control",
+        "profile": "context",
+        "match_config": {
+          "sigma_m": 7.160645916267228,
+          "beta_m": 5,
+          "max_candidates": 24,
+          "candidate_radius_m": 80.0,
+          "max_radius_m": 1000.0,
+          "routing_slack_m": 300.0,
+          "backward_tolerance_m": 20.0,
+          "observation_distance_m": 0.0,
+          "observation_interval": 5.0,
+          "sample_spacing_m": 40.0,
+          "cache_size": 2048,
+          "classifier_weight": 1,
+          "geometry_weight": 0.25,
+          "candidate_retry_limit": 48
+        },
+        "arc_policy": {
+          "appended_arc_penalty": 0,
+          "reverse_penalty": 3,
+          "reverse_chord_limit_m": 20,
+          "edge_switch_penalty": 0.0
+        }
+      },
+      "order": 0,
+      "trips": 18,
+      "failures": 0,
+      "mean_seconds": 6.219223863166917,
+      "edge_f1": 0.8698159552369007,
+      "edge_precision": 0.826311261096106,
+      "edge_recall": 0.9954460523749672,
+      "length_f1": 0.9383274610487216,
+      "route_continuity": 1.0,
+      "edit_similarity": 0.8248044402499037,
+      "successful_connected": true
+    },
+    {
+      "configuration": {
+        "name": "context_k24_arc0.25",
+        "profile": "context",
+        "match_config": {
+          "sigma_m": 7.160645916267228,
+          "beta_m": 5,
+          "max_candidates": 24,
+          "candidate_radius_m": 80.0,
+          "max_radius_m": 1000.0,
+          "routing_slack_m": 300.0,
+          "backward_tolerance_m": 20.0,
+          "observation_distance_m": 0.0,
+          "observation_interval": 5.0,
+          "sample_spacing_m": 40.0,
+          "cache_size": 2048,
+          "classifier_weight": 1,
+          "geometry_weight": 0.25,
+          "candidate_retry_limit": 48
+        },
+        "arc_policy": {
+          "appended_arc_penalty": 0.25,
+          "reverse_penalty": 3,
+          "reverse_chord_limit_m": 20,
+          "edge_switch_penalty": 0.0
+        }
+      },
+      "order": 1,
+      "trips": 18,
+      "failures": 0,
+      "mean_seconds": 1.5812130672216478,
+      "edge_f1": 0.8792286776751024,
+      "edge_precision": 0.8360631240347027,
+      "edge_recall": 0.9952340082697932,
+      "length_f1": 0.9416522955552245,
+      "route_continuity": 1.0,
+      "edit_similarity": 0.8345489285062455,
+      "successful_connected": true
+    },
+    {
+      "configuration": {
+        "name": "context_k24_arc0.5",
+        "profile": "context",
+        "match_config": {
+          "sigma_m": 7.160645916267228,
+          "beta_m": 5,
+          "max_candidates": 24,
+          "candidate_radius_m": 80.0,
+          "max_radius_m": 1000.0,
+          "routing_slack_m": 300.0,
+          "backward_tolerance_m": 20.0,
+          "observation_distance_m": 0.0,
+          "observation_interval": 5.0,
+          "sample_spacing_m": 40.0,
+          "cache_size": 2048,
+          "classifier_weight": 1,
+          "geometry_weight": 0.25,
+          "candidate_retry_limit": 48
+        },
+        "arc_policy": {
+          "appended_arc_penalty": 0.5,
+          "reverse_penalty": 3,
+          "reverse_chord_limit_m": 20,
+          "edge_switch_penalty": 0.0
+        }
+      },
+      "order": 2,
+      "trips": 18,
+      "failures": 0,
+      "mean_seconds": 1.5545864886108676,
+      "edge_f1": 0.8890689523264831,
+      "edge_precision": 0.8467828173728691,
+      "edge_recall": 0.9952340082697932,
+      "length_f1": 0.9439175392756951,
+      "route_continuity": 1.0,
+      "edit_similarity": 0.8452590556292229,
+      "successful_connected": true
+    },
+    {
+      "configuration": {
+        "name": "context_k24_arc1.0",
+        "profile": "context",
+        "match_config": {
+          "sigma_m": 7.160645916267228,
+          "beta_m": 5,
+          "max_candidates": 24,
+          "candidate_radius_m": 80.0,
+          "max_radius_m": 1000.0,
+          "routing_slack_m": 300.0,
+          "backward_tolerance_m": 20.0,
+          "observation_distance_m": 0.0,
+          "observation_interval": 5.0,
+          "sample_spacing_m": 40.0,
+          "cache_size": 2048,
+          "classifier_weight": 1,
+          "geometry_weight": 0.25,
+          "candidate_retry_limit": 48
+        },
+        "arc_policy": {
+          "appended_arc_penalty": 1.0,
+          "reverse_penalty": 3,
+          "reverse_chord_limit_m": 20,
+          "edge_switch_penalty": 0.0
+        }
+      },
+      "order": 3,
+      "trips": 18,
+      "failures": 0,
+      "mean_seconds": 1.5032881934441522,
+      "edge_f1": 0.9056338450502524,
+      "edge_precision": 0.8638709473761635,
+      "edge_recall": 0.9952340082697932,
+      "length_f1": 0.9492188928984702,
+      "route_continuity": 1.0,
+      "edit_similarity": 0.8623424682519001,
+      "successful_connected": true
+    },
+    {
+      "configuration": {
+        "name": "context_k24_arc2.0",
+        "profile": "context",
+        "match_config": {
+          "sigma_m": 7.160645916267228,
+          "beta_m": 5,
+          "max_candidates": 24,
+          "candidate_radius_m": 80.0,
+          "max_radius_m": 1000.0,
+          "routing_slack_m": 300.0,
+          "backward_tolerance_m": 20.0,
+          "observation_distance_m": 0.0,
+          "observation_interval": 5.0,
+          "sample_spacing_m": 40.0,
+          "cache_size": 2048,
+          "classifier_weight": 1,
+          "geometry_weight": 0.25,
+          "candidate_retry_limit": 48
+        },
+        "arc_policy": {
+          "appended_arc_penalty": 2.0,
+          "reverse_penalty": 3,
+          "reverse_chord_limit_m": 20,
+          "edge_switch_penalty": 0.0
+        }
+      },
+      "order": 4,
+      "trips": 18,
+      "failures": 0,
+      "mean_seconds": 1.5290017840555568,
+      "edge_f1": 0.9258200450375002,
+      "edge_precision": 0.8888202136508039,
+      "edge_recall": 0.9968382168579019,
+      "length_f1": 0.9555566099149801,
+      "route_continuity": 1.0,
+      "edit_similarity": 0.8869465234045644,
+      "successful_connected": true
+    },
+    {
+      "configuration": {
+        "name": "context_k24_arc5.0",
+        "profile": "context",
+        "match_config": {
+          "sigma_m": 7.160645916267228,
+          "beta_m": 5,
+          "max_candidates": 24,
+          "candidate_radius_m": 80.0,
+          "max_radius_m": 1000.0,
+          "routing_slack_m": 300.0,
+          "backward_tolerance_m": 20.0,
+          "observation_distance_m": 0.0,
+          "observation_interval": 5.0,
+          "sample_spacing_m": 40.0,
+          "cache_size": 2048,
+          "classifier_weight": 1,
+          "geometry_weight": 0.25,
+          "candidate_retry_limit": 48
+        },
+        "arc_policy": {
+          "appended_arc_penalty": 5.0,
+          "reverse_penalty": 3,
+          "reverse_chord_limit_m": 20,
+          "edge_switch_penalty": 0.0
+        }
+      },
+      "order": 5,
+      "trips": 18,
+      "failures": 0,
+      "mean_seconds": 1.441754649388814,
+      "edge_f1": 0.941492749931386,
+      "edge_precision": 0.911478361623746,
+      "edge_recall": 0.9957086815505419,
+      "length_f1": 0.9603861106081122,
+      "route_continuity": 1.0,
+      "edit_similarity": 0.9081471898226154,
+      "successful_connected": true
+    },
+    {
+      "configuration": {
+        "name": "v1_k24_arc1",
+        "profile": "v1",
+        "match_config": {
+          "sigma_m": 7.160645916267228,
+          "beta_m": 5,
+          "max_candidates": 24,
+          "candidate_radius_m": 80.0,
+          "max_radius_m": 1000.0,
+          "routing_slack_m": 300.0,
+          "backward_tolerance_m": 20.0,
+          "observation_distance_m": 0.0,
+          "observation_interval": 5.0,
+          "sample_spacing_m": 40.0,
+          "cache_size": 2048,
+          "classifier_weight": 1,
+          "geometry_weight": 0.25,
+          "candidate_retry_limit": 48
+        },
+        "arc_policy": {
+          "appended_arc_penalty": 1.0,
+          "reverse_penalty": 3,
+          "reverse_chord_limit_m": 20,
+          "edge_switch_penalty": 0.0
+        }
+      },
+      "order": 6,
+      "trips": 18,
+      "failures": 0,
+      "mean_seconds": 2.625171561555261,
+      "edge_f1": 0.9204228720379475,
+      "edge_precision": 0.8793689835664918,
+      "edge_recall": 0.9968044833385016,
+      "length_f1": 0.9542643354406546,
+      "route_continuity": 1.0,
+      "edit_similarity": 0.8778459912957026,
+      "successful_connected": true
+    },
+    {
+      "configuration": {
+        "name": "context_k12_arc1",
+        "profile": "context",
+        "match_config": {
+          "sigma_m": 7.160645916267228,
+          "beta_m": 5,
+          "max_candidates": 12,
+          "candidate_radius_m": 80.0,
+          "max_radius_m": 1000.0,
+          "routing_slack_m": 300.0,
+          "backward_tolerance_m": 20.0,
+          "observation_distance_m": 0.0,
+          "observation_interval": 5.0,
+          "sample_spacing_m": 40.0,
+          "cache_size": 2048,
+          "classifier_weight": 1,
+          "geometry_weight": 0.25,
+          "candidate_retry_limit": 48
+        },
+        "arc_policy": {
+          "appended_arc_penalty": 1.0,
+          "reverse_penalty": 3,
+          "reverse_chord_limit_m": 20,
+          "edge_switch_penalty": 0.0
+        }
+      },
+      "order": 7,
+      "trips": 18,
+      "failures": 0,
+      "mean_seconds": 3.3196660071110577,
+      "edge_f1": 0.8728441126059976,
+      "edge_precision": 0.8179540896922823,
+      "edge_recall": 0.9935457395424537,
+      "length_f1": 0.9377910034999538,
+      "route_continuity": 1.0,
+      "edit_similarity": 0.8161006655532935,
+      "successful_connected": true
+    },
+    {
+      "configuration": {
+        "name": "v1_release_control",
+        "profile": "v1",
+        "match_config": {
+          "sigma_m": 7.160645916267228,
+          "beta_m": 2,
+          "max_candidates": 12,
+          "candidate_radius_m": 80.0,
+          "max_radius_m": 1000.0,
+          "routing_slack_m": 300.0,
+          "backward_tolerance_m": 20.0,
+          "observation_distance_m": 0.0,
+          "observation_interval": 5.0,
+          "sample_spacing_m": 40.0,
+          "cache_size": 2048,
+          "classifier_weight": 1,
+          "geometry_weight": 1,
+          "candidate_retry_limit": 48
+        },
+        "arc_policy": {
+          "appended_arc_penalty": 0.0,
+          "reverse_penalty": 0.0,
+          "reverse_chord_limit_m": 20.0,
+          "edge_switch_penalty": 0.0
+        }
+      },
+      "order": 8,
+      "trips": 18,
+      "failures": 0,
+      "mean_seconds": 1.3368367999438406,
+      "edge_f1": 0.8194646379582353,
+      "edge_precision": 0.7609631303903176,
+      "edge_recall": 0.9939450880418943,
+      "length_f1": 0.9140628712941654,
+      "route_continuity": 1.0,
+      "edit_similarity": 0.7595428997058713,
+      "successful_connected": true
+    }
+  ],
+  "student_used": false,
+  "evaluator_used": false
+}

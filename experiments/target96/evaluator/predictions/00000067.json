@@ -1,0 +1,91 @@
+{
+  "trip_id": "00000067",
+  "success": true,
+  "observations": 916,
+  "elapsed_seconds": 1.057447498998954,
+  "route_arc_count": 81,
+  "route_path": "outputs/target96/evaluator/routes/00000067.route",
+  "route_sha256": "d2b21f3f716d3cbe20cee7a960c70c52ded44a8a8b9f60cafe820bfce7d1b3c7",
+  "diagnostics_path": "outputs/target96/evaluator/diagnostics/00000067.npz",
+  "diagnostics_sha256": "51f67d3b9bf2f2b3610e5d29a2fda7b1f84f750c2be18c5eb92055e3c1e8ac1a",
+  "input_sha256": {
+    ".nodes": "8c47c71e7711d0ed26b27e198f162d06c225c170f410fd1373ed25c0a4ba0457",
+    ".arcs": "2dd0b1f367f1cf01dba68ba003924262af1cd4777aaf1c643722db4c8fbc7138",
+    ".track": "3b66460627dbc4e9fd8769dde4f35f6b88ce32e636946caf26bb5ed8798b03a1"
+  },
+  "reference_opened": false,
+  "learned_emission_observations": 916,
+  "dense_original_arc_ids_connected": true,
+  "diagnostics": {
+    "config": {
+      "sigma_m": 7.160645916267228,
+      "beta_m": 5,
+      "max_candidates": 24,
+      "candidate_radius_m": 80.0,
+      "max_radius_m": 1000.0,
+      "routing_slack_m": 300.0,
+      "backward_tolerance_m": 20.0,
+      "observation_distance_m": 0.0,
+      "observation_interval": 5.0,
+      "sample_spacing_m": 40.0,
+      "cache_size": 2048,
+      "classifier_weight": 1,
+      "geometry_weight": 0.25,
+      "candidate_retry_limit": 48
+    },
+    "observation_count": 916,
+    "matched_observation_count": 916,
+    "expanded_candidate_observations": 0,
+    "expanded_routing_transitions": 0,
+    "route_arc_count": 81,
+    "route_length_m": 6645.709661886004,
+    "negative_log_likelihood_relative": 1126.4354537686386,
+    "lateral_distance_median_m": 4.163537159319301,
+    "lateral_distance_p95_m": 13.157080418011521,
+    "lateral_distance_max_m": 27.725931222947796,
+    "routing_searches": 290,
+    "routing_cache_hits": 13436,
+    "elapsed_seconds": 1.0388303710024047,
+    "route_validation": {
+      "valid": true,
+      "arc_count": 81,
+      "invalid_positions": [],
+      "discontinuities": [],
+      "length_m": 6645.709661886004
+    },
+    "breaks": [],
+    "uses_reference_route": false,
+    "emission_model": "learned_classifier_plus_geometry",
+    "requested_config": {
+      "sigma_m": 7.160645916267228,
+      "beta_m": 5,
+      "max_candidates": 24,
+      "candidate_radius_m": 80.0,
+      "max_radius_m": 1000.0,
+      "routing_slack_m": 300.0,
+      "backward_tolerance_m": 20.0,
+      "observation_distance_m": 0.0,
+      "observation_interval": 5.0,
+      "sample_spacing_m": 40.0,
+      "cache_size": 2048,
+      "classifier_weight": 1,
+      "geometry_weight": 0.25,
+      "candidate_retry_limit": 48
+    },
+    "candidate_retry_attempts": [],
+    "effective_max_candidates": 24,
+    "route_policy": {
+      "reverse_penalty": 3,
+      "reverse_chord_limit_m": 20,
+      "edge_switch_penalty": 0.0
+    },
+    "postprediction_route_editing": false,
+    "arc_policy": {
+      "appended_arc_penalty": 5.0,
+      "reverse_penalty": 3,
+      "reverse_chord_limit_m": 20,
+      "edge_switch_penalty": 0.0
+    },
+    "routing_metric": "original metre Dijkstra; exact chosen connector hopprior only in Viterbi"
+  }
+}

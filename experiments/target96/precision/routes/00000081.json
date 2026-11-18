@@ -1,0 +1,62 @@
+{
+  "trip_id": "00000081",
+  "fold": 0,
+  "observations": 3224,
+  "predictions": [
+    {
+      "name": "context_k24_arc2.0",
+      "success": false,
+      "observations": 3224,
+      "elapsed_seconds": 8.260495078000531,
+      "failure": "no connected directed transition between observations 2681 and 2682; no route was fabricated",
+      "metrics": {
+        "edge_f1": 0.0,
+        "edge_precision": 0.0,
+        "edge_recall": 0.0,
+        "length_f1": 0.0,
+        "route_continuity": 0.0,
+        "edit_similarity": 0.0
+      }
+    },
+    {
+      "name": "context_k24_arc5.0",
+      "success": false,
+      "observations": 3224,
+      "elapsed_seconds": 1.3162281670010998,
+      "failure": "no connected directed transition between observations 2681 and 2682; no route was fabricated",
+      "metrics": {
+        "edge_f1": 0.0,
+        "edge_precision": 0.0,
+        "edge_recall": 0.0,
+        "length_f1": 0.0,
+        "route_continuity": 0.0,
+        "edit_similarity": 0.0
+      }
+    },
+    {
+      "name": "v1_release_control",
+      "success": false,
+      "observations": 3224,
+      "elapsed_seconds": 5.795484354999644,
+      "failure": "no connected directed transition between observations 2681 and 2682; no route was fabricated",
+      "metrics": {
+        "edge_f1": 0.0,
+        "edge_precision": 0.0,
+        "edge_recall": 0.0,
+        "length_f1": 0.0,
+        "route_continuity": 0.0,
+        "edit_similarity": 0.0
+      }
+    }
+  ],
+  "reference_loaded_after_all_predictions": true,
+  "protocol_sha256": "46eefaac2f4c3c05bf653158dfc6d4329bbc85e4f1c2aeae0f33d355825f1fd7",
+  "student_used": false,
+  "evaluator_used": false,
+  "input_sha256": {
+    ".nodes": "49deb22f0feac26ab88ab9cc3262b99bf1f261c0c33a181b0e52d9c22ced9105",
+    ".arcs": "70ab679c2f353c2de6854cc8750639a589c10a42702bde4174adec5e168d8e55",
+    ".track": "6b80278fd75e07bca6504f39ea54fe054b13a0bb41049e77ea34128ef704f554",
+    ".route": "8d5f13fe085034c2cef925453447bbc9d47ec53443f4f74b597c4ca2e491d877"
+  }
+}

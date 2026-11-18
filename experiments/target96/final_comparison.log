@@ -1,0 +1,334 @@
+{
+  "created_at_utc": "2026-11-18T12:09:57.313705+00:00",
+  "trips": 10,
+  "observations": 19160,
+  "role": "historicallyexposedstudentdevelopmentnotblind",
+  "release_manifest_sha256": "a137a2a5141d3b4a4f2885ed267cd7c21f0816d8ffcf5a074c6d2c708d643cb1",
+  "selection_frozen_before_student": true,
+  "evaluator_used": false,
+  "reference_after_all_predictions": true,
+  "baseline": {
+    "edge_precision": 0.9207558125335142,
+    "edge_recall": 0.99020328620126,
+    "edge_f1": 0.9513611360981356,
+    "length_f1": 0.9794127201125091,
+    "edit_similarity": 0.917244621040485,
+    "route_continuity": 1.0,
+    "failures": 0,
+    "mean_seconds": 5.541592986799879,
+    "observation_trip_macro": {
+      "top1_accuracy": 0.9199583987080457,
+      "observation_edge_macro_f1": 0.8460522563941426,
+      "observation_nll": 0.24599103896562524,
+      "decoded_proxy_accuracy": 0.9388929872476017,
+      "decoded_proxy_macro_f1": 0.9054157084490555,
+      "raw_adjacency": 0.9334107862976513,
+      "macro_f1": 0.9515864911311219,
+      "log_loss": 0.04431511845656789,
+      "probability_call_seconds": 0.04204154860017297
+    },
+    "observation_pooled": {
+      "accuracy": 0.981504487846219,
+      "precision": 0.8950030972537684,
+      "recall": 0.9056150430921912,
+      "f1": 0.9002777994132461,
+      "macro_precision": 0.9427033542561991,
+      "macro_recall": 0.9474130687621443,
+      "macro_f1": 0.9450423965367334,
+      "confusion_matrix": [
+        [
+          186493,
+          2034
+        ],
+        [
+          1807,
+          17338
+        ]
+      ],
+      "log_loss": 0.047533515669371695,
+      "candidate_rows": 207672,
+      "positive_rows": 19145,
+      "observations": 19160,
+      "candidate_present_observations": 19145,
+      "candidate_miss_count": 15,
+      "candidate_miss_rate": 0.0007828810020876827,
+      "top1_accuracy": 0.9073590814196242,
+      "top1_accuracy_given_candidate": 0.9080699921650561,
+      "top1_correct_observations": 17385,
+      "metric_target": "route_projection_proxy_not_independent_per_GPS_ground_truth",
+      "per_trip": [
+        {
+          "trip_id": "00000000",
+          "observations": 2503,
+          "top1_accuracy": 0.9568517778665602,
+          "candidate_miss_rate": 0.0
+        },
+        {
+          "trip_id": "00000007",
+          "observations": 1354,
+          "top1_accuracy": 0.9726735598227474,
+          "candidate_miss_rate": 0.0
+        },
+        {
+          "trip_id": "00000009",
+          "observations": 1049,
+          "top1_accuracy": 0.8732125834127741,
+          "candidate_miss_rate": 0.0
+        },
+        {
+          "trip_id": "00000040",
+          "observations": 2995,
+          "top1_accuracy": 0.9515859766277128,
+          "candidate_miss_rate": 0.0
+        },
+        {
+          "trip_id": "00000052",
+          "observations": 262,
+          "top1_accuracy": 0.9656488549618321,
+          "candidate_miss_rate": 0.0
+        },
+        {
+          "trip_id": "00000056",
+          "observations": 3958,
+          "top1_accuracy": 0.9181404749873674,
+          "candidate_miss_rate": 0.003031834259727135
+        },
+        {
+          "trip_id": "00000065",
+          "observations": 768,
+          "top1_accuracy": 0.9309895833333334,
+          "candidate_miss_rate": 0.0
+        },
+        {
+          "trip_id": "00000076",
+          "observations": 1486,
+          "top1_accuracy": 0.9313593539703903,
+          "candidate_miss_rate": 0.002018842530282638
+        },
+        {
+          "trip_id": "00000077",
+          "observations": 3911,
+          "top1_accuracy": 0.8020966504730248,
+          "candidate_miss_rate": 0.0
+        },
+        {
+          "trip_id": "00000091",
+          "observations": 874,
+          "top1_accuracy": 0.897025171624714,
+          "candidate_miss_rate": 0.0
+        }
+      ],
+      "trip_macro_top1_accuracy": 0.9199583987080457,
+      "edge_macro_f1": 0.838466039727345,
+      "edge_macro_f1_class_namespace": "trip_id:canonical_directed_arc_id",
+      "observation_edge_macro_f1": 0.8384660397273451,
+      "decoded_edge_macro_f1": 0.887559351375875,
+      "observation_nll": 0.27666300599959237,
+      "decoded_proxy_accuracy": 0.9249478079331942,
+      "probability_call_total_seconds": 0.42041548600172973,
+      "candidate_count_min": 2,
+      "candidate_count_max": 24,
+      "raw_adjacency_trip_macro": 0.9334107862976513
+    },
+    "classifier_only_route": {
+      "edge_f1": 0.7703779811446347,
+      "length_f1": 0.8227394701333495,
+      "edit_similarity": 0.6340755474936268,
+      "route_continuity": 0.7472750411188634
+    }
+  },
+  "candidate": {
+    "edge_precision": 0.9784265708393048,
+    "edge_recall": 0.9860530949323847,
+    "edge_f1": 0.9821150783141797,
+    "length_f1": 0.9883620932434412,
+    "edit_similarity": 0.9721423693340748,
+    "route_continuity": 1.0,
+    "failures": 0,
+    "mean_seconds": 6.096611250899878,
+    "observation_trip_macro": {
+      "top1_accuracy": 0.9282863790291392,
+      "observation_edge_macro_f1": 0.8577959585882219,
+      "observation_nll": 0.21611259888339723,
+      "decoded_proxy_accuracy": 0.9495104870859683,
+      "decoded_proxy_macro_f1": 0.9444653567241428,
+      "raw_adjacency": 0.9350182832851199,
+      "macro_f1": 0.9599907050023745,
+      "log_loss": 0.026055793563682296,
+      "probability_call_seconds": 0.1637408663995302
+    },
+    "observation_pooled": {
+      "accuracy": 0.9883673132393397,
+      "precision": 0.9186360031720856,
+      "recall": 0.9074576979318989,
+      "f1": 0.9130126369440139,
+      "macro_precision": 0.9559835893985028,
+      "macro_recall": 0.9508303364546963,
+      "macro_f1": 0.953389760522478,
+      "confusion_matrix": [
+        [
+          263942,
+          1539
+        ],
+        [
+          1772,
+          17376
+        ]
+      ],
+      "log_loss": 0.0299422013634665,
+      "candidate_rows": 284629,
+      "positive_rows": 19148,
+      "observations": 19160,
+      "candidate_present_observations": 19148,
+      "candidate_miss_count": 12,
+      "candidate_miss_rate": 0.0006263048016701461,
+      "top1_accuracy": 0.9161795407098121,
+      "top1_accuracy_given_candidate": 0.9167537079590558,
+      "top1_correct_observations": 17554,
+      "metric_target": "route_projection_proxy_not_independent_per_GPS_ground_truth",
+      "per_trip": [
+        {
+          "trip_id": "00000000",
+          "observations": 2503,
+          "top1_accuracy": 0.9568517778665602,
+          "candidate_miss_rate": 0.0
+        },
+        {
+          "trip_id": "00000007",
+          "observations": 1354,
+          "top1_accuracy": 0.9675036927621861,
+          "candidate_miss_rate": 0.0
+        },
+        {
+          "trip_id": "00000009",
+          "observations": 1049,
+          "top1_accuracy": 0.8951382268827455,
+          "candidate_miss_rate": 0.0
+        },
+        {
+          "trip_id": "00000040",
+          "observations": 2995,
+          "top1_accuracy": 0.9535893155258764,
+          "candidate_miss_rate": 0.0
+        },
+        {
+          "trip_id": "00000052",
+          "observations": 262,
+          "top1_accuracy": 0.9732824427480916,
+          "candidate_miss_rate": 0.0
+        },
+        {
+          "trip_id": "00000056",
+          "observations": 3958,
+          "top1_accuracy": 0.9297625063163214,
+          "candidate_miss_rate": 0.003031834259727135
+        },
+        {
+          "trip_id": "00000065",
+          "observations": 768,
+          "top1_accuracy": 0.9348958333333334,
+          "candidate_miss_rate": 0.0
+        },
+        {
+          "trip_id": "00000076",
+          "observations": 1486,
+          "top1_accuracy": 0.9441453566621804,
+          "candidate_miss_rate": 0.0
+        },
+        {
+          "trip_id": "00000077",
+          "observations": 3911,
+          "top1_accuracy": 0.8192278189721299,
+          "candidate_miss_rate": 0.0
+        },
+        {
+          "trip_id": "00000091",
+          "observations": 874,
+          "top1_accuracy": 0.9084668192219679,
+          "candidate_miss_rate": 0.0
+        }
+      ],
+      "trip_macro_top1_accuracy": 0.9282863790291392,
+      "edge_macro_f1": 0.8565041531752793,
+      "edge_macro_f1_class_namespace": "trip_id:canonical_directed_arc_id",
+      "observation_edge_macro_f1": 0.8565041531752793,
+      "decoded_edge_macro_f1": 0.928590239144533,
+      "observation_nll": 0.249507255631604,
+      "decoded_proxy_accuracy": 0.935125260960334,
+      "probability_call_total_seconds": 1.637408663995302,
+      "candidate_count_min": 2,
+      "candidate_count_max": 24,
+      "raw_adjacency_trip_macro": 0.9350182832851199
+    },
+    "classifier_only_route": {
+      "edge_f1": 0.7645053140332974,
+      "length_f1": 0.8171380970027435,
+      "edit_similarity": 0.6286312655974086,
+      "route_continuity": 0.7570889689331222
+    }
+  },
+  "deltas": {
+    "edge_precision": 0.057670758305790604,
+    "edge_recall": -0.004150191268875281,
+    "edge_f1": 0.030753942216044106,
+    "length_f1": 0.008949373130932026,
+    "edit_similarity": 0.05489774829358984,
+    "route_continuity": 0.0,
+    "failures": 0
+  },
+  "target_met": true,
+  "target_metric": "equal-trip original-directed-route multiset edgeF1",
+  "target_threshold": 0.96,
+  "trip_bindings": [
+    {
+      "trip_id": "00000000",
+      "path": "experiments/target96/student_comparison/00000000.json",
+      "sha256": "2f03ea689246efb4d409ae953b2e594fb9f5d008a77435ddbbdd5fb151a6b799"
+    },
+    {
+      "trip_id": "00000007",
+      "path": "experiments/target96/student_comparison/00000007.json",
+      "sha256": "0ab2c49a03c49f039fdec5e906212a9c9065d69769e9e6a150098d7df593bd1f"
+    },
+    {
+      "trip_id": "00000009",
+      "path": "experiments/target96/student_comparison/00000009.json",
+      "sha256": "c5c6273b38ac6fccd02b79dab911bf75889ebbef5506c0ed8c6d870b9ed02f08"
+    },
+    {
+      "trip_id": "00000040",
+      "path": "experiments/target96/student_comparison/00000040.json",
+      "sha256": "542dd3816c161cd31180bc793cf22fdceb8486060480ad73da567e0718bfe087"
+    },
+    {
+      "trip_id": "00000052",
+      "path": "experiments/target96/student_comparison/00000052.json",
+      "sha256": "31616e4d0e8104f8baad439d802cca195f4d12b504fb6f626d40de7a1db4767b"
+    },
+    {
+      "trip_id": "00000056",
+      "path": "experiments/target96/student_comparison/00000056.json",
+      "sha256": "1bc368be0845701ea7006482408c3cef689bb9f56d6e6c6b7278cc00c98f02cd"
+    },
+    {
+      "trip_id": "00000065",
+      "path": "experiments/target96/student_comparison/00000065.json",
+      "sha256": "e852038ebc6efeed2757c511eafbde12533c9ff772ca2c2d5b62a6a66bd3d793"
+    },
+    {
+      "trip_id": "00000076",
+      "path": "experiments/target96/student_comparison/00000076.json",
+      "sha256": "7ff8b03a6b82ff3ca7927bf595e9d51c375587ada5eab55a18b087ce12e61d1b"
+    },
+    {
+      "trip_id": "00000077",
+      "path": "experiments/target96/student_comparison/00000077.json",
+      "sha256": "54c61d6de7b258a7d894ff463cb247c8da13b86e6d9048477ce78408f887cbee"
+    },
+    {
+      "trip_id": "00000091",
+      "path": "experiments/target96/student_comparison/00000091.json",
+      "sha256": "0ba072b34b05bc3649ea1a5900d28bc8301b93a7a1eb42198423fe3964dfcce3"
+    }
+  ]
+}

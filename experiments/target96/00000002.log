@@ -1,0 +1,13 @@
+Traceback (most recent call last):
+  File "<frozen runpy>", line 203, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/home/d3va/Downloads/ML_Hackathon/scripts/target96.py", line 116, in <module>
+    if __name__=='__main__':main()
+                            ~~~~^^
+  File "/home/d3va/Downloads/ML_Hackathon/scripts/target96.py", line 112, in main
+    elif args.trip:r=runtrip(args.trip)
+                     ~~~~~~~^^^^^^^^^^^
+  File "/home/d3va/Downloads/ML_Hackathon/scripts/target96.py", line 76, in runtrip
+    paths={p.name:p for p in discover_trips(ROOT/'Student folder/train')};prefix=paths[trip_id];graph=load_graph(prefix.with_suffix('.nodes'),prefix.with_suffix('.arcs'));track=load_track(prefix.with_suffix('.track'))
+                                                                                                      ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: load_graph() takes 1 positional argument but 2 were given
