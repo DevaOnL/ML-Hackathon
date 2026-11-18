@@ -105,7 +105,9 @@ node frontend/smoke.mjs --api https://ml.d3va.dev
 node frontend/smoke.mjs --api https://ml.d3va.dev --match-first
 ~~~
 
-Independent adapter unit checks live in the repository’s test scope, maintained by the verification teammate. Real browser/network verification and screenshots must be captured from an actual running deployment; no screenshot or successful inference is claimed by this README.
+Independent adapter unit checks live in the repository’s test scope, maintained by the verification teammate. The optional [browser_check.py](<browser_check.py>) uses separately installed Playwright/Chromium against an already-running deployment; it never starts a server or injects responses. Example: `python3 -B frontend/browser_check.py --url http://127.0.0.1:8000`.
+
+Genuine local browser checks were performed against the actual backend at http://127.0.0.1:8000 while it correctly reported a missing model/configuration. They verified all ten real API trip options, a disabled inference action with explicit readiness notice, local Leaflet initialization, keyboard radio selection, modal Tab/Escape/focus behavior, API URL validation/reset, and no horizontal overflow at 320/390/768 pixels. No browser console errors or external default requests were observed. The [machine-readable record](<validation/browser-check.json>), [desktop capture](<validation/desktop-not-ready.png>), and [390-pixel mobile capture](<validation/mobile-390-not-ready.png>) describe this not-ready state; they do **not** claim a successful model run. The image-input tool was unavailable for pixel inspection; screenshots were captured by the real browser and layout was verified through DOM dimensions. Final model-ready/public-HTTPS route runs and captures remain separate integration evidence.
 
 ## Third-party assets
 
