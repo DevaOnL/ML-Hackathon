@@ -33,6 +33,18 @@ node_modules/
 /experiments/candidate_data*/
 /experiments/*.npz
 /analysis/video/*.safetensors
+/analysis/video_audio/models/
+/analysis/video_audio/cache/
+/analysis/video_audio/*.pt
+/analysis/video_audio/*.wav
+/analysis/video_audio/*.log
+/analysis/instructions_pdf/*.md
+/analysis/instructions_review/*__xml_text.md
+/analysis/instructions_review/xml_audit.json
+/analysis/instructions_review/ordered_extraction_check.json
+/analysis/instructions_review/extraction_coverage.json
+/analysis/instructions_review/ocr/
+/analysis/instructions_review/images/
 /outputs/*/observations/
 /outputs/*/matches/
 # Never publish evaluator inputs or private reference labels
