@@ -1,0 +1,27 @@
+{
+  "url": "http://127.0.0.1:8000",
+  "captured_utc": "2026-11-18T05:35:46.113147+00:00",
+  "checks": [
+    "All 10 trip choices match actual GET /trips IDs in API order",
+    "Local Leaflet initializes with no external default map-tile requests",
+    "Keyboard Space/ArrowRight selects native radio options and updates selected-trip summary",
+    "Actual missing/unready model yields explicit notice, disabled inference, empty map, and no invented scores",
+    "Settings opens from keyboard, traps Tab focus, Escape closes, and focus returns",
+    "Invalid API scheme rejected; website-default reconnect remains same-origin and clears override",
+    "No horizontal overflow at viewport width 390",
+    "No horizontal overflow at viewport width 320",
+    "No horizontal overflow at viewport width 768",
+    "No browser console errors, uncaught application errors, or external default requests"
+  ],
+  "screenshots": [
+    "desktop-not-ready.png",
+    "mobile-390-not-ready.png"
+  ],
+  "health_status": "error",
+  "model_loaded": false,
+  "trip_count": 10,
+  "console_errors": [],
+  "page_errors": [],
+  "external_requests": [],
+  "model_dependent_checks": "Not run: this check does not trigger inference. Lead captures live route runs after the trained artifact is ready."
+}
